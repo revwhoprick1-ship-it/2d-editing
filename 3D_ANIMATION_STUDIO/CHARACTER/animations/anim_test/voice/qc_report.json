@@ -1,0 +1,19 @@
+[
+ {
+  "file": "CHARACTER/animations/anim_test/voice/lines/L01.wav",
+  "duration_s": 2.5,
+  "transcript": "Hey, ready for an adventure inside your own body.",
+  "wer": 0.0,
+  "mismatches": [],
+  "words_per_sec": 3.6,
+  "longest_pause_s": 0.12,
+  "f0_median_hz": 117.1,
+  "f0_range_semitones_p5_p95": 10.69,
+  "f0_std_semitones": 4.19,
+  "peak_dbfs": "-4.48",
+  "rms_dbfs": "-21.05",
+  "clipped_samples": 0,
+  "id": "L01",
+  "delivery": "excited"
+ }
+]

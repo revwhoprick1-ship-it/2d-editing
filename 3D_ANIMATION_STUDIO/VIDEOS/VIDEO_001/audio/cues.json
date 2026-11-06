@@ -1,0 +1,523 @@
+{
+ "duration": 57.0,
+ "narration": "narration/narration_raw.wav",
+ "narration_offset": 0.2,
+ "music": "music_score.wav",
+ "music_gain_db": -1,
+ "targets": {
+  "narration_lufs": -16,
+  "master_lufs": -14,
+  "true_peak": -1.0,
+  "duck_db": 9
+ },
+ "cues": [
+  {
+   "t": 0.0,
+   "file": "AUDIO/sound_effects/bio/bloodstream_bed.flac",
+   "gain": -1,
+   "bus": "amb",
+   "dur": 14.6,
+   "fade_in": 0.3,
+   "fade_out": 0.8,
+   "note": "Vein ambience (SH01-SH04b)"
+  },
+  {
+   "t": 14.6,
+   "file": "AUDIO/sound_effects/bio/heartbeat_muffled.flac",
+   "gain": -18,
+   "bus": "amb",
+   "note": "heart room tone start (chamber)"
+  },
+  {
+   "t": 21.333,
+   "file": "AUDIO/sound_effects/bio/capillary_bed.flac",
+   "gain": -3,
+   "bus": "amb",
+   "dur": 23.367000000000004,
+   "loop": true,
+   "fade_in": 0.3,
+   "fade_out": 0.6,
+   "note": "Lung capillary ambience (SH06b-SH10)"
+  },
+  {
+   "t": 44.7,
+   "file": "AUDIO/sound_effects/bio/bloodstream_bed.flac",
+   "gain": 1,
+   "bus": "amb",
+   "dur": 5.699999999999996,
+   "fade_in": 0.1,
+   "fade_out": 0.4,
+   "note": "Fast flow back to heart / aorta"
+  },
+  {
+   "t": 50.4,
+   "file": "AUDIO/sound_effects/bio/bloodstream_bed.flac",
+   "gain": -7,
+   "bus": "amb",
+   "dur": 2.933,
+   "fade_in": 0.2,
+   "fade_out": 0.5,
+   "note": "Calm aorta ride"
+  },
+  {
+   "t": 53.333,
+   "file": "AUDIO/sound_effects/bio/capillary_bed.flac",
+   "gain": -8,
+   "bus": "amb",
+   "dur": 3.6670000000000016,
+   "fade_in": 0.3,
+   "fade_out": 0.8,
+   "note": "Back in the lungs (final gag)"
+  },
+  {
+   "t": 0.3,
+   "file": "AUDIO/sound_effects/reactions/pop.flac",
+   "gain": -20,
+   "note": "eyes snap open",
+   "bus": "sfx"
+  },
+  {
+   "t": 0.6,
+   "file": "AUDIO/sound_effects/bio/heartbeat_muffled.flac",
+   "gain": -20,
+   "note": "distant heartbeat motif #1",
+   "bus": "sfx"
+  },
+  {
+   "t": 0.667,
+   "file": "AUDIO/sound_effects/movement/whoosh_long.flac",
+   "gain": -17,
+   "note": "camera pull-back reveal",
+   "bus": "sfx"
+  },
+  {
+   "t": 1.4,
+   "file": "AUDIO/sound_effects/bio/heartbeat_muffled.flac",
+   "gain": -20,
+   "note": "heartbeat motif #2",
+   "bus": "sfx"
+  },
+  {
+   "t": 2.6,
+   "file": "AUDIO/sound_effects/bio/creature_presence.flac",
+   "gain": -19,
+   "note": "pale shape passing in background (plant)",
+   "bus": "sfx"
+  },
+  {
+   "t": 3.333,
+   "file": "AUDIO/sound_effects/movement/cloth_rustle.flac",
+   "gain": -18,
+   "note": "props himself up",
+   "bus": "sfx"
+  },
+  {
+   "t": 4.767,
+   "file": "AUDIO/sound_effects/transitions/swish.flac",
+   "gain": -16,
+   "note": "cut",
+   "bus": "sfx"
+  },
+  {
+   "t": 5.267,
+   "file": "AUDIO/sound_effects/bio/squelch.flac",
+   "gain": -11,
+   "note": "pat 1 (cell wobble)",
+   "bus": "sfx"
+  },
+  {
+   "t": 5.733,
+   "file": "AUDIO/sound_effects/bio/squelch.flac",
+   "gain": -12,
+   "note": "pat 2",
+   "bus": "sfx"
+  },
+  {
+   "t": 5.267,
+   "file": "AUDIO/sound_effects/movement/impact_soft.flac",
+   "gain": -20,
+   "note": "pat body",
+   "bus": "sfx"
+  },
+  {
+   "t": 7.867,
+   "file": "AUDIO/sound_effects/movement/whoosh_long.flac",
+   "gain": -15,
+   "note": "cut to wide",
+   "bus": "sfx"
+  },
+  {
+   "t": 9.0,
+   "file": "AUDIO/sound_effects/bio/heartbeat_muffled.flac",
+   "gain": -17,
+   "note": "heartbeat grows",
+   "bus": "sfx"
+  },
+  {
+   "t": 10.0,
+   "file": "AUDIO/sound_effects/bio/heartbeat_muffled.flac",
+   "gain": -15,
+   "bus": "sfx"
+  },
+  {
+   "t": 11.1,
+   "file": "AUDIO/sound_effects/bio/heartbeat_lubdub.flac",
+   "gain": -11,
+   "note": "exterior heart beat 1",
+   "bus": "sfx"
+  },
+  {
+   "t": 11.833,
+   "file": "AUDIO/sound_effects/bio/heartbeat_lubdub.flac",
+   "gain": -10,
+   "note": "beat 2",
+   "bus": "sfx"
+  },
+  {
+   "t": 12.567,
+   "file": "AUDIO/sound_effects/bio/heartbeat_lubdub.flac",
+   "gain": -9,
+   "note": "beat 3",
+   "bus": "sfx"
+  },
+  {
+   "t": 12.967,
+   "file": "AUDIO/sound_effects/bio/heartbeat_lubdub.flac",
+   "gain": -7,
+   "note": "wall pulse lub-dub (frames 389/398)",
+   "bus": "sfx"
+  },
+  {
+   "t": 13.9,
+   "file": "AUDIO/sound_effects/bio/heartbeat_lubdub.flac",
+   "gain": -6,
+   "note": "wall pulse lub-dub (frames 417/426)",
+   "bus": "sfx"
+  },
+  {
+   "t": 14.533,
+   "file": "AUDIO/sound_effects/movement/whoosh_short.flac",
+   "gain": -12,
+   "note": "into chamber",
+   "bus": "sfx"
+  },
+  {
+   "t": 16.367,
+   "file": "AUDIO/sound_effects/bio/valve_slam.flac",
+   "gain": -3,
+   "note": "VALVE SLAMS SHUT (frame 491)",
+   "bus": "sfx"
+  },
+  {
+   "t": 16.367,
+   "file": "AUDIO/sound_effects/transitions/bass_impact.flac",
+   "gain": -11,
+   "note": "sub weight",
+   "bus": "sfx"
+  },
+  {
+   "t": 18.0,
+   "file": "AUDIO/sound_effects/bio/heartbeat_lubdub.flac",
+   "gain": -3,
+   "note": "LUB (540) - DUB (548) after narrator says lub-dub",
+   "bus": "sfx"
+  },
+  {
+   "t": 18.033,
+   "file": "AUDIO/sound_effects/movement/impact_soft.flac",
+   "gain": -15,
+   "note": "flinch",
+   "bus": "sfx"
+  },
+  {
+   "t": 19.533,
+   "file": "AUDIO/sound_effects/bio/engulf_gloop.flac",
+   "gain": -14,
+   "note": "chamber squeeze",
+   "bus": "sfx"
+  },
+  {
+   "t": 19.833,
+   "file": "AUDIO/sound_effects/transitions/riser_2s.flac",
+   "gain": -16,
+   "note": "build",
+   "bus": "sfx"
+  },
+  {
+   "t": 20.1,
+   "file": "AUDIO/sound_effects/movement/whoosh_long.flac",
+   "gain": -6,
+   "note": "LAUNCH forward",
+   "bus": "sfx"
+  },
+  {
+   "t": 21.267,
+   "file": "AUDIO/sound_effects/transitions/swish.flac",
+   "gain": -10,
+   "note": "cut into capillary",
+   "bus": "sfx"
+  },
+  {
+   "t": 21.667,
+   "file": "AUDIO/sound_effects/bio/squelch.flac",
+   "gain": -10,
+   "note": "squeezing",
+   "bus": "sfx"
+  },
+  {
+   "t": 22.4,
+   "file": "AUDIO/sound_effects/bio/squelch.flac",
+   "gain": -12,
+   "bus": "sfx"
+  },
+  {
+   "t": 23.0,
+   "file": "AUDIO/sound_effects/bio/squelch.flac",
+   "gain": -11,
+   "note": "cheek squash",
+   "bus": "sfx"
+  },
+  {
+   "t": 24.0,
+   "file": "AUDIO/sound_effects/bio/squelch.flac",
+   "gain": -13,
+   "bus": "sfx"
+  },
+  {
+   "t": 25.067,
+   "file": "AUDIO/sound_effects/bio/sparkle_o2.flac",
+   "gain": -12,
+   "note": "O2 arrives",
+   "bus": "sfx"
+  },
+  {
+   "t": 26.333,
+   "file": "AUDIO/sound_effects/movement/cloth_rustle.flac",
+   "gain": -20,
+   "note": "points",
+   "bus": "sfx"
+  },
+  {
+   "t": 27.333,
+   "file": "AUDIO/sound_effects/bio/sparkle_o2.flac",
+   "gain": -14,
+   "note": "cells brighten",
+   "bus": "sfx"
+  },
+  {
+   "t": 30.167,
+   "file": "AUDIO/sound_effects/movement/whoosh_long.flac",
+   "gain": -20,
+   "note": "CO2 drifts out / camera move",
+   "bus": "sfx"
+  },
+  {
+   "t": 32.0,
+   "file": "AUDIO/sound_effects/bio/creature_presence.flac",
+   "gain": -11,
+   "note": "shadow passes (plant)",
+   "bus": "sfx"
+  },
+  {
+   "t": 33.5,
+   "file": "AUDIO/sound_effects/bio/creature_presence.flac",
+   "gain": -8,
+   "note": "something notices you",
+   "bus": "sfx"
+  },
+  {
+   "t": 34.333,
+   "file": "AUDIO/sound_effects/bio/heartbeat_muffled.flac",
+   "gain": -12,
+   "note": "fear heartbeat",
+   "bus": "sfx"
+  },
+  {
+   "t": 35.267,
+   "file": "AUDIO/sound_effects/bio/heartbeat_muffled.flac",
+   "gain": -11,
+   "bus": "sfx"
+  },
+  {
+   "t": 35.9,
+   "file": "AUDIO/sound_effects/reactions/dramatic_hit.flac",
+   "gain": -6,
+   "note": "NEUTROPHIL REVEAL",
+   "bus": "sfx"
+  },
+  {
+   "t": 37.333,
+   "file": "AUDIO/sound_effects/bio/engulf_gloop.flac",
+   "gain": -17,
+   "note": "membrane moving",
+   "bus": "sfx"
+  },
+  {
+   "t": 38.667,
+   "file": "AUDIO/sound_effects/movement/footstep_soft.flac",
+   "gain": -16,
+   "note": "backing away",
+   "bus": "sfx"
+  },
+  {
+   "t": 39.0,
+   "file": "AUDIO/sound_effects/movement/footstep_soft.flac",
+   "gain": -17,
+   "bus": "sfx"
+  },
+  {
+   "t": 39.333,
+   "file": "AUDIO/sound_effects/movement/footstep_soft.flac",
+   "gain": -16,
+   "bus": "sfx"
+  },
+  {
+   "t": 39.667,
+   "file": "AUDIO/sound_effects/movement/footstep_soft.flac",
+   "gain": -17,
+   "bus": "sfx"
+  },
+  {
+   "t": 40.2,
+   "file": "AUDIO/sound_effects/movement/impact_soft.flac",
+   "gain": -9,
+   "note": "bumps into the cell behind",
+   "bus": "sfx"
+  },
+  {
+   "t": 40.2,
+   "file": "AUDIO/sound_effects/bio/squelch.flac",
+   "gain": -10,
+   "bus": "sfx"
+  },
+  {
+   "t": 41.267,
+   "file": "AUDIO/sound_effects/bio/engulf_gloop.flac",
+   "gain": -4,
+   "note": "PSEUDOPODS GRAB HIS LEG",
+   "bus": "sfx"
+  },
+  {
+   "t": 41.333,
+   "file": "AUDIO/sound_effects/reactions/surprise_sting.flac",
+   "gain": -14,
+   "bus": "sfx"
+  },
+  {
+   "t": 43.467,
+   "file": "AUDIO/sound_effects/movement/cloth_rustle.flac",
+   "gain": -14,
+   "note": "anticipation",
+   "bus": "sfx"
+  },
+  {
+   "t": 43.667,
+   "file": "AUDIO/sound_effects/movement/impact_soft.flac",
+   "gain": -4,
+   "note": "KICK",
+   "bus": "sfx"
+  },
+  {
+   "t": 43.7,
+   "file": "AUDIO/sound_effects/reactions/pop.flac",
+   "gain": -8,
+   "note": "foot pops out of the shoe",
+   "bus": "sfx"
+  },
+  {
+   "t": 43.733,
+   "file": "AUDIO/sound_effects/movement/whoosh_short.flac",
+   "gain": -8,
+   "note": "tumbles away",
+   "bus": "sfx"
+  },
+  {
+   "t": 44.7,
+   "file": "AUDIO/sound_effects/movement/whoosh_long.flac",
+   "gain": -7,
+   "note": "tumbling",
+   "bus": "sfx"
+  },
+  {
+   "t": 46.4,
+   "file": "AUDIO/sound_effects/bio/engulf_gloop.flac",
+   "gain": -12,
+   "note": "left ventricle squeeze",
+   "bus": "sfx"
+  },
+  {
+   "t": 47.267,
+   "file": "AUDIO/sound_effects/bio/valve_slam.flac",
+   "gain": -6,
+   "note": "aortic valve bursts open",
+   "bus": "sfx"
+  },
+  {
+   "t": 47.8,
+   "file": "AUDIO/sound_effects/transitions/bass_impact.flac",
+   "gain": -4,
+   "note": "LAUNCH into aorta",
+   "bus": "sfx"
+  },
+  {
+   "t": 47.8,
+   "file": "AUDIO/sound_effects/movement/whoosh_long.flac",
+   "gain": -4,
+   "bus": "sfx"
+  },
+  {
+   "t": 47.867,
+   "file": "AUDIO/sound_effects/movement/impact_heavy.flac",
+   "gain": -12,
+   "bus": "sfx"
+  },
+  {
+   "t": 49.0,
+   "file": "AUDIO/sound_effects/movement/whoosh_short.flac",
+   "gain": -12,
+   "note": "speed pass",
+   "bus": "sfx"
+  },
+  {
+   "t": 50.4,
+   "file": "AUDIO/sound_effects/transitions/downlifter.flac",
+   "gain": -16,
+   "note": "calm after the storm",
+   "bus": "sfx"
+  },
+  {
+   "t": 51.8,
+   "file": "AUDIO/sound_effects/movement/cloth_rustle.flac",
+   "gain": -17,
+   "note": "lifts socked foot",
+   "bus": "sfx"
+  },
+  {
+   "t": 53.333,
+   "file": "AUDIO/sound_effects/transitions/swish.flac",
+   "gain": -16,
+   "note": "cut to the neutrophil",
+   "bus": "sfx"
+  },
+  {
+   "t": 53.667,
+   "file": "AUDIO/sound_effects/bio/engulf_gloop.flac",
+   "gain": -17,
+   "bus": "sfx"
+  },
+  {
+   "t": 55.667,
+   "file": "AUDIO/sound_effects/bio/bubble.flac",
+   "gain": -10,
+   "note": "gulp",
+   "bus": "sfx"
+  },
+  {
+   "t": 55.933,
+   "file": "AUDIO/sound_effects/reactions/comedic_boing.flac",
+   "gain": -17,
+   "note": "button gag",
+   "bus": "sfx"
+  }
+ ]
+}

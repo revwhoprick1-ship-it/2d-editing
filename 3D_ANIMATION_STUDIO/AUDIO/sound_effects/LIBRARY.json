@@ -1,0 +1,575 @@
+[
+ {
+  "file": "sound_effects/bio/heartbeat_lubdub.flac",
+  "category": "bio",
+  "name": "heartbeat_lubdub",
+  "description": "Close, chest-deep heartbeat: \"lub\" (AV valves) + \"dub\" (semilunar valves).",
+  "tags": [
+   "heart",
+   "pulse"
+  ],
+  "duration_s": 0.9,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis by this studio (PIPELINE/audio/sfx_synth.py). No third-party audio. Free for monetised use."
+ },
+ {
+  "file": "sound_effects/bio/heartbeat_muffled.flac",
+  "category": "bio",
+  "name": "heartbeat_muffled",
+  "description": "Heartbeat heard from inside a vessel (darker, roomy).",
+  "tags": [
+   "heart",
+   "inside"
+  ],
+  "duration_s": 0.9,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis by this studio (PIPELINE/audio/sfx_synth.py). No third-party audio. Free for monetised use."
+ },
+ {
+  "file": "sound_effects/bio/bloodstream_bed.flac",
+  "category": "bio",
+  "name": "bloodstream_bed",
+  "description": "Bloodstream ambience: low rumble, wet flow, gentle swells (30 s, loopable).",
+  "tags": [
+   "ambience",
+   "flow"
+  ],
+  "duration_s": 30.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis by this studio (PIPELINE/audio/sfx_synth.py). No third-party audio. Free for monetised use."
+ },
+ {
+  "file": "sound_effects/bio/capillary_bed.flac",
+  "category": "bio",
+  "name": "capillary_bed",
+  "description": "Tight capillary ambience: closer, higher, wet creaks and soft squelches (20 s).",
+  "tags": [
+   "ambience"
+  ],
+  "duration_s": 20.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis by this studio (PIPELINE/audio/sfx_synth.py). No third-party audio. Free for monetised use."
+ },
+ {
+  "file": "sound_effects/bio/squelch.flac",
+  "category": "bio",
+  "name": "squelch",
+  "description": "Soft wet squelch / cell squeeze.",
+  "tags": [
+   "wet",
+   "cell"
+  ],
+  "duration_s": 0.35,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis by this studio (PIPELINE/audio/sfx_synth.py). No third-party audio. Free for monetised use."
+ },
+ {
+  "file": "sound_effects/bio/valve_slam.flac",
+  "category": "bio",
+  "name": "valve_slam",
+  "description": "Heavy wet slam of a heart valve closing (impact + body + flap).",
+  "tags": [
+   "heart",
+   "impact"
+  ],
+  "duration_s": 1.2,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis by this studio (PIPELINE/audio/sfx_synth.py). No third-party audio. Free for monetised use."
+ },
+ {
+  "file": "sound_effects/bio/engulf_gloop.flac",
+  "category": "bio",
+  "name": "engulf_gloop",
+  "description": "Neutrophil engulfing: viscous stretching gloop with low swell.",
+  "tags": [
+   "cell",
+   "creature"
+  ],
+  "duration_s": 1.6,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis by this studio (PIPELINE/audio/sfx_synth.py). No third-party audio. Free for monetised use."
+ },
+ {
+  "file": "sound_effects/bio/bubble.flac",
+  "category": "bio",
+  "name": "bubble",
+  "description": "Single small bubble blip.",
+  "tags": [
+   "water",
+   "pop"
+  ],
+  "duration_s": 0.12,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis by this studio (PIPELINE/audio/sfx_synth.py). No third-party audio. Free for monetised use."
+ },
+ {
+  "file": "sound_effects/bio/sparkle_o2.flac",
+  "category": "bio",
+  "name": "sparkle_o2",
+  "description": "Soft glassy sparkle for oxygen particles arriving.",
+  "tags": [
+   "magic",
+   "reveal"
+  ],
+  "duration_s": 2.5,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis by this studio (PIPELINE/audio/sfx_synth.py). No third-party audio. Free for monetised use."
+ },
+ {
+  "file": "sound_effects/bio/creature_presence.flac",
+  "category": "bio",
+  "name": "creature_presence",
+  "description": "Huge presence arriving: sub swell + breathy low texture (no voice).",
+  "tags": [
+   "tension",
+   "reveal"
+  ],
+  "duration_s": 3.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis by this studio (PIPELINE/audio/sfx_synth.py). No third-party audio. Free for monetised use."
+ },
+ {
+  "file": "sound_effects/movement/whoosh_short.flac",
+  "category": "movement",
+  "name": "whoosh_short",
+  "description": "Fast short whoosh (0.5 s).",
+  "tags": [
+   "whoosh",
+   "transition"
+  ],
+  "duration_s": 0.5,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis by this studio (PIPELINE/audio/sfx_synth.py). No third-party audio. Free for monetised use."
+ },
+ {
+  "file": "sound_effects/movement/whoosh_long.flac",
+  "category": "movement",
+  "name": "whoosh_long",
+  "description": "Slow big whoosh (1.4 s).",
+  "tags": [
+   "whoosh"
+  ],
+  "duration_s": 1.4,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis by this studio (PIPELINE/audio/sfx_synth.py). No third-party audio. Free for monetised use."
+ },
+ {
+  "file": "sound_effects/movement/impact_soft.flac",
+  "category": "movement",
+  "name": "impact_soft",
+  "description": "Soft body/cushion impact.",
+  "tags": [
+   "impact"
+  ],
+  "duration_s": 0.5,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis by this studio (PIPELINE/audio/sfx_synth.py). No third-party audio. Free for monetised use."
+ },
+ {
+  "file": "sound_effects/movement/impact_heavy.flac",
+  "category": "movement",
+  "name": "impact_heavy",
+  "description": "Heavy cinematic impact with tail.",
+  "tags": [
+   "impact",
+   "hit"
+  ],
+  "duration_s": 2.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis by this studio (PIPELINE/audio/sfx_synth.py). No third-party audio. Free for monetised use."
+ },
+ {
+  "file": "sound_effects/movement/footstep_soft.flac",
+  "category": "movement",
+  "name": "footstep_soft",
+  "description": "Sneaker footstep on a soft floor.",
+  "tags": [
+   "footstep"
+  ],
+  "duration_s": 0.25,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis by this studio (PIPELINE/audio/sfx_synth.py). No third-party audio. Free for monetised use."
+ },
+ {
+  "file": "sound_effects/movement/footstep_hard.flac",
+  "category": "movement",
+  "name": "footstep_hard",
+  "description": "Hard-shoe footstep on tile.",
+  "tags": [
+   "footstep"
+  ],
+  "duration_s": 0.25,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis by this studio (PIPELINE/audio/sfx_synth.py). No third-party audio. Free for monetised use."
+ },
+ {
+  "file": "sound_effects/movement/cloth_rustle.flac",
+  "category": "movement",
+  "name": "cloth_rustle",
+  "description": "Clothing movement rustle.",
+  "tags": [
+   "foley"
+  ],
+  "duration_s": 0.6,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis by this studio (PIPELINE/audio/sfx_synth.py). No third-party audio. Free for monetised use."
+ },
+ {
+  "file": "sound_effects/movement/object_slide.flac",
+  "category": "movement",
+  "name": "object_slide",
+  "description": "Object sliding/scraping on a surface.",
+  "tags": [
+   "foley"
+  ],
+  "duration_s": 0.9,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis by this studio (PIPELINE/audio/sfx_synth.py). No third-party audio. Free for monetised use."
+ },
+ {
+  "file": "sound_effects/movement/mechanical_servo.flac",
+  "category": "movement",
+  "name": "mechanical_servo",
+  "description": "Small mechanical servo whirr.",
+  "tags": [
+   "mechanical"
+  ],
+  "duration_s": 0.8,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis by this studio (PIPELINE/audio/sfx_synth.py). No third-party audio. Free for monetised use."
+ },
+ {
+  "file": "sound_effects/reactions/pop.flac",
+  "category": "reactions",
+  "name": "pop",
+  "description": "Cartoon pop.",
+  "tags": [
+   "pop",
+   "comedy"
+  ],
+  "duration_s": 0.15,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis by this studio (PIPELINE/audio/sfx_synth.py). No third-party audio. Free for monetised use."
+ },
+ {
+  "file": "sound_effects/reactions/surprise_sting.flac",
+  "category": "reactions",
+  "name": "surprise_sting",
+  "description": "Short rising surprise sting (orchestral-ish stab).",
+  "tags": [
+   "surprise"
+  ],
+  "duration_s": 1.2,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis by this studio (PIPELINE/audio/sfx_synth.py). No third-party audio. Free for monetised use."
+ },
+ {
+  "file": "sound_effects/reactions/comedic_boing.flac",
+  "category": "reactions",
+  "name": "comedic_boing",
+  "description": "Comedic boing (springy).",
+  "tags": [
+   "comedy"
+  ],
+  "duration_s": 0.7,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis by this studio (PIPELINE/audio/sfx_synth.py). No third-party audio. Free for monetised use."
+ },
+ {
+  "file": "sound_effects/reactions/slide_whistle_down.flac",
+  "category": "reactions",
+  "name": "slide_whistle_down",
+  "description": "Comedic slide whistle falling.",
+  "tags": [
+   "comedy",
+   "fall"
+  ],
+  "duration_s": 0.9,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis by this studio (PIPELINE/audio/sfx_synth.py). No third-party audio. Free for monetised use."
+ },
+ {
+  "file": "sound_effects/reactions/dramatic_hit.flac",
+  "category": "reactions",
+  "name": "dramatic_hit",
+  "description": "Dramatic low hit with metallic shimmer (braam-like).",
+  "tags": [
+   "hit",
+   "drama"
+  ],
+  "duration_s": 3.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis by this studio (PIPELINE/audio/sfx_synth.py). No third-party audio. Free for monetised use."
+ },
+ {
+  "file": "sound_effects/reactions/tension_riser.flac",
+  "category": "reactions",
+  "name": "tension_riser",
+  "description": "Rising tension (4 s): noise + pitch rise + tremolo.",
+  "tags": [
+   "riser",
+   "tension"
+  ],
+  "duration_s": 4.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis by this studio (PIPELINE/audio/sfx_synth.py). No third-party audio. Free for monetised use."
+ },
+ {
+  "file": "sound_effects/reactions/fall_crash.flac",
+  "category": "reactions",
+  "name": "fall_crash",
+  "description": "Falling whistle into a crash.",
+  "tags": [
+   "fall",
+   "crash"
+  ],
+  "duration_s": 2.4,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis by this studio (PIPELINE/audio/sfx_synth.py). No third-party audio. Free for monetised use."
+ },
+ {
+  "file": "sound_effects/environment/door_creak_slam.flac",
+  "category": "environment",
+  "name": "door_creak_slam",
+  "description": "Wooden door creak then slam.",
+  "tags": [
+   "door"
+  ],
+  "duration_s": 1.8,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis by this studio (PIPELINE/audio/sfx_synth.py). No third-party audio. Free for monetised use."
+ },
+ {
+  "file": "sound_effects/environment/button_click.flac",
+  "category": "environment",
+  "name": "button_click",
+  "description": "Plastic button click.",
+  "tags": [
+   "ui",
+   "click"
+  ],
+  "duration_s": 0.06,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis by this studio (PIPELINE/audio/sfx_synth.py). No third-party audio. Free for monetised use."
+ },
+ {
+  "file": "sound_effects/environment/vehicle_passby.flac",
+  "category": "environment",
+  "name": "vehicle_passby",
+  "description": "Car pass-by with doppler (4 s).",
+  "tags": [
+   "vehicle"
+  ],
+  "duration_s": 4.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis by this studio (PIPELINE/audio/sfx_synth.py). No third-party audio. Free for monetised use."
+ },
+ {
+  "file": "sound_effects/environment/water_flow.flac",
+  "category": "environment",
+  "name": "water_flow",
+  "description": "Running water / stream (6 s loop).",
+  "tags": [
+   "water"
+  ],
+  "duration_s": 6.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis by this studio (PIPELINE/audio/sfx_synth.py). No third-party audio. Free for monetised use."
+ },
+ {
+  "file": "sound_effects/environment/glass_clink.flac",
+  "category": "environment",
+  "name": "glass_clink",
+  "description": "Glass clink.",
+  "tags": [
+   "glass"
+  ],
+  "duration_s": 1.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis by this studio (PIPELINE/audio/sfx_synth.py). No third-party audio. Free for monetised use."
+ },
+ {
+  "file": "sound_effects/environment/glass_shatter.flac",
+  "category": "environment",
+  "name": "glass_shatter",
+  "description": "Glass shatter.",
+  "tags": [
+   "glass",
+   "crash"
+  ],
+  "duration_s": 1.5,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis by this studio (PIPELINE/audio/sfx_synth.py). No third-party audio. Free for monetised use."
+ },
+ {
+  "file": "sound_effects/environment/electronic_beep.flac",
+  "category": "environment",
+  "name": "electronic_beep",
+  "description": "Device beep (two-tone).",
+  "tags": [
+   "electronic",
+   "ui"
+  ],
+  "duration_s": 0.25,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis by this studio (PIPELINE/audio/sfx_synth.py). No third-party audio. Free for monetised use."
+ },
+ {
+  "file": "sound_effects/environment/electronic_glitch.flac",
+  "category": "environment",
+  "name": "electronic_glitch",
+  "description": "Digital glitch burst.",
+  "tags": [
+   "electronic"
+  ],
+  "duration_s": 0.5,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis by this studio (PIPELINE/audio/sfx_synth.py). No third-party audio. Free for monetised use."
+ },
+ {
+  "file": "sound_effects/environment/machinery_hum.flac",
+  "category": "environment",
+  "name": "machinery_hum",
+  "description": "Machinery hum loop (6 s).",
+  "tags": [
+   "machinery"
+  ],
+  "duration_s": 6.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis by this studio (PIPELINE/audio/sfx_synth.py). No third-party audio. Free for monetised use."
+ },
+ {
+  "file": "sound_effects/transitions/swish.flac",
+  "category": "transitions",
+  "name": "swish",
+  "description": "Quick swish for cuts (0.3 s).",
+  "tags": [
+   "transition"
+  ],
+  "duration_s": 0.3,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis by this studio (PIPELINE/audio/sfx_synth.py). No third-party audio. Free for monetised use."
+ },
+ {
+  "file": "sound_effects/transitions/riser_2s.flac",
+  "category": "transitions",
+  "name": "riser_2s",
+  "description": "Short 2 s riser into a cut.",
+  "tags": [
+   "riser"
+  ],
+  "duration_s": 2.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis by this studio (PIPELINE/audio/sfx_synth.py). No third-party audio. Free for monetised use."
+ },
+ {
+  "file": "sound_effects/transitions/downlifter.flac",
+  "category": "transitions",
+  "name": "downlifter",
+  "description": "Downlifter (2 s) after a hit.",
+  "tags": [
+   "downlifter"
+  ],
+  "duration_s": 2.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis by this studio (PIPELINE/audio/sfx_synth.py). No third-party audio. Free for monetised use."
+ },
+ {
+  "file": "sound_effects/transitions/bass_impact.flac",
+  "category": "transitions",
+  "name": "bass_impact",
+  "description": "Sub-bass drop impact.",
+  "tags": [
+   "impact",
+   "sub"
+  ],
+  "duration_s": 2.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis by this studio (PIPELINE/audio/sfx_synth.py). No third-party audio. Free for monetised use."
+ },
+ {
+  "file": "sound_effects/transitions/short_transition.flac",
+  "category": "transitions",
+  "name": "short_transition",
+  "description": "Short tonal transition blip + air (0.6 s).",
+  "tags": [
+   "transition"
+  ],
+  "duration_s": 0.6,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis by this studio (PIPELINE/audio/sfx_synth.py). No third-party audio. Free for monetised use."
+ },
+ {
+  "file": "ambience/wind.flac",
+  "category": "ambience",
+  "name": "wind",
+  "description": "Wind (20 s loop).",
+  "tags": [
+   "outdoor"
+  ],
+  "duration_s": 20.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis by this studio (PIPELINE/audio/sfx_synth.py). No third-party audio. Free for monetised use."
+ },
+ {
+  "file": "ambience/rain.flac",
+  "category": "ambience",
+  "name": "rain",
+  "description": "Steady rain (20 s loop).",
+  "tags": [
+   "outdoor",
+   "weather"
+  ],
+  "duration_s": 20.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis by this studio (PIPELINE/audio/sfx_synth.py). No third-party audio. Free for monetised use."
+ },
+ {
+  "file": "ambience/city.flac",
+  "category": "ambience",
+  "name": "city",
+  "description": "City ambience: distant traffic bed + occasional pass-bys (20 s).",
+  "tags": [
+   "urban"
+  ],
+  "duration_s": 20.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis by this studio (PIPELINE/audio/sfx_synth.py). No third-party audio. Free for monetised use."
+ },
+ {
+  "file": "ambience/room_tone.flac",
+  "category": "ambience",
+  "name": "room_tone",
+  "description": "Quiet interior room tone (15 s).",
+  "tags": [
+   "interior"
+  ],
+  "duration_s": 15.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis by this studio (PIPELINE/audio/sfx_synth.py). No third-party audio. Free for monetised use."
+ },
+ {
+  "file": "ambience/nature.flac",
+  "category": "ambience",
+  "name": "nature",
+  "description": "Nature: breeze + synthetic bird chirps + insects (20 s).",
+  "tags": [
+   "outdoor"
+  ],
+  "duration_s": 20.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis by this studio (PIPELINE/audio/sfx_synth.py). No third-party audio. Free for monetised use."
+ },
+ {
+  "file": "ambience/crowd.flac",
+  "category": "ambience",
+  "name": "crowd",
+  "description": "Indistinct crowd murmur (synthetic babble, 15 s).",
+  "tags": [
+   "crowd"
+  ],
+  "duration_s": 15.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis by this studio (PIPELINE/audio/sfx_synth.py). No third-party audio. Free for monetised use."
+ }
+]

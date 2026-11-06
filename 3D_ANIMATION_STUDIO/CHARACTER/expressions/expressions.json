@@ -1,0 +1,370 @@
+{
+ "expressions": {
+  "neutral": {},
+  "happy": {
+   "brow": [
+    1.5,
+    2.0,
+    1.0
+   ],
+   "lid_up": -4,
+   "lid_lo": 16,
+   "jaw": 7,
+   "keys": {
+    "smile.L": 0.9,
+    "smile.R": 0.9,
+    "cheek_raise.L": 0.7,
+    "cheek_raise.R": 0.7,
+    "wide": 0.15
+   }
+  },
+  "surprised": {
+   "brow": [
+    5.0,
+    6.0,
+    4.0
+   ],
+   "lid_up": 9,
+   "lid_lo": -6,
+   "jaw": 13,
+   "keys": {
+    "funnel": 0.5,
+    "upper_lip_up": 0.2
+   },
+   "head": [
+    0,
+    -4,
+    0
+   ]
+  },
+  "shocked": {
+   "brow": [
+    6.5,
+    7.5,
+    5.0
+   ],
+   "lid_up": 13,
+   "lid_lo": -9,
+   "jaw": 22,
+   "keys": {
+    "wide": 0.35,
+    "funnel": 0.3,
+    "lower_lip_down": 0.6,
+    "upper_lip_up": 0.4
+   },
+   "head": [
+    0,
+    -7,
+    0
+   ]
+  },
+  "confused": {
+   "brow_L": [
+    5.0,
+    6.0,
+    3.0
+   ],
+   "brow_R": [
+    -2.5,
+    -1.5,
+    0.0
+   ],
+   "lid_up_L": 4,
+   "lid_up_R": -12,
+   "lid_lo": 4,
+   "jaw": 2,
+   "keys": {
+    "mouth_left": 0.6,
+    "frown.R": 0.45,
+    "pucker": 0.2
+   },
+   "head": [
+    0,
+    0,
+    8
+   ]
+  },
+  "curious": {
+   "brow_L": [
+    3.0,
+    4.0,
+    3.0
+   ],
+   "brow_R": [
+    1.0,
+    1.5,
+    1.0
+   ],
+   "lid_up": 4,
+   "jaw": 2,
+   "keys": {
+    "pucker": 0.25,
+    "smile.L": 0.25
+   },
+   "head": [
+    0,
+    5,
+    -6
+   ]
+  },
+  "angry": {
+   "brow": [
+    -4.5,
+    -2.0,
+    1.5
+   ],
+   "lid_up": -13,
+   "lid_tilt": 12,
+   "lid_lo": 12,
+   "jaw": 3,
+   "keys": {
+    "frown.L": 0.7,
+    "frown.R": 0.7,
+    "sneer.L": 0.3,
+    "sneer.R": 0.3,
+    "lips_press": 0.4,
+    "upper_lip_up": 0.2
+   },
+   "head": [
+    0,
+    7,
+    0
+   ]
+  },
+  "scared": {
+   "brow": [
+    6.5,
+    3.0,
+    -1.0
+   ],
+   "lid_up": 11,
+   "lid_lo": -4,
+   "lid_tilt": -8,
+   "jaw": 10,
+   "keys": {
+    "wide": 0.7,
+    "frown.L": 0.5,
+    "frown.R": 0.5,
+    "lower_lip_down": 0.4
+   },
+   "head": [
+    0,
+    -4,
+    0
+   ]
+  },
+  "sad": {
+   "brow": [
+    4.5,
+    1.0,
+    -2.0
+   ],
+   "lid_up": -16,
+   "lid_tilt": -10,
+   "lid_lo": 4,
+   "jaw": 0,
+   "keys": {
+    "frown.L": 0.8,
+    "frown.R": 0.8,
+    "pucker": 0.15,
+    "lips_press": 0.2
+   },
+   "head": [
+    0,
+    10,
+    0
+   ],
+   "eyes": [
+    0.0,
+    -0.08
+   ]
+  },
+  "disgusted": {
+   "brow_L": [
+    -3.0,
+    -2.0,
+    -1.0
+   ],
+   "brow_R": [
+    -1.5,
+    -0.5,
+    0.0
+   ],
+   "lid_up": -10,
+   "lid_lo": 16,
+   "jaw": 2,
+   "keys": {
+    "sneer.L": 1.2,
+    "upper_lip_up": 1.0,
+    "frown.R": 0.6,
+    "frown.L": 0.3,
+    "mouth_left": 0.4
+   },
+   "head": [
+    -8,
+    -4,
+    0
+   ]
+  },
+  "excited": {
+   "brow": [
+    5.0,
+    6.0,
+    4.0
+   ],
+   "lid_up": 6,
+   "lid_lo": 8,
+   "jaw": 16,
+   "keys": {
+    "smile.L": 1.0,
+    "smile.R": 1.0,
+    "wide": 0.4,
+    "cheek_raise.L": 0.6,
+    "cheek_raise.R": 0.6,
+    "upper_lip_up": 0.3
+   }
+  },
+  "thinking": {
+   "brow_L": [
+    3.0,
+    2.0,
+    1.0
+   ],
+   "brow_R": [
+    -2.0,
+    -2.0,
+    -1.0
+   ],
+   "lid_up": -6,
+   "lid_lo": 6,
+   "keys": {
+    "mouth_right": 0.6,
+    "pucker": 0.3,
+    "lips_press": 0.3
+   },
+   "head": [
+    8,
+    0,
+    6
+   ],
+   "eyes": [
+    0.24,
+    0.2
+   ]
+  },
+  "laughing": {
+   "brow": [
+    2.0,
+    3.0,
+    2.0
+   ],
+   "lid_up": -30,
+   "lid_lo": 30,
+   "jaw": 18,
+   "keys": {
+    "smile.L": 1.0,
+    "smile.R": 1.0,
+    "wide": 0.5,
+    "cheek_raise.L": 1.0,
+    "cheek_raise.R": 1.0,
+    "upper_lip_up": 0.4
+   },
+   "head": [
+    0,
+    -10,
+    0
+   ]
+  }
+ },
+ "visemes": {
+  "rest": [
+   0,
+   {}
+  ],
+  "AA": [
+   14,
+   {
+    "wide": 0.1
+   }
+  ],
+  "EE": [
+   6,
+   {
+    "wide": 0.6,
+    "smile.L": 0.2,
+    "smile.R": 0.2
+   }
+  ],
+  "OO": [
+   5,
+   {
+    "pucker": 0.9,
+    "funnel": 0.3
+   }
+  ],
+  "OH": [
+   10,
+   {
+    "funnel": 0.7,
+    "pucker": 0.4
+   }
+  ],
+  "ER": [
+   5,
+   {
+    "pucker": 0.4,
+    "funnel": 0.3
+   }
+  ],
+  "MBP": [
+   0,
+   {
+    "lips_press": 0.8
+   }
+  ],
+  "FV": [
+   3,
+   {
+    "lip_tuck": 0.9,
+    "upper_lip_up": 0.2
+   }
+  ],
+  "TH": [
+   5,
+   {
+    "wide": 0.2,
+    "upper_lip_up": 0.1
+   }
+  ],
+  "SS": [
+   3,
+   {
+    "wide": 0.4,
+    "upper_lip_up": 0.2
+   }
+  ],
+  "SH": [
+   4,
+   {
+    "pucker": 0.45,
+    "funnel": 0.35,
+    "upper_lip_up": 0.15
+   }
+  ],
+  "KK": [
+   7,
+   {
+    "wide": 0.15
+   }
+  ]
+ },
+ "units": {
+  "brow": "millimetres up (inner, mid, outer)",
+  "lid_up": "deg (+ opens wider)",
+  "lid_lo": "deg (+ raises lower lid)",
+  "lid_tilt": "deg (+ outer corner up)",
+  "jaw": "deg open",
+  "head": "deg (turn, nod, tilt)",
+  "eyes": "gaze offset (x, up)"
+ }
+}

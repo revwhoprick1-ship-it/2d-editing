@@ -1,0 +1,17 @@
+# render intermediates / caches
+**/frames/
+**/_render_cache/
+**/*.blend1
+**/__pycache__/
+**/raw/*.info.json
+**/tmp/
+*.pyc
+# large regenerable audio intermediates (FLAC copies are committed instead)
+3D_ANIMATION_STUDIO/VIDEOS/*/audio/stems/
+3D_ANIMATION_STUDIO/VIDEOS/*/audio/*.wav
+3D_ANIMATION_STUDIO/VIDEOS/*/audio/narration/*.wav
+3D_ANIMATION_STUDIO/VIDEOS/*/preview/
+3D_ANIMATION_STUDIO/VIDEOS/*/_seq/
+3D_ANIMATION_STUDIO/CHARACTER/animations/*/voice/*.wav
+3D_ANIMATION_STUDIO/REFERENCE/raw/*.vtt
+3D_ANIMATION_STUDIO/REFERENCE/raw/

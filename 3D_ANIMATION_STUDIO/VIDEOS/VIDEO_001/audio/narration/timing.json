@@ -1,0 +1,1617 @@
+{
+ "voice": "af_heart",
+ "sample_rate": 24000,
+ "lines": [
+  {
+   "id": "S01",
+   "text": "You've been shrunk smaller than a blood cell... and your own body is about to attack you.",
+   "start": 0.0,
+   "end": 4.439,
+   "delivery": "hook",
+   "speed": 0.93
+  },
+  {
+   "id": "S02",
+   "text": "That squishy cushion under you? One red blood cell.",
+   "start": 4.739,
+   "end": 7.595,
+   "delivery": "curious",
+   "speed": 0.97
+  },
+  {
+   "id": "S03",
+   "text": "A single drop of your blood holds millions of them.",
+   "start": 7.745,
+   "end": 10.56,
+   "delivery": "calm",
+   "speed": 0.95
+  },
+  {
+   "id": "S04",
+   "text": "Hear that thumping? That's your heart... and you're heading straight in.",
+   "start": 10.91,
+   "end": 14.136,
+   "delivery": "suspense",
+   "speed": 0.95
+  },
+  {
+   "id": "S05",
+   "text": "Every beat, the valves behind you slam shut. That lub-dub? That's them closing.",
+   "start": 14.436,
+   "end": 19.038,
+   "delivery": "dramatic",
+   "speed": 1.0
+  },
+  {
+   "id": "S06",
+   "text": "One squeeze fires you into your lungs... into tunnels so tight, blood cells barely squeeze through.",
+   "start": 19.338,
+   "end": 24.584,
+   "delivery": "urgent",
+   "speed": 1.06
+  },
+  {
+   "id": "S07",
+   "text": "And through a wall over a hundred times thinner than paper, oxygen floods in... and carbon dioxide drifts out. That's the air you breathe out.",
+   "start": 24.834,
+   "end": 33.048,
+   "delivery": "excited",
+   "speed": 1.04
+  },
+  {
+   "id": "S08",
+   "text": "Then... something notices you.",
+   "start": 33.498,
+   "end": 35.251,
+   "delivery": "suspense",
+   "speed": 0.88
+  },
+  {
+   "id": "S09",
+   "text": "A neutrophil. Your body's first responder. To it, you're not you... you're an intruder. And it swallows intruders whole.",
+   "start": 35.851,
+   "end": 42.609,
+   "delivery": "dramatic",
+   "speed": 0.97
+  },
+  {
+   "id": "S10",
+   "text": "You kick free... barely.",
+   "start": 42.859,
+   "end": 44.345,
+   "delivery": "urgent",
+   "speed": 1.05
+  },
+  {
+   "id": "S11",
+   "text": "The current drags you back to your heart, and its main pump launches you into the biggest artery you have!",
+   "start": 44.495,
+   "end": 49.653,
+   "delivery": "urgent",
+   "speed": 1.08
+  },
+  {
+   "id": "S12",
+   "text": "You survived. But somewhere in your lungs... a white blood cell is still trying to digest your shoe.",
+   "start": 50.203,
+   "end": 55.663,
+   "delivery": "humor",
+   "speed": 0.98
+  }
+ ],
+ "words": [
+  {
+   "line": "S01",
+   "text": "You've",
+   "phonemes": "jˌuv",
+   "start": 0.0,
+   "end": 0.103
+  },
+  {
+   "line": "S01",
+   "text": "been",
+   "phonemes": "bɪn",
+   "start": 0.103,
+   "end": 0.278
+  },
+  {
+   "line": "S01",
+   "text": "shrunk",
+   "phonemes": "ʃɹˈʌŋk",
+   "start": 0.278,
+   "end": 0.64
+  },
+  {
+   "line": "S01",
+   "text": "smaller",
+   "phonemes": "smˈɔləɹ",
+   "start": 0.64,
+   "end": 1.115
+  },
+  {
+   "line": "S01",
+   "text": "than",
+   "phonemes": "ðən",
+   "start": 1.115,
+   "end": 1.228
+  },
+  {
+   "line": "S01",
+   "text": "a",
+   "phonemes": "ɐ",
+   "start": 1.228,
+   "end": 1.29
+  },
+  {
+   "line": "S01",
+   "text": "blood",
+   "phonemes": "blˈʌd",
+   "start": 1.29,
+   "end": 1.578
+  },
+  {
+   "line": "S01",
+   "text": "cell",
+   "phonemes": "sˈɛl",
+   "start": 1.578,
+   "end": 2.215
+  },
+  {
+   "line": "S01",
+   "text": ".",
+   "phonemes": ".",
+   "start": 2.215,
+   "end": 2.29
+  },
+  {
+   "line": "S01",
+   "text": ".",
+   "phonemes": ".",
+   "start": 2.29,
+   "end": 2.315
+  },
+  {
+   "line": "S01",
+   "text": ".",
+   "phonemes": ".",
+   "start": 2.315,
+   "end": 2.365
+  },
+  {
+   "line": "S01",
+   "text": "and",
+   "phonemes": "ænd",
+   "start": 2.365,
+   "end": 2.478
+  },
+  {
+   "line": "S01",
+   "text": "your",
+   "phonemes": "jʊɹ",
+   "start": 2.478,
+   "end": 2.615
+  },
+  {
+   "line": "S01",
+   "text": "own",
+   "phonemes": "ˈOn",
+   "start": 2.615,
+   "end": 2.865
+  },
+  {
+   "line": "S01",
+   "text": "body",
+   "phonemes": "bˈɑdi",
+   "start": 2.865,
+   "end": 3.24
+  },
+  {
+   "line": "S01",
+   "text": "is",
+   "phonemes": "ɪz",
+   "start": 3.24,
+   "end": 3.365
+  },
+  {
+   "line": "S01",
+   "text": "about",
+   "phonemes": "əbˈWt",
+   "start": 3.365,
+   "end": 3.665
+  },
+  {
+   "line": "S01",
+   "text": "to",
+   "phonemes": "tʊ",
+   "start": 3.665,
+   "end": 3.765
+  },
+  {
+   "line": "S01",
+   "text": "attack",
+   "phonemes": "ətˈæk",
+   "start": 3.765,
+   "end": 4.165
+  },
+  {
+   "line": "S01",
+   "text": "you",
+   "phonemes": "ju",
+   "start": 4.165,
+   "end": 4.615
+  },
+  {
+   "line": "S01",
+   "text": ".",
+   "phonemes": ".",
+   "start": 4.615,
+   "end": 4.815
+  },
+  {
+   "line": "S02",
+   "text": "That",
+   "phonemes": "ðˈæt",
+   "start": 4.739,
+   "end": 4.897
+  },
+  {
+   "line": "S02",
+   "text": "squishy",
+   "phonemes": "skwˈɪʃi",
+   "start": 4.897,
+   "end": 5.272
+  },
+  {
+   "line": "S02",
+   "text": "cushion",
+   "phonemes": "kˈʊʃən",
+   "start": 5.272,
+   "end": 5.647
+  },
+  {
+   "line": "S02",
+   "text": "under",
+   "phonemes": "ˈʌndəɹ",
+   "start": 5.647,
+   "end": 5.872
+  },
+  {
+   "line": "S02",
+   "text": "you",
+   "phonemes": "ju",
+   "start": 5.872,
+   "end": 6.222
+  },
+  {
+   "line": "S02",
+   "text": "?",
+   "phonemes": "?",
+   "start": 6.222,
+   "end": 6.384
+  },
+  {
+   "line": "S02",
+   "text": "One",
+   "phonemes": "wˈʌn",
+   "start": 6.384,
+   "end": 6.672
+  },
+  {
+   "line": "S02",
+   "text": "red",
+   "phonemes": "ɹˈɛd",
+   "start": 6.672,
+   "end": 6.922
+  },
+  {
+   "line": "S02",
+   "text": "blood",
+   "phonemes": "blˈʌd",
+   "start": 6.922,
+   "end": 7.209
+  },
+  {
+   "line": "S02",
+   "text": "cell",
+   "phonemes": "sˈɛl",
+   "start": 7.209,
+   "end": 7.772
+  },
+  {
+   "line": "S02",
+   "text": ".",
+   "phonemes": ".",
+   "start": 7.772,
+   "end": 7.947
+  },
+  {
+   "line": "S03",
+   "text": "A",
+   "phonemes": "ɐ",
+   "start": 7.749,
+   "end": 7.849
+  },
+  {
+   "line": "S03",
+   "text": "single",
+   "phonemes": "sˈɪŋɡᵊl",
+   "start": 7.849,
+   "end": 8.249
+  },
+  {
+   "line": "S03",
+   "text": "drop",
+   "phonemes": "dɹˈɑp",
+   "start": 8.249,
+   "end": 8.536
+  },
+  {
+   "line": "S03",
+   "text": "of",
+   "phonemes": "ʌv",
+   "start": 8.536,
+   "end": 8.611
+  },
+  {
+   "line": "S03",
+   "text": "your",
+   "phonemes": "jʊɹ",
+   "start": 8.611,
+   "end": 8.724
+  },
+  {
+   "line": "S03",
+   "text": "blood",
+   "phonemes": "blˈʌd",
+   "start": 8.724,
+   "end": 9.236
+  },
+  {
+   "line": "S03",
+   "text": "holds",
+   "phonemes": "hˈOldz",
+   "start": 9.236,
+   "end": 9.599
+  },
+  {
+   "line": "S03",
+   "text": "millions",
+   "phonemes": "mˈɪljənz",
+   "start": 9.599,
+   "end": 10.124
+  },
+  {
+   "line": "S03",
+   "text": "of",
+   "phonemes": "ʌv",
+   "start": 10.124,
+   "end": 10.249
+  },
+  {
+   "line": "S03",
+   "text": "them",
+   "phonemes": "ðˌɛm",
+   "start": 10.249,
+   "end": 10.774
+  },
+  {
+   "line": "S03",
+   "text": ".",
+   "phonemes": ".",
+   "start": 10.774,
+   "end": 10.924
+  },
+  {
+   "line": "S04",
+   "text": "Hear",
+   "phonemes": "hˈɪɹ",
+   "start": 10.956,
+   "end": 11.143
+  },
+  {
+   "line": "S04",
+   "text": "that",
+   "phonemes": "ðˈæt",
+   "start": 11.143,
+   "end": 11.368
+  },
+  {
+   "line": "S04",
+   "text": "thumping",
+   "phonemes": "θˈʌmpɪŋ",
+   "start": 11.368,
+   "end": 11.881
+  },
+  {
+   "line": "S04",
+   "text": "?",
+   "phonemes": "?",
+   "start": 11.881,
+   "end": 11.956
+  },
+  {
+   "line": "S04",
+   "text": "That's",
+   "phonemes": "ðˈæts",
+   "start": 11.956,
+   "end": 12.193
+  },
+  {
+   "line": "S04",
+   "text": "your",
+   "phonemes": "jʊɹ",
+   "start": 12.193,
+   "end": 12.306
+  },
+  {
+   "line": "S04",
+   "text": "heart",
+   "phonemes": "hˈɑɹt",
+   "start": 12.306,
+   "end": 12.831
+  },
+  {
+   "line": "S04",
+   "text": ".",
+   "phonemes": ".",
+   "start": 12.831,
+   "end": 12.881
+  },
+  {
+   "line": "S04",
+   "text": ".",
+   "phonemes": ".",
+   "start": 12.881,
+   "end": 12.906
+  },
+  {
+   "line": "S04",
+   "text": ".",
+   "phonemes": ".",
+   "start": 12.906,
+   "end": 12.956
+  },
+  {
+   "line": "S04",
+   "text": "and",
+   "phonemes": "ænd",
+   "start": 12.956,
+   "end": 13.068
+  },
+  {
+   "line": "S04",
+   "text": "you're",
+   "phonemes": "jʊɹ",
+   "start": 13.068,
+   "end": 13.181
+  },
+  {
+   "line": "S04",
+   "text": "heading",
+   "phonemes": "hˈɛdɪŋ",
+   "start": 13.181,
+   "end": 13.506
+  },
+  {
+   "line": "S04",
+   "text": "straight",
+   "phonemes": "stɹˈAt",
+   "start": 13.506,
+   "end": 13.793
+  },
+  {
+   "line": "S04",
+   "text": "in",
+   "phonemes": "ˈɪn",
+   "start": 13.793,
+   "end": 14.306
+  },
+  {
+   "line": "S04",
+   "text": ".",
+   "phonemes": ".",
+   "start": 14.306,
+   "end": 14.481
+  },
+  {
+   "line": "S05",
+   "text": "Every",
+   "phonemes": "ˈɛvəɹi",
+   "start": 14.436,
+   "end": 14.703
+  },
+  {
+   "line": "S05",
+   "text": "beat",
+   "phonemes": "bˈit",
+   "start": 14.703,
+   "end": 14.953
+  },
+  {
+   "line": "S05",
+   "text": ",",
+   "phonemes": ",",
+   "start": 14.953,
+   "end": 15.003
+  },
+  {
+   "line": "S05",
+   "text": "the",
+   "phonemes": "ðə",
+   "start": 15.003,
+   "end": 15.103
+  },
+  {
+   "line": "S05",
+   "text": "valves",
+   "phonemes": "vˈælvz",
+   "start": 15.103,
+   "end": 15.503
+  },
+  {
+   "line": "S05",
+   "text": "behind",
+   "phonemes": "bəhˈInd",
+   "start": 15.503,
+   "end": 15.865
+  },
+  {
+   "line": "S05",
+   "text": "you",
+   "phonemes": "ju",
+   "start": 15.865,
+   "end": 15.978
+  },
+  {
+   "line": "S05",
+   "text": "slam",
+   "phonemes": "slˈæm",
+   "start": 15.978,
+   "end": 16.328
+  },
+  {
+   "line": "S05",
+   "text": "shut",
+   "phonemes": "ʃˈʌt",
+   "start": 16.328,
+   "end": 16.953
+  },
+  {
+   "line": "S05",
+   "text": ".",
+   "phonemes": ".",
+   "start": 16.953,
+   "end": 17.09
+  },
+  {
+   "line": "S05",
+   "text": "That",
+   "phonemes": "ðˈæt",
+   "start": 17.09,
+   "end": 17.328
+  },
+  {
+   "line": "S05",
+   "text": "lub-dub",
+   "phonemes": "lˈʌbdˈʌb",
+   "start": 17.328,
+   "end": 17.953
+  },
+  {
+   "line": "S05",
+   "text": "?",
+   "phonemes": "?",
+   "start": 17.953,
+   "end": 18.053
+  },
+  {
+   "line": "S05",
+   "text": "That's",
+   "phonemes": "ðˈæts",
+   "start": 18.053,
+   "end": 18.29
+  },
+  {
+   "line": "S05",
+   "text": "them",
+   "phonemes": "ðˌɛm",
+   "start": 18.29,
+   "end": 18.453
+  },
+  {
+   "line": "S05",
+   "text": "closing",
+   "phonemes": "klˈOzɪŋ",
+   "start": 18.453,
+   "end": 19.228
+  },
+  {
+   "line": "S05",
+   "text": ".",
+   "phonemes": ".",
+   "start": 19.228,
+   "end": 19.378
+  },
+  {
+   "line": "S06",
+   "text": "One",
+   "phonemes": "wˈʌn",
+   "start": 19.338,
+   "end": 19.56
+  },
+  {
+   "line": "S06",
+   "text": "squeeze",
+   "phonemes": "skwˈiz",
+   "start": 19.56,
+   "end": 19.973
+  },
+  {
+   "line": "S06",
+   "text": "fires",
+   "phonemes": "fˈIəɹz",
+   "start": 19.973,
+   "end": 20.348
+  },
+  {
+   "line": "S06",
+   "text": "you",
+   "phonemes": "ju",
+   "start": 20.348,
+   "end": 20.423
+  },
+  {
+   "line": "S06",
+   "text": "into",
+   "phonemes": "ˈɪntu",
+   "start": 20.423,
+   "end": 20.598
+  },
+  {
+   "line": "S06",
+   "text": "your",
+   "phonemes": "jʊɹ",
+   "start": 20.598,
+   "end": 20.71
+  },
+  {
+   "line": "S06",
+   "text": "lungs",
+   "phonemes": "lˈʌŋz",
+   "start": 20.71,
+   "end": 21.385
+  },
+  {
+   "line": "S06",
+   "text": ".",
+   "phonemes": ".",
+   "start": 21.385,
+   "end": 21.435
+  },
+  {
+   "line": "S06",
+   "text": ".",
+   "phonemes": ".",
+   "start": 21.435,
+   "end": 21.46
+  },
+  {
+   "line": "S06",
+   "text": ".",
+   "phonemes": ".",
+   "start": 21.46,
+   "end": 21.51
+  },
+  {
+   "line": "S06",
+   "text": "into",
+   "phonemes": "ˈɪntu",
+   "start": 21.51,
+   "end": 21.76
+  },
+  {
+   "line": "S06",
+   "text": "tunnels",
+   "phonemes": "tˈʌnᵊlz",
+   "start": 21.76,
+   "end": 22.11
+  },
+  {
+   "line": "S06",
+   "text": "so",
+   "phonemes": "sˌO",
+   "start": 22.11,
+   "end": 22.298
+  },
+  {
+   "line": "S06",
+   "text": "tight",
+   "phonemes": "tˈIt",
+   "start": 22.298,
+   "end": 22.785
+  },
+  {
+   "line": "S06",
+   "text": ",",
+   "phonemes": ",",
+   "start": 22.785,
+   "end": 22.885
+  },
+  {
+   "line": "S06",
+   "text": "blood",
+   "phonemes": "blˈʌd",
+   "start": 22.885,
+   "end": 23.16
+  },
+  {
+   "line": "S06",
+   "text": "cells",
+   "phonemes": "sˈɛlz",
+   "start": 23.16,
+   "end": 23.51
+  },
+  {
+   "line": "S06",
+   "text": "barely",
+   "phonemes": "bˈɛɹli",
+   "start": 23.51,
+   "end": 23.86
+  },
+  {
+   "line": "S06",
+   "text": "squeeze",
+   "phonemes": "skwˈiz",
+   "start": 23.86,
+   "end": 24.235
+  },
+  {
+   "line": "S06",
+   "text": "through",
+   "phonemes": "θɹˈu",
+   "start": 24.235,
+   "end": 24.76
+  },
+  {
+   "line": "S06",
+   "text": ".",
+   "phonemes": ".",
+   "start": 24.76,
+   "end": 24.91
+  },
+  {
+   "line": "S07",
+   "text": "And",
+   "phonemes": "ˌænd",
+   "start": 24.834,
+   "end": 24.95
+  },
+  {
+   "line": "S07",
+   "text": "through",
+   "phonemes": "θɹu",
+   "start": 24.95,
+   "end": 25.15
+  },
+  {
+   "line": "S07",
+   "text": "a",
+   "phonemes": "ɐ",
+   "start": 25.15,
+   "end": 25.262
+  },
+  {
+   "line": "S07",
+   "text": "wall",
+   "phonemes": "wˈɔl",
+   "start": 25.262,
+   "end": 25.675
+  },
+  {
+   "line": "S07",
+   "text": "over",
+   "phonemes": "ˈOvəɹ",
+   "start": 25.675,
+   "end": 25.887
+  },
+  {
+   "line": "S07",
+   "text": "a",
+   "phonemes": "ɐ",
+   "start": 25.887,
+   "end": 25.95
+  },
+  {
+   "line": "S07",
+   "text": "hundred",
+   "phonemes": "hˈʌndɹəd",
+   "start": 25.95,
+   "end": 26.35
+  },
+  {
+   "line": "S07",
+   "text": "times",
+   "phonemes": "tˈImz",
+   "start": 26.35,
+   "end": 26.725
+  },
+  {
+   "line": "S07",
+   "text": "thinner",
+   "phonemes": "θˈɪnəɹ",
+   "start": 26.725,
+   "end": 27.0
+  },
+  {
+   "line": "S07",
+   "text": "than",
+   "phonemes": "ðən",
+   "start": 27.0,
+   "end": 27.125
+  },
+  {
+   "line": "S07",
+   "text": "paper",
+   "phonemes": "pˈApəɹ",
+   "start": 27.125,
+   "end": 27.675
+  },
+  {
+   "line": "S07",
+   "text": ",",
+   "phonemes": ",",
+   "start": 27.675,
+   "end": 27.812
+  },
+  {
+   "line": "S07",
+   "text": "oxygen",
+   "phonemes": "ˈɑksəʤᵊn",
+   "start": 27.812,
+   "end": 28.412
+  },
+  {
+   "line": "S07",
+   "text": "floods",
+   "phonemes": "flˈʌdz",
+   "start": 28.412,
+   "end": 28.725
+  },
+  {
+   "line": "S07",
+   "text": "in",
+   "phonemes": "ˈɪn",
+   "start": 28.725,
+   "end": 29.225
+  },
+  {
+   "line": "S07",
+   "text": ".",
+   "phonemes": ".",
+   "start": 29.225,
+   "end": 29.275
+  },
+  {
+   "line": "S07",
+   "text": ".",
+   "phonemes": ".",
+   "start": 29.275,
+   "end": 29.3
+  },
+  {
+   "line": "S07",
+   "text": ".",
+   "phonemes": ".",
+   "start": 29.3,
+   "end": 29.35
+  },
+  {
+   "line": "S07",
+   "text": "and",
+   "phonemes": "ænd",
+   "start": 29.35,
+   "end": 29.475
+  },
+  {
+   "line": "S07",
+   "text": "carbon",
+   "phonemes": "kˈɑɹbən",
+   "start": 29.475,
+   "end": 29.875
+  },
+  {
+   "line": "S07",
+   "text": "dioxide",
+   "phonemes": "dIˈɑksˌId",
+   "start": 29.875,
+   "end": 30.575
+  },
+  {
+   "line": "S07",
+   "text": "drifts",
+   "phonemes": "dɹˈɪfts",
+   "start": 30.575,
+   "end": 30.9
+  },
+  {
+   "line": "S07",
+   "text": "out",
+   "phonemes": "ˈWt",
+   "start": 30.9,
+   "end": 31.5
+  },
+  {
+   "line": "S07",
+   "text": ".",
+   "phonemes": ".",
+   "start": 31.5,
+   "end": 31.637
+  },
+  {
+   "line": "S07",
+   "text": "That's",
+   "phonemes": "ðˈæts",
+   "start": 31.637,
+   "end": 31.937
+  },
+  {
+   "line": "S07",
+   "text": "the",
+   "phonemes": "ði",
+   "start": 31.937,
+   "end": 32.087
+  },
+  {
+   "line": "S07",
+   "text": "air",
+   "phonemes": "ˈɛɹ",
+   "start": 32.087,
+   "end": 32.3
+  },
+  {
+   "line": "S07",
+   "text": "you",
+   "phonemes": "ju",
+   "start": 32.3,
+   "end": 32.4
+  },
+  {
+   "line": "S07",
+   "text": "breathe",
+   "phonemes": "bɹˈið",
+   "start": 32.4,
+   "end": 32.675
+  },
+  {
+   "line": "S07",
+   "text": "out",
+   "phonemes": "ˈWt",
+   "start": 32.675,
+   "end": 33.2
+  },
+  {
+   "line": "S07",
+   "text": ".",
+   "phonemes": ".",
+   "start": 33.2,
+   "end": 33.35
+  },
+  {
+   "line": "S08",
+   "text": "Then",
+   "phonemes": "ðˈɛn",
+   "start": 33.552,
+   "end": 33.977
+  },
+  {
+   "line": "S08",
+   "text": ".",
+   "phonemes": ".",
+   "start": 33.977,
+   "end": 34.027
+  },
+  {
+   "line": "S08",
+   "text": ".",
+   "phonemes": ".",
+   "start": 34.027,
+   "end": 34.052
+  },
+  {
+   "line": "S08",
+   "text": ".",
+   "phonemes": ".",
+   "start": 34.052,
+   "end": 34.102
+  },
+  {
+   "line": "S08",
+   "text": "something",
+   "phonemes": "sˈʌmθˌɪŋ",
+   "start": 34.102,
+   "end": 34.427
+  },
+  {
+   "line": "S08",
+   "text": "notices",
+   "phonemes": "nˈOTəsᵻz",
+   "start": 34.427,
+   "end": 34.927
+  },
+  {
+   "line": "S08",
+   "text": "you",
+   "phonemes": "ju",
+   "start": 34.927,
+   "end": 35.427
+  },
+  {
+   "line": "S08",
+   "text": ".",
+   "phonemes": ".",
+   "start": 35.427,
+   "end": 35.627
+  },
+  {
+   "line": "S09",
+   "text": "A",
+   "phonemes": "ɐ",
+   "start": 35.851,
+   "end": 35.924
+  },
+  {
+   "line": "S09",
+   "text": "neutrophil",
+   "phonemes": "nˈutɹəfˌɪl",
+   "start": 35.924,
+   "end": 36.574
+  },
+  {
+   "line": "S09",
+   "text": ".",
+   "phonemes": ".",
+   "start": 36.574,
+   "end": 36.649
+  },
+  {
+   "line": "S09",
+   "text": "Your",
+   "phonemes": "jˌʊɹ",
+   "start": 36.649,
+   "end": 36.799
+  },
+  {
+   "line": "S09",
+   "text": "body's",
+   "phonemes": "bˈɑdiz",
+   "start": 36.799,
+   "end": 37.224
+  },
+  {
+   "line": "S09",
+   "text": "first",
+   "phonemes": "fˈɜɹst",
+   "start": 37.224,
+   "end": 37.486
+  },
+  {
+   "line": "S09",
+   "text": "responder",
+   "phonemes": "ɹəspˈɑndəɹ",
+   "start": 37.486,
+   "end": 38.249
+  },
+  {
+   "line": "S09",
+   "text": ".",
+   "phonemes": ".",
+   "start": 38.249,
+   "end": 38.386
+  },
+  {
+   "line": "S09",
+   "text": "To",
+   "phonemes": "tʊ",
+   "start": 38.386,
+   "end": 38.574
+  },
+  {
+   "line": "S09",
+   "text": "it",
+   "phonemes": "ɪt",
+   "start": 38.574,
+   "end": 38.674
+  },
+  {
+   "line": "S09",
+   "text": ",",
+   "phonemes": ",",
+   "start": 38.674,
+   "end": 38.724
+  },
+  {
+   "line": "S09",
+   "text": "you're",
+   "phonemes": "jʊɹ",
+   "start": 38.724,
+   "end": 38.849
+  },
+  {
+   "line": "S09",
+   "text": "not",
+   "phonemes": "nˌɑt",
+   "start": 38.849,
+   "end": 39.111
+  },
+  {
+   "line": "S09",
+   "text": "you",
+   "phonemes": "ju",
+   "start": 39.111,
+   "end": 39.524
+  },
+  {
+   "line": "S09",
+   "text": ".",
+   "phonemes": ".",
+   "start": 39.524,
+   "end": 39.674
+  },
+  {
+   "line": "S09",
+   "text": ".",
+   "phonemes": ".",
+   "start": 39.674,
+   "end": 39.699
+  },
+  {
+   "line": "S09",
+   "text": ".",
+   "phonemes": ".",
+   "start": 39.699,
+   "end": 39.749
+  },
+  {
+   "line": "S09",
+   "text": "you're",
+   "phonemes": "jʊɹ",
+   "start": 39.749,
+   "end": 39.911
+  },
+  {
+   "line": "S09",
+   "text": "an",
+   "phonemes": "ɐn",
+   "start": 39.911,
+   "end": 39.999
+  },
+  {
+   "line": "S09",
+   "text": "intruder",
+   "phonemes": "ɪntɹˈudəɹ",
+   "start": 39.999,
+   "end": 40.749
+  },
+  {
+   "line": "S09",
+   "text": ".",
+   "phonemes": ".",
+   "start": 40.749,
+   "end": 40.849
+  },
+  {
+   "line": "S09",
+   "text": "And",
+   "phonemes": "ˌænd",
+   "start": 40.849,
+   "end": 41.011
+  },
+  {
+   "line": "S09",
+   "text": "it",
+   "phonemes": "ɪt",
+   "start": 41.011,
+   "end": 41.111
+  },
+  {
+   "line": "S09",
+   "text": "swallows",
+   "phonemes": "swˈɑlOz",
+   "start": 41.111,
+   "end": 41.649
+  },
+  {
+   "line": "S09",
+   "text": "intruders",
+   "phonemes": "ɪntɹˈudəɹz",
+   "start": 41.649,
+   "end": 42.199
+  },
+  {
+   "line": "S09",
+   "text": "whole",
+   "phonemes": "hˈOl",
+   "start": 42.199,
+   "end": 42.849
+  },
+  {
+   "line": "S09",
+   "text": ".",
+   "phonemes": ".",
+   "start": 42.849,
+   "end": 42.999
+  },
+  {
+   "line": "S10",
+   "text": "You",
+   "phonemes": "jˌu",
+   "start": 42.867,
+   "end": 42.992
+  },
+  {
+   "line": "S10",
+   "text": "kick",
+   "phonemes": "kˈɪk",
+   "start": 42.992,
+   "end": 43.217
+  },
+  {
+   "line": "S10",
+   "text": "free",
+   "phonemes": "fɹˈi",
+   "start": 43.217,
+   "end": 43.617
+  },
+  {
+   "line": "S10",
+   "text": ".",
+   "phonemes": ".",
+   "start": 43.617,
+   "end": 43.692
+  },
+  {
+   "line": "S10",
+   "text": ".",
+   "phonemes": ".",
+   "start": 43.692,
+   "end": 43.717
+  },
+  {
+   "line": "S10",
+   "text": ".",
+   "phonemes": ".",
+   "start": 43.717,
+   "end": 43.767
+  },
+  {
+   "line": "S10",
+   "text": "barely",
+   "phonemes": "bˈɛɹli",
+   "start": 43.767,
+   "end": 44.442
+  },
+  {
+   "line": "S10",
+   "text": ".",
+   "phonemes": ".",
+   "start": 44.442,
+   "end": 44.617
+  },
+  {
+   "line": "S11",
+   "text": "The",
+   "phonemes": "ðə",
+   "start": 44.495,
+   "end": 44.551
+  },
+  {
+   "line": "S11",
+   "text": "current",
+   "phonemes": "kˈɜɹənt",
+   "start": 44.551,
+   "end": 44.901
+  },
+  {
+   "line": "S11",
+   "text": "drags",
+   "phonemes": "dɹˈæɡz",
+   "start": 44.901,
+   "end": 45.288
+  },
+  {
+   "line": "S11",
+   "text": "you",
+   "phonemes": "ju",
+   "start": 45.288,
+   "end": 45.376
+  },
+  {
+   "line": "S11",
+   "text": "back",
+   "phonemes": "bˈæk",
+   "start": 45.376,
+   "end": 45.651
+  },
+  {
+   "line": "S11",
+   "text": "to",
+   "phonemes": "tə",
+   "start": 45.651,
+   "end": 45.738
+  },
+  {
+   "line": "S11",
+   "text": "your",
+   "phonemes": "jʊɹ",
+   "start": 45.738,
+   "end": 45.851
+  },
+  {
+   "line": "S11",
+   "text": "heart",
+   "phonemes": "hˈɑɹt",
+   "start": 45.851,
+   "end": 46.425
+  },
+  {
+   "line": "S11",
+   "text": ",",
+   "phonemes": ",",
+   "start": 46.425,
+   "end": 46.526
+  },
+  {
+   "line": "S11",
+   "text": "and",
+   "phonemes": "ænd",
+   "start": 46.526,
+   "end": 46.638
+  },
+  {
+   "line": "S11",
+   "text": "its",
+   "phonemes": "ɪts",
+   "start": 46.638,
+   "end": 46.813
+  },
+  {
+   "line": "S11",
+   "text": "main",
+   "phonemes": "mˈAn",
+   "start": 46.813,
+   "end": 47.126
+  },
+  {
+   "line": "S11",
+   "text": "pump",
+   "phonemes": "pˈʌmp",
+   "start": 47.126,
+   "end": 47.438
+  },
+  {
+   "line": "S11",
+   "text": "launches",
+   "phonemes": "lˈɔnʧᵻz",
+   "start": 47.438,
+   "end": 47.901
+  },
+  {
+   "line": "S11",
+   "text": "you",
+   "phonemes": "ju",
+   "start": 47.901,
+   "end": 48.076
+  },
+  {
+   "line": "S11",
+   "text": "into",
+   "phonemes": "ˈɪntu",
+   "start": 48.076,
+   "end": 48.263
+  },
+  {
+   "line": "S11",
+   "text": "the",
+   "phonemes": "ðə",
+   "start": 48.263,
+   "end": 48.363
+  },
+  {
+   "line": "S11",
+   "text": "biggest",
+   "phonemes": "bˈɪɡᵻst",
+   "start": 48.363,
+   "end": 48.726
+  },
+  {
+   "line": "S11",
+   "text": "artery",
+   "phonemes": "ˈɑɹTəɹi",
+   "start": 48.726,
+   "end": 49.101
+  },
+  {
+   "line": "S11",
+   "text": "you",
+   "phonemes": "ju",
+   "start": 49.101,
+   "end": 49.226
+  },
+  {
+   "line": "S11",
+   "text": "have",
+   "phonemes": "hˈæv",
+   "start": 49.226,
+   "end": 49.776
+  },
+  {
+   "line": "S11",
+   "text": "!",
+   "phonemes": "!",
+   "start": 49.776,
+   "end": 49.951
+  },
+  {
+   "line": "S12",
+   "text": "You",
+   "phonemes": "jˌu",
+   "start": 50.203,
+   "end": 50.314
+  },
+  {
+   "line": "S12",
+   "text": "survived",
+   "phonemes": "səɹvˈIvd",
+   "start": 50.314,
+   "end": 51.089
+  },
+  {
+   "line": "S12",
+   "text": ".",
+   "phonemes": ".",
+   "start": 51.089,
+   "end": 51.189
+  },
+  {
+   "line": "S12",
+   "text": "But",
+   "phonemes": "bˌʌt",
+   "start": 51.189,
+   "end": 51.377
+  },
+  {
+   "line": "S12",
+   "text": "somewhere",
+   "phonemes": "sˈʌmhwˌɛɹ",
+   "start": 51.377,
+   "end": 51.777
+  },
+  {
+   "line": "S12",
+   "text": "in",
+   "phonemes": "ɪn",
+   "start": 51.777,
+   "end": 51.852
+  },
+  {
+   "line": "S12",
+   "text": "your",
+   "phonemes": "jʊɹ",
+   "start": 51.852,
+   "end": 51.964
+  },
+  {
+   "line": "S12",
+   "text": "lungs",
+   "phonemes": "lˈʌŋz",
+   "start": 51.964,
+   "end": 52.689
+  },
+  {
+   "line": "S12",
+   "text": ".",
+   "phonemes": ".",
+   "start": 52.689,
+   "end": 52.764
+  },
+  {
+   "line": "S12",
+   "text": ".",
+   "phonemes": ".",
+   "start": 52.764,
+   "end": 52.789
+  },
+  {
+   "line": "S12",
+   "text": ".",
+   "phonemes": ".",
+   "start": 52.789,
+   "end": 52.852
+  },
+  {
+   "line": "S12",
+   "text": "a",
+   "phonemes": "ɐ",
+   "start": 52.852,
+   "end": 53.002
+  },
+  {
+   "line": "S12",
+   "text": "white",
+   "phonemes": "wˈIt",
+   "start": 53.002,
+   "end": 53.314
+  },
+  {
+   "line": "S12",
+   "text": "blood",
+   "phonemes": "blˈʌd",
+   "start": 53.314,
+   "end": 53.602
+  },
+  {
+   "line": "S12",
+   "text": "cell",
+   "phonemes": "sˈɛl",
+   "start": 53.602,
+   "end": 53.914
+  },
+  {
+   "line": "S12",
+   "text": "is",
+   "phonemes": "ɪz",
+   "start": 53.914,
+   "end": 54.014
+  },
+  {
+   "line": "S12",
+   "text": "still",
+   "phonemes": "stˈɪl",
+   "start": 54.014,
+   "end": 54.289
+  },
+  {
+   "line": "S12",
+   "text": "trying",
+   "phonemes": "tɹˈIɪŋ",
+   "start": 54.289,
+   "end": 54.589
+  },
+  {
+   "line": "S12",
+   "text": "to",
+   "phonemes": "tə",
+   "start": 54.589,
+   "end": 54.689
+  },
+  {
+   "line": "S12",
+   "text": "digest",
+   "phonemes": "dIʤˈɛst",
+   "start": 54.689,
+   "end": 55.127
+  },
+  {
+   "line": "S12",
+   "text": "your",
+   "phonemes": "jʊɹ",
+   "start": 55.127,
+   "end": 55.277
+  },
+  {
+   "line": "S12",
+   "text": "shoe",
+   "phonemes": "ʃˈu",
+   "start": 55.277,
+   "end": 55.839
+  },
+  {
+   "line": "S12",
+   "text": ".",
+   "phonemes": ".",
+   "start": 55.839,
+   "end": 56.014
+  }
+ ],
+ "duration": 56.463
+}

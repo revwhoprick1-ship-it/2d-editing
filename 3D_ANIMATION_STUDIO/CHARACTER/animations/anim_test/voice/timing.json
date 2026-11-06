@@ -1,0 +1,115 @@
+{
+ "voice": "am_puck",
+ "sample_rate": 24000,
+ "lines": [
+  {
+   "id": "L01",
+   "text": "Hey! Ready for an adventure... inside your own body?",
+   "start": 0.0,
+   "end": 2.5,
+   "delivery": "excited",
+   "speed": 1.0
+  }
+ ],
+ "words": [
+  {
+   "line": "L01",
+   "text": "Hey",
+   "phonemes": "hˈA",
+   "start": 0.0,
+   "end": 0.179
+  },
+  {
+   "line": "L01",
+   "text": "!",
+   "phonemes": "!",
+   "start": 0.179,
+   "end": 0.229
+  },
+  {
+   "line": "L01",
+   "text": "Ready",
+   "phonemes": "ɹˈɛdi",
+   "start": 0.229,
+   "end": 0.454
+  },
+  {
+   "line": "L01",
+   "text": "for",
+   "phonemes": "fɔɹ",
+   "start": 0.454,
+   "end": 0.567
+  },
+  {
+   "line": "L01",
+   "text": "an",
+   "phonemes": "ɐn",
+   "start": 0.567,
+   "end": 0.642
+  },
+  {
+   "line": "L01",
+   "text": "adventure",
+   "phonemes": "ədvˈɛnʧəɹ",
+   "start": 0.642,
+   "end": 1.254
+  },
+  {
+   "line": "L01",
+   "text": ".",
+   "phonemes": ".",
+   "start": 1.254,
+   "end": 1.279
+  },
+  {
+   "line": "L01",
+   "text": ".",
+   "phonemes": ".",
+   "start": 1.279,
+   "end": 1.304
+  },
+  {
+   "line": "L01",
+   "text": ".",
+   "phonemes": ".",
+   "start": 1.304,
+   "end": 1.354
+  },
+  {
+   "line": "L01",
+   "text": "inside",
+   "phonemes": "ɪnsˈId",
+   "start": 1.354,
+   "end": 1.717
+  },
+  {
+   "line": "L01",
+   "text": "your",
+   "phonemes": "jʊɹ",
+   "start": 1.717,
+   "end": 1.829
+  },
+  {
+   "line": "L01",
+   "text": "own",
+   "phonemes": "ˈOn",
+   "start": 1.829,
+   "end": 2.029
+  },
+  {
+   "line": "L01",
+   "text": "body",
+   "phonemes": "bˈɑdi",
+   "start": 2.029,
+   "end": 2.829
+  },
+  {
+   "line": "L01",
+   "text": "?",
+   "phonemes": "?",
+   "start": 2.829,
+   "end": 3.029
+  }
+ ],
+ "duration": 2.6
+}

@@ -1,0 +1,91 @@
+{
+ "title": "What If You Were Shrunk Inside Your Own Body?",
+ "voice": "af_heart",
+ "lang_code": "a",
+ "pronunciations": {},
+ "lines": [
+  {
+   "id": "S01",
+   "delivery": "hook",
+   "speed": 0.93,
+   "pause_after": 0.3,
+   "text": "You've been shrunk smaller than a blood cell... and your own body is about to attack you."
+  },
+  {
+   "id": "S02",
+   "delivery": "curious",
+   "pause_after": 0.15,
+   "text": "That squishy cushion under you? One red blood cell."
+  },
+  {
+   "id": "S03",
+   "delivery": "calm",
+   "speed": 0.95,
+   "pause_after": 0.35,
+   "text": "A single drop of your blood holds millions of them."
+  },
+  {
+   "id": "S04",
+   "delivery": "suspense",
+   "speed": 0.95,
+   "pause_after": 0.3,
+   "text": "Hear that thumping? That's your heart... and you're heading straight in."
+  },
+  {
+   "id": "S05",
+   "delivery": "dramatic",
+   "speed": 1.0,
+   "pause_after": 0.3,
+   "text": "Every beat, the valves behind you slam shut. That lub-dub? That's them closing."
+  },
+  {
+   "id": "S06",
+   "delivery": "urgent",
+   "speed": 1.06,
+   "pause_after": 0.25,
+   "text": "One squeeze fires you into your lungs... into tunnels so tight, blood cells barely squeeze through."
+  },
+  {
+   "id": "S07",
+   "delivery": "excited",
+   "speed": 1.04,
+   "pause_after": 0.45,
+   "text": "And through a wall over a hundred times thinner than paper, oxygen floods in... and carbon dioxide drifts out. That's the air you breathe out."
+  },
+  {
+   "id": "S08",
+   "delivery": "suspense",
+   "speed": 0.88,
+   "pause_after": 0.6,
+   "text": "Then... something notices you."
+  },
+  {
+   "id": "S09",
+   "delivery": "dramatic",
+   "speed": 0.97,
+   "pause_after": 0.25,
+   "text": "A neutrophil. Your body's first responder. To it, you're not you... you're an intruder. And it swallows intruders whole."
+  },
+  {
+   "id": "S10",
+   "delivery": "urgent",
+   "speed": 1.05,
+   "pause_after": 0.15,
+   "text": "You kick free... barely."
+  },
+  {
+   "id": "S11",
+   "delivery": "urgent",
+   "speed": 1.08,
+   "pause_after": 0.55,
+   "text": "The current drags you back to your heart, and its main pump launches you into the biggest artery you have!"
+  },
+  {
+   "id": "S12",
+   "delivery": "humor",
+   "speed": 0.98,
+   "pause_after": 0.8,
+   "text": "You survived. But somewhere in your lungs... a white blood cell is still trying to digest your shoe."
+  }
+ ]
+}

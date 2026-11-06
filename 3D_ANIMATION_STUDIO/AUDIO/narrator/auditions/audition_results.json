@@ -1,0 +1,13 @@
+[
+ {
+  "file": "AUDIO/narrator/auditions/af_heart_hook.wav",
+  "duration_s": 5.03,
+  "transcript": "You've been shrunk smaller than a blood cell, and your own body is about to attack you.",
+  "wer": 0.0,
+  "mismatches": [],
+  "words_per_sec": 3.38,
+  "longest_pause_s": 0.54,
+  "f0_median_hz": 195.1,
+  "f0_range_semitones_p5_p95": 9.26,
+  "f0_std_semitones": 3.22,
+  "peak_dbfs": 
