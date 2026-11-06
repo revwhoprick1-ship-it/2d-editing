@@ -49,6 +49,11 @@ python3 PIPELINE/quality_control/qc_video.py EXPORTS/VIDEO_001.mp4 --video-dir V
 ```
 See `DOCUMENTATION/PIPELINE_GUIDE.md` to make VIDEO_002.
 
+## Delivered so far
+* `EXPORTS/VIDEO_001_What_If_You_Were_Shrunk.mp4`: 57.0 s, 1080×1920, 30 fps, H.264/AAC, −14.0 LUFS, −1.1 dBTP. Passes every automated QC check (`VIDEOS/VIDEO_001/qc/`).
+* `CHARACTER/`: mascot.blend, mascot_rig.blend, reference/turnaround/expression sheets, `mascot_animation_test.mp4` (walk, wave + lip‑synced line, jump, point).
+* `VIDEOS/VIDEO_001/`: research with sources, 3 concepts, draft, critique, final script, hooks, storyboard, cue sheet, pre‑render reviews, QA & production report, narration and audio deliverables (FLAC), 20 shot `.blend` files.
+
 ## Status and honest limitations
 * **Reference videos:** only metadata, transcripts, thumbnails and Ref 1's storyboard frames could be fetched (the video streams were blocked by YouTube). Please supply the MP4s for a full frame‑by‑frame and audio analysis.
 * **Mascot image:** the uploaded image did not reach this environment. The mascot was built from the written description. Send the image to recalibrate `PIPELINE/blender_scripts/studio_lib/mascot_config.py`.

@@ -1,7 +1,7 @@
 {
  "file": "EXPORTS/VIDEO_001_What_If_You_Were_Shrunk.mp4",
  "duration_s": 57.0,
- "size_mb": 79.19,
+ "size_mb": 79.93,
  "video": {
   "codec": "h264",
   "profile": "High",
@@ -10,7 +10,7 @@
   "fps": "30/1",
   "pix_fmt": "yuv420p",
   "color_primaries": "bt709",
-  "bitrate_kbps": 11115
+  "bitrate_kbps": 11218
  },
  "audio": {
   "codec": "aac",

@@ -1,6 +1,6 @@
 # VIDEO_001 — QA & Final Production Report
 
-> Status: **filled in after the final render and export.** Numbers marked ⟨…⟩ come from `qc/qc_report.json` and `audio/mix_stats.json`.
+> Final file: `EXPORTS/VIDEO_001_What_If_You_Were_Shrunk.mp4`. Evidence: `qc/qc_report.json`, `qc/contact_*.png`, `audio/mix_stats.json`, `audio/narration/qc_report.json`.
 
 ## 1. Title
 **What If You Were Shrunk Inside Your Own Body?**
@@ -29,7 +29,7 @@ Original score composed for this video (`PIPELINE/audio/music_gen.py`, `cue_vide
 72 cues from the studio's original SFX library: vein/capillary ambience beds, heartbeat motif (muffled → close → exterior → flinch beats), valve slam + sub impact, squelches, O₂ sparkles, creature presence, dramatic hit, engulf gloop, footsteps, kick, pop (shoe), whooshes, launch impacts, bubble "gulp" and comedic boing. Every cue is tied to a frame (`08_audio_cue_sheet.md`).
 
 ## 9. Duration
-⟨duration⟩ s
+**57.0 s** (narration 0.2–55.9 s, music button 55.95 s)
 
 ## 10. Resolution & FPS
 1080×1920, 30 fps, H.264 High, yuv420p, BT.709, AAC 320 kb/s 48 kHz. Rendered at 540×960 (EEVEE, 4 samples), denoised and upscaled. See the HARDWARE doc.
@@ -48,7 +48,44 @@ Original score composed for this video (`PIPELINE/audio/music_gen.py`, `cue_vide
 | TTS mispronunciation risks | ASR QC loop; 2 lines rewritten |
 
 ## 12. Quality‑assurance results
-⟨filled from qc_report.json: spec checks, loudness, true peak, black/freeze detection, contact‑sheet review notes⟩
+**Automated checks on the exported file (ffprobe + ffmpeg EBU R128):**
+| Check | Result |
+|---|---|
+| Resolution / aspect | 1080×1920, 9:16 ✅ |
+| Frame rate | 30/1 ✅ (1710 frames, every frame rendered, 0 filled) |
+| Video | H.264 High, yuv420p, BT.709 tags, ~11.2 Mb/s (CRF 20, preset slow) ✅ |
+| Audio | AAC 320 kb/s, 48 kHz stereo ✅ |
+| Integrated loudness | **−14.0 LUFS** (target −14 to −16) ✅ |
+| True peak | **−1.1 dBTP** (target ≤ −1) ✅ |
+| Loudness range | 2.3 LU (dense, Shorts‑appropriate) |
+| Clipped samples (mix) | 0 ✅ |
+| Black segments / frozen segments | none / none ✅ |
+| Narration ASR | 12/12 lines WER = 0 after 2 rewrites ✅ |
+
+**Mix balance (from `mix_stats.json`):** narration normalised to −16 LUFS before the master gain. Music sits about 13 dB under the master (≈ −27 LUFS) and is ducked 9 dB under speech. SFX ≈ −20 LUFS, ambience ≈ −38 LUFS (bed level).
+
+**Visual inspection (actually looked at):** the animatic contact sheet (start, middle and end of every shot), 40+ final frames during the render, the final export's start/middle/end frames and the in/mid/out frame of all 20 shots (`qc/contact_shots.png`). Problems found and fixed **in the final render** after this inspection:
+1. SH05b: lids drifted half‑closed before each heartbeat flinch, so the face read as sleepy. Re‑keyed (eyes held wide, squeeze on the beat) and re‑rendered.
+2. SH12b: a red cell sat in front of the lens for ~1.5 s, and the white sneaker vanished against an over‑lit membrane. Cell removed, lights lowered, re‑rendered. The gag now reads.
+3. SH11b: the last 0.4 s flew out of the chamber into black. Path shortened and re‑rendered.
+
+**Sync:** captions come from the same Kokoro word timestamps as the narration (+0.2 s offset), so caption timing is sample‑accurate. Every SFX cue is placed at the frame of its animation event (valve slam f491, lub‑dub f540, grab f1238, kick f1310, launch f1434…). The narrator is off‑screen, so no lip sync is needed in this video. The phoneme lip‑sync system is demonstrated in `CHARACTER/mascot_animation_test.mp4`.
+
+**Known remaining issues (honest list):**
+* Rendered at 540×960 and upscaled. Fine detail is softer than a native 1080 render (hardware limit, see the HARDWARE doc).
+* Under the red interior lighting the jeans read lavender‑grey rather than denim blue.
+* Shoulder/sleeve deformation leaves small skin gaps in some poses. The shirt hem and jeans clip in a deep crouch (visible in the animation test).
+* SH10 ends on an out‑of‑focus cell crossing the lens, and SH11b's flight passes very close to the valve cusps. Both are brief (≤ 0.3 s) "whip" moments, not errors, but not elegant.
+* The neutrophil reads as a pale granular ball. It could be bigger in frame and more menacing.
+* Frame 0 shows the top of his slumped head. His face (eyes opening) appears at 0.33 s.
+* Narration naturalness and the final mix were verified by measurement and ASR, **not by human listening**.
 
 ## 13. What to improve next time
-⟨filled after review⟩
+1. **Render natively at 1080×1920** (any CUDA/OptiX GPU or a cloud GPU). Same scripts, `--res 1080x1920 --samples 12`.
+2. **First frame:** open on the face, not the top of the head (thumbnail and scroll‑stop value).
+3. **Rig polish:** corrective shape keys for the shoulders and sleeves, hem‑collision correction, spring bones for hair and shirt secondary motion.
+4. **Neutrophil menace:** larger in frame, slower reveal, a stronger rim light, more visible pseudopod "reaching" before the grab.
+5. **Denim colour:** add a slight blue emission/sheen or use a cooler fill on the character in red environments.
+6. **Human review:** have a person listen to the narration and the mix, and watch at phone size before upload.
+7. **Reference study:** redo REFERENCE_ANALYSIS with the actual MP4s (motion, audio, editing cadence).
+8. **Mascot match:** recalibrate `mascot_config.py` against the real uploaded mascot image.
