@@ -54,7 +54,12 @@ def reference_sheet():
     d.text((30, 92), 'Permanent protagonist · stylised 3D · height ≈1.35 m (≈4 heads incl. hair) · Blender 5.2 · CHARACTER/mascot_rig.blend',
            font=font(FS, 24), fill=(190, 196, 205))
     for i, v in enumerate(views):
-        im = Image.open(os.path.join(RS, f'mascot_{v}.png')).convert('RGB').resize((vw, vh), Image.LANCZOS)
+        im = Image.open(os.path.join(RS, f'mascot_{v}.png')).convert('RGB')
+        W0, H0 = im.size   # crop to the character (renders are framed loosely)
+        cw = int(W0 * 0.72)                      # crop keeps the 9:16 panel aspect (no stretching)
+        ch = int(cw * vh / vw)
+        x0, y0c = (W0 - cw) // 2, max(0, int(H0 * 0.47) - ch // 2)
+        im = im.crop((x0, y0c, x0 + cw, y0c + ch)).resize((vw, vh), Image.LANCZOS)
         s.paste(im, (i * vw, 130))
         d.text((i * vw + 18, 140), v.replace('_', ' ').upper(), font=font(FB, 30), fill=(255, 176, 60))
     y0 = 130 + vh + 30
@@ -73,9 +78,9 @@ def reference_sheet():
         im = Image.open(os.path.join(EX, f'exp_{n}.png')).convert('RGB').resize((230, 230), Image.LANCZOS)
         s.paste(im, (fx + j * 240, y0 + 40))
     notes = ('Locks: voluminous side-swept brown hair · warm skin · large dark-brown eyes with catchlights · '
-             'dark expressive brows · ORANGE tee · blue jeans · white sneakers. Never substitute or restyle.')
-    d.text((30, y0 + 240), notes, font=font(FS, 22), fill=(255, 210, 150))
-    d.text((30, y0 + 275), 'Rig: 70+ bones, leg IK, optional arm IK, eye tracking target, jaw, lids, 3 brow bones/side, '
+             'dark expressive brows · ORANGE tee · blue jeans · white sneakers. Never restyle.')
+    d.text((30, y0 + 290), notes, font=font(FS, 22), fill=(255, 210, 150))
+    d.text((30, y0 + 325), 'Rig: 70+ bones, leg IK, optional arm IK, eye tracking target, jaw, lids, 3 brow bones/side, '
            '18 facial shape keys, 12 visemes, 12 expressions.', font=font(FS, 22), fill=(190, 196, 205))
     s.save(os.path.join(CH, 'mascot_reference_sheet.png'))
     for v in ('front', 'side', 'back'):

@@ -476,11 +476,13 @@ def shot_SH05b(f0, f1):
     place_rig(m, h, loc=(0, 0.1, 0.13), rot=(0, 0, 180))
     pose_sit(m, f0)
     expr_key(m, f0, 'scared', eyes=(0, 0.05), head=(0, -6, 0))
+    m.touched = set(); m.lids(11, -4); m.key(f0 + 1)
     for b in (lub, dub):
         m.touched = set(); m.spine_pose(bend=-4); m.head_pose(0, -4, 0); m.key(b - 1)
         m.touched = set(); m.spine_pose(bend=10); m.head_pose(0, 8, 0); m.key(b + 2)
-        m.touched = set(); m.lids(-46, 10); m.key(b + 1)
-        m.touched = set(); m.lids(8, -6); m.key(b + 5)
+        m.touched = set(); m.lids(11, -4); m.key(b - 1)          # hold wide-open scared eyes until the beat
+        m.touched = set(); m.lids(-46, 10); m.key(b + 1)          # squeeze shut on the thud
+        m.touched = set(); m.lids(11, -6); m.key(b + 5)
     expr_key(m, dub + 8, 'shocked', 0.8, eyes=(0, 0.05), head=(0, -4, 0))
     expr_key(m, f1 - 1, 'surprised', 0.9, eyes=(-0.2, 0.0), head=(-12, -4, 0))
     cam, tgt = SK.cam_rig('Cam', lens=50, fstop=2.0)
@@ -842,7 +844,7 @@ def shot_SH11b(f0, f1):
     h = hero()
     h.location = (0.2, 2.5, 0.3); h.keyframe_insert('location', frame=f0)
     h.location = (0.1, -3.0, 0.1); h.keyframe_insert('location', frame=burst)
-    h.location = (0.0, -16.0, 0.0); h.keyframe_insert('location', frame=f1 - 1)
+    h.location = (0.0, -10.5, 0.0); h.keyframe_insert('location', frame=f1 - 1)   # stay inside the chamber until the cut
     m, col = mascot()
     place_rig(m, h, loc=(0, 0.6, -0.5), rot=(78, 0, 0))    # superman pose, head-first towards the valve
     SK.set_shoe_visible(col, 'L', False)
@@ -937,6 +939,9 @@ def shot_SH12a(f0, f1):
 
 def shot_SH12b(f0, f1):
     C, body, ctrl, nuc = _capillary_with_neutrophil(f0, f1, Vector((0, 0.6, -0.1)), Vector((0, 0.2, -0.1)), alpha=0.32)
+    for c in list(bpy.data.objects):          # keep the lens clear: no cells between camera and the neutrophil
+        if c.name.startswith('CapRBC_') and -7.0 < c.location.y < 4.0:
+            bpy.data.objects.remove(c)
     m, col = mascot()
     for o in list(col.objects):
         if o.name.startswith('MSC_Shoe_L'):
@@ -957,5 +962,5 @@ def shot_SH12b(f0, f1):
     cam.data.dof.focus_object = sneaker
     SK.key_cam(cam, tgt, f0, Vector((0.45, -3.6, 0.25)), Vector((0.0, -0.4, -0.05)), lens=30)
     SK.key_cam(cam, tgt, f1 - 1, Vector((0.32, -2.7, 0.18)), Vector((0.0, -0.5, -0.05)), lens=34)
-    RS.area_light('Key', (-0.6, -3.2, 0.8), (0, -0.5, 0), 260, 1.2, (1.0, 0.9, 0.88))
-    RS.point_light('Inside', (0.4, -1.9, 0.5), 60, (1.0, 0.85, 0.95), 0.3)
+    RS.area_light('Key', (-0.6, -3.2, 0.8), (0, -0.5, 0), 95, 1.2, (1.0, 0.9, 0.88))
+    RS.point_light('Inside', (0.4, -1.9, 0.5), 18, (1.0, 0.85, 0.95), 0.3)
