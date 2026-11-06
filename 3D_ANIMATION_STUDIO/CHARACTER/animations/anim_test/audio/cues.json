@@ -1,0 +1,112 @@
+{
+ "duration": 9.0,
+ "narration": "../voice/narration_raw.wav",
+ "narration_offset": 2.967,
+ "music": null,
+ "targets": {
+  "narration_lufs": -16,
+  "master_lufs": -14,
+  "true_peak": -1.0,
+  "duck_db": 0
+ },
+ "cues": [
+  {
+   "t": 0.0,
+   "file": "AUDIO/ambience/room_tone.flac",
+   "gain": 6,
+   "bus": "amb",
+   "dur": 9.0,
+   "fade_in": 0.2,
+   "fade_out": 0.5,
+   "note": "studio room tone"
+  },
+  {
+   "t": 0.067,
+   "file": "AUDIO/sound_effects/movement/footstep_soft.flac",
+   "gain": -8,
+   "pan": -0.3,
+   "note": "foot contact f1",
+   "bus": "sfx"
+  },
+  {
+   "t": 0.567,
+   "file": "AUDIO/sound_effects/movement/footstep_soft.flac",
+   "gain": -8,
+   "pan": -0.15,
+   "note": "foot contact f16",
+   "bus": "sfx"
+  },
+  {
+   "t": 1.067,
+   "file": "AUDIO/sound_effects/movement/footstep_soft.flac",
+   "gain": -8,
+   "pan": 0.0,
+   "note": "foot contact f31",
+   "bus": "sfx"
+  },
+  {
+   "t": 1.567,
+   "file": "AUDIO/sound_effects/movement/footstep_soft.flac",
+   "gain": -8,
+   "pan": 0.14999999999999997,
+   "note": "foot contact f46",
+   "bus": "sfx"
+  },
+  {
+   "t": 2.067,
+   "file": "AUDIO/sound_effects/movement/footstep_soft.flac",
+   "gain": -8,
+   "pan": 0.3,
+   "note": "foot contact f61",
+   "bus": "sfx"
+  },
+  {
+   "t": 2.4,
+   "file": "AUDIO/sound_effects/movement/footstep_soft.flac",
+   "gain": -12,
+   "note": "settle",
+   "bus": "sfx"
+  },
+  {
+   "t": 2.767,
+   "file": "AUDIO/sound_effects/movement/cloth_rustle.flac",
+   "gain": -14,
+   "note": "wave starts",
+   "bus": "sfx"
+  },
+  {
+   "t": 5.8,
+   "file": "AUDIO/sound_effects/movement/cloth_rustle.flac",
+   "gain": -12,
+   "note": "crouch",
+   "bus": "sfx"
+  },
+  {
+   "t": 5.9,
+   "file": "AUDIO/sound_effects/movement/whoosh_short.flac",
+   "gain": -10,
+   "note": "take-off",
+   "bus": "sfx"
+  },
+  {
+   "t": 6.333,
+   "file": "AUDIO/sound_effects/movement/impact_soft.flac",
+   "gain": -4,
+   "note": "landing",
+   "bus": "sfx"
+  },
+  {
+   "t": 6.333,
+   "file": "AUDIO/sound_effects/movement/footstep_soft.flac",
+   "gain": -6,
+   "bus": "sfx"
+  },
+  {
+   "t": 7.267,
+   "file": "AUDIO/sound_effects/reactions/pop.flac",
+   "gain": -14,
+   "note": "point",
+   "bus": "sfx"
+  }
+ ]
+}

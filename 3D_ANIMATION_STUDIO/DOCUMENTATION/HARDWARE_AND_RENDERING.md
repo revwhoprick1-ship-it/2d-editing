@@ -29,8 +29,9 @@
 
 ## Decisions
 * **EEVEE for previews and finals** on this machine. Cycles was 2–4× slower at equal resolution.
-* **Final render: 540×960, 6 TAA samples, upscaled to 1080×1920** (Lanczos + light unsharp) at export. Native 1080 would take about 4× longer, roughly 15–20 h for a 57 s Short on this CPU. The export is a true 1080×1920 H.264 file, but its detail comes from a 540×960 render. **This is the biggest quality compromise in the project, and it is purely a hardware limit.**
-* Per‑frame cost is reduced by: Simplify (subdivision 2 on close‑ups, 1 elsewhere), shadows on key lights only, half‑resolution shadow maps, material‑level distance fog instead of volumetrics, and procedural instancing of linked meshes.
+* **Final render: 540×960, 4 TAA samples, mild temporal denoise (ffmpeg hqdn3d) and upscale to 1080×1920** (Lanczos + light unsharp) at export. Native 1080 would take about 4× longer, roughly 15–20 h for a 57 s Short on this CPU. The export is a true 1080×1920 H.264 file, but its detail comes from a 540×960 render. **This is the biggest quality compromise in the project, and it is purely a hardware limit.**
+* Measured on the final shots: 6 samples ≈ 12–33 s/frame and 4 samples ≈ 9.5–21 s/frame. **Only key lights cast shadows.** A deforming character invalidates the virtual shadow maps of every shadow‑casting light on every sample. Turning shadows off for fill, rim and glow lights cut SH07b from 21 s to 14 s.
+* Per‑frame cost is reduced by: Simplify (subdivision ≤ 1 at render; the head and hands still get 1 level of smoothing), shadows on key lights only, half‑resolution shadow maps, material‑level distance fog instead of volumetrics, and procedural instancing of linked meshes.
 * **On a machine with an NVIDIA/AMD GPU:** run the same scripts with `--res 1080x1920 --samples 16` (EEVEE) or switch `scene_defaults(engine='CYCLES')` for path‑traced finals. Nothing else changes.
 
 ## Free‑tool policy

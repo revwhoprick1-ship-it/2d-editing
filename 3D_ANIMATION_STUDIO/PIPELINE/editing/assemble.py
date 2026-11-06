@@ -105,6 +105,7 @@ def main():
     ap.add_argument('--crf', type=int, default=16)
     ap.add_argument('--preset', default='slow')
     ap.add_argument('--fps', type=int, default=30)
+    ap.add_argument('--denoise', default='1.5:1.2:4:3', help="hqdn3d params; '' to disable")
     a = ap.parse_args()
     vd = os.path.abspath(a.video_dir)
     shots = shots_from_module(vd)
@@ -130,7 +131,9 @@ def main():
     timing = json.load(open(os.path.join(vd, 'audio', 'narration', 'timing.json')))
     cues = json.load(open(os.path.join(vd, 'audio', 'cues.json')))
     audio = a.audio or os.path.join(vd, 'audio', 'mix_master.wav')
-    vf = ['scale=1080:1920:flags=lanczos', 'unsharp=5:5:0.6:5:5:0.0']
+    # mild spatio-temporal denoise BEFORE the upscale (removes low-sample EEVEE grain),
+    # then Lanczos 2x and light sharpening
+    vf = ([f'hqdn3d={a.denoise}'] if a.denoise else []) + ['scale=1080:1920:flags=lanczos', 'unsharp=5:5:0.6:5:5:0.0']
     if not a.no_captions:
         ass = os.path.join(vd, 'captions.ass')
         n = build_captions(timing, cues.get('narration_offset', 0.0), ass)

@@ -41,6 +41,11 @@ rx, ry = (int(v) for v in a.res.split('x'))
 sc = RS.scene_defaults(res=(rx, ry), samples=a.samples, fps=30)
 info = mod.build_shot(a.shot)
 f0, f1 = info['frames']
+# CPU budget rule: only key lights cast shadows (deforming characters invalidate
+# virtual shadow maps for every shadow-casting light, every sample)
+for ld in bpy.data.lights:
+    if not ld.name.startswith('Key'):
+        ld.use_shadow = False
 sc.frame_start, sc.frame_end = f0, f1 - 1
 VID = mod.VIDEO_DIR
 if a.save_blend:

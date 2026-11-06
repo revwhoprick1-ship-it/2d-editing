@@ -110,13 +110,13 @@ def rbc_material(name='BIO_RBC', fog=None):
     _link(nt, mix.outputs['Result'], mm.inputs['A'])
     _link(nt, n.outputs['Color'], mm.inputs['B'])
     _link(nt, mm.outputs['Result'], p.inputs['Base Color'])
-    p.inputs['Roughness'].default_value = 0.32
+    p.inputs['Roughness'].default_value = 0.38
     p.inputs['Subsurface Weight'].default_value = 0.45
     p.inputs['Subsurface Radius'].default_value = (1.0, 0.15, 0.1)
     p.inputs['Subsurface Scale'].default_value = 0.25
-    p.inputs['Coat Weight'].default_value = 0.35
-    p.inputs['Coat Roughness'].default_value = 0.15
-    p.inputs['Specular IOR Level'].default_value = 0.6
+    p.inputs['Coat Weight'].default_value = 0.18
+    p.inputs['Coat Roughness'].default_value = 0.2
+    p.inputs['Specular IOR Level'].default_value = 0.42
     b = _bump(nt, n.outputs['Fac'], 0.15, 0.02, (-350, -200))
     _link(nt, b.outputs['Normal'], p.inputs['Normal'])
     if fog:
@@ -166,7 +166,8 @@ def vessel_material(name, base='#8A2430', cell='#B4404A', fog=None, translucent=
     if translucent:
         p.inputs['Alpha'].default_value = 1.0 - translucent
         try:
-            m.surface_render_method = 'DITHERED'
+            m.surface_render_method = 'BLENDED'
+            m.use_transparency_overlap = False
         except Exception:
             pass
     if emission:
@@ -335,7 +336,8 @@ def neutrophil(name='Neutrophil', radius=11 * UM / 2, seed=5, collection=None, f
     b = _bump(nt, nz.outputs['Fac'], 0.35, 0.05, (-300, -200))
     _link(nt, b.outputs['Normal'], p.inputs['Normal'])
     try:
-        m.surface_render_method = 'DITHERED'
+        m.surface_render_method = 'BLENDED'
+        m.use_transparency_overlap = False
     except Exception:
         pass
     if fog:
@@ -533,12 +535,12 @@ def heart_exterior(name='Heart', collection=None, seed=2):
             e.size_x, e.size_y, e.size_z = size
         return e
     # ventricles (apex points down-left of the body = +X screen-left in front view is character's left)
-    ball((0.05, 0, -0.10), 0.42, 'ELLIPSOID', (0.95, 0.8, 1.1))
-    ball((0.16, 0.02, -0.38), 0.30, 'ELLIPSOID', (0.8, 0.75, 1.0))
-    ball((0.24, 0.03, -0.55), 0.16)
-    ball((-0.18, -0.06, -0.12), 0.32, 'ELLIPSOID', (0.9, 0.8, 1.0))    # right ventricle (front)
-    ball((-0.32, 0.08, 0.22), 0.24)                                      # right atrium
-    ball((0.28, 0.16, 0.24), 0.22)                                       # left atrium
+    ball((0.04, 0.0, -0.08), 0.50, 'ELLIPSOID', (1.0, 0.85, 1.0))        # ventricular mass
+    ball((0.14, 0.02, -0.34), 0.34, 'ELLIPSOID', (0.9, 0.8, 0.9))
+    ball((0.20, 0.03, -0.48), 0.14)                                      # apex
+    ball((-0.20, -0.10, -0.10), 0.36, 'ELLIPSOID', (0.9, 0.8, 1.0))    # right ventricle (front)
+    ball((-0.34, 0.06, 0.22), 0.26)                                      # right atrium
+    ball((0.28, 0.15, 0.24), 0.23)                                       # left atrium
     ob = bpy.data.objects.new(name, mb)
     col.objects.link(ob)
     mm = muscle_material('BIO_HeartExt', '#8C1622', '#C23A3E')

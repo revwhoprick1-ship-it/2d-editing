@@ -9,7 +9,7 @@ Every video follows this file. Change it on purpose, never by drift.
 | Frame rate | **30 fps** (same as the references). Animate on ones. |
 | Length | 45–60 s by default. Story decides. |
 | Codec | MP4 · H.264 High@4.2 · yuv420p · BT.709 tags · CRF ≤ 18 · AAC 320 kb/s 48 kHz · `+faststart` |
-| Render resolution | Native 1080×1920 when a GPU is available. On the current CPU‑only machine, render at **540×960 (EEVEE, 6 TAA samples)** and upscale with Lanczos + light unsharp (documented trade‑off; see DOCUMENTATION/HARDWARE_AND_RENDERING.md). |
+| Render resolution | Native 1080×1920 when a GPU is available. On the current CPU‑only machine, render at **540×960 (EEVEE, 4 TAA samples, key‑light shadows only)**, then hqdn3d denoise + Lanczos upscale + light unsharp (documented trade‑off; see DOCUMENTATION/HARDWARE_AND_RENDERING.md). |
 | Safe areas | Keep faces and captions out of the bottom 20% (YouTube UI) and the top 8%. Captions sit 30% above the bottom edge. |
 
 ## 2. The mascot (non‑negotiable)
