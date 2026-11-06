@@ -41,7 +41,7 @@ $PY PIPELINE/audio/mix.py VIDEOS/VIDEO_001/audio/cues.json
 
 # 4. preview animatic, then final frames (2 workers on a 4-core CPU)
 PIPELINE/rendering/render_video.sh video001 270x480 2 3 VIDEOS/VIDEO_001/preview/frames
-PIPELINE/rendering/render_video.sh video001 540x960 6 1 VIDEOS/VIDEO_001/frames
+PIPELINE/rendering/render_video.sh video001 540x960 4 1 VIDEOS/VIDEO_001/frames   # 2 lanes in parallel: see final_jobs.sh
 
 # 5. edit + export + QA
 python3 PIPELINE/editing/assemble.py VIDEOS/VIDEO_001 --frames-root VIDEOS/VIDEO_001/frames --out EXPORTS/VIDEO_001.mp4
