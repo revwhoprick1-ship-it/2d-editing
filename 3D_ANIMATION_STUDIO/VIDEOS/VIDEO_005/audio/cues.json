@@ -1,0 +1,449 @@
+{
+ "duration": 32.4,
+ "loop": true,
+ "narration": "narration/narration_raw.wav",
+ "narration_offset": 0.0,
+ "music": "music_score.wav",
+ "music_gain_db": -3,
+ "music_cue": "cue_video005",
+ "music_gates": [
+  [
+   21.677999999999997,
+   22.657999999999998,
+   0.05
+  ]
+ ],
+ "music_map": [
+  [
+   "0-3",
+   "Sleepy",
+   "soft pad; stab + kick on the slam"
+  ],
+  [
+   "3-9.5",
+   "Comedy",
+   "bassoon staccato, tuba, light kit; drops out for the spray"
+  ],
+  [
+   "10.7-18.6",
+   "Uprising",
+   "driving kit, brass stabs, tuba ostinato"
+  ],
+  [
+   "18.6-21.6",
+   "Sneaky",
+   "tiptoe pizzicato"
+  ],
+  [
+   "21.7-22.7",
+   "SILENCE",
+   "\"The bathroom.\" dead air"
+  ],
+  [
+   "22.3-24.6",
+   "Boss",
+   "low strings + building taiko, huge hit on the blast"
+  ],
+  [
+   "25.2-28.4",
+   "Deflated",
+   "sad tuba"
+  ],
+  [
+   "28.4-31.5",
+   "The tub wakes",
+   "sub drone, tremolo, ticking"
+  ]
+ ],
+ "targets": {
+  "narration_lufs": -16,
+  "master_lufs": -14,
+  "true_peak": -1.0,
+  "duck_db": 8
+ },
+ "cues": [
+  {
+   "t": 0.0,
+   "file": "AUDIO/ambience/room_tone.flac",
+   "gain": -10,
+   "bus": "amb",
+   "note": "bathroom room tone",
+   "dur": 10.7,
+   "fade_out": 0.1
+  },
+  {
+   "t": 0.08,
+   "file": "AUDIO/sound_effects/comedy/lid_slam.flac",
+   "gain": -8,
+   "bus": "sfx",
+   "note": "frame 3: the lid SLAMS"
+  },
+  {
+   "t": 0.3,
+   "file": "AUDIO/sound_effects/comedy/cartoon_tick.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "eyes snap open"
+  },
+  {
+   "t": 1.0,
+   "file": "AUDIO/sound_effects/comedy/toilet_grumble.flac",
+   "gain": -14,
+   "bus": "sfx",
+   "note": "small toilet: grumpy gurgle-growl (its voice)"
+  },
+  {
+   "t": 2.9,
+   "file": "AUDIO/sound_effects/movement/mechanical_servo.flac",
+   "gain": -20,
+   "bus": "sfx",
+   "note": "handle slowly turns toward him"
+  },
+  {
+   "t": 5.035,
+   "file": "AUDIO/sound_effects/comedy/water_spray.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "SPRAY to the face (slow-mo)"
+  },
+  {
+   "t": 5.115,
+   "file": "AUDIO/sound_effects/movement/impact_soft.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "hit"
+  },
+  {
+   "t": 5.565,
+   "file": "AUDIO/sound_effects/comedy/sweat_drip.flac",
+   "gain": -19,
+   "bus": "sfx",
+   "note": "drips off his hair"
+  },
+  {
+   "t": 5.9,
+   "file": "AUDIO/sound_effects/comedy/sweat_drip.flac",
+   "gain": -20,
+   "bus": "sfx",
+   "note": "drip"
+  },
+  {
+   "t": 6.6,
+   "file": "AUDIO/sound_effects/comedy/toilet_grumble.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "smug gurgle"
+  },
+  {
+   "t": 6.877,
+   "file": "AUDIO/sound_effects/comedy/flush_big.flac",
+   "gain": -8,
+   "bus": "sfx",
+   "note": "it flushes itself, violently"
+  },
+  {
+   "t": 7.127,
+   "file": "AUDIO/sound_effects/comedy/water_splash.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "geyser splashes the room"
+  },
+  {
+   "t": 8.7,
+   "file": "AUDIO/sound_effects/comedy/record_scratch.flac",
+   "gain": -14,
+   "bus": "sfx",
+   "note": "SOAKED freeze"
+  },
+  {
+   "t": 8.72,
+   "file": "AUDIO/sound_effects/comedy/camera_snap.flac",
+   "gain": -16,
+   "bus": "sfx",
+   "note": "freeze frame"
+  },
+  {
+   "t": 9.4,
+   "file": "AUDIO/sound_effects/movement/whoosh_short.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "he bolts (whip out)"
+  },
+  {
+   "t": 9.6,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "running footsteps"
+  },
+  {
+   "t": 9.9,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "running footsteps"
+  },
+  {
+   "t": 10.4,
+   "file": "AUDIO/sound_effects/environment/door_creak_slam.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "out the door"
+  },
+  {
+   "t": 10.7,
+   "file": "AUDIO/ambience/city.flac",
+   "gain": -20,
+   "bus": "amb",
+   "note": "street",
+   "dur": 7.9,
+   "fade_in": 0.05,
+   "fade_out": 0.2
+  },
+  {
+   "t": 10.7,
+   "file": "AUDIO/ambience/crowd.flac",
+   "gain": -18,
+   "bus": "amb",
+   "note": "panicking crowd",
+   "dur": 7.9,
+   "fade_in": 0.1,
+   "fade_out": 0.2
+  },
+  {
+   "t": 10.75,
+   "file": "AUDIO/sound_effects/comedy/crowd_gasp.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "screams"
+  },
+  {
+   "t": 13.5,
+   "file": "AUDIO/sound_effects/comedy/lid_slam.flac",
+   "gain": -21,
+   "bus": "sfx",
+   "note": "chasing toilet chomps as it hops"
+  },
+  {
+   "t": 13.86,
+   "file": "AUDIO/sound_effects/comedy/lid_slam.flac",
+   "gain": -23,
+   "bus": "sfx",
+   "note": "chasing toilet chomps as it hops"
+  },
+  {
+   "t": 14.22,
+   "file": "AUDIO/sound_effects/comedy/lid_slam.flac",
+   "gain": -21,
+   "bus": "sfx",
+   "note": "chasing toilet chomps as it hops"
+  },
+  {
+   "t": 14.58,
+   "file": "AUDIO/sound_effects/comedy/lid_slam.flac",
+   "gain": -23,
+   "bus": "sfx",
+   "note": "chasing toilet chomps as it hops"
+  },
+  {
+   "t": 14.94,
+   "file": "AUDIO/sound_effects/comedy/lid_slam.flac",
+   "gain": -21,
+   "bus": "sfx",
+   "note": "chasing toilet chomps as it hops"
+  },
+  {
+   "t": 15.3,
+   "file": "AUDIO/sound_effects/comedy/lid_slam.flac",
+   "gain": -23,
+   "bus": "sfx",
+   "note": "chasing toilet chomps as it hops"
+  },
+  {
+   "t": 15.66,
+   "file": "AUDIO/sound_effects/comedy/lid_slam.flac",
+   "gain": -21,
+   "bus": "sfx",
+   "note": "chasing toilet chomps as it hops"
+  },
+  {
+   "t": 16.008,
+   "file": "AUDIO/sound_effects/comedy/lid_slam.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "blocker toilet snaps at the kid"
+  },
+  {
+   "t": 16.02,
+   "file": "AUDIO/sound_effects/comedy/lid_slam.flac",
+   "gain": -23,
+   "bus": "sfx",
+   "note": "chasing toilet chomps as it hops"
+  },
+  {
+   "t": 16.158,
+   "file": "AUDIO/sound_effects/comedy/toilet_grumble.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "blocker growls"
+  },
+  {
+   "t": 16.6,
+   "file": "AUDIO/sound_effects/comedy/tp_thump.flac",
+   "gain": -14,
+   "bus": "sfx",
+   "note": "toilet-paper missile 1"
+  },
+  {
+   "t": 16.85,
+   "file": "AUDIO/sound_effects/comedy/tp_thump.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "toilet-paper missile 2"
+  },
+  {
+   "t": 17.1,
+   "file": "AUDIO/sound_effects/comedy/tp_thump.flac",
+   "gain": -14,
+   "bus": "sfx",
+   "note": "toilet-paper missile 3"
+  },
+  {
+   "t": 17.35,
+   "file": "AUDIO/sound_effects/comedy/tp_thump.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "toilet-paper missile 4"
+  },
+  {
+   "t": 17.6,
+   "file": "AUDIO/sound_effects/comedy/tp_thump.flac",
+   "gain": -14,
+   "bus": "sfx",
+   "note": "toilet-paper missile 5"
+  },
+  {
+   "t": 18.6,
+   "file": "AUDIO/sound_effects/movement/whoosh_short.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "back to the bathroom"
+  },
+  {
+   "t": 18.8,
+   "file": "AUDIO/sound_effects/environment/door_creak_slam.flac",
+   "gain": -19,
+   "bus": "sfx",
+   "note": "he sneaks in"
+  },
+  {
+   "t": 21.858,
+   "file": "AUDIO/ambience/room_tone.flac",
+   "gain": -6,
+   "bus": "amb",
+   "note": "quiet...",
+   "dur": 1.0,
+   "fade_in": 0.2
+  },
+  {
+   "t": 22.658,
+   "file": "AUDIO/sound_effects/reactions/dramatic_hit.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "red eyes open (peak lands on the turn)"
+  },
+  {
+   "t": 23.258,
+   "file": "AUDIO/sound_effects/comedy/giant_roar.flac",
+   "gain": -7,
+   "bus": "sfx",
+   "note": "GIANT ROAR (its voice: deep porcelain roar)"
+  },
+  {
+   "t": 24.308,
+   "file": "AUDIO/sound_effects/reactions/tension_riser.flac",
+   "gain": -19,
+   "bus": "sfx",
+   "note": "charge",
+   "dur": 0.3,
+   "fade_out": 0.05
+  },
+  {
+   "t": 24.558,
+   "file": "AUDIO/sound_effects/transitions/bass_impact.flac",
+   "gain": -8,
+   "bus": "sfx",
+   "note": "BLAST impact frame"
+  },
+  {
+   "t": 24.558,
+   "file": "AUDIO/sound_effects/comedy/flush_big.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "water cannon"
+  },
+  {
+   "t": 24.608,
+   "file": "AUDIO/sound_effects/comedy/water_spray.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "blast spray"
+  },
+  {
+   "t": 25.208,
+   "file": "AUDIO/sound_effects/comedy/water_splash.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "lands in the tub"
+  },
+  {
+   "t": 25.258,
+   "file": "AUDIO/sound_effects/comedy/body_thud.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "tub thud"
+  },
+  {
+   "t": 26.008,
+   "file": "AUDIO/sound_effects/reactions/pop.flac",
+   "gain": -21,
+   "bus": "sfx",
+   "note": "comment chip"
+  },
+  {
+   "t": 28.9,
+   "file": "AUDIO/sound_effects/comedy/drain_gurgle.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "the tub wakes up: drain gurgles"
+  },
+  {
+   "t": 29.7,
+   "file": "AUDIO/sound_effects/comedy/cartoon_tick.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "tub eyes open"
+  },
+  {
+   "t": 30.6,
+   "file": "AUDIO/sound_effects/comedy/drain_gurgle.flac",
+   "gain": -14,
+   "bus": "sfx",
+   "note": "second gurgle"
+  },
+  {
+   "t": 31.35,
+   "file": "AUDIO/sound_effects/reactions/comedic_boing.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "the tub flings him"
+  },
+  {
+   "t": 31.45,
+   "file": "AUDIO/sound_effects/movement/whoosh_long.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "flight back to the toilet -> loop (frame 3 slam)"
+  }
+ ]
+}

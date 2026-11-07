@@ -1,0 +1,99 @@
+{
+ "title": "What If Toilets Started Fighting Back?",
+ "engine": "chatterbox",
+ "voice_ref": "kokoro:am_fenrir",
+ "tempo": 1.12,
+ "lines": [
+  {
+   "id": "L01",
+   "who": "N",
+   "text": "Your toilet just quit its job.",
+   "delivery": "hook",
+   "exaggeration": 0.85,
+   "pause_after": 0.4
+  },
+  {
+   "id": "L02",
+   "who": "M",
+   "voice_ref": "kokoro:am_puck",
+   "text": "Wait... what?",
+   "delivery": "confused",
+   "exaggeration": 0.7,
+   "pause_after": 0.8
+  },
+  {
+   "id": "L03",
+   "who": "N",
+   "text": "Okay. Maybe it's just tired.",
+   "delivery": "reassuring",
+   "exaggeration": 0.55,
+   "pause_after": 0.35
+  },
+  {
+   "id": "L04",
+   "who": "M",
+   "voice_ref": "kokoro:am_puck",
+   "text": "Bro, seriously?!",
+   "delivery": "outraged",
+   "exaggeration": 0.85,
+   "pause_after": 0.6
+  },
+  {
+   "id": "L05",
+   "who": "N",
+   "text": "Now it flushes itself. Out of pure spite.",
+   "delivery": "comic",
+   "exaggeration": 0.6,
+   "pause_after": 1.4
+  },
+  {
+   "id": "L06",
+   "who": "N",
+   "text": "And it's not just yours. Every toilet on Earth is fighting back.",
+   "delivery": "epic",
+   "exaggeration": 0.85,
+   "pause_after": 0.15
+  },
+  {
+   "id": "L07",
+   "who": "N",
+   "text": "They chase you. They block the exits. They fire toilet paper like missiles.",
+   "delivery": "fast",
+   "exaggeration": 0.8,
+   "pause_after": 0.8
+  },
+  {
+   "id": "L08",
+   "who": "N",
+   "text": "So he hides in the one room they'd never check.",
+   "delivery": "sly",
+   "exaggeration": 0.6,
+   "pause_after": 0.8
+  },
+  {
+   "id": "L09",
+   "who": "N",
+   "text": "The bathroom.",
+   "delivery": "deadpan",
+   "exaggeration": 0.5,
+   "pause_after": 4.2
+  },
+  {
+   "id": "L10",
+   "who": "M",
+   "voice_ref": "kokoro:am_puck",
+   "text": "I'm never using a toilet again!",
+   "delivery": "exhausted",
+   "exaggeration": 0.9,
+   "pause_after": 1.0
+  },
+  {
+   "id": "L11",
+   "who": "N",
+   "text": "Unfortunately, the bathtub disagrees.",
+   "delivery": "ominous",
+   "exaggeration": 0.7,
+   "pause_after": 1.8
+  }
+ ]
+}

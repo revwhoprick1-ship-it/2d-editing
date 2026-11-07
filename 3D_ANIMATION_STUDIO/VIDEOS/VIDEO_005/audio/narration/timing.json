@@ -1,0 +1,528 @@
+{
+ "voice": "chatterbox+kokoro:am_fenrir",
+ "sample_rate": 24000,
+ "lines": [
+  {
+   "id": "L01",
+   "who": "N",
+   "text": "Your toilet just quit its job.",
+   "start": 0.0,
+   "end": 1.356,
+   "delivery": "hook",
+   "speed": 1.12
+  },
+  {
+   "id": "L02",
+   "who": "M",
+   "text": "Wait... what?",
+   "start": 1.756,
+   "end": 2.315,
+   "delivery": "confused",
+   "speed": 1.12
+  },
+  {
+   "id": "L03",
+   "who": "N",
+   "text": "Okay. Maybe it's just tired.",
+   "start": 3.115,
+   "end": 4.945,
+   "delivery": "reassuring",
+   "speed": 1.12
+  },
+  {
+   "id": "L04",
+   "who": "M",
+   "text": "Bro, seriously?!",
+   "start": 5.295,
+   "end": 6.427,
+   "delivery": "outraged",
+   "speed": 1.12
+  },
+  {
+   "id": "L05",
+   "who": "N",
+   "text": "Now it flushes itself. Out of pure spite.",
+   "start": 7.027,
+   "end": 9.368,
+   "delivery": "comic",
+   "speed": 1.12
+  },
+  {
+   "id": "L06",
+   "who": "N",
+   "text": "And it's not just yours. Every toilet on Earth is fighting back.",
+   "start": 10.768,
+   "end": 14.578,
+   "delivery": "epic",
+   "speed": 1.12
+  },
+  {
+   "id": "L07",
+   "who": "N",
+   "text": "They chase you. They block the exits. They fire toilet paper like missiles.",
+   "start": 14.728,
+   "end": 18.136,
+   "delivery": "fast",
+   "speed": 1.12
+  },
+  {
+   "id": "L08",
+   "who": "N",
+   "text": "So he hides in the one room they'd never check.",
+   "start": 18.936,
+   "end": 20.818,
+   "delivery": "sly",
+   "speed": 1.12
+  },
+  {
+   "id": "L09",
+   "who": "N",
+   "text": "The bathroom.",
+   "start": 21.618,
+   "end": 22.208,
+   "delivery": "deadpan",
+   "speed": 1.12
+  },
+  {
+   "id": "L10",
+   "who": "M",
+   "text": "I'm never using a toilet again!",
+   "start": 26.408,
+   "end": 27.625,
+   "delivery": "exhausted",
+   "speed": 1.12
+  },
+  {
+   "id": "L11",
+   "who": "N",
+   "text": "Unfortunately, the bathtub disagrees.",
+   "start": 28.625,
+   "end": 31.161,
+   "delivery": "ominous",
+   "speed": 1.12
+  }
+ ],
+ "words": [
+  {
+   "line": "L01",
+   "text": "Your",
+   "start": 0.0,
+   "end": 0.16
+  },
+  {
+   "line": "L01",
+   "text": "toilet",
+   "start": 0.16,
+   "end": 0.46
+  },
+  {
+   "line": "L01",
+   "text": "just",
+   "start": 0.46,
+   "end": 0.66
+  },
+  {
+   "line": "L01",
+   "text": "quit",
+   "start": 0.66,
+   "end": 0.84
+  },
+  {
+   "line": "L01",
+   "text": "its",
+   "start": 0.84,
+   "end": 1.0
+  },
+  {
+   "line": "L01",
+   "text": "job.",
+   "start": 1.0,
+   "end": 1.24
+  },
+  {
+   "line": "L02",
+   "text": "Wait...",
+   "start": 1.756,
+   "end": 1.936
+  },
+  {
+   "line": "L02",
+   "text": "what?",
+   "start": 2.076,
+   "end": 2.196
+  },
+  {
+   "line": "L03",
+   "text": "Okay.",
+   "start": 3.115,
+   "end": 3.455
+  },
+  {
+   "line": "L03",
+   "text": "Maybe",
+   "start": 3.895,
+   "end": 4.055
+  },
+  {
+   "line": "L03",
+   "text": "it's",
+   "start": 4.055,
+   "end": 4.295
+  },
+  {
+   "line": "L03",
+   "text": "just",
+   "start": 4.295,
+   "end": 4.455
+  },
+  {
+   "line": "L03",
+   "text": "tired.",
+   "start": 4.455,
+   "end": 4.755
+  },
+  {
+   "line": "L04",
+   "text": "Bro,",
+   "start": 5.295,
+   "end": 5.455
+  },
+  {
+   "line": "L04",
+   "text": "seriously?!",
+   "start": 5.655,
+   "end": 5.895
+  },
+  {
+   "line": "L05",
+   "text": "Now",
+   "start": 7.027,
+   "end": 7.307
+  },
+  {
+   "line": "L05",
+   "text": "it",
+   "start": 7.307,
+   "end": 7.467
+  },
+  {
+   "line": "L05",
+   "text": "flushes",
+   "start": 7.467,
+   "end": 7.767
+  },
+  {
+   "line": "L05",
+   "text": "itself.",
+   "start": 7.767,
+   "end": 8.127
+  },
+  {
+   "line": "L05",
+   "text": "Out",
+   "start": 8.127,
+   "end": 8.487
+  },
+  {
+   "line": "L05",
+   "text": "of",
+   "start": 8.487,
+   "end": 8.647
+  },
+  {
+   "line": "L05",
+   "text": "pure",
+   "start": 8.647,
+   "end": 8.847
+  },
+  {
+   "line": "L05",
+   "text": "spite.",
+   "start": 8.847,
+   "end": 9.167
+  },
+  {
+   "line": "L06",
+   "text": "And",
+   "start": 10.768,
+   "end": 10.888
+  },
+  {
+   "line": "L06",
+   "text": "it's",
+   "start": 10.888,
+   "end": 11.168
+  },
+  {
+   "line": "L06",
+   "text": "not",
+   "start": 11.168,
+   "end": 11.388
+  },
+  {
+   "line": "L06",
+   "text": "just",
+   "start": 11.388,
+   "end": 11.768
+  },
+  {
+   "line": "L06",
+   "text": "yours.",
+   "start": 11.768,
+   "end": 12.088
+  },
+  {
+   "line": "L06",
+   "text": "Every",
+   "start": 12.588,
+   "end": 12.908
+  },
+  {
+   "line": "L06",
+   "text": "toilet",
+   "start": 12.908,
+   "end": 13.208
+  },
+  {
+   "line": "L06",
+   "text": "on",
+   "start": 13.208,
+   "end": 13.468
+  },
+  {
+   "line": "L06",
+   "text": "Earth",
+   "start": 13.468,
+   "end": 13.668
+  },
+  {
+   "line": "L06",
+   "text": "is",
+   "start": 13.668,
+   "end": 13.908
+  },
+  {
+   "line": "L06",
+   "text": "fighting",
+   "start": 13.908,
+   "end": 14.248
+  },
+  {
+   "line": "L06",
+   "text": "back.",
+   "start": 14.248,
+   "end": 14.548
+  },
+  {
+   "line": "L07",
+   "text": "They",
+   "start": 14.728,
+   "end": 14.848
+  },
+  {
+   "line": "L07",
+   "text": "chase",
+   "start": 14.848,
+   "end": 15.128
+  },
+  {
+   "line": "L07",
+   "text": "you.",
+   "start": 15.128,
+   "end": 15.388
+  },
+  {
+   "line": "L07",
+   "text": "They",
+   "start": 15.548,
+   "end": 15.608
+  },
+  {
+   "line": "L07",
+   "text": "block",
+   "start": 15.608,
+   "end": 15.848
+  },
+  {
+   "line": "L07",
+   "text": "the",
+   "start": 15.848,
+   "end": 16.008
+  },
+  {
+   "line": "L07",
+   "text": "exits.",
+   "start": 16.008,
+   "end": 16.308
+  },
+  {
+   "line": "L07",
+   "text": "They",
+   "start": 16.608,
+   "end": 16.688
+  },
+  {
+   "line": "L07",
+   "text": "fire",
+   "start": 16.688,
+   "end": 16.888
+  },
+  {
+   "line": "L07",
+   "text": "toilet",
+   "start": 16.888,
+   "end": 17.168
+  },
+  {
+   "line": "L07",
+   "text": "paper",
+   "start": 17.168,
+   "end": 17.408
+  },
+  {
+   "line": "L07",
+   "text": "like",
+   "start": 17.408,
+   "end": 17.608
+  },
+  {
+   "line": "L07",
+   "text": "missiles.",
+   "start": 17.608,
+   "end": 17.908
+  },
+  {
+   "line": "L08",
+   "text": "So",
+   "start": 18.936,
+   "end": 19.096
+  },
+  {
+   "line": "L08",
+   "text": "he",
+   "start": 19.096,
+   "end": 19.196
+  },
+  {
+   "line": "L08",
+   "text": "hides",
+   "start": 19.196,
+   "end": 19.416
+  },
+  {
+   "line": "L08",
+   "text": "in",
+   "start": 19.416,
+   "end": 19.556
+  },
+  {
+   "line": "L08",
+   "text": "the",
+   "start": 19.556,
+   "end": 19.656
+  },
+  {
+   "line": "L08",
+   "text": "one",
+   "start": 19.656,
+   "end": 19.836
+  },
+  {
+   "line": "L08",
+   "text": "room",
+   "start": 19.836,
+   "end": 20.056
+  },
+  {
+   "line": "L08",
+   "text": "they'd",
+   "start": 20.056,
+   "end": 20.276
+  },
+  {
+   "line": "L08",
+   "text": "never",
+   "start": 20.276,
+   "end": 20.436
+  },
+  {
+   "line": "L08",
+   "text": "check.",
+   "start": 20.436,
+   "end": 20.696
+  },
+  {
+   "line": "L09",
+   "text": "The",
+   "start": 21.618,
+   "end": 21.778
+  },
+  {
+   "line": "L09",
+   "text": "bathroom.",
+   "start": 21.778,
+   "end": 22.058
+  },
+  {
+   "line": "L10",
+   "text": "I'm",
+   "start": 26.408,
+   "end": 26.608
+  },
+  {
+   "line": "L10",
+   "text": "never",
+   "start": 26.608,
+   "end": 26.768
+  },
+  {
+   "line": "L10",
+   "text": "using",
+   "start": 26.768,
+   "end": 26.988
+  },
+  {
+   "line": "L10",
+   "text": "a",
+   "start": 26.988,
+   "end": 27.128
+  },
+  {
+   "line": "L10",
+   "text": "toilet",
+   "start": 27.128,
+   "end": 27.308
+  },
+  {
+   "line": "L10",
+   "text": "again!",
+   "start": 27.308,
+   "end": 27.528
+  },
+  {
+   "line": "L11",
+   "text": "Unfortunately,",
+   "start": 28.625,
+   "end": 29.105
+  },
+  {
+   "line": "L11",
+   "text": "the",
+   "start": 29.545,
+   "end": 29.645
+  },
+  {
+   "line": "L11",
+   "text": "bathtub",
+   "start": 29.645,
+   "end": 30.205
+  },
+  {
+   "line": "L11",
+   "text": "disagrees.",
+   "start": 30.205,
+   "end": 30.745
+  }
+ ],
+ "duration": 32.961
+}

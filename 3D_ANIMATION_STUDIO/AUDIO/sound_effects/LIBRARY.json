@@ -895,5 +895,68 @@
   "duration_s": 1.2,
   "sample_rate": 48000,
   "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/lid_slam.flac",
+  "category": "comedy",
+  "name": "lid_slam",
+  "description": "Porcelain toilet-lid SLAM: hard clack + body thump (0.6 s).",
+  "duration_s": 0.6,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/water_spray.flac",
+  "category": "comedy",
+  "name": "water_spray",
+  "description": "Pressurised water spray hiss with splatter (0.8 s).",
+  "duration_s": 0.8,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/flush_big.flac",
+  "category": "comedy",
+  "name": "flush_big",
+  "description": "Violent self-flush: handle clunk, roaring swirl, gurgle tail (2.4 s).",
+  "duration_s": 2.4,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/toilet_grumble.flac",
+  "category": "comedy",
+  "name": "toilet_grumble",
+  "description": "Small toilet personality: grumpy wet gurgle-growl (0.9 s).",
+  "duration_s": 0.9,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/giant_roar.flac",
+  "category": "comedy",
+  "name": "giant_roar",
+  "description": "Giant toilet: deep porcelain roar with flushing gargle (2.0 s).",
+  "duration_s": 2.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/tp_thump.flac",
+  "category": "comedy",
+  "name": "tp_thump",
+  "description": "Toilet-paper missile launch: hollow thoomp + whoosh (0.5 s).",
+  "duration_s": 0.5,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/drain_gurgle.flac",
+  "category": "comedy",
+  "name": "drain_gurgle",
+  "description": "Bathtub drain wakes up: slow sinister gurgle (1.6 s).",
+  "duration_s": 1.6,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
  }
 ]

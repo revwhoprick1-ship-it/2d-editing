@@ -354,6 +354,70 @@ def splash():
         x[i:i + m] += highpass(noise(m, 'white', int(t0 * 1e4)), 2500) * env_exp(m, 0.01) * rng.uniform(0.1, 0.4)
     return normalize(x, -4)
 
+
+# ---------------------------------------------------------------- VIDEO_005 additions (toilet identities)
+@reg('lid_slam', 'Porcelain toilet-lid SLAM: hard clack + body thump (0.6 s).')
+def lid_slam():
+    n = int(0.6 * SR); tt = np.arange(n) / SR
+    clack = highpass(noise(n, 'white', 401), 1800) * env_exp(n, 0.012)
+    ring = sum(np.sin(2 * np.pi * f * tt) * a for f, a in ((1870, 0.5), (2960, 0.3), (4410, 0.2))) * env_exp(n, 0.06)
+    thump = np.sin(2 * np.pi * np.cumsum(140 * np.exp(-tt / 0.03) + 60) / SR) * env_exp(n, 0.08)
+    return normalize(clack + ring * 0.4 + thump * 0.9, -2)
+
+@reg('water_spray', 'Pressurised water spray hiss with splatter (0.8 s).')
+def spray():
+    n = int(0.8 * SR)
+    x = bandpass(noise(n, 'white', 411), 1500, 9000) * env_adsr(n, 0.01, 0.1, 0.8, 0.25)
+    x += bandpass(noise(n, 'pink', 412), 300, 2000) * env_adsr(n, 0.01, 0.1, 0.6, 0.25) * 0.5
+    return normalize(x, -4)
+
+@reg('flush_big', 'Violent self-flush: handle clunk, roaring swirl, gurgle tail (2.4 s).')
+def flush():
+    n = int(2.4 * SR); tt = np.arange(n) / SR
+    clunk = np.zeros(n); m = int(0.05 * SR); clunk[:m] = highpass(noise(m, 'white', 421), 800) * env_exp(m, 0.01)
+    swirl = sweep_filter(noise(n, 'pink', 422), 2500, 400, kind='bandpass', q=1.5) * (0.6 + 0.4 * np.sin(2 * np.pi * 5 * tt)) * env_adsr(n, 0.08, 0.2, 0.9, 0.9)
+    gl = np.zeros(n)
+    rng = np.random.default_rng(423)
+    for t0 in rng.uniform(0.6, 2.2, 22):
+        k = int(0.06 * SR); i = int(t0 * SR); f0 = rng.uniform(200, 600)
+        gl[i:i + k] += np.sin(2 * np.pi * np.cumsum(np.linspace(f0, f0 * 1.8, k)) / SR) * env_exp(k, 0.02) * 0.5
+    return normalize(clunk * 0.8 + swirl + gl, -3)
+
+@reg('toilet_grumble', 'Small toilet personality: grumpy wet gurgle-growl (0.9 s).')
+def grumble():
+    n = int(0.9 * SR); tt = np.arange(n) / SR
+    f0 = 130 * (1 + 0.25 * np.sin(2 * np.pi * 7 * tt))
+    x = vowel_voice(150, 0.9, ((500, 180, 1.0), (900, 200, 0.5)), 431)[:n] * (0.7 + 0.3 * np.sign(np.sin(2 * np.pi * 13 * tt)))
+    x += lowpass(noise(n, 'brown', 432), 400) * 0.6 * np.abs(np.sin(2 * np.pi * 9 * tt))
+    return normalize(x * env_adsr(n, 0.05, 0.1, 0.8, 0.25), -5)
+
+@reg('giant_roar', 'Giant toilet: deep porcelain roar with flushing gargle (2.0 s).')
+def roar():
+    n = int(2.0 * SR); tt = np.arange(n) / SR
+    f0 = 70 * (1 + 0.1 * np.sin(2 * np.pi * 4 * tt))
+    ph = 2 * np.pi * np.cumsum(f0) / SR
+    x = sum(np.sin(ph * k) / k ** 0.7 for k in range(1, 14))
+    x = bandpass(x, 60, 2500) + bandpass(noise(n, 'pink', 441), 200, 1800) * 0.8 * np.abs(np.sin(2 * np.pi * 11 * tt))
+    x += sweep_filter(noise(n, 'white', 442), 3000, 500, kind='bandpass', q=2) * 0.3
+    return normalize(soft_sat(x * 2.0, 2.0) * env_adsr(n, 0.15, 0.2, 0.9, 0.6), -2)
+
+@reg('tp_thump', 'Toilet-paper missile launch: hollow thoomp + whoosh (0.5 s).')
+def tpthump():
+    n = int(0.5 * SR); tt = np.arange(n) / SR
+    x = np.sin(2 * np.pi * np.cumsum(220 * np.exp(-tt / 0.05) + 80) / SR) * env_exp(n, 0.05)
+    x += sweep_filter(noise(n, 'white', 451), 500, 4000, kind='bandpass', q=2) * env_adsr(n, 0.02, 0.1, 0.5, 0.2) * 0.5
+    return normalize(x, -4)
+
+@reg('drain_gurgle', 'Bathtub drain wakes up: slow sinister gurgle (1.6 s).')
+def gurgle():
+    n = int(1.6 * SR); out = np.zeros(n); rng = np.random.default_rng(461)
+    for t0 in np.sort(rng.uniform(0, 1.4, 14)):
+        k = int(rng.uniform(0.08, 0.16) * SR); i = int(t0 * SR); f0 = rng.uniform(90, 200)
+        b = np.sin(2 * np.pi * np.cumsum(np.linspace(f0, f0 * 2.2, k)) / SR) * env_adsr(k, 0.01, 0.03, 0.6, 0.05)
+        out[i:i + k] += b[:n - i]
+    out += lowpass(noise(n, 'brown', 462), 250) * 0.3
+    return normalize(convolve_stereo(out, reverb_ir(0.8, 0.3), 0.3), -4)
+
 def main():
     root = sys.argv[1]
     d = os.path.join(root, 'sound_effects', 'comedy')

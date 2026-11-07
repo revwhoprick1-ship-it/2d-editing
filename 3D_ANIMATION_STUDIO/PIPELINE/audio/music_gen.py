@@ -704,6 +704,67 @@ def cue_video004(dur=LOOP4):
 CUES['video004'] = cue_video004
 LOOPS['video004'] = LOOP4
 
+
+# ------------------------------------------------------------------ VIDEO_005 cue (toilets, 32.4 s loop)
+LOOP5 = 32.4
+
+
+def cue_video005(dur=LOOP5):
+    S = Score(dur + 2.0, bpm=132)
+    b = 60 / 132
+    C = lambda names: [mtof(n2m(x)) for x in names]
+    # 0-3: sleepy morning (soft pad + plucks), the slam stab sits on 0.1
+    S.add('pad', 0.0, inst_pad(C(['F3', 'A3', 'C4', 'E4']), 3.2, bright=1500, attack=0.3), -15)
+    S.add('lead', 0.1, inst_stab(C(['F4', 'B4', 'D5']), 0.25), -7)
+    S.add('perc', 0.1, drum_kick(1.0), -6)
+    # 3-9.5: comedy (bassoon staccato + pizz + light kit)
+    tune = ['C4', 'E4', 'G4', 'E4', 'F4', 'A4', 'G4', None, 'C4', 'E4', 'G4', 'C5', 'B4', 'G4', 'F4', 'D4']
+    for k in range(int((9.5 - 3.0) / (b / 2))):
+        t = 3.0 + k * b / 2
+        nm = tune[k % len(tune)]
+        if nm and k % 2 == 0:
+            S.add('lead', t, inst_bassoon(mtof(n2m(nm)) / 2, b * 0.4), -9)
+        if k % 4 == 0:
+            S.add('bass', t, inst_tuba(mtof(n2m('C2' if (k // 8) % 2 == 0 else 'G1')), b * 0.5), -9)
+        if k % 4 == 2:
+            S.add('perc', t, drum_snare(0.5, seed=k), -16)
+    S.gate('lead', 5.0, 5.4, floor_db=-40, fade=0.03)          # stop for the spray hit
+    # 10.7-18.6: uprising chaos (driving kit, brass stabs, tuba ostinato)
+    for k in range(int((18.6 - 10.7) / (b / 2))):
+        t = 10.7 + k * b / 2
+        beat, sub = divmod(k, 2)
+        if sub == 0:
+            S.add('perc', t, drum_kick(1.0), -6 if beat % 2 == 0 else -9)
+        if sub == 0 and beat % 2 == 1:
+            S.add('perc', t, drum_snare(1.0, seed=k), -9)
+        S.add('perc', t, drum_hat(0.5, seed=k), -14, 0.3)
+        S.add('bass', t, inst_tuba(mtof(n2m(['D2', 'D2', 'F2', 'G2', 'A2', 'G2', 'F2', 'E2'][k % 8])), b * 0.45), -8)
+        if beat % 4 == 0 and sub == 0:
+            S.add('lead', t, inst_stab(C(['D4', 'F4', 'A4', 'D5']), 0.3), -9)
+    # 18.6-21.6: sneaky tiptoe pizzicato
+    for i, nm in enumerate(['D4', None, 'F4', None, 'A4', 'G#4', 'A4', None, 'D4', None, 'F4', 'E4']):
+        if nm:
+            S.add('lead', 18.7 + i * b / 2, inst_pluck(mtof(n2m(nm)), 0.4, bright=0.4, seed=600 + i), -11)
+    # 22.3-24.5: boss tension, then the blast hit
+    S.add('pad', 22.3, inst_strings(C(['D2', 'A2', 'D3', 'D#3']), 2.3, attack=0.6, bright=1800), -7)
+    for i in range(5):
+        S.add('perc', 22.4 + i * 0.45, drum_taiko(1.0, 50), -6 + i)
+    S.add('perc', 24.56, drum_taiko(1.4, 42), -2)
+    S.add('lead', 24.56, inst_stab(C(['D3', 'F3', 'G#3', 'D4']), 0.6), -5)
+    # 25.2-28.4: deflated comedy (slow sad tuba)
+    for i, nm in enumerate(['A#1', 'A1', 'G#1', 'G1']):
+        S.add('bass', 25.4 + i * 0.6, inst_tuba(mtof(n2m(nm)), 0.5 if i < 3 else 1.2), -8)
+    # 28.4-31.45: the tub wakes (low drone + ticking), whoosh into the loop is an SFX
+    S.add('fx', 28.6, sine(41.2, 2.9) * env_adsr(int(2.9 * SR), 0.6, 0.2, 0.9, 0.3) * 0.8, -10)
+    S.add('pad', 28.9, inst_tremolo(C(['A2', 'A#2', 'E3']), 2.5, rate=12), -11)
+    for i in range(10):
+        S.add('perc', 28.9 + i * 0.25, drum_tick(0.4), -12)
+    return S
+
+
+CUES['video005'] = cue_video005
+LOOPS['video005'] = LOOP5
+
 if __name__ == '__main__':
     cue, out = sys.argv[1], sys.argv[2]
     S = CUES[cue]()
