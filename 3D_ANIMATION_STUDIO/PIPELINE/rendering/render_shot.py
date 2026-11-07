@@ -2,7 +2,7 @@
 
     blender -b --factory-startup --python PIPELINE/rendering/render_shot.py -- \
         --video video001 --shot SH01 [--res 720x1280] [--samples 12] [--frames 1,60] \
-        [--step 1] [--still 72] [--no-render] [--out DIR]
+        [--step 1] [--still 72] [--list 77,78,90] [--eevee use_raytracing=0] [--no-render] [--out DIR]
 
 Frames go to VIDEOS/<VIDEO>/frames/<SHOT>/####.png (global frame numbers).
 """
@@ -28,9 +28,11 @@ ap.add_argument('--samples', type=int, default=12)
 ap.add_argument('--frames', default=None)
 ap.add_argument('--step', type=int, default=1)
 ap.add_argument('--still', type=int, default=None)
+ap.add_argument('--list', default=None, help='explicit comma list of frames (overrides range/step)')
 ap.add_argument('--no-render', action='store_true')
 ap.add_argument('--save-blend', action='store_true')
 ap.add_argument('--out', default=None)
+ap.add_argument('--eevee', default='', help='overrides, e.g. use_raytracing=0,use_fast_gi=0')
 a = ap.parse_args(argv)
 
 from studio_lib import render_setup as RS, scene_kit as SK
@@ -40,6 +42,9 @@ SK.clear_scene()
 rx, ry = (int(v) for v in a.res.split('x'))
 sc = RS.scene_defaults(res=(rx, ry), samples=a.samples, fps=30)
 info = mod.build_shot(a.shot)
+for kv in filter(None, a.eevee.split(',')):
+    k, v = kv.split('=')
+    setattr(sc.eevee, k, type(getattr(sc.eevee, k))(float(v)) if not isinstance(getattr(sc.eevee, k), str) else v)
 f0, f1 = info['frames']
 # CPU budget rule: only key lights cast shadows (deforming characters invalidate
 # virtual shadow maps for every shadow-casting light, every sample)
@@ -64,6 +69,8 @@ if step > 1 and (f1 - 1) not in frames:
 if a.frames:
     lo, hi = (int(v) for v in a.frames.split(','))
     frames = [f for f in frames if lo <= f <= hi]
+if a.list:
+    frames = sorted({int(v) for v in a.list.split(',')})
 if a.still is not None:
     frames = [a.still]
 t0 = time.time()

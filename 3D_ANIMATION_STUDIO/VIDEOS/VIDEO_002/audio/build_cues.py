@@ -165,17 +165,19 @@ def main():
     c(E.t_sec - 0.05, 'tv_static_click', -10, 'E12 cut to security footage')
     for i, t in enumerate(E.t_enh):
         c(t - 0.07, 'enhance_beep', -10, f'E12 ENHANCE #{i + 1}: whoosh on the zoom, beep as the pixels resolve')
-    c(E.t_enh[2] + 0.53, 'tv_static_click', -14, 'E12 cut to the face crop')
-    c(E.t_enh[2] + 0.6, 'electronic_beep', -12, 'E12 MATCH FOUND')
-    c(E.t_enh[2] + 0.72, 'electronic_beep', -12, 'E12 MATCH FOUND (2nd beep)')
+    c(E.t_enh[2] + 0.43, 'tv_static_click', -14, 'E12 cut to the face crop')
+    c(E.t_enh[2] + 0.5, 'electronic_beep', -12, 'E12 MATCH FOUND')
+    c(E.t_enh[2] + 0.62, 'electronic_beep', -12, 'E12 MATCH FOUND (2nd beep)')
     c(20.62, 'riser_2s', -16, 'E12-E13 riser peaks on the freeze frame')
-    c(E.t_one + 0.3, 'cloth_rustle', -20, 'E13a everyone slowly turns to stare')
+    c(E.t_one + 0.5, 'cloth_rustle', -20, 'E13a everyone slowly turns to stare')
     # ---------------- E13b freeze frame "One guy." ----------------
     c(E.t_guy + 0.21, 'camera_snap', -6, 'E13b freeze-frame shutter (music stops dead)')
     c(E.t_guy + 0.35, 'pop', -14, 'E13b LIKE = GUILTY chip')
+    c(E.t_guy + 0.18, 'room_tone', -2, 'E13b room tone under the stop-time, so the pause reads as a pause, not a dropout',
+      dur=round(E.t_bl1 - E.t_guy - 0.1, 3), fin=0.04, fout=0.06, bus='amb', path='AUDIO/ambience/room_tone.flac')
     # ---------------- E14-E17 blame chain ----------------
     c(E.t_bl1 - 0.03, 'impact_soft', -15, 'E14 unfreeze')
-    c(E.t_bl1 + 0.3, 'pop', -18, 'E14 COMMENT banner')
+    c(E.t_bl2 - 0.1, 'pop', -18, 'E15 COMMENT banner (after the LIKE chip leaves)')
     c(E.t_bl1 + 0.45, 'pop', -19, 'E14 tag 1 GRANDMA')
     for src, f, side in (('EL_BLAME1', 262, -0.3), ('EL_BLAME2', 308, 0.3), ('EL_BLAME3', 356, -0.2)):
         c(seg_time(src, f), 'swish', -18, f'{src} arm swings up to point (f{f}); stab in the score at f{f + 5}', side)
@@ -192,8 +194,16 @@ def main():
     c(E.t_him + 0.30, 'crowd_gasp', -19, 'E18 passengers gasp')
     c(seg_time('EL_WHISTLE', 455) - 0.03, 'whistle_innocent', -13, 'E19 innocent whistle (pucker f454), cut off by "But"',
       dur=round(E.t_but - 0.03 - seg_time('EL_WHISTLE', 455), 3), fout=0.05)
-    c(E.t_cont + 0.2, 'sweat_drip', -12, 'E19 sweat drop 1', -0.3)
-    c(E.t_cont + 0.65, 'sweat_drip', -13, 'E19 sweat drop 2', 0.3)
+    sw = next(o for o in E.OVERLAYS if o['type'] == 'sweat')
+    for i, (_, _, ph) in enumerate(sw['drops']):           # ov_sweat: a drop spawns when (t-t0)*0.9+ph wraps
+        k = 0
+        while True:
+            ts = sw['t0'] + (k + (1 - ph) % 1.0) / 0.9
+            if ts >= sw['t1'] - 0.1:
+                break
+            if abs(ts - E.t_but) > 0.12:
+                c(ts, 'sweat_drip', -13 - k, f'E19 sweat drop {i + 1} spawns', -0.3 if i == 0 else 0.3)
+            k += 1
     c(E.t_but, 'bass_impact', -9, 'E19 "But this one?" punch-in')
     # ---------------- E20 rewind, E21 calm elevator -> loop ----------------
     t_rw = E.SEGMENTS[-2]['t0']
@@ -207,6 +217,22 @@ def main():
         'music': 'music_score.wav', 'music_gain_db': -3,
         'music_gates': [[12.66, 14.68, 0.06], [E.t_guy + 0.2, E.t_bl1 - 0.04, 0.01]],
         'targets': {'narration_lufs': -16, 'master_lufs': -14, 'true_peak': -1.0, 'duck_db': 9},
+        'music_cue': 'cue_video002',
+        'music_map': [
+            ['33.55→36.1→0.55', 'Muzak (loop seam)', 'F‑major elevator bossa (Rhodes, vibes, rim clave, shaker). Tape‑starts after the rewind, plays straight through the loop point and tape‑stops 0.12 s after the fart → one continuous performance across the seam'],
+            ['0.62–6.05', 'Chaos', 'Comedy oom‑pah in Bb at 150 bpm: tuba, bassoon tune, pizzicato double, polka kit; kick + open hat lift when the planet appears (2.9 s)'],
+            ['6.05–6.77', 'Wedding organ', '"Here Comes the Bride" (Wagner, 1850 – public domain melody, our own performance); tape‑stops on the kiss fart (6.77 s)'],
+            ['7.52–12.66', 'Science', 'Curious marimba arpeggios in C (C–Am–F) at 110 bpm, soft pad; the Am change lands on "normal" (9.71 s)'],
+            ['12.66–14.68', 'SILENCE', 'Music gated: dead air before and during "Tiny." – the faint lands on silence + slide whistle'],
+            ['15.15–16.68', 'News bed', 'D‑minor 16th pulse + timpani + strings under the anchor; dun‑dun‑DUNNN SFX on "who / farted / first"'],
+            ['17.96–22.44', 'Investigation', 'Tremolo strings that climb a semitone on every ENHANCE, taiko hits on each zoom, stab on MATCH FOUND (20.77 s), rising pulse into the freeze'],
+            ['22.44–22.98', 'STOP‑TIME', 'Freeze frame: music cut dead under the shutter snap'],
+            ['22.98–27.78', 'Blame chain', 'Sneaky pizzicato ostinato, up a whole tone per accusation (E → F# → G#), brass stab + kick on every finger point'],
+            ['27.80–28.91', 'Deadpan', 'Only a thin high tremolo B while the kid stares'],
+            ['28.91', 'Hit', 'Diminished brass stab + taiko as the kid\'s finger lands on "him"'],
+            ['29.85–31.56', 'Suspicion', 'Low D drone under the innocent whistle'],
+            ['31.56–32.64', 'Swell', 'Dissonant tremolo cluster + taiko on "But this one?", cut by the VHS rewind'],
+        ],
         'cues': sorted(cues, key=lambda d: d['t']),
     }
     out = os.path.join(HERE, 'cues.json')

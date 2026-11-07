@@ -23,6 +23,74 @@
   "true_peak": -1.0,
   "duck_db": 9
  },
+ "music_cue": "cue_video002",
+ "music_map": [
+  [
+   "33.55→36.1→0.55",
+   "Muzak (loop seam)",
+   "F‑major elevator bossa (Rhodes, vibes, rim clave, shaker). Tape‑starts after the rewind, plays straight through the loop point and tape‑stops 0.12 s after the fart → one continuous performance across the seam"
+  ],
+  [
+   "0.62–6.05",
+   "Chaos",
+   "Comedy oom‑pah in Bb at 150 bpm: tuba, bassoon tune, pizzicato double, polka kit; kick + open hat lift when the planet appears (2.9 s)"
+  ],
+  [
+   "6.05–6.77",
+   "Wedding organ",
+   "\"Here Comes the Bride\" (Wagner, 1850 – public domain melody, our own performance); tape‑stops on the kiss fart (6.77 s)"
+  ],
+  [
+   "7.52–12.66",
+   "Science",
+   "Curious marimba arpeggios in C (C–Am–F) at 110 bpm, soft pad; the Am change lands on \"normal\" (9.71 s)"
+  ],
+  [
+   "12.66–14.68",
+   "SILENCE",
+   "Music gated: dead air before and during \"Tiny.\" – the faint lands on silence + slide whistle"
+  ],
+  [
+   "15.15–16.68",
+   "News bed",
+   "D‑minor 16th pulse + timpani + strings under the anchor; dun‑dun‑DUNNN SFX on \"who / farted / first\""
+  ],
+  [
+   "17.96–22.44",
+   "Investigation",
+   "Tremolo strings that climb a semitone on every ENHANCE, taiko hits on each zoom, stab on MATCH FOUND (20.77 s), rising pulse into the freeze"
+  ],
+  [
+   "22.44–22.98",
+   "STOP‑TIME",
+   "Freeze frame: music cut dead under the shutter snap"
+  ],
+  [
+   "22.98–27.78",
+   "Blame chain",
+   "Sneaky pizzicato ostinato, up a whole tone per accusation (E → F# → G#), brass stab + kick on every finger point"
+  ],
+  [
+   "27.80–28.91",
+   "Deadpan",
+   "Only a thin high tremolo B while the kid stares"
+  ],
+  [
+   "28.91",
+   "Hit",
+   "Diminished brass stab + taiko as the kid's finger lands on \"him\""
+  ],
+  [
+   "29.85–31.56",
+   "Suspicion",
+   "Low D drone under the innocent whistle"
+  ],
+  [
+   "31.56–32.64",
+   "Swell",
+   "Dissonant tremolo cluster + taiko on \"But this one?\", cut by the VHS rewind"
+  ]
+ ],
  "cues": [
   {
    "t": 0.0,
@@ -346,32 +414,42 @@
    "note": "E12-E13 riser peaks on the freeze frame"
   },
   {
-   "t": 20.795,
+   "t": 20.695,
    "file": "AUDIO/sound_effects/comedy/tv_static_click.flac",
    "gain": -14,
    "bus": "sfx",
    "note": "E12 cut to the face crop"
   },
   {
-   "t": 20.865,
+   "t": 20.765,
    "file": "AUDIO/sound_effects/environment/electronic_beep.flac",
    "gain": -12,
    "bus": "sfx",
    "note": "E12 MATCH FOUND"
   },
   {
-   "t": 20.985,
+   "t": 20.885,
    "file": "AUDIO/sound_effects/environment/electronic_beep.flac",
    "gain": -12,
    "bus": "sfx",
    "note": "E12 MATCH FOUND (2nd beep)"
   },
   {
-   "t": 21.276,
+   "t": 21.476,
    "file": "AUDIO/sound_effects/movement/cloth_rustle.flac",
    "gain": -20,
    "bus": "sfx",
    "note": "E13a everyone slowly turns to stare"
+  },
+  {
+   "t": 22.415,
+   "file": "AUDIO/ambience/room_tone.flac",
+   "gain": -2,
+   "bus": "amb",
+   "note": "E13b room tone under the stop-time, so the pause reads as a pause, not a dropout",
+   "dur": 0.67,
+   "fade_in": 0.04,
+   "fade_out": 0.06
   },
   {
    "t": 22.445,
@@ -403,13 +481,6 @@
    "pan": -0.3
   },
   {
-   "t": 23.305,
-   "file": "AUDIO/sound_effects/reactions/pop.flac",
-   "gain": -18,
-   "bus": "sfx",
-   "note": "E14 COMMENT banner"
-  },
-  {
    "t": 23.455,
    "file": "AUDIO/sound_effects/reactions/pop.flac",
    "gain": -19,
@@ -422,6 +493,13 @@
    "gain": -11,
    "bus": "sfx",
    "note": "EL_BLAME1 whip pan follows the finger (peak on the cut)"
+  },
+  {
+   "t": 24.335,
+   "file": "AUDIO/sound_effects/reactions/pop.flac",
+   "gain": -18,
+   "bus": "sfx",
+   "note": "E15 COMMENT banner (after the LIKE chip leaves)"
   },
   {
    "t": 24.402,
@@ -515,18 +593,26 @@
   {
    "t": 30.038,
    "file": "AUDIO/sound_effects/comedy/sweat_drip.flac",
-   "gain": -12,
+   "gain": -13,
    "bus": "sfx",
-   "note": "E19 sweat drop 1",
+   "note": "E19 sweat drop 1 spawns",
    "pan": -0.3
   },
   {
-   "t": 30.488,
+   "t": 30.649,
    "file": "AUDIO/sound_effects/comedy/sweat_drip.flac",
    "gain": -13,
    "bus": "sfx",
-   "note": "E19 sweat drop 2",
+   "note": "E19 sweat drop 2 spawns",
    "pan": 0.3
+  },
+  {
+   "t": 31.149,
+   "file": "AUDIO/sound_effects/comedy/sweat_drip.flac",
+   "gain": -14,
+   "bus": "sfx",
+   "note": "E19 sweat drop 1 spawns",
+   "pan": -0.3
   },
   {
    "t": 31.555,
@@ -534,6 +620,22 @@
    "gain": -9,
    "bus": "sfx",
    "note": "E19 \"But this one?\" punch-in"
+  },
+  {
+   "t": 31.76,
+   "file": "AUDIO/sound_effects/comedy/sweat_drip.flac",
+   "gain": -14,
+   "bus": "sfx",
+   "note": "E19 sweat drop 2 spawns",
+   "pan": 0.3
+  },
+  {
+   "t": 32.26,
+   "file": "AUDIO/sound_effects/comedy/sweat_drip.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "E19 sweat drop 1 spawns",
+   "pan": -0.3
   },
   {
    "t": 32.635,

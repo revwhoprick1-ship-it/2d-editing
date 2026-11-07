@@ -3,7 +3,7 @@
  "true_peak_dbtp_approx": -1.2,
  "narration_lufs_pre_master": -16,
  "music_lufs_in_mix": -27.76,
- "sfx_lufs_in_mix": -20.11,
- "amb_lufs_in_mix": -55.52,
+ "sfx_lufs_in_mix": -20.06,
+ "amb_lufs_in_mix": -53.21,
  "clipped_samples": 0
 }

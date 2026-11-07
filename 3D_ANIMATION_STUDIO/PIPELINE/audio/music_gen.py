@@ -502,7 +502,7 @@ def cue_video002(dur=LOOP):
     # ---- F. investigation 17.96-22.45: ticking suspense, rises a semitone per ENHANCE
     t_enh = [19.015, 19.64, 20.265]
     keys = [(17.96, ['A2', 'C3', 'E3', 'A3']), (t_enh[0], ['Bb2', 'Db3', 'F3', 'Bb3']),
-            (t_enh[1], ['B2', 'D3', 'F#3', 'B3']), (t_enh[2], ['C3', 'Eb3', 'G3', 'C4']), (20.86, ['C3', 'E3', 'G3', 'C4'])]
+            (t_enh[1], ['B2', 'D3', 'F#3', 'B3']), (t_enh[2], ['C3', 'Eb3', 'G3', 'C4']), (20.765, ['C3', 'E3', 'G3', 'C4'])]
     for (t, ch), (t2, _) in zip(keys, keys[1:] + [(22.45, None)]):
         S.add('pad', t, inst_tremolo(C(ch), t2 - t, bright=2000), -12)
         S.add('bass', t, inst_bass(mtof(n2m(ch[0]) - 12), 0.18, cutoff=600), -6)
@@ -514,7 +514,7 @@ def cue_video002(dur=LOOP):
         S.add('perc', t, drum_tick(0.3), -10, 0.4 if k % 2 else -0.4)
         if t > 20.95:
             S.add('bass', t, inst_bass(M('C2'), b / 2 * 0.6, cutoff=500 + 1200 * (t - 20.95) / 1.5), -12 + 5 * (t - 20.95) / 1.5)
-    S.add('lead', 20.86, inst_stab(C(['C5', 'E5', 'G5'])), -9)
+    S.add('lead', 20.765, inst_stab(C(['C5', 'E5', 'G5'])), -9)
     S.gate('pad', 22.44, 22.98, floor_db=-80, fade=0.02)       # freeze frame = stop-time
     S.gate('bass', 22.44, 22.98, floor_db=-80, fade=0.02)
     S.gate('perc', 22.44, 22.98, floor_db=-80, fade=0.02)

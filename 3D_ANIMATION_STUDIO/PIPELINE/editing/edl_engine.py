@@ -389,7 +389,8 @@ def ov_tag(cv, o, t):
             d.text(((w - lb[2]) / 2, 122), o['label'], font=lab, fill=(255, 255, 255))
         o['_layer'] = lay
     bob = math.sin((t - o['t0']) * 7) * 6
-    paste(cv, lay, o['x'] * W, o['y'] * H + bob, pop_scale(t, o['t0'], 0.18, 1.2))
+    x = min(max(o['x'], 0.12), 0.88)                 # keep the tag on screen
+    paste(cv, lay, x * W, o['y'] * H + bob, pop_scale(t, o['t0'], 0.18, 1.2))
 
 
 def ov_speck(cv, o, t):

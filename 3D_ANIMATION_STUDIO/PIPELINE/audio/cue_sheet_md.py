@@ -13,9 +13,11 @@ for ln in t['lines']:
 for q in c['cues']:
     rows.append((q['t'], q.get('bus', 'sfx').upper(), os.path.basename(q['file']), f"{q.get('gain', 0):+.0f} dB" + (f", {q['dur']:.1f}s" if q.get('dur') else ''), q.get('note', '')))
 rows.sort(key=lambda r: r[0])
-out = ['# VIDEO_001 — Audio Cue Sheet', '',
+name = os.path.basename(os.path.abspath(vd))
+cue_fn = c.get('music_cue', 'cue_' + name.lower().replace('_', ''))
+out = [f'# {name} — Audio Cue Sheet', '',
        f"Generated from `audio/cues.json` and `audio/narration/timing.json`. Narration offset {off:.2f} s. "
-       f"Music: `audio/music_score.wav` (original, `PIPELINE/audio/music_gen.py cue_video001`), base gain {c['music_gain_db']} dB, "
+       f"Music: `audio/music_score.wav` (original, `PIPELINE/audio/music_gen.py {cue_fn}`), base gain {c['music_gain_db']} dB, "
        f"sidechain duck {c['targets']['duck_db']} dB under speech. Targets: narration {c['targets']['narration_lufs']} LUFS, "
        f"master {c['targets']['master_lufs']} LUFS integrated, true peak ≤ {c['targets']['true_peak']} dBTP.", '',
        '## Music map', '',
@@ -27,8 +29,13 @@ out = ['# VIDEO_001 — Audio Cue Sheet', '',
        '| 33.4–35.9 | E Drop | Near silence + 37 Hz sub drone (pattern interrupt) |',
        '| 35.9–44.7 | F Danger | D/Eb semitone ostinato, taiko, dissonant strings, riser 41.0 s, bass gated at the kick |',
        '| 44.7–50.4 | G Climax | i–VI–III–VII (Dm–Bb–F–C), stabs, full kit, **downbeat hit 47.8 s** (launch) |',
-       '| 50.4–57.0 | H Resolution | Playful F‑major pizzicato tune, final bell button 55.95 s |', '',
+       '| 50.4–57.0 | H Resolution | Playful F‑major pizzicato tune, final bell button 55.95 s |', '']
+if c.get('music_map'):
+    out = out[:out.index('| Time | Section | Content |') + 2] + [f'| {a} | {b} | {d} |' for a, b, d in c['music_map']] + ['']
+out += [
        '## Timeline', '', '| Time (s) | Layer | Asset / line | Level / length | Sync event / note |', '|---|---|---|---|---|']
+if c.get('loop'):
+    out.insert(out.index('## Music map'), f"**Seamless loop:** the mix is built circularly (`\"loop\": true`): tails past {c['duration']} s fold back onto 0 s, and ducking, filters and limiter run as if the video had already looped once. Music gates (hard silence): {', '.join(f'{a:.2f}–{b:.2f} s' for a, b, _ in c.get('music_gates', []))}.\n")
 for r in rows:
     out.append(f"| {r[0]:6.2f} | {r[1]} | {r[2]} | {r[3]} | {r[4]} |")
 open(os.path.join(vd, '08_audio_cue_sheet.md'), 'w').write('\n'.join(out) + '\n')
