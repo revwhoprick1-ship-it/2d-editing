@@ -15,7 +15,7 @@ FPS = 30
 END = DURATION = 33.0
 SEAM = 234
 AUDIO = os.path.join(HERE, 'audio', 'mix_master.wav')
-GRADE = dict(sat=1.12, contrast=1.06)
+GRADE = dict(sat=0.80, contrast=0.97)   # the renders are already punchy; pull skin back from yellow
 
 
 def w(line, word, nth=1, end=False):
@@ -83,8 +83,8 @@ SEGMENTS = [
 
 OVERLAYS = [
     dict(type='title', t0=-0.10, t1=2.15, y=380, shake=True,
-         lines=[('ALL DRUGS', 124, (255, 225, 60)), ('= LEGAL ✅', 104, (255, 255, 255))]),
-    dict(type='counter', t0=t_14 - 0.05, t1=5.75, a=0, b=14, dur=0.45, label='PRESCRIPTIONS 💊', y=330),
+         lines=[('ALL DRUGS', 124, (255, 225, 60)), ('= LEGAL', 104, (255, 255, 255))]),
+    dict(type='counter', t0=t_14 - 0.05, t1=5.75, a=0, b=14, dur=0.45, label='PRESCRIPTIONS', y=330),
     dict(type='stamp', t0=t_unemp, t1=8.1, text='UNEMPLOYED', x=0.5, y=0.22, size=104, rot=-7),
     dict(type='chip', t0=t_linked, t1=11.05, emoji='💼', text='FREELANCE PHARMACIST', x=0.5, y=0.17, size=58,
          fill=(10, 102, 194, 250), fg=(255, 255, 255)),
@@ -109,4 +109,4 @@ CAPTIONS = dict(timing=TIMING, offset=OFF, y=1300, size=96,
                 emphasis={'drug', 'legal', 'grandma', 'fourteen', 'unemployed', 'linkedin', 'pharmacist', 'cartels',
                           'podcast', 'twist', 'portugal', '2001', 'down', 'zombie', 'safe', 'lungs', 'addictive',
                           'free', 'hand', 'again'},
-                y_over=[(0.0, 2.2, 1420), (11.05, t_twist, 1250)])
+                y_over=[(0.0, 2.2, 1420), (t_14 - 0.05, 5.75, 1680), (11.05, t_twist, 1250)])
