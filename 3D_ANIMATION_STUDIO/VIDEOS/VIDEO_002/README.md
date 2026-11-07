@@ -1,6 +1,6 @@
 # VIDEO_002 — What If Everyone On Earth Farted At The Same Time?
 
-36.1 s · 1080×1920 · 30 fps · H.264/AAC MP4 · seamless loop · export: `EXPORTS/VIDEO_002_everyone_farted.mp4`
+36.1 s · 1080×1920 · 30 fps · H.264/AAC MP4 · seamless loop · export: `EXPORTS/VIDEO_002_What_If_Everyone_Farted.mp4`
 
 ## Read in this order
 | File | What |
@@ -13,7 +13,7 @@
 | `06_edit_plan_as_built.md` | Every shot and editing technique with its sync point |
 | `07_comedy_loop_science.md` | Comedy beats, loop mechanics, fact vs fiction |
 | `08_audio_cue_sheet.md` | Music map + all SFX with sync notes (generated) |
-| `09_render_and_qa_report.md` | Render settings, estimated vs actual time, QA and loop-test results |
+| `09_render_and_qa_report.md` | Render settings, estimated vs actual time, QA and loop‑test results |
 | `UPLOAD.md` | Title, description, hashtags, pinned comment |
 
 ## Rebuild from scratch
@@ -34,9 +34,9 @@ python3 PIPELINE/rendering/render_needed.py VIDEOS/VIDEO_002/edit_video002.py vi
     --out VIDEOS/VIDEO_002/frames --res 540x960 --samples 3 --eevee use_raytracing=0 --lanes 2
 # edit + export, then QA
 python3 PIPELINE/editing/edl_engine.py VIDEOS/VIDEO_002/edit_video002.py --frames VIDEOS/VIDEO_002/frames \
-    --out EXPORTS/VIDEO_002_everyone_farted.mp4 --audio VIDEOS/VIDEO_002/audio/mix_master.wav --crf 18
-python3 PIPELINE/quality_control/qc_video.py EXPORTS/VIDEO_002_everyone_farted.mp4 --out VIDEOS/VIDEO_002/qc
-python3 PIPELINE/quality_control/loop_test.py EXPORTS/VIDEO_002_everyone_farted.mp4 --out VIDEOS/VIDEO_002/qc
+    --out EXPORTS/VIDEO_002_What_If_Everyone_Farted.mp4 --audio VIDEOS/VIDEO_002/audio/mix_master.wav --crf 18
+python3 PIPELINE/quality_control/qc_video.py EXPORTS/VIDEO_002_What_If_Everyone_Farted.mp4 --out VIDEOS/VIDEO_002/qc
+python3 PIPELINE/quality_control/loop_test.py EXPORTS/VIDEO_002_What_If_Everyone_Farted.mp4 --out VIDEOS/VIDEO_002/qc
 ```
 
 ## Code for this video

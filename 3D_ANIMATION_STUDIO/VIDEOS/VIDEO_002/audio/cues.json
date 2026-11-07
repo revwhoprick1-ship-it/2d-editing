@@ -601,7 +601,7 @@
   {
    "t": 30.649,
    "file": "AUDIO/sound_effects/comedy/sweat_drip.flac",
-   "gain": -13,
+   "gain": -15,
    "bus": "sfx",
    "note": "E19 sweat drop 2 spawns",
    "pan": 0.3
@@ -622,17 +622,17 @@
    "note": "E19 \"But this one?\" punch-in"
   },
   {
-   "t": 31.76,
+   "t": 31.777,
    "file": "AUDIO/sound_effects/comedy/sweat_drip.flac",
-   "gain": -14,
+   "gain": -17,
    "bus": "sfx",
    "note": "E19 sweat drop 2 spawns",
    "pan": 0.3
   },
   {
-   "t": 32.26,
+   "t": 32.277,
    "file": "AUDIO/sound_effects/comedy/sweat_drip.flac",
-   "gain": -15,
+   "gain": -16,
    "bus": "sfx",
    "note": "E19 sweat drop 1 spawns",
    "pan": -0.3

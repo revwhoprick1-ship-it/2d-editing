@@ -194,16 +194,18 @@ def main():
     c(E.t_him + 0.30, 'crowd_gasp', -19, 'E18 passengers gasp')
     c(seg_time('EL_WHISTLE', 455) - 0.03, 'whistle_innocent', -13, 'E19 innocent whistle (pucker f454), cut off by "But"',
       dur=round(E.t_but - 0.03 - seg_time('EL_WHISTLE', 455), 3), fout=0.05)
-    sw = next(o for o in E.OVERLAYS if o['type'] == 'sweat')
-    for i, (_, _, ph) in enumerate(sw['drops']):           # ov_sweat: a drop spawns when (t-t0)*0.9+ph wraps
-        k = 0
-        while True:
-            ts = sw['t0'] + (k + (1 - ph) % 1.0) / 0.9
-            if ts >= sw['t1'] - 0.1:
-                break
-            if abs(ts - E.t_but) > 0.12:
-                c(ts, 'sweat_drip', -13 - k, f'E19 sweat drop {i + 1} spawns', -0.3 if i == 0 else 0.3)
-            k += 1
+    n_drip = 0
+    for sw in (o for o in E.OVERLAYS if o['type'] == 'sweat'):
+        for i, (_, _, ph) in enumerate(sw['drops']):       # ov_sweat: a drop spawns when (t-t0)*0.9+ph wraps
+            k = 0
+            while True:
+                ts = sw['t0'] + (k + (1 - ph) % 1.0) / 0.9
+                if ts >= sw['t1'] - 0.1:
+                    break
+                if abs(ts - E.t_but) > 0.12:
+                    c(ts, 'sweat_drip', -13 - min(n_drip, 4), f'E19 sweat drop {i + 1} spawns', -0.3 if i == 0 else 0.3)
+                    n_drip += 1
+                k += 1
     c(E.t_but, 'bass_impact', -9, 'E19 "But this one?" punch-in')
     # ---------------- E20 rewind, E21 calm elevator -> loop ----------------
     t_rw = E.SEGMENTS[-2]['t0']

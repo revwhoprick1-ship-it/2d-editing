@@ -316,7 +316,7 @@ def ov_stamp(cv, o, t):
         lay = Image.new('RGBA', (w, h), (0, 0, 0, 0))
         d = ImageDraw.Draw(lay)
         col = o.get('color', RED)
-        d.rounded_rectangle((4, 4, w - 5, h - 5), 14, outline=col + (255,), width=10, fill=(255, 255, 255, 40))
+        d.rounded_rectangle((4, 4, w - 5, h - 5), 14, outline=col + (255,), width=10, fill=tuple(o.get('fill', (255, 255, 255, 40))))
         d.text((35 - tb[0], 30 - tb[1]), o['text'], font=f, fill=col + (255,))
         o['_layer'] = lay
     u = (t - o['t0']) / 0.12

@@ -146,7 +146,7 @@ SEGMENTS = [
          zoom=[(t_him + 0.18, 1.25, 0.5, 0.42), (t_him + 0.3, 1.05, 0.5, 0.42)], shake=[(t_him + 0.18, t_him + 0.4, 12)]),
     # E19 "Farts aren't contagious... But this one?" (innocent whistle) + dramatic punch
     dict(t0=t_cont - 0.05, t1=t_but_end + 0.25, src='EL_WHISTLE', map=[(t_cont - 0.05, 450), (t_but_end + 0.25, 529)],
-         zoom=[(t_cont, 1.12, _wx, _wy + 0.06), (t_but - 0.05, 1.16, _wx, _wy + 0.06), (t_but + 0.05, 1.38, _wx, _wy + 0.05), (t_but_end + 0.25, 1.42, _wx, _wy + 0.05)]),
+         zoom=[(t_cont, 1.0, _wx, _wy + 0.06), (t_but - 0.05, 1.04, _wx, _wy + 0.06), (t_but + 0.05, 1.25, _wx, _wy + 0.06), (t_but_end + 0.25, 1.28, _wx, _wy + 0.06)]),
     # E20 VHS rewind through the whole video (back to 3:13:59)
     dict(t0=t_but_end + 0.25, t1=t_start - 0.02, rewind=(t_but_end, 0.4)),
     # E21 the calm elevator, one tiny pfft -> loops into E01
@@ -190,7 +190,8 @@ OVERLAYS = [
     dict(type='enhance', t0=t_enh[0], t1=t_enh[0] + 0.5, x=0.5, y=0.5, box=360),
     dict(type='enhance', t0=t_enh[1], t1=t_enh[1] + 0.5, x=0.5, y=0.5, box=420),
     dict(type='enhance', t0=t_enh[2], t1=t_enh[2] + 0.5, x=0.5, y=0.5, box=480),
-    dict(type='stamp', t0=t_enh[2] + 0.5, t1=t_one + 0.45, text='MATCH FOUND', x=0.5, y=0.78, color=(60, 255, 120), size=86, rot=-4),
+    dict(type='stamp', t0=t_enh[2] + 0.5, t1=t_one + 0.45, text='MATCH FOUND', x=0.5, y=0.30, color=(60, 255, 120), size=86, rot=-4,
+         fill=(0, 0, 0, 200)),   # dark backing: readable over the green CCTV tint, clear of the caption
     # freeze frame + LIKE gag
     dict(type='stamp', t0=t_guy + 0.22, t1=t_bl1 - 0.03, text='SUSPECT #1', x=0.5, y=0.83, size=110, rot=-8),
     dict(type='chip', t0=t_guy + 0.35, t1=t_bl2 - 0.1, emoji='👍', text='LIKE = GUILTY', x=0.5, y=0.17, size=62,
@@ -204,7 +205,9 @@ OVERLAYS = [
     dict(type='tag', t0=t_bl3 + 0.6, t1=t_kid - 0.06, n='3', label='KID', x=min(0.85, kx), y=max(0.12, ky - 0.14)),
     dict(type='tag', t0=t_kid + 0.1, t1=t_him + 0.18, n='3', label='KID', x=k4x, y=max(0.12, k4y - 0.15)),
     # innocent whistling: sweat
-    dict(type='sweat', t0=t_cont + 0.2, t1=t_but_end + 0.25, drops=[(0.33, 0.29, 0.0), (0.68, 0.32, 0.45)]),   # screen space: E19 keeps the head centred
+    # sweat drops sit beside the eyes; E19 punches in on "But", so the drops jump with the face
+    dict(type='sweat', t0=t_cont + 0.2, t1=t_but, drops=[(_wx - 0.17, _wy - 0.13, 0.0), (_wx + 0.17, _wy - 0.09, 0.45)]),
+    dict(type='sweat', t0=t_but, t1=t_but_end + 0.25, drops=[(0.29, 0.27, 0.35), (0.71, 0.31, 0.8)]),
     # rewind HUD + final clock (3:13:59 -> loop to 3:14:00)
     dict(type='rewind_hud', t0=t_but_end + 0.25, t1=t_start - 0.02),
     dict(type='clock', t0=t_start - 0.02, t1=END, text='3:13:59 PM'),
@@ -213,5 +216,6 @@ OVERLAYS = [
 CAPTIONS = dict(timing=TIMING, offset=OFF, y=1250, size=92,
                 emphasis={'billion', 'farted', 'second', 'elevators', 'tv', 'wedding', 'kiss', 'normal', 'tiny',
                           'sulfur', 'first', 'enhance', 'guy', 'grandma', 'businessman', 'kid', 'him', 'contagious'},
-                y_over=[(0.0, 2.9, 1330), (t_who - 0.04, t_sec - 0.03, 1120), (t_sec - 0.03, t_one + 0.45, 1350)],
+                y_over=[(0.0, 2.9, 1330), (t_who - 0.04, t_sec - 0.03, 1120), (t_sec - 0.03, t_one + 0.45, 1350),
+                        (t_him + 0.18, t_but_end + 0.25, 1640)],   # shock + whistle: captions on the shirt, mouth stays visible
                 hide=[(t_but_end + 0.25, t_start - 0.02)])

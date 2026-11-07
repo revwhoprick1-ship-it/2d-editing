@@ -81,6 +81,7 @@ Generated from `audio/cues.json` and `audio/narration/timing.json`. Narration of
 |  20.89 | SFX | electronic_beep.flac | -12 dB | E12 MATCH FOUND (2nd beep) |
 |  20.98 | NARRATION | L08 | dramatic (speed 1.0) | "One elevator. One guy." |
 |  21.48 | SFX | cloth_rustle.flac | -20 dB | E13a everyone slowly turns to stare |
+|  22.41 | AMB | room_tone.flac | -2 dB, 0.7s | E13b room tone under the stop-time, so the pause reads as a pause, not a dropout |
 |  22.45 | SFX | camera_snap.flac | -6 dB | E13b freeze-frame shutter (music stops dead) |
 |  22.59 | SFX | pop.flac | -14 dB | E13b LIKE = GUILTY chip |
 |  22.98 | SFX | impact_soft.flac | -15 dB | E14 unfreeze |
@@ -104,12 +105,12 @@ Generated from `audio/cues.json` and `audio/narration/timing.json`. Narration of
 |  29.84 | NARRATION | L11 | calm (speed 0.98) | "Farts aren't contagious." |
 |  29.94 | SFX | whistle_innocent.flac | -13 dB, 1.6s | E19 innocent whistle (pucker f454), cut off by "But" |
 |  30.04 | SFX | sweat_drip.flac | -13 dB | E19 sweat drop 1 spawns |
-|  30.65 | SFX | sweat_drip.flac | -13 dB | E19 sweat drop 2 spawns |
+|  30.65 | SFX | sweat_drip.flac | -15 dB | E19 sweat drop 2 spawns |
 |  31.15 | SFX | sweat_drip.flac | -14 dB | E19 sweat drop 1 spawns |
 |  31.55 | NARRATION | L12 | suspense (speed 0.92) | "But this one?" |
 |  31.55 | SFX | bass_impact.flac | -9 dB | E19 "But this one?" punch-in |
-|  31.76 | SFX | sweat_drip.flac | -14 dB | E19 sweat drop 2 spawns |
-|  32.26 | SFX | sweat_drip.flac | -15 dB | E19 sweat drop 1 spawns |
+|  31.78 | SFX | sweat_drip.flac | -17 dB | E19 sweat drop 2 spawns |
+|  32.28 | SFX | sweat_drip.flac | -16 dB | E19 sweat drop 1 spawns |
 |  32.63 | SFX | vhs_rewind.flac | -9 dB, 0.9s | E20 VHS rewind back to 3:13:59 |
 |  33.53 | SFX | button_click.flac | -17 dB | E21 tape PLAY clunk; muzak tape-starts in the score |
 |  33.56 | NARRATION | L13 | suspense (speed 0.95) | "It all started... with one tiny..." |

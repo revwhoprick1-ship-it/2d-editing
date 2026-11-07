@@ -1,0 +1,45 @@
+{
+ "file": "EXPORTS/VIDEO_002_What_If_Everyone_Farted.mp4",
+ "video": {
+  "frames": 1083,
+  "duration_s": 36.1,
+  "seam_diff": 0.1224,
+  "median_frame_diff": 0.0098,
+  "p90_frame_diff": 0.0547,
+  "largest_cut_diffs": [
+   0.5481,
+   0.5433,
+   0.5258,
+   0.4774,
+   0.4615
+  ],
+  "seam_percentile_among_frame_changes": 94.6,
+  "first_frame_mean_luma": 0.459,
+  "last_frame_mean_luma": 0.474,
+  "darkest_frame_mean_luma": 0.134
+ },
+ "audio": {
+  "decoded_duration_s": 36.1173,
+  "video_minus_audio_ms": -17.3,
+  "rms_last_100ms_db": -35.7,
+  "rms_first_100ms_db": -18.3,
+  "rms_whole_db": -16.8,
+  "seam_sample_jump": 0.00328,
+  "local_median_sample_jump": 0.00081,
+  "local_max_sample_jump": 0.01731
+ },
+ "loop_x3": {
+  "black_segments": [],
+  "silences_over_250ms_below_-50dB": [],
+  "duration_s": 108.338667
+ },
+ "checks": {
+  "seam_picture_change_is_ordinary (below the 90th percentile of frame changes)": false,
+  "no_black_frame_at_seam": true,
+  "no_black_segments_in_3x_loop": true,
+  "no_silence_in_3x_loop": true,
+  "no_audio_gap_at_seam (both sides within 20 dB of the mix)": true,
+  "no_click_at_seam (jump <= local max)": true,
+  "audio_video_length_match_within_25ms": true
+ }
+}
