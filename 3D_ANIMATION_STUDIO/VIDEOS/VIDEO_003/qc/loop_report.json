@@ -3,20 +3,20 @@
  "video": {
   "frames": 990,
   "duration_s": 33.0,
-  "seam_diff": 0.1634,
-  "median_frame_diff": 0.0124,
-  "p90_frame_diff": 0.0324,
+  "seam_diff": 0.1528,
+  "median_frame_diff": 0.0097,
+  "p90_frame_diff": 0.0304,
   "largest_cut_diffs": [
-   0.55,
-   0.5188,
-   0.4618,
-   0.46,
-   0.4528
+   0.3826,
+   0.2852,
+   0.2438,
+   0.2414,
+   0.2331
   ],
-  "seam_percentile_among_frame_changes": 98.2,
-  "first_frame_mean_luma": 0.387,
-  "last_frame_mean_luma": 0.467,
-  "darkest_frame_mean_luma": 0.247
+  "seam_percentile_among_frame_changes": 99.0,
+  "first_frame_mean_luma": 0.727,
+  "last_frame_mean_luma": 0.702,
+  "darkest_frame_mean_luma": 0.294
  },
  "audio": {
   "decoded_duration_s": 33.0027,

@@ -5,9 +5,9 @@ Export: `EXPORTS/VIDEO_003_What_If_All_Drugs_Became_Legal.mp4`: **33.0 s, 1080×
 ## Render
 | | VIDEO_002 | **VIDEO_003** |
 |---|---|---|
-| Settings | EEVEE 540×960, 3 samples | EEVEE 540×960, **1 sample + OpenImageDenoise**, ray tracing off |
+| Settings | EEVEE 540×960, 3 samples | EEVEE 540×960, **1 sample + OpenImageDenoise**, ray tracing off, natural AgX colour (re‑rendered on request: no vibrant grade) |
 | Frames | 765 | 910 (every frame rendered, nothing on twos, no frame blending) |
-| Wall time | 58.0 min (4.55 s/frame) | **29.5 min (1.94 s/frame)** |
+| Wall time | 58.0 min (4.55 s/frame) | **29.4 min (1.94 s/frame)** |
 | Grain | visible on fabric | none (the denoiser removes it; the file is 3× smaller because x264 no longer spends bits on grain) |
 | Estimate before the render | — | 2.2 s/frame × 910 ≈ 33 min |
 
