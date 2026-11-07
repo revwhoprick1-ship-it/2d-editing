@@ -15,7 +15,7 @@ FPS = 30
 END = DURATION = 33.0
 SEAM = 234
 AUDIO = os.path.join(HERE, 'audio', 'mix_master.wav')
-GRADE = dict(sat=0.80, contrast=0.97)   # the renders are already punchy; pull skin back from yellow
+GRADE = None   # natural colour straight from the render (user asked for normal, not vibrant)
 
 
 def w(line, word, nth=1, end=False):

@@ -106,14 +106,11 @@ def pop_set(color, glow='#FFFFFF', floor=None):
 
 
 def punchy():
-    """Standard view transform = saturated colours (AgX desaturates brights to pastel)."""
+    """Normal, natural colour: AgX (Blender default film look), no extra contrast or saturation."""
     vs = bpy.context.scene.view_settings
-    vs.view_transform = 'Standard'
-    try:
-        vs.look = 'Medium High Contrast'
-    except TypeError:
-        vs.look = 'None'
-    vs.exposure = -0.35
+    vs.view_transform = 'AgX'
+    vs.look = 'None'
+    vs.exposure = 0.0
 
 
 def mat(name, color, **kw):
@@ -177,7 +174,7 @@ def camset(name, loc, look, lens):
 # ============================================================================== builders
 def b_pink(job):
     """Mascot: L11 thinking -> L12 phone -> L13 looks at us -> SEAM -> L01 'everything legal!' jump."""
-    pop_set('#FF3D9A', glow='#FFD23F')
+    pop_set('#D98BAE', glow='#FFFFFF')
     m, col = SK.append_mascot()
     arms_down(m, 0, 0.3)
     expr(m, 0, 'thinking', 0.9, eyes=(0.25, 0.25), head=(8, -6, 4))
@@ -237,7 +234,7 @@ def b_pink(job):
 
 
 def b_grandma(job):
-    pop_set('#18C4B8', glow='#FFE066')
+    pop_set('#7FBFB8', glow='#FFFFFF')
     g, col = SK.append_character('GRANDMA')
     SK.lean_character(col, 0)
     t0 = JOBS['GRANDMA'][1]
@@ -248,7 +245,7 @@ def b_grandma(job):
     expr(g, int((3.58 - t0) * FPS), 'happy', 0.55, eyes=(0.0, 0.02), head=(0, 4, 6))   # smug on "fourteen"
     talk(g, words_between(t0, 5.75), t0, amount=0.8)
     # mountain of pill bottles on a table in front of her
-    mat_t = mat('Table', '#7A3BE0', rough=0.5)
+    mat_t = mat('Table', '#8A7A6A', rough=0.5)
     bpy.ops.mesh.primitive_cube_add(size=1, location=(0, -0.42, 0.42))
     tb = bpy.context.object
     tb.scale = (1.1, 0.5, 0.84)
@@ -267,7 +264,7 @@ def b_grandma(job):
 
 
 def b_dealer(job):
-    pop_set('#7B2FF7', glow='#3DF2FF')
+    pop_set('#8F86C9', glow='#FFFFFF')
     d, col = SK.append_character('BUSINESSMAN')
     SK.lean_character(col, 0)
     recolor(col, {'Shirt': '#2A2A33', 'Denim': '#1C1C24'})
@@ -293,7 +290,7 @@ def b_dealer(job):
 
 
 def b_podcast(job):
-    pop_set('#FF6A1A', glow='#FF2E63')
+    pop_set('#D9A07A', glow='#FFFFFF')
     t0 = JOBS['PODCAST'][1]
     cast = []
     for i, (x, rz, shirt, hair) in enumerate(((-0.30, -24, '#F5C518', '#1A120E'), (0.30, 24, '#F4F4F4', '#3A2A1C'))):
@@ -362,7 +359,7 @@ def b_globe(job):
 
 
 def b_zombie(job):
-    pop_set('#36D35A', glow='#E8FF3A')
+    pop_set('#8CC49A', glow='#FFFFFF')
     m, col = SK.append_mascot()
     zpose = dict(arm_0=dict(side='L', raise_=5, forward=88, elbow=8), arm_1=dict(side='R', raise_=5, forward=88, elbow=8),
                  hand_0=dict(side='L', curl=0.3), hand_1=dict(side='R', curl=0.3))
@@ -381,7 +378,7 @@ def b_zombie(job):
 
 
 def b_lungs(job):
-    pop_set('#FF2340', glow='#FFB0C8')
+    pop_set('#C98A8A', glow='#FFFFFF')
     m, col = SK.append_mascot()
     t0 = JOBS['LUNGS'][1]
     arms_down(m, 0, 0.3)
