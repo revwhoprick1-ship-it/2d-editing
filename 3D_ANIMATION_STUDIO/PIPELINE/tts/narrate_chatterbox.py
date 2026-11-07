@@ -57,9 +57,11 @@ def main():
     a = ap.parse_args()
     S = json.load(open(a.script))
     os.makedirs(os.path.join(a.out, 'lines'), exist_ok=True)
-    ref = S.get('voice_ref', 'kokoro:am_fenrir')
-    if ref.startswith('kokoro:'):
-        ref = kokoro_ref(ref.split(':')[1], os.path.join(a.out, f"ref_{ref.split(':')[1]}.wav"))
+    def ref_for(spec):
+        if spec.startswith('kokoro:'):
+            return kokoro_ref(spec.split(':')[1], os.path.join(a.out, f"ref_{spec.split(':')[1]}.wav"))
+        return spec
+    default_ref = S.get('voice_ref', 'kokoro:am_fenrir')
     from chatterbox.tts import ChatterboxTTS
     from faster_whisper import WhisperModel
     m = ChatterboxTTS.from_pretrained(device='cpu')
@@ -74,7 +76,7 @@ def main():
         best = None
         for k in range(a.takes):
             torch.manual_seed(1000 * k + int(ln['id'][1:]))
-            w = m.generate(ln['text'], audio_prompt_path=ref, exaggeration=ln.get('exaggeration', 0.6),
+            w = m.generate(ln['text'], audio_prompt_path=ref_for(ln.get('voice_ref', default_ref)), exaggeration=ln.get('exaggeration', 0.6),
                            cfg_weight=ln.get('cfg', 0.35), temperature=0.8)
             y = trim(w.squeeze(0).numpy(), m.sr)
             y = trim(atempo(y, m.sr, ln.get('tempo', tempo)), m.sr)
@@ -106,7 +108,7 @@ def main():
             spans = [(d * i / len(tw), d * (i + 1) / len(tw)) for i in range(len(tw))]
         for word, (s0, s1) in zip(tw, spans):
             words.append({'line': ln['id'], 'text': word, 'start': round(t + s0, 3), 'end': round(t + s1, 3)})
-        lines.append({'id': ln['id'], 'text': ln['text'], 'start': round(t, 3), 'end': round(t + len(y) / sr, 3),
+        lines.append({'id': ln['id'], 'who': ln.get('who', 'N'), 'text': ln['text'], 'start': round(t, 3), 'end': round(t + len(y) / sr, 3),
                       'delivery': ln.get('delivery', ''), 'speed': ln.get('tempo', tempo)})
         out.append(y)
         t += len(y) / sr

@@ -474,10 +474,55 @@ def ov_rewind_hud(cv, o, t):
     paste(cv, lay, W / 2, 560)
 
 
+
+def ov_timer(cv, o, t):
+    """Story clock: counts o['a'] -> 0 over [t0, t_zero]; afterwards shows o['done'] (red)."""
+    if t < o['t_zero']:
+        v = o['a'] * (1 - (t - o['t0']) / (o['t_zero'] - o['t0']))
+        lay = pill(f"{o.get('label', 'ZERO-G')}  {max(0.0, v):4.1f}s", None, o.get('size', 54), fill=(0, 0, 0, 200), fg=(255, 255, 255))
+        warn = v < 3.0 and int(t * 6) % 2 == 0
+        if warn:
+            lay = pill(f"{o.get('label', 'ZERO-G')}  {max(0.0, v):4.1f}s", None, o.get('size', 54), fill=(230, 40, 45, 235), fg=(255, 255, 255))
+    else:
+        lay = pill(o.get('done', 'GRAVITY: ON'), None, o.get('size', 54), fill=(230, 40, 45, 240), fg=(255, 255, 255))
+    paste(cv, lay, W / 2, o.get('y', 150), pop_scale(t, o['t0'], 0.15, 1.1))
+
+
+def ov_physics(cv, o, t):
+    """Animated explainer: you keep going straight, Earth's surface curves away beneath you."""
+    u = ease(min(1.0, max(0.0, (t - o['t0']) / max(0.1, o.get('anim', 2.5)))))
+    pw, ph = 900, 620
+    lay = Image.new('RGBA', (pw, ph), (0, 0, 0, 0))
+    d = ImageDraw.Draw(lay)
+    d.rounded_rectangle((0, 0, pw - 1, ph - 1), 36, fill=(12, 20, 40, 225))
+    R = 1500                                       # exaggerated Earth curve
+    cx, cy = pw / 2, 300 + R
+    d.ellipse((cx - R, cy - R, cx + R, cy + R), fill=(40, 120, 80, 255), outline=(120, 220, 140, 255), width=6)
+    d.rounded_rectangle((0, 0, pw - 1, ph - 1), 36, outline=(255, 255, 255, 80), width=3)
+    x0 = 170
+    import math as _m
+    y0 = cy - _m.sqrt(R * R - (x0 - cx) ** 2) - 18
+    x1 = x0 + 560 * u
+    d.line((x0, y0, x0 + 600, y0), fill=(255, 255, 255, 120), width=4)          # straight path (dashed look)
+    for k in range(0, 600, 40):
+        d.line((x0 + k + 20, y0, x0 + k + 40, y0), fill=(12, 20, 40, 255), width=6)
+    gy = cy - _m.sqrt(max(0, R * R - (x1 - cx) ** 2))
+    d.ellipse((x1 - 22, y0 - 44, x1 + 22, y0), fill=(255, 140, 40, 255), outline=(255, 255, 255, 255), width=4)   # you
+    if u > 0.15:
+        d.line((x1, y0, x1, gy), fill=YELLOW + (255,), width=6)
+        f = font(FONT_B, 40)
+        d.text((x1 - 250, (y0 + gy) / 2 - 10), o.get('gap', '≈ 2 m'), font=f, fill=YELLOW + (255,))
+    f = font(FONT_B, 44)
+    d.text((40, 30), o.get('title', 'YOU KEEP GOING STRAIGHT'), font=f, fill=(255, 255, 255, 255))
+    d.text((40, 84), o.get('sub', 'EARTH CURVES AWAY UNDER YOU'), font=font(FONT_B, 36), fill=(160, 210, 255, 255))
+    a = min(1.0, (t - o['t0']) / 0.2, (o['t1'] - t) / 0.2)
+    paste(cv, lay, W / 2, o.get('y', 560), 0.85 + 0.15 * min(1.0, (t - o['t0']) / 0.2), 0, max(0.0, a))
+
+
 OVERLAYS_FN = {'title': ov_title, 'clock': ov_clock, 'counter': ov_counter, 'chip': ov_chip, 'banner': ov_banner,
                'stamp': ov_stamp, 'lower_third': ov_lower_third, 'ticker': ov_ticker, 'live_bug': ov_live_bug,
                'tag': ov_tag, 'speck': ov_speck, 'sweat': ov_sweat, 'enhance': ov_enhance, 'cctv_hud': ov_cctv_hud,
-               'rewind_hud': ov_rewind_hud}
+               'rewind_hud': ov_rewind_hud, 'timer': ov_timer, 'physics': ov_physics}
 
 
 # ============================================================================ captions

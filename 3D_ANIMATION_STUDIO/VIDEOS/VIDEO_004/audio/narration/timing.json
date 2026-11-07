@@ -1,0 +1,573 @@
+{
+ "voice": "chatterbox+kokoro:am_fenrir",
+ "sample_rate": 24000,
+ "lines": [
+  {
+   "id": "L01",
+   "who": "N",
+   "text": "Gravity just switched off. You've got ten seconds.",
+   "start": 0.0,
+   "end": 2.661,
+   "delivery": "hook",
+   "speed": 1.12
+  },
+  {
+   "id": "L02",
+   "who": "M",
+   "text": "Wait. I'm flying?!",
+   "start": 2.861,
+   "end": 4.049,
+   "delivery": "joy",
+   "speed": 1.12
+  },
+  {
+   "id": "L03",
+   "who": "N",
+   "text": "Your phone. Your coffee. That guy's sneeze.",
+   "start": 4.649,
+   "end": 6.876,
+   "delivery": "comic",
+   "speed": 1.12
+  },
+  {
+   "id": "L04",
+   "who": "N",
+   "text": "Quick physics check: you won't shoot into space.",
+   "start": 7.476,
+   "end": 9.902,
+   "delivery": "fact",
+   "speed": 1.12
+  },
+  {
+   "id": "L05",
+   "who": "N",
+   "text": "Earth keeps spinning, you keep drifting straight, and the ground slowly falls away. About two meters in ten seconds.",
+   "start": 10.002,
+   "end": 15.876,
+   "delivery": "fact",
+   "speed": 1.12
+  },
+  {
+   "id": "L06",
+   "who": "N",
+   "text": "Unless you jumped.",
+   "start": 16.376,
+   "end": 17.116,
+   "delivery": "ominous",
+   "speed": 1.12
+  },
+  {
+   "id": "L07",
+   "who": "M",
+   "text": "Why did I jump?!",
+   "start": 17.916,
+   "end": 18.608,
+   "delivery": "panic",
+   "speed": 1.12
+  },
+  {
+   "id": "L08",
+   "who": "M",
+   "text": "Where am I supposed to land?!",
+   "start": 18.908,
+   "end": 20.019,
+   "delivery": "panic",
+   "speed": 1.12
+  },
+  {
+   "id": "L09",
+   "who": "N",
+   "text": "Three. Two. One.",
+   "start": 20.419,
+   "end": 22.391,
+   "delivery": "countdown",
+   "speed": 0.95
+  },
+  {
+   "id": "L10",
+   "who": "N",
+   "text": "And gravity's back.",
+   "start": 23.591,
+   "end": 24.56,
+   "delivery": "payoff",
+   "speed": 1.12
+  },
+  {
+   "id": "L11",
+   "who": "M",
+   "text": "Okay. I'm never complaining about gravity again.",
+   "start": 27.76,
+   "end": 29.883,
+   "delivery": "relief",
+   "speed": 1.12
+  },
+  {
+   "id": "L12",
+   "who": "N",
+   "text": "Now imagine it happens again.",
+   "start": 31.683,
+   "end": 33.074,
+   "delivery": "loop",
+   "speed": 1.12
+  }
+ ],
+ "words": [
+  {
+   "line": "L01",
+   "text": "Gravity",
+   "start": 0.0,
+   "end": 0.32
+  },
+  {
+   "line": "L01",
+   "text": "just",
+   "start": 0.32,
+   "end": 0.6
+  },
+  {
+   "line": "L01",
+   "text": "switched",
+   "start": 0.6,
+   "end": 0.92
+  },
+  {
+   "line": "L01",
+   "text": "off.",
+   "start": 0.92,
+   "end": 1.26
+  },
+  {
+   "line": "L01",
+   "text": "You've",
+   "start": 1.54,
+   "end": 1.72
+  },
+  {
+   "line": "L01",
+   "text": "got",
+   "start": 1.72,
+   "end": 1.88
+  },
+  {
+   "line": "L01",
+   "text": "ten",
+   "start": 1.88,
+   "end": 2.14
+  },
+  {
+   "line": "L01",
+   "text": "seconds.",
+   "start": 2.14,
+   "end": 2.42
+  },
+  {
+   "line": "L02",
+   "text": "Wait.",
+   "start": 2.861,
+   "end": 3.101
+  },
+  {
+   "line": "L02",
+   "text": "I'm",
+   "start": 3.261,
+   "end": 3.481
+  },
+  {
+   "line": "L02",
+   "text": "flying?!",
+   "start": 3.481,
+   "end": 3.781
+  },
+  {
+   "line": "L03",
+   "text": "Your",
+   "start": 4.649,
+   "end": 4.849
+  },
+  {
+   "line": "L03",
+   "text": "phone.",
+   "start": 4.849,
+   "end": 5.109
+  },
+  {
+   "line": "L03",
+   "text": "Your",
+   "start": 5.269,
+   "end": 5.329
+  },
+  {
+   "line": "L03",
+   "text": "coffee.",
+   "start": 5.329,
+   "end": 5.669
+  },
+  {
+   "line": "L03",
+   "text": "That",
+   "start": 5.829,
+   "end": 5.929
+  },
+  {
+   "line": "L03",
+   "text": "guy's",
+   "start": 5.929,
+   "end": 6.309
+  },
+  {
+   "line": "L03",
+   "text": "sneeze.",
+   "start": 6.309,
+   "end": 6.729
+  },
+  {
+   "line": "L04",
+   "text": "Quick",
+   "start": 7.476,
+   "end": 7.716
+  },
+  {
+   "line": "L04",
+   "text": "physics",
+   "start": 7.716,
+   "end": 7.996
+  },
+  {
+   "line": "L04",
+   "text": "check:",
+   "start": 7.996,
+   "end": 8.296
+  },
+  {
+   "line": "L04",
+   "text": "you",
+   "start": 8.656,
+   "end": 8.776
+  },
+  {
+   "line": "L04",
+   "text": "won't",
+   "start": 8.776,
+   "end": 9.076
+  },
+  {
+   "line": "L04",
+   "text": "shoot",
+   "start": 9.076,
+   "end": 9.216
+  },
+  {
+   "line": "L04",
+   "text": "into",
+   "start": 9.216,
+   "end": 9.436
+  },
+  {
+   "line": "L04",
+   "text": "space.",
+   "start": 9.436,
+   "end": 9.676
+  },
+  {
+   "line": "L05",
+   "text": "Earth",
+   "start": 10.002,
+   "end": 10.182
+  },
+  {
+   "line": "L05",
+   "text": "keeps",
+   "start": 10.182,
+   "end": 10.382
+  },
+  {
+   "line": "L05",
+   "text": "spinning,",
+   "start": 10.382,
+   "end": 10.742
+  },
+  {
+   "line": "L05",
+   "text": "you",
+   "start": 11.122,
+   "end": 11.162
+  },
+  {
+   "line": "L05",
+   "text": "keep",
+   "start": 11.162,
+   "end": 11.322
+  },
+  {
+   "line": "L05",
+   "text": "drifting",
+   "start": 11.322,
+   "end": 11.662
+  },
+  {
+   "line": "L05",
+   "text": "straight,",
+   "start": 11.662,
+   "end": 12.002
+  },
+  {
+   "line": "L05",
+   "text": "and",
+   "start": 12.342,
+   "end": 12.422
+  },
+  {
+   "line": "L05",
+   "text": "the",
+   "start": 12.422,
+   "end": 12.522
+  },
+  {
+   "line": "L05",
+   "text": "ground",
+   "start": 12.522,
+   "end": 12.722
+  },
+  {
+   "line": "L05",
+   "text": "slowly",
+   "start": 12.722,
+   "end": 13.142
+  },
+  {
+   "line": "L05",
+   "text": "falls",
+   "start": 13.142,
+   "end": 13.482
+  },
+  {
+   "line": "L05",
+   "text": "away.",
+   "start": 13.482,
+   "end": 13.822
+  },
+  {
+   "line": "L05",
+   "text": "About",
+   "start": 14.222,
+   "end": 14.382
+  },
+  {
+   "line": "L05",
+   "text": "two",
+   "start": 14.382,
+   "end": 14.682
+  },
+  {
+   "line": "L05",
+   "text": "meters",
+   "start": 14.682,
+   "end": 14.902
+  },
+  {
+   "line": "L05",
+   "text": "in",
+   "start": 14.902,
+   "end": 15.202
+  },
+  {
+   "line": "L05",
+   "text": "ten",
+   "start": 15.202,
+   "end": 15.382
+  },
+  {
+   "line": "L05",
+   "text": "seconds.",
+   "start": 15.382,
+   "end": 15.702
+  },
+  {
+   "line": "L06",
+   "text": "Unless",
+   "start": 16.376,
+   "end": 16.596
+  },
+  {
+   "line": "L06",
+   "text": "you",
+   "start": 16.596,
+   "end": 16.776
+  },
+  {
+   "line": "L06",
+   "text": "jumped.",
+   "start": 16.776,
+   "end": 16.996
+  },
+  {
+   "line": "L07",
+   "text": "Why",
+   "start": 17.916,
+   "end": 18.056
+  },
+  {
+   "line": "L07",
+   "text": "did",
+   "start": 18.056,
+   "end": 18.156
+  },
+  {
+   "line": "L07",
+   "text": "I",
+   "start": 18.156,
+   "end": 18.276
+  },
+  {
+   "line": "L07",
+   "text": "jump?!",
+   "start": 18.276,
+   "end": 18.516
+  },
+  {
+   "line": "L08",
+   "text": "Where",
+   "start": 18.908,
+   "end": 19.088
+  },
+  {
+   "line": "L08",
+   "text": "am",
+   "start": 19.088,
+   "end": 19.148
+  },
+  {
+   "line": "L08",
+   "text": "I",
+   "start": 19.148,
+   "end": 19.248
+  },
+  {
+   "line": "L08",
+   "text": "supposed",
+   "start": 19.248,
+   "end": 19.408
+  },
+  {
+   "line": "L08",
+   "text": "to",
+   "start": 19.408,
+   "end": 19.568
+  },
+  {
+   "line": "L08",
+   "text": "land?!",
+   "start": 19.568,
+   "end": 19.808
+  },
+  {
+   "line": "L09",
+   "text": "Three.",
+   "start": 20.419,
+   "end": 20.879
+  },
+  {
+   "line": "L09",
+   "text": "Two.",
+   "start": 21.139,
+   "end": 21.519
+  },
+  {
+   "line": "L09",
+   "text": "One.",
+   "start": 22.099,
+   "end": 22.139
+  },
+  {
+   "line": "L10",
+   "text": "And",
+   "start": 23.591,
+   "end": 23.751
+  },
+  {
+   "line": "L10",
+   "text": "gravity's",
+   "start": 23.751,
+   "end": 24.171
+  },
+  {
+   "line": "L10",
+   "text": "back.",
+   "start": 24.171,
+   "end": 24.431
+  },
+  {
+   "line": "L11",
+   "text": "Okay.",
+   "start": 27.76,
+   "end": 28.06
+  },
+  {
+   "line": "L11",
+   "text": "I'm",
+   "start": 28.26,
+   "end": 28.46
+  },
+  {
+   "line": "L11",
+   "text": "never",
+   "start": 28.46,
+   "end": 28.66
+  },
+  {
+   "line": "L11",
+   "text": "complaining",
+   "start": 28.66,
+   "end": 29.0
+  },
+  {
+   "line": "L11",
+   "text": "about",
+   "start": 29.0,
+   "end": 29.24
+  },
+  {
+   "line": "L11",
+   "text": "gravity",
+   "start": 29.24,
+   "end": 29.52
+  },
+  {
+   "line": "L11",
+   "text": "again.",
+   "start": 29.52,
+   "end": 29.76
+  },
+  {
+   "line": "L12",
+   "text": "Now",
+   "start": 31.683,
+   "end": 31.923
+  },
+  {
+   "line": "L12",
+   "text": "imagine",
+   "start": 31.923,
+   "end": 32.203
+  },
+  {
+   "line": "L12",
+   "text": "it",
+   "start": 32.203,
+   "end": 32.403
+  },
+  {
+   "line": "L12",
+   "text": "happens",
+   "start": 32.403,
+   "end": 32.643
+  },
+  {
+   "line": "L12",
+   "text": "again.",
+   "start": 32.643,
+   "end": 32.963
+  }
+ ],
+ "duration": 33.074
+}

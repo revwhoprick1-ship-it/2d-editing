@@ -633,6 +633,77 @@ def cue_video003(dur=LOOP3):
 CUES['video003'] = cue_video003
 LOOPS['video003'] = LOOP3
 
+
+# ------------------------------------------------------------------ VIDEO_004 cue (gravity, 33.6 s loop)
+LOOP4 = 33.6
+
+
+def cue_video004(dur=LOOP4):
+    import json as _j
+    T = _j.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'VIDEOS', 'VIDEO_004', 'audio', 'narration', 'timing.json')))
+    LS = {l['id']: (l['start'], l['end']) for l in T['lines']}
+    TG = LS['L10'][0] + 0.75
+    TL = TG + 2.6
+    S = Score(dur + 2.0, bpm=124)
+    b = 60 / 124
+    C = lambda names: [mtof(n2m(x)) for x in names]
+    # curiosity motif (also the loop bed): plucked bells, D major-ish, runs 30.55 -> 33.6 -> wraps to 0 -> 2.9
+    mot = ['D5', 'A4', 'F#5', 'E5', 'A5', 'F#5', 'E5', 'D5']
+    for start in (30.55, LOOP4):
+        for i, nm in enumerate(mot):
+            t = start + i * b / 2 if start == 30.55 else start + i * b / 2
+            if (start == 30.55 and t < LOOP4) or (start == LOOP4 and t < LOOP4 + 2.85):
+                S.add('lead', t, inst_bell(mtof(n2m(nm)), 0.9), -14, 0.3 if i % 2 else -0.3)
+    S.add('pad', 30.55, inst_pad(C(['D3', 'A3', 'F#4']), 3.05 + 2.9, bright=1600, attack=0.6), -15)
+    # excitement 2.86 -> 10: bouncy groove
+    for k in range(int((10.0 - 2.86) / (b / 2))):
+        t = 2.86 + k * b / 2
+        beat, sub = divmod(k, 2)
+        root = ['D2', 'B1', 'G1', 'A1'][(beat // 4) % 4]
+        if sub == 0 and beat % 2 == 0:
+            S.add('perc', t, drum_kick(0.9), -8)
+        if sub == 0 and beat % 2 == 1:
+            S.add('perc', t, drum_snare(0.8, seed=k), -11)
+        S.add('perc', t, drum_hat(0.35, seed=k), -17, 0.3)
+        if sub == 0:
+            S.add('bass', t, inst_bass(mtof(n2m(root)), b * 0.45, cutoff=1100), -9)
+        if sub == 1 and beat % 2 == 0:
+            S.add('lead', t, inst_pluck(mtof(n2m(['F#5', 'A5', 'D6', 'E5'][(beat // 2) % 4])), 0.6, bright=0.6, seed=k), -13)
+    # floaty explainer 10 -> 15.9: pads + slow bells
+    S.add('pad', 10.0, inst_pad(C(['D3', 'A3', 'E4', 'F#4']), 6.0, bright=2200, attack=0.8), -12)
+    for i in range(12):
+        S.add('lead', 10.0 + i * b, inst_bell(mtof(n2m(['A5', 'F#5', 'E5', 'D5'][i % 4])), 1.2), -17, 0.4 if i % 2 else -0.4)
+    # ominous 16.2 -> 17.9: low drone, record-scratch moment is an SFX
+    S.add('fx', 16.3, sine(36.7, 1.7) * env_adsr(int(1.7 * SR), 0.3, 0.2, 0.9, 0.4) * 0.9, -10)
+    # panic 17.9 -> 20.4: fast minor pulse
+    for k in range(int((20.4 - 17.9) / (b / 4))):
+        t = 17.9 + k * b / 4
+        S.add('bass', t, inst_bass(mtof(n2m('D2' if (k // 4) % 2 == 0 else 'D#2')), b / 4 * 0.7, cutoff=900), -10)
+        if k % 4 == 0:
+            S.add('perc', t, drum_taiko(0.8, 60), -11)
+    S.add('pad', 17.9, inst_tremolo(C(['D3', 'D#3', 'A3']), 2.5, rate=13), -12)
+    # countdown 20.4 -> 22.4: heartbeat that speeds up, then SILENCE until gravity returns
+    for i, t in enumerate((20.42, 20.9, 21.14, 21.55, 21.85, 22.1)):
+        S.add('perc', t, drum_kick(0.9), -6)
+    # payoff at TG: huge hit + orchestral fall
+    S.add('perc', TG, drum_taiko(1.4, 45), -2)
+    S.add('lead', TG, inst_stab(C(['D4', 'F4', 'A4', 'D5']), 0.5), -5)
+    S.add('pad', TG, inst_strings(C(['D3', 'F3', 'A3', 'D4']), TL - TG, attack=0.05, bright=4000), -8)
+    for k in range(int((TL - TG) / (b / 2))):
+        t = TG + k * b / 2
+        S.add('perc', t, drum_snare(0.5 + 0.5 * k / 12, seed=400 + k), -14 + 6 * k / ((TL - TG) / (b / 2)))
+    S.add('perc', TL, drum_taiko(1.3, 50), -3)
+    # comedic ending TL+0.4 -> bonk: tiptoe pizzicato
+    for i, nm in enumerate(['D4', 'F#4', 'A4', 'F#4', 'G4', 'B4', 'A4', None, 'D4', 'F#4', 'A4', 'D5']):
+        t = TL + 0.5 + i * b / 2
+        if nm and t < LS['L11'][1] + 0.3:
+            S.add('lead', t, inst_pluck(mtof(n2m(nm)), 0.5, bright=0.5, seed=500 + i), -12)
+    return S
+
+
+CUES['video004'] = cue_video004
+LOOPS['video004'] = LOOP4
+
 if __name__ == '__main__':
     cue, out = sys.argv[1], sys.argv[2]
     S = CUES[cue]()

@@ -1,0 +1,109 @@
+{
+ "title": "What If Gravity Disappeared for 10 Seconds?",
+ "engine": "chatterbox",
+ "voice_ref": "kokoro:am_fenrir",
+ "tempo": 1.12,
+ "lines": [
+  {
+   "id": "L01",
+   "who": "N",
+   "text": "Gravity just switched off. You've got ten seconds.",
+   "delivery": "hook",
+   "exaggeration": 0.8,
+   "pause_after": 0.2
+  },
+  {
+   "id": "L02",
+   "who": "M",
+   "voice_ref": "kokoro:am_puck",
+   "text": "Wait. I'm flying?!",
+   "delivery": "joy",
+   "exaggeration": 1.0,
+   "pause_after": 0.6
+  },
+  {
+   "id": "L03",
+   "who": "N",
+   "text": "Your phone. Your coffee. That guy's sneeze.",
+   "delivery": "comic",
+   "exaggeration": 0.7,
+   "pause_after": 0.6
+  },
+  {
+   "id": "L04",
+   "who": "N",
+   "text": "Quick physics check: you won't shoot into space.",
+   "delivery": "fact",
+   "exaggeration": 0.6,
+   "pause_after": 0.1
+  },
+  {
+   "id": "L05",
+   "who": "N",
+   "text": "Earth keeps spinning, you keep drifting straight, and the ground slowly falls away. About two meters in ten seconds.",
+   "delivery": "fact",
+   "exaggeration": 0.6,
+   "pause_after": 0.5
+  },
+  {
+   "id": "L06",
+   "who": "N",
+   "text": "Unless you jumped.",
+   "delivery": "ominous",
+   "exaggeration": 0.7,
+   "pause_after": 0.8
+  },
+  {
+   "id": "L07",
+   "who": "M",
+   "voice_ref": "kokoro:am_puck",
+   "text": "Why did I jump?!",
+   "delivery": "panic",
+   "exaggeration": 1.0,
+   "pause_after": 0.3
+  },
+  {
+   "id": "L08",
+   "who": "M",
+   "voice_ref": "kokoro:am_puck",
+   "text": "Where am I supposed to land?!",
+   "delivery": "panic",
+   "exaggeration": 1.0,
+   "pause_after": 0.4
+  },
+  {
+   "id": "L09",
+   "who": "N",
+   "text": "Three. Two. One.",
+   "delivery": "countdown",
+   "exaggeration": 0.6,
+   "tempo": 0.95,
+   "pause_after": 1.2
+  },
+  {
+   "id": "L10",
+   "who": "N",
+   "text": "And gravity's back.",
+   "delivery": "payoff",
+   "exaggeration": 0.8,
+   "pause_after": 3.2
+  },
+  {
+   "id": "L11",
+   "who": "M",
+   "voice_ref": "kokoro:am_puck",
+   "text": "Okay. I'm never complaining about gravity again.",
+   "delivery": "relief",
+   "exaggeration": 0.8,
+   "pause_after": 1.8
+  },
+  {
+   "id": "L12",
+   "who": "N",
+   "text": "Now imagine it happens again.",
+   "delivery": "loop",
+   "exaggeration": 0.7,
+   "pause_after": 0.0
+  }
+ ]
+}

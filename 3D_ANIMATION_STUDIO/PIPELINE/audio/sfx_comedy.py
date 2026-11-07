@@ -309,6 +309,51 @@ def laugh():
             k += rng.uniform(0.13, 0.19)
     return normalize(convolve_stereo(out, reverb_ir(1.2, 0.4), 0.3), -6)
 
+
+# ---------------------------------------------------------------- VIDEO_004 additions
+@reg('sneeze', 'Ah... CHOO! (1.0 s).')
+def sneeze():
+    n = int(1.0 * SR); out = np.zeros(n)
+    a = vowel_voice(260, 0.35, ((750, 110, 1.0), (1200, 150, 0.4)), 301) * np.linspace(0.3, 1.0, int(0.35 * SR))
+    out[:len(a)] += a * 0.5
+    m = int(0.4 * SR); i = int(0.5 * SR)
+    ch = bandpass(noise(m, 'white', 302), 1500, 7000) * env_exp(m, 0.12) + vowel_voice(300, m / SR, ((450, 120, 1.0), (900, 140, 0.4)), 303)[:m] * env_exp(m, 0.15) * 0.6
+    out[i:i + m] += ch
+    return normalize(out, -4)
+
+@reg('scream_fall', 'Falling cartoon scream, pitch slides down (2.4 s).')
+def scream():
+    n = int(2.4 * SR); tt = np.arange(n) / SR
+    f0 = 520 * np.exp(-tt * 0.35) * (1 + 0.03 * np.sin(2 * np.pi * 6 * tt))
+    ph = 2 * np.pi * np.cumsum(f0) / SR
+    x = sum(np.sin(ph * k) / k for k in range(1, 8))
+    x = bandpass(x, 400, 3500) + bandpass(noise(n, 'white', 311), 800, 4000) * 0.15
+    return normalize(x * env_adsr(n, 0.05, 0.1, 0.9, 0.3), -5)
+
+@reg('bonk', 'Hollow cartoon head bonk (0.5 s).')
+def bonk():
+    n = int(0.5 * SR); tt = np.arange(n) / SR
+    x = np.sin(2 * np.pi * np.cumsum(700 * np.exp(-tt * 3) + 300) / SR) * env_exp(n, 0.08)
+    x += highpass(noise(n, 'white', 321), 2000) * env_exp(n, 0.006) * 0.6
+    return normalize(x, -3)
+
+@reg('air_float', 'Airy weightless shimmer bed (4 s).')
+def airfloat():
+    n = int(4.0 * SR); tt = np.arange(n) / SR
+    x = sweep_filter(noise(n, 'pink', 331), 600, 2400, kind='bandpass', q=3) * (0.6 + 0.4 * np.sin(2 * np.pi * 0.4 * tt))
+    x += sum(np.sin(2 * np.pi * f * tt + f) for f in (880, 1320, 1760)) * 0.05 * (0.5 + 0.5 * np.sin(2 * np.pi * 0.7 * tt))
+    return normalize(x * env_adsr(n, 0.6, 0.1, 1.0, 0.8), -10)
+
+@reg('water_splash', 'Big water splash (1.2 s).')
+def splash():
+    n = int(1.2 * SR)
+    x = bandpass(noise(n, 'white', 341), 300, 6000) * env_exp(n, 0.25) + lowpass(noise(n, 'brown', 342), 300) * env_exp(n, 0.15) * 1.5
+    rng = np.random.default_rng(343)
+    for t0 in rng.uniform(0.1, 1.0, 30):
+        m = int(0.03 * SR); i = int(t0 * SR)
+        x[i:i + m] += highpass(noise(m, 'white', int(t0 * 1e4)), 2500) * env_exp(m, 0.01) * rng.uniform(0.1, 0.4)
+    return normalize(x, -4)
+
 def main():
     root = sys.argv[1]
     d = os.path.join(root, 'sound_effects', 'comedy')

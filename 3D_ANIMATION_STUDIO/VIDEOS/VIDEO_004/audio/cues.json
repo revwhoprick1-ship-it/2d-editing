@@ -1,0 +1,318 @@
+{
+ "duration": 33.6,
+ "loop": true,
+ "narration": "narration/narration_raw.wav",
+ "narration_offset": 0.0,
+ "music": "music_score.wav",
+ "music_gain_db": -2,
+ "music_cue": "cue_video004",
+ "music_gates": [
+  [
+   22.4,
+   24.321,
+   0.05
+  ]
+ ],
+ "music_map": [
+  [
+   "30.55→33.6→2.9",
+   "Curiosity (loop bed)",
+   "bell motif + pad, plays across the loop point"
+  ],
+  [
+   "2.9–10",
+   "Excitement",
+   "bouncy 124 bpm groove"
+  ],
+  [
+   "10–15.9",
+   "Floating",
+   "pads + slow bells under the physics explainer"
+  ],
+  [
+   "16.3–17.9",
+   "Uh-oh",
+   "sub drone"
+  ],
+  [
+   "17.9–20.4",
+   "Panic",
+   "fast semitone pulse + taiko"
+  ],
+  [
+   "20.4–22.4",
+   "Countdown",
+   "heartbeat kicks"
+  ],
+  [
+   "22.4–24.34",
+   "SILENCE",
+   "everything stops, even the street"
+  ],
+  [
+   "24.34–26.94",
+   "Payoff",
+   "taiko + brass hit, strings + snare build during the fall"
+  ],
+  [
+   "26.94–30.23",
+   "Comedy",
+   "tiptoe pizzicato"
+  ]
+ ],
+ "targets": {
+  "narration_lufs": -16,
+  "master_lufs": -14,
+  "true_peak": -1.0,
+  "duck_db": 8
+ },
+ "cues": [
+  {
+   "t": 0.0,
+   "file": "AUDIO/ambience/city.flac",
+   "gain": -24,
+   "bus": "amb",
+   "note": "street ambience (stops dead before gravity returns)",
+   "dur": 22.3,
+   "loop": true,
+   "fade_out": 0.25
+  },
+  {
+   "t": 0.0,
+   "file": "AUDIO/sound_effects/comedy/air_float.flac",
+   "gain": -16,
+   "bus": "amb",
+   "note": "weightless shimmer while floating",
+   "dur": 22.3,
+   "loop": true,
+   "fade_in": 0.3,
+   "fade_out": 0.3
+  },
+  {
+   "t": 0.0,
+   "file": "AUDIO/sound_effects/movement/whoosh_long.flac",
+   "gain": -16,
+   "bus": "sfx",
+   "note": "frame 0: feet leave the ground"
+  },
+  {
+   "t": 0.55,
+   "file": "AUDIO/sound_effects/comedy/crowd_gasp.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "passers-by gasp"
+  },
+  {
+   "t": 3.55,
+   "file": "AUDIO/sound_effects/movement/whoosh_long.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "the fatal jump"
+  },
+  {
+   "t": 4.849,
+   "file": "AUDIO/sound_effects/transitions/swish.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "phone drifts off"
+  },
+  {
+   "t": 5.329,
+   "file": "AUDIO/sound_effects/bio/bubble.flac",
+   "gain": -12,
+   "bus": "sfx",
+   "note": "coffee blob escapes the cup"
+  },
+  {
+   "t": 5.859,
+   "file": "AUDIO/sound_effects/comedy/sneeze.flac",
+   "gain": -7,
+   "bus": "sfx",
+   "note": "ah... CHOO lands on the freeze frame"
+  },
+  {
+   "t": 6.709,
+   "file": "AUDIO/sound_effects/movement/whoosh_short.flac",
+   "gain": -10,
+   "bus": "sfx",
+   "note": "sneeze propels him backwards"
+  },
+  {
+   "t": 7.45,
+   "file": "AUDIO/sound_effects/comedy/record_scratch.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "PHYSICS CHECK pattern interrupt"
+  },
+  {
+   "t": 7.5,
+   "file": "AUDIO/sound_effects/movement/impact_soft.flac",
+   "gain": -12,
+   "bus": "sfx",
+   "note": "stamp"
+  },
+  {
+   "t": 10.0,
+   "file": "AUDIO/sound_effects/movement/whoosh_short.flac",
+   "gain": -16,
+   "bus": "sfx",
+   "note": "diagram slides in"
+  },
+  {
+   "t": 16.976,
+   "file": "AUDIO/sound_effects/comedy/record_scratch.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "freeze: he jumped"
+  },
+  {
+   "t": 17.026,
+   "file": "AUDIO/sound_effects/comedy/camera_snap.flac",
+   "gain": -10,
+   "bus": "sfx",
+   "note": "freeze frame"
+  },
+  {
+   "t": 18.75,
+   "file": "AUDIO/sound_effects/movement/whoosh_long.flac",
+   "gain": -12,
+   "bus": "sfx",
+   "note": "vertigo push: his view of the street"
+  },
+  {
+   "t": 18.75,
+   "file": "AUDIO/ambience/wind.flac",
+   "gain": -18,
+   "bus": "amb",
+   "note": "high-altitude wind",
+   "dur": 0.75,
+   "fade_in": 0.1,
+   "fade_out": 0.2
+  },
+  {
+   "t": 22.3,
+   "file": "AUDIO/ambience/room_tone.flac",
+   "gain": -6,
+   "bus": "amb",
+   "note": "eerie hush before gravity returns (quiet, not dead air)",
+   "dur": 2.0410000000000004,
+   "fade_in": 0.1,
+   "fade_out": 0.02
+  },
+  {
+   "t": 24.341,
+   "file": "AUDIO/ambience/city.flac",
+   "gain": -24,
+   "bus": "amb",
+   "note": "street ambience back after the crash",
+   "dur": 9.259,
+   "loop": true,
+   "fade_in": 0.05
+  },
+  {
+   "t": 24.341,
+   "file": "AUDIO/sound_effects/transitions/bass_impact.flac",
+   "gain": -4,
+   "bus": "sfx",
+   "note": "GRAVITY ON (impact frame)"
+  },
+  {
+   "t": 24.341,
+   "file": "AUDIO/sound_effects/movement/impact_heavy.flac",
+   "gain": -8,
+   "bus": "sfx",
+   "note": "everything drops"
+  },
+  {
+   "t": 24.391,
+   "file": "AUDIO/sound_effects/comedy/scream_fall.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "mascot screams all the way down"
+  },
+  {
+   "t": 24.441,
+   "file": "AUDIO/sound_effects/comedy/crowd_gasp.flac",
+   "gain": -12,
+   "bus": "sfx",
+   "note": "crowd"
+  },
+  {
+   "t": 25.421,
+   "file": "AUDIO/sound_effects/movement/impact_heavy.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "car lands and bounces"
+  },
+  {
+   "t": 25.441,
+   "file": "AUDIO/sound_effects/comedy/water_splash.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "fountain water comes back down"
+  },
+  {
+   "t": 25.521,
+   "file": "AUDIO/sound_effects/comedy/body_thud.flac",
+   "gain": -7,
+   "bus": "sfx",
+   "note": "extra 1 lands (2-3.6 m drop: a thud, not an injury)"
+  },
+  {
+   "t": 25.581,
+   "file": "AUDIO/sound_effects/comedy/body_thud.flac",
+   "gain": -8,
+   "bus": "sfx",
+   "note": "extra 2 lands (2-3.6 m drop: a thud, not an injury)"
+  },
+  {
+   "t": 25.641,
+   "file": "AUDIO/sound_effects/comedy/body_thud.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "extra 3 lands (2-3.6 m drop: a thud, not an injury)"
+  },
+  {
+   "t": 26.941,
+   "file": "AUDIO/sound_effects/reactions/comedic_boing.flac",
+   "gain": -5,
+   "bus": "sfx",
+   "note": "lands on the mattress pile"
+  },
+  {
+   "t": 26.941,
+   "file": "AUDIO/sound_effects/comedy/body_thud.flac",
+   "gain": -12,
+   "bus": "sfx",
+   "note": "mattress thump"
+  },
+  {
+   "t": 27.341,
+   "file": "AUDIO/sound_effects/reactions/pop.flac",
+   "gain": -16,
+   "bus": "sfx",
+   "note": "comment chip"
+  },
+  {
+   "t": 29.0,
+   "file": "AUDIO/sound_effects/reactions/pop.flac",
+   "gain": -16,
+   "bus": "sfx",
+   "note": "subscribe chip"
+  },
+  {
+   "t": 30.233,
+   "file": "AUDIO/sound_effects/comedy/bonk.flac",
+   "gain": -4,
+   "bus": "sfx",
+   "note": "his phone finally comes down: BONK"
+  },
+  {
+   "t": 30.5,
+   "file": "AUDIO/sound_effects/transitions/swish.flac",
+   "gain": -16,
+   "bus": "sfx",
+   "note": "jump-cut back to his mark"
+  }
+ ]
+}

@@ -850,5 +850,50 @@
   "duration_s": 1.6,
   "sample_rate": 48000,
   "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/sneeze.flac",
+  "category": "comedy",
+  "name": "sneeze",
+  "description": "Ah... CHOO! (1.0 s).",
+  "duration_s": 1.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/scream_fall.flac",
+  "category": "comedy",
+  "name": "scream_fall",
+  "description": "Falling cartoon scream, pitch slides down (2.4 s).",
+  "duration_s": 2.4,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/bonk.flac",
+  "category": "comedy",
+  "name": "bonk",
+  "description": "Hollow cartoon head bonk (0.5 s).",
+  "duration_s": 0.5,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/air_float.flac",
+  "category": "comedy",
+  "name": "air_float",
+  "description": "Airy weightless shimmer bed (4 s).",
+  "duration_s": 4.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/water_splash.flac",
+  "category": "comedy",
+  "name": "water_splash",
+  "description": "Big water splash (1.2 s).",
+  "duration_s": 1.2,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
  }
 ]
