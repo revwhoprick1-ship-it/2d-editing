@@ -226,7 +226,17 @@ def paste(canvas, layer, cx, cy, scale=1.0, rot=0.0, alpha=1.0):
         a = lay.split()[3].point(lambda v: int(v * alpha))
         lay = lay.copy()
         lay.putalpha(a)
-    canvas.alpha_composite(lay, (int(cx - lay.width / 2), int(cy - lay.height / 2)))
+    # SAFE AREA (always on): nothing may leave the frame. Too big -> shrink to fit; off-edge -> push inside.
+    m = SAFE_MARGIN
+    fit = min(1.0, (canvas.width - 2 * m) / lay.width, (canvas.height - 2 * m) / lay.height)
+    if fit < 0.999:
+        lay = lay.resize((max(1, int(lay.width * fit)), max(1, int(lay.height * fit))), Image.BICUBIC)
+    x = min(max(cx - lay.width / 2, m), canvas.width - m - lay.width)
+    y = min(max(cy - lay.height / 2, m), canvas.height - m - lay.height)
+    canvas.alpha_composite(lay, (int(x), int(y)))
+
+
+SAFE_MARGIN = 36
 
 
 def pop_scale(t, t0, dur=0.18, over=1.12):
@@ -335,6 +345,9 @@ def ov_lower_third(cv, o, t):
         tb = f.getbbox(o['text'])
         head = rounded_box(tb[2] - tb[0] + 60, 96, (255, 255, 255, 250), r=8)
         ImageDraw.Draw(head).text((30 - tb[0], 18 - tb[1]), o['text'], font=f, fill=(15, 18, 35))
+        maxw = W - 40 - SAFE_MARGIN                     # safe area: the resting position must fit on screen
+        if head.width > maxw:
+            head = head.resize((maxw, int(head.height * maxw / head.width)), Image.BICUBIC)
         o['_head'] = head
     x0 = -800 + 830 * u
     cv.alpha_composite(red, (int(x0 + 10), int(y - 80)))
@@ -526,11 +539,12 @@ def draw_caption(cv, chunks, t, cfg):
     lines = [[0, len(parts)]]
     if total > W - 120 and len(parts) > 1:
         lines = [[0, 1], [1, len(parts)]] if len(parts) == 2 else [[0, 2], [2, len(parts)]]
-    layer = Image.new('RGBA', (W, int(size * 1.4 * len(lines)) + 40), (0, 0, 0, 0))
+    lw = max(sum(widths[a:b]) + space * (b - a - 1) for a, b in lines) + 40   # sized to the text, so paste() can shrink it to fit
+    layer = Image.new('RGBA', (int(lw), int(size * 1.4 * len(lines)) + 40), (0, 0, 0, 0))
     d = ImageDraw.Draw(layer)
     for li, (a, b) in enumerate(lines):
         tw = sum(widths[a:b]) + space * (b - a - 1)
-        x = (W - tw) / 2
+        x = (lw - tw) / 2
         yy = 20 + li * size * 1.25
         for k in range(a, b):
             word, col, active = parts[k]

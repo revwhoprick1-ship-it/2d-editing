@@ -93,7 +93,7 @@ OVERLAYS = [
     dict(type='lower_third', t0=11.3, t1=t_twist - 0.05, text="CARTEL CAST · EP.1: 'WE'RE PIVOTING'", t_head=11.3, y=1500),
     dict(type='ticker', t0=11.05, t1=t_twist - 0.05, y=1640, speed=420,
          text='SUBSCRIBE TO CARTEL CAST? NO. SUBSCRIBE TO THIS CHANNEL.  •  NEW EPISODE: "TAXES, WHAT ARE THOSE?"  •'),
-    dict(type='chip', t0=t_port + 0.3, t1=t_zombie - 0.35, emoji='🇵🇹', text='PORTUGAL · 2001 · DECRIMINALIZED', x=0.5, y=0.17, size=46,
+    dict(type='chip', t0=t_port + 0.3, t1=t_zombie - 0.35, text='PORTUGAL · 2001 · DECRIMINALIZED', x=0.5, y=0.17, size=46,
          fill=(0, 0, 0, 200), fg=(255, 255, 255)),
     dict(type='chip', t0=t_deaths, t1=t_zombie - 0.35, emoji='📉', text='DRUG DEATHS: DOWN', x=0.5, y=0.24, size=50,
          fill=(60, 200, 110, 245), fg=(255, 255, 255)),
