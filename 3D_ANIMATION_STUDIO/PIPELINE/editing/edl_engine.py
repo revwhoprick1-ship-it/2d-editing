@@ -117,6 +117,7 @@ class Frames:
 
 
 def crop_resize(img, out_w, out_h, zoom=1.0, cx=0.5, cy=0.5):
+    zoom = max(1.0, zoom)                                # never crop outside the rendered frame
     h, w = img.shape[:2]
     ar = out_w / out_h
     cw = w / zoom

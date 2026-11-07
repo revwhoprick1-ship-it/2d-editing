@@ -313,6 +313,13 @@
    "gain": -16,
    "bus": "sfx",
    "note": "jump-cut back to his mark"
+  },
+  {
+   "t": 32.76,
+   "file": "AUDIO/sound_effects/movement/whoosh_long.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "rising whoosh that peaks on the loop point (feet about to lift again)"
   }
  ]
 }

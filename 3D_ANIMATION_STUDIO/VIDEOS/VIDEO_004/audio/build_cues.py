@@ -50,6 +50,7 @@ c(TL + 0.4, 'pop', -16, 'comment chip')
 c(29.0, 'pop', -16, 'subscribe chip')
 c(TB, 'bonk', -4, 'his phone finally comes down: BONK')
 c(E.T_RESET - 0.05, 'swish', -16, 'jump-cut back to his mark')
+c(E.END - 0.84, 'whoosh_long', -13, 'rising whoosh that peaks on the loop point (feet about to lift again)')
 C = {'duration': E.END, 'loop': True, 'narration': 'narration/narration_raw.wav', 'narration_offset': 0.0,
      'music': 'music_score.wav', 'music_gain_db': -2, 'music_cue': 'cue_video004',
      'music_gates': [[22.4, TG - 0.02, 0.05]],

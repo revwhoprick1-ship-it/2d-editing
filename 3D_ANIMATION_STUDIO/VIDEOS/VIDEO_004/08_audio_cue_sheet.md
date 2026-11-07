@@ -67,3 +67,4 @@ Generated from `audio/cues.json` and `audio/narration/timing.json`. Narration of
 |  30.23 | SFX | bonk.flac | -4 dB | his phone finally comes down: BONK |
 |  30.50 | SFX | swish.flac | -16 dB | jump-cut back to his mark |
 |  31.68 | NARRATION | L12 | loop (speed 1.12) | "Now imagine it happens again." |
+|  32.76 | SFX | whoosh_long.flac | -13 dB | rising whoosh that peaks on the loop point (feet about to lift again) |

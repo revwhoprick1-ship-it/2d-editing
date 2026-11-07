@@ -53,16 +53,16 @@ SEGMENTS = [
     seg(0.0, 2.86, 'HOOK', zoom=[(0.0, 1.0, 0.5, 0.5), (2.86, 1.08, 0.48, 0.5)]),
     seg(2.86, 4.45, 'CU', flash=[(3.75, 0.05)], shake=[(3.75, 4.1, 14)],
         zoom=[(2.86, 1.0, 0.5, 0.45), (t_fly - 0.05, 1.02, 0.5, 0.45), (t_fly + 0.05, 1.22, 0.5, 0.42), (4.45, 1.1, 0.5, 0.45)]),
-    seg(4.45, 5.3, 'CU', whip_in=(1, 4), zoom=[(4.45, 1.0, 0.5, 0.5), (5.3, 0.96, 0.5, 0.5)]),
+    seg(4.45, 5.3, 'CU', whip_in=(1, 4), zoom=[(4.45, 1.08, 0.5, 0.5), (5.3, 1.0, 0.5, 0.5)]),
     seg(5.3, t_sneeze + 0.05, 'BIZ', whip_in=(-1, 4), zoom=[(5.3, 1.0, 0.5, 0.45), (t_sneeze, 1.08, 0.45, 0.4)]),
     seg(t_sneeze + 0.05, t_sneeze + 0.4, 'BIZ', map=FREEZE(t_sneeze + 0.05), flash=[(t_sneeze + 0.05, 0.06)],
         zoom=[(t_sneeze, 1.25, 0.45, 0.4), (t_sneeze + 0.4, 1.3, 0.45, 0.4)]),                       # impact freeze on the sneeze
     seg(t_sneeze + 0.4, 7.3, 'BIZ', shake=[(t_sneeze + 0.4, t_sneeze + 0.8, 10)], zoom=[(t_sneeze + 0.4, 1.1, 0.5, 0.42), (7.3, 1.0, 0.5, 0.45)]),
     seg(7.3, 12.9, 'WIDE', whip_in=(1, 5), zoom=[(7.3, 1.0, 0.5, 0.5), (t_space, 1.0, 0.5, 0.5), (t_space + 0.1, 1.12, 0.5, 0.45), (12.9, 1.18, 0.5, 0.45)]),
     seg(12.9, 15.9, 'CU', zoom=[(12.9, 1.0, 0.5, 0.55), (15.9, 1.08, 0.5, 0.55)]),
-    seg(15.9, t_jumped + 0.25, 'REVEAL', zoom=[(15.9, 1.0, 0.5, 0.5), (t_jumped, 1.0, 0.5, 0.5), (t_jumped + 0.1, 1.5, 0.5, 0.32)]),
+    seg(15.9, t_jumped + 0.25, 'REVEAL', zoom=[(15.9, 1.0, 0.5, 0.5), (t_jumped, 1.0, 0.5, 0.5), (t_jumped + 0.1, 1.5, 0.5, 0.12)]),
     seg(t_jumped + 0.25, 17.6, 'REVEAL', map=FREEZE(t_jumped + 0.25), fx=['freeze_tint'], flash=[(t_jumped + 0.25, 0.05)],
-        zoom=[(t_jumped + 0.25, 1.5, 0.5, 0.32), (17.6, 1.6, 0.5, 0.3)]),                         # freeze: "...he jumped"
+        zoom=[(t_jumped + 0.25, 1.5, 0.5, 0.12), (17.6, 1.6, 0.5, 0.12)]),                         # freeze: "...he jumped"
     seg(17.6, 18.75, 'CU', shake=[(t_jump, t_jump + 0.3, 12)], zoom=[(17.6, 1.05, 0.5, 0.45), (t_jump, 1.05, 0.5, 0.45), (t_jump + 0.08, 1.3, 0.5, 0.42)]),
     seg(18.75, 19.45, 'DOWN', zoom=[(18.75, 1.0, 0.5, 0.6), (19.45, 1.35, 0.5, 0.6)]),             # his view: vertigo push
     seg(19.45, t3 - 0.02, 'CU', shake=[(t_land, t_land + 0.3, 14)], zoom=[(19.45, 1.1, 0.5, 0.45), (t_land, 1.12, 0.5, 0.45), (t_land + 0.08, 1.35, 0.5, 0.42)]),
@@ -93,9 +93,10 @@ OVERLAYS = [
     dict(type='chip', t0=t_coffee, t1=t_sneeze, emoji='☕', text='COFFEE: ALSO ESCAPING', x=0.5, y=0.2, size=46, fill=(0, 0, 0, 200), fg=(255, 255, 255)),
     dict(type='stamp', t0=t_sneeze + 0.05, t1=7.3, text='SNEEZE = ROCKET', x=0.5, y=0.22, size=84, rot=-6),
     dict(type='stamp', t0=7.5, t1=9.3, text='PHYSICS CHECK', x=0.5, y=0.22, size=84, rot=-5, color=(60, 160, 255)),
-    dict(type='physics', t0=10.0, t1=15.9, anim=4.5, y=500),
+    dict(type='physics', t0=10.0, t1=12.9, anim=2.6, y=500),
+    dict(type='chip', t0=12.9, t1=15.9, text='≈ 2 m IN 10 s · UNLESS...', x=0.5, y=0.9, size=46, fill=(12, 20, 40, 225), fg=(255, 255, 255)),
     dict(type='banner', t0=t_jumped + 0.3, t1=17.6, emoji='📤', text='SEND THIS TO THE FRIEND WHO\'D JUMP', size=40, y=1600),
-    dict(type='stamp', t0=t_jumped + 0.25, t1=17.6, text='~10 m UP', x=0.5, y=0.55, size=110, rot=-8),
+    dict(type='stamp', t0=t_jumped + 0.25, t1=17.6, text='~10 m UP', x=0.5, y=0.3, size=110, rot=-8),
     dict(type='chip', t0=T_LAND + 0.4, t1=29.0, emoji='💬', text='BE HONEST: WHAT WOULD YOU GRAB FIRST?', x=0.5, y=0.18, size=40,
          fill=(255, 210, 61, 245), fg=(20, 20, 24)),
     dict(type='chip', t0=29.0, t1=T_BONK, emoji='🛏️', text='SUBSCRIBE = FREE CRASH MATTRESS', x=0.5, y=0.18, size=40,
