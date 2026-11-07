@@ -1,0 +1,562 @@
+{
+ "duration": 36.1,
+ "loop": true,
+ "narration": "narration/narration_raw.wav",
+ "narration_offset": 0.5,
+ "music": "music_score.wav",
+ "music_gain_db": -3,
+ "music_gates": [
+  [
+   12.66,
+   14.68,
+   0.06
+  ],
+  [
+   22.435,
+   22.965,
+   0.01
+  ]
+ ],
+ "targets": {
+  "narration_lufs": -16,
+  "master_lufs": -14,
+  "true_peak": -1.0,
+  "duck_db": 9
+ },
+ "cues": [
+  {
+   "t": 0.0,
+   "file": "AUDIO/sound_effects/comedy/fart_chorus.flac",
+   "gain": -3,
+   "bus": "sfx",
+   "note": "E01 frame 0: everyone farts (ELEV jolt f77); 2nd blast lands on the split-screen cut"
+  },
+  {
+   "t": 0.28,
+   "file": "AUDIO/sound_effects/comedy/crowd_gasp.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "E01 the four passengers gasp"
+  },
+  {
+   "t": 0.52,
+   "file": "AUDIO/sound_effects/transitions/swish.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "E02 split transition",
+   "pan": 0.0
+  },
+  {
+   "t": 0.6,
+   "file": "AUDIO/sound_effects/movement/impact_soft.flac",
+   "gain": -14,
+   "bus": "sfx",
+   "note": "E02 3-way split slams in"
+  },
+  {
+   "t": 2.0,
+   "file": "AUDIO/sound_effects/comedy/elevator_ding.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "E03 awkward elevator ding during the side-eye",
+   "pan": 0.35
+  },
+  {
+   "t": 2.62,
+   "file": "AUDIO/sound_effects/movement/whoosh_short.flac",
+   "gain": -12,
+   "bus": "sfx",
+   "note": "E03->E04 whip pan to the planet (peak on the cut)"
+  },
+  {
+   "t": 2.9,
+   "file": "AUDIO/sound_effects/comedy/fart_rumble.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "E04 the planet rumbles"
+  },
+  {
+   "t": 2.9,
+   "file": "AUDIO/sound_effects/comedy/v002_globe_popcorn.flac",
+   "gain": -7,
+   "bus": "sfx",
+   "note": "E04 45 puffs pop across the globe: one pitched pfft per puff frame"
+  },
+  {
+   "t": 2.95,
+   "file": "AUDIO/sound_effects/comedy/counter_ticks.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "E04 counter 0 -> 8,000,000,000"
+  },
+  {
+   "t": 4.009,
+   "file": "AUDIO/sound_effects/movement/impact_soft.flac",
+   "gain": -18,
+   "bus": "sfx",
+   "note": "E05 cut"
+  },
+  {
+   "t": 4.176,
+   "file": "AUDIO/sound_effects/comedy/cartoon_tick.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "E05 nose pinch (f169)"
+  },
+  {
+   "t": 4.176,
+   "file": "AUDIO/sound_effects/transitions/swish.flac",
+   "gain": -24,
+   "bus": "sfx",
+   "note": "E05 hand fans the air (f169)",
+   "pan": 0.3
+  },
+  {
+   "t": 4.309,
+   "file": "AUDIO/sound_effects/transitions/swish.flac",
+   "gain": -24,
+   "bus": "sfx",
+   "note": "E05 hand fans the air (f173)",
+   "pan": -0.3
+  },
+  {
+   "t": 4.442,
+   "file": "AUDIO/sound_effects/transitions/swish.flac",
+   "gain": -24,
+   "bus": "sfx",
+   "note": "E05 hand fans the air (f177)",
+   "pan": 0.3
+  },
+  {
+   "t": 4.576,
+   "file": "AUDIO/sound_effects/transitions/swish.flac",
+   "gain": -24,
+   "bus": "sfx",
+   "note": "E05 hand fans the air (f181)",
+   "pan": -0.3
+  },
+  {
+   "t": 4.709,
+   "file": "AUDIO/sound_effects/transitions/swish.flac",
+   "gain": -24,
+   "bus": "sfx",
+   "note": "E05 hand fans the air (f185)",
+   "pan": 0.3
+  },
+  {
+   "t": 4.829,
+   "file": "AUDIO/sound_effects/comedy/tv_static_click.flac",
+   "gain": -16,
+   "bus": "sfx",
+   "note": "E06 cut to the news feed"
+  },
+  {
+   "t": 5.096,
+   "file": "AUDIO/sound_effects/comedy/fart_wet.flac",
+   "gain": -8,
+   "bus": "sfx",
+   "note": "E06 anchor jolts on air (f8)"
+  },
+  {
+   "t": 5.382,
+   "file": "AUDIO/sound_effects/comedy/cartoon_tick.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "E06 frozen smile, eye twitch (f16)",
+   "pan": 0.2
+  },
+  {
+   "t": 5.649,
+   "file": "AUDIO/sound_effects/comedy/cartoon_tick.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "E06 frozen smile, eye twitch (f24)",
+   "pan": 0.2
+  },
+  {
+   "t": 5.916,
+   "file": "AUDIO/sound_effects/comedy/cartoon_tick.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "E06 frozen smile, eye twitch (f32)",
+   "pan": 0.2
+  },
+  {
+   "t": 6.759,
+   "file": "AUDIO/sound_effects/comedy/fart_trumpet.flac",
+   "gain": -10,
+   "bus": "sfx",
+   "note": "E07 the kiss is interrupted (f22, groom side)",
+   "pan": -0.25
+  },
+  {
+   "t": 6.779,
+   "file": "AUDIO/sound_effects/comedy/record_scratch.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "E07 organ needle-drop: the wedding music dies"
+  },
+  {
+   "t": 6.799,
+   "file": "AUDIO/sound_effects/comedy/fart_squeaker.flac",
+   "gain": -12,
+   "bus": "sfx",
+   "note": "E07 bride answers (f23)",
+   "pan": 0.3
+  },
+  {
+   "t": 7.3,
+   "file": "AUDIO/sound_effects/comedy/crowd_eww.flac",
+   "gain": -12,
+   "bus": "sfx",
+   "note": "E07 guests react (after \"kiss!\")",
+   "dur": 1.0,
+   "fade_out": 0.2
+  },
+  {
+   "t": 7.448,
+   "file": "AUDIO/sound_effects/transitions/swish.flac",
+   "gain": -14,
+   "bus": "sfx",
+   "note": "E08 whip-in to the globe"
+  },
+  {
+   "t": 7.568,
+   "file": "AUDIO/sound_effects/comedy/v002_globe_orbit.flac",
+   "gain": -19,
+   "bus": "sfx",
+   "note": "E08 sparse distant pffts, one per late puff frame (under narration)"
+  },
+  {
+   "t": 7.918,
+   "file": "AUDIO/sound_effects/reactions/pop.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "E08 \"13-21x a day\" chip pops in"
+  },
+  {
+   "t": 9.709,
+   "file": "AUDIO/sound_effects/comedy/positive_chime.flac",
+   "gain": -12,
+   "bus": "sfx",
+   "note": "E08 TOTALLY NORMAL chip"
+  },
+  {
+   "t": 10.165,
+   "file": "AUDIO/ambience/crowd.flac",
+   "gain": -27,
+   "bus": "amb",
+   "note": "E09 polite wedding murmur that dies before \"Tiny.\"",
+   "dur": 2.95,
+   "fade_in": 0.2,
+   "fade_out": 0.45
+  },
+  {
+   "t": 10.315,
+   "file": "AUDIO/sound_effects/reactions/pop.flac",
+   "gain": -19,
+   "bus": "sfx",
+   "note": "E09 sulfur speck appears"
+  },
+  {
+   "t": 11.779,
+   "file": "AUDIO/sound_effects/bio/sparkle_o2.flac",
+   "gain": -14,
+   "bus": "sfx",
+   "note": "E09 \"SULFUR (TINY)\" label"
+  },
+  {
+   "t": 13.873,
+   "file": "AUDIO/sound_effects/reactions/slide_whistle_down.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "E10b guests topple (speed ramp)"
+  },
+  {
+   "t": 14.266,
+   "file": "AUDIO/sound_effects/comedy/body_thud.flac",
+   "gain": -6,
+   "bus": "sfx",
+   "note": "E10b guest 1 hits the floor (f154)",
+   "pan": -0.4
+  },
+  {
+   "t": 14.367,
+   "file": "AUDIO/sound_effects/comedy/body_thud.flac",
+   "gain": -7,
+   "bus": "sfx",
+   "note": "E10b guest 2 hits the floor (f159)",
+   "pan": 0.0
+  },
+  {
+   "t": 14.469,
+   "file": "AUDIO/sound_effects/comedy/body_thud.flac",
+   "gain": -6,
+   "bus": "sfx",
+   "note": "E10b guest 3 hits the floor (f164)",
+   "pan": 0.4
+  },
+  {
+   "t": 14.713,
+   "file": "AUDIO/sound_effects/comedy/news_sting.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "E11 breaking-news sting on the cut"
+  },
+  {
+   "t": 16.68,
+   "file": "AUDIO/sound_effects/comedy/dun_dun_dun.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "E11 dun / dun / DUNNN on \"who / farted / first\""
+  },
+  {
+   "t": 17.938,
+   "file": "AUDIO/sound_effects/comedy/tv_static_click.flac",
+   "gain": -10,
+   "bus": "sfx",
+   "note": "E12 cut to security footage"
+  },
+  {
+   "t": 18.945,
+   "file": "AUDIO/sound_effects/comedy/enhance_beep.flac",
+   "gain": -10,
+   "bus": "sfx",
+   "note": "E12 ENHANCE #1: whoosh on the zoom, beep as the pixels resolve"
+  },
+  {
+   "t": 19.57,
+   "file": "AUDIO/sound_effects/comedy/enhance_beep.flac",
+   "gain": -10,
+   "bus": "sfx",
+   "note": "E12 ENHANCE #2: whoosh on the zoom, beep as the pixels resolve"
+  },
+  {
+   "t": 20.195,
+   "file": "AUDIO/sound_effects/comedy/enhance_beep.flac",
+   "gain": -10,
+   "bus": "sfx",
+   "note": "E12 ENHANCE #3: whoosh on the zoom, beep as the pixels resolve"
+  },
+  {
+   "t": 20.62,
+   "file": "AUDIO/sound_effects/transitions/riser_2s.flac",
+   "gain": -16,
+   "bus": "sfx",
+   "note": "E12-E13 riser peaks on the freeze frame"
+  },
+  {
+   "t": 20.795,
+   "file": "AUDIO/sound_effects/comedy/tv_static_click.flac",
+   "gain": -14,
+   "bus": "sfx",
+   "note": "E12 cut to the face crop"
+  },
+  {
+   "t": 20.865,
+   "file": "AUDIO/sound_effects/environment/electronic_beep.flac",
+   "gain": -12,
+   "bus": "sfx",
+   "note": "E12 MATCH FOUND"
+  },
+  {
+   "t": 20.985,
+   "file": "AUDIO/sound_effects/environment/electronic_beep.flac",
+   "gain": -12,
+   "bus": "sfx",
+   "note": "E12 MATCH FOUND (2nd beep)"
+  },
+  {
+   "t": 21.276,
+   "file": "AUDIO/sound_effects/movement/cloth_rustle.flac",
+   "gain": -20,
+   "bus": "sfx",
+   "note": "E13a everyone slowly turns to stare"
+  },
+  {
+   "t": 22.445,
+   "file": "AUDIO/sound_effects/comedy/camera_snap.flac",
+   "gain": -6,
+   "bus": "sfx",
+   "note": "E13b freeze-frame shutter (music stops dead)"
+  },
+  {
+   "t": 22.585,
+   "file": "AUDIO/sound_effects/reactions/pop.flac",
+   "gain": -14,
+   "bus": "sfx",
+   "note": "E13b LIKE = GUILTY chip"
+  },
+  {
+   "t": 22.975,
+   "file": "AUDIO/sound_effects/movement/impact_soft.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "E14 unfreeze"
+  },
+  {
+   "t": 23.042,
+   "file": "AUDIO/sound_effects/transitions/swish.flac",
+   "gain": -18,
+   "bus": "sfx",
+   "note": "EL_BLAME1 arm swings up to point (f262); stab in the score at f267",
+   "pan": -0.3
+  },
+  {
+   "t": 23.305,
+   "file": "AUDIO/sound_effects/reactions/pop.flac",
+   "gain": -18,
+   "bus": "sfx",
+   "note": "E14 COMMENT banner"
+  },
+  {
+   "t": 23.455,
+   "file": "AUDIO/sound_effects/reactions/pop.flac",
+   "gain": -19,
+   "bus": "sfx",
+   "note": "E14 tag 1 GRANDMA"
+  },
+  {
+   "t": 24.055,
+   "file": "AUDIO/sound_effects/movement/whoosh_short.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "EL_BLAME1 whip pan follows the finger (peak on the cut)"
+  },
+  {
+   "t": 24.402,
+   "file": "AUDIO/sound_effects/transitions/swish.flac",
+   "gain": -18,
+   "bus": "sfx",
+   "note": "EL_BLAME2 arm swings up to point (f308); stab in the score at f313",
+   "pan": 0.3
+  },
+  {
+   "t": 25.887,
+   "file": "AUDIO/sound_effects/movement/whoosh_short.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "EL_BLAME2 whip pan follows the finger (peak on the cut)"
+  },
+  {
+   "t": 26.234,
+   "file": "AUDIO/sound_effects/transitions/swish.flac",
+   "gain": -18,
+   "bus": "sfx",
+   "note": "EL_BLAME3 arm swings up to point (f356); stab in the score at f361",
+   "pan": -0.2
+  },
+  {
+   "t": 26.447,
+   "file": "AUDIO/sound_effects/reactions/pop.flac",
+   "gain": -19,
+   "bus": "sfx",
+   "note": "E16 tag 2 BUSINESSMAN"
+  },
+  {
+   "t": 26.847,
+   "file": "AUDIO/sound_effects/reactions/pop.flac",
+   "gain": -19,
+   "bus": "sfx",
+   "note": "E16 tag 3 KID"
+  },
+  {
+   "t": 27.503,
+   "file": "AUDIO/sound_effects/movement/whoosh_short.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "EL_BLAME3 whip pan follows the finger (peak on the cut)"
+  },
+  {
+   "t": 27.943,
+   "file": "AUDIO/sound_effects/reactions/pop.flac",
+   "gain": -19,
+   "bus": "sfx",
+   "note": "E17 tag 3 KID"
+  },
+  {
+   "t": 28.69,
+   "file": "AUDIO/sound_effects/transitions/swish.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "E17 the kid finally points (f406)",
+   "pan": 0.3
+  },
+  {
+   "t": 28.904,
+   "file": "AUDIO/sound_effects/transitions/bass_impact.flac",
+   "gain": -10,
+   "bus": "sfx",
+   "note": "E17 the point lands on \"him\" (f411)"
+  },
+  {
+   "t": 29.177,
+   "file": "AUDIO/sound_effects/reactions/comedic_boing.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "E18 mascot shocked (flash + shake)"
+  },
+  {
+   "t": 29.297,
+   "file": "AUDIO/sound_effects/comedy/crowd_gasp.flac",
+   "gain": -19,
+   "bus": "sfx",
+   "note": "E18 passengers gasp"
+  },
+  {
+   "t": 29.94,
+   "file": "AUDIO/sound_effects/comedy/whistle_innocent.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "E19 innocent whistle (pucker f454), cut off by \"But\"",
+   "dur": 1.555,
+   "fade_out": 0.05
+  },
+  {
+   "t": 30.038,
+   "file": "AUDIO/sound_effects/comedy/sweat_drip.flac",
+   "gain": -12,
+   "bus": "sfx",
+   "note": "E19 sweat drop 1",
+   "pan": -0.3
+  },
+  {
+   "t": 30.488,
+   "file": "AUDIO/sound_effects/comedy/sweat_drip.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "E19 sweat drop 2",
+   "pan": 0.3
+  },
+  {
+   "t": 31.555,
+   "file": "AUDIO/sound_effects/transitions/bass_impact.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "E19 \"But this one?\" punch-in"
+  },
+  {
+   "t": 32.635,
+   "file": "AUDIO/sound_effects/comedy/vhs_rewind.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "E20 VHS rewind back to 3:13:59",
+   "dur": 0.91,
+   "fade_out": 0.04
+  },
+  {
+   "t": 33.535,
+   "file": "AUDIO/sound_effects/environment/button_click.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "E21 tape PLAY clunk; muzak tape-starts in the score"
+  },
+  {
+   "t": 35.715,
+   "file": "AUDIO/sound_effects/comedy/fart_tiny_pfft.flac",
+   "gain": -6,
+   "bus": "sfx",
+   "note": "E21 \"...one tiny...\" pfft (ELEV f66) = Patient Zero; loops into E01"
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "title": "What If Everyone On Earth Farted At The Same Time?",
+ "voice": "af_heart",
+ "lang_code": "a",
+ "pronunciations": {},
+ "lines": [
+  {
+   "id": "L01",
+   "delivery": "hook",
+   "speed": 1.04,
+   "pause_after": 0.18,
+   "text": "Eight billion people just farted. At the exact same second!"
+  },
+  {
+   "id": "L02",
+   "delivery": "excited",
+   "speed": 1.12,
+   "pause_after": 0.15,
+   "text": "In elevators. On live TV. In the middle of a wedding kiss!"
+  },
+  {
+   "id": "L03",
+   "delivery": "calm",
+   "speed": 1.06,
+   "pause_after": 0.05,
+   "text": "Scientists said: relax, farting is normal."
+  },
+  {
+   "id": "L04",
+   "delivery": "calm",
+   "speed": 1.06,
+   "pause_after": 0.55,
+   "text": "The smell is just a tiny bit of sulfur gas."
+  },
+  {
+   "id": "L05",
+   "delivery": "humor",
+   "speed": 0.9,
+   "pause_after": 0.9,
+   "text": "Tiny."
+  },
+  {
+   "id": "L06",
+   "delivery": "dramatic",
+   "speed": 1.08,
+   "pause_after": 0.12,
+   "text": "So the whole planet asked one question: who farted first?"
+  },
+  {
+   "id": "L07",
+   "delivery": "urgent",
+   "speed": 1.05,
+   "pause_after": 0.1,
+   "text": "Security footage. Enhance. Enhance. Enhance!"
+  },
+  {
+   "id": "L08",
+   "delivery": "dramatic",
+   "speed": 1.0,
+   "pause_after": 0.35,
+   "text": "One elevator. One guy."
+  },
+  {
+   "id": "L09",
+   "delivery": "excited",
+   "speed": 1.16,
+   "pause_after": 0.1,
+   "text": "He blamed grandma. Grandma blamed the businessman. The businessman blamed the kid."
+  },
+  {
+   "id": "L10",
+   "delivery": "humor",
+   "speed": 1.0,
+   "pause_after": 0.5,
+   "text": "And the kid... blamed him."
+  },
+  {
+   "id": "L11",
+   "delivery": "calm",
+   "speed": 0.98,
+   "pause_after": 0.45,
+   "text": "Farts aren't contagious."
+  },
+  {
+   "id": "L12",
+   "delivery": "suspense",
+   "speed": 0.92,
+   "pause_after": 1.15,
+   "text": "But this one?"
+  },
+  {
+   "id": "L13",
+   "delivery": "suspense",
+   "speed": 0.95,
+   "pause_after": 0.0,
+   "text": "It all started... with one tiny..."
+  }
+ ]
+}

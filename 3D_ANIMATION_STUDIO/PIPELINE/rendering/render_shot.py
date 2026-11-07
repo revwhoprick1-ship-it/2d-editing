@@ -57,7 +57,10 @@ if a.no_render:
     sys.exit(0)
 out = a.out or os.path.join(VID, 'frames', a.shot)
 os.makedirs(out, exist_ok=True)
-frames = list(range(f0, f1, a.step))
+step = a.step if a.step != 1 else info.get('step', 1)
+frames = list(range(f0, f1, step))
+if step > 1 and (f1 - 1) not in frames:
+    frames.append(f1 - 1)
 if a.frames:
     lo, hi = (int(v) for v in a.frames.split(','))
     frames = [f for f in frames if lo <= f <= hi]

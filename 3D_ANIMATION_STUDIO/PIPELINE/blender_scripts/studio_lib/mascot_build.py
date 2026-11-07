@@ -423,6 +423,10 @@ def hair_clump(bm, uv, d0, d1, lift, width, thick, base_off=0.004, curl=None, se
 
 def build_hair(M, col, seed=7):
     rnd = random.Random(seed)
+    H = getattr(C, 'HAIR', {}) or {}
+    lk = H.get('lift', 1.0)          # volume multiplier
+    fr = H.get('fringe_up', 0.0)     # raise fringe tips (shorter fringe), degrees
+    lng = H.get('long', 0.0)         # extra length down the back/sides, degrees
     # --- scalp shell
     bm = bmesh.new()
     quad_sphere(bm, 22)
@@ -460,36 +464,49 @@ def build_hair(M, col, seed=7):
                 continue
             j = rnd.uniform(-4, 4)
             d0 = _dir(az * 0.9 + j, el0 + rnd.uniform(-3, 3))
-            end_el = hairline_el(az) - 4 + rnd.uniform(-2, 2)
+            end_el = hairline_el(az) - 4 + rnd.uniform(-2, 2) - lng * smoothstep(55, 140, abs(az))
             if el0 - end_el < 12:
                 continue
             d1 = _dir(az + rnd.uniform(-5, 5), end_el)
-            clump(d0, d1, lift=0.018 + 0.006 * rnd.random() - 0.004 * row, width=0.050 - 0.006 * row,
-                  thick=0.012, base_off=0.004 + 0.002 * row, tip_out=0.004 + 0.004 * rnd.random())
+            clump(d0, d1, lift=(0.018 + 0.006 * rnd.random() - 0.004 * row) * lk, width=0.050 - 0.006 * row,
+                  thick=0.012, base_off=0.004 + 0.002 * row, tip_out=0.004 + 0.004 * rnd.random(),
+                  droop=0.02 * (lng / 40.0))
     # top volume sweeping forward into a side-swept fringe (towards the character's right, -x)
     for i in range(14):
         u = i / 13.0
         d0 = _dir(180 + lerp(-50, 50, u) + rnd.uniform(-5, 5), 76 + rnd.uniform(-3, 3))
         az1 = lerp(-62, 48, u) - 14 + rnd.uniform(-4, 4)
-        el1 = 19 + 7 * (abs(az1) / 60.0) + rnd.uniform(-2, 2)
+        el1 = 19 + 7 * (abs(az1) / 60.0) + rnd.uniform(-2, 2) + fr
         d1 = _dir(az1, el1)
-        curl = Vector((-0.010 - 0.006 * rnd.random(), -0.010, 0.006 + 0.006 * rnd.random()))
-        clump(d0, d1, lift=0.042 + 0.014 * math.sin(math.pi * u) + rnd.uniform(-0.004, 0.004),
+        curl = Vector((-0.010 - 0.006 * rnd.random(), -0.010, 0.006 + 0.006 * rnd.random())) * (1.0 if fr < 5 else 0.3)
+        clump(d0, d1, lift=(0.042 + 0.014 * math.sin(math.pi * u) + rnd.uniform(-0.004, 0.004)) * lk,
               width=0.064, thick=0.017, base_off=0.007, curl=curl, tip_out=0.006)
     # temples: cover the side hairline in front of the ears
     for side in (1, -1):
         for i in range(3):
             az = side * (52 + i * 14)
             d0 = _dir(az * 0.7, 66)
-            d1 = _dir(az + side * 4, hairline_el(az) - 5)
-            clump(d0, d1, lift=0.022, width=0.046, thick=0.012, base_off=0.006, tip_out=0.004)
+            d1 = _dir(az + side * 4, hairline_el(az) - 5 - lng * 0.6)
+            clump(d0, d1, lift=0.022 * lk, width=0.046, thick=0.012, base_off=0.006, tip_out=0.004)
     # fringe overlay strands over the forehead
     for i in range(7):
         u = i / 6.0
         d0 = _dir(lerp(-30, 42, u), 58)
-        d1 = _dir(lerp(-46, 22, u) + rnd.uniform(-4, 4), 15 + rnd.uniform(-2, 3) + 6 * abs(u - 0.4))
-        curl = Vector((-0.008, -0.012, 0.004 + 0.006 * rnd.random()))
-        clump(d0, d1, lift=0.026, width=0.044, thick=0.012, base_off=0.010, curl=curl, tip_out=0.006)
+        d1 = _dir(lerp(-46, 22, u) + rnd.uniform(-4, 4), 15 + rnd.uniform(-2, 3) + 6 * abs(u - 0.4) + fr)
+        curl = Vector((-0.008, -0.012, 0.004 + 0.006 * rnd.random())) * (1.0 if fr < 5 else 0.3)
+        clump(d0, d1, lift=0.026 * lk, width=0.044, thick=0.012, base_off=0.010, curl=curl, tip_out=0.006)
+    if H.get('bun'):
+        # a wound bun on the back of the crown: concentric wrapped clumps
+        cdir = _dir(180, 48)
+        for k in range(10):
+            a = 2 * math.pi * k / 10
+            up = Vector((0, 0, 1))
+            side = cdir.cross(up).normalized()
+            up2 = side.cross(cdir).normalized()
+            off0 = (side * math.cos(a) + up2 * math.sin(a)) * 0.45
+            off1 = (side * math.cos(a + 2.2) + up2 * math.sin(a + 2.2)) * 0.45
+            clump((cdir + off0 * 0.4).normalized(), (cdir + off1 * 0.4).normalized(), lift=0.058,
+                  width=0.040, thick=0.020, base_off=0.012, tip_out=0.0, N=10)
     ob = obj_from_bm('MSC_Hair', bm, [M['hair']], col)
     var = [0.0] * len(ob.data.vertices)
     for (a, b) in clump_ranges:
@@ -569,7 +586,7 @@ def build_arm(M, col):
         radii.append((r, r))
         return len(verts) - 1
 
-    a0 = add(sh + Vector((-0.03, 0, -0.025)), 0.034)
+    a0 = add(sh + Vector((-0.02, 0, -0.050)), 0.030)
     a1 = add(sh.lerp(el, 0.45), 0.044)
     a2 = add(el, 0.037)
     a3 = add(el.lerp(wr, 0.35), 0.038)
@@ -611,9 +628,25 @@ def build_arm(M, col):
             # forearm slightly flatter (radius/ulna)
             off = rel.dot(pn)
             v.co = v.co - pn * off * 0.12
+    # thin the upper arm where the sleeve hides it: when the arm drops, the sleeve
+    # (blended shoulder/chest weights) lags behind the arm and the full-size arm
+    # used to poke through the outside of the sleeve as a skin-coloured patch.
+    ax = (el - sh).normalized()
+    for v in me.vertices:
+        rel = v.co - sh
+        along = rel.dot(ax)
+        if along < 0.095:
+            k = 0.12 + 0.88 * smoothstep(0.015, 0.09, along)   # thin spindle near the joint
+            radial = rel - ax * along
+            v.co = sh + ax * along + radial * k
     me.materials.append(M['skin'])
+    me.materials.append(M['shirt'])
     for poly in me.polygons:
         poly.use_smooth = True
+        # the part inside the sleeve wears the shirt colour: if it ever peeks
+        # through the sleeve at an extreme pose it reads as fabric, not a hole
+        if (poly.center - sh).dot(ax) < 0.098:
+            poly.material_index = 1
     add_subsurf(ob, 1, 2)
     # fingernails
     bm = bmesh.new()
@@ -702,7 +735,7 @@ def build_shirt(M, col):
     ad = (el - sh).normalized()
     sleeve_rings_all = []
     for side in (1,):
-        root_c = Vector((0.140, 0.010, 0.872))
+        root_c = Vector((0.112, 0.010, 0.878))
         end_c = sh + ad * 0.125
         S = 24
         srings = []
@@ -714,8 +747,8 @@ def build_shirt(M, col):
             up = Vector((0, 0, 1))
             up = (up - ax * up.dot(ax)).normalized()
             bi = ax.cross(up).normalized()
-            ry = lerp(0.062, 0.056, u)
-            rz = lerp(0.078, 0.057, smoothstep(0, 0.6, u))
+            ry = lerp(0.070, 0.056, u)
+            rz = lerp(0.088, 0.057, smoothstep(0, 0.6, u))
             ring = []
             for s in range(S):
                 th = 2 * math.pi * s / S

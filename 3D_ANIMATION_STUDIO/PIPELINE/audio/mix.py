@@ -13,6 +13,14 @@ cues.json:
 }
 Paths in cues are relative to the studio root; narration/music relative to the cue file.
 Writes mix_master.wav (48 kHz stereo 24-bit) + stems/ and prints loudness stats.
+
+Optional keys:
+ "loop": true          -> seamless loop: anything that runs past the end (SFX tails,
+                          reverb) is folded back onto the start, and the ducking
+                          envelope, filters and limiter run circularly, so the last
+                          sample flows straight into the first.
+ "music_gates": [[t0, t1, fade], ...] -> hard-mute the music between t0 and t1
+                          (silence before a punchline).
 """
 import json
 import os
@@ -39,17 +47,29 @@ def load(path, sr=SR):
     return x
 
 
-def place(buf, x, t, gain_db=0.0, pan_=None, dur=None, fin=0.0, fout=0.0):
+def place(buf, x, t, gain_db=0.0, pan_=None, dur=None, fin=0.0, fout=0.0, wrap=False, raw=False):
     if dur is not None:
         x = x[:int(dur * SR)]
     if pan_:
         m = x.mean(1)
         x = pan(m, pan_) * np.sqrt(2)
-    x = fade(x, fin or 0.002, fout or 0.01)
+    if not raw:                                 # a loop-ready bed must not be faded at its ends
+        x = fade(x, fin or 0.002, fout or 0.01)
     i = int(t * SR)
+    x = x * from_db(gain_db)
+    if wrap:
+        n = len(buf)
+        for k in range(0, len(x), n):           # fold the overflow onto the start
+            seg = x[k:k + n]
+            a = (i + k) % n
+            m = min(len(seg), n - a)
+            buf[a:a + m] += seg[:m]
+            if m < len(seg):
+                buf[:len(seg) - m] += seg[m:]
+        return
     j = min(len(buf), i + len(x))
     if j > i:
-        buf[i:j] += x[:j - i] * from_db(gain_db)
+        buf[i:j] += x[:j - i]
 
 
 def voice_chain(v):
@@ -76,19 +96,32 @@ def main():
     base = os.path.dirname(os.path.abspath(cue_path))
     C = json.load(open(cue_path))
     T = C.get('targets', {})
-    n = int(C['duration'] * SR)
+    n = int(round(C['duration'] * SR))
+    loop = bool(C.get('loop'))
+    pre = int(2.0 * SR) if loop else 0
+
+    def circ(fn, x):
+        """Run a stateful process as if the loop had already been playing."""
+        if not loop:
+            return fn(x)
+        post = int(0.1 * SR)                    # lookahead processes peek past the end
+        return fn(np.concatenate([x[-pre:], x, x[:post]]))[pre:pre + len(x)]
     meter = pyln.Meter(SR)
     buses = {k: np.zeros((n, 2)) for k in ('narration', 'music', 'sfx', 'amb')}
     # narration
     v = voice_chain(load(os.path.join(base, C['narration'])))
-    place(buses['narration'], v, C.get('narration_offset', 0.0))
+    place(buses['narration'], v, C.get('narration_offset', 0.0), wrap=loop)
     nl = lufs(buses['narration'], meter)
     buses['narration'] *= from_db(T.get('narration_lufs', -16) - nl)
     # music with sidechain ducking under narration
     if C.get('music'):
         mu = load(os.path.join(base, C['music']))
-        place(buses['music'], mu, C.get('music_offset', 0.0), C.get('music_gain_db', -6))
-    env = envelope_follower(buses['narration'], SR, attack=0.05, release=0.35)
+        place(buses['music'], mu[:n] if loop else mu, C.get('music_offset', 0.0), C.get('music_gain_db', -6), wrap=loop, raw=loop)
+        tt = np.arange(n) / SR
+        for g0, g1, gf in C.get('music_gates', []):
+            g = np.clip(np.maximum((g0 - tt) / gf, (tt - g1) / gf), 0, 1)
+            buses['music'] *= g[:, None]
+    env = circ(lambda x: envelope_follower(x, SR, attack=0.05, release=0.35), buses['narration'])
     speech = np.clip((db(env) + 45) / 15, 0, 1)        # 0 = silence, 1 = speech present
     duck = from_db(-T.get('duck_db', 9) * speech)
     buses['music'] *= duck[:, None]
@@ -99,17 +132,17 @@ def main():
             reps = int(np.ceil(c['dur'] * SR / len(x)))
             x = np.concatenate([x] * reps)
         place(buses[c.get('bus', 'sfx')], x, c['t'], c.get('gain', 0.0), c.get('pan'), c.get('dur'),
-              c.get('fade_in', 0.0), c.get('fade_out', 0.0))
+              c.get('fade_in', 0.0), c.get('fade_out', 0.0), wrap=loop)
     # gentle ducking of SFX/ambience under speech too (keeps words clear)
     buses['amb'] *= from_db(-4 * speech)[:, None]
     buses['sfx'] *= from_db(-2 * speech)[:, None]
     master = sum(buses.values())
-    master = highpass(master, 25, 2)
+    master = circ(lambda x: highpass(x, 25, 2), master)
     # loudness normalise then true-peak limit (iterate twice)
     for _ in range(2):
         ml = lufs(master, meter)
-        master *= from_db(T.get('master_lufs', -14) - ml)
-        master = true_peak_limiter(master, T.get('true_peak', -1.0) - 0.2)
+        master = master * from_db(T.get('master_lufs', -14) - ml)
+        master = circ(lambda x: true_peak_limiter(x, T.get('true_peak', -1.0) - 0.2), master)
     out_dir = base
     os.makedirs(os.path.join(out_dir, 'stems'), exist_ok=True)
     sf.write(os.path.join(out_dir, 'mix_master.wav'), master.astype(np.float32), SR, subtype='PCM_24')

@@ -127,7 +127,7 @@ class Score:
         self.dur = dur
         self.bpm = bpm
         self.beat = 60.0 / bpm
-        self.buses = {k: np.zeros((int((dur + 4) * SR), 2)) for k in ('pad', 'bass', 'lead', 'perc', 'fx')}
+        self.buses = {k: np.zeros((int((dur + 4) * SR), 2)) for k in ('pad', 'bass', 'lead', 'perc', 'fx', 'room')}
 
     def add(self, bus, t, x, gain_db=0.0, pan_=0.0):
         if t < 0 or t >= self.dur:
@@ -150,16 +150,28 @@ class Score:
         g[i1:i1 + fn] = np.linspace(fl, 1, len(g[i1:i1 + fn]))
         b *= g[:, None]
 
-    def render(self):
+    def render(self, loop=None):
+        """loop=L: seamless loop of length L s. Everything past L (reverb tails and
+        events scheduled after L) is folded back onto the start, so the end of the
+        file runs continuously into its own beginning."""
         ir_big = reverb_ir(3.0, 1.1, damp=5000, seed=3)
         ir_small = reverb_ir(1.2, 0.35, damp=7000, seed=4)
         mix = (convolve_stereo(self.buses['pad'], ir_big, 0.35) +
                convolve_stereo(self.buses['lead'], ir_big, 0.3) +
                convolve_stereo(self.buses['perc'], ir_small, 0.12) +
+               convolve_stereo(self.buses['room'], ir_small, 0.22) +
                self.buses['bass'] + convolve_stereo(self.buses['fx'], ir_big, 0.25))
-        mix = mix[:int(self.dur * SR)]
         mix = highpass(mix, 30, 2)
         mix = soft_sat(mix * 0.9, 1.1)
+        if loop:
+            n = int(round(loop * SR))
+            out = mix[:n].copy()
+            tail = mix[n:]
+            for k in range(0, len(tail), n):
+                seg = tail[k:k + n]
+                out[:len(seg)] += seg
+            return normalize(out, -3)
+        mix = mix[:int(self.dur * SR)]
         return normalize(fade(mix, 0.01, 0.6), -3)
 
 
@@ -258,12 +270,291 @@ def cue_video001(dur=57.0):
     return S
 
 
-CUES = {'video001': cue_video001}
+# ------------------------------------------------------------------ VIDEO_002 cue (comedy, seamless loop)
+def tape_warp(x, rate, align_i):
+    """Variable-speed playback of x (n,2) - the tape-start / tape-stop effect.
+    rate: per-output-sample speed (0..1). align_i: output sample that reads the
+    same input sample as normal playback (keeps the beat grid in place)."""
+    ph = np.cumsum(rate)
+    ph += align_i - ph[align_i]
+    ph = np.clip(ph, 0, len(x) - 1)
+    y = np.stack([np.interp(ph, np.arange(len(x)), x[:, c]) for c in range(2)], 1)
+    amp = np.clip(rate, 0, 1) ** 0.6
+    return y * amp[:, None]
+
+
+def inst_epiano(f, dur):
+    x = fm_bell(f, dur + 0.6, ratio=1.0, index=1.3, decay=dur * 0.9 + 0.2) * 0.6
+    x += fm_bell(f, dur + 0.6, ratio=14.0, index=0.25, decay=0.05) * 0.1
+    return x * env_adsr(len(x), 0.003, 0.3, 0.7, 0.5)
+
+
+def inst_vibes(f, dur):
+    n = int((dur + 1.0) * SR)
+    tt = np.arange(n) / SR
+    x = (np.sin(2 * np.pi * f * tt) + 0.25 * np.sin(2 * np.pi * f * 4 * tt) * np.exp(-tt / 0.15)) * np.exp(-tt / 0.9)
+    return x * (1 + 0.25 * np.sin(2 * np.pi * 5.5 * tt)) * 0.5
+
+
+def inst_marimba(f, dur=0.5):
+    n = int((dur + 0.3) * SR)
+    tt = np.arange(n) / SR
+    x = np.sin(2 * np.pi * f * tt) * np.exp(-tt / 0.22) + 0.35 * np.sin(2 * np.pi * f * 3.9 * tt) * np.exp(-tt / 0.04)
+    return x * env_adsr(n, 0.002, 0.05, 1.0, 0.05) * 0.7
+
+
+def inst_organ(freqs, dur):
+    n = int((dur + 0.15) * SR)
+    tt = np.arange(n) / SR
+    x = np.zeros(n)
+    for f in freqs:
+        for h, a in ((0.5, 0.5), (1, 1.0), (2, 0.6), (3, 0.35), (4, 0.3), (6, 0.12), (8, 0.1)):
+            x += np.sin(2 * np.pi * f * h * tt + h) * a
+    x *= 1 + 0.12 * np.sin(2 * np.pi * 6.2 * tt)            # leslie-ish tremolo
+    return x * env_adsr(n, 0.02, 0.05, 0.95, 0.12) / (len(freqs) * 3.2)
+
+
+def inst_bassoon(f, dur):
+    n = int((dur + 0.06) * SR)
+    tt = np.arange(n) / SR
+    vib = 1 + 0.006 * np.sin(2 * np.pi * 5 * tt)
+    x = square(f * vib, n / SR, duty=0.32) * 0.6 + saw(f * vib, n / SR) * 0.3
+    x = bandpass(x, 180, 1400, 2)
+    return soft_sat(x * 1.4, 1.3) * env_adsr(n, 0.012, 0.06, 0.75, 0.05) * 0.8
+
+
+def inst_tuba(f, dur):
+    n = int((dur + 0.05) * SR)
+    x = saw(f, n / SR) * 0.6 + sine(f, n / SR) * 0.6
+    x = lowpass(x, 520, 2)
+    return soft_sat(x * 1.5, 1.4) * env_adsr(n, 0.015, 0.08, 0.6, 0.05)
+
+
+def inst_pizz(f, dur=0.35, seed=0):
+    n = int(dur * SR)
+    tt = np.arange(n) / SR
+    x = (saw(f, dur) * 0.5 + sine(f, dur) * 0.7)
+    x = sweep_filter(x, 3500, 500) * np.exp(-tt / 0.09)
+    return x * env_adsr(n, 0.002, 0.05, 1.0, 0.03) * 0.8
+
+
+def inst_tremolo(freqs, dur, rate=11.0, bright=2400):
+    x = inst_strings(freqs, dur, attack=0.25, release=0.4, bright=bright)
+    tt = np.arange(len(x)) / SR
+    return x * (0.55 + 0.45 * np.sin(2 * np.pi * rate * tt) ** 2)
+
+
+def drum_rim(level=0.5):
+    m = int(0.06 * SR)
+    tt = np.arange(m) / SR
+    x = np.sin(2 * np.pi * 1700 * tt) * env_exp(m, 0.012) + bandpass(noise(m, 'white', 9), 1500, 6000) * env_exp(m, 0.006) * 0.6
+    return x * level
+
+
+def drum_shaker(level=0.3, seed=0):
+    m = int(0.09 * SR)
+    x = bandpass(noise(m, 'white', seed), 5000, 11000) * env_adsr(m, 0.02, 0.03, 0.4, 0.03)
+    return x * level
+
+
+def C(names):
+    return chord(names)
+
+
+def M(name):
+    return mtof(n2m(name))
+
+
+LOOP = 36.1
+
+
+def muzak_block(tau0=-4.8, tau1=0.62, t_start=33.545 - LOOP, stop_at=0.12, stop_len=0.42):
+    """Elevator bossa (F major, 100 bpm) on loop time tau (tau = 0 is the
+    worldwide fart = video frame 0).  Tape-starts after the VHS rewind and
+    tape-stops right after the fart.  Returned buffer starts at tau0."""
+    beat = 0.6
+    n = int((tau1 - tau0 + 1.5) * SR)
+    buf = np.zeros((n, 2))
+
+    def put(tau, x, g=0.0, p=0.0):
+        i = int((tau - tau0) * SR)
+        if i < 0 or i >= n:
+            return
+        y = pan(np.asarray(x, float), p) * from_db(g)
+        j = min(n, i + len(y))
+        buf[i:j] += y[:j - i]
+    bars = [(-7.2, ['F3', 'A3', 'C4', 'E4'], 'F2', 'C3'), (-4.8, ['F3', 'A3', 'C4', 'E4'], 'F2', 'C3'),
+            (-2.4, ['G3', 'Bb3', 'D4', 'F4'], 'G2', 'D3'), (-1.2, ['G3', 'Bb3', 'E4', 'C4'], 'C3', 'G2'),
+            (0.0, ['F3', 'A3', 'C4', 'E4'], 'F2', 'C3')]
+    for b0, ch, root, fifth in bars:
+        span = 2.4 if b0 in (-7.2, -4.8, 0.0) else 1.2
+        for off, nm, d in ((0.0, root, 0.85), (0.9, fifth, 0.28), (1.2, fifth, 0.85), (2.1, root, 0.28)):
+            if off < span:
+                put(b0 + off, inst_bass(M(nm), d, cutoff=420, drive=1.1), -9)
+        for off in (0.0, 0.9, 1.5):
+            if off < span:
+                for f in C(ch):
+                    put(b0 + off, inst_epiano(f, 0.35), -15, -0.2)
+    mel = [(-4.8, 'C5', 0.85), (-3.9, 'A4', 0.28), (-3.6, 'C5', 0.55), (-3.0, 'E5', 0.55), (-2.4, 'D5', 0.85),
+           (-1.5, 'Bb4', 0.28), (-1.2, 'C5', 0.55), (-0.6, 'G4', 0.55), (0.0, 'A4', 1.2)]
+    for tau, nm, d in mel:
+        put(tau, inst_vibes(M(nm), d), -10, 0.25)
+    k = 0
+    tau = -7.2
+    while tau < tau1:
+        put(tau, drum_shaker(0.35 if k % 2 == 0 else 0.22, seed=k), -14, 0.4)
+        k += 1
+        tau += beat / 2
+    for bar0 in (-7.2, -4.8, -2.4, 0.0):
+        for off in (0.0, 0.9, 1.8, 3.0, 3.6):           # 3-2 clave on the rim
+            put(bar0 + off, drum_rim(0.4), -15, -0.35)
+    # tape start (after the rewind) and tape stop (after the fart)
+    rate = np.ones(n)
+    tt = tau0 + np.arange(n) / SR
+    s0, s1 = t_start, t_start + 0.22
+    rate[tt < s0] = 0.0
+    m = (tt >= s0) & (tt < s1)
+    rate[m] = ((tt[m] - s0) / (s1 - s0)) ** 1.5
+    e0, e1 = stop_at, stop_at + stop_len
+    m = (tt >= e0) & (tt < e1)
+    rate[m] = (1 - (tt[m] - e0) / (e1 - e0)) ** 1.3
+    rate[tt >= e1] = 0.0
+    align = int((0.0 - tau0) * SR)
+    return tape_warp(buf, rate, align)
+
+
+def cue_video002(dur=LOOP):
+    S = Score(dur + 2.0, bpm=150)
+    # ---- A. muzak across the loop seam (tau -> t = tau + LOOP, folded by render(loop))
+    mz = muzak_block()
+    S.buses['room'][int((LOOP - 4.8) * SR):int((LOOP - 4.8) * SR) + len(mz)] += mz * from_db(-2)
+    # ---- B. CHAOS theme 0.62-6.05: comedy oom-pah in Bb, bassoon tune, 150 bpm
+    b = 0.4
+    t0 = 0.62
+    prog = [('Bb1', 'F2', ['D4', 'F4', 'Bb4']), ('Eb2', 'Bb1', ['Eb4', 'G4', 'Bb4']), ('F1', 'C2', ['Eb4', 'F4', 'A4']),
+            ('Bb1', 'F2', ['D4', 'F4', 'Bb4'])]
+    for bar in range(4):
+        root, fifth, ch = prog[bar]
+        for k in range(4):
+            t = t0 + (bar * 4 + k) * b
+            if t >= 6.0:
+                break
+            S.add('bass', t, inst_tuba(M(root if k % 2 == 0 else fifth), b * 0.6), -6)
+            if k % 2 == 1:
+                S.add('lead', t, inst_stab(C(ch), 0.12), -16, 0.2)
+                S.add('perc', t, drum_snare(0.5, seed=bar * 4 + k), -15)
+            else:
+                S.add('perc', t, drum_kick(0.8), -10)
+            S.add('perc', t + b / 2, drum_hat(0.35, seed=k), -17, 0.3)
+    tune = [('F3', 0, .4), ('D3', .4, .2), ('F3', .6, .2), ('Bb3', .8, .4), ('A3', 1.2, .2), ('Bb3', 1.4, .2),
+            ('C4', 1.6, .4), ('Bb3', 2.0, .2), ('G3', 2.2, .2), ('Eb3', 2.4, .4),
+            ('A3', 3.2, .2), ('Bb3', 3.4, .2), ('B3', 3.6, .2), ('C4', 3.8, .2), ('Eb4', 4.0, .3), ('C4', 4.4, .3),
+            ('D4', 4.8, .2), ('C4', 5.0, .2)]
+    for nm, dt, d in tune:
+        S.add('lead', t0 + dt, inst_bassoon(M(nm), d * 0.85), -7, -0.15)
+        S.add('lead', t0 + dt, inst_pizz(M(nm) * 2, 0.25), -15, 0.3)
+    # a cymbal-ish lift when the planet appears (2.9)
+    S.add('perc', 2.9, drum_hat(0.9, open_=True, seed=40), -9)
+    S.add('perc', 2.9, drum_kick(1.0), -8)
+    # ---- C. wedding organ 6.05-6.77 ("Here comes the bride", Wagner 1850, public domain) -> tape stop on the fart
+    org_t0, org_stop = 6.05, 6.77
+    n_org = int(1.3 * SR)
+    org = np.zeros((n_org, 2))
+    def oput(t, x, g=0.0):
+        i = int((t - org_t0) * SR)
+        y = pan(np.asarray(x, float), 0) * from_db(g)
+        j = min(n_org, i + len(y))
+        org[i:j] += y[:j - i]
+    oput(6.05, inst_organ(C(['F3', 'A3', 'C4']), 1.0), -6)
+    for nm, t, d in (('C5', 6.05, 0.22), ('F5', 6.29, 0.16), ('F5', 6.46, 0.06), ('F5', 6.53, 0.6)):
+        oput(t, inst_organ([M(nm)], d), -3)
+    rate = np.ones(n_org)
+    tt = org_t0 + np.arange(n_org) / SR
+    m = (tt >= org_stop) & (tt < org_stop + 0.3)
+    rate[m] = 1 - (tt[m] - org_stop) / 0.3
+    rate[tt >= org_stop + 0.3] = 0
+    S.buses['room'][int(org_t0 * SR):int(org_t0 * SR) + n_org] += tape_warp(org, rate, 0)
+    # ---- D. science 7.52-12.66: curious marimba in C, 110 bpm
+    b = 60 / 110
+    t0 = 7.52
+    sci = [(['C4', 'E4', 'G4', 'C5'], 'C2'), (['A3', 'C4', 'E4', 'A4'], 'A1'), (['F3', 'A3', 'C4', 'F4'], 'F1')]
+    for i, (ch, root) in enumerate(sci):
+        tb = t0 + i * 4 * b
+        S.add('pad', tb, inst_pad(C(ch), 4 * b, bright=1500, attack=0.4, release=0.6), -16)
+        S.add('bass', tb, inst_pizz(M(root) * 2, 0.4), -8)
+        S.add('bass', tb + 2 * b, inst_pizz(M(root) * 3, 0.4), -10)
+        pat = [0, 1, 2, 3, 2, 1, 2, 3]
+        fs = C(ch)
+        for k in range(8):
+            t = tb + k * b / 2
+            if t < 12.6:
+                S.add('lead', t, inst_marimba(fs[pat[k]] * 2), -11 if k % 2 == 0 else -14, 0.3 if k % 2 else -0.3)
+    for bus in ('pad', 'bass', 'lead', 'perc', 'fx'):
+        S.gate(bus, 12.66, 14.70, floor_db=-80, fade=0.12)     # the "Tiny." silence
+    # ---- E. news bed 15.15-16.68 (D minor pulse), dun-dun-dun is an SFX on top
+    b = 0.5
+    for k in range(int((16.68 - 15.15) / (b / 4))):
+        t = 15.15 + k * b / 4
+        S.add('bass', t, inst_bass(M('D2'), b / 4 * 0.7, cutoff=900), -12 if k % 4 else -9)
+        if k % 8 == 0:
+            S.add('perc', t, drum_taiko(0.8, 60), -10)
+    S.add('pad', 15.15, inst_strings(C(['D3', 'F3', 'A3', 'D4']), 1.55, attack=0.3, bright=2200), -13)
+    # ---- F. investigation 17.96-22.45: ticking suspense, rises a semitone per ENHANCE
+    t_enh = [19.015, 19.64, 20.265]
+    keys = [(17.96, ['A2', 'C3', 'E3', 'A3']), (t_enh[0], ['Bb2', 'Db3', 'F3', 'Bb3']),
+            (t_enh[1], ['B2', 'D3', 'F#3', 'B3']), (t_enh[2], ['C3', 'Eb3', 'G3', 'C4']), (20.86, ['C3', 'E3', 'G3', 'C4'])]
+    for (t, ch), (t2, _) in zip(keys, keys[1:] + [(22.45, None)]):
+        S.add('pad', t, inst_tremolo(C(ch), t2 - t, bright=2000), -12)
+        S.add('bass', t, inst_bass(mtof(n2m(ch[0]) - 12), 0.18, cutoff=600), -6)
+    for i, t in enumerate(t_enh):
+        S.add('perc', t + 0.1, drum_taiko(1.0, 50 + 6 * i), -6)
+    b = 0.5
+    for k in range(int((22.42 - 17.96) / (b / 2))):
+        t = 17.96 + k * b / 2
+        S.add('perc', t, drum_tick(0.3), -10, 0.4 if k % 2 else -0.4)
+        if t > 20.95:
+            S.add('bass', t, inst_bass(M('C2'), b / 2 * 0.6, cutoff=500 + 1200 * (t - 20.95) / 1.5), -12 + 5 * (t - 20.95) / 1.5)
+    S.add('lead', 20.86, inst_stab(C(['C5', 'E5', 'G5'])), -9)
+    S.gate('pad', 22.44, 22.98, floor_db=-80, fade=0.02)       # freeze frame = stop-time
+    S.gate('bass', 22.44, 22.98, floor_db=-80, fade=0.02)
+    S.gate('perc', 22.44, 22.98, floor_db=-80, fade=0.02)
+    S.gate('lead', 22.44, 22.98, floor_db=-80, fade=0.02)
+    # ---- G. blame chain: sneaky pizzicato, up a whole tone per accusation, stab on each point
+    b = 60 / 132
+    sections = [(22.975, 24.335, 'E', 23.21), (24.335, 26.167, 'F#', 24.57), (26.167, 27.783, 'G#', 26.40)]
+    for s0, s1, key_, t_point in sections:
+        r = n2m(key_ + '2')
+        figure = [0, None, 7, None, 0, 3, 7, None]
+        k = 0
+        while s0 + k * b / 2 < s1 - 0.05:
+            t = s0 + k * b / 2
+            st = figure[k % 8]
+            if st is not None:
+                S.add('bass', t, inst_pizz(mtof(r + st), 0.3), -6)
+            if k % 4 == 2:
+                S.add('perc', t, drum_rim(0.6), -12)
+            k += 1
+        S.add('lead', t_point, inst_stab([mtof(r + 24), mtof(r + 27), mtof(r + 31)], 0.2), -6)
+        S.add('perc', t_point, drum_kick(1.0), -6)
+    # deadpan kid (27.78-28.9): one held high tremolo note only
+    S.add('pad', 27.80, inst_tremolo([M('B5')], 1.05, rate=13, bright=5000), -20)
+    S.add('lead', 28.91, inst_stab(C(['A#4', 'C#5', 'E5', 'G5']), 0.3), -4)     # the kid's point lands: diminished hit
+    S.add('perc', 28.91, drum_taiko(1.2, 48), -4)
+    # ---- H. "Farts aren't contagious..." near silence: low suspicious drone, swell on "But this one?"
+    S.add('pad', 29.85, inst_pad(C(['D2', 'A2']), 1.7, bright=500, attack=0.6, release=0.4), -16)
+    S.add('pad', 31.56, inst_tremolo(C(['D3', 'D#3', 'A3', 'D4', 'G#4']), 1.05, rate=14, bright=3000), -9)
+    S.add('perc', 31.56, drum_taiko(1.3, 44), -3)
+    S.gate('pad', 32.64, 33.6, floor_db=-80, fade=0.03)        # cut by the VHS rewind
+    return S
+
+
+CUES = {'video001': cue_video001, 'video002': cue_video002}
+LOOPS = {'video002': LOOP}
 
 if __name__ == '__main__':
     cue, out = sys.argv[1], sys.argv[2]
     S = CUES[cue]()
-    y = S.render()
+    y = S.render(loop=LOOPS.get(cue))
     os.makedirs(os.path.dirname(os.path.abspath(out)), exist_ok=True)
     sf.write(out, y.astype(np.float32), SR, subtype='PCM_24')
     print('MUSIC_OK', out, round(len(y) / SR, 2), 's')

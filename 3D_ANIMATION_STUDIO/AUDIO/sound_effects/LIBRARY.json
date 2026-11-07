@@ -571,5 +571,230 @@
   "duration_s": 15.0,
   "sample_rate": 48000,
   "licence": "Original procedural synthesis by this studio (PIPELINE/audio/sfx_synth.py). No third-party audio. Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/fart_tiny_pfft.flac",
+  "category": "comedy",
+  "name": "fart_tiny_pfft",
+  "description": "Tiny innocent \"pfft\": short breathy puff with a lip pop.",
+  "duration_s": 0.32,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/fart_squeaker.flac",
+  "category": "comedy",
+  "name": "fart_squeaker",
+  "description": "High rising squeaker (0.6 s).",
+  "duration_s": 0.6,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/fart_trumpet.flac",
+  "category": "comedy",
+  "name": "fart_trumpet",
+  "description": "Long brassy trumpet with wobble (1.3 s).",
+  "duration_s": 1.3,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/fart_rumble.flac",
+  "category": "comedy",
+  "name": "fart_rumble",
+  "description": "Deep rumbling bass fart (1.0 s).",
+  "duration_s": 1.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/fart_wet.flac",
+  "category": "comedy",
+  "name": "fart_wet",
+  "description": "Wet bubbly one (0.8 s).",
+  "duration_s": 0.8,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/fart_machinegun.flac",
+  "category": "comedy",
+  "name": "fart_machinegun",
+  "description": "Rapid-fire staccato bursts (1.0 s).",
+  "duration_s": 1.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/fart_whine.flac",
+  "category": "comedy",
+  "name": "fart_whine",
+  "description": "Descending whiny deflation (1.4 s).",
+  "duration_s": 1.4,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/fart_chorus.flac",
+  "category": "comedy",
+  "name": "fart_chorus",
+  "description": "8 billion at once: a layered chord of 7 different farts + crowd jolt (1.6 s).",
+  "duration_s": 1.6,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/record_scratch.flac",
+  "category": "comedy",
+  "name": "record_scratch",
+  "description": "Vinyl record scratch (0.45 s).",
+  "duration_s": 0.45,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/crowd_gasp.flac",
+  "category": "comedy",
+  "name": "crowd_gasp",
+  "description": "Group gasp \"HUH!\" (0.7 s).",
+  "duration_s": 0.7,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/crowd_eww.flac",
+  "category": "comedy",
+  "name": "crowd_eww",
+  "description": "Group disgusted \"EWWW\" (1.0 s).",
+  "duration_s": 1.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/elevator_ding.flac",
+  "category": "comedy",
+  "name": "elevator_ding",
+  "description": "Elevator arrival chime (two tones).",
+  "duration_s": 2.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/news_sting.flac",
+  "category": "comedy",
+  "name": "news_sting",
+  "description": "Breaking-news sting: brass stabs + timpani (1.6 s).",
+  "duration_s": 1.6,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/dun_dun_dun.flac",
+  "category": "comedy",
+  "name": "dun_dun_dun",
+  "description": "Dramatic \"dun dun DUNNN\" (2.0 s).",
+  "duration_s": 2.2,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/enhance_beep.flac",
+  "category": "comedy",
+  "name": "enhance_beep",
+  "description": "Computer \"enhance\": zoom whoosh + data chirps + beep (0.6 s).",
+  "duration_s": 0.6,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/camera_snap.flac",
+  "category": "comedy",
+  "name": "camera_snap",
+  "description": "Freeze-frame shutter snap + whoosh (0.4 s).",
+  "duration_s": 0.4,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/vhs_rewind.flac",
+  "category": "comedy",
+  "name": "vhs_rewind",
+  "description": "Tape rewind squeal with wobble (1.0 s).",
+  "duration_s": 1.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/whistle_innocent.flac",
+  "category": "comedy",
+  "name": "whistle_innocent",
+  "description": "Innocent whistled tune (2.4 s).",
+  "duration_s": 2.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/sad_trombone.flac",
+  "category": "comedy",
+  "name": "sad_trombone",
+  "description": "Wah-wah-wah-waaah (1.9 s).",
+  "duration_s": 1.91,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/body_thud.flac",
+  "category": "comedy",
+  "name": "body_thud",
+  "description": "Body falling on grass (0.5 s).",
+  "duration_s": 0.5,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/tv_static_click.flac",
+  "category": "comedy",
+  "name": "tv_static_click",
+  "description": "TV channel switch: click + static burst (0.3 s).",
+  "duration_s": 0.3,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/counter_ticks.flac",
+  "category": "comedy",
+  "name": "counter_ticks",
+  "description": "Rapid number-counter ticks (0.6 s).",
+  "duration_s": 0.6,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/positive_chime.flac",
+  "category": "comedy",
+  "name": "positive_chime",
+  "description": "Friendly \"correct!\" chime.",
+  "duration_s": 1.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/cartoon_tick.flac",
+  "category": "comedy",
+  "name": "cartoon_tick",
+  "description": "Tiny cartoon tick for eye twitches.",
+  "duration_s": 0.06,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/sweat_drip.flac",
+  "category": "comedy",
+  "name": "sweat_drip",
+  "description": "Cartoon sweat drop \"plip\".",
+  "duration_s": 0.18,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
  }
 ]

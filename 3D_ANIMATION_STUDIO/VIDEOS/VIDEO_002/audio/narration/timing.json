@@ -1,0 +1,953 @@
+{
+ "voice": "af_heart",
+ "sample_rate": 24000,
+ "lines": [
+  {
+   "id": "L01",
+   "text": "Eight billion people just farted. At the exact same second!",
+   "start": 0.0,
+   "end": 3.325,
+   "delivery": "hook",
+   "speed": 1.04
+  },
+  {
+   "id": "L02",
+   "text": "In elevators. On live TV. In the middle of a wedding kiss!",
+   "start": 3.505,
+   "end": 6.867,
+   "delivery": "excited",
+   "speed": 1.12
+  },
+  {
+   "id": "L03",
+   "text": "Scientists said: relax, farting is normal.",
+   "start": 7.018,
+   "end": 9.665,
+   "delivery": "calm",
+   "speed": 1.06
+  },
+  {
+   "id": "L04",
+   "text": "The smell is just a tiny bit of sulfur gas.",
+   "start": 9.715,
+   "end": 12.162,
+   "delivery": "calm",
+   "speed": 1.06
+  },
+  {
+   "id": "L05",
+   "text": "Tiny.",
+   "start": 12.712,
+   "end": 13.353,
+   "delivery": "humor",
+   "speed": 0.9
+  },
+  {
+   "id": "L06",
+   "text": "So the whole planet asked one question: who farted first?",
+   "start": 14.253,
+   "end": 17.368,
+   "delivery": "dramatic",
+   "speed": 1.08
+  },
+  {
+   "id": "L07",
+   "text": "Security footage. Enhance. Enhance. Enhance!",
+   "start": 17.488,
+   "end": 20.376,
+   "delivery": "urgent",
+   "speed": 1.05
+  },
+  {
+   "id": "L08",
+   "text": "One elevator. One guy.",
+   "start": 20.476,
+   "end": 22.155,
+   "delivery": "dramatic",
+   "speed": 1.0
+  },
+  {
+   "id": "L09",
+   "text": "He blamed grandma. Grandma blamed the businessman. The businessman blamed the kid.",
+   "start": 22.505,
+   "end": 27.243,
+   "delivery": "excited",
+   "speed": 1.16
+  },
+  {
+   "id": "L10",
+   "text": "And the kid... blamed him.",
+   "start": 27.343,
+   "end": 28.838,
+   "delivery": "humor",
+   "speed": 1.0
+  },
+  {
+   "id": "L11",
+   "text": "Farts aren't contagious.",
+   "start": 29.338,
+   "end": 30.605,
+   "delivery": "calm",
+   "speed": 0.98
+  },
+  {
+   "id": "L12",
+   "text": "But this one?",
+   "start": 31.055,
+   "end": 31.915,
+   "delivery": "suspense",
+   "speed": 0.92
+  },
+  {
+   "id": "L13",
+   "text": "It all started... with one tiny...",
+   "start": 33.065,
+   "end": 35.033,
+   "delivery": "suspense",
+   "speed": 0.95
+  }
+ ],
+ "words": [
+  {
+   "line": "L01",
+   "text": "Eight",
+   "phonemes": "ˈAt",
+   "start": 0.0,
+   "end": 0.227
+  },
+  {
+   "line": "L01",
+   "text": "billion",
+   "phonemes": "bˈɪljən",
+   "start": 0.227,
+   "end": 0.589
+  },
+  {
+   "line": "L01",
+   "text": "people",
+   "phonemes": "pˈipᵊl",
+   "start": 0.589,
+   "end": 0.939
+  },
+  {
+   "line": "L01",
+   "text": "just",
+   "phonemes": "ʤˈʌst",
+   "start": 0.939,
+   "end": 1.139
+  },
+  {
+   "line": "L01",
+   "text": "farted",
+   "phonemes": "fˈɑɹTᵻd",
+   "start": 1.139,
+   "end": 1.739
+  },
+  {
+   "line": "L01",
+   "text": ".",
+   "phonemes": ".",
+   "start": 1.739,
+   "end": 1.839
+  },
+  {
+   "line": "L01",
+   "text": "At",
+   "phonemes": "ˌæt",
+   "start": 1.839,
+   "end": 1.977
+  },
+  {
+   "line": "L01",
+   "text": "the",
+   "phonemes": "ði",
+   "start": 1.977,
+   "end": 2.089
+  },
+  {
+   "line": "L01",
+   "text": "exact",
+   "phonemes": "ɪɡzˈækt",
+   "start": 2.089,
+   "end": 2.489
+  },
+  {
+   "line": "L01",
+   "text": "same",
+   "phonemes": "sˈAm",
+   "start": 2.489,
+   "end": 2.777
+  },
+  {
+   "line": "L01",
+   "text": "second",
+   "phonemes": "sˈɛkənd",
+   "start": 2.777,
+   "end": 3.464
+  },
+  {
+   "line": "L01",
+   "text": "!",
+   "phonemes": "!",
+   "start": 3.464,
+   "end": 3.614
+  },
+  {
+   "line": "L02",
+   "text": "In",
+   "phonemes": "ɪn",
+   "start": 3.505,
+   "end": 3.589
+  },
+  {
+   "line": "L02",
+   "text": "elevators",
+   "phonemes": "ˈɛləvˌATəɹz",
+   "start": 3.589,
+   "end": 4.314
+  },
+  {
+   "line": "L02",
+   "text": ".",
+   "phonemes": ".",
+   "start": 4.314,
+   "end": 4.389
+  },
+  {
+   "line": "L02",
+   "text": "On",
+   "phonemes": "ˌɔn",
+   "start": 4.389,
+   "end": 4.564
+  },
+  {
+   "line": "L02",
+   "text": "live",
+   "phonemes": "lˈIv",
+   "start": 4.564,
+   "end": 4.876
+  },
+  {
+   "line": "L02",
+   "text": "TV",
+   "phonemes": "tˌivˈi",
+   "start": 4.876,
+   "end": 5.464
+  },
+  {
+   "line": "L02",
+   "text": ".",
+   "phonemes": ".",
+   "start": 5.464,
+   "end": 5.589
+  },
+  {
+   "line": "L02",
+   "text": "In",
+   "phonemes": "ɪn",
+   "start": 5.589,
+   "end": 5.676
+  },
+  {
+   "line": "L02",
+   "text": "the",
+   "phonemes": "ðə",
+   "start": 5.676,
+   "end": 5.764
+  },
+  {
+   "line": "L02",
+   "text": "middle",
+   "phonemes": "mˈɪdᵊl",
+   "start": 5.764,
+   "end": 6.001
+  },
+  {
+   "line": "L02",
+   "text": "of",
+   "phonemes": "ʌv",
+   "start": 6.001,
+   "end": 6.076
+  },
+  {
+   "line": "L02",
+   "text": "a",
+   "phonemes": "ɐ",
+   "start": 6.076,
+   "end": 6.139
+  },
+  {
+   "line": "L02",
+   "text": "wedding",
+   "phonemes": "wˈɛdɪŋ",
+   "start": 6.139,
+   "end": 6.439
+  },
+  {
+   "line": "L02",
+   "text": "kiss",
+   "phonemes": "kˈɪs",
+   "start": 6.439,
+   "end": 6.964
+  },
+  {
+   "line": "L02",
+   "text": "!",
+   "phonemes": "!",
+   "start": 6.964,
+   "end": 7.114
+  },
+  {
+   "line": "L03",
+   "text": "Scientists",
+   "phonemes": "sˈIəntɪsts",
+   "start": 7.059,
+   "end": 7.534
+  },
+  {
+   "line": "L03",
+   "text": "said",
+   "phonemes": "sˈɛd",
+   "start": 7.534,
+   "end": 7.984
+  },
+  {
+   "line": "L03",
+   "text": ":",
+   "phonemes": ":",
+   "start": 7.984,
+   "end": 8.109
+  },
+  {
+   "line": "L03",
+   "text": "relax",
+   "phonemes": "ɹəlˈæks",
+   "start": 8.109,
+   "end": 8.634
+  },
+  {
+   "line": "L03",
+   "text": ",",
+   "phonemes": ",",
+   "start": 8.634,
+   "end": 8.684
+  },
+  {
+   "line": "L03",
+   "text": "farting",
+   "phonemes": "fˈɑɹTɪŋ",
+   "start": 8.684,
+   "end": 9.059
+  },
+  {
+   "line": "L03",
+   "text": "is",
+   "phonemes": "ɪz",
+   "start": 9.059,
+   "end": 9.209
+  },
+  {
+   "line": "L03",
+   "text": "normal",
+   "phonemes": "nˈɔɹmᵊl",
+   "start": 9.209,
+   "end": 9.834
+  },
+  {
+   "line": "L03",
+   "text": ".",
+   "phonemes": ".",
+   "start": 9.834,
+   "end": 9.984
+  },
+  {
+   "line": "L04",
+   "text": "The",
+   "phonemes": "ðə",
+   "start": 9.715,
+   "end": 9.804
+  },
+  {
+   "line": "L04",
+   "text": "smell",
+   "phonemes": "smˈɛl",
+   "start": 9.804,
+   "end": 10.216
+  },
+  {
+   "line": "L04",
+   "text": "is",
+   "phonemes": "ɪz",
+   "start": 10.216,
+   "end": 10.366
+  },
+  {
+   "line": "L04",
+   "text": "just",
+   "phonemes": "ʤˈʌst",
+   "start": 10.366,
+   "end": 10.554
+  },
+  {
+   "line": "L04",
+   "text": "a",
+   "phonemes": "ɐ",
+   "start": 10.554,
+   "end": 10.654
+  },
+  {
+   "line": "L04",
+   "text": "tiny",
+   "phonemes": "tˈIni",
+   "start": 10.654,
+   "end": 11.016
+  },
+  {
+   "line": "L04",
+   "text": "bit",
+   "phonemes": "bˈɪt",
+   "start": 11.016,
+   "end": 11.154
+  },
+  {
+   "line": "L04",
+   "text": "of",
+   "phonemes": "ʌv",
+   "start": 11.154,
+   "end": 11.279
+  },
+  {
+   "line": "L04",
+   "text": "sulfur",
+   "phonemes": "sˈʌlfəɹ",
+   "start": 11.279,
+   "end": 11.691
+  },
+  {
+   "line": "L04",
+   "text": "gas",
+   "phonemes": "ɡˈæs",
+   "start": 11.691,
+   "end": 12.291
+  },
+  {
+   "line": "L04",
+   "text": ".",
+   "phonemes": ".",
+   "start": 12.291,
+   "end": 12.441
+  },
+  {
+   "line": "L05",
+   "text": "Tiny",
+   "phonemes": "tˈIni",
+   "start": 12.755,
+   "end": 13.505
+  },
+  {
+   "line": "L05",
+   "text": ".",
+   "phonemes": ".",
+   "start": 13.505,
+   "end": 13.755
+  },
+  {
+   "line": "L06",
+   "text": "So",
+   "phonemes": "sˌO",
+   "start": 14.268,
+   "end": 14.355
+  },
+  {
+   "line": "L06",
+   "text": "the",
+   "phonemes": "ðə",
+   "start": 14.355,
+   "end": 14.443
+  },
+  {
+   "line": "L06",
+   "text": "whole",
+   "phonemes": "hˈOl",
+   "start": 14.443,
+   "end": 14.668
+  },
+  {
+   "line": "L06",
+   "text": "planet",
+   "phonemes": "plˈænət",
+   "start": 14.668,
+   "end": 15.08
+  },
+  {
+   "line": "L06",
+   "text": "asked",
+   "phonemes": "ˈæskt",
+   "start": 15.08,
+   "end": 15.393
+  },
+  {
+   "line": "L06",
+   "text": "one",
+   "phonemes": "wˈʌn",
+   "start": 15.393,
+   "end": 15.593
+  },
+  {
+   "line": "L06",
+   "text": "question",
+   "phonemes": "kwˈɛsʧᵊn",
+   "start": 15.593,
+   "end": 16.243
+  },
+  {
+   "line": "L06",
+   "text": ":",
+   "phonemes": ":",
+   "start": 16.243,
+   "end": 16.343
+  },
+  {
+   "line": "L06",
+   "text": "who",
+   "phonemes": "hˌu",
+   "start": 16.343,
+   "end": 16.505
+  },
+  {
+   "line": "L06",
+   "text": "farted",
+   "phonemes": "fˈɑɹTᵻd",
+   "start": 16.505,
+   "end": 16.893
+  },
+  {
+   "line": "L06",
+   "text": "first",
+   "phonemes": "fˈɜɹst",
+   "start": 16.893,
+   "end": 17.493
+  },
+  {
+   "line": "L06",
+   "text": "?",
+   "phonemes": "?",
+   "start": 17.493,
+   "end": 17.643
+  },
+  {
+   "line": "L07",
+   "text": "Security",
+   "phonemes": "səkjˈʊɹəTi",
+   "start": 17.515,
+   "end": 17.915
+  },
+  {
+   "line": "L07",
+   "text": "footage",
+   "phonemes": "fˈʊTɪʤ",
+   "start": 17.915,
+   "end": 18.415
+  },
+  {
+   "line": "L07",
+   "text": ".",
+   "phonemes": ".",
+   "start": 18.415,
+   "end": 18.515
+  },
+  {
+   "line": "L07",
+   "text": "Enhance",
+   "phonemes": "ɪnhˈæns",
+   "start": 18.515,
+   "end": 19.065
+  },
+  {
+   "line": "L07",
+   "text": ".",
+   "phonemes": ".",
+   "start": 19.065,
+   "end": 19.14
+  },
+  {
+   "line": "L07",
+   "text": "Enhance",
+   "phonemes": "ɪnhˈæns",
+   "start": 19.14,
+   "end": 19.69
+  },
+  {
+   "line": "L07",
+   "text": ".",
+   "phonemes": ".",
+   "start": 19.69,
+   "end": 19.765
+  },
+  {
+   "line": "L07",
+   "text": "Enhance",
+   "phonemes": "ɪnhˈæns",
+   "start": 19.765,
+   "end": 20.515
+  },
+  {
+   "line": "L07",
+   "text": "!",
+   "phonemes": "!",
+   "start": 20.515,
+   "end": 20.665
+  },
+  {
+   "line": "L08",
+   "text": "One",
+   "phonemes": "wˈʌn",
+   "start": 20.485,
+   "end": 20.71
+  },
+  {
+   "line": "L08",
+   "text": "elevator",
+   "phonemes": "ˈɛləvˌATəɹ",
+   "start": 20.71,
+   "end": 21.36
+  },
+  {
+   "line": "L08",
+   "text": ".",
+   "phonemes": ".",
+   "start": 21.36,
+   "end": 21.472
+  },
+  {
+   "line": "L08",
+   "text": "One",
+   "phonemes": "wˈʌn",
+   "start": 21.472,
+   "end": 21.735
+  },
+  {
+   "line": "L08",
+   "text": "guy",
+   "phonemes": "ɡˈI",
+   "start": 21.735,
+   "end": 22.285
+  },
+  {
+   "line": "L08",
+   "text": ".",
+   "phonemes": ".",
+   "start": 22.285,
+   "end": 22.46
+  },
+  {
+   "line": "L09",
+   "text": "He",
+   "phonemes": "hˌi",
+   "start": 22.505,
+   "end": 22.635
+  },
+  {
+   "line": "L09",
+   "text": "blamed",
+   "phonemes": "blˈAmd",
+   "start": 22.635,
+   "end": 23.072
+  },
+  {
+   "line": "L09",
+   "text": "grandma",
+   "phonemes": "ɡɹˈændmˌɑ",
+   "start": 23.072,
+   "end": 23.772
+  },
+  {
+   "line": "L09",
+   "text": ".",
+   "phonemes": ".",
+   "start": 23.772,
+   "end": 23.935
+  },
+  {
+   "line": "L09",
+   "text": "Grandma",
+   "phonemes": "ɡɹˈændmˌɑ",
+   "start": 23.935,
+   "end": 24.397
+  },
+  {
+   "line": "L09",
+   "text": "blamed",
+   "phonemes": "blˈAmd",
+   "start": 24.397,
+   "end": 24.71
+  },
+  {
+   "line": "L09",
+   "text": "the",
+   "phonemes": "ðə",
+   "start": 24.71,
+   "end": 24.797
+  },
+  {
+   "line": "L09",
+   "text": "businessman",
+   "phonemes": "bˈɪznəsmˌæn",
+   "start": 24.797,
+   "end": 25.647
+  },
+  {
+   "line": "L09",
+   "text": ".",
+   "phonemes": ".",
+   "start": 25.647,
+   "end": 25.747
+  },
+  {
+   "line": "L09",
+   "text": "The",
+   "phonemes": "ðə",
+   "start": 25.747,
+   "end": 25.847
+  },
+  {
+   "line": "L09",
+   "text": "businessman",
+   "phonemes": "bˈɪznəsmˌæn",
+   "start": 25.847,
+   "end": 26.472
+  },
+  {
+   "line": "L09",
+   "text": "blamed",
+   "phonemes": "blˈAmd",
+   "start": 26.472,
+   "end": 26.785
+  },
+  {
+   "line": "L09",
+   "text": "the",
+   "phonemes": "ðə",
+   "start": 26.785,
+   "end": 26.872
+  },
+  {
+   "line": "L09",
+   "text": "kid",
+   "phonemes": "kˈɪd",
+   "start": 26.872,
+   "end": 27.372
+  },
+  {
+   "line": "L09",
+   "text": ".",
+   "phonemes": ".",
+   "start": 27.372,
+   "end": 27.522
+  },
+  {
+   "line": "L10",
+   "text": "And",
+   "phonemes": "ˌænd",
+   "start": 27.343,
+   "end": 27.472
+  },
+  {
+   "line": "L10",
+   "text": "the",
+   "phonemes": "ðə",
+   "start": 27.472,
+   "end": 27.559
+  },
+  {
+   "line": "L10",
+   "text": "kid",
+   "phonemes": "kˈɪd",
+   "start": 27.559,
+   "end": 27.984
+  },
+  {
+   "line": "L10",
+   "text": ".",
+   "phonemes": ".",
+   "start": 27.984,
+   "end": 28.059
+  },
+  {
+   "line": "L10",
+   "text": ".",
+   "phonemes": ".",
+   "start": 28.059,
+   "end": 28.084
+  },
+  {
+   "line": "L10",
+   "text": ".",
+   "phonemes": ".",
+   "start": 28.084,
+   "end": 28.134
+  },
+  {
+   "line": "L10",
+   "text": "blamed",
+   "phonemes": "blˈAmd",
+   "start": 28.134,
+   "end": 28.497
+  },
+  {
+   "line": "L10",
+   "text": "him",
+   "phonemes": "hˌɪm",
+   "start": 28.497,
+   "end": 28.984
+  },
+  {
+   "line": "L10",
+   "text": ".",
+   "phonemes": ".",
+   "start": 28.984,
+   "end": 29.134
+  },
+  {
+   "line": "L11",
+   "text": "Farts",
+   "phonemes": "fˈɑɹts",
+   "start": 29.376,
+   "end": 29.689
+  },
+  {
+   "line": "L11",
+   "text": "aren't",
+   "phonemes": "ˌɑɹnt",
+   "start": 29.689,
+   "end": 29.851
+  },
+  {
+   "line": "L11",
+   "text": "contagious",
+   "phonemes": "kəntˈAʤəs",
+   "start": 29.851,
+   "end": 30.726
+  },
+  {
+   "line": "L11",
+   "text": ".",
+   "phonemes": ".",
+   "start": 30.726,
+   "end": 30.901
+  },
+  {
+   "line": "L12",
+   "text": "But",
+   "phonemes": "bˌʌt",
+   "start": 31.063,
+   "end": 31.213
+  },
+  {
+   "line": "L12",
+   "text": "this",
+   "phonemes": "ðɪs",
+   "start": 31.213,
+   "end": 31.463
+  },
+  {
+   "line": "L12",
+   "text": "one",
+   "phonemes": "wˈʌn",
+   "start": 31.463,
+   "end": 32.063
+  },
+  {
+   "line": "L12",
+   "text": "?",
+   "phonemes": "?",
+   "start": 32.063,
+   "end": 32.263
+  },
+  {
+   "line": "L13",
+   "text": "It",
+   "phonemes": "ˌɪt",
+   "start": 33.065,
+   "end": 33.162
+  },
+  {
+   "line": "L13",
+   "text": "all",
+   "phonemes": "ˈɔl",
+   "start": 33.162,
+   "end": 33.362
+  },
+  {
+   "line": "L13",
+   "text": "started",
+   "phonemes": "stˈɑɹTᵻd",
+   "start": 33.362,
+   "end": 33.962
+  },
+  {
+   "line": "L13",
+   "text": ".",
+   "phonemes": ".",
+   "start": 33.962,
+   "end": 34.012
+  },
+  {
+   "line": "L13",
+   "text": ".",
+   "phonemes": ".",
+   "start": 34.012,
+   "end": 34.037
+  },
+  {
+   "line": "L13",
+   "text": ".",
+   "phonemes": ".",
+   "start": 34.037,
+   "end": 34.087
+  },
+  {
+   "line": "L13",
+   "text": "with",
+   "phonemes": "wɪð",
+   "start": 34.087,
+   "end": 34.287
+  },
+  {
+   "line": "L13",
+   "text": "one",
+   "phonemes": "wˈʌn",
+   "start": 34.287,
+   "end": 34.512
+  },
+  {
+   "line": "L13",
+   "text": "tiny",
+   "phonemes": "tˈIni",
+   "start": 34.512,
+   "end": 35.162
+  },
+  {
+   "line": "L13",
+   "text": ".",
+   "phonemes": ".",
+   "start": 35.162,
+   "end": 35.312
+  },
+  {
+   "line": "L13",
+   "text": ".",
+   "phonemes": ".",
+   "start": 35.312,
+   "end": 35.337
+  },
+  {
+   "line": "L13",
+   "text": ".",
+   "phonemes": ".",
+   "start": 35.337,
+   "end": 35.362
+  }
+ ],
+ "duration": 35.033
+}

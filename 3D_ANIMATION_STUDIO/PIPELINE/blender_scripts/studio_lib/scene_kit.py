@@ -39,6 +39,39 @@ def append_mascot(path=MASCOT_RIG):
     return m, col
 
 
+def append_character(name, path=None, scale=None):
+    """Append a supporting-cast character (collection NAME from CHARACTER/extras/<name>.blend)."""
+    path = path or os.path.join(STUDIO, 'CHARACTER', 'extras', name.lower() + '.blend')
+    with bpy.data.libraries.load(path, link=False) as (src, dst):
+        dst.collections = [name]
+    col = dst.collections[0]
+    bpy.context.scene.collection.children.link(col)
+    rig = [o for o in col.objects if o.type == 'ARMATURE'][0]
+    head = [o for o in col.objects if o.name.split('_', 1)[-1].startswith('Head')][0]
+    m = Mascot(rig, head)
+    m.reset(keep_root=False)
+    s = scale if scale is not None else rig.get('char_scale', 1.0)
+    rig.scale = (s, s, s)
+    return m, col
+
+
+LEAN_PARTS = ('Hair', 'Scalp', 'Ear', 'Eye', 'Lid', 'Lash', 'Teeth', 'Tongue', 'Brow', 'Shoe', 'Sock', 'Head')
+
+
+def lean_character(col, subsurf=0):
+    """Cheap-render mode for extras: drop subdivision on small/dense parts only.
+    Clothing layers and the skin-modifier arms keep one level, otherwise the
+    unsmoothed jeans waist pokes through the shirt."""
+    for o in col.objects:
+        part = o.name.split('_', 1)[-1]
+        if not part.startswith(LEAN_PARTS):
+            continue
+        for md in o.modifiers:
+            if md.type == 'SUBSURF':
+                md.render_levels = min(md.render_levels, subsurf)
+                md.levels = min(md.levels, subsurf)
+
+
 def set_shoe_visible(col, side, shoe_visible, frame=None):
     """Swap sneaker <-> sock (used when the shoe gets lost)."""
     for o in col.objects:

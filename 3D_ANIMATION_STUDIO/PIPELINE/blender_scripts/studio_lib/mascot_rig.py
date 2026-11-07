@@ -230,6 +230,37 @@ def _sleeve_weights(shirt, rig):
             groups['chest'].add([v.index], 0.30 * (1 - t), 'REPLACE')
 
 
+def _arm_cover_weights(arm, tag):
+    """The part of the arm hidden inside the sleeve gets the sleeve's own weights,
+    so arm and sleeve bend identically and the arm can never poke through the
+    side of the sleeve when the arm is lowered (blends back to the arm's own
+    weights just past the hem)."""
+    sh, el = Vector(C.SHOULDER), Vector(C.ELBOW)
+    side = 1 if tag == 'L' else -1
+    ad = (el - sh).normalized()
+    s_sh = Vector((sh.x * side, sh.y, sh.z))
+    s_ad = Vector((ad.x * side, ad.y, ad.z))
+    for n in ('chest', f'shoulder.{tag}', f'upperarm.{tag}'):
+        if arm.vertex_groups.get(n) is None:
+            arm.vertex_groups.new(name=n)
+    for v in arm.data.vertices:
+        along = (v.co - s_sh).dot(s_ad)
+        if along >= 0.13:
+            continue
+        b = smoothstep(0.10, 0.13, along)
+        orig = {arm.vertex_groups[g.group].name: g.weight for g in v.groups}
+        tot = sum(orig.values()) or 1.0
+        t = smoothstep(-0.05, 0.05, along)
+        sw = {f'upperarm.{tag}': 0.35 + 0.65 * t, f'shoulder.{tag}': 0.35 * (1 - t), 'chest': 0.30 * (1 - t)}
+        stot = sum(sw.values())
+        new = {n: (1 - b) * sw.get(n, 0.0) / stot + b * orig.get(n, 0.0) / tot for n in set(orig) | set(sw)}
+        for n in orig:
+            arm.vertex_groups[n].remove([v.index])
+        for n, w in new.items():
+            if w > 0.001:
+                arm.vertex_groups[n].add([v.index], w, 'REPLACE')
+
+
 def assign_single(ob, bone):
     g = ob.vertex_groups.get(bone) or ob.vertex_groups.new(name=bone)
     g.add([v.index for v in ob.data.vertices], 1.0, 'REPLACE')
@@ -406,6 +437,7 @@ def rig_mascot(parts, collection):
             for i in range(3):
                 bs[f'{fn}_0{i + 1}.{tag}'] = 0.0085
         weight_by_segments(a, rig, bs, power=2.5)
+        _arm_cover_weights(a, tag)
         add_armature_mod(a, rig, preserve_volume=True)
     # --- shirt
     weight_by_segments(parts['shirt'], rig, {
