@@ -85,7 +85,7 @@ SEGMENTS = [
     seg(T_BLAST + 0.75, T_PRE, 'TUB', map=[(T_BLAST + 0.75, Fb(T_TUB + 0.05)), (T_PRE - 1 / FPS, P + T_PRE * FPS - 1)], shake=[(T_BLAST + 0.75, T_BLAST + 1.0, 14)],
         zoom=[(T_BLAST + 0.75, 1.0, 0.5, 0.45), (w('L10', 'again'), 1.08, 0.5, 0.45), (w('L10', 'again') + 0.06, 1.25, 0.55, 0.45), (T_PRE, 1.25, 0.55, 0.45)]),
     dict(t0=T_PRE, t1=T_LAUNCH, src='TUB', map=[(T_PRE, 0), (T_LAUNCH, (T_LAUNCH - T_PRE) * FPS)],
-         zoom=[(T_PRE, 1.1, 0.5, 0.5), (29.0, 1.1, 0.55, 0.55), (29.1, 1.45, 0.6, 0.6), (30.6, 1.5, 0.6, 0.6), (T_LAUNCH, 1.2, 0.55, 0.55)]),   # tub eyes
+         zoom=[(T_PRE, 1.1, 0.5, 0.5), (29.0, 1.1, 0.45, 0.7), (29.1, 1.7, 0.42, 0.78), (30.6, 1.75, 0.42, 0.78), (T_LAUNCH, 1.2, 0.5, 0.6)]),   # tub eyes
     dict(t0=T_LAUNCH, t1=END, src='END', map=[(T_LAUNCH, (T_LAUNCH - T_PRE) * FPS), (END - 1 / FPS, P - 1)], whip_in=(-1, 3)),
 ]
 

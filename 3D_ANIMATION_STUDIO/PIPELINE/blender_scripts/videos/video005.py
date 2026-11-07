@@ -317,7 +317,7 @@ def bath_cams():
     mk('CAM_TCU', (-0.85, 0.95, 0.72), (-0.5, 1.75, 0.66), 30)            # toilet's face (off the spray axis)
     mk('CAM_MCU', (-0.95, 1.95, 1.2), (0.0, 1.3, 1.12), 40)           # toilet's POV on his face (door behind him)
     mk('CAM_SIDE', (-0.2, -0.35, 1.0), (-0.2, 1.5, 0.95), 24)            # profile: spray / geyser
-    mk('CAM_POV', (-0.5, 1.6, 2.35), (0.6, -1.1, 0.9), 22)               # giant's POV on the door
+    mk('CAM_POV', (-0.35, 0.3, 2.15), (0.6, -1.1, 0.9), 22)               # just in front of the giant's eyes (not inside it)               # giant's POV on the door
     c, t = mk('CAM_REVEAL', (1.3, -1.2, 1.25), (-0.4, 1.0, 1.7), 18)    # low angle up at the giant, him in front
     SK.key_cam(c, t, F(T_TURN), (1.3, -1.2, 1.25), (-0.2, 1.0, 1.3), lens=20)
     SK.key_cam(c, t, F(T_ROAR + 0.6), (1.25, -1.15, 1.1), (-0.4, 1.0, 1.9), lens=17)
@@ -441,7 +441,7 @@ JOBS = {   # job: (set, camera, visible-cast or 'all', video t0, video t1)
     'TUB':     ('BATH', 'CAM_TUB', 'all', T_TUB - 0.2, 31.5),
     'RIOT':    ('STREET', 'CAM_RIOT', 'all', 10.7, 14.8),
     'CHASE':   ('STREET', 'CAM_CHASE', 'all', 14.6, 15.8),
-    'EXIT':    ('STREET', 'CAM_EXIT', 'all', 15.6, 16.8),
+    'EXIT':    ('STREET', 'CAM_EXIT', ['KID', 'GRANDMA', 'BUSINESSMAN'], 15.6, 16.8),
     'TPMISS':  ('STREET', 'CAM_TP', 'all', 16.5, 18.2),
 }
 
@@ -470,6 +470,11 @@ def build_shot(sid):
         cams = bath_cams()
     else:
         cast, cams = build_street()
+        if visible != 'all':
+            for name, (mm, col) in cast.items():
+                if name not in visible:
+                    for o in col.objects:
+                        o.hide_render = True
     sc.camera = cams[camname][0]
     f0, f1 = frames_of(sid)
     sc.frame_start, sc.frame_end = f0, f1 - 1
