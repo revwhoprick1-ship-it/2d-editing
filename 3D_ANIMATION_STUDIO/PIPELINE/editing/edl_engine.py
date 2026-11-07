@@ -618,6 +618,11 @@ class Editor:
         for tf, dur in s.get('flash', []):
             if tf <= t < tf + dur:
                 a = a + (1 - (t - tf) / dur) * 0.9 * (1 - a)
+        g = getattr(self.E, 'GRADE', None)
+        if g:                                           # global colour grade: saturation + contrast around mid-grey
+            lum = a @ np.array([0.2126, 0.7152, 0.0722], np.float32)
+            a = lum[..., None] + (a - lum[..., None]) * g.get('sat', 1.0)
+            a = 0.5 + (a - 0.5) * g.get('contrast', 1.0)
         cv = Image.fromarray((np.clip(a, 0, 1) * 255).astype(np.uint8)).convert('RGBA')
         for o in self.E.OVERLAYS:
             if o['t0'] <= t < o['t1']:

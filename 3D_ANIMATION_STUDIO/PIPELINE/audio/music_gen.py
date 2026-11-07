@@ -551,6 +551,88 @@ def cue_video002(dur=LOOP):
 CUES = {'video001': cue_video001, 'video002': cue_video002}
 LOOPS = {'video002': LOOP}
 
+
+# ------------------------------------------------------------------ VIDEO_003 cue (120 bpm, 66 beats = one loop)
+LOOP3 = 33.0
+
+
+def cue_video003(dur=LOOP3):
+    S = Score(dur + 2.0, bpm=120)
+    b = 0.5
+    prog = [('A1', ['A3', 'C4', 'E4']), ('F1', ['F3', 'A3', 'C4']), ('C2', ['G3', 'C4', 'E4']), ('G1', ['G3', 'B3', 'D4'])]
+    sections = [  # (t0, t1, mode)
+        (0.0, 2.2, 'drop'), (2.2, 5.75, 'light'), (5.75, 8.1, 'sad'), (8.1, 11.05, 'groove'),
+        (11.05, 14.65, 'lofi'), (14.65, 15.8, 'silent'), (15.8, 21.5, 'up'), (21.5, 25.2, 'warn'),
+        (25.2, 27.6, 'tension'), (27.6, LOOP3, 'build')]
+
+    def mode_at(t):
+        tt = t % LOOP3
+        for a, c, m in sections:
+            if a <= tt < c:
+                return m
+        return 'drop'
+    for k in range(int(LOOP3 / (b / 2))):          # 16th-note grid over the whole loop
+        t = k * b / 2
+        beat, sub = divmod(k, 2)
+        bar = beat // 4
+        root, ch = prog[bar % 4]
+        md = mode_at(t)
+        if md == 'silent':
+            continue
+        if md in ('drop', 'groove', 'up', 'build'):
+            if sub == 0 and beat % 4 in (0, 2) or (sub == 1 and beat % 4 == 2):
+                S.add('perc', t, drum_kick(1.0), -6 if md != 'build' else -7)
+            if sub == 0 and beat % 4 in (1, 3):
+                S.add('perc', t, drum_snare(1.0, seed=k), -8)
+            S.add('perc', t, drum_hat(0.45, open_=(sub == 1 and beat % 2 == 1), seed=k), -14, 0.3)
+            if sub == 0 or beat % 2 == 1:
+                S.add('bass', t, inst_bass(mtof(n2m(root)), b / 2 * 0.8, cutoff=900 if md != 'drop' else 1500), -8)
+            if sub == 1 and beat % 2 == 0:
+                S.add('lead', t, inst_stab([mtof(n2m(n)) for n in ch], 0.12), -15 if md != 'drop' else -11, -0.2)
+            if md == 'up' and sub == 0:
+                S.add('lead', t, inst_bell(mtof(n2m(ch[beat % 3])) * 2, 0.8), -17, 0.4)
+        elif md == 'light' or md == 'lofi':
+            if sub == 0 and beat % 4 == 0:
+                S.add('perc', t, drum_kick(0.7), -10)
+            if sub == 0 and beat % 4 == 2:
+                S.add('perc', t, drum_snare(0.6, seed=k), -14 if md == 'lofi' else -12)
+            if sub == 1:
+                S.add('perc', t, drum_hat(0.25, seed=k), -20)
+            if sub == 0 and beat % 2 == 0:
+                S.add('lead', t, inst_pluck(mtof(n2m(ch[(beat // 2) % 3])) * 2, 0.8, bright=0.3 if md == 'lofi' else 0.6, seed=k), -12)
+            if sub == 0 and beat % 4 == 0:
+                S.add('bass', t, inst_bass(mtof(n2m(root)), b * 1.8, cutoff=500), -11)
+        elif md == 'sad':
+            if sub == 0 and beat % 2 == 0:
+                S.add('lead', t, inst_pluck(mtof(n2m(['E4', 'D4', 'C4', 'B3'][(beat // 2) % 4])), 1.0, bright=0.25, seed=k), -10)
+            if sub == 0 and beat % 4 == 0:
+                S.add('pad', t, inst_pad([mtof(n2m(n)) for n in ('A2', 'C3', 'E3')], 2.0, bright=900, attack=0.3), -14)
+        elif md == 'warn':
+            if sub == 0 and beat % 4 == 0:
+                S.add('pad', t, inst_strings([mtof(n2m(n)) for n in ('A2', 'A#2', 'E3')], 2.0, attack=0.5, bright=1600), -13)
+                S.add('perc', t, drum_taiko(0.8, 55), -12)
+        elif md == 'tension':
+            if sub == 0:
+                S.add('bass', t, inst_bass(mtof(n2m('A1')), b * 0.4, cutoff=400 + 300 * (t - 25.2)), -12)
+            if sub == 1:
+                S.add('perc', t, drum_tick(0.3), -12, 0.4 if beat % 2 else -0.4)
+        if md == 'build' and sub == 1:
+            S.add('perc', t, drum_hat(0.3 + 0.4 * (t - 27.6) / 5.4, seed=k + 7), -16, -0.3)
+    # snare roll + riser into the loop point (the drop on video frame 0)
+    for k in range(16):
+        S.add('perc', LOOP3 - 1.0 + k / 16, drum_snare(0.4 + 0.6 * k / 16, seed=200 + k), -14 + 6 * k / 16)
+    n = int(2.0 * SR)
+    tt = np.arange(n) / SR
+    rise = sweep_filter(noise(n, 'white', 33), 400, 9000, kind='bandpass', q=2) * (tt / 2.0) ** 2
+    S.add('fx', LOOP3 - 2.0, rise, -14)
+    S.add('perc', LOOP3, drum_taiko(1.2, 50), -6)            # lands on frame 0 (wraps)
+    S.add('lead', LOOP3, inst_stab([mtof(n2m(x)) for x in ('A4', 'C5', 'E5')], 0.3), -8)
+    return S
+
+
+CUES['video003'] = cue_video003
+LOOPS['video003'] = LOOP3
+
 if __name__ == '__main__':
     cue, out = sys.argv[1], sys.argv[2]
     S = CUES[cue]()

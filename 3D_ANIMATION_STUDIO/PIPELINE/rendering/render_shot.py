@@ -33,6 +33,8 @@ ap.add_argument('--no-render', action='store_true')
 ap.add_argument('--save-blend', action='store_true')
 ap.add_argument('--out', default=None)
 ap.add_argument('--eevee', default='', help='overrides, e.g. use_raytracing=0,use_fast_gi=0')
+ap.add_argument('--denoise', action='store_true', help='OpenImageDenoise in the compositor (kills EEVEE grain)')
+ap.add_argument('--vivid', type=float, default=0.0, help='extra saturation in the compositor, e.g. 0.25')
 a = ap.parse_args(argv)
 
 from studio_lib import render_setup as RS, scene_kit as SK
@@ -52,6 +54,27 @@ for ld in bpy.data.lights:
     if not ld.name.startswith('Key'):
         ld.use_shadow = False
 sc.frame_start, sc.frame_end = f0, f1 - 1
+if a.denoise or a.vivid:
+    tree = bpy.data.node_groups.new('Post', 'CompositorNodeTree')
+    sc.compositing_node_group = tree
+    rl = tree.nodes.new('CompositorNodeRLayers')
+    last = rl.outputs['Image']
+    if a.denoise:
+        dn = tree.nodes.new('CompositorNodeDenoise')
+        try:
+            dn.inputs['HDR'].default_value = True
+        except Exception:
+            pass
+        tree.links.new(last, dn.inputs['Image'])
+        last = dn.outputs['Image']
+    if a.vivid:
+        hs = tree.nodes.new('CompositorNodeHueSat')
+        hs.inputs['Saturation'].default_value = 1.0 + a.vivid
+        tree.links.new(last, hs.inputs['Image'])
+        last = hs.outputs['Image']
+    out = tree.nodes.new('NodeGroupOutput')
+    tree.interface.new_socket('Image', in_out='OUTPUT', socket_type='NodeSocketColor')
+    tree.links.new(last, out.inputs[0])
 VID = mod.VIDEO_DIR
 if a.save_blend:
     bdir = os.path.join(VID, 'blender')

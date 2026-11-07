@@ -112,6 +112,6 @@ if __name__ == '__main__':
     ap.add_argument('--json')
     a = ap.parse_args()
     r = qc_file(a.wav, a.text)
-    print(json.dumps(r, indent=1))
+    print(json.dumps(r, indent=1, default=float))
     if a.json:
-        json.dump(r, open(a.json, 'w'), indent=1)
+        json.dump(r, open(a.json, "w"), indent=1, default=float)

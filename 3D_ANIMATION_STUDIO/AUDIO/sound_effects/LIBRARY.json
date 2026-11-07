@@ -796,5 +796,59 @@
   "duration_s": 0.18,
   "sample_rate": 48000,
   "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/cough_fit.flac",
+  "category": "comedy",
+  "name": "cough_fit",
+  "description": "Three dry coughs (1.1 s).",
+  "duration_s": 1.1,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/pill_rattle.flac",
+  "category": "comedy",
+  "name": "pill_rattle",
+  "description": "Pill bottle shake (0.6 s).",
+  "duration_s": 0.6,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/cash_register.flac",
+  "category": "comedy",
+  "name": "cash_register",
+  "description": "Ka-ching (0.9 s).",
+  "duration_s": 0.9,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/notif_pop.flac",
+  "category": "comedy",
+  "name": "notif_pop",
+  "description": "Social-app notification blip (0.25 s).",
+  "duration_s": 0.25,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/phone_buzz.flac",
+  "category": "comedy",
+  "name": "phone_buzz",
+  "description": "Phone vibrate (0.5 s).",
+  "duration_s": 0.5,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/crowd_laugh.flac",
+  "category": "comedy",
+  "name": "crowd_laugh",
+  "description": "Small sitcom laugh (1.6 s).",
+  "duration_s": 1.6,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
  }
 ]

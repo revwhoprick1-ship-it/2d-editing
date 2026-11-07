@@ -254,6 +254,61 @@ def drip():
     return normalize(np.sin(2 * np.pi * np.cumsum(1400 - 800 * tt / tt[-1]) / SR) * env_exp(m, 0.05), -8)
 
 
+
+# ---------------------------------------------------------------- VIDEO_003 additions
+@reg('cough_fit', 'Three dry coughs (1.1 s).')
+def cough():
+    n = int(1.1 * SR); out = np.zeros(n)
+    for k, t0 in enumerate((0.0, 0.3, 0.6)):
+        m = int(0.22 * SR); tt = np.arange(m) / SR
+        x = bandpass(noise(m, 'white', 80 + k), 300, 2600) * env_exp(m, 0.06) * (1.0 - 0.15 * k)
+        x += np.sin(2 * np.pi * (180 - 30 * k) * tt) * env_exp(m, 0.03) * 0.5
+        i = int(t0 * SR); out[i:i + m] += x
+    return normalize(convolve_stereo(out, reverb_ir(0.6, 0.15), 0.12), -4)
+
+@reg('pill_rattle', 'Pill bottle shake (0.6 s).')
+def rattle():
+    n = int(0.6 * SR); out = np.zeros(n); rng = np.random.default_rng(91)
+    for t0 in np.sort(rng.uniform(0, 0.5, 26)):
+        m = int(0.02 * SR); i = int(t0 * SR)
+        out[i:i + m] += highpass(noise(m, 'white', int(t0 * 1e4)), 2500) * env_exp(m, 0.004) * rng.uniform(0.3, 1)
+    return normalize(out, -6)
+
+@reg('cash_register', 'Ka-ching (0.9 s).')
+def kaching():
+    n = int(0.9 * SR); out = np.zeros(n)
+    m = int(0.06 * SR); out[:m] += highpass(noise(m, 'white', 93), 1500) * env_exp(m, 0.01)
+    b = fm_bell(2637, 0.8, ratio=2.0, index=1.2, decay=0.35) + fm_bell(3520, 0.8, ratio=2.0, index=1.0, decay=0.3) * 0.7
+    out[int(0.08 * SR):int(0.08 * SR) + len(b)] += b[:n - int(0.08 * SR)] * 0.6
+    return normalize(out, -5)
+
+@reg('notif_pop', 'Social-app notification blip (0.25 s).')
+def notif():
+    n = int(0.25 * SR); out = np.zeros(n)
+    for t0, f in ((0.0, 1318.5), (0.07, 1975.5)):
+        m = int(0.12 * SR); i = int(t0 * SR)
+        out[i:i + m] += sine(f, m / SR) * env_adsr(m, 0.003, 0.03, 0.5, 0.06) * 0.6
+    return normalize(out, -6)
+
+@reg('phone_buzz', 'Phone vibrate (0.5 s).')
+def buzz():
+    n = int(0.5 * SR); tt = np.arange(n) / SR
+    x = square(170, 0.5, duty=0.5) * (np.sin(2 * np.pi * 8 * tt) > -0.3)
+    return normalize(lowpass(x, 900) * env_adsr(n, 0.01, 0.05, 0.9, 0.05), -8)
+
+@reg('crowd_laugh', 'Small sitcom laugh (1.6 s).')
+def laugh():
+    n = int(1.6 * SR); out = np.zeros(n); rng = np.random.default_rng(97)
+    for v in range(9):
+        f0 = rng.uniform(140, 320); t0 = rng.uniform(0, 0.25)
+        k = 0.0
+        while t0 + k < 1.3:
+            m = int(0.11 * SR); i = int((t0 + k) * SR)
+            x = vowel_voice(f0 * rng.uniform(0.95, 1.08), m / SR, ((rng.uniform(600, 900), 120, 1.0), (rng.uniform(1100, 1500), 160, 0.5)), int(v * 100 + k * 10))
+            out[i:i + len(x)] += x[:n - i] * env_adsr(len(x), 0.01, 0.03, 0.7, 0.04)[:n - i] * rng.uniform(0.4, 0.8) * (1 - (k / 1.4))
+            k += rng.uniform(0.13, 0.19)
+    return normalize(convolve_stereo(out, reverb_ir(1.2, 0.4), 0.3), -6)
+
 def main():
     root = sys.argv[1]
     d = os.path.join(root, 'sound_effects', 'comedy')

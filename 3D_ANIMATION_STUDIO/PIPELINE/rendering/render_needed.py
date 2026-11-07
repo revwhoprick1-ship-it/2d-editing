@@ -67,6 +67,7 @@ def main():
     ap.add_argument('--samples', type=int, default=3)
     ap.add_argument('--eevee', default='')
     ap.add_argument('--lanes', type=int, default=2)
+    ap.add_argument('--extra', default='', help='more render_shot.py flags, e.g. "--denoise --vivid 0.1"')
     ap.add_argument('--dry', action='store_true')
     a = ap.parse_args()
     sys.path.insert(0, os.path.join(STUDIO, 'PIPELINE', 'blender_scripts', 'videos'))
@@ -122,6 +123,7 @@ def main():
                    '--out', os.path.join(a.out, job)]
             if a.eevee:
                 cmd += ['--eevee', a.eevee]
+            cmd += a.extra.split()
             r = subprocess.run(cmd, capture_output=True, text=True)
             dt = time.time() - t0
             ok = 'SHOT_DONE' in r.stdout

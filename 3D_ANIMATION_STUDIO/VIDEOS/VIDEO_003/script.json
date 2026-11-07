@@ -1,0 +1,21 @@
+{
+ "title": "What If ALL Drugs Became Legal?",
+ "engine": "chatterbox",
+ "voice_ref": "kokoro:am_fenrir",
+ "tempo": 1.12,
+ "lines": [
+  {"id": "L01", "text": "Every drug on Earth just became legal.", "delivery": "hook", "exaggeration": 0.85, "pause_after": 0.15},
+  {"id": "L02", "text": "Your grandma didn't even notice.", "delivery": "deadpan", "exaggeration": 0.5, "pause_after": 0.1},
+  {"id": "L03", "text": "She's already on fourteen prescriptions.", "delivery": "punchline", "exaggeration": 0.7, "pause_after": 0.35},
+  {"id": "L04", "text": "Drug dealers? Unemployed overnight.", "delivery": "news", "exaggeration": 0.75, "pause_after": 0.1},
+  {"id": "L05", "text": "This guy just changed his LinkedIn to freelance pharmacist.", "delivery": "comic", "exaggeration": 0.7, "pause_after": 0.2},
+  {"id": "L06", "text": "And the cartels went bankrupt and started a podcast.", "delivery": "comic", "exaggeration": 0.8, "pause_after": 0.4},
+  {"id": "L07", "text": "But here's the twist.", "delivery": "suspense", "exaggeration": 0.6, "pause_after": 0.1},
+  {"id": "L08", "text": "Portugal decriminalized every drug back in 2001.", "delivery": "fact", "exaggeration": 0.55, "pause_after": 0.1},
+  {"id": "L09", "text": "Drug deaths went down. Nobody turned into a zombie.", "delivery": "fact", "exaggeration": 0.65, "pause_after": 0.3},
+  {"id": "L10", "text": "Still, legal doesn't mean safe. Cigarettes are legal. Ask your lungs.", "delivery": "warning", "exaggeration": 0.6, "pause_after": 0.3},
+  {"id": "L11", "text": "So what's the most addictive thing left on Earth?", "delivery": "question", "exaggeration": 0.7, "pause_after": 0.25},
+  {"id": "L12", "text": "It's legal. It's free. And it's in your hand right now.", "delivery": "reveal", "exaggeration": 0.8, "pause_after": 0.2},
+  {"id": "L13", "text": "That's why you're about to watch this again.", "delivery": "loop", "exaggeration": 0.7, "pause_after": 0.0}
+ ]
+}

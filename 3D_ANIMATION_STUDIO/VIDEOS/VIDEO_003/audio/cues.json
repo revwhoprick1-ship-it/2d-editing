@@ -1,0 +1,305 @@
+{
+ "duration": 33.0,
+ "loop": true,
+ "narration": "narration/narration_raw.wav",
+ "narration_offset": 0.0,
+ "music": "music_score.wav",
+ "music_gain_db": -1,
+ "music_map": [
+  [
+   "0.0–2.2",
+   "DROP",
+   "full 120 bpm groove + taiko/stab hit on frame 0 (wrapped from the loop build)"
+  ],
+  [
+   "2.2–5.75",
+   "Light",
+   "plucks + half-time kit under grandma"
+  ],
+  [
+   "5.75–8.1",
+   "Sad",
+   "minor plucks + pad for the dealer"
+  ],
+  [
+   "8.1–11.05",
+   "Groove",
+   "beat back for the LinkedIn glow-up"
+  ],
+  [
+   "11.05–14.65",
+   "Lo-fi",
+   "dull plucks for the podcast"
+  ],
+  [
+   "14.65–15.8",
+   "SILENCE",
+   "record scratch, dead air: \"here's the twist\""
+  ],
+  [
+   "15.8–21.5",
+   "Up",
+   "groove + bells for Portugal"
+  ],
+  [
+   "21.5–25.2",
+   "Warning",
+   "dissonant strings + taiko"
+  ],
+  [
+   "25.2–27.6",
+   "Tension",
+   "ticking pulse, opening filter"
+  ],
+  [
+   "27.6–33.0",
+   "Build",
+   "groove + rising hats, snare roll + riser into the drop on frame 0"
+  ]
+ ],
+ "music_cue": "cue_video003",
+ "targets": {
+  "narration_lufs": -16,
+  "master_lufs": -14,
+  "true_peak": -1.0,
+  "duck_db": 8
+ },
+ "cues": [
+  {
+   "t": 0.0,
+   "file": "AUDIO/sound_effects/transitions/bass_impact.flac",
+   "gain": -8,
+   "bus": "sfx",
+   "note": "E01 frame 0: the jump + stamp (score drop lands here too)"
+  },
+  {
+   "t": 0.05,
+   "file": "AUDIO/sound_effects/reactions/pop.flac",
+   "gain": -12,
+   "bus": "sfx",
+   "note": "E01 title stamp"
+  },
+  {
+   "t": 2.15,
+   "file": "AUDIO/sound_effects/transitions/swish.flac",
+   "gain": -14,
+   "bus": "sfx",
+   "note": "cut to grandma"
+  },
+  {
+   "t": 2.6,
+   "file": "AUDIO/sound_effects/comedy/pill_rattle.flac",
+   "gain": -10,
+   "bus": "sfx",
+   "note": "E02 grandma shakes the pile",
+   "pan": -0.2
+  },
+  {
+   "t": 4.417,
+   "file": "AUDIO/sound_effects/comedy/counter_ticks.flac",
+   "gain": -14,
+   "bus": "sfx",
+   "note": "counter 0 -> 14 prescriptions"
+  },
+  {
+   "t": 4.917,
+   "file": "AUDIO/sound_effects/comedy/cash_register.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "counter lands on 14"
+  },
+  {
+   "t": 5.45,
+   "file": "AUDIO/sound_effects/comedy/crowd_laugh.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "laugh after \"prescriptions\"",
+   "dur": 1.2,
+   "fade_out": 0.3
+  },
+  {
+   "t": 5.47,
+   "file": "AUDIO/sound_effects/movement/whoosh_short.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "whip to the dealer (peak on the cut)"
+  },
+  {
+   "t": 6.922,
+   "file": "AUDIO/sound_effects/movement/impact_soft.flac",
+   "gain": -10,
+   "bus": "sfx",
+   "note": "UNEMPLOYED stamp"
+  },
+  {
+   "t": 7.072,
+   "file": "AUDIO/sound_effects/comedy/sad_trombone.flac",
+   "gain": -16,
+   "bus": "sfx",
+   "note": "sad trombone under \"overnight\""
+  },
+  {
+   "t": 9.332,
+   "file": "AUDIO/sound_effects/comedy/notif_pop.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "LinkedIn card pops"
+  },
+  {
+   "t": 10.412,
+   "file": "AUDIO/sound_effects/reactions/pop.flac",
+   "gain": -14,
+   "bus": "sfx",
+   "note": "LIKE = ENDORSE chip"
+  },
+  {
+   "t": 10.77,
+   "file": "AUDIO/sound_effects/movement/whoosh_short.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "whip to the podcast"
+  },
+  {
+   "t": 11.3,
+   "file": "AUDIO/sound_effects/reactions/pop.flac",
+   "gain": -16,
+   "bus": "sfx",
+   "note": "CARTEL CAST lower third"
+  },
+  {
+   "t": 14.358,
+   "file": "AUDIO/sound_effects/comedy/crowd_laugh.flac",
+   "gain": -12,
+   "bus": "sfx",
+   "note": "laugh on \"podcast\"",
+   "dur": 1.0,
+   "fade_out": 0.3
+  },
+  {
+   "t": 14.703,
+   "file": "AUDIO/sound_effects/comedy/record_scratch.flac",
+   "gain": -8,
+   "bus": "sfx",
+   "note": "freeze: \"But here's the twist\""
+  },
+  {
+   "t": 14.723,
+   "file": "AUDIO/sound_effects/comedy/camera_snap.flac",
+   "gain": -10,
+   "bus": "sfx",
+   "note": "freeze frame"
+  },
+  {
+   "t": 15.511,
+   "file": "AUDIO/sound_effects/movement/whoosh_short.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "whip in to the globe"
+  },
+  {
+   "t": 18.001,
+   "file": "AUDIO/sound_effects/comedy/positive_chime.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "pin lands on Portugal / 2001 chip"
+  },
+  {
+   "t": 18.828,
+   "file": "AUDIO/sound_effects/reactions/pop.flac",
+   "gain": -14,
+   "bus": "sfx",
+   "note": "DRUG DEATHS: DOWN chip"
+  },
+  {
+   "t": 20.618,
+   "file": "AUDIO/sound_effects/movement/impact_soft.flac",
+   "gain": -12,
+   "bus": "sfx",
+   "note": "cut to zombie"
+  },
+  {
+   "t": 20.618,
+   "file": "AUDIO/sound_effects/reactions/pop.flac",
+   "gain": -16,
+   "bus": "sfx",
+   "note": "COMMENT banner"
+  },
+  {
+   "t": 21.118,
+   "file": "AUDIO/sound_effects/reactions/comedic_boing.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "zombie snaps back to normal"
+  },
+  {
+   "t": 21.45,
+   "file": "AUDIO/sound_effects/transitions/swish.flac",
+   "gain": -14,
+   "bus": "sfx",
+   "note": "whip to the lungs shot"
+  },
+  {
+   "t": 22.527,
+   "file": "AUDIO/sound_effects/reactions/dramatic_hit.flac",
+   "gain": -16,
+   "bus": "sfx",
+   "note": "LEGAL ≠ SAFE chip (hit peaks on \"safe\")"
+  },
+  {
+   "t": 24.2,
+   "file": "AUDIO/sound_effects/comedy/cough_fit.flac",
+   "gain": -6,
+   "bus": "sfx",
+   "note": "cough fit (shot frames 81/90/99)"
+  },
+  {
+   "t": 25.15,
+   "file": "AUDIO/sound_effects/transitions/swish.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "cut to the question"
+  },
+  {
+   "t": 27.6,
+   "file": "AUDIO/sound_effects/comedy/phone_buzz.flac",
+   "gain": -10,
+   "bus": "sfx",
+   "note": "phone comes out"
+  },
+  {
+   "t": 28.25,
+   "file": "AUDIO/sound_effects/comedy/notif_pop.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "notifications keep coming"
+  },
+  {
+   "t": 28.85,
+   "file": "AUDIO/sound_effects/comedy/notif_pop.flac",
+   "gain": -16,
+   "bus": "sfx",
+   "note": "notifications keep coming"
+  },
+  {
+   "t": 29.45,
+   "file": "AUDIO/sound_effects/comedy/notif_pop.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "notifications keep coming"
+  },
+  {
+   "t": 30.025,
+   "file": "AUDIO/sound_effects/transitions/bass_impact.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "punch-in on \"in your hand\""
+  },
+  {
+   "t": 30.075,
+   "file": "AUDIO/sound_effects/reactions/pop.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "SHARE chip"
+  }
+ ]
+}

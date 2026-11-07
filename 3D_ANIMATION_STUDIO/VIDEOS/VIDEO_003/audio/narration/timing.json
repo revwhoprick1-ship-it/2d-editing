@@ -1,0 +1,701 @@
+{
+ "voice": "chatterbox+kokoro:am_fenrir",
+ "sample_rate": 24000,
+ "lines": [
+  {
+   "id": "L01",
+   "text": "Every drug on Earth just became legal.",
+   "start": 0.0,
+   "end": 2.06,
+   "delivery": "hook",
+   "speed": 1.12
+  },
+  {
+   "id": "L02",
+   "text": "Your grandma didn't even notice.",
+   "start": 2.21,
+   "end": 3.487,
+   "delivery": "deadpan",
+   "speed": 1.12
+  },
+  {
+   "id": "L03",
+   "text": "She's already on fourteen prescriptions.",
+   "start": 3.587,
+   "end": 5.452,
+   "delivery": "punchline",
+   "speed": 1.12
+  },
+  {
+   "id": "L04",
+   "text": "Drug dealers? Unemployed overnight.",
+   "start": 5.802,
+   "end": 8.012,
+   "delivery": "news",
+   "speed": 1.12
+  },
+  {
+   "id": "L05",
+   "text": "This guy just changed his LinkedIn to freelance pharmacist.",
+   "start": 8.112,
+   "end": 10.928,
+   "delivery": "comic",
+   "speed": 1.12
+  },
+  {
+   "id": "L06",
+   "text": "And the cartels went bankrupt and started a podcast.",
+   "start": 11.128,
+   "end": 14.373,
+   "delivery": "comic",
+   "speed": 1.12
+  },
+  {
+   "id": "L07",
+   "text": "But here's the twist.",
+   "start": 14.773,
+   "end": 15.741,
+   "delivery": "suspense",
+   "speed": 1.12
+  },
+  {
+   "id": "L08",
+   "text": "Portugal decriminalized every drug back in 2001.",
+   "start": 15.841,
+   "end": 18.728,
+   "delivery": "fact",
+   "speed": 1.12
+  },
+  {
+   "id": "L09",
+   "text": "Drug deaths went down. Nobody turned into a zombie.",
+   "start": 18.828,
+   "end": 21.247,
+   "delivery": "fact",
+   "speed": 1.12
+  },
+  {
+   "id": "L10",
+   "text": "Still, legal doesn't mean safe. Cigarettes are legal. Ask your lungs.",
+   "start": 21.547,
+   "end": 25.076,
+   "delivery": "warning",
+   "speed": 1.12
+  },
+  {
+   "id": "L11",
+   "text": "So what's the most addictive thing left on Earth?",
+   "start": 25.376,
+   "end": 27.525,
+   "delivery": "question",
+   "speed": 1.12
+  },
+  {
+   "id": "L12",
+   "text": "It's legal. It's free. And it's in your hand right now.",
+   "start": 27.775,
+   "end": 30.648,
+   "delivery": "reveal",
+   "speed": 1.12
+  },
+  {
+   "id": "L13",
+   "text": "That's why you're about to watch this again.",
+   "start": 30.848,
+   "end": 32.63,
+   "delivery": "loop",
+   "speed": 1.12
+  }
+ ],
+ "words": [
+  {
+   "line": "L01",
+   "text": "Every",
+   "start": 0.0,
+   "end": 0.34
+  },
+  {
+   "line": "L01",
+   "text": "drug",
+   "start": 0.34,
+   "end": 0.58
+  },
+  {
+   "line": "L01",
+   "text": "on",
+   "start": 0.58,
+   "end": 0.76
+  },
+  {
+   "line": "L01",
+   "text": "Earth",
+   "start": 0.76,
+   "end": 1.02
+  },
+  {
+   "line": "L01",
+   "text": "just",
+   "start": 1.02,
+   "end": 1.4
+  },
+  {
+   "line": "L01",
+   "text": "became",
+   "start": 1.4,
+   "end": 1.72
+  },
+  {
+   "line": "L01",
+   "text": "legal.",
+   "start": 1.72,
+   "end": 1.96
+  },
+  {
+   "line": "L02",
+   "text": "Your",
+   "start": 2.21,
+   "end": 2.35
+  },
+  {
+   "line": "L02",
+   "text": "grandma",
+   "start": 2.35,
+   "end": 2.63
+  },
+  {
+   "line": "L02",
+   "text": "didn't",
+   "start": 2.63,
+   "end": 2.89
+  },
+  {
+   "line": "L02",
+   "text": "even",
+   "start": 2.89,
+   "end": 3.01
+  },
+  {
+   "line": "L02",
+   "text": "notice.",
+   "start": 3.01,
+   "end": 3.23
+  },
+  {
+   "line": "L03",
+   "text": "She's",
+   "start": 3.587,
+   "end": 4.007
+  },
+  {
+   "line": "L03",
+   "text": "already",
+   "start": 4.007,
+   "end": 4.267
+  },
+  {
+   "line": "L03",
+   "text": "on",
+   "start": 4.267,
+   "end": 4.467
+  },
+  {
+   "line": "L03",
+   "text": "fourteen",
+   "start": 4.467,
+   "end": 4.767
+  },
+  {
+   "line": "L03",
+   "text": "prescriptions.",
+   "start": 4.767,
+   "end": 5.127
+  },
+  {
+   "line": "L04",
+   "text": "Drug",
+   "start": 5.802,
+   "end": 6.062
+  },
+  {
+   "line": "L04",
+   "text": "dealers?",
+   "start": 6.062,
+   "end": 6.542
+  },
+  {
+   "line": "L04",
+   "text": "Unemployed",
+   "start": 6.922,
+   "end": 7.262
+  },
+  {
+   "line": "L04",
+   "text": "overnight.",
+   "start": 7.262,
+   "end": 7.742
+  },
+  {
+   "line": "L05",
+   "text": "This",
+   "start": 8.112,
+   "end": 8.432
+  },
+  {
+   "line": "L05",
+   "text": "guy",
+   "start": 8.432,
+   "end": 8.632
+  },
+  {
+   "line": "L05",
+   "text": "just",
+   "start": 8.632,
+   "end": 8.812
+  },
+  {
+   "line": "L05",
+   "text": "changed",
+   "start": 8.812,
+   "end": 9.152
+  },
+  {
+   "line": "L05",
+   "text": "his",
+   "start": 9.152,
+   "end": 9.332
+  },
+  {
+   "line": "L05",
+   "text": "LinkedIn",
+   "start": 9.332,
+   "end": 9.572
+  },
+  {
+   "line": "L05",
+   "text": "to",
+   "start": 9.572,
+   "end": 9.912
+  },
+  {
+   "line": "L05",
+   "text": "freelance",
+   "start": 9.912,
+   "end": 10.212
+  },
+  {
+   "line": "L05",
+   "text": "pharmacist.",
+   "start": 10.212,
+   "end": 10.732
+  },
+  {
+   "line": "L06",
+   "text": "And",
+   "start": 11.128,
+   "end": 11.248
+  },
+  {
+   "line": "L06",
+   "text": "the",
+   "start": 11.248,
+   "end": 11.348
+  },
+  {
+   "line": "L06",
+   "text": "cartels",
+   "start": 11.348,
+   "end": 11.888
+  },
+  {
+   "line": "L06",
+   "text": "went",
+   "start": 11.888,
+   "end": 12.308
+  },
+  {
+   "line": "L06",
+   "text": "bankrupt",
+   "start": 12.308,
+   "end": 12.928
+  },
+  {
+   "line": "L06",
+   "text": "and",
+   "start": 12.928,
+   "end": 13.368
+  },
+  {
+   "line": "L06",
+   "text": "started",
+   "start": 13.368,
+   "end": 13.608
+  },
+  {
+   "line": "L06",
+   "text": "a",
+   "start": 13.608,
+   "end": 13.808
+  },
+  {
+   "line": "L06",
+   "text": "podcast.",
+   "start": 13.808,
+   "end": 14.088
+  },
+  {
+   "line": "L07",
+   "text": "But",
+   "start": 14.773,
+   "end": 14.913
+  },
+  {
+   "line": "L07",
+   "text": "here's",
+   "start": 14.913,
+   "end": 15.213
+  },
+  {
+   "line": "L07",
+   "text": "the",
+   "start": 15.213,
+   "end": 15.313
+  },
+  {
+   "line": "L07",
+   "text": "twist.",
+   "start": 15.313,
+   "end": 15.533
+  },
+  {
+   "line": "L08",
+   "text": "Portugal",
+   "start": 15.841,
+   "end": 16.181
+  },
+  {
+   "line": "L08",
+   "text": "decriminalized",
+   "start": 16.181,
+   "end": 17.021
+  },
+  {
+   "line": "L08",
+   "text": "every",
+   "start": 17.021,
+   "end": 17.341
+  },
+  {
+   "line": "L08",
+   "text": "drug",
+   "start": 17.341,
+   "end": 17.621
+  },
+  {
+   "line": "L08",
+   "text": "back",
+   "start": 17.621,
+   "end": 17.861
+  },
+  {
+   "line": "L08",
+   "text": "in",
+   "start": 17.861,
+   "end": 18.001
+  },
+  {
+   "line": "L08",
+   "text": "2001.",
+   "start": 18.001,
+   "end": 18.541
+  },
+  {
+   "line": "L09",
+   "text": "Drug",
+   "start": 18.828,
+   "end": 19.048
+  },
+  {
+   "line": "L09",
+   "text": "deaths",
+   "start": 19.048,
+   "end": 19.308
+  },
+  {
+   "line": "L09",
+   "text": "went",
+   "start": 19.308,
+   "end": 19.508
+  },
+  {
+   "line": "L09",
+   "text": "down.",
+   "start": 19.508,
+   "end": 19.848
+  },
+  {
+   "line": "L09",
+   "text": "Nobody",
+   "start": 20.168,
+   "end": 20.328
+  },
+  {
+   "line": "L09",
+   "text": "turned",
+   "start": 20.328,
+   "end": 20.628
+  },
+  {
+   "line": "L09",
+   "text": "into",
+   "start": 20.628,
+   "end": 20.848
+  },
+  {
+   "line": "L09",
+   "text": "a",
+   "start": 20.848,
+   "end": 20.968
+  },
+  {
+   "line": "L09",
+   "text": "zombie.",
+   "start": 20.968,
+   "end": 21.088
+  },
+  {
+   "line": "L10",
+   "text": "Still,",
+   "start": 21.547,
+   "end": 21.927
+  },
+  {
+   "line": "L10",
+   "text": "legal",
+   "start": 22.207,
+   "end": 22.367
+  },
+  {
+   "line": "L10",
+   "text": "doesn't",
+   "start": 22.367,
+   "end": 22.787
+  },
+  {
+   "line": "L10",
+   "text": "mean",
+   "start": 22.787,
+   "end": 22.927
+  },
+  {
+   "line": "L10",
+   "text": "safe.",
+   "start": 22.927,
+   "end": 23.267
+  },
+  {
+   "line": "L10",
+   "text": "Cigarettes",
+   "start": 23.647,
+   "end": 23.847
+  },
+  {
+   "line": "L10",
+   "text": "are",
+   "start": 23.847,
+   "end": 24.007
+  },
+  {
+   "line": "L10",
+   "text": "legal.",
+   "start": 24.007,
+   "end": 24.187
+  },
+  {
+   "line": "L10",
+   "text": "Ask",
+   "start": 24.427,
+   "end": 24.527
+  },
+  {
+   "line": "L10",
+   "text": "your",
+   "start": 24.527,
+   "end": 24.687
+  },
+  {
+   "line": "L10",
+   "text": "lungs.",
+   "start": 24.687,
+   "end": 24.867
+  },
+  {
+   "line": "L11",
+   "text": "So",
+   "start": 25.376,
+   "end": 25.596
+  },
+  {
+   "line": "L11",
+   "text": "what's",
+   "start": 25.596,
+   "end": 25.876
+  },
+  {
+   "line": "L11",
+   "text": "the",
+   "start": 25.876,
+   "end": 25.976
+  },
+  {
+   "line": "L11",
+   "text": "most",
+   "start": 25.976,
+   "end": 26.136
+  },
+  {
+   "line": "L11",
+   "text": "addictive",
+   "start": 26.136,
+   "end": 26.556
+  },
+  {
+   "line": "L11",
+   "text": "thing",
+   "start": 26.556,
+   "end": 26.856
+  },
+  {
+   "line": "L11",
+   "text": "left",
+   "start": 26.856,
+   "end": 27.076
+  },
+  {
+   "line": "L11",
+   "text": "on",
+   "start": 27.076,
+   "end": 27.316
+  },
+  {
+   "line": "L11",
+   "text": "Earth?",
+   "start": 27.316,
+   "end": 27.436
+  },
+  {
+   "line": "L12",
+   "text": "It's",
+   "start": 27.775,
+   "end": 28.015
+  },
+  {
+   "line": "L12",
+   "text": "legal.",
+   "start": 28.015,
+   "end": 28.295
+  },
+  {
+   "line": "L12",
+   "text": "It's",
+   "start": 28.615,
+   "end": 28.875
+  },
+  {
+   "line": "L12",
+   "text": "free.",
+   "start": 28.875,
+   "end": 29.175
+  },
+  {
+   "line": "L12",
+   "text": "And",
+   "start": 29.455,
+   "end": 29.595
+  },
+  {
+   "line": "L12",
+   "text": "it's",
+   "start": 29.595,
+   "end": 29.735
+  },
+  {
+   "line": "L12",
+   "text": "in",
+   "start": 29.735,
+   "end": 29.855
+  },
+  {
+   "line": "L12",
+   "text": "your",
+   "start": 29.855,
+   "end": 29.975
+  },
+  {
+   "line": "L12",
+   "text": "hand",
+   "start": 29.975,
+   "end": 30.195
+  },
+  {
+   "line": "L12",
+   "text": "right",
+   "start": 30.195,
+   "end": 30.335
+  },
+  {
+   "line": "L12",
+   "text": "now.",
+   "start": 30.335,
+   "end": 30.615
+  },
+  {
+   "line": "L13",
+   "text": "That's",
+   "start": 30.848,
+   "end": 31.188
+  },
+  {
+   "line": "L13",
+   "text": "why",
+   "start": 31.188,
+   "end": 31.388
+  },
+  {
+   "line": "L13",
+   "text": "you're",
+   "start": 31.388,
+   "end": 31.688
+  },
+  {
+   "line": "L13",
+   "text": "about",
+   "start": 31.688,
+   "end": 31.808
+  },
+  {
+   "line": "L13",
+   "text": "to",
+   "start": 31.808,
+   "end": 31.968
+  },
+  {
+   "line": "L13",
+   "text": "watch",
+   "start": 31.968,
+   "end": 32.108
+  },
+  {
+   "line": "L13",
+   "text": "this",
+   "start": 32.108,
+   "end": 32.308
+  },
+  {
+   "line": "L13",
+   "text": "again.",
+   "start": 32.308,
+   "end": 32.528
+  }
+ ],
+ "duration": 32.63
+}
