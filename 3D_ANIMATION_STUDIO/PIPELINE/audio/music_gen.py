@@ -881,6 +881,55 @@ def cue_video007():
 CUES['video007'] = cue_video007
 LOOPS['video007'] = None
 
+
+# ------------------------------------------------------------------ VIDEO_008 cue: "Last Bus · Part 1"
+def cue_video008():
+    sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'VIDEOS', 'VIDEO_008'))
+    import edit_video008 as E8
+    B, END = E8.B, E8.END
+    S = Score(END + 3.0, bpm=72)
+    D = lambda t, d, f=36.7, g=-10: S.add('fx', t, sine(f, d) * env_adsr(int(d * SR), min(1.5, d / 3), 0.2, 0.9, min(1.0, d / 4)) * 0.8, g)
+    # 0..blink: a faint, ordinary late-night synth pad (it's just a bus)
+    S.add('pad', 0.0, inst_pad(C(['F3', 'A3', 'C4', 'E4']), B['blink'] + 0.2, bright=1400, attack=0.05), -17)
+    # after the blink: a hit, then the drone
+    S.add('perc', B['blink'] + 0.1, drum_taiko(1.3, 42), -4)
+    S.add('pad', B['blink'] + 0.1, inst_strings(C(['D3', 'D#3', 'A3']), 2.0, attack=0.02, bright=2000), -11)
+    D(B['blink'] + 0.2, B['turn'] - B['blink'], 36.7, -10)
+    S.add('pad', B['empty'], inst_tremolo(C(['D5', 'D#5']), B['turn'] - B['empty'], rate=11, bright=3200), -20)
+    S.add('perc', B['turn'], drum_taiko(1.4, 40), -3)
+    S.add('lead', B['turn'], inst_stab(C(['D3', 'F3', 'G#3', 'D4']), 0.7), -6)
+    # driver: low pulse
+    for i in range(int((B['route'] - B['driver']) / 0.8)):
+        S.add('perc', B['driver'] + i * 0.8, drum_taiko(0.5, 50), -14)
+    D(B['driver'], B['window'] - B['driver'], 32.7, -10)
+    S.add('perc', B['you'], drum_taiko(1.2, 44), -5)
+    # fog: music-box waltz, slow and detuned
+    mel = ['D5', 'F5', 'A5', 'G#5', 'F5', 'D5', 'C#5', 'D5', 'E5', 'F5', 'E5', 'D5']
+    for i, nm in enumerate(mel):
+        tt = B['window'] + 0.2 + i * 0.5
+        if tt < B['button']:
+            S.add('lead', tt, inst_bell(mtof(n2m(nm)) * 0.993, 1.2), -14)
+    D(B['button'], B['mirror'] - B['button'], 34.6, -10)
+    S.add('pad', B['ticket'], inst_tremolo(C(['D4', 'D#4', 'A4']), B['noface'] - B['ticket'], rate=15, bright=3500), -16)
+    S.add('perc', B['noface'], drum_taiko(1.6, 38), -2)
+    S.add('lead', B['noface'], inst_stab(C(['D3', 'D#3', 'G#3', 'D4']), 0.9), -5)
+    # brakes -> choice: panic ostinato, then clock ticks
+    t = B['brake']
+    k = 0
+    while t < B['choice']:
+        S.add('bass', t, inst_bass(mtof(n2m(['D2', 'D2', 'D#2', 'D2'][k % 4])), 0.1, cutoff=500), -11)
+        t += 0.14
+        k += 1
+    D(B['choice'], B['back'] - B['choice'], 36.7, -11)
+    for i in range(int((B['back'] - B['choice']) / 0.5)):
+        S.add('perc', B['choice'] + i * 0.5, drum_tick(0.5), -12)
+    S.add('perc', B['back'], drum_taiko(1.4, 40), -3)
+    return S
+
+
+CUES['video008'] = cue_video008
+LOOPS['video008'] = None
+
 if __name__ == '__main__':
     cue, out = sys.argv[1], sys.argv[2]
     S = CUES[cue]()

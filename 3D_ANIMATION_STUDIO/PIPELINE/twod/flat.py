@@ -268,6 +268,8 @@ def _head_front(cv, P, back):
         cv.drawPath(hair, paint(HR))
         cv.drawPath(blob([(-40, -230), (60, -235), (150, -190), (60, -175)]), paint(HRS))
     _cap(cv, P, fx)
+    if P.get('faceless'):                                 # smooth skin where the face should be
+        return
     lid = P['lids']
     for side in (-1, 1):
         ex, ey = fx + side * 72, -10

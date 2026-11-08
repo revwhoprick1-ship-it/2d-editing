@@ -1183,5 +1183,68 @@
   "duration_s": 1.2,
   "sample_rate": 48000,
   "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/bus_engine.flac",
+  "category": "comedy",
+  "name": "bus_engine",
+  "description": "City bus interior: diesel idle rumble + road noise, loopable (6 s).",
+  "duration_s": 6.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/bus_brakes.flac",
+  "category": "comedy",
+  "name": "bus_brakes",
+  "description": "Air brakes hiss + long brake squeal (2.2 s).",
+  "duration_s": 2.2,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/stop_bell.flac",
+  "category": "comedy",
+  "name": "stop_bell",
+  "description": "Bus stop-request bell: two-tone ding (1.0 s).",
+  "duration_s": 1.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/blink_cut.flac",
+  "category": "comedy",
+  "name": "blink_cut",
+  "description": "A blink: soft thump + everything drops out (0.4 s).",
+  "duration_s": 0.4,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/phone_beep.flac",
+  "category": "comedy",
+  "name": "phone_beep",
+  "description": "Phone video play tap (0.2 s).",
+  "duration_s": 0.2,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/head_turn_mass.flac",
+  "category": "comedy",
+  "name": "head_turn_mass",
+  "description": "Many heads turning at once: fabric rustle + creak (0.7 s).",
+  "duration_s": 0.7,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/glass_tap.flac",
+  "category": "comedy",
+  "name": "glass_tap",
+  "description": "Knuckles tapping on a bus window, slowly, from outside (1.2 s).",
+  "duration_s": 1.2,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
  }
 ]

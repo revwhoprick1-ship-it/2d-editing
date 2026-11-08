@@ -624,6 +624,56 @@ def knob_turn():
     return normalize(x, -6)
 
 
+# ---------------------------------------------------------------- bus pack (VIDEO_008 "Last Bus")
+@reg('bus_engine', 'City bus interior: diesel idle rumble + road noise, loopable (6 s).')
+def bus_engine():
+    n = int(6.0 * SR); tt = np.arange(n) / SR
+    x = (np.sin(2 * np.pi * 34 * tt) + 0.5 * np.sin(2 * np.pi * 68 * tt) + 0.25 * np.sin(2 * np.pi * 102 * tt)) * (0.8 + 0.2 * np.sin(2 * np.pi * 4.3 * tt))
+    x = x * 0.35 + lowpass(noise(n, 'brown', 801), 300) * 0.9 + bandpass(noise(n, 'pink', 802), 300, 1500) * 0.12
+    return normalize(fade(x, 0.2, 0.2), -10)
+
+@reg('bus_brakes', 'Air brakes hiss + long brake squeal (2.2 s).')
+def bus_brakes():
+    n = int(2.2 * SR); tt = np.arange(n) / SR
+    sq = np.sin(2 * np.pi * np.cumsum(1900 + 120 * np.sin(2 * np.pi * 7 * tt)) / SR) * env_adsr(n, 0.2, 0.2, 0.7, 0.4) * 0.35
+    hiss = highpass(noise(n, 'white', 803), 2500) * np.clip((tt - 1.6) / 0.05, 0, 1) * np.exp(-np.clip(tt - 1.65, 0, None) * 4) * 0.8
+    return normalize(sq + hiss, -4)
+
+@reg('stop_bell', 'Bus stop-request bell: two-tone ding (1.0 s).')
+def stop_bell():
+    a = fm_bell(1567.98, 0.9, ratio=2.0, index=0.5, decay=0.35)
+    b = fm_bell(1318.5, 0.9, ratio=2.0, index=0.5, decay=0.4)
+    out = np.zeros(int(1.0 * SR)); out[:len(a)] += a; out[int(0.18 * SR):int(0.18 * SR) + len(b)] += b[:len(out) - int(0.18 * SR)]
+    return normalize(out, -4)
+
+@reg('blink_cut', 'A blink: soft thump + everything drops out (0.4 s).')
+def blink_cut():
+    n = int(0.4 * SR); tt = np.arange(n) / SR
+    x = np.sin(2 * np.pi * np.cumsum(70 * (1 + np.exp(-tt / 0.02))) / SR) * env_exp(n, 0.08) + lowpass(noise(n, 'pink', 804), 600) * env_exp(n, 0.03) * 0.6
+    return normalize(x, -3)
+
+@reg('phone_beep', 'Phone video play tap (0.2 s).')
+def phone_beep():
+    a = fm_bell(2093.0, 0.2, ratio=1.0, index=0.2, decay=0.06)
+    return normalize(a, -10)
+
+@reg('head_turn_mass', 'Many heads turning at once: fabric rustle + creak (0.7 s).')
+def head_turn_mass():
+    n = int(0.7 * SR); tt = np.arange(n) / SR
+    x = bandpass(noise(n, 'white', 805), 800, 5000) * env_adsr(n, 0.05, 0.1, 0.6, 0.3) * 0.7
+    x += bandpass(noise(n, 'white', 806), 300, 900) * (np.sin(2 * np.pi * 21 * tt) > 0.5) * env_adsr(n, 0.1, 0.1, 0.5, 0.2) * 0.4
+    return normalize(x, -6)
+
+@reg('glass_tap', 'Knuckles tapping on a bus window, slowly, from outside (1.2 s).')
+def glass_tap():
+    n = int(1.2 * SR); out = np.zeros(n)
+    for t0 in (0.05, 0.45, 0.85):
+        k = int(0.12 * SR); i = int(t0 * SR); tt = np.arange(k) / SR
+        b = (np.sin(2 * np.pi * 1100 * tt) + 0.6 * np.sin(2 * np.pi * 2730 * tt)) * env_exp(k, 0.02)
+        out[i:i + k] += b
+    return normalize(convolve_stereo(out, reverb_ir(0.6, 0.3, seed=807), 0.2), -6)
+
+
 def main():
     root = sys.argv[1]
     d = os.path.join(root, 'sound_effects', 'comedy')

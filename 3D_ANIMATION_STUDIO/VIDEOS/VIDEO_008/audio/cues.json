@@ -1,0 +1,229 @@
+{
+ "duration": 57.88,
+ "loop": true,
+ "narration": "narration/narration_raw.wav",
+ "narration_offset": 0.0,
+ "music": "music_score.wav",
+ "music_gain_db": 1,
+ "music_cue": "cue_video008",
+ "music_gates": [
+  [
+   0.36,
+   0.48,
+   0.02
+  ]
+ ],
+ "targets": {
+  "narration_lufs": -16,
+  "master_lufs": -14,
+  "true_peak": -1.0,
+  "duck_db": 5
+ },
+ "cues": [
+  {
+   "t": 0.0,
+   "file": "AUDIO/sound_effects/comedy/bus_engine.flac",
+   "gain": -10,
+   "bus": "amb",
+   "note": "bus engine + road (the whole ride)",
+   "loop": true,
+   "dur": 57.88,
+   "fade_out": 0.05
+  },
+  {
+   "t": 0.0,
+   "file": "AUDIO/ambience/crowd.flac",
+   "gain": -26,
+   "bus": "amb",
+   "note": "passengers murmur, phones",
+   "dur": 0.38,
+   "fade_out": 0.02
+  },
+  {
+   "t": 0.38,
+   "file": "AUDIO/sound_effects/comedy/blink_cut.flac",
+   "gain": -6,
+   "bus": "sfx",
+   "note": "THE BLINK"
+  },
+  {
+   "t": 0.48,
+   "file": "AUDIO/sound_effects/transitions/bass_impact.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "they are gone"
+  },
+  {
+   "t": 3.367,
+   "file": "AUDIO/sound_effects/comedy/phone_buzz.flac",
+   "gain": -19,
+   "bus": "sfx",
+   "note": "a phone left on a seat buzzes"
+  },
+  {
+   "t": 9.155,
+   "file": "AUDIO/sound_effects/comedy/phone_beep.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "play"
+  },
+  {
+   "t": 9.255,
+   "file": "AUDIO/ambience/crowd.flac",
+   "gain": -28,
+   "bus": "amb",
+   "note": "the recording: passengers murmur",
+   "dur": 4.415000000000001,
+   "fade_out": 0.02
+  },
+  {
+   "t": 13.57,
+   "file": "AUDIO/sound_effects/comedy/head_turn_mass.flac",
+   "gain": -5,
+   "bus": "sfx",
+   "note": "everyone turns at once"
+  },
+  {
+   "t": 13.62,
+   "file": "AUDIO/sound_effects/comedy/horror_sting.flac",
+   "gain": -10,
+   "bus": "sfx",
+   "note": "they look at you"
+  },
+  {
+   "t": 14.983,
+   "file": "AUDIO/sound_effects/comedy/tv_static_click.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "video ends"
+  },
+  {
+   "t": 16.672,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "you jump up"
+  },
+  {
+   "t": 23.595,
+   "file": "AUDIO/sound_effects/environment/electronic_glitch.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "route screen: YOU"
+  },
+  {
+   "t": 27.713,
+   "file": "AUDIO/ambience/wind.flac",
+   "gain": -18,
+   "bus": "amb",
+   "note": "fog outside",
+   "dur": 7.9780000000000015,
+   "fade_in": 0.5
+  },
+  {
+   "t": 30.733,
+   "file": "AUDIO/sound_effects/comedy/glass_tap.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "tap tap tap on the glass"
+  },
+  {
+   "t": 34.517,
+   "file": "AUDIO/sound_effects/bio/creature_presence.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "they wave"
+  },
+  {
+   "t": 35.831,
+   "file": "AUDIO/sound_effects/environment/button_click.flac",
+   "gain": -7,
+   "bus": "sfx",
+   "note": "you slam the button"
+  },
+  {
+   "t": 35.881,
+   "file": "AUDIO/sound_effects/comedy/stop_bell.flac",
+   "gain": -8,
+   "bus": "sfx",
+   "note": "stop requested ding"
+  },
+  {
+   "t": 40.138,
+   "file": "AUDIO/sound_effects/comedy/paper_rustle.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "ticket in your hand"
+  },
+  {
+   "t": 43.393,
+   "file": "AUDIO/sound_effects/bio/heartbeat_lubdub.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "the mirror"
+  },
+  {
+   "t": 45.353,
+   "file": "AUDIO/sound_effects/comedy/horror_sting.flac",
+   "gain": -5,
+   "bus": "sfx",
+   "note": "NO FACE"
+  },
+  {
+   "t": 45.373,
+   "file": "AUDIO/sound_effects/transitions/bass_impact.flac",
+   "gain": -8,
+   "bus": "sfx",
+   "note": "impact"
+  },
+  {
+   "t": 46.424,
+   "file": "AUDIO/sound_effects/comedy/bus_brakes.flac",
+   "gain": -7,
+   "bus": "sfx",
+   "note": "the bus slows: brakes"
+  },
+  {
+   "t": 46.724,
+   "file": "AUDIO/sound_effects/comedy/heavy_breath.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "panic breathing"
+  },
+  {
+   "t": 49.402,
+   "file": "AUDIO/sound_effects/comedy/heavy_breath.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "breathing under the choice"
+  },
+  {
+   "t": 51.402,
+   "file": "AUDIO/sound_effects/comedy/heavy_breath.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "breathing"
+  },
+  {
+   "t": 57.13,
+   "file": "AUDIO/sound_effects/comedy/power_cut.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "lights flicker"
+  },
+  {
+   "t": 57.38,
+   "file": "AUDIO/sound_effects/comedy/flicker_buzz.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "flicker"
+  },
+  {
+   "t": 57.46,
+   "file": "AUDIO/sound_effects/comedy/head_turn_mass.flac",
+   "gain": -7,
+   "bus": "sfx",
+   "note": "THEY ARE BACK. staring. -> frame 0"
+  }
+ ]
+}

@@ -1,0 +1,185 @@
+{
+ "title": "Last Bus - Part 1",
+ "engine": "chatterbox",
+ "voice_ref": "kokoro:am_fenrir",
+ "tempo": 1.06,
+ "lines": [
+  {
+   "id": "N01",
+   "who": "N",
+   "text": "You blinked. And everyone on this bus... is gone.",
+   "delivery": "sudden, low",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.5
+  },
+  {
+   "id": "N02",
+   "who": "N",
+   "text": "Their phones are still on the seats. Still lit up. Still warm.",
+   "delivery": "creeping",
+   "exaggeration": 0.5,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "N03",
+   "who": "N",
+   "text": "One of them is still recording. You pick it up and press play.",
+   "delivery": "tense",
+   "exaggeration": 0.5,
+   "cfg": 0.5,
+   "pause_after": 0.4
+  },
+  {
+   "id": "N04",
+   "who": "N",
+   "text": "One minute ago. Everyone is here. Then, all at the same time... they turn around and look at you.",
+   "delivery": "dread, slow",
+   "exaggeration": 0.65,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "N05",
+   "who": "N",
+   "text": "And the video ends.",
+   "delivery": "flat, ominous",
+   "exaggeration": 0.55,
+   "cfg": 0.5,
+   "pause_after": 0.5
+  },
+  {
+   "id": "D1",
+   "who": "M",
+   "text": "Hey! Driver! Where did everyone go?",
+   "delivery": "panic",
+   "exaggeration": 0.8,
+   "cfg": 0.5,
+   "pause_after": 0.3,
+   "voice_ref": "kokoro:am_puck"
+  },
+  {
+   "id": "N06",
+   "who": "N",
+   "text": "The driver doesn't turn around.",
+   "delivery": "low",
+   "exaggeration": 0.5,
+   "cfg": 0.5,
+   "pause_after": 0.2
+  },
+  {
+   "id": "D2",
+   "who": "DR",
+   "text": "They got off at their stop.",
+   "delivery": "calm, deep, slow",
+   "exaggeration": 0.3,
+   "cfg": 0.5,
+   "pause_after": 0.4,
+   "voice_ref": "kokoro:am_onyx",
+   "tempo": 0.9
+  },
+  {
+   "id": "D3",
+   "who": "M",
+   "text": "We haven't stopped once!",
+   "delivery": "panic, angry",
+   "exaggeration": 0.85,
+   "cfg": 0.5,
+   "pause_after": 0.4,
+   "voice_ref": "kokoro:am_puck"
+  },
+  {
+   "id": "N07",
+   "who": "N",
+   "text": "You look up at the route screen. The next stop isn't a street. It just says... you.",
+   "delivery": "dread",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.5
+  },
+  {
+   "id": "N08",
+   "who": "N",
+   "text": "Outside, the city is gone. There's only fog... and faces in the fog.",
+   "delivery": "whisper, scary",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "N09",
+   "who": "N",
+   "text": "It's them. Every passenger. Standing perfectly still. Waving goodbye.",
+   "delivery": "creeping, slow",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.5
+  },
+  {
+   "id": "N10",
+   "who": "N",
+   "text": "You slam the stop button.",
+   "delivery": "fast",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.4
+  },
+  {
+   "id": "D4",
+   "who": "DR",
+   "text": "Not yet. You still have a ticket.",
+   "delivery": "calm, deep",
+   "exaggeration": 0.3,
+   "cfg": 0.5,
+   "pause_after": 0.4,
+   "voice_ref": "kokoro:am_onyx",
+   "tempo": 0.9
+  },
+  {
+   "id": "N11",
+   "who": "N",
+   "text": "You never bought a ticket. But it's in your hand. One way.",
+   "delivery": "tense",
+   "exaggeration": 0.55,
+   "cfg": 0.5,
+   "pause_after": 0.5
+  },
+  {
+   "id": "N12",
+   "who": "N",
+   "text": "Then the driver looks at you in the mirror... and he doesn't have a face.",
+   "delivery": "terror, slow",
+   "exaggeration": 0.7,
+   "cfg": 0.5,
+   "pause_after": 0.6
+  },
+  {
+   "id": "N13",
+   "who": "N",
+   "text": "The bus is slowing down. Your stop is coming.",
+   "delivery": "urgent",
+   "exaggeration": 0.55,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "N14",
+   "who": "N",
+   "text": "Pull the emergency handle. Smash the window. Or sit back down.",
+   "delivery": "urgent",
+   "exaggeration": 0.5,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "N15",
+   "who": "N",
+   "text": "Comment one, two, or three. The top comment decides part two.",
+   "delivery": "low, final",
+   "exaggeration": 0.45,
+   "cfg": 0.5,
+   "pause_after": 0.2
+  }
+ ]
+}

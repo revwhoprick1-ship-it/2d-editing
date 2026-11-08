@@ -1,0 +1,58 @@
+{
+ "file": "EXPORTS/VIDEO_008_Last_Bus_Part_1.mp4",
+ "video": {
+  "frames": 1736,
+  "duration_s": 57.86666666666667,
+  "seam_diff": 0.0808,
+  "median_frame_diff": 0.0018,
+  "p90_frame_diff": 0.0095,
+  "largest_cut_diffs": [
+   0.4988,
+   0.4599,
+   0.3961,
+   0.3639,
+   0.3256
+  ],
+  "seam_percentile_among_frame_changes": 98.7,
+  "first_frame_mean_luma": 0.238,
+  "last_frame_mean_luma": 0.263,
+  "darkest_frame_mean_luma": 0.008
+ },
+ "audio": {
+  "decoded_duration_s": 57.856,
+  "video_minus_audio_ms": 10.7,
+  "rms_last_100ms_db": -15.9,
+  "rms_first_100ms_db": -14.2,
+  "rms_whole_db": -16.4,
+  "seam_sample_jump": 0.10185,
+  "local_median_sample_jump": 0.01703,
+  "local_max_sample_jump": 0.10185
+ },
+ "loop_x3": {
+  "black_segments": [
+   [
+    "0.433333",
+    "0.533333"
+   ],
+   [
+    "58.3",
+    "58.4"
+   ],
+   [
+    "116.167",
+    "116.267"
+   ]
+  ],
+  "silences_over_250ms_below_-50dB": [],
+  "duration_s": 173.633333
+ },
+ "checks": {
+  "seam_picture_change_is_ordinary (below the 90th percentile of frame changes)": false,
+  "no_black_frame_at_seam": true,
+  "no_black_segments_in_3x_loop": false,
+  "no_silence_in_3x_loop": true,
+  "no_audio_gap_at_seam (both sides within 20 dB of the mix)": true,
+  "no_click_at_seam (jump <= local max)": true,
+  "audio_video_length_match_within_25ms": true
+ }
+}

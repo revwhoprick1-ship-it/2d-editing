@@ -1,0 +1,1302 @@
+{
+ "voice": "chatterbox+kokoro:am_fenrir",
+ "sample_rate": 24000,
+ "lines": [
+  {
+   "id": "N01",
+   "who": "N",
+   "text": "You blinked. And everyone on this bus... is gone.",
+   "start": 0.0,
+   "end": 2.567,
+   "delivery": "sudden, low",
+   "speed": 1.06
+  },
+  {
+   "id": "N02",
+   "who": "N",
+   "text": "Their phones are still on the seats. Still lit up. Still warm.",
+   "start": 3.067,
+   "end": 6.315,
+   "delivery": "creeping",
+   "speed": 1.06
+  },
+  {
+   "id": "N03",
+   "who": "N",
+   "text": "One of them is still recording. You pick it up and press play.",
+   "start": 6.615,
+   "end": 9.53,
+   "delivery": "tense",
+   "speed": 1.06
+  },
+  {
+   "id": "N04",
+   "who": "N",
+   "text": "One minute ago. Everyone is here. Then, all at the same time... they turn around and look at you.",
+   "start": 9.93,
+   "end": 14.683,
+   "delivery": "dread, slow",
+   "speed": 1.06
+  },
+  {
+   "id": "N05",
+   "who": "N",
+   "text": "And the video ends.",
+   "start": 14.983,
+   "end": 16.272,
+   "delivery": "flat, ominous",
+   "speed": 1.06
+  },
+  {
+   "id": "D1",
+   "who": "M",
+   "text": "Hey! Driver! Where did everyone go?",
+   "start": 16.772,
+   "end": 18.186,
+   "delivery": "panic",
+   "speed": 1.06
+  },
+  {
+   "id": "N06",
+   "who": "N",
+   "text": "The driver doesn't turn around.",
+   "start": 18.486,
+   "end": 19.796,
+   "delivery": "low",
+   "speed": 1.06
+  },
+  {
+   "id": "D2",
+   "who": "DR",
+   "text": "They got off at their stop.",
+   "start": 19.996,
+   "end": 21.315,
+   "delivery": "calm, deep, slow",
+   "speed": 0.9
+  },
+  {
+   "id": "D3",
+   "who": "M",
+   "text": "We haven't stopped once!",
+   "start": 21.715,
+   "end": 23.195,
+   "delivery": "panic, angry",
+   "speed": 1.06
+  },
+  {
+   "id": "N07",
+   "who": "N",
+   "text": "You look up at the route screen. The next stop isn't a street. It just says... you.",
+   "start": 23.595,
+   "end": 27.213,
+   "delivery": "dread",
+   "speed": 1.06
+  },
+  {
+   "id": "N08",
+   "who": "N",
+   "text": "Outside, the city is gone. There's only fog... and faces in the fog.",
+   "start": 27.713,
+   "end": 31.157,
+   "delivery": "whisper, scary",
+   "speed": 1.06
+  },
+  {
+   "id": "N09",
+   "who": "N",
+   "text": "It's them. Every passenger. Standing perfectly still. Waving goodbye.",
+   "start": 31.457,
+   "end": 35.191,
+   "delivery": "creeping, slow",
+   "speed": 1.06
+  },
+  {
+   "id": "N10",
+   "who": "N",
+   "text": "You slam the stop button.",
+   "start": 35.691,
+   "end": 36.926,
+   "delivery": "fast",
+   "speed": 1.06
+  },
+  {
+   "id": "D4",
+   "who": "DR",
+   "text": "Not yet. You still have a ticket.",
+   "start": 37.326,
+   "end": 39.638,
+   "delivery": "calm, deep",
+   "speed": 0.9
+  },
+  {
+   "id": "N11",
+   "who": "N",
+   "text": "You never bought a ticket. But it's in your hand. One way.",
+   "start": 40.038,
+   "end": 42.693,
+   "delivery": "tense",
+   "speed": 1.06
+  },
+  {
+   "id": "N12",
+   "who": "N",
+   "text": "Then the driver looks at you in the mirror... and he doesn't have a face.",
+   "start": 43.193,
+   "end": 45.824,
+   "delivery": "terror, slow",
+   "speed": 1.06
+  },
+  {
+   "id": "N13",
+   "who": "N",
+   "text": "The bus is slowing down. Your stop is coming.",
+   "start": 46.424,
+   "end": 48.802,
+   "delivery": "urgent",
+   "speed": 1.06
+  },
+  {
+   "id": "N14",
+   "who": "N",
+   "text": "Pull the emergency handle. Smash the window. Or sit back down.",
+   "start": 49.102,
+   "end": 52.444,
+   "delivery": "urgent",
+   "speed": 1.06
+  },
+  {
+   "id": "N15",
+   "who": "N",
+   "text": "Comment one, two, or three. The top comment decides part two.",
+   "start": 52.744,
+   "end": 56.276,
+   "delivery": "low, final",
+   "speed": 1.06
+  }
+ ],
+ "words": [
+  {
+   "line": "N01",
+   "text": "You",
+   "start": 0.0,
+   "end": 0.12
+  },
+  {
+   "line": "N01",
+   "text": "blinked.",
+   "start": 0.12,
+   "end": 0.36
+  },
+  {
+   "line": "N01",
+   "text": "And",
+   "start": 0.66,
+   "end": 0.82
+  },
+  {
+   "line": "N01",
+   "text": "everyone",
+   "start": 0.82,
+   "end": 1.06
+  },
+  {
+   "line": "N01",
+   "text": "on",
+   "start": 1.06,
+   "end": 1.28
+  },
+  {
+   "line": "N01",
+   "text": "this",
+   "start": 1.28,
+   "end": 1.44
+  },
+  {
+   "line": "N01",
+   "text": "bus...",
+   "start": 1.44,
+   "end": 1.66
+  },
+  {
+   "line": "N01",
+   "text": "is",
+   "start": 1.66,
+   "end": 2.14
+  },
+  {
+   "line": "N01",
+   "text": "gone.",
+   "start": 2.14,
+   "end": 2.38
+  },
+  {
+   "line": "N02",
+   "text": "Their",
+   "start": 3.067,
+   "end": 3.227
+  },
+  {
+   "line": "N02",
+   "text": "phones",
+   "start": 3.227,
+   "end": 3.487
+  },
+  {
+   "line": "N02",
+   "text": "are",
+   "start": 3.487,
+   "end": 3.627
+  },
+  {
+   "line": "N02",
+   "text": "still",
+   "start": 3.627,
+   "end": 3.827
+  },
+  {
+   "line": "N02",
+   "text": "on",
+   "start": 3.827,
+   "end": 3.967
+  },
+  {
+   "line": "N02",
+   "text": "the",
+   "start": 3.967,
+   "end": 4.067
+  },
+  {
+   "line": "N02",
+   "text": "seats.",
+   "start": 4.067,
+   "end": 4.327
+  },
+  {
+   "line": "N02",
+   "text": "Still",
+   "start": 4.987,
+   "end": 5.027
+  },
+  {
+   "line": "N02",
+   "text": "lit",
+   "start": 5.027,
+   "end": 5.247
+  },
+  {
+   "line": "N02",
+   "text": "up.",
+   "start": 5.247,
+   "end": 5.467
+  },
+  {
+   "line": "N02",
+   "text": "Still",
+   "start": 5.787,
+   "end": 5.887
+  },
+  {
+   "line": "N02",
+   "text": "warm.",
+   "start": 5.887,
+   "end": 6.207
+  },
+  {
+   "line": "N03",
+   "text": "One",
+   "start": 6.615,
+   "end": 6.795
+  },
+  {
+   "line": "N03",
+   "text": "of",
+   "start": 6.795,
+   "end": 6.915
+  },
+  {
+   "line": "N03",
+   "text": "them",
+   "start": 6.915,
+   "end": 7.115
+  },
+  {
+   "line": "N03",
+   "text": "is",
+   "start": 7.115,
+   "end": 7.335
+  },
+  {
+   "line": "N03",
+   "text": "still",
+   "start": 7.335,
+   "end": 7.535
+  },
+  {
+   "line": "N03",
+   "text": "recording.",
+   "start": 7.535,
+   "end": 7.955
+  },
+  {
+   "line": "N03",
+   "text": "You",
+   "start": 8.255,
+   "end": 8.335
+  },
+  {
+   "line": "N03",
+   "text": "pick",
+   "start": 8.335,
+   "end": 8.495
+  },
+  {
+   "line": "N03",
+   "text": "it",
+   "start": 8.495,
+   "end": 8.615
+  },
+  {
+   "line": "N03",
+   "text": "up",
+   "start": 8.615,
+   "end": 8.775
+  },
+  {
+   "line": "N03",
+   "text": "and",
+   "start": 8.775,
+   "end": 8.955
+  },
+  {
+   "line": "N03",
+   "text": "press",
+   "start": 8.955,
+   "end": 9.155
+  },
+  {
+   "line": "N03",
+   "text": "play.",
+   "start": 9.155,
+   "end": 9.395
+  },
+  {
+   "line": "N04",
+   "text": "One",
+   "start": 9.93,
+   "end": 10.15
+  },
+  {
+   "line": "N04",
+   "text": "minute",
+   "start": 10.15,
+   "end": 10.33
+  },
+  {
+   "line": "N04",
+   "text": "ago.",
+   "start": 10.33,
+   "end": 10.61
+  },
+  {
+   "line": "N04",
+   "text": "Everyone",
+   "start": 10.83,
+   "end": 11.05
+  },
+  {
+   "line": "N04",
+   "text": "is",
+   "start": 11.05,
+   "end": 11.27
+  },
+  {
+   "line": "N04",
+   "text": "here.",
+   "start": 11.27,
+   "end": 11.53
+  },
+  {
+   "line": "N04",
+   "text": "Then,",
+   "start": 11.81,
+   "end": 12.13
+  },
+  {
+   "line": "N04",
+   "text": "all",
+   "start": 12.37,
+   "end": 12.57
+  },
+  {
+   "line": "N04",
+   "text": "at",
+   "start": 12.57,
+   "end": 12.69
+  },
+  {
+   "line": "N04",
+   "text": "the",
+   "start": 12.69,
+   "end": 12.81
+  },
+  {
+   "line": "N04",
+   "text": "same",
+   "start": 12.81,
+   "end": 12.97
+  },
+  {
+   "line": "N04",
+   "text": "time...",
+   "start": 12.97,
+   "end": 13.33
+  },
+  {
+   "line": "N04",
+   "text": "they",
+   "start": 13.43,
+   "end": 13.57
+  },
+  {
+   "line": "N04",
+   "text": "turn",
+   "start": 13.57,
+   "end": 13.75
+  },
+  {
+   "line": "N04",
+   "text": "around",
+   "start": 13.75,
+   "end": 14.01
+  },
+  {
+   "line": "N04",
+   "text": "and",
+   "start": 14.01,
+   "end": 14.23
+  },
+  {
+   "line": "N04",
+   "text": "look",
+   "start": 14.23,
+   "end": 14.33
+  },
+  {
+   "line": "N04",
+   "text": "at",
+   "start": 14.33,
+   "end": 14.47
+  },
+  {
+   "line": "N04",
+   "text": "you.",
+   "start": 14.47,
+   "end": 14.65
+  },
+  {
+   "line": "N05",
+   "text": "And",
+   "start": 14.983,
+   "end": 15.263
+  },
+  {
+   "line": "N05",
+   "text": "the",
+   "start": 15.263,
+   "end": 15.463
+  },
+  {
+   "line": "N05",
+   "text": "video",
+   "start": 15.463,
+   "end": 15.703
+  },
+  {
+   "line": "N05",
+   "text": "ends.",
+   "start": 15.703,
+   "end": 16.043
+  },
+  {
+   "line": "D1",
+   "text": "Hey!",
+   "start": 16.772,
+   "end": 16.992
+  },
+  {
+   "line": "D1",
+   "text": "Driver!",
+   "start": 17.172,
+   "end": 17.312
+  },
+  {
+   "line": "D1",
+   "text": "Where",
+   "start": 17.472,
+   "end": 17.492
+  },
+  {
+   "line": "D1",
+   "text": "did",
+   "start": 17.492,
+   "end": 17.592
+  },
+  {
+   "line": "D1",
+   "text": "everyone",
+   "start": 17.592,
+   "end": 17.792
+  },
+  {
+   "line": "D1",
+   "text": "go?",
+   "start": 17.792,
+   "end": 18.072
+  },
+  {
+   "line": "N06",
+   "text": "The",
+   "start": 18.486,
+   "end": 18.626
+  },
+  {
+   "line": "N06",
+   "text": "driver",
+   "start": 18.626,
+   "end": 18.846
+  },
+  {
+   "line": "N06",
+   "text": "doesn't",
+   "start": 18.846,
+   "end": 19.206
+  },
+  {
+   "line": "N06",
+   "text": "turn",
+   "start": 19.206,
+   "end": 19.326
+  },
+  {
+   "line": "N06",
+   "text": "around.",
+   "start": 19.326,
+   "end": 19.626
+  },
+  {
+   "line": "D2",
+   "text": "They",
+   "start": 19.996,
+   "end": 20.156
+  },
+  {
+   "line": "D2",
+   "text": "got",
+   "start": 20.156,
+   "end": 20.336
+  },
+  {
+   "line": "D2",
+   "text": "off",
+   "start": 20.336,
+   "end": 20.576
+  },
+  {
+   "line": "D2",
+   "text": "at",
+   "start": 20.576,
+   "end": 20.756
+  },
+  {
+   "line": "D2",
+   "text": "their",
+   "start": 20.756,
+   "end": 20.916
+  },
+  {
+   "line": "D2",
+   "text": "stop.",
+   "start": 20.916,
+   "end": 21.216
+  },
+  {
+   "line": "D3",
+   "text": "We",
+   "start": 21.715,
+   "end": 21.855
+  },
+  {
+   "line": "D3",
+   "text": "haven't",
+   "start": 21.855,
+   "end": 22.195
+  },
+  {
+   "line": "D3",
+   "text": "stopped",
+   "start": 22.195,
+   "end": 22.395
+  },
+  {
+   "line": "D3",
+   "text": "once!",
+   "start": 22.395,
+   "end": 22.835
+  },
+  {
+   "line": "N07",
+   "text": "You",
+   "start": 23.595,
+   "end": 23.735
+  },
+  {
+   "line": "N07",
+   "text": "look",
+   "start": 23.735,
+   "end": 23.875
+  },
+  {
+   "line": "N07",
+   "text": "up",
+   "start": 23.875,
+   "end": 23.995
+  },
+  {
+   "line": "N07",
+   "text": "at",
+   "start": 23.995,
+   "end": 24.115
+  },
+  {
+   "line": "N07",
+   "text": "the",
+   "start": 24.115,
+   "end": 24.175
+  },
+  {
+   "line": "N07",
+   "text": "route",
+   "start": 24.175,
+   "end": 24.355
+  },
+  {
+   "line": "N07",
+   "text": "screen.",
+   "start": 24.355,
+   "end": 24.655
+  },
+  {
+   "line": "N07",
+   "text": "The",
+   "start": 24.875,
+   "end": 24.975
+  },
+  {
+   "line": "N07",
+   "text": "next",
+   "start": 24.975,
+   "end": 25.135
+  },
+  {
+   "line": "N07",
+   "text": "stop",
+   "start": 25.135,
+   "end": 25.375
+  },
+  {
+   "line": "N07",
+   "text": "isn't",
+   "start": 25.375,
+   "end": 25.675
+  },
+  {
+   "line": "N07",
+   "text": "a",
+   "start": 25.675,
+   "end": 25.775
+  },
+  {
+   "line": "N07",
+   "text": "street.",
+   "start": 25.775,
+   "end": 26.015
+  },
+  {
+   "line": "N07",
+   "text": "It",
+   "start": 26.195,
+   "end": 26.215
+  },
+  {
+   "line": "N07",
+   "text": "just",
+   "start": 26.215,
+   "end": 26.375
+  },
+  {
+   "line": "N07",
+   "text": "says...",
+   "start": 26.375,
+   "end": 26.655
+  },
+  {
+   "line": "N07",
+   "text": "you.",
+   "start": 26.835,
+   "end": 27.075
+  },
+  {
+   "line": "N08",
+   "text": "Outside,",
+   "start": 27.713,
+   "end": 28.133
+  },
+  {
+   "line": "N08",
+   "text": "the",
+   "start": 28.493,
+   "end": 28.573
+  },
+  {
+   "line": "N08",
+   "text": "city",
+   "start": 28.573,
+   "end": 28.733
+  },
+  {
+   "line": "N08",
+   "text": "is",
+   "start": 28.733,
+   "end": 28.913
+  },
+  {
+   "line": "N08",
+   "text": "gone.",
+   "start": 28.913,
+   "end": 29.133
+  },
+  {
+   "line": "N08",
+   "text": "There's",
+   "start": 29.333,
+   "end": 29.473
+  },
+  {
+   "line": "N08",
+   "text": "only",
+   "start": 29.473,
+   "end": 29.653
+  },
+  {
+   "line": "N08",
+   "text": "fog...",
+   "start": 29.653,
+   "end": 29.933
+  },
+  {
+   "line": "N08",
+   "text": "and",
+   "start": 30.213,
+   "end": 30.333
+  },
+  {
+   "line": "N08",
+   "text": "faces",
+   "start": 30.333,
+   "end": 30.533
+  },
+  {
+   "line": "N08",
+   "text": "in",
+   "start": 30.533,
+   "end": 30.793
+  },
+  {
+   "line": "N08",
+   "text": "the",
+   "start": 30.793,
+   "end": 30.853
+  },
+  {
+   "line": "N08",
+   "text": "fog.",
+   "start": 30.853,
+   "end": 31.033
+  },
+  {
+   "line": "N09",
+   "text": "It's",
+   "start": 31.457,
+   "end": 31.697
+  },
+  {
+   "line": "N09",
+   "text": "them.",
+   "start": 31.697,
+   "end": 31.937
+  },
+  {
+   "line": "N09",
+   "text": "Every",
+   "start": 32.237,
+   "end": 32.437
+  },
+  {
+   "line": "N09",
+   "text": "passenger.",
+   "start": 32.437,
+   "end": 32.917
+  },
+  {
+   "line": "N09",
+   "text": "Standing",
+   "start": 33.257,
+   "end": 33.377
+  },
+  {
+   "line": "N09",
+   "text": "perfectly",
+   "start": 33.377,
+   "end": 33.817
+  },
+  {
+   "line": "N09",
+   "text": "still.",
+   "start": 33.817,
+   "end": 34.217
+  },
+  {
+   "line": "N09",
+   "text": "Waving",
+   "start": 34.517,
+   "end": 34.657
+  },
+  {
+   "line": "N09",
+   "text": "goodbye.",
+   "start": 34.657,
+   "end": 35.037
+  },
+  {
+   "line": "N10",
+   "text": "You",
+   "start": 35.691,
+   "end": 35.831
+  },
+  {
+   "line": "N10",
+   "text": "slam",
+   "start": 35.831,
+   "end": 36.151
+  },
+  {
+   "line": "N10",
+   "text": "the",
+   "start": 36.151,
+   "end": 36.311
+  },
+  {
+   "line": "N10",
+   "text": "stop",
+   "start": 36.311,
+   "end": 36.531
+  },
+  {
+   "line": "N10",
+   "text": "button.",
+   "start": 36.531,
+   "end": 36.731
+  },
+  {
+   "line": "D4",
+   "text": "Not",
+   "start": 37.326,
+   "end": 37.586
+  },
+  {
+   "line": "D4",
+   "text": "yet.",
+   "start": 37.586,
+   "end": 37.866
+  },
+  {
+   "line": "D4",
+   "text": "You",
+   "start": 38.446,
+   "end": 38.646
+  },
+  {
+   "line": "D4",
+   "text": "still",
+   "start": 38.646,
+   "end": 38.886
+  },
+  {
+   "line": "D4",
+   "text": "have",
+   "start": 38.886,
+   "end": 39.086
+  },
+  {
+   "line": "D4",
+   "text": "a",
+   "start": 39.086,
+   "end": 39.226
+  },
+  {
+   "line": "D4",
+   "text": "ticket.",
+   "start": 39.226,
+   "end": 39.426
+  },
+  {
+   "line": "N11",
+   "text": "You",
+   "start": 40.038,
+   "end": 40.198
+  },
+  {
+   "line": "N11",
+   "text": "never",
+   "start": 40.198,
+   "end": 40.458
+  },
+  {
+   "line": "N11",
+   "text": "bought",
+   "start": 40.458,
+   "end": 40.658
+  },
+  {
+   "line": "N11",
+   "text": "a",
+   "start": 40.658,
+   "end": 40.758
+  },
+  {
+   "line": "N11",
+   "text": "ticket.",
+   "start": 40.758,
+   "end": 40.978
+  },
+  {
+   "line": "N11",
+   "text": "But",
+   "start": 41.238,
+   "end": 41.318
+  },
+  {
+   "line": "N11",
+   "text": "it's",
+   "start": 41.318,
+   "end": 41.498
+  },
+  {
+   "line": "N11",
+   "text": "in",
+   "start": 41.498,
+   "end": 41.618
+  },
+  {
+   "line": "N11",
+   "text": "your",
+   "start": 41.618,
+   "end": 41.738
+  },
+  {
+   "line": "N11",
+   "text": "hand.",
+   "start": 41.738,
+   "end": 42.078
+  },
+  {
+   "line": "N11",
+   "text": "One",
+   "start": 42.318,
+   "end": 42.418
+  },
+  {
+   "line": "N11",
+   "text": "way.",
+   "start": 42.418,
+   "end": 42.598
+  },
+  {
+   "line": "N12",
+   "text": "Then",
+   "start": 43.193,
+   "end": 43.353
+  },
+  {
+   "line": "N12",
+   "text": "the",
+   "start": 43.353,
+   "end": 43.493
+  },
+  {
+   "line": "N12",
+   "text": "driver",
+   "start": 43.493,
+   "end": 43.693
+  },
+  {
+   "line": "N12",
+   "text": "looks",
+   "start": 43.693,
+   "end": 43.913
+  },
+  {
+   "line": "N12",
+   "text": "at",
+   "start": 43.913,
+   "end": 44.073
+  },
+  {
+   "line": "N12",
+   "text": "you",
+   "start": 44.073,
+   "end": 44.153
+  },
+  {
+   "line": "N12",
+   "text": "in",
+   "start": 44.153,
+   "end": 44.233
+  },
+  {
+   "line": "N12",
+   "text": "the",
+   "start": 44.233,
+   "end": 44.313
+  },
+  {
+   "line": "N12",
+   "text": "mirror...",
+   "start": 44.313,
+   "end": 44.513
+  },
+  {
+   "line": "N12",
+   "text": "and",
+   "start": 44.513,
+   "end": 44.713
+  },
+  {
+   "line": "N12",
+   "text": "he",
+   "start": 44.713,
+   "end": 44.813
+  },
+  {
+   "line": "N12",
+   "text": "doesn't",
+   "start": 44.813,
+   "end": 45.113
+  },
+  {
+   "line": "N12",
+   "text": "have",
+   "start": 45.113,
+   "end": 45.213
+  },
+  {
+   "line": "N12",
+   "text": "a",
+   "start": 45.213,
+   "end": 45.353
+  },
+  {
+   "line": "N12",
+   "text": "face.",
+   "start": 45.353,
+   "end": 45.573
+  },
+  {
+   "line": "N13",
+   "text": "The",
+   "start": 46.424,
+   "end": 46.564
+  },
+  {
+   "line": "N13",
+   "text": "bus",
+   "start": 46.564,
+   "end": 46.744
+  },
+  {
+   "line": "N13",
+   "text": "is",
+   "start": 46.744,
+   "end": 46.924
+  },
+  {
+   "line": "N13",
+   "text": "slowing",
+   "start": 46.924,
+   "end": 47.144
+  },
+  {
+   "line": "N13",
+   "text": "down.",
+   "start": 47.144,
+   "end": 47.524
+  },
+  {
+   "line": "N13",
+   "text": "Your",
+   "start": 47.784,
+   "end": 47.864
+  },
+  {
+   "line": "N13",
+   "text": "stop",
+   "start": 47.864,
+   "end": 48.164
+  },
+  {
+   "line": "N13",
+   "text": "is",
+   "start": 48.164,
+   "end": 48.344
+  },
+  {
+   "line": "N13",
+   "text": "coming.",
+   "start": 48.344,
+   "end": 48.604
+  },
+  {
+   "line": "N14",
+   "text": "Pull",
+   "start": 49.102,
+   "end": 49.282
+  },
+  {
+   "line": "N14",
+   "text": "the",
+   "start": 49.282,
+   "end": 49.402
+  },
+  {
+   "line": "N14",
+   "text": "emergency",
+   "start": 49.402,
+   "end": 49.702
+  },
+  {
+   "line": "N14",
+   "text": "handle.",
+   "start": 49.702,
+   "end": 50.182
+  },
+  {
+   "line": "N14",
+   "text": "Smash",
+   "start": 50.602,
+   "end": 50.662
+  },
+  {
+   "line": "N14",
+   "text": "the",
+   "start": 50.662,
+   "end": 50.862
+  },
+  {
+   "line": "N14",
+   "text": "window.",
+   "start": 50.862,
+   "end": 51.142
+  },
+  {
+   "line": "N14",
+   "text": "Or",
+   "start": 51.482,
+   "end": 51.682
+  },
+  {
+   "line": "N14",
+   "text": "sit",
+   "start": 51.682,
+   "end": 51.922
+  },
+  {
+   "line": "N14",
+   "text": "back",
+   "start": 51.922,
+   "end": 52.102
+  },
+  {
+   "line": "N14",
+   "text": "down.",
+   "start": 52.102,
+   "end": 52.342
+  },
+  {
+   "line": "N15",
+   "text": "Comment",
+   "start": 52.744,
+   "end": 53.044
+  },
+  {
+   "line": "N15",
+   "text": "one,",
+   "start": 53.044,
+   "end": 53.344
+  },
+  {
+   "line": "N15",
+   "text": "two,",
+   "start": 53.484,
+   "end": 53.624
+  },
+  {
+   "line": "N15",
+   "text": "or",
+   "start": 53.764,
+   "end": 53.844
+  },
+  {
+   "line": "N15",
+   "text": "three.",
+   "start": 53.844,
+   "end": 54.144
+  },
+  {
+   "line": "N15",
+   "text": "The",
+   "start": 54.584,
+   "end": 54.724
+  },
+  {
+   "line": "N15",
+   "text": "top",
+   "start": 54.724,
+   "end": 54.944
+  },
+  {
+   "line": "N15",
+   "text": "comment",
+   "start": 54.944,
+   "end": 55.284
+  },
+  {
+   "line": "N15",
+   "text": "decides",
+   "start": 55.284,
+   "end": 55.624
+  },
+  {
+   "line": "N15",
+   "text": "part",
+   "start": 55.624,
+   "end": 55.924
+  },
+  {
+   "line": "N15",
+   "text": "two.",
+   "start": 55.924,
+   "end": 56.184
+  }
+ ],
+ "duration": 56.476
+}
