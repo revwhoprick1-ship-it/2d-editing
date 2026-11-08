@@ -1,0 +1,174 @@
+{
+ "title": "Last Bus - Part 2",
+ "engine": "chatterbox",
+ "voice_ref": "kokoro:am_fenrir",
+ "tempo": 1.06,
+ "lines": [
+  {
+   "id": "N01",
+   "who": "N",
+   "text": "You chose the window.",
+   "delivery": "sudden, low",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "N02",
+   "who": "N",
+   "text": "One swing. The glass explodes... and the fog pours in.",
+   "delivery": "fast, tense",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "D1",
+   "who": "DR",
+   "text": "That's not an exit.",
+   "delivery": "calm, deep, slow",
+   "exaggeration": 0.3,
+   "cfg": 0.5,
+   "pause_after": 0.4,
+   "voice_ref": "kokoro:am_onyx",
+   "tempo": 0.9
+  },
+  {
+   "id": "N03",
+   "who": "N",
+   "text": "You don't care. You climb through and drop onto the road.",
+   "delivery": "fast",
+   "exaggeration": 0.55,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "N04",
+   "who": "N",
+   "text": "Behind you, the bus doesn't stop. Its lights just fade into the fog.",
+   "delivery": "creeping",
+   "exaggeration": 0.5,
+   "cfg": 0.5,
+   "pause_after": 0.4
+  },
+  {
+   "id": "N05",
+   "who": "N",
+   "text": "And then you see them. The passengers. Standing in the road.",
+   "delivery": "dread",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "N06",
+   "who": "N",
+   "text": "They've stopped waving.",
+   "delivery": "whisper, scary",
+   "exaggeration": 0.65,
+   "cfg": 0.5,
+   "pause_after": 0.6
+  },
+  {
+   "id": "N07",
+   "who": "N",
+   "text": "Every head tilts at the same time. And they start walking toward you.",
+   "delivery": "dread, faster",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "N08",
+   "who": "N",
+   "text": "You run. You don't look back. Until you see a bus stop.",
+   "delivery": "urgent",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.4
+  },
+  {
+   "id": "N09",
+   "who": "N",
+   "text": "Route thirteen. And on the glass, there's a poster. Missing. With your face on it.",
+   "delivery": "creeping, slow",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.4
+  },
+  {
+   "id": "N10",
+   "who": "N",
+   "text": "Your phone buzzes. Forty-seven missed calls from Mom.",
+   "delivery": "tense",
+   "exaggeration": 0.55,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "N11",
+   "who": "N",
+   "text": "And the date... is one year from tonight.",
+   "delivery": "dread, slow",
+   "exaggeration": 0.7,
+   "cfg": 0.5,
+   "pause_after": 0.6
+  },
+  {
+   "id": "N12",
+   "who": "N",
+   "text": "Then two headlights come through the fog. The doors open.",
+   "delivery": "tense",
+   "exaggeration": 0.55,
+   "cfg": 0.5,
+   "pause_after": 0.4
+  },
+  {
+   "id": "D2",
+   "who": "DR",
+   "text": "You missed your stop.",
+   "delivery": "calm, deep",
+   "exaggeration": 0.3,
+   "cfg": 0.5,
+   "pause_after": 0.4,
+   "voice_ref": "kokoro:am_onyx",
+   "tempo": 0.9
+  },
+  {
+   "id": "N13",
+   "who": "N",
+   "text": "Every passenger is back in their seat, waving at you.",
+   "delivery": "creeping",
+   "exaggeration": 0.55,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "N14",
+   "who": "N",
+   "text": "And someone is sitting in your seat... wearing your face.",
+   "delivery": "terror, slow",
+   "exaggeration": 0.7,
+   "cfg": 0.5,
+   "pause_after": 0.6
+  },
+  {
+   "id": "N15",
+   "who": "N",
+   "text": "Get back on the bus. Run into the fog. Or call Mom back.",
+   "delivery": "urgent",
+   "exaggeration": 0.5,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "N16",
+   "who": "N",
+   "text": "Comment one, two, or three. Part three is up to you.",
+   "delivery": "low, final",
+   "exaggeration": 0.45,
+   "cfg": 0.5,
+   "pause_after": 0.2
+  }
+ ]
+}

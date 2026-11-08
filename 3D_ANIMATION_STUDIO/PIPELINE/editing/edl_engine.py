@@ -678,10 +678,46 @@ def ov_choice(cv, o, t):
     paste(cv, lay, W / 2, o.get('y', 980), pop_scale(t, o['t0'], 0.18, 1.06), 0, max(0.0, a))
 
 
+def ov_comment(cv, o, t):
+    """Reference-style 'TOP COMMENT' card: dark rounded card, avatar, handle, wrapped comment text, heart + likes,
+    and a red 'YOU CHOSE n' pill above it."""
+    a = min(1.0, (t - o['t0']) / 0.2, (o['t1'] - t) / 0.2)
+    if a <= 0:
+        return
+    wd = 900
+    fh, fu, ft, fp = font(FONT_C, 30), font(FONT_C, 34), font(FONT_CR, 40), font(FONT_C, 44)
+    words, lines, cur = o['text'].split(), [], ''
+    for wd_ in words:
+        test = (cur + ' ' + wd_).strip()
+        if ft.getlength(test) > wd - 230:
+            lines.append(cur)
+            cur = wd_
+        else:
+            cur = test
+    lines.append(cur)
+    ch = 130 + len(lines) * 50
+    lay = Image.new('RGBA', (wd, ch + 110), (0, 0, 0, 0))
+    d = ImageDraw.Draw(lay)
+    pill_w = int(fp.getlength(o['chose'])) + 60
+    d.rounded_rectangle(((wd - pill_w) / 2, 0, (wd + pill_w) / 2, 76), 20, fill=RED + (240,))
+    d.text((wd / 2, 39), o['chose'], font=fp, fill=(255, 255, 255, 255), anchor='mm')
+    y0 = 100
+    d.rounded_rectangle((0, y0, wd, y0 + ch), 26, fill=(16, 16, 20, 230))
+    d.text((30, y0 + 22), o.get('label', 'TOP COMMENT'), font=fh, fill=(230, 40, 45, 255))
+    d.ellipse((30, y0 + 66, 110, y0 + 146), fill=(110, 170, 200, 255))
+    d.text((70, y0 + 106), o['handle'][1:2].upper(), font=fu, fill=(255, 255, 255, 255), anchor='mm')
+    d.text((135, y0 + 62), o['handle'], font=fu, fill=(200, 200, 205, 255))
+    for i, ln in enumerate(lines):
+        d.text((135, y0 + 108 + i * 50), ln, font=ft, fill=(255, 255, 255, 255))
+    d.text((wd - 40, y0 + 62), str(o.get('likes', '')), font=fu, fill=(230, 40, 45, 255), anchor='ra')
+    d.text((wd - 40 - fu.getlength(str(o.get('likes', ''))) - 12, y0 + 64), '\u2764', font=font(FONT_E, 32), fill=(230, 40, 45, 255), anchor='ra')
+    paste(cv, lay, W / 2, o.get('y', 560), pop_scale(t, o['t0'], 0.18, 1.06), 0, max(0.0, a))
+
+
 OVERLAYS_FN = {'title': ov_title, 'clock': ov_clock, 'counter': ov_counter, 'chip': ov_chip, 'banner': ov_banner,
                'stamp': ov_stamp, 'lower_third': ov_lower_third, 'ticker': ov_ticker, 'live_bug': ov_live_bug,
                'tag': ov_tag, 'speck': ov_speck, 'sweat': ov_sweat, 'enhance': ov_enhance, 'cctv_hud': ov_cctv_hud,
-               'rewind_hud': ov_rewind_hud, 'timer': ov_timer, 'physics': ov_physics, 'hud': ov_hud, 'text2d': ov_text2d, 'hud3': ov_hud3, 'choice': ov_choice}
+               'rewind_hud': ov_rewind_hud, 'timer': ov_timer, 'physics': ov_physics, 'hud': ov_hud, 'text2d': ov_text2d, 'hud3': ov_hud3, 'choice': ov_choice, 'comment': ov_comment}
 
 
 # ============================================================================ captions

@@ -1,0 +1,1191 @@
+{
+ "voice": "chatterbox+kokoro:am_fenrir",
+ "sample_rate": 24000,
+ "lines": [
+  {
+   "id": "N01",
+   "who": "N",
+   "text": "You chose the window.",
+   "start": 0.0,
+   "end": 0.944,
+   "delivery": "sudden, low",
+   "speed": 1.06
+  },
+  {
+   "id": "N02",
+   "who": "N",
+   "text": "One swing. The glass explodes... and the fog pours in.",
+   "start": 1.244,
+   "end": 4.306,
+   "delivery": "fast, tense",
+   "speed": 1.06
+  },
+  {
+   "id": "D1",
+   "who": "DR",
+   "text": "That's not an exit.",
+   "start": 4.606,
+   "end": 5.565,
+   "delivery": "calm, deep, slow",
+   "speed": 0.9
+  },
+  {
+   "id": "N03",
+   "who": "N",
+   "text": "You don't care. You climb through and drop onto the road.",
+   "start": 5.965,
+   "end": 8.78,
+   "delivery": "fast",
+   "speed": 1.06
+  },
+  {
+   "id": "N04",
+   "who": "N",
+   "text": "Behind you, the bus doesn't stop. Its lights just fade into the fog.",
+   "start": 9.08,
+   "end": 12.577,
+   "delivery": "creeping",
+   "speed": 1.06
+  },
+  {
+   "id": "N05",
+   "who": "N",
+   "text": "And then you see them. The passengers. Standing in the road.",
+   "start": 12.977,
+   "end": 15.724,
+   "delivery": "dread",
+   "speed": 1.06
+  },
+  {
+   "id": "N06",
+   "who": "N",
+   "text": "They've stopped waving.",
+   "start": 16.024,
+   "end": 17.05,
+   "delivery": "whisper, scary",
+   "speed": 1.06
+  },
+  {
+   "id": "N07",
+   "who": "N",
+   "text": "Every head tilts at the same time. And they start walking toward you.",
+   "start": 17.65,
+   "end": 21.157,
+   "delivery": "dread, faster",
+   "speed": 1.06
+  },
+  {
+   "id": "N08",
+   "who": "N",
+   "text": "You run. You don't look back. Until you see a bus stop.",
+   "start": 21.457,
+   "end": 24.189,
+   "delivery": "urgent",
+   "speed": 1.06
+  },
+  {
+   "id": "N09",
+   "who": "N",
+   "text": "Route thirteen. And on the glass, there's a poster. Missing. With your face on it.",
+   "start": 24.589,
+   "end": 28.433,
+   "delivery": "creeping, slow",
+   "speed": 1.06
+  },
+  {
+   "id": "N10",
+   "who": "N",
+   "text": "Your phone buzzes. Forty-seven missed calls from Mom.",
+   "start": 28.833,
+   "end": 31.355,
+   "delivery": "tense",
+   "speed": 1.06
+  },
+  {
+   "id": "N11",
+   "who": "N",
+   "text": "And the date... is one year from tonight.",
+   "start": 31.655,
+   "end": 33.869,
+   "delivery": "dread, slow",
+   "speed": 1.06
+  },
+  {
+   "id": "N12",
+   "who": "N",
+   "text": "Then two headlights come through the fog. The doors open.",
+   "start": 34.469,
+   "end": 37.199,
+   "delivery": "tense",
+   "speed": 1.06
+  },
+  {
+   "id": "D2",
+   "who": "DR",
+   "text": "You missed your stop.",
+   "start": 37.599,
+   "end": 38.795,
+   "delivery": "calm, deep",
+   "speed": 0.9
+  },
+  {
+   "id": "N13",
+   "who": "N",
+   "text": "Every passenger is back in their seat, waving at you.",
+   "start": 39.195,
+   "end": 41.577,
+   "delivery": "creeping",
+   "speed": 1.06
+  },
+  {
+   "id": "N14",
+   "who": "N",
+   "text": "And someone is sitting in your seat... wearing your face.",
+   "start": 41.877,
+   "end": 44.237,
+   "delivery": "terror, slow",
+   "speed": 1.06
+  },
+  {
+   "id": "N15",
+   "who": "N",
+   "text": "Get back on the bus. Run into the fog. Or call Mom back.",
+   "start": 44.837,
+   "end": 47.915,
+   "delivery": "urgent",
+   "speed": 1.06
+  },
+  {
+   "id": "N16",
+   "who": "N",
+   "text": "Comment one, two, or three. Part three is up to you.",
+   "start": 48.215,
+   "end": 51.276,
+   "delivery": "low, final",
+   "speed": 1.06
+  }
+ ],
+ "words": [
+  {
+   "line": "N01",
+   "text": "You",
+   "start": 0.0,
+   "end": 0.16
+  },
+  {
+   "line": "N01",
+   "text": "chose",
+   "start": 0.16,
+   "end": 0.34
+  },
+  {
+   "line": "N01",
+   "text": "the",
+   "start": 0.34,
+   "end": 0.54
+  },
+  {
+   "line": "N01",
+   "text": "window.",
+   "start": 0.54,
+   "end": 0.76
+  },
+  {
+   "line": "N02",
+   "text": "One",
+   "start": 1.244,
+   "end": 1.504
+  },
+  {
+   "line": "N02",
+   "text": "swing.",
+   "start": 1.504,
+   "end": 1.884
+  },
+  {
+   "line": "N02",
+   "text": "The",
+   "start": 2.244,
+   "end": 2.324
+  },
+  {
+   "line": "N02",
+   "text": "glass",
+   "start": 2.324,
+   "end": 2.564
+  },
+  {
+   "line": "N02",
+   "text": "explodes...",
+   "start": 2.564,
+   "end": 3.004
+  },
+  {
+   "line": "N02",
+   "text": "and",
+   "start": 3.004,
+   "end": 3.384
+  },
+  {
+   "line": "N02",
+   "text": "the",
+   "start": 3.384,
+   "end": 3.504
+  },
+  {
+   "line": "N02",
+   "text": "fog",
+   "start": 3.504,
+   "end": 3.744
+  },
+  {
+   "line": "N02",
+   "text": "pours",
+   "start": 3.744,
+   "end": 4.044
+  },
+  {
+   "line": "N02",
+   "text": "in.",
+   "start": 4.044,
+   "end": 4.284
+  },
+  {
+   "line": "D1",
+   "text": "That's",
+   "start": 4.606,
+   "end": 4.846
+  },
+  {
+   "line": "D1",
+   "text": "not",
+   "start": 4.846,
+   "end": 5.006
+  },
+  {
+   "line": "D1",
+   "text": "an",
+   "start": 5.006,
+   "end": 5.146
+  },
+  {
+   "line": "D1",
+   "text": "exit.",
+   "start": 5.146,
+   "end": 5.426
+  },
+  {
+   "line": "N03",
+   "text": "You",
+   "start": 5.965,
+   "end": 6.145
+  },
+  {
+   "line": "N03",
+   "text": "don't",
+   "start": 6.145,
+   "end": 6.425
+  },
+  {
+   "line": "N03",
+   "text": "care.",
+   "start": 6.425,
+   "end": 6.605
+  },
+  {
+   "line": "N03",
+   "text": "You",
+   "start": 6.985,
+   "end": 7.065
+  },
+  {
+   "line": "N03",
+   "text": "climb",
+   "start": 7.065,
+   "end": 7.345
+  },
+  {
+   "line": "N03",
+   "text": "through",
+   "start": 7.345,
+   "end": 7.625
+  },
+  {
+   "line": "N03",
+   "text": "and",
+   "start": 7.625,
+   "end": 7.845
+  },
+  {
+   "line": "N03",
+   "text": "drop",
+   "start": 7.845,
+   "end": 8.085
+  },
+  {
+   "line": "N03",
+   "text": "onto",
+   "start": 8.085,
+   "end": 8.265
+  },
+  {
+   "line": "N03",
+   "text": "the",
+   "start": 8.265,
+   "end": 8.445
+  },
+  {
+   "line": "N03",
+   "text": "road.",
+   "start": 8.445,
+   "end": 8.645
+  },
+  {
+   "line": "N04",
+   "text": "Behind",
+   "start": 9.08,
+   "end": 9.34
+  },
+  {
+   "line": "N04",
+   "text": "you,",
+   "start": 9.34,
+   "end": 9.62
+  },
+  {
+   "line": "N04",
+   "text": "the",
+   "start": 9.82,
+   "end": 9.86
+  },
+  {
+   "line": "N04",
+   "text": "bus",
+   "start": 9.86,
+   "end": 10.02
+  },
+  {
+   "line": "N04",
+   "text": "doesn't",
+   "start": 10.02,
+   "end": 10.4
+  },
+  {
+   "line": "N04",
+   "text": "stop.",
+   "start": 10.4,
+   "end": 10.66
+  },
+  {
+   "line": "N04",
+   "text": "Its",
+   "start": 10.9,
+   "end": 10.98
+  },
+  {
+   "line": "N04",
+   "text": "lights",
+   "start": 10.98,
+   "end": 11.22
+  },
+  {
+   "line": "N04",
+   "text": "just",
+   "start": 11.22,
+   "end": 11.46
+  },
+  {
+   "line": "N04",
+   "text": "fade",
+   "start": 11.46,
+   "end": 11.8
+  },
+  {
+   "line": "N04",
+   "text": "into",
+   "start": 11.8,
+   "end": 12.08
+  },
+  {
+   "line": "N04",
+   "text": "the",
+   "start": 12.08,
+   "end": 12.22
+  },
+  {
+   "line": "N04",
+   "text": "fog.",
+   "start": 12.22,
+   "end": 12.4
+  },
+  {
+   "line": "N05",
+   "text": "And",
+   "start": 12.977,
+   "end": 13.137
+  },
+  {
+   "line": "N05",
+   "text": "then",
+   "start": 13.137,
+   "end": 13.297
+  },
+  {
+   "line": "N05",
+   "text": "you",
+   "start": 13.297,
+   "end": 13.457
+  },
+  {
+   "line": "N05",
+   "text": "see",
+   "start": 13.457,
+   "end": 13.637
+  },
+  {
+   "line": "N05",
+   "text": "them.",
+   "start": 13.637,
+   "end": 13.877
+  },
+  {
+   "line": "N05",
+   "text": "The",
+   "start": 13.997,
+   "end": 14.117
+  },
+  {
+   "line": "N05",
+   "text": "passengers.",
+   "start": 14.117,
+   "end": 14.557
+  },
+  {
+   "line": "N05",
+   "text": "Standing",
+   "start": 14.857,
+   "end": 15.157
+  },
+  {
+   "line": "N05",
+   "text": "in",
+   "start": 15.157,
+   "end": 15.337
+  },
+  {
+   "line": "N05",
+   "text": "the",
+   "start": 15.337,
+   "end": 15.437
+  },
+  {
+   "line": "N05",
+   "text": "road.",
+   "start": 15.437,
+   "end": 15.617
+  },
+  {
+   "line": "N06",
+   "text": "They've",
+   "start": 16.024,
+   "end": 16.244
+  },
+  {
+   "line": "N06",
+   "text": "stopped",
+   "start": 16.244,
+   "end": 16.504
+  },
+  {
+   "line": "N06",
+   "text": "waving.",
+   "start": 16.504,
+   "end": 16.824
+  },
+  {
+   "line": "N07",
+   "text": "Every",
+   "start": 17.65,
+   "end": 17.97
+  },
+  {
+   "line": "N07",
+   "text": "head",
+   "start": 17.97,
+   "end": 18.23
+  },
+  {
+   "line": "N07",
+   "text": "tilts",
+   "start": 18.23,
+   "end": 18.61
+  },
+  {
+   "line": "N07",
+   "text": "at",
+   "start": 18.61,
+   "end": 18.71
+  },
+  {
+   "line": "N07",
+   "text": "the",
+   "start": 18.71,
+   "end": 18.83
+  },
+  {
+   "line": "N07",
+   "text": "same",
+   "start": 18.83,
+   "end": 19.01
+  },
+  {
+   "line": "N07",
+   "text": "time.",
+   "start": 19.01,
+   "end": 19.45
+  },
+  {
+   "line": "N07",
+   "text": "And",
+   "start": 19.73,
+   "end": 19.83
+  },
+  {
+   "line": "N07",
+   "text": "they",
+   "start": 19.83,
+   "end": 19.93
+  },
+  {
+   "line": "N07",
+   "text": "start",
+   "start": 19.93,
+   "end": 20.09
+  },
+  {
+   "line": "N07",
+   "text": "walking",
+   "start": 20.09,
+   "end": 20.49
+  },
+  {
+   "line": "N07",
+   "text": "toward",
+   "start": 20.49,
+   "end": 20.81
+  },
+  {
+   "line": "N07",
+   "text": "you.",
+   "start": 20.81,
+   "end": 21.13
+  },
+  {
+   "line": "N08",
+   "text": "You",
+   "start": 21.457,
+   "end": 21.617
+  },
+  {
+   "line": "N08",
+   "text": "run.",
+   "start": 21.617,
+   "end": 21.857
+  },
+  {
+   "line": "N08",
+   "text": "You",
+   "start": 22.217,
+   "end": 22.317
+  },
+  {
+   "line": "N08",
+   "text": "don't",
+   "start": 22.317,
+   "end": 22.437
+  },
+  {
+   "line": "N08",
+   "text": "look",
+   "start": 22.437,
+   "end": 22.557
+  },
+  {
+   "line": "N08",
+   "text": "back.",
+   "start": 22.557,
+   "end": 22.837
+  },
+  {
+   "line": "N08",
+   "text": "Until",
+   "start": 22.837,
+   "end": 23.317
+  },
+  {
+   "line": "N08",
+   "text": "you",
+   "start": 23.317,
+   "end": 23.457
+  },
+  {
+   "line": "N08",
+   "text": "see",
+   "start": 23.457,
+   "end": 23.597
+  },
+  {
+   "line": "N08",
+   "text": "a",
+   "start": 23.597,
+   "end": 23.717
+  },
+  {
+   "line": "N08",
+   "text": "bus",
+   "start": 23.717,
+   "end": 23.817
+  },
+  {
+   "line": "N08",
+   "text": "stop.",
+   "start": 23.817,
+   "end": 24.077
+  },
+  {
+   "line": "N09",
+   "text": "Route",
+   "start": 24.589,
+   "end": 24.809
+  },
+  {
+   "line": "N09",
+   "text": "thirteen.",
+   "start": 24.809,
+   "end": 25.269
+  },
+  {
+   "line": "N09",
+   "text": "And",
+   "start": 25.509,
+   "end": 25.589
+  },
+  {
+   "line": "N09",
+   "text": "on",
+   "start": 25.589,
+   "end": 25.689
+  },
+  {
+   "line": "N09",
+   "text": "the",
+   "start": 25.689,
+   "end": 25.789
+  },
+  {
+   "line": "N09",
+   "text": "glass,",
+   "start": 25.789,
+   "end": 26.109
+  },
+  {
+   "line": "N09",
+   "text": "there's",
+   "start": 26.389,
+   "end": 26.509
+  },
+  {
+   "line": "N09",
+   "text": "a",
+   "start": 26.509,
+   "end": 26.589
+  },
+  {
+   "line": "N09",
+   "text": "poster.",
+   "start": 26.589,
+   "end": 26.889
+  },
+  {
+   "line": "N09",
+   "text": "Missing.",
+   "start": 26.889,
+   "end": 27.349
+  },
+  {
+   "line": "N09",
+   "text": "With",
+   "start": 27.349,
+   "end": 27.769
+  },
+  {
+   "line": "N09",
+   "text": "your",
+   "start": 27.769,
+   "end": 27.929
+  },
+  {
+   "line": "N09",
+   "text": "face",
+   "start": 27.929,
+   "end": 28.089
+  },
+  {
+   "line": "N09",
+   "text": "on",
+   "start": 28.089,
+   "end": 28.309
+  },
+  {
+   "line": "N09",
+   "text": "it.",
+   "start": 28.309,
+   "end": 28.409
+  },
+  {
+   "line": "N10",
+   "text": "Your",
+   "start": 28.833,
+   "end": 28.993
+  },
+  {
+   "line": "N10",
+   "text": "phone",
+   "start": 28.993,
+   "end": 29.193
+  },
+  {
+   "line": "N10",
+   "text": "buzzes.",
+   "start": 29.193,
+   "end": 29.673
+  },
+  {
+   "line": "N10",
+   "text": "Forty-seven",
+   "start": 29.813,
+   "end": 30.213
+  },
+  {
+   "line": "N10",
+   "text": "missed",
+   "start": 30.213,
+   "end": 30.493
+  },
+  {
+   "line": "N10",
+   "text": "calls",
+   "start": 30.493,
+   "end": 30.773
+  },
+  {
+   "line": "N10",
+   "text": "from",
+   "start": 30.773,
+   "end": 31.013
+  },
+  {
+   "line": "N10",
+   "text": "Mom.",
+   "start": 31.013,
+   "end": 31.233
+  },
+  {
+   "line": "N11",
+   "text": "And",
+   "start": 31.655,
+   "end": 31.955
+  },
+  {
+   "line": "N11",
+   "text": "the",
+   "start": 31.955,
+   "end": 32.075
+  },
+  {
+   "line": "N11",
+   "text": "date...",
+   "start": 32.075,
+   "end": 32.375
+  },
+  {
+   "line": "N11",
+   "text": "is",
+   "start": 32.375,
+   "end": 32.855
+  },
+  {
+   "line": "N11",
+   "text": "one",
+   "start": 32.855,
+   "end": 33.095
+  },
+  {
+   "line": "N11",
+   "text": "year",
+   "start": 33.095,
+   "end": 33.255
+  },
+  {
+   "line": "N11",
+   "text": "from",
+   "start": 33.255,
+   "end": 33.435
+  },
+  {
+   "line": "N11",
+   "text": "tonight.",
+   "start": 33.435,
+   "end": 33.695
+  },
+  {
+   "line": "N12",
+   "text": "Then",
+   "start": 34.469,
+   "end": 34.789
+  },
+  {
+   "line": "N12",
+   "text": "two",
+   "start": 34.789,
+   "end": 35.069
+  },
+  {
+   "line": "N12",
+   "text": "headlights",
+   "start": 35.069,
+   "end": 35.409
+  },
+  {
+   "line": "N12",
+   "text": "come",
+   "start": 35.409,
+   "end": 35.649
+  },
+  {
+   "line": "N12",
+   "text": "through",
+   "start": 35.649,
+   "end": 35.809
+  },
+  {
+   "line": "N12",
+   "text": "the",
+   "start": 35.809,
+   "end": 35.929
+  },
+  {
+   "line": "N12",
+   "text": "fog.",
+   "start": 35.929,
+   "end": 36.149
+  },
+  {
+   "line": "N12",
+   "text": "The",
+   "start": 36.449,
+   "end": 36.549
+  },
+  {
+   "line": "N12",
+   "text": "doors",
+   "start": 36.549,
+   "end": 36.729
+  },
+  {
+   "line": "N12",
+   "text": "open.",
+   "start": 36.729,
+   "end": 37.069
+  },
+  {
+   "line": "D2",
+   "text": "You",
+   "start": 37.599,
+   "end": 37.759
+  },
+  {
+   "line": "D2",
+   "text": "missed",
+   "start": 37.759,
+   "end": 37.979
+  },
+  {
+   "line": "D2",
+   "text": "your",
+   "start": 37.979,
+   "end": 38.159
+  },
+  {
+   "line": "D2",
+   "text": "stop.",
+   "start": 38.159,
+   "end": 38.499
+  },
+  {
+   "line": "N13",
+   "text": "Every",
+   "start": 39.195,
+   "end": 39.455
+  },
+  {
+   "line": "N13",
+   "text": "passenger",
+   "start": 39.455,
+   "end": 39.815
+  },
+  {
+   "line": "N13",
+   "text": "is",
+   "start": 39.815,
+   "end": 40.075
+  },
+  {
+   "line": "N13",
+   "text": "back",
+   "start": 40.075,
+   "end": 40.275
+  },
+  {
+   "line": "N13",
+   "text": "in",
+   "start": 40.275,
+   "end": 40.415
+  },
+  {
+   "line": "N13",
+   "text": "their",
+   "start": 40.415,
+   "end": 40.535
+  },
+  {
+   "line": "N13",
+   "text": "seat,",
+   "start": 40.535,
+   "end": 40.775
+  },
+  {
+   "line": "N13",
+   "text": "waving",
+   "start": 40.775,
+   "end": 41.075
+  },
+  {
+   "line": "N13",
+   "text": "at",
+   "start": 41.075,
+   "end": 41.335
+  },
+  {
+   "line": "N13",
+   "text": "you.",
+   "start": 41.335,
+   "end": 41.515
+  },
+  {
+   "line": "N14",
+   "text": "And",
+   "start": 41.877,
+   "end": 42.097
+  },
+  {
+   "line": "N14",
+   "text": "someone",
+   "start": 42.097,
+   "end": 42.397
+  },
+  {
+   "line": "N14",
+   "text": "is",
+   "start": 42.397,
+   "end": 42.557
+  },
+  {
+   "line": "N14",
+   "text": "sitting",
+   "start": 42.557,
+   "end": 42.737
+  },
+  {
+   "line": "N14",
+   "text": "in",
+   "start": 42.737,
+   "end": 42.957
+  },
+  {
+   "line": "N14",
+   "text": "your",
+   "start": 42.957,
+   "end": 43.077
+  },
+  {
+   "line": "N14",
+   "text": "seat...",
+   "start": 43.077,
+   "end": 43.297
+  },
+  {
+   "line": "N14",
+   "text": "wearing",
+   "start": 43.297,
+   "end": 43.617
+  },
+  {
+   "line": "N14",
+   "text": "your",
+   "start": 43.617,
+   "end": 43.857
+  },
+  {
+   "line": "N14",
+   "text": "face.",
+   "start": 43.857,
+   "end": 44.057
+  },
+  {
+   "line": "N15",
+   "text": "Get",
+   "start": 44.838,
+   "end": 44.997
+  },
+  {
+   "line": "N15",
+   "text": "back",
+   "start": 44.997,
+   "end": 45.198
+  },
+  {
+   "line": "N15",
+   "text": "on",
+   "start": 45.198,
+   "end": 45.338
+  },
+  {
+   "line": "N15",
+   "text": "the",
+   "start": 45.338,
+   "end": 45.438
+  },
+  {
+   "line": "N15",
+   "text": "bus.",
+   "start": 45.438,
+   "end": 45.678
+  },
+  {
+   "line": "N15",
+   "text": "Run",
+   "start": 45.918,
+   "end": 46.018
+  },
+  {
+   "line": "N15",
+   "text": "into",
+   "start": 46.018,
+   "end": 46.218
+  },
+  {
+   "line": "N15",
+   "text": "the",
+   "start": 46.218,
+   "end": 46.358
+  },
+  {
+   "line": "N15",
+   "text": "fog.",
+   "start": 46.358,
+   "end": 46.598
+  },
+  {
+   "line": "N15",
+   "text": "Or",
+   "start": 46.918,
+   "end": 47.118
+  },
+  {
+   "line": "N15",
+   "text": "call",
+   "start": 47.118,
+   "end": 47.358
+  },
+  {
+   "line": "N15",
+   "text": "Mom",
+   "start": 47.358,
+   "end": 47.538
+  },
+  {
+   "line": "N15",
+   "text": "back.",
+   "start": 47.538,
+   "end": 47.798
+  },
+  {
+   "line": "N16",
+   "text": "Comment",
+   "start": 48.215,
+   "end": 48.515
+  },
+  {
+   "line": "N16",
+   "text": "one,",
+   "start": 48.515,
+   "end": 48.915
+  },
+  {
+   "line": "N16",
+   "text": "two,",
+   "start": 49.115,
+   "end": 49.375
+  },
+  {
+   "line": "N16",
+   "text": "or",
+   "start": 49.595,
+   "end": 49.655
+  },
+  {
+   "line": "N16",
+   "text": "three.",
+   "start": 49.655,
+   "end": 49.955
+  },
+  {
+   "line": "N16",
+   "text": "Part",
+   "start": 50.215,
+   "end": 50.335
+  },
+  {
+   "line": "N16",
+   "text": "three",
+   "start": 50.335,
+   "end": 50.595
+  },
+  {
+   "line": "N16",
+   "text": "is",
+   "start": 50.595,
+   "end": 50.735
+  },
+  {
+   "line": "N16",
+   "text": "up",
+   "start": 50.735,
+   "end": 50.855
+  },
+  {
+   "line": "N16",
+   "text": "to",
+   "start": 50.855,
+   "end": 51.015
+  },
+  {
+   "line": "N16",
+   "text": "you.",
+   "start": 51.015,
+   "end": 51.195
+  }
+ ],
+ "duration": 51.476
+}

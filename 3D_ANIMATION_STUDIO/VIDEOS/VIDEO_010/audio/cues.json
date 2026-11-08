@@ -1,0 +1,344 @@
+{
+ "duration": 52.68,
+ "loop": true,
+ "narration": "narration/narration_raw.wav",
+ "narration_offset": 0.0,
+ "music": "music_score.wav",
+ "music_gain_db": 1,
+ "music_cue": "cue_video010",
+ "targets": {
+  "narration_lufs": -16,
+  "master_lufs": -14,
+  "true_peak": -1.0,
+  "duck_db": 5
+ },
+ "cues": [
+  {
+   "t": 0.0,
+   "file": "AUDIO/sound_effects/comedy/bus_engine.flac",
+   "gain": -10,
+   "bus": "amb",
+   "note": "inside the bus",
+   "loop": true,
+   "dur": 5.965,
+   "fade_out": 0.2
+  },
+  {
+   "t": 0.0,
+   "file": "AUDIO/sound_effects/reactions/pop.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "top comment card"
+  },
+  {
+   "t": 1.254,
+   "file": "AUDIO/sound_effects/movement/whoosh_short.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "the swing"
+  },
+  {
+   "t": 1.554,
+   "file": "AUDIO/sound_effects/comedy/glass_tap.flac",
+   "gain": -7,
+   "bus": "sfx",
+   "note": "crack"
+  },
+  {
+   "t": 2.564,
+   "file": "AUDIO/sound_effects/environment/glass_shatter.flac",
+   "gain": -3,
+   "bus": "sfx",
+   "note": "THE WINDOW EXPLODES"
+  },
+  {
+   "t": 2.584,
+   "file": "AUDIO/sound_effects/transitions/bass_impact.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "impact"
+  },
+  {
+   "t": 2.664,
+   "file": "AUDIO/ambience/wind.flac",
+   "gain": -8,
+   "bus": "amb",
+   "note": "fog pours in",
+   "loop": true,
+   "dur": 50.016,
+   "fade_in": 0.2,
+   "fade_out": 0.1
+  },
+  {
+   "t": 8.145,
+   "file": "AUDIO/sound_effects/comedy/body_thud.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "you land on the road"
+  },
+  {
+   "t": 9.08,
+   "file": "AUDIO/sound_effects/comedy/bus_engine.flac",
+   "gain": -19,
+   "bus": "sfx",
+   "note": "the bus pulls away",
+   "dur": 3.0,
+   "fade_out": 2.5
+  },
+  {
+   "t": 13.277,
+   "file": "AUDIO/sound_effects/bio/creature_presence.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "the passengers in the road"
+  },
+  {
+   "t": 16.024,
+   "file": "AUDIO/sound_effects/bio/heartbeat_lubdub.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "they stopped waving"
+  },
+  {
+   "t": 18.23,
+   "file": "AUDIO/sound_effects/comedy/bone_clicks.flac",
+   "gain": -7,
+   "bus": "sfx",
+   "note": "every head tilts at once"
+  },
+  {
+   "t": 20.29,
+   "file": "AUDIO/sound_effects/movement/footstep_soft.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "their steps 1"
+  },
+  {
+   "t": 20.79,
+   "file": "AUDIO/sound_effects/movement/footstep_soft.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "their steps 2"
+  },
+  {
+   "t": 21.29,
+   "file": "AUDIO/sound_effects/movement/footstep_soft.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "their steps 3"
+  },
+  {
+   "t": 21.457,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "you run"
+  },
+  {
+   "t": 21.657,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "you run"
+  },
+  {
+   "t": 21.757,
+   "file": "AUDIO/sound_effects/comedy/heavy_breath.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "panting"
+  },
+  {
+   "t": 21.79,
+   "file": "AUDIO/sound_effects/movement/footstep_soft.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "their steps 4"
+  },
+  {
+   "t": 21.857,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "you run"
+  },
+  {
+   "t": 22.057,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "you run"
+  },
+  {
+   "t": 22.257,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "you run"
+  },
+  {
+   "t": 22.29,
+   "file": "AUDIO/sound_effects/movement/footstep_soft.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "their steps 5"
+  },
+  {
+   "t": 22.457,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "you run"
+  },
+  {
+   "t": 22.657,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "you run"
+  },
+  {
+   "t": 22.857,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "you run"
+  },
+  {
+   "t": 23.057,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "you run"
+  },
+  {
+   "t": 23.257,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "you run"
+  },
+  {
+   "t": 23.457,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "you run"
+  },
+  {
+   "t": 23.657,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "you run"
+  },
+  {
+   "t": 23.857,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "you run"
+  },
+  {
+   "t": 24.057,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "you run"
+  },
+  {
+   "t": 24.257,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "you run"
+  },
+  {
+   "t": 26.889,
+   "file": "AUDIO/sound_effects/comedy/horror_sting.flac",
+   "gain": -8,
+   "bus": "sfx",
+   "note": "MISSING: your face"
+  },
+  {
+   "t": 28.833,
+   "file": "AUDIO/sound_effects/comedy/phone_buzz.flac",
+   "gain": -7,
+   "bus": "sfx",
+   "note": "phone buzzes"
+  },
+  {
+   "t": 30.033,
+   "file": "AUDIO/sound_effects/comedy/notif_pop.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "Mom: please come home"
+  },
+  {
+   "t": 31.955,
+   "file": "AUDIO/sound_effects/reactions/dramatic_hit.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "one year from tonight"
+  },
+  {
+   "t": 34.469,
+   "file": "AUDIO/sound_effects/comedy/bus_engine.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "the bus approaches",
+   "dur": 4.725999999999999,
+   "fade_in": 1.2
+  },
+  {
+   "t": 36.549,
+   "file": "AUDIO/sound_effects/comedy/elev_door_slide.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "the doors fold open"
+  },
+  {
+   "t": 36.649,
+   "file": "AUDIO/sound_effects/comedy/stop_bell.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "ding"
+  },
+  {
+   "t": 39.195,
+   "file": "AUDIO/ambience/crowd.flac",
+   "gain": -31,
+   "bus": "sfx",
+   "note": "passengers",
+   "dur": 5.542000000000002
+  },
+  {
+   "t": 43.857,
+   "file": "AUDIO/sound_effects/comedy/horror_sting.flac",
+   "gain": -5,
+   "bus": "sfx",
+   "note": "someone in your seat: YOU"
+  },
+  {
+   "t": 43.877,
+   "file": "AUDIO/sound_effects/transitions/bass_impact.flac",
+   "gain": -8,
+   "bus": "sfx",
+   "note": "impact"
+  },
+  {
+   "t": 45.137,
+   "file": "AUDIO/sound_effects/comedy/heavy_breath.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "breathing under the choice"
+  },
+  {
+   "t": 52.18,
+   "file": "AUDIO/sound_effects/movement/whoosh_short.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "back to the window -> frame 0"
+  }
+ ]
+}

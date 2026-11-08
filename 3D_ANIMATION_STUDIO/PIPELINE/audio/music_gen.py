@@ -982,6 +982,49 @@ def cue_video009():
 CUES['video009'] = cue_video009
 LOOPS['video009'] = None
 
+
+# ------------------------------------------------------------------ VIDEO_010 cue: "Last Bus · Part 2"
+def cue_video010():
+    sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'VIDEOS', 'VIDEO_010'))
+    import edit_video010 as E10
+    B, END = E10.B, E10.END
+    S = Score(END + 3.0, bpm=72)
+    D = lambda t, d, f=36.7, g=-10: S.add('fx', t, sine(f, d) * env_adsr(int(d * SR), min(1.5, d / 3), 0.2, 0.9, min(1.0, d / 4)) * 0.8, g)
+    D(0.0, B['explodes'], 36.7, -10)
+    S.add('pad', 0.0, inst_tremolo(C(['D4', 'D#4']), B['explodes'], rate=13, bright=3000), -16)
+    S.add('perc', B['explodes'], drum_taiko(1.6, 38), -2)
+    S.add('lead', B['explodes'], inst_stab(C(['D3', 'F3', 'G#3', 'D4']), 0.9), -5)
+    D(B['mirror'], B['run'] - B['mirror'], 32.7, -9)
+    mel = ['D5', 'F5', 'A5', 'G#5', 'F5', 'D5', 'C#5', 'D5']
+    for i, nm in enumerate(mel):
+        tt = B['them'] + i * 0.55
+        if tt < B['tilts']:
+            S.add('lead', tt, inst_bell(mtof(n2m(nm)) * 0.993, 1.2), -14)
+    S.add('perc', B['tilts'], drum_taiko(1.3, 42), -4)
+    t, k = B['walking'], 0
+    while t < B['poster']:
+        S.add('bass', t, inst_bass(mtof(n2m(['D2', 'D2', 'D#2', 'D2'][k % 4])), 0.1, cutoff=500), -10)
+        if k % 4 == 0:
+            S.add('perc', t, drum_taiko(0.8, 50), -10)
+        t += 0.14
+        k += 1
+    D(B['poster'], B['lights'] - B['poster'], 34.6, -10)
+    S.add('perc', B['missing'], drum_taiko(1.3, 42), -4)
+    S.add('perc', B['date'] + 0.3, drum_taiko(1.3, 42), -4)
+    S.add('pad', B['date'], inst_strings(C(['D3', 'D#3', 'A3', 'D#4']), 2.0, attack=0.02, bright=2200), -11)
+    D(B['lights'], B['choice'] - B['lights'], 30.9, -9)
+    S.add('pad', B['inside'], inst_tremolo(C(['D5', 'D#5', 'A5']), B['yourface'] - B['inside'], rate=14, bright=4000), -16)
+    S.add('perc', B['yourface'], drum_taiko(1.6, 38), -2)
+    S.add('lead', B['yourface'], inst_stab(C(['D3', 'D#3', 'G#3', 'D4']), 0.9), -5)
+    D(B['choice'], END - B['choice'], 36.7, -11)
+    for i in range(int((B['loopback'] - B['choice']) / 0.5)):
+        S.add('perc', B['choice'] + i * 0.5, drum_tick(0.5), -12)
+    return S
+
+
+CUES['video010'] = cue_video010
+LOOPS['video010'] = None
+
 if __name__ == '__main__':
     cue, out = sys.argv[1], sys.argv[2]
     S = CUES[cue]()
