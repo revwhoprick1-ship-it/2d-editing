@@ -1,0 +1,172 @@
+{
+ "title": "Benched - Part 2",
+ "engine": "chatterbox",
+ "voice_ref": "kokoro:am_fenrir",
+ "tempo": 1.07,
+ "lines": [
+  {
+   "id": "N01",
+   "who": "N",
+   "text": "This shot decides the state championship.",
+   "delivery": "intense, low",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.2
+  },
+  {
+   "id": "N02",
+   "who": "N",
+   "text": "And the kid who took it... was the water boy.",
+   "delivery": "dramatic, wry",
+   "exaggeration": 0.55,
+   "cfg": 0.5,
+   "pause_after": 0.4
+  },
+  {
+   "id": "N03",
+   "who": "N",
+   "text": "All season, his coach kept him on the bench. His teammates laughed at his shoes.",
+   "delivery": "fast storyteller",
+   "exaggeration": 0.5,
+   "cfg": 0.5,
+   "pause_after": 0.2
+  },
+  {
+   "id": "N04",
+   "who": "N",
+   "text": "But every night, he shot five hundred threes in an empty gym. Then a video of it went viral.",
+   "delivery": "fast, building",
+   "exaggeration": 0.55,
+   "cfg": 0.5,
+   "pause_after": 0.2
+  },
+  {
+   "id": "N05",
+   "who": "N",
+   "text": "Tonight, down by two, the crowd chanted his number until Coach finally put him in.",
+   "delivery": "building",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "N06",
+   "who": "N",
+   "text": "And you all chose the same thing. Take the three.",
+   "delivery": "excited",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.4
+  },
+  {
+   "id": "N07",
+   "who": "N",
+   "text": "The ball comes in. Three seconds.",
+   "delivery": "tense",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.2
+  },
+  {
+   "id": "D1",
+   "who": "DF",
+   "text": "Aren't you the water boy?",
+   "delivery": "mocking",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.2,
+   "voice_ref": "kokoro:am_eric"
+  },
+  {
+   "id": "N08",
+   "who": "N",
+   "text": "Two seconds. Step back.",
+   "delivery": "tense, fast",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.2
+  },
+  {
+   "id": "N09",
+   "who": "N",
+   "text": "One second. He lets it go.",
+   "delivery": "slow, intense",
+   "exaggeration": 0.65,
+   "cfg": 0.5,
+   "pause_after": 2.2
+  },
+  {
+   "id": "N10",
+   "who": "N",
+   "text": "It hits the rim...",
+   "delivery": "whisper, tense",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 1.3
+  },
+  {
+   "id": "N11",
+   "who": "N",
+   "text": "And drops in!",
+   "delivery": "explosive, joyful",
+   "exaggeration": 0.9,
+   "cfg": 0.5,
+   "pause_after": 0.6
+  },
+  {
+   "id": "N12",
+   "who": "N",
+   "text": "The whole gym explodes. Tyler can't even look at him. And the janitor... is crying.",
+   "delivery": "joyful, warm",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "N13",
+   "who": "N",
+   "text": "Then Coach walks across the court, holding a water bottle.",
+   "delivery": "dry, funny",
+   "exaggeration": 0.5,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "D2",
+   "who": "CO",
+   "text": "Kid... I think this one's yours.",
+   "delivery": "gruff, humbled",
+   "exaggeration": 0.45,
+   "cfg": 0.5,
+   "pause_after": 0.5,
+   "voice_ref": "kokoro:am_onyx"
+  },
+  {
+   "id": "N14",
+   "who": "N",
+   "text": "But up in the stands, a man in a college jacket is already making a phone call.",
+   "delivery": "intriguing",
+   "exaggeration": 0.55,
+   "cfg": 0.5,
+   "pause_after": 0.4
+  },
+  {
+   "id": "N15",
+   "who": "N",
+   "text": "Forgive Coach. Take the college offer. Or make Coach fill the water bottles next season.",
+   "delivery": "playful",
+   "exaggeration": 0.5,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "N16",
+   "who": "N",
+   "text": "Comment one, two, or three. Part three, you decide.",
+   "delivery": "low, final",
+   "exaggeration": 0.45,
+   "cfg": 0.5,
+   "pause_after": 0.2
+  }
+ ]
+}

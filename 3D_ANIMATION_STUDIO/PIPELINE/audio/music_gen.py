@@ -1121,6 +1121,70 @@ def cue_video012():
 CUES['video012'] = cue_video012
 LOOPS['video012'] = None
 
+
+# ------------------------------------------------------------------ VIDEO_013 cue: "Benched · Part 2" (the shot)
+def cue_video013():
+    sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'VIDEOS', 'VIDEO_013'))
+    import edit_video013 as E13
+    B, END = E13.B, E13.END
+    S = Score(END + 3.0, bpm=100)
+    b = 60 / 100
+    D = lambda t, d, f=36.7, g=-10: S.add('fx', t, sine(f, d) * env_adsr(int(d * SR), min(1.5, d / 3), 0.2, 0.9, min(1.0, d / 4)) * 0.8, g)
+    # hook: suspended chord under the freeze
+    S.add('pad', 0.0, inst_strings(C(['A2', 'E3', 'B3', 'E4']), B['recap'], attack=0.05, bright=2200), -11)
+    S.add('perc', B['water'], drum_taiko(1.2, 44), -5)
+    # recap: driving montage beat
+    t, k = B['recap'], 0
+    prog = [['A2', 'E3', 'A3', 'C4'], ['F2', 'C3', 'F3', 'A3'], ['C3', 'G3', 'C4', 'E4'], ['G2', 'D3', 'G3', 'B3']]
+    while t < B['ball']:
+        if k % 2 == 0:
+            S.add('perc', t, drum_kick(1.0), -7)
+        if k % 4 == 2:
+            S.add('perc', t, drum_snare(0.9, seed=k), -10)
+        S.add('perc', t, drum_hat(0.4, seed=k), -16)
+        if k % 8 == 0:
+            S.add('pad', t, inst_strings(C(prog[(k // 8) % 4]), b * 4, attack=0.2, bright=2400), -14)
+            S.add('bass', t, inst_bass(mtof(n2m(prog[(k // 8) % 4][0])), b * 3.5, cutoff=600), -11)
+        t += b / 2
+        k += 1
+    # the play: heartbeat + rising tremolo
+    D(B['ball'], B['go'] - B['ball'], 41.2, -10)
+    for i in range(int((B['go'] - B['ball']) / 0.55)):
+        S.add('perc', B['ball'] + i * 0.55, drum_kick(0.9), -8)
+    S.add('pad', B['ball'], inst_tremolo(C(['A3', 'C4', 'E4']), B['go'] - B['ball'], rate=12, bright=3000), -15)
+    # slow motion: one long held note, heartbeat slowing
+    S.add('pad', B['go'], inst_pad(C(['A2', 'E3', 'A3', 'E4']), B['slow_end'] - B['go'] + 0.5, bright=1600, attack=0.6), -12)
+    for i, dt in enumerate((0.0, 0.9, 1.9, 3.0)):
+        if B['go'] + dt < B['rim']:
+            S.add('perc', B['go'] + dt, drum_kick(0.8), -9)
+    # it drops: the anthem
+    tin = B['drops'] + 0.15
+    S.add('perc', tin, drum_taiko(1.6, 40), -1)
+    S.add('lead', tin, inst_stab(C(['A3', 'C#4', 'E4', 'A4']), 1.0), -5)
+    t, k = tin, 0
+    anth = [['A2', 'E3', 'A3', 'C#4'], ['F#2', 'C#3', 'F#3', 'A3'], ['D3', 'A3', 'D4', 'F#4'], ['E3', 'B3', 'E4', 'G#4']]
+    while t < B['scout']:
+        if k % 2 == 0:
+            S.add('perc', t, drum_kick(1.0), -6)
+        if k % 4 == 2:
+            S.add('perc', t, drum_snare(1.0, seed=k), -8)
+        S.add('perc', t, drum_hat(0.5, seed=k), -14)
+        if k % 8 == 0:
+            S.add('pad', t, inst_strings(C(anth[(k // 8) % 4]), b * 4, attack=0.1, bright=3200), -10)
+            S.add('bass', t, inst_bass(mtof(n2m(anth[(k // 8) % 4][0])), b * 3.5, cutoff=700), -9)
+        t += b / 2
+        k += 1
+    # scout -> choice: intrigue
+    D(B['scout'], END - B['scout'], 41.2, -11)
+    S.add('pad', B['scout'], inst_pad(C(['A2', 'C3', 'E3', 'B3']), END - B['scout'], bright=1200, attack=0.8), -15)
+    for i in range(int((END - B['choice']) / 0.5)):
+        S.add('perc', B['choice'] + i * 0.5, drum_tick(0.5), -13)
+    return S
+
+
+CUES['video013'] = cue_video013
+LOOPS['video013'] = None
+
 if __name__ == '__main__':
     cue, out = sys.argv[1], sys.argv[2]
     S = CUES[cue]()

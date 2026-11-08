@@ -1,0 +1,1221 @@
+{
+ "voice": "chatterbox+kokoro:am_fenrir",
+ "sample_rate": 24000,
+ "lines": [
+  {
+   "id": "N01",
+   "who": "N",
+   "text": "This shot decides the state championship.",
+   "start": 0.0,
+   "end": 2.237,
+   "delivery": "intense, low",
+   "speed": 1.07
+  },
+  {
+   "id": "N02",
+   "who": "N",
+   "text": "And the kid who took it... was the water boy.",
+   "start": 2.437,
+   "end": 4.385,
+   "delivery": "dramatic, wry",
+   "speed": 1.07
+  },
+  {
+   "id": "N03",
+   "who": "N",
+   "text": "All season, his coach kept him on the bench. His teammates laughed at his shoes.",
+   "start": 4.785,
+   "end": 9.017,
+   "delivery": "fast storyteller",
+   "speed": 1.07
+  },
+  {
+   "id": "N04",
+   "who": "N",
+   "text": "But every night, he shot five hundred threes in an empty gym. Then a video of it went viral.",
+   "start": 9.217,
+   "end": 13.707,
+   "delivery": "fast, building",
+   "speed": 1.07
+  },
+  {
+   "id": "N05",
+   "who": "N",
+   "text": "Tonight, down by two, the crowd chanted his number until Coach finally put him in.",
+   "start": 13.907,
+   "end": 17.838,
+   "delivery": "building",
+   "speed": 1.07
+  },
+  {
+   "id": "N06",
+   "who": "N",
+   "text": "And you all chose the same thing. Take the three.",
+   "start": 18.138,
+   "end": 20.492,
+   "delivery": "excited",
+   "speed": 1.07
+  },
+  {
+   "id": "N07",
+   "who": "N",
+   "text": "The ball comes in. Three seconds.",
+   "start": 20.892,
+   "end": 22.481,
+   "delivery": "tense",
+   "speed": 1.07
+  },
+  {
+   "id": "D1",
+   "who": "DF",
+   "text": "Aren't you the water boy?",
+   "start": 22.681,
+   "end": 23.753,
+   "delivery": "mocking",
+   "speed": 1.07
+  },
+  {
+   "id": "N08",
+   "who": "N",
+   "text": "Two seconds. Step back.",
+   "start": 23.953,
+   "end": 25.32,
+   "delivery": "tense, fast",
+   "speed": 1.07
+  },
+  {
+   "id": "N09",
+   "who": "N",
+   "text": "One second. He lets it go.",
+   "start": 25.52,
+   "end": 26.871,
+   "delivery": "slow, intense",
+   "speed": 1.07
+  },
+  {
+   "id": "N10",
+   "who": "N",
+   "text": "It hits the rim...",
+   "start": 29.071,
+   "end": 29.981,
+   "delivery": "whisper, tense",
+   "speed": 1.07
+  },
+  {
+   "id": "N11",
+   "who": "N",
+   "text": "And drops in!",
+   "start": 31.281,
+   "end": 31.931,
+   "delivery": "explosive, joyful",
+   "speed": 1.07
+  },
+  {
+   "id": "N12",
+   "who": "N",
+   "text": "The whole gym explodes. Tyler can't even look at him. And the janitor... is crying.",
+   "start": 32.531,
+   "end": 36.712,
+   "delivery": "joyful, warm",
+   "speed": 1.07
+  },
+  {
+   "id": "N13",
+   "who": "N",
+   "text": "Then Coach walks across the court, holding a water bottle.",
+   "start": 37.012,
+   "end": 39.547,
+   "delivery": "dry, funny",
+   "speed": 1.07
+  },
+  {
+   "id": "D2",
+   "who": "CO",
+   "text": "Kid... I think this one's yours.",
+   "start": 39.847,
+   "end": 41.408,
+   "delivery": "gruff, humbled",
+   "speed": 1.07
+  },
+  {
+   "id": "N14",
+   "who": "N",
+   "text": "But up in the stands, a man in a college jacket is already making a phone call.",
+   "start": 41.908,
+   "end": 45.639,
+   "delivery": "intriguing",
+   "speed": 1.07
+  },
+  {
+   "id": "N15",
+   "who": "N",
+   "text": "Forgive Coach. Take the college offer. Or make Coach fill the water bottles next season.",
+   "start": 46.039,
+   "end": 50.558,
+   "delivery": "playful",
+   "speed": 1.07
+  },
+  {
+   "id": "N16",
+   "who": "N",
+   "text": "Comment one, two, or three. Part three, you decide.",
+   "start": 50.858,
+   "end": 54.16,
+   "delivery": "low, final",
+   "speed": 1.07
+  }
+ ],
+ "words": [
+  {
+   "line": "N01",
+   "text": "This",
+   "start": 0.0,
+   "end": 0.2
+  },
+  {
+   "line": "N01",
+   "text": "shot",
+   "start": 0.2,
+   "end": 0.46
+  },
+  {
+   "line": "N01",
+   "text": "decides",
+   "start": 0.46,
+   "end": 0.92
+  },
+  {
+   "line": "N01",
+   "text": "the",
+   "start": 0.92,
+   "end": 1.14
+  },
+  {
+   "line": "N01",
+   "text": "state",
+   "start": 1.14,
+   "end": 1.44
+  },
+  {
+   "line": "N01",
+   "text": "championship.",
+   "start": 1.44,
+   "end": 1.98
+  },
+  {
+   "line": "N02",
+   "text": "And",
+   "start": 2.437,
+   "end": 2.577
+  },
+  {
+   "line": "N02",
+   "text": "the",
+   "start": 2.577,
+   "end": 2.677
+  },
+  {
+   "line": "N02",
+   "text": "kid",
+   "start": 2.677,
+   "end": 2.797
+  },
+  {
+   "line": "N02",
+   "text": "who",
+   "start": 2.797,
+   "end": 2.957
+  },
+  {
+   "line": "N02",
+   "text": "took",
+   "start": 2.957,
+   "end": 3.137
+  },
+  {
+   "line": "N02",
+   "text": "it...",
+   "start": 3.137,
+   "end": 3.397
+  },
+  {
+   "line": "N02",
+   "text": "was",
+   "start": 3.397,
+   "end": 3.657
+  },
+  {
+   "line": "N02",
+   "text": "the",
+   "start": 3.657,
+   "end": 3.797
+  },
+  {
+   "line": "N02",
+   "text": "water",
+   "start": 3.797,
+   "end": 4.017
+  },
+  {
+   "line": "N02",
+   "text": "boy.",
+   "start": 4.017,
+   "end": 4.257
+  },
+  {
+   "line": "N03",
+   "text": "All",
+   "start": 4.785,
+   "end": 4.985
+  },
+  {
+   "line": "N03",
+   "text": "season,",
+   "start": 4.985,
+   "end": 5.365
+  },
+  {
+   "line": "N03",
+   "text": "his",
+   "start": 5.365,
+   "end": 5.645
+  },
+  {
+   "line": "N03",
+   "text": "coach",
+   "start": 5.645,
+   "end": 5.925
+  },
+  {
+   "line": "N03",
+   "text": "kept",
+   "start": 5.925,
+   "end": 6.165
+  },
+  {
+   "line": "N03",
+   "text": "him",
+   "start": 6.165,
+   "end": 6.325
+  },
+  {
+   "line": "N03",
+   "text": "on",
+   "start": 6.325,
+   "end": 6.465
+  },
+  {
+   "line": "N03",
+   "text": "the",
+   "start": 6.465,
+   "end": 6.565
+  },
+  {
+   "line": "N03",
+   "text": "bench.",
+   "start": 6.565,
+   "end": 6.865
+  },
+  {
+   "line": "N03",
+   "text": "His",
+   "start": 7.365,
+   "end": 7.425
+  },
+  {
+   "line": "N03",
+   "text": "teammates",
+   "start": 7.425,
+   "end": 7.805
+  },
+  {
+   "line": "N03",
+   "text": "laughed",
+   "start": 7.805,
+   "end": 8.185
+  },
+  {
+   "line": "N03",
+   "text": "at",
+   "start": 8.185,
+   "end": 8.385
+  },
+  {
+   "line": "N03",
+   "text": "his",
+   "start": 8.385,
+   "end": 8.525
+  },
+  {
+   "line": "N03",
+   "text": "shoes.",
+   "start": 8.525,
+   "end": 8.765
+  },
+  {
+   "line": "N04",
+   "text": "But",
+   "start": 9.217,
+   "end": 9.453
+  },
+  {
+   "line": "N04",
+   "text": "every",
+   "start": 9.453,
+   "end": 9.69
+  },
+  {
+   "line": "N04",
+   "text": "night,",
+   "start": 9.69,
+   "end": 9.926
+  },
+  {
+   "line": "N04",
+   "text": "he",
+   "start": 9.926,
+   "end": 10.162
+  },
+  {
+   "line": "N04",
+   "text": "shot",
+   "start": 10.162,
+   "end": 10.399
+  },
+  {
+   "line": "N04",
+   "text": "five",
+   "start": 10.399,
+   "end": 10.635
+  },
+  {
+   "line": "N04",
+   "text": "hundred",
+   "start": 10.635,
+   "end": 10.871
+  },
+  {
+   "line": "N04",
+   "text": "threes",
+   "start": 10.871,
+   "end": 11.108
+  },
+  {
+   "line": "N04",
+   "text": "in",
+   "start": 11.108,
+   "end": 11.344
+  },
+  {
+   "line": "N04",
+   "text": "an",
+   "start": 11.344,
+   "end": 11.58
+  },
+  {
+   "line": "N04",
+   "text": "empty",
+   "start": 11.58,
+   "end": 11.817
+  },
+  {
+   "line": "N04",
+   "text": "gym.",
+   "start": 11.817,
+   "end": 12.053
+  },
+  {
+   "line": "N04",
+   "text": "Then",
+   "start": 12.053,
+   "end": 12.289
+  },
+  {
+   "line": "N04",
+   "text": "a",
+   "start": 12.289,
+   "end": 12.526
+  },
+  {
+   "line": "N04",
+   "text": "video",
+   "start": 12.526,
+   "end": 12.762
+  },
+  {
+   "line": "N04",
+   "text": "of",
+   "start": 12.762,
+   "end": 12.998
+  },
+  {
+   "line": "N04",
+   "text": "it",
+   "start": 12.998,
+   "end": 13.235
+  },
+  {
+   "line": "N04",
+   "text": "went",
+   "start": 13.235,
+   "end": 13.471
+  },
+  {
+   "line": "N04",
+   "text": "viral.",
+   "start": 13.471,
+   "end": 13.707
+  },
+  {
+   "line": "N05",
+   "text": "Tonight,",
+   "start": 13.907,
+   "end": 14.227
+  },
+  {
+   "line": "N05",
+   "text": "down",
+   "start": 14.487,
+   "end": 14.587
+  },
+  {
+   "line": "N05",
+   "text": "by",
+   "start": 14.587,
+   "end": 14.747
+  },
+  {
+   "line": "N05",
+   "text": "two,",
+   "start": 14.747,
+   "end": 15.027
+  },
+  {
+   "line": "N05",
+   "text": "the",
+   "start": 15.247,
+   "end": 15.327
+  },
+  {
+   "line": "N05",
+   "text": "crowd",
+   "start": 15.327,
+   "end": 15.547
+  },
+  {
+   "line": "N05",
+   "text": "chanted",
+   "start": 15.547,
+   "end": 15.867
+  },
+  {
+   "line": "N05",
+   "text": "his",
+   "start": 15.867,
+   "end": 16.107
+  },
+  {
+   "line": "N05",
+   "text": "number",
+   "start": 16.107,
+   "end": 16.367
+  },
+  {
+   "line": "N05",
+   "text": "until",
+   "start": 16.367,
+   "end": 16.647
+  },
+  {
+   "line": "N05",
+   "text": "Coach",
+   "start": 16.647,
+   "end": 16.887
+  },
+  {
+   "line": "N05",
+   "text": "finally",
+   "start": 16.887,
+   "end": 17.287
+  },
+  {
+   "line": "N05",
+   "text": "put",
+   "start": 17.287,
+   "end": 17.507
+  },
+  {
+   "line": "N05",
+   "text": "him",
+   "start": 17.507,
+   "end": 17.607
+  },
+  {
+   "line": "N05",
+   "text": "in.",
+   "start": 17.607,
+   "end": 17.767
+  },
+  {
+   "line": "N06",
+   "text": "And",
+   "start": 18.138,
+   "end": 18.278
+  },
+  {
+   "line": "N06",
+   "text": "you",
+   "start": 18.278,
+   "end": 18.438
+  },
+  {
+   "line": "N06",
+   "text": "all",
+   "start": 18.438,
+   "end": 18.598
+  },
+  {
+   "line": "N06",
+   "text": "chose",
+   "start": 18.598,
+   "end": 18.818
+  },
+  {
+   "line": "N06",
+   "text": "the",
+   "start": 18.818,
+   "end": 19.058
+  },
+  {
+   "line": "N06",
+   "text": "same",
+   "start": 19.058,
+   "end": 19.238
+  },
+  {
+   "line": "N06",
+   "text": "thing.",
+   "start": 19.238,
+   "end": 19.518
+  },
+  {
+   "line": "N06",
+   "text": "Take",
+   "start": 19.818,
+   "end": 19.978
+  },
+  {
+   "line": "N06",
+   "text": "the",
+   "start": 19.978,
+   "end": 20.218
+  },
+  {
+   "line": "N06",
+   "text": "three.",
+   "start": 20.218,
+   "end": 20.458
+  },
+  {
+   "line": "N07",
+   "text": "The",
+   "start": 20.892,
+   "end": 21.012
+  },
+  {
+   "line": "N07",
+   "text": "ball",
+   "start": 21.012,
+   "end": 21.152
+  },
+  {
+   "line": "N07",
+   "text": "comes",
+   "start": 21.152,
+   "end": 21.412
+  },
+  {
+   "line": "N07",
+   "text": "in.",
+   "start": 21.412,
+   "end": 21.672
+  },
+  {
+   "line": "N07",
+   "text": "Three",
+   "start": 21.832,
+   "end": 21.992
+  },
+  {
+   "line": "N07",
+   "text": "seconds.",
+   "start": 21.992,
+   "end": 22.252
+  },
+  {
+   "line": "D1",
+   "text": "Aren't",
+   "start": 22.681,
+   "end": 22.921
+  },
+  {
+   "line": "D1",
+   "text": "you",
+   "start": 22.921,
+   "end": 23.021
+  },
+  {
+   "line": "D1",
+   "text": "the",
+   "start": 23.021,
+   "end": 23.141
+  },
+  {
+   "line": "D1",
+   "text": "water",
+   "start": 23.141,
+   "end": 23.341
+  },
+  {
+   "line": "D1",
+   "text": "boy?",
+   "start": 23.341,
+   "end": 23.581
+  },
+  {
+   "line": "N08",
+   "text": "Two",
+   "start": 23.953,
+   "end": 24.153
+  },
+  {
+   "line": "N08",
+   "text": "seconds.",
+   "start": 24.153,
+   "end": 24.513
+  },
+  {
+   "line": "N08",
+   "text": "Step",
+   "start": 24.853,
+   "end": 24.973
+  },
+  {
+   "line": "N08",
+   "text": "back.",
+   "start": 24.973,
+   "end": 25.193
+  },
+  {
+   "line": "N09",
+   "text": "One",
+   "start": 25.52,
+   "end": 25.74
+  },
+  {
+   "line": "N09",
+   "text": "second.",
+   "start": 25.74,
+   "end": 26.04
+  },
+  {
+   "line": "N09",
+   "text": "He",
+   "start": 26.22,
+   "end": 26.28
+  },
+  {
+   "line": "N09",
+   "text": "lets",
+   "start": 26.28,
+   "end": 26.42
+  },
+  {
+   "line": "N09",
+   "text": "it",
+   "start": 26.42,
+   "end": 26.6
+  },
+  {
+   "line": "N09",
+   "text": "go.",
+   "start": 26.6,
+   "end": 26.84
+  },
+  {
+   "line": "N10",
+   "text": "It",
+   "start": 29.071,
+   "end": 29.211
+  },
+  {
+   "line": "N10",
+   "text": "hits",
+   "start": 29.211,
+   "end": 29.431
+  },
+  {
+   "line": "N10",
+   "text": "the",
+   "start": 29.431,
+   "end": 29.631
+  },
+  {
+   "line": "N10",
+   "text": "rim...",
+   "start": 29.631,
+   "end": 29.831
+  },
+  {
+   "line": "N11",
+   "text": "And",
+   "start": 31.281,
+   "end": 31.422
+  },
+  {
+   "line": "N11",
+   "text": "drops",
+   "start": 31.422,
+   "end": 31.621
+  },
+  {
+   "line": "N11",
+   "text": "in!",
+   "start": 31.621,
+   "end": 31.841
+  },
+  {
+   "line": "N12",
+   "text": "The",
+   "start": 32.531,
+   "end": 32.711
+  },
+  {
+   "line": "N12",
+   "text": "whole",
+   "start": 32.711,
+   "end": 32.911
+  },
+  {
+   "line": "N12",
+   "text": "gym",
+   "start": 32.911,
+   "end": 33.151
+  },
+  {
+   "line": "N12",
+   "text": "explodes.",
+   "start": 33.151,
+   "end": 33.631
+  },
+  {
+   "line": "N12",
+   "text": "Tyler",
+   "start": 33.891,
+   "end": 34.031
+  },
+  {
+   "line": "N12",
+   "text": "can't",
+   "start": 34.031,
+   "end": 34.331
+  },
+  {
+   "line": "N12",
+   "text": "even",
+   "start": 34.331,
+   "end": 34.451
+  },
+  {
+   "line": "N12",
+   "text": "look",
+   "start": 34.451,
+   "end": 34.611
+  },
+  {
+   "line": "N12",
+   "text": "at",
+   "start": 34.611,
+   "end": 34.731
+  },
+  {
+   "line": "N12",
+   "text": "him.",
+   "start": 34.731,
+   "end": 34.931
+  },
+  {
+   "line": "N12",
+   "text": "And",
+   "start": 35.231,
+   "end": 35.351
+  },
+  {
+   "line": "N12",
+   "text": "the",
+   "start": 35.351,
+   "end": 35.451
+  },
+  {
+   "line": "N12",
+   "text": "janitor...",
+   "start": 35.451,
+   "end": 35.871
+  },
+  {
+   "line": "N12",
+   "text": "is",
+   "start": 35.871,
+   "end": 36.211
+  },
+  {
+   "line": "N12",
+   "text": "crying.",
+   "start": 36.211,
+   "end": 36.511
+  },
+  {
+   "line": "N13",
+   "text": "Then",
+   "start": 37.012,
+   "end": 37.232
+  },
+  {
+   "line": "N13",
+   "text": "Coach",
+   "start": 37.232,
+   "end": 37.492
+  },
+  {
+   "line": "N13",
+   "text": "walks",
+   "start": 37.492,
+   "end": 37.792
+  },
+  {
+   "line": "N13",
+   "text": "across",
+   "start": 37.792,
+   "end": 38.092
+  },
+  {
+   "line": "N13",
+   "text": "the",
+   "start": 38.092,
+   "end": 38.272
+  },
+  {
+   "line": "N13",
+   "text": "court,",
+   "start": 38.272,
+   "end": 38.512
+  },
+  {
+   "line": "N13",
+   "text": "holding",
+   "start": 38.512,
+   "end": 38.792
+  },
+  {
+   "line": "N13",
+   "text": "a",
+   "start": 38.792,
+   "end": 38.972
+  },
+  {
+   "line": "N13",
+   "text": "water",
+   "start": 38.972,
+   "end": 39.152
+  },
+  {
+   "line": "N13",
+   "text": "bottle.",
+   "start": 39.152,
+   "end": 39.412
+  },
+  {
+   "line": "D2",
+   "text": "Kid...",
+   "start": 39.847,
+   "end": 40.107
+  },
+  {
+   "line": "D2",
+   "text": "I",
+   "start": 40.327,
+   "end": 40.487
+  },
+  {
+   "line": "D2",
+   "text": "think",
+   "start": 40.487,
+   "end": 40.607
+  },
+  {
+   "line": "D2",
+   "text": "this",
+   "start": 40.607,
+   "end": 40.747
+  },
+  {
+   "line": "D2",
+   "text": "one's",
+   "start": 40.747,
+   "end": 40.987
+  },
+  {
+   "line": "D2",
+   "text": "yours.",
+   "start": 40.987,
+   "end": 41.127
+  },
+  {
+   "line": "N14",
+   "text": "But",
+   "start": 41.908,
+   "end": 42.108
+  },
+  {
+   "line": "N14",
+   "text": "up",
+   "start": 42.108,
+   "end": 42.248
+  },
+  {
+   "line": "N14",
+   "text": "in",
+   "start": 42.248,
+   "end": 42.368
+  },
+  {
+   "line": "N14",
+   "text": "the",
+   "start": 42.368,
+   "end": 42.488
+  },
+  {
+   "line": "N14",
+   "text": "stands,",
+   "start": 42.488,
+   "end": 42.828
+  },
+  {
+   "line": "N14",
+   "text": "a",
+   "start": 43.128,
+   "end": 43.188
+  },
+  {
+   "line": "N14",
+   "text": "man",
+   "start": 43.188,
+   "end": 43.388
+  },
+  {
+   "line": "N14",
+   "text": "in",
+   "start": 43.388,
+   "end": 43.528
+  },
+  {
+   "line": "N14",
+   "text": "a",
+   "start": 43.528,
+   "end": 43.588
+  },
+  {
+   "line": "N14",
+   "text": "college",
+   "start": 43.588,
+   "end": 43.868
+  },
+  {
+   "line": "N14",
+   "text": "jacket",
+   "start": 43.868,
+   "end": 44.288
+  },
+  {
+   "line": "N14",
+   "text": "is",
+   "start": 44.288,
+   "end": 44.508
+  },
+  {
+   "line": "N14",
+   "text": "already",
+   "start": 44.508,
+   "end": 44.788
+  },
+  {
+   "line": "N14",
+   "text": "making",
+   "start": 44.788,
+   "end": 45.028
+  },
+  {
+   "line": "N14",
+   "text": "a",
+   "start": 45.028,
+   "end": 45.208
+  },
+  {
+   "line": "N14",
+   "text": "phone",
+   "start": 45.208,
+   "end": 45.348
+  },
+  {
+   "line": "N14",
+   "text": "call.",
+   "start": 45.348,
+   "end": 45.548
+  },
+  {
+   "line": "N15",
+   "text": "Forgive",
+   "start": 46.039,
+   "end": 46.359
+  },
+  {
+   "line": "N15",
+   "text": "Coach.",
+   "start": 46.359,
+   "end": 46.719
+  },
+  {
+   "line": "N15",
+   "text": "Take",
+   "start": 47.079,
+   "end": 47.219
+  },
+  {
+   "line": "N15",
+   "text": "the",
+   "start": 47.219,
+   "end": 47.359
+  },
+  {
+   "line": "N15",
+   "text": "college",
+   "start": 47.359,
+   "end": 47.619
+  },
+  {
+   "line": "N15",
+   "text": "offer.",
+   "start": 47.619,
+   "end": 47.959
+  },
+  {
+   "line": "N15",
+   "text": "Or",
+   "start": 48.319,
+   "end": 48.439
+  },
+  {
+   "line": "N15",
+   "text": "make",
+   "start": 48.439,
+   "end": 48.779
+  },
+  {
+   "line": "N15",
+   "text": "Coach",
+   "start": 48.779,
+   "end": 49.039
+  },
+  {
+   "line": "N15",
+   "text": "fill",
+   "start": 49.039,
+   "end": 49.279
+  },
+  {
+   "line": "N15",
+   "text": "the",
+   "start": 49.279,
+   "end": 49.419
+  },
+  {
+   "line": "N15",
+   "text": "water",
+   "start": 49.419,
+   "end": 49.579
+  },
+  {
+   "line": "N15",
+   "text": "bottles",
+   "start": 49.579,
+   "end": 49.879
+  },
+  {
+   "line": "N15",
+   "text": "next",
+   "start": 49.879,
+   "end": 50.139
+  },
+  {
+   "line": "N15",
+   "text": "season.",
+   "start": 50.139,
+   "end": 50.399
+  },
+  {
+   "line": "N16",
+   "text": "Comment",
+   "start": 50.858,
+   "end": 51.178
+  },
+  {
+   "line": "N16",
+   "text": "one,",
+   "start": 51.178,
+   "end": 51.578
+  },
+  {
+   "line": "N16",
+   "text": "two,",
+   "start": 51.838,
+   "end": 52.098
+  },
+  {
+   "line": "N16",
+   "text": "or",
+   "start": 52.358,
+   "end": 52.418
+  },
+  {
+   "line": "N16",
+   "text": "three.",
+   "start": 52.418,
+   "end": 52.698
+  },
+  {
+   "line": "N16",
+   "text": "Part",
+   "start": 53.018,
+   "end": 53.178
+  },
+  {
+   "line": "N16",
+   "text": "three,",
+   "start": 53.178,
+   "end": 53.438
+  },
+  {
+   "line": "N16",
+   "text": "you",
+   "start": 53.638,
+   "end": 53.678
+  },
+  {
+   "line": "N16",
+   "text": "decide.",
+   "start": 53.678,
+   "end": 53.998
+  }
+ ],
+ "duration": 54.36
+}

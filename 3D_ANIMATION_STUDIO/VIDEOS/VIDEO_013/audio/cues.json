@@ -1,0 +1,320 @@
+{
+ "duration": 55.56,
+ "loop": true,
+ "narration": "narration/narration_raw.wav",
+ "narration_offset": 0.0,
+ "music": "music_score.wav",
+ "music_gain_db": 1,
+ "music_cue": "cue_video013",
+ "music_gates": [
+  [
+   28.971,
+   31.401,
+   0.1
+  ]
+ ],
+ "targets": {
+  "narration_lufs": -16,
+  "master_lufs": -14,
+  "true_peak": -2.0,
+  "duck_db": 5
+ },
+ "cues": [
+  {
+   "t": 0.0,
+   "file": "AUDIO/sound_effects/comedy/arena_crowd.flac",
+   "gain": -8,
+   "bus": "amb",
+   "note": "packed gym",
+   "loop": true,
+   "dur": 4.785,
+   "fade_out": 0.1
+  },
+  {
+   "t": 0.0,
+   "file": "AUDIO/ambience/room_tone.flac",
+   "gain": -4,
+   "bus": "amb",
+   "note": "gym air (no dead air)",
+   "loop": true,
+   "dur": 55.56
+  },
+  {
+   "t": 0.0,
+   "file": "AUDIO/sound_effects/movement/whoosh_long.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "the ball in the air (frame 0)"
+  },
+  {
+   "t": 3.747,
+   "file": "AUDIO/sound_effects/comedy/record_scratch.flac",
+   "gain": -7,
+   "bus": "sfx",
+   "note": "FREEZE: the water boy"
+  },
+  {
+   "t": 3.797,
+   "file": "AUDIO/sound_effects/comedy/camera_snap.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "freeze frame"
+  },
+  {
+   "t": 4.785,
+   "file": "AUDIO/sound_effects/movement/whoosh_short.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "recap whip 1"
+  },
+  {
+   "t": 7.425,
+   "file": "AUDIO/sound_effects/movement/whoosh_short.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "recap whip 2"
+  },
+  {
+   "t": 7.625,
+   "file": "AUDIO/sound_effects/comedy/crowd_laugh.flac",
+   "gain": -19,
+   "bus": "sfx",
+   "note": "teammates laughing"
+  },
+  {
+   "t": 9.217,
+   "file": "AUDIO/sound_effects/movement/whoosh_short.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "recap whip 3"
+  },
+  {
+   "t": 9.517,
+   "file": "AUDIO/sound_effects/comedy/net_swish.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "swish"
+  },
+  {
+   "t": 12.053,
+   "file": "AUDIO/sound_effects/movement/whoosh_short.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "recap whip 4"
+  },
+  {
+   "t": 12.253,
+   "file": "AUDIO/sound_effects/comedy/notif_pop.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "viral"
+  },
+  {
+   "t": 13.907,
+   "file": "AUDIO/sound_effects/movement/whoosh_short.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "recap whip 5"
+  },
+  {
+   "t": 13.907,
+   "file": "AUDIO/sound_effects/comedy/chant_23.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "chant",
+   "dur": 2.460000000000001,
+   "fade_out": 0.2
+  },
+  {
+   "t": 16.367,
+   "file": "AUDIO/sound_effects/movement/whoosh_short.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "recap whip 6"
+  },
+  {
+   "t": 18.138,
+   "file": "AUDIO/sound_effects/reactions/pop.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "your vote card"
+  },
+  {
+   "t": 20.892,
+   "file": "AUDIO/sound_effects/comedy/arena_crowd.flac",
+   "gain": -10,
+   "bus": "amb",
+   "note": "the gym",
+   "loop": true,
+   "dur": 5.708000000000002,
+   "fade_out": 0.6
+  },
+  {
+   "t": 20.942,
+   "file": "AUDIO/sound_effects/comedy/arena_buzzer.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "clock starts"
+  },
+  {
+   "t": 21.392,
+   "file": "AUDIO/sound_effects/comedy/ball_bounce.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "catch"
+  },
+  {
+   "t": 21.792,
+   "file": "AUDIO/sound_effects/comedy/ball_bounce.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "dribble 1"
+  },
+  {
+   "t": 22.242,
+   "file": "AUDIO/sound_effects/comedy/ball_bounce.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "dribble 2"
+  },
+  {
+   "t": 22.692,
+   "file": "AUDIO/sound_effects/comedy/ball_bounce.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "dribble 3"
+  },
+  {
+   "t": 23.142,
+   "file": "AUDIO/sound_effects/comedy/ball_bounce.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "dribble 4"
+  },
+  {
+   "t": 24.853,
+   "file": "AUDIO/sound_effects/comedy/sneaker_squeak.flac",
+   "gain": -7,
+   "bus": "sfx",
+   "note": "STEP BACK"
+  },
+  {
+   "t": 26.4,
+   "file": "AUDIO/sound_effects/comedy/sneaker_squeak.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "rise"
+  },
+  {
+   "t": 26.6,
+   "file": "AUDIO/sound_effects/movement/whoosh_long.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "release (slow motion)"
+  },
+  {
+   "t": 26.8,
+   "file": "AUDIO/sound_effects/bio/heartbeat_lubdub.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "heartbeat (slow-mo)"
+  },
+  {
+   "t": 27.0,
+   "file": "AUDIO/sound_effects/comedy/arena_buzzer.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "the buzzer: ball still in the air"
+  },
+  {
+   "t": 28.0,
+   "file": "AUDIO/sound_effects/bio/heartbeat_lubdub.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "heartbeat"
+  },
+  {
+   "t": 29.621,
+   "file": "AUDIO/sound_effects/comedy/metal_bang.flac",
+   "gain": -7,
+   "bus": "sfx",
+   "note": "IT HITS THE RIM"
+  },
+  {
+   "t": 29.971,
+   "file": "AUDIO/sound_effects/comedy/metal_bang.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "rolls on the rim"
+  },
+  {
+   "t": 30.071,
+   "file": "AUDIO/sound_effects/bio/heartbeat_lubdub.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "held breath: heartbeat on the rim"
+  },
+  {
+   "t": 31.431,
+   "file": "AUDIO/sound_effects/comedy/net_swish.flac",
+   "gain": -5,
+   "bus": "sfx",
+   "note": "SWISH"
+  },
+  {
+   "t": 31.481,
+   "file": "AUDIO/sound_effects/comedy/crowd_gasp.flac",
+   "gain": -10,
+   "bus": "sfx",
+   "note": "the gym explodes"
+  },
+  {
+   "t": 31.481,
+   "file": "AUDIO/sound_effects/comedy/arena_crowd.flac",
+   "gain": -2,
+   "bus": "amb",
+   "note": "roar",
+   "loop": true,
+   "dur": 10.627000000000002,
+   "fade_out": 1.0
+  },
+  {
+   "t": 35.451,
+   "file": "AUDIO/sound_effects/comedy/crowd_laugh.flac",
+   "gain": -23,
+   "bus": "sfx",
+   "note": "happy crowd"
+  },
+  {
+   "t": 39.547,
+   "file": "AUDIO/sound_effects/movement/object_slide.flac",
+   "gain": -19,
+   "bus": "sfx",
+   "note": "water bottle handed over"
+  },
+  {
+   "t": 41.908,
+   "file": "AUDIO/sound_effects/comedy/phone_buzz.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "the scout dials"
+  },
+  {
+   "t": 41.908,
+   "file": "AUDIO/sound_effects/comedy/arena_crowd.flac",
+   "gain": -14,
+   "bus": "amb",
+   "note": "crowd",
+   "loop": true,
+   "dur": 13.652000000000001,
+   "fade_in": 0.5
+  },
+  {
+   "t": 54.96,
+   "file": "AUDIO/sound_effects/movement/whoosh_long.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "back to the shot -> frame 0"
+  }
+ ]
+}
