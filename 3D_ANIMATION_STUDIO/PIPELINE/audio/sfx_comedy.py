@@ -418,6 +418,116 @@ def gurgle():
     out += lowpass(noise(n, 'brown', 462), 250) * 0.3
     return normalize(convolve_stereo(out, reverb_ir(0.8, 0.3), 0.3), -4)
 
+# ---------------------------------------------------------------- suspense pack (VIDEO_006 "The 13th Floor")
+@reg('elevator_ding_eerie', 'Elevator arrival ding, single low bell in a big dark shaft (2.4 s).')
+def ding_eerie():
+    a = fm_bell(987.8, 2.2, ratio=2.0, index=0.6, decay=0.9) + 0.35 * fm_bell(493.9, 2.2, ratio=2.0, index=0.3, decay=1.1)
+    out = np.zeros(int(2.4 * SR)); out[:len(a)] += a
+    return normalize(convolve_stereo(out, reverb_ir(2.2, 0.55, seed=601), 0.45), -5)
+
+@reg('flicker_buzz', 'Fluorescent light flicker: mains buzz chopped on/off with arcing ticks (0.7 s).')
+def flicker_buzz():
+    n = int(0.7 * SR); tt = np.arange(n) / SR; rng = np.random.default_rng(602)
+    x = soft_sat(np.sin(2 * np.pi * 120 * tt) + 0.5 * np.sin(2 * np.pi * 240 * tt) + 0.3 * np.sin(2 * np.pi * 360 * tt), 3.0)
+    gate = np.zeros(n)
+    t = 0.0
+    while t < 0.7:
+        d = rng.uniform(0.02, 0.09); on = rng.random() < 0.6
+        gate[int(t * SR):int((t + d) * SR)] = 1.0 if on else 0.05
+        t += d
+    gate = lowpass(gate, 300)
+    x = x * gate + highpass(noise(n, 'white', 603), 2000) * (np.abs(np.diff(gate, prepend=0)) > 0.02) * 0.8
+    return normalize(x * env_adsr(n, 0.005, 0.1, 0.9, 0.08), -8)
+
+@reg('elev_door_slide', 'Elevator doors sliding: motor whirr + rumble on the track (1.1 s).')
+def elev_door_slide():
+    n = int(1.1 * SR); tt = np.arange(n) / SR
+    whirr = np.sin(2 * np.pi * np.cumsum(180 + 60 * np.sin(np.pi * tt / 1.1)) / SR) * 0.3
+    rum = lowpass(noise(n, 'brown', 604), 400) * 1.2 + bandpass(noise(n, 'pink', 605), 800, 3000) * 0.25
+    x = (whirr + rum) * env_adsr(n, 0.15, 0.2, 0.8, 0.3)
+    return normalize(convolve_stereo(x, reverb_ir(0.6, 0.3, seed=606), 0.2), -8)
+
+def _metal(dur, f0s, seed, decay=0.5):
+    n = int(dur * SR); tt = np.arange(n) / SR; x = np.zeros(n); rng = np.random.default_rng(seed)
+    for f in f0s:
+        x += np.sin(2 * np.pi * f * tt + rng.uniform(0, 6)) * env_exp(n, decay * rng.uniform(0.6, 1.0)) * rng.uniform(0.3, 1.0)
+    x += lowpass(noise(n, 'pink', seed + 1), 2500) * env_exp(n, 0.04) * 2.0
+    x += np.sin(2 * np.pi * np.cumsum(60 * (1 + 2 * np.exp(-tt / 0.03))) / SR) * env_exp(n, 0.12) * 1.5
+    return x
+
+@reg('metal_slam', 'Heavy steel elevator doors slamming shut, ringing tail (1.6 s).')
+def metal_slam():
+    x = _metal(1.6, [212, 347, 529, 811, 1230], 607, 0.6)
+    return normalize(convolve_stereo(soft_sat(x, 1.8), reverb_ir(1.6, 0.5, seed=608), 0.35), -1)
+
+@reg('metal_bang', 'Fist pounding on steel elevator doors (0.5 s).')
+def metal_bang():
+    x = _metal(0.5, [180, 296, 455, 700], 609, 0.18)
+    return normalize(convolve_stereo(soft_sat(x, 2.0), reverb_ir(0.8, 0.4, seed=610), 0.3), -2)
+
+@reg('footstep_echo', 'Slow footstep on an old carpet runner in an empty hallway, long echo (1.0 s).')
+def footstep_echo():
+    n = int(0.25 * SR)
+    x = bandpass(noise(n, 'pink', 611), 100, 1800) * env_exp(n, 0.035) + np.sin(2 * np.pi * 65 * np.arange(n) / SR) * env_exp(n, 0.05) * 0.6
+    out = np.zeros(int(1.0 * SR)); out[:n] += x
+    return normalize(convolve_stereo(out, reverb_ir(1.0, 0.5, seed=612, predelay=0.04), 0.4), -6)
+
+@reg('horror_sting', 'Photo reveal: dissonant string cluster stab + low boom (2.2 s).')
+def horror_sting():
+    n = int(2.2 * SR); tt = np.arange(n) / SR; x = np.zeros(n)
+    for k, f in enumerate([466.2, 493.9, 523.3, 987.8, 1046.5]):
+        vib = 1 + 0.004 * np.sin(2 * np.pi * (5.5 + k * 0.3) * tt)
+        ph = 2 * np.pi * np.cumsum(f * vib) / SR
+        x += (np.sin(ph) + 0.4 * np.sin(2 * ph) + 0.2 * np.sin(3 * ph)) * 0.25
+    x = x * env_adsr(n, 0.008, 0.3, 0.45, 1.2)
+    x += np.sin(2 * np.pi * np.cumsum(45 * (1 + np.exp(-tt / 0.05))) / SR) * env_exp(n, 0.5) * 1.2
+    return normalize(convolve_stereo(highpass(x, 30), reverb_ir(2.0, 0.55, seed=613), 0.4), -2)
+
+@reg('creak_long', 'Old wooden apartment door creaking slowly open (1.8 s).')
+def creak_long():
+    n = int(1.8 * SR); tt = np.arange(n) / SR; rng = np.random.default_rng(614)
+    rate = 18 + 22 * np.sin(np.pi * tt / 1.8) + 6 * np.sin(2 * np.pi * 1.3 * tt)
+    ph = np.cumsum(rate) / SR
+    pulses = (np.diff(np.floor(ph), prepend=0) > 0).astype(float) * rng.uniform(0.5, 1.0, n)
+    x = sum(bandpass(pulses, f * 0.85, f * 1.15) * g for f, g in ((520, 1.0), (1150, 0.6), (2300, 0.3)))
+    x = x * env_adsr(n, 0.1, 0.2, 0.9, 0.3)
+    return normalize(convolve_stereo(x, reverb_ir(1.2, 0.45, seed=615), 0.35), -6)
+
+@reg('tv_static_bed', 'Old TV static, room-filtered, loopable (6 s).')
+def tv_static_bed():
+    n = int(6.0 * SR)
+    x = bandpass(noise(n, 'white', 616), 400, 6000) * (0.8 + 0.2 * np.sin(2 * np.pi * 0.7 * np.arange(n) / SR))
+    x += 0.15 * np.sin(2 * np.pi * 15734 / 4 * np.arange(n) / SR)
+    return normalize(fade(x, 0.05, 0.05), -10)
+
+@reg('power_cut', 'Lights out: breaker thunk + electrical power-down whine (1.0 s).')
+def power_cut():
+    n = int(1.0 * SR); tt = np.arange(n) / SR
+    thunk = np.sin(2 * np.pi * np.cumsum(80 * (1 + np.exp(-tt / 0.02))) / SR) * env_exp(n, 0.08) * 1.4
+    whine = np.sin(2 * np.pi * np.cumsum(240 * np.exp(-tt / 0.35) + 40) / SR) * env_exp(n, 0.35) * 0.4
+    snap = highpass(noise(n, 'white', 617), 1500) * env_exp(n, 0.01) * 0.9
+    return normalize(soft_sat(thunk + whine + snap, 1.5), -2)
+
+@reg('glass_swell', 'Restrained high glassy cluster swelling in, then cut (1.6 s).')
+def glass_swell():
+    n = int(1.6 * SR); tt = np.arange(n) / SR; x = np.zeros(n)
+    for f in (1760.0, 1864.7, 2637.0, 2793.8):
+        x += np.sin(2 * np.pi * f * tt) * 0.25 * (1 + 0.3 * np.sin(2 * np.pi * 6.2 * tt))
+    x *= np.clip(tt / 1.4, 0, 1) ** 2 * env_adsr(n, 0.001, 0.1, 1.0, 0.04)
+    return normalize(convolve_stereo(x, reverb_ir(1.4, 0.5, seed=618), 0.4), -8)
+
+@reg('cable_hum', 'Elevator car moving: low motor hum + cable creaks (6 s).')
+def cable_hum():
+    n = int(6.0 * SR); tt = np.arange(n) / SR; rng = np.random.default_rng(619)
+    x = (np.sin(2 * np.pi * 50 * tt) + 0.5 * np.sin(2 * np.pi * 100 * tt) + 0.25 * np.sin(2 * np.pi * 150 * tt)) * 0.4
+    x += lowpass(noise(n, 'brown', 620), 200) * 0.8
+    for t0 in rng.uniform(0.3, 5.5, 5):
+        k = int(0.25 * SR); i = int(t0 * SR)
+        c = bandpass(noise(k, 'white', int(t0 * 100)), 700, 1400) * env_adsr(k, 0.05, 0.1, 0.5, 0.1) * 0.25
+        x[i:i + k] += c[:n - i]
+    return normalize(fade(x, 0.2, 0.2), -10)
+
+
 def main():
     root = sys.argv[1]
     d = os.path.join(root, 'sound_effects', 'comedy')

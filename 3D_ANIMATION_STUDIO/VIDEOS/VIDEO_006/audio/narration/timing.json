@@ -1,0 +1,171 @@
+{
+ "voice": "chatterbox+kokoro:am_fenrir",
+ "sample_rate": 24000,
+ "lines": [
+  {
+   "id": "D1",
+   "who": "M",
+   "text": "Wait... this building only has twelve floors.",
+   "start": 2.45,
+   "end": 4.582,
+   "delivery": "tired, confused",
+   "speed": 1.05
+  },
+  {
+   "id": "N1",
+   "who": "N",
+   "text": "But when the doors opened... this wasn't another floor.",
+   "start": 8.35,
+   "end": 11.203,
+   "delivery": "low, ominous",
+   "speed": 0.98
+  },
+  {
+   "id": "D2",
+   "who": "M",
+   "text": "Hey! Wait!",
+   "start": 18.45,
+   "end": 19.242,
+   "delivery": "panic",
+   "speed": 1.05
+  },
+  {
+   "id": "D3",
+   "who": "M2",
+   "text": "You're late... again.",
+   "start": 28.3,
+   "end": 29.634,
+   "delivery": "calm, flat, unsettling",
+   "speed": 0.92
+  }
+ ],
+ "words": [
+  {
+   "line": "D1",
+   "text": "Wait...",
+   "start": 2.45,
+   "end": 2.63
+  },
+  {
+   "line": "D1",
+   "text": "this",
+   "start": 2.81,
+   "end": 2.91
+  },
+  {
+   "line": "D1",
+   "text": "building",
+   "start": 2.91,
+   "end": 3.19
+  },
+  {
+   "line": "D1",
+   "text": "only",
+   "start": 3.19,
+   "end": 3.47
+  },
+  {
+   "line": "D1",
+   "text": "has",
+   "start": 3.47,
+   "end": 3.77
+  },
+  {
+   "line": "D1",
+   "text": "twelve",
+   "start": 3.77,
+   "end": 3.99
+  },
+  {
+   "line": "D1",
+   "text": "floors.",
+   "start": 3.99,
+   "end": 4.29
+  },
+  {
+   "line": "N1",
+   "text": "But",
+   "start": 8.35,
+   "end": 8.47
+  },
+  {
+   "line": "N1",
+   "text": "when",
+   "start": 8.47,
+   "end": 8.61
+  },
+  {
+   "line": "N1",
+   "text": "the",
+   "start": 8.61,
+   "end": 8.75
+  },
+  {
+   "line": "N1",
+   "text": "doors",
+   "start": 8.75,
+   "end": 9.03
+  },
+  {
+   "line": "N1",
+   "text": "opened...",
+   "start": 9.03,
+   "end": 9.55
+  },
+  {
+   "line": "N1",
+   "text": "this",
+   "start": 9.91,
+   "end": 10.01
+  },
+  {
+   "line": "N1",
+   "text": "wasn't",
+   "start": 10.01,
+   "end": 10.41
+  },
+  {
+   "line": "N1",
+   "text": "another",
+   "start": 10.41,
+   "end": 10.65
+  },
+  {
+   "line": "N1",
+   "text": "floor.",
+   "start": 10.65,
+   "end": 11.01
+  },
+  {
+   "line": "D2",
+   "text": "Hey!",
+   "start": 18.45,
+   "end": 18.73
+  },
+  {
+   "line": "D2",
+   "text": "Wait!",
+   "start": 18.91,
+   "end": 19.11
+  },
+  {
+   "line": "D3",
+   "text": "You're",
+   "start": 28.3,
+   "end": 28.54
+  },
+  {
+   "line": "D3",
+   "text": "late...",
+   "start": 28.54,
+   "end": 28.74
+  },
+  {
+   "line": "D3",
+   "text": "again.",
+   "start": 29.04,
+   "end": 29.36
+  }
+ ],
+ "duration": 38.0
+}

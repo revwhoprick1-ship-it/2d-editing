@@ -1,0 +1,540 @@
+{
+ "duration": 38.0,
+ "loop": true,
+ "narration": "narration/narration_raw.wav",
+ "narration_offset": 0.0,
+ "music": "music_score.wav",
+ "music_gain_db": -4,
+ "music_cue": "cue_video006",
+ "music_gates": [
+  [
+   27.7,
+   30.4,
+   0.12
+  ],
+  [
+   37.8,
+   39.0,
+   0.02
+  ]
+ ],
+ "music_map": [
+  [
+   "0-7",
+   "Ride",
+   "sub drone, detuned pad, lonely high piano; sour step when 13 lights"
+  ],
+  [
+   "7-12",
+   "Hallway",
+   "tremolo strings swell"
+  ],
+  [
+   "12-14.6",
+   "Walk",
+   "slow heartbeat taiko"
+  ],
+  [
+   "14.6-17.2",
+   "Photo",
+   "string cluster -> taiko hit on the slam"
+  ],
+  [
+   "17.2-20.4",
+   "Panic",
+   "fast low ostinato, tremolo"
+  ],
+  [
+   "20.4-27.7",
+   "Apartment",
+   "sub drone + distant bell, slowing heartbeat"
+  ],
+  [
+   "27.7-30.4",
+   "SILENCE",
+   "music out: \"You're late... again.\" then lights out"
+  ],
+  [
+   "30.4-34.9",
+   "Return",
+   "uneasy pulse; hit on the 11:48 clock"
+  ],
+  [
+   "34.9-37.8",
+   "Reflection",
+   "high tremolo creeping up, hard cut"
+  ]
+ ],
+ "targets": {
+  "narration_lufs": -16,
+  "master_lufs": -14,
+  "true_peak": -1.0,
+  "duck_db": 8
+ },
+ "cues": [
+  {
+   "t": 0.0,
+   "file": "AUDIO/ambience/room_tone.flac",
+   "gain": -20,
+   "bus": "amb",
+   "note": "elevator room tone",
+   "dur": 29.85,
+   "fade_out": 0.02
+  },
+  {
+   "t": 0.0,
+   "file": "AUDIO/sound_effects/comedy/cable_hum.flac",
+   "gain": -14,
+   "bus": "amb",
+   "note": "car moving: motor hum + cable creaks",
+   "dur": 7.1,
+   "loop": true,
+   "fade_out": 0.4
+  },
+  {
+   "t": 0.35,
+   "file": "AUDIO/sound_effects/environment/button_click.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "the 13 button lights up by itself"
+  },
+  {
+   "t": 0.37,
+   "file": "AUDIO/sound_effects/environment/electronic_beep.flac",
+   "gain": -25,
+   "bus": "sfx",
+   "note": "display flips 12 -> 13"
+  },
+  {
+   "t": 4.8,
+   "file": "AUDIO/sound_effects/comedy/flicker_buzz.flac",
+   "gain": -12,
+   "bus": "sfx",
+   "note": "lights flicker",
+   "pan": 0.1
+  },
+  {
+   "t": 5.15,
+   "file": "AUDIO/sound_effects/comedy/flicker_buzz.flac",
+   "gain": -14,
+   "bus": "sfx",
+   "note": "flicker again",
+   "pan": -0.1
+  },
+  {
+   "t": 5.6,
+   "file": "AUDIO/sound_effects/environment/electronic_glitch.flac",
+   "gain": -20,
+   "bus": "sfx",
+   "note": "display glitches"
+  },
+  {
+   "t": 6.28,
+   "file": "AUDIO/sound_effects/comedy/flicker_buzz.flac",
+   "gain": -16,
+   "bus": "sfx",
+   "note": "last flicker"
+  },
+  {
+   "t": 7.0,
+   "file": "AUDIO/sound_effects/comedy/elevator_ding_eerie.flac",
+   "gain": -8,
+   "bus": "sfx",
+   "note": "DING: floor 13"
+  },
+  {
+   "t": 7.1,
+   "file": "AUDIO/sound_effects/comedy/elev_door_slide.flac",
+   "gain": -12,
+   "bus": "sfx",
+   "note": "doors slide open"
+  },
+  {
+   "t": 7.2,
+   "file": "AUDIO/ambience/wind.flac",
+   "gain": -30,
+   "bus": "amb",
+   "note": "cold hallway draft",
+   "dur": 22.650000000000002,
+   "fade_in": 1.0,
+   "fade_out": 0.02
+  },
+  {
+   "t": 9.0,
+   "file": "AUDIO/sound_effects/comedy/flicker_buzz.flac",
+   "gain": -20,
+   "bus": "sfx",
+   "note": "sconce 1 flickers",
+   "pan": -0.3
+  },
+  {
+   "t": 10.0,
+   "file": "AUDIO/sound_effects/comedy/flicker_buzz.flac",
+   "gain": -20,
+   "bus": "sfx",
+   "note": "sconce 2 flickers",
+   "pan": 0.0
+  },
+  {
+   "t": 11.0,
+   "file": "AUDIO/sound_effects/comedy/flicker_buzz.flac",
+   "gain": -20,
+   "bus": "sfx",
+   "note": "sconce 3 flickers",
+   "pan": 0.3
+  },
+  {
+   "t": 12.25,
+   "file": "AUDIO/sound_effects/comedy/footstep_echo.flac",
+   "gain": -14,
+   "bus": "sfx",
+   "note": "slow steps, echoing hallway",
+   "pan": 0.1
+  },
+  {
+   "t": 12.75,
+   "file": "AUDIO/sound_effects/comedy/footstep_echo.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "slow steps, echoing hallway",
+   "pan": -0.1
+  },
+  {
+   "t": 13.25,
+   "file": "AUDIO/sound_effects/comedy/footstep_echo.flac",
+   "gain": -14,
+   "bus": "sfx",
+   "note": "slow steps, echoing hallway",
+   "pan": 0.1
+  },
+  {
+   "t": 13.75,
+   "file": "AUDIO/sound_effects/comedy/footstep_echo.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "slow steps, echoing hallway",
+   "pan": -0.1
+  },
+  {
+   "t": 14.25,
+   "file": "AUDIO/sound_effects/comedy/footstep_echo.flac",
+   "gain": -14,
+   "bus": "sfx",
+   "note": "slow steps, echoing hallway",
+   "pan": 0.1
+  },
+  {
+   "t": 14.9,
+   "file": "AUDIO/sound_effects/comedy/horror_sting.flac",
+   "gain": -8,
+   "bus": "sfx",
+   "note": "the photo: it is HIM (lands on the cut to the photo)"
+  },
+  {
+   "t": 15.95,
+   "file": "AUDIO/sound_effects/bio/heartbeat_lubdub.flac",
+   "gain": -12,
+   "bus": "sfx",
+   "note": "recognition: heartbeat"
+  },
+  {
+   "t": 16.9,
+   "file": "AUDIO/sound_effects/movement/whoosh_short.flac",
+   "gain": -19,
+   "bus": "sfx",
+   "note": "he spins round"
+  },
+  {
+   "t": 17.2,
+   "file": "AUDIO/sound_effects/comedy/metal_slam.flac",
+   "gain": -6,
+   "bus": "sfx",
+   "note": "the doors SLAM shut"
+  },
+  {
+   "t": 17.5,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "runs back"
+  },
+  {
+   "t": 17.7,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "runs back"
+  },
+  {
+   "t": 17.9,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "runs back"
+  },
+  {
+   "t": 18.1,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "runs back"
+  },
+  {
+   "t": 18.4,
+   "file": "AUDIO/sound_effects/comedy/metal_bang.flac",
+   "gain": -10,
+   "bus": "sfx",
+   "note": "pounds the doors 1"
+  },
+  {
+   "t": 18.6,
+   "file": "AUDIO/sound_effects/comedy/metal_bang.flac",
+   "gain": -12,
+   "bus": "sfx",
+   "note": "pounds the doors 2"
+  },
+  {
+   "t": 18.8,
+   "file": "AUDIO/sound_effects/comedy/metal_bang.flac",
+   "gain": -10,
+   "bus": "sfx",
+   "note": "pounds the doors 3"
+  },
+  {
+   "t": 19.0,
+   "file": "AUDIO/sound_effects/comedy/metal_bang.flac",
+   "gain": -12,
+   "bus": "sfx",
+   "note": "pounds the doors 4"
+  },
+  {
+   "t": 19.2,
+   "file": "AUDIO/sound_effects/comedy/metal_bang.flac",
+   "gain": -10,
+   "bus": "sfx",
+   "note": "pounds the doors 5"
+  },
+  {
+   "t": 20.4,
+   "file": "AUDIO/sound_effects/comedy/creak_long.flac",
+   "gain": -10,
+   "bus": "sfx",
+   "note": "the far door creaks open"
+  },
+  {
+   "t": 20.7,
+   "file": "AUDIO/sound_effects/comedy/tv_static_bed.flac",
+   "gain": -21,
+   "bus": "amb",
+   "note": "TV static leaking from the apartment",
+   "dur": 9.150000000000002,
+   "loop": true,
+   "fade_in": 2.0,
+   "fade_out": 0.02
+  },
+  {
+   "t": 22.65,
+   "file": "AUDIO/sound_effects/comedy/footstep_echo.flac",
+   "gain": -16,
+   "bus": "sfx",
+   "note": "walks to the open door"
+  },
+  {
+   "t": 23.15,
+   "file": "AUDIO/sound_effects/comedy/footstep_echo.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "walks to the open door"
+  },
+  {
+   "t": 23.65,
+   "file": "AUDIO/sound_effects/comedy/footstep_echo.flac",
+   "gain": -16,
+   "bus": "sfx",
+   "note": "walks to the open door"
+  },
+  {
+   "t": 24.15,
+   "file": "AUDIO/sound_effects/comedy/footstep_echo.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "walks to the open door"
+  },
+  {
+   "t": 24.65,
+   "file": "AUDIO/sound_effects/comedy/footstep_echo.flac",
+   "gain": -16,
+   "bus": "sfx",
+   "note": "walks to the open door"
+  },
+  {
+   "t": 25.15,
+   "file": "AUDIO/sound_effects/comedy/footstep_echo.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "walks to the open door"
+  },
+  {
+   "t": 25.7,
+   "file": "AUDIO/sound_effects/movement/cloth_rustle.flac",
+   "gain": -20,
+   "bus": "sfx",
+   "note": "the double turns his head"
+  },
+  {
+   "t": 26.9,
+   "file": "AUDIO/sound_effects/movement/cloth_rustle.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "the double stands up"
+  },
+  {
+   "t": 27.1,
+   "file": "AUDIO/sound_effects/bio/heartbeat_muffled.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "heartbeat under the silence"
+  },
+  {
+   "t": 29.85,
+   "file": "AUDIO/sound_effects/comedy/power_cut.flac",
+   "gain": -6,
+   "bus": "sfx",
+   "note": "LIGHTS OUT (hard cut to black)"
+  },
+  {
+   "t": 30.4,
+   "file": "AUDIO/sound_effects/comedy/elevator_ding_eerie.flac",
+   "gain": -8,
+   "bus": "sfx",
+   "note": "DING: back in the elevator"
+  },
+  {
+   "t": 30.4,
+   "file": "AUDIO/ambience/room_tone.flac",
+   "gain": -20,
+   "bus": "amb",
+   "note": "elevator room tone",
+   "dur": 7.399999999999999,
+   "fade_out": 0.02
+  },
+  {
+   "t": 30.45,
+   "file": "AUDIO/sound_effects/comedy/elev_door_slide.flac",
+   "gain": -14,
+   "bus": "sfx",
+   "note": "doors open"
+  },
+  {
+   "t": 30.75,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "stumbles in"
+  },
+  {
+   "t": 30.95,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "stumbles in"
+  },
+  {
+   "t": 31.15,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "stumbles in"
+  },
+  {
+   "t": 31.4,
+   "file": "AUDIO/sound_effects/environment/button_click.flac",
+   "gain": -12,
+   "bus": "sfx",
+   "note": "jabs the button 1"
+  },
+  {
+   "t": 31.567,
+   "file": "AUDIO/sound_effects/environment/button_click.flac",
+   "gain": -12,
+   "bus": "sfx",
+   "note": "jabs the button 2"
+  },
+  {
+   "t": 31.733,
+   "file": "AUDIO/sound_effects/environment/button_click.flac",
+   "gain": -12,
+   "bus": "sfx",
+   "note": "jabs the button 3"
+  },
+  {
+   "t": 31.9,
+   "file": "AUDIO/sound_effects/environment/button_click.flac",
+   "gain": -12,
+   "bus": "sfx",
+   "note": "jabs the button 4"
+  },
+  {
+   "t": 31.9,
+   "file": "AUDIO/sound_effects/comedy/elev_door_slide.flac",
+   "gain": -14,
+   "bus": "sfx",
+   "note": "doors close"
+  },
+  {
+   "t": 32.5,
+   "file": "AUDIO/sound_effects/movement/impact_soft.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "doors shut"
+  },
+  {
+   "t": 32.55,
+   "file": "AUDIO/sound_effects/comedy/cable_hum.flac",
+   "gain": -16,
+   "bus": "amb",
+   "note": "car moving again",
+   "dur": 5.25,
+   "loop": true,
+   "fade_in": 0.3,
+   "fade_out": 0.02
+  },
+  {
+   "t": 32.6,
+   "file": "AUDIO/sound_effects/environment/electronic_beep.flac",
+   "gain": -23,
+   "bus": "sfx",
+   "note": "display: 12"
+  },
+  {
+   "t": 33.3,
+   "file": "AUDIO/sound_effects/reactions/dramatic_hit.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "the clock: 11:48 again"
+  },
+  {
+   "t": 34.3,
+   "file": "AUDIO/sound_effects/bio/heartbeat_lubdub.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "the 13 button is still lit"
+  },
+  {
+   "t": 36.2,
+   "file": "AUDIO/sound_effects/comedy/glass_swell.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "restrained sting: the reflection smiles (cut at the black)",
+   "dur": 1.6,
+   "fade_out": 0.02
+  },
+  {
+   "t": 37.83,
+   "file": "AUDIO/sound_effects/comedy/elevator_ding_eerie.flac",
+   "gain": -7,
+   "bus": "sfx",
+   "note": "black + DING -> loop to frame 0"
+  }
+ ]
+}

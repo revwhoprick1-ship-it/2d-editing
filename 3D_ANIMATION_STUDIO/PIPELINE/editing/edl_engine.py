@@ -39,6 +39,8 @@ STUDIO = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__))
 FONT_B = os.path.join(STUDIO, 'ASSETS', 'fonts', 'Montserrat-800.ttf')
 FONT_S = os.path.join(STUDIO, 'ASSETS', 'fonts', 'Montserrat-600.ttf')
 FONT_E = os.path.join(STUDIO, 'ASSETS', 'fonts', 'NotoEmoji-600.ttf')
+FONT_C = os.path.join(STUDIO, 'ASSETS', 'fonts', 'RobotoCondensed-Bold.ttf')       # 2dEDIT captions
+FONT_CR = os.path.join(STUDIO, 'ASSETS', 'fonts', 'RobotoCondensed-Regular.ttf')   # 2dEDIT HUD
 YELLOW = (255, 210, 61)
 RED = (230, 40, 45)
 
@@ -168,6 +170,17 @@ def fx_freeze_tint(a, t):
     yy, xx = np.mgrid[0:a.shape[0], 0:a.shape[1]]
     v = 1 - 0.6 * (((xx / a.shape[1] - 0.5) * 1.5) ** 2 + ((yy / a.shape[0] - 0.5) * 1.1) ** 2)
     return np.clip(out * v[..., None], 0, 1)
+
+
+@lru_cache(maxsize=4)
+def _vignette(h, w, k):
+    yy, xx = np.mgrid[0:h, 0:w]
+    v = 1 - k * (((xx / w - 0.5) * 1.4) ** 2 + ((yy / h - 0.5) * 1.0) ** 2)
+    return np.clip(v, 0, 1).astype(np.float32)[..., None]
+
+
+def fx_vignette(a, t):
+    return a * _vignette(a.shape[0], a.shape[1], 0.55)
 
 
 def fx_pixelate(a, block):
@@ -520,14 +533,109 @@ def ov_physics(cv, o, t):
     paste(cv, lay, W / 2, o.get('y', 560), 0.85 + 0.15 * min(1.0, (t - o['t0']) / 0.2), 0, max(0.0, a))
 
 
+def _at(keys, t):
+    """[(t, value), ...] -> (value, time it became active)."""
+    v, since = keys[0][1], keys[0][0]
+    for k, val in keys:
+        if t >= k:
+            v, since = val, k
+    return v, since
+
+
+def ov_hud(cv, o, t):
+    """2dEDIT top HUD row: small condensed items separated by dots. A value that just changed flashes red.
+    o['items'] = [[(t, 'TEXT'), ...], ...]; o['red'] = [(t0, t1, item_index)] keeps an item red."""
+    if any(a <= t < b for a, b in o.get('hide', [])):
+        return
+    size = o.get('size', 34)
+    f = font(FONT_CR, size)
+    fb = font(FONT_C, size)
+    parts = []
+    for i, keys in enumerate(o['items']):
+        v, since = _at(keys, t)
+        hot = (t - since < o.get('flash', 1.2) and since > o['t0'] + 0.01) or any(a <= t < b and j == i for a, b, j in o.get('red', []))
+        parts.append((v, RED if hot else (236, 236, 236), fb if hot else f))
+    sep = '   ·   '
+    widths = [p[2].getbbox(p[0])[2] for p in parts]
+    sw = f.getbbox(sep)[2]
+    lw = sum(widths) + sw * (len(parts) - 1) + 40
+    lay = Image.new('RGBA', (int(lw), int(size * 1.6) + 20), (0, 0, 0, 0))
+    d = ImageDraw.Draw(lay)
+    x = 20
+    for k, (txt, col, ff) in enumerate(parts):
+        d.text((x + 2, 12), txt, font=ff, fill=(0, 0, 0, 170))
+        d.text((x, 10), txt, font=ff, fill=col + (235,))
+        x += widths[k]
+        if k < len(parts) - 1:
+            d.text((x, 10), sep, font=f, fill=(200, 200, 200, 150))
+            x += sw
+    if o.get('rec', True):                                # small red REC-style dot = "this is being watched"
+        if int(t * 1.6) % 2 == 0:
+            d.ellipse((2, 10 + size * 0.42, 14, 22 + size * 0.42), fill=RED + (230,))
+    paste(cv, lay, W / 2, o.get('y', 170), 1.0, 0, o.get('alpha', 1.0))
+
+
+def caption_2d_layer(words, size=80, quote=False, label=None, emph=()):
+    """2dEDIT caption: condensed bold white, thin dark outline + soft shadow, one red keyword,
+    dialogue in quotes with a small red speaker label above."""
+    f = font(FONT_C, size)
+    toks = [w.upper() for w in words]
+    if quote:
+        toks[0] = '\u201C' + toks[0]
+        toks[-1] = toks[-1] + '\u201D'
+    cols = []
+    for w in words:
+        key = ''.join(c for c in w.lower() if c.isalnum() or c == "'")
+        cols.append(RED if key in emph else (255, 255, 255))
+    stroke = 4
+    widths = [f.getbbox(x, stroke_width=stroke)[2] for x in toks]
+    space = int(size * 0.24)
+    total = sum(widths) + space * (len(toks) - 1)
+    lines = [[0, len(toks)]]
+    if total > W - 160 and len(toks) > 1:
+        h = (len(toks) + 1) // 2
+        lines = [[0, h], [h, len(toks)]]
+    lw = max(sum(widths[a:b]) + space * (b - a - 1) for a, b in lines) + 40
+    lab_h = int(size * 0.62) if label else 0
+    lay = Image.new('RGBA', (int(lw), int(size * 1.22 * len(lines)) + 40 + lab_h), (0, 0, 0, 0))
+    d = ImageDraw.Draw(lay)
+    if label:
+        fl = font(FONT_C, int(size * 0.42))
+        lwid = fl.getbbox(label)[2]
+        d.text(((lw - lwid) / 2 + 2, 14), label, font=fl, fill=(0, 0, 0, 160))
+        d.text(((lw - lwid) / 2, 12), label, font=fl, fill=RED)
+    shadow = Image.new('RGBA', lay.size, (0, 0, 0, 0))
+    ds = ImageDraw.Draw(shadow)
+    for li, (a, b) in enumerate(lines):
+        tw = sum(widths[a:b]) + space * (b - a - 1)
+        x = (lw - tw) / 2
+        yy = 20 + lab_h + li * size * 1.18
+        for k in range(a, b):
+            ds.text((x + 3, yy + 5), toks[k], font=f, fill=(0, 0, 0, 200), stroke_width=stroke + 2, stroke_fill=(0, 0, 0, 200))
+            d.text((x, yy), toks[k], font=f, fill=cols[k], stroke_width=stroke, stroke_fill=(14, 14, 16))
+            x += widths[k] + space
+    shadow = shadow.filter(ImageFilter.GaussianBlur(5))
+    shadow.alpha_composite(lay)
+    return shadow
+
+
+def ov_text2d(cv, o, t):
+    """On-screen (unspoken) text in the 2dEDIT caption style."""
+    if '_lay' not in o:
+        o['_lay'] = caption_2d_layer(o['text'].split(), o.get('size', 80), o.get('quote', False), o.get('label'),
+                                     set(o.get('emph', ())))
+    a = min(1.0, (t - o['t0']) / 0.12, (o['t1'] - t) / 0.12)
+    paste(cv, o['_lay'], W / 2, o.get('y', 1380), 1.0, 0, max(0.0, a))
+
+
 OVERLAYS_FN = {'title': ov_title, 'clock': ov_clock, 'counter': ov_counter, 'chip': ov_chip, 'banner': ov_banner,
                'stamp': ov_stamp, 'lower_third': ov_lower_third, 'ticker': ov_ticker, 'live_bug': ov_live_bug,
                'tag': ov_tag, 'speck': ov_speck, 'sweat': ov_sweat, 'enhance': ov_enhance, 'cctv_hud': ov_cctv_hud,
-               'rewind_hud': ov_rewind_hud, 'timer': ov_timer, 'physics': ov_physics}
+               'rewind_hud': ov_rewind_hud, 'timer': ov_timer, 'physics': ov_physics, 'hud': ov_hud, 'text2d': ov_text2d}
 
 
 # ============================================================================ captions
-def build_chunks(timing, offset, max_words=3):
+def build_chunks(timing, offset, max_words=3, split_punct=False):
     import re
     words = [w for w in timing['words'] if w['text'].strip()]
     chunks, cur = [], []
@@ -540,7 +648,8 @@ def build_chunks(timing, offset, max_words=3):
                     chunks.append(cur)
                     cur = []
             continue
-        if cur and (len(cur) >= max_words or w['start'] - cur[-1]['end'] > 0.3 or w['line'] != cur[-1]['line']):
+        if cur and (len(cur) >= max_words or w['start'] - cur[-1]['end'] > 0.3 or w['line'] != cur[-1]['line']
+                    or (split_punct and cur[-1]['text'][-1:] in '.!?')):
             chunks.append(cur)
             cur = []
         cur.append({'text': w['text'], 'start': w['start'] + offset, 'end': w['end'] + offset, 'line': w['line']})
@@ -566,6 +675,16 @@ def draw_caption(cv, chunks, t, cfg):
     for a, b, yy in cfg.get('y_over', []):
         if a <= t < b:
             y = yy
+    if cfg.get('style') == '2dedit':                    # whole phrase at once, no karaoke colouring
+        spk = cfg.get('speakers', {}).get(ch[0]['line'])
+        key = tuple(w['text'] for w in ch)
+        cache = cfg.setdefault('_cache', {})
+        if key not in cache:
+            cache[key] = caption_2d_layer(list(key), cfg.get('size', 80), quote=spk is not None, label=spk,
+                                          emph=set(cfg.get('emphasis', ())))
+        a = min(1.0, (t - ch[0]['start']) / 0.08)
+        paste(cv, cache[key], W / 2, y, 1.0, 0, a)
+        return
     size = cfg.get('size', 92)
     emph = cfg.get('emphasis', set())
     f = font(FONT_B, size)
@@ -607,7 +726,8 @@ class Editor:
         self.E = edl
         self.F = Frames(frames_root)
         self.timing = json.load(open(edl.CAPTIONS['timing']))
-        self.chunks = build_chunks(self.timing, edl.CAPTIONS.get('offset', 0.0))
+        self.chunks = build_chunks(self.timing, edl.CAPTIONS.get('offset', 0.0), edl.CAPTIONS.get('max_words', 3),
+                                   edl.CAPTIONS.get('style') == '2dedit')
         for o in edl.OVERLAYS:
             if o['type'] == 'title':
                 o['_layer'] = text_layer([(tx, sz, col, FONT_B) for tx, sz, col in o['lines']], stroke=11)
@@ -642,6 +762,8 @@ class Editor:
                 out[i * th:(i + 1) * th] = crop_resize(img, W, th, z, tl.get('cx', 0.5), tl.get('cy', 0.4))
                 out[(i + 1) * th - 6:(i + 1) * th + 6] = 0.02
             return out
+        if s['src'] is None:                            # hard cut to black (or a solid colour)
+            return np.zeros((H, W, 3), np.float32) + np.array(s.get('fill', (0, 0, 0)), np.float32)
         img = self.F.get(s['src'], self.src_frame(s, t))
         z, cx, cy = 1.0, 0.5, 0.5
         zk = interp_keys(s.get('zoom'), t)
@@ -652,7 +774,7 @@ class Editor:
             if ta <= t < tb:
                 a = fx_pixelate(a, int(b0 + (b1 - b0) * ease((t - ta) / (tb - ta))))
         for name in s.get('fx', []):
-            a = {'cctv': fx_cctv, 'vhs': fx_vhs, 'freeze_tint': fx_freeze_tint}[name](a, t)
+            a = {'cctv': fx_cctv, 'vhs': fx_vhs, 'freeze_tint': fx_freeze_tint, 'vignette': fx_vignette}[name](a, t)
         return a
 
     def frame(self, i):

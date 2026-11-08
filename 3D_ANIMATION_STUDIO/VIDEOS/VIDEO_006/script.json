@@ -1,0 +1,48 @@
+{
+ "title": "The 13th Floor",
+ "engine": "chatterbox",
+ "voice_ref": "kokoro:am_fenrir",
+ "tempo": 1.05,
+ "lines": [
+  {
+   "id": "D1",
+   "who": "M",
+   "voice_ref": "kokoro:am_puck",
+   "text": "Wait... this building only has twelve floors.",
+   "delivery": "tired, confused",
+   "exaggeration": 0.45,
+   "cfg": 0.45,
+   "pause_after": 0.2
+  },
+  {
+   "id": "N1",
+   "who": "N",
+   "text": "But when the doors opened... this wasn't another floor.",
+   "delivery": "low, ominous",
+   "exaggeration": 0.45,
+   "cfg": 0.5,
+   "tempo": 0.98,
+   "pause_after": 0.2
+  },
+  {
+   "id": "D2",
+   "who": "M",
+   "voice_ref": "kokoro:am_puck",
+   "text": "Hey! Wait!",
+   "delivery": "panic",
+   "exaggeration": 0.9,
+   "pause_after": 0.2
+  },
+  {
+   "id": "D3",
+   "who": "M2",
+   "voice_ref": "kokoro:am_puck",
+   "text": "You're late... again.",
+   "delivery": "calm, flat, unsettling",
+   "exaggeration": 0.25,
+   "cfg": 0.6,
+   "tempo": 0.92,
+   "pause_after": 0.0
+  }
+ ]
+}

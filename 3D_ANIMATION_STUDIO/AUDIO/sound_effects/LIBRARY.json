@@ -958,5 +958,113 @@
   "duration_s": 1.6,
   "sample_rate": 48000,
   "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/elevator_ding_eerie.flac",
+  "category": "comedy",
+  "name": "elevator_ding_eerie",
+  "description": "Elevator arrival ding, single low bell in a big dark shaft (2.4 s).",
+  "duration_s": 2.4,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/flicker_buzz.flac",
+  "category": "comedy",
+  "name": "flicker_buzz",
+  "description": "Fluorescent light flicker: mains buzz chopped on/off with arcing ticks (0.7 s).",
+  "duration_s": 0.7,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/elev_door_slide.flac",
+  "category": "comedy",
+  "name": "elev_door_slide",
+  "description": "Elevator doors sliding: motor whirr + rumble on the track (1.1 s).",
+  "duration_s": 1.1,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/metal_slam.flac",
+  "category": "comedy",
+  "name": "metal_slam",
+  "description": "Heavy steel elevator doors slamming shut, ringing tail (1.6 s).",
+  "duration_s": 1.6,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/metal_bang.flac",
+  "category": "comedy",
+  "name": "metal_bang",
+  "description": "Fist pounding on steel elevator doors (0.5 s).",
+  "duration_s": 0.5,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/footstep_echo.flac",
+  "category": "comedy",
+  "name": "footstep_echo",
+  "description": "Slow footstep on an old carpet runner in an empty hallway, long echo (1.0 s).",
+  "duration_s": 1.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/horror_sting.flac",
+  "category": "comedy",
+  "name": "horror_sting",
+  "description": "Photo reveal: dissonant string cluster stab + low boom (2.2 s).",
+  "duration_s": 2.2,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/creak_long.flac",
+  "category": "comedy",
+  "name": "creak_long",
+  "description": "Old wooden apartment door creaking slowly open (1.8 s).",
+  "duration_s": 1.8,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/tv_static_bed.flac",
+  "category": "comedy",
+  "name": "tv_static_bed",
+  "description": "Old TV static, room-filtered, loopable (6 s).",
+  "duration_s": 6.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/power_cut.flac",
+  "category": "comedy",
+  "name": "power_cut",
+  "description": "Lights out: breaker thunk + electrical power-down whine (1.0 s).",
+  "duration_s": 1.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/glass_swell.flac",
+  "category": "comedy",
+  "name": "glass_swell",
+  "description": "Restrained high glassy cluster swelling in, then cut (1.6 s).",
+  "duration_s": 1.6,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/cable_hum.flac",
+  "category": "comedy",
+  "name": "cable_hum",
+  "description": "Elevator car moving: low motor hum + cable creaks (6 s).",
+  "duration_s": 6.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
  }
 ]

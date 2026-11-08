@@ -765,6 +765,59 @@ def cue_video005(dur=LOOP5):
 CUES['video005'] = cue_video005
 LOOPS['video005'] = LOOP5
 
+
+# ------------------------------------------------------------------ VIDEO_006 cue: "The 13th Floor" (suspense)
+LOOP6 = 38.0
+
+
+def cue_video006(dur=LOOP6):
+    """Dark, sparse suspense score. Hits sit on the story beats; the silences (before "You're late",
+    the lights-out and the final black) are cut in the mix with music_gates (after reverb)."""
+    S = Score(dur + 3.0, bpm=60)
+    # 0-7: low drone (detuned), lonely high piano notes; a sour step when 13 lights up (0.35)
+    S.add('fx', 0.0, sine(36.7, 7.2) * env_adsr(int(7.2 * SR), 0.05, 0.2, 0.9, 0.6) * 0.8, -12)
+    S.add('pad', 0.0, inst_pad(C(['D2', 'A2', 'D3', 'F3']), 7.0, bright=900, attack=0.2), -16)
+    S.add('pad', 0.35, inst_pad(C(['D#3', 'A3']), 6.6, bright=1200, attack=1.5), -18)
+    for t, nm in ((0.4, 'A5'), (1.9, 'G#5'), (3.6, 'D5'), (5.2, 'D#5')):
+        S.add('lead', t, inst_epiano(mtof(n2m(nm)), 1.2), -17)
+    # 7-12: the doors open on the hallway: tremolo strings swell
+    S.add('pad', 7.0, inst_tremolo(C(['D3', 'D#3', 'A3']), 5.2, rate=9, bright=1600), -15)
+    S.add('fx', 7.0, sine(36.7, 5.5) * env_adsr(int(5.5 * SR), 1.0, 0.2, 0.9, 0.8) * 0.8, -10)
+    # 12-14.6: walking: a slow heartbeat pulse (soft taiko)
+    for i in range(4):
+        S.add('perc', 12.1 + i * 0.75, drum_taiko(0.5, 52), -15)
+    # 14.6-17.2: photo: cluster grows into the slam
+    S.add('pad', 14.9, inst_strings(C(['D4', 'D#4', 'E4', 'A4']), 2.3, attack=1.2, bright=2200), -14)
+    S.add('perc', 17.2, drum_taiko(1.4, 44), -4)
+    # 17.2-20.4: panic: fast low ostinato + taiko
+    for k in range(int((20.3 - 17.3) / 0.125)):
+        t = 17.3 + k * 0.125
+        S.add('bass', t, inst_bass(mtof(n2m(['D2', 'D2', 'D#2', 'D2'][k % 4])), 0.11, cutoff=500), -12)
+        if k % 8 == 0:
+            S.add('perc', t, drum_taiko(0.8, 50), -9)
+    S.add('pad', 17.3, inst_tremolo(C(['D4', 'D#4', 'G#4']), 3.0, rate=13, bright=2600), -14)
+    # 20.4-27.8: the walk to the apartment: sub drone only + distant bell, slowing heartbeat
+    S.add('fx', 20.4, sine(32.7, 7.6) * env_adsr(int(7.6 * SR), 1.5, 0.2, 0.9, 0.3) * 0.9, -9)
+    S.add('pad', 20.6, inst_pad(C(['D2', 'G#2', 'D3']), 7.0, bright=700, attack=2.0), -15)
+    for i, t in enumerate((22.4, 23.3, 24.3, 25.4, 26.6)):
+        S.add('perc', t, drum_taiko(0.4, 48), -16 - i)
+    S.add('lead', 25.7, inst_bell(mtof(n2m('G#5')), 2.0), -16)                 # the double turns his head
+    # 30.4-34.9: back in the elevator: uneasy pulse, then the clock reveal hit (33.3)
+    for i in range(5):
+        S.add('perc', 30.5 + i * 0.6, drum_taiko(0.5, 54), -14)
+    S.add('pad', 30.5, inst_pad(C(['D2', 'A2', 'D3']), 2.6, bright=900, attack=0.4), -15)
+    S.add('perc', 33.3, drum_taiko(1.0, 46), -8)
+    S.add('pad', 33.3, inst_strings(C(['D3', 'D#3', 'A3', 'D#4']), 1.6, attack=0.05, bright=2000), -12)
+    S.add('perc', 34.3, drum_taiko(0.7, 50), -11)
+    # 34.9-37.8: the reflection: high tremolo creeping up to the cut
+    S.add('pad', 34.9, inst_tremolo(C(['D5', 'D#5', 'A5']), 3.0, rate=14, bright=4000), -17)
+    S.add('fx', 34.9, sine(36.7, 3.0) * env_adsr(int(3.0 * SR), 2.0, 0.2, 1.0, 0.05) * 0.9, -9)
+    return S
+
+
+CUES['video006'] = cue_video006
+LOOPS['video006'] = LOOP6
+
 if __name__ == '__main__':
     cue, out = sys.argv[1], sys.argv[2]
     S = CUES[cue]()
