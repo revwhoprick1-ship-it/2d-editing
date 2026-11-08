@@ -1,0 +1,245 @@
+{
+ "title": "After Hours - Part 1",
+ "engine": "chatterbox",
+ "voice_ref": "kokoro:am_fenrir",
+ "tempo": 1.06,
+ "lines": [
+  {
+   "id": "N01",
+   "who": "N",
+   "text": "Ten minutes ago... all you wanted was to change one grade.",
+   "delivery": "low, tense",
+   "exaggeration": 0.5,
+   "cfg": 0.5,
+   "pause_after": 0.4
+  },
+  {
+   "id": "N02",
+   "who": "N",
+   "text": "Now... something knows you're here.",
+   "delivery": "whisper, ominous",
+   "exaggeration": 0.55,
+   "cfg": 0.5,
+   "pause_after": 1.6
+  },
+  {
+   "id": "N03",
+   "who": "N",
+   "text": "Eleven fifty-two. The night guard is fast asleep.",
+   "delivery": "calm, low",
+   "exaggeration": 0.4,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "N04",
+   "who": "N",
+   "text": "And his keys are hanging right off his belt.",
+   "delivery": "low",
+   "exaggeration": 0.45,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "N05",
+   "who": "N",
+   "text": "You slide them off... one finger at a time.",
+   "delivery": "tense, slow",
+   "exaggeration": 0.5,
+   "cfg": 0.5,
+   "pause_after": 0.8
+  },
+  {
+   "id": "N06",
+   "who": "N",
+   "text": "Building C. The teachers' office. That's where they keep the tests.",
+   "delivery": "low",
+   "exaggeration": 0.45,
+   "cfg": 0.5,
+   "pause_after": 0.4
+  },
+  {
+   "id": "N07",
+   "who": "N",
+   "text": "The hallway is darker than it should be. Every step echoes back at you.",
+   "delivery": "ominous",
+   "exaggeration": 0.5,
+   "cfg": 0.5,
+   "pause_after": 0.6
+  },
+  {
+   "id": "N08",
+   "who": "N",
+   "text": "The third key turns. The office door creaks open.",
+   "delivery": "tense",
+   "exaggeration": 0.5,
+   "cfg": 0.5,
+   "pause_after": 0.6
+  },
+  {
+   "id": "N09",
+   "who": "N",
+   "text": "You start digging through the files. Your class should be in the second drawer.",
+   "delivery": "low",
+   "exaggeration": 0.45,
+   "cfg": 0.5,
+   "pause_after": 0.4
+  },
+  {
+   "id": "N10",
+   "who": "N",
+   "text": "But these aren't tests.",
+   "delivery": "sudden, unsettled",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.5
+  },
+  {
+   "id": "N11",
+   "who": "N",
+   "text": "They're student files. Dozens of them. Going back to nineteen eighty-seven.",
+   "delivery": "creeping",
+   "exaggeration": 0.5,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "N12",
+   "who": "N",
+   "text": "And every single one is stamped with the same word... Kept.",
+   "delivery": "ominous",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.6
+  },
+  {
+   "id": "N13",
+   "who": "N",
+   "text": "The newest file has a note on it. He comes back for the ones who cheat.",
+   "delivery": "whisper, scary",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.4
+  },
+  {
+   "id": "D1",
+   "who": "M",
+   "text": "Okay. Nope. Just find the test.",
+   "delivery": "nervous whisper",
+   "exaggeration": 0.5,
+   "cfg": 0.5,
+   "pause_after": 0.4,
+   "voice_ref": "kokoro:am_puck"
+  },
+  {
+   "id": "N14",
+   "who": "N",
+   "text": "There it is. Thirty-eight out of a hundred.",
+   "delivery": "flat",
+   "exaggeration": 0.45,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "N15",
+   "who": "N",
+   "text": "One red pen. One little line. Thirty-eight... becomes eighty-eight.",
+   "delivery": "sly, slow",
+   "exaggeration": 0.5,
+   "cfg": 0.5,
+   "pause_after": 2.2
+  },
+  {
+   "id": "D2",
+   "who": "M",
+   "text": "What was that?",
+   "delivery": "scared whisper",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.4,
+   "voice_ref": "kokoro:am_puck"
+  },
+  {
+   "id": "N16",
+   "who": "N",
+   "text": "It came from the hallway. You open the door... just a crack.",
+   "delivery": "tense",
+   "exaggeration": 0.5,
+   "cfg": 0.5,
+   "pause_after": 0.6
+  },
+  {
+   "id": "N17",
+   "who": "N",
+   "text": "Something is standing under the last light. It's tall. Way too tall.",
+   "delivery": "dread",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.4
+  },
+  {
+   "id": "N18",
+   "who": "N",
+   "text": "And it's holding the guard's flashlight.",
+   "delivery": "dread, slow",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.8
+  },
+  {
+   "id": "N19",
+   "who": "N",
+   "text": "Then its head turns... and it looks right at you.",
+   "delivery": "terror, slow",
+   "exaggeration": 0.7,
+   "cfg": 0.5,
+   "pause_after": 0.4
+  },
+  {
+   "id": "D3",
+   "who": "M",
+   "text": "No, no, no, no.",
+   "delivery": "panic whisper",
+   "exaggeration": 0.8,
+   "cfg": 0.5,
+   "pause_after": 0.4,
+   "voice_ref": "kokoro:am_puck"
+  },
+  {
+   "id": "N20",
+   "who": "N",
+   "text": "You dive under the desk. The footsteps stop... right outside the door.",
+   "delivery": "fast, tense",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.5
+  },
+  {
+   "id": "N21",
+   "who": "N",
+   "text": "You've got one chance to get out.",
+   "delivery": "urgent",
+   "exaggeration": 0.55,
+   "cfg": 0.5,
+   "pause_after": 0.4
+  },
+  {
+   "id": "N22",
+   "who": "N",
+   "text": "Climb out the window. Hide in the cabinet. Or run for the stairs.",
+   "delivery": "urgent",
+   "exaggeration": 0.5,
+   "cfg": 0.5,
+   "pause_after": 0.4
+  },
+  {
+   "id": "N23",
+   "who": "N",
+   "text": "Comment one, two, or three. The top comment decides what happens next.",
+   "delivery": "low, final",
+   "exaggeration": 0.45,
+   "cfg": 0.5,
+   "pause_after": 0.2
+  }
+ ]
+}

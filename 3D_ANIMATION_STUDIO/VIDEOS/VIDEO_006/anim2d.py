@@ -232,7 +232,7 @@ def hallway(cv, cam, t, lit=1.0, sil=False, photo_scene=False):
 
 def silhouette(cv, x, y, s):
     cv.saveLayer(None, skia.Paint(ColorFilter=skia.ColorFilters.Blend(C('#050506').toColor(), skia.BlendMode.kSrcIn)))
-    mascot(cv, x, y, s * 1.12, arm_l=(4, 0), arm_r=(4, 0))
+    mascot(cv, x, y, s * 1.12, arm_l=(3, 0), arm_r=(3, 0))
     cv.restore()
     for side in (-1, 1):
         cv.drawCircle(x + side * 70 * s * 1.12, y - 910 * s * 1.12, 12 * s * 1.12, paint('#E8E8E8'))
@@ -357,7 +357,7 @@ def shot_ELEV(cv, t):
     elevator_back(cv, elev_light(t))
     P = his_face_pose(t)
     P['lids'] = max(P.get('lids', 0), blink(t, [1.9]))
-    mascot(cv, 520, 1640, 0.95, arm_l=(8, 8), arm_r=(10, 12), light_side=1, rim_a=0.5, **P)
+    mascot(cv, 520, 1640, 0.95, arm_l=(3, 0), arm_r=(3, 0), light_side=1, rim_a=0.5, **P)
     light_over(cv, elev_light(t))
 
 
@@ -366,7 +366,7 @@ def shot_FACE(cv, t):
     P = his_face_pose(t)
     P['mouth_open'] = mouth_open(t, ('D1',))
     P['lids'] = max(P.get('lids', 0), blink(t, [3.0, 4.6]))
-    mascot(cv, 540, 2900, 2.35, arm_l=(8, 8), arm_r=(10, 12), light_side=1, rim_a=0.6, **P)
+    mascot(cv, 540, 2900, 2.35, arm_l=(3, 0), arm_r=(3, 0), light_side=1, rim_a=0.6, **P)
     light_over(cv, elev_light(t))
 
 
@@ -382,8 +382,7 @@ def shot_TRACK(cv, t):
     hallway(cv, cam, t, sil=True)
     ph = walking(t)
     head = keys(t, [(T.T_PHOTO - 0.4, 0.0), (T.T_PHOTO, -0.6)])
-    mascot_at(cv, cam, 0.05, z, view='back', walk=ph, arm_l=(10 + (0 if ph is None else 14 * math.sin(2 * math.pi * ph)), 10),
-              arm_r=(10 - (0 if ph is None else 14 * math.sin(2 * math.pi * ph)), 10), head_tilt=-6 * head, light_side=-1)
+    mascot_at(cv, cam, 0.05, z, view='back', walk=ph, head_tilt=-6 * head, light_side=-1)
     shade(cv, (540, 900), 1300, 0.55)
 
 
@@ -449,7 +448,7 @@ def shot_HALL(cv, t):
     turned = keys(t, [(T.T_TURN - 0.05, 0.0), (T.T_TURN + 0.25, 1.0)])
     view = 'front' if turned < 0.5 else 'back'
     mascot_at(cv, cam, -0.35, 3.1, view=view, look=(0.6, 0), brow=1.0, mouth='o', pupil=0.6, light_side=-1, rim='#FFB060', rim_a=0.3,
-              arm_l=(18, 20), arm_r=(18, 20), head_turn=0.5 if view == 'front' else 0)
+              arm_l=(3, 0), arm_r=(3, 0), head_turn=0.5 if view == 'front' else 0)
     shade(cv, (540, 900), 1300, 0.55)
 
 
@@ -483,8 +482,7 @@ def shot_LONG(cv, t):
     z = his_z(t)
     if z > cam.z + 0.35:
         ph = walking(t)
-        mascot_at(cv, cam, 0.0, z, view='back', walk=ph, arm_l=(10 + (0 if ph is None else 14 * math.sin(2 * math.pi * ph)), 10),
-                  arm_r=(10 - (0 if ph is None else 14 * math.sin(2 * math.pi * ph)), 10), light_side=-1)
+        mascot_at(cv, cam, 0.0, z, view='back', walk=ph, light_side=-1)
     shade(cv, (540, 860), 1300, 0.55)
 
 
@@ -519,7 +517,7 @@ def apartment(cv, cam, t, show_double=True):
         fx, fy = cam.p(-0.35, 0, sz)
         sit_drop = (1 - stand) * 250 * s
         mascot(cv, fx, fy + sit_drop, s, look=(0.9 * head_turn, 0.0), head_turn=head_turn, mouth='smile' if stand > 0.5 else 'flat',
-               brow=-0.1, lids=0.25, light_side=1, rim='#A8C8FF', rim_a=0.5, legs=stand > 0.3, arm_l=(12, 30), arm_r=(12, 30))
+               brow=-0.1, lids=0.25, light_side=1, rim='#A8C8FF', rim_a=0.5, legs=stand > 0.3, arm_l=(3, 0), arm_r=(3, 0))
     if stand < 0.3:
         cv.drawPath(quad(cam, [(-1.25, 0.0, 12.95), (0.55, 0.0, 12.95), (0.55, 0.42, 12.95), (-1.25, 0.42, 12.95)]), paint('#4E2424'))
 
@@ -545,7 +543,7 @@ def shot_OTS(cv, t):
         ph = walking(t)
         lean = keys(t, [(T.T_PEEK - 0.1, 0.0), (T.T_PEEK + 0.4, -7.0)])
         mascot_at(cv, cam, 0.42, z, view='back', walk=ph, body_lean=lean, light_side=-1, rim='#FFB067', rim_a=0.5,
-                  arm_l=(10, 10), arm_r=(22, 50) if t > T.T_PEEK else (10, 10))
+                  arm_l=(3, 0), arm_r=(3, 0) if t > T.T_PEEK else (10, 10))
     shade(cv, (540, 900), 1300, 0.6)
 
 
@@ -554,7 +552,7 @@ def shot_DOUBLE(cv, t):
     cv.drawRect(skia.Rect(0, 0, W, H), paint('#2A1C14'))
     apartment(cv, cam, t, show_double=False)
     mascot(cv, 540, 2480, 1.85, look=(0.0, 0.0), mouth='smile', mouth_open=mouth_open(t, ('D3',)) * 0.7, brow=-0.15,
-           lids=0.28 + blink(t, [28.95]) * 0.7, light_side=-1, rim='#A8C8FF', rim_a=0.7, arm_l=(12, 30), arm_r=(12, 30))
+           lids=0.28 + blink(t, [28.95]) * 0.7, light_side=-1, rim='#A8C8FF', rim_a=0.7, arm_l=(3, 0), arm_r=(3, 0))
     glow(cv, (160, 500), 700, '#FFB067', 0.25)
     shade(cv, (540, 820), 1200, 0.55)
 
@@ -578,7 +576,7 @@ def shot_IN(cv, t):
             if f0 <= t < f0 + 5 / 30:
                 jab = 1 - (t - f0) * 6
         mascot(cv, fx, fy + bob(ph) * s, s, walk=ph, look=(0.5 if t > 31.3 else 0, 0), brow=1.0, mouth='open', mouth_open=0.4, pupil=0.6,
-               sweat=True, arm_r=(80 + 20 * jab, 10) if t > 31.35 else (25, 30), arm_l=(20, 30), head_turn=0.4 if t > 31.3 else 0,
+               sweat=True, arm_r=(80 + 20 * jab, 10) if t > 31.35 else (25, 30), arm_l=(3, 0), head_turn=0.4 if t > 31.3 else 0,
                light_side=1, rim_a=0.3)
     dim(cv, keys(t, [(T.T_DING2, 0.9), (T.T_DING2 + 0.25, 0.0)]))
 
@@ -614,13 +612,13 @@ def shot_MIRROR(cv, t):
     smile = keys(t, [(T.T_SMILE - 0.1, 0.0), (T.T_SMILE + 0.6, 1.0)])
     cv.saveLayer(None, skia.Paint(Alphaf=0.9, ColorFilter=skia.ColorFilters.Blend(C('#3A5A80', 0.45).toColor(), skia.BlendMode.kMultiply)))
     mascot(cv, 760, 2050, 1.3, look=(0.0, 0.0), brow=1.0 - 1.3 * smile, lids=0.05 + 0.35 * smile, pupil=0.75,
-           mouth='smirk' if smile > 0.15 else 'o', light_side=-1, rim='#9FC3FF', rim_a=0.4, arm_l=(10, 10), arm_r=(10, 10),
+           mouth='smirk' if smile > 0.15 else 'o', light_side=-1, rim='#9FC3FF', rim_a=0.4, arm_l=(3, 0), arm_r=(3, 0),
            head_tilt=4 * smile)
     cv.restore()
     cv.drawRect(skia.Rect(40, 160, 1040, 1800), paint(C('#9FC3FF', 0.05)))    # sheen
     cv.drawPath(poly([(40, 160), (380, 160), (40, 900)]), paint(C('#FFFFFF', 0.04)))
     # him, back view, frozen, foreground left
-    mascot(cv, 250, 2700, 1.75, view='back', light_side=1, rim='#9FC3FF', rim_a=0.5, arm_l=(8, 6), arm_r=(8, 6))
+    mascot(cv, 250, 2700, 1.75, view='back', light_side=1, rim='#9FC3FF', rim_a=0.5, arm_l=(3, 0), arm_r=(3, 0))
     glow(cv, (540, 0), 900, '#BFD6FF', 0.15)
     shade(cv, (600, 800), 1200, 0.65)
 
