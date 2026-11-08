@@ -528,6 +528,102 @@ def cable_hum():
     return normalize(fade(x, 0.2, 0.2), -10)
 
 
+# ---------------------------------------------------------------- horror pack 2 (VIDEO_007 "After Hours")
+@reg('snore', 'Deep sleepy snore: in-breath rattle + out-breath (2.2 s).')
+def snore():
+    n = int(2.2 * SR); tt = np.arange(n) / SR
+    inh = (np.sin(2 * np.pi * 38 * tt) > 0).astype(float) * bandpass(noise(n, 'pink', 701), 150, 900) * env_adsr(n, 0.4, 0.2, 0.8, 0.5)
+    inh *= (tt < 1.2)
+    exh = bandpass(noise(n, 'pink', 702), 200, 1400) * np.clip((tt - 1.3) / 0.15, 0, 1) * np.exp(-np.clip(tt - 1.4, 0, None) * 2.5) * 0.5
+    return normalize(inh + exh, -6)
+
+@reg('snort', 'Sleeper snorts and stirs (0.6 s).')
+def snort():
+    n = int(0.6 * SR); tt = np.arange(n) / SR
+    x = (np.sin(2 * np.pi * 55 * tt) > 0.3).astype(float) * bandpass(noise(n, 'white', 703), 200, 1500) * env_exp(n, 0.12)
+    return normalize(soft_sat(x, 2), -3)
+
+@reg('keys_jingle', 'Key ring lifted slowly: small metallic jingles (1.4 s).')
+def keys_jingle():
+    n = int(1.4 * SR); out = np.zeros(n); rng = np.random.default_rng(704)
+    for t0 in np.sort(rng.uniform(0, 1.2, 14)):
+        k = int(0.18 * SR); i = int(t0 * SR); tt = np.arange(k) / SR
+        f = rng.uniform(2800, 5200)
+        b = sum(np.sin(2 * np.pi * f * m * tt) / m for m in (1, 2.76, 5.4)) * env_exp(k, 0.04) * rng.uniform(0.3, 1)
+        out[i:i + k] += b[:n - i]
+    return normalize(out, -8)
+
+@reg('lock_jiggle', 'Wrong key jiggled in an old lock (0.8 s).')
+def lock_jiggle():
+    n = int(0.8 * SR); out = np.zeros(n); rng = np.random.default_rng(705)
+    for t0 in np.arange(0.05, 0.75, 0.07):
+        k = int(0.05 * SR); i = int((t0 + rng.uniform(0, 0.02)) * SR)
+        b = bandpass(noise(k, 'white', int(t0 * 1000)), 1500, 6000) * env_exp(k, 0.01)
+        out[i:i + k] += b[:n - i]
+    return normalize(out, -8)
+
+@reg('lock_click', 'Key turns: heavy deadbolt clack (0.4 s).')
+def lock_click():
+    n = int(0.4 * SR); tt = np.arange(n) / SR
+    x = bandpass(noise(n, 'white', 706), 800, 5000) * env_exp(n, 0.015) + np.sin(2 * np.pi * 180 * tt) * env_exp(n, 0.04) * 0.6
+    return normalize(convolve_stereo(x, reverb_ir(0.6, 0.3, seed=707), 0.25), -3)
+
+@reg('stamp_thud', 'Rubber stamp slammed on paper on a wooden desk (0.4 s).')
+def stamp_thud():
+    n = int(0.4 * SR); tt = np.arange(n) / SR
+    x = np.sin(2 * np.pi * np.cumsum(120 * (1 + np.exp(-tt / 0.01))) / SR) * env_exp(n, 0.06) + lowpass(noise(n, 'pink', 708), 1800) * env_exp(n, 0.02)
+    return normalize(soft_sat(x, 1.6), -3)
+
+@reg('pen_scribble', 'Felt pen drawing a loop on paper (1.0 s).')
+def pen_scribble():
+    n = int(1.0 * SR); tt = np.arange(n) / SR
+    x = bandpass(noise(n, 'white', 709), 2500, 8000) * (0.5 + 0.5 * np.abs(np.sin(2 * np.pi * 3.2 * tt))) * env_adsr(n, 0.05, 0.1, 0.9, 0.1)
+    return normalize(x, -12)
+
+@reg('paper_rustle', 'Files and folders shuffled (1.2 s).')
+def paper_rustle():
+    n = int(1.2 * SR); rng = np.random.default_rng(710)
+    x = bandpass(noise(n, 'white', 711), 1000, 7000) * lowpass(np.abs(rng.standard_normal(n)), 18) * 3
+    return normalize(x * env_adsr(n, 0.05, 0.2, 0.8, 0.2), -10)
+
+@reg('heavy_breath', 'Panicked held breathing, in and out (2.0 s).')
+def heavy_breath():
+    n = int(2.0 * SR); tt = np.arange(n) / SR
+    e = np.clip(np.sin(2 * np.pi * 1.0 * tt), 0, None) ** 1.5 + 0.6 * np.clip(-np.sin(2 * np.pi * 1.0 * tt), 0, None) ** 2
+    x = bandpass(noise(n, 'pink', 712), 300, 3500) * e
+    return normalize(x, -10)
+
+@reg('monster_step', 'Something heavy and wrong takes a step: thud + bone creak (0.9 s).')
+def monster_step():
+    n = int(0.9 * SR); tt = np.arange(n) / SR
+    thud = np.sin(2 * np.pi * np.cumsum(48 * (1 + np.exp(-tt / 0.03))) / SR) * env_exp(n, 0.18) * 1.4
+    creak = bandpass(noise(n, 'white', 713), 400, 1200) * (np.sin(2 * np.pi * 23 * tt) > 0.6) * env_adsr(n, 0.08, 0.1, 0.5, 0.3) * 0.5
+    return normalize(convolve_stereo(soft_sat(thud + creak, 1.5), reverb_ir(1.2, 0.4, seed=714), 0.3), -2)
+
+@reg('bone_clicks', 'Its head turns: wet bone clicks / cracks (1.0 s).')
+def bone_clicks():
+    n = int(1.0 * SR); out = np.zeros(n); rng = np.random.default_rng(715)
+    for t0 in np.sort(rng.uniform(0, 0.9, 9)):
+        k = int(0.04 * SR); i = int(t0 * SR)
+        out[i:i + k] += (bandpass(noise(k, 'white', int(t0 * 999)), 600, 4000) * env_exp(k, 0.006) * rng.uniform(0.5, 1))[:n - i]
+    return normalize(convolve_stereo(out, reverb_ir(0.5, 0.3, seed=716), 0.2), -3)
+
+@reg('big_bang', 'Huge BANG down the hallway: locker slammed by something strong, boom + metal ring (2.4 s).')
+def big_bang():
+    n = int(2.4 * SR); tt = np.arange(n) / SR
+    boom = np.sin(2 * np.pi * np.cumsum(40 * (1 + 2 * np.exp(-tt / 0.04))) / SR) * env_exp(n, 0.5) * 1.6
+    hit = lowpass(noise(n, 'pink', 717), 3000) * env_exp(n, 0.05) * 2.0
+    ring = sum(np.sin(2 * np.pi * f * tt) * env_exp(n, 0.7) * 0.25 for f in (233, 377, 611, 989))
+    return normalize(convolve_stereo(soft_sat(boom + hit + ring, 2.0), reverb_ir(2.4, 0.6, seed=718), 0.45), -0.5)
+
+@reg('knob_turn', 'Door handle slowly pressed down: metal latch creak (1.2 s).')
+def knob_turn():
+    n = int(1.2 * SR); tt = np.arange(n) / SR
+    x = bandpass(noise(n, 'white', 719), 900, 2600) * (np.sin(2 * np.pi * 14 * tt) > 0.2) * env_adsr(n, 0.2, 0.1, 0.8, 0.2) * 0.6
+    x[int(1.0 * SR):int(1.05 * SR)] += bandpass(noise(int(0.05 * SR), 'white', 720), 1000, 5000) * 1.0
+    return normalize(x, -6)
+
+
 def main():
     root = sys.argv[1]
     d = os.path.join(root, 'sound_effects', 'comedy')

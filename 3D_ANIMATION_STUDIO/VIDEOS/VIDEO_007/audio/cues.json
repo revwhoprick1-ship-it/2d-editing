@@ -1,0 +1,649 @@
+{
+ "duration": 83.17,
+ "loop": true,
+ "narration": "narration/narration_raw.wav",
+ "narration_offset": 0.0,
+ "music": "music_score.wav",
+ "music_gain_db": 1,
+ "music_cue": "cue_video007",
+ "music_gates": [
+  [
+   4.797000000000001,
+   6.047000000000001,
+   0.1
+  ],
+  [
+   51.415,
+   53.749,
+   0.05
+  ],
+  [
+   70.142,
+   71.342,
+   0.05
+  ]
+ ],
+ "targets": {
+  "narration_lufs": -16,
+  "master_lufs": -14,
+  "true_peak": -1.0,
+  "duck_db": 5
+ },
+ "cues": [
+  {
+   "t": 0.0,
+   "file": "AUDIO/ambience/room_tone.flac",
+   "gain": -18,
+   "bus": "amb",
+   "note": "office room tone",
+   "dur": 4.747000000000001,
+   "fade_out": 0.05
+  },
+  {
+   "t": 0.0,
+   "file": "AUDIO/sound_effects/comedy/heavy_breath.flac",
+   "gain": -14,
+   "bus": "sfx",
+   "note": "your held breathing"
+  },
+  {
+   "t": 0.4,
+   "file": "AUDIO/sound_effects/comedy/monster_step.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "a heavy step outside the door"
+  },
+  {
+   "t": 1.9,
+   "file": "AUDIO/sound_effects/comedy/heavy_breath.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "breathing"
+  },
+  {
+   "t": 2.929,
+   "file": "AUDIO/sound_effects/comedy/knob_turn.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "the handle presses down slowly"
+  },
+  {
+   "t": 3.829,
+   "file": "AUDIO/sound_effects/comedy/bone_clicks.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "clicks behind the door"
+  },
+  {
+   "t": 4.747,
+   "file": "AUDIO/sound_effects/comedy/vhs_rewind.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "REWIND: ten minutes earlier"
+  },
+  {
+   "t": 4.947,
+   "file": "AUDIO/sound_effects/reactions/dramatic_hit.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "title: AFTER HOURS"
+  },
+  {
+   "t": 6.147,
+   "file": "AUDIO/ambience/room_tone.flac",
+   "gain": -20,
+   "bus": "amb",
+   "note": "booth room tone",
+   "dur": 8.613999999999999,
+   "fade_out": 0.1
+  },
+  {
+   "t": 6.247,
+   "file": "AUDIO/sound_effects/comedy/flicker_buzz.flac",
+   "gain": -25,
+   "bus": "sfx",
+   "note": "CCTV hum",
+   "loop": true,
+   "dur": 8.414,
+   "fade_out": 0.1
+  },
+  {
+   "t": 6.447,
+   "file": "AUDIO/sound_effects/comedy/snore.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "the guard snores 1"
+  },
+  {
+   "t": 9.307,
+   "file": "AUDIO/sound_effects/comedy/snore.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "the guard snores 2"
+  },
+  {
+   "t": 11.854,
+   "file": "AUDIO/sound_effects/comedy/keys_jingle.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "the keys slide off the belt"
+  },
+  {
+   "t": 12.167,
+   "file": "AUDIO/sound_effects/comedy/snore.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "the guard snores 3"
+  },
+  {
+   "t": 12.954,
+   "file": "AUDIO/sound_effects/comedy/keys_jingle.flac",
+   "gain": -14,
+   "bus": "sfx",
+   "note": "jingle"
+  },
+  {
+   "t": 14.011,
+   "file": "AUDIO/sound_effects/comedy/snort.flac",
+   "gain": -8,
+   "bus": "sfx",
+   "note": "the guard SNORTS and stirs (freeze)"
+  },
+  {
+   "t": 14.111,
+   "file": "AUDIO/sound_effects/bio/heartbeat_lubdub.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "your heart"
+  },
+  {
+   "t": 14.761,
+   "file": "AUDIO/ambience/wind.flac",
+   "gain": -20,
+   "bus": "amb",
+   "note": "night wind",
+   "dur": 3.779,
+   "fade_in": 0.1,
+   "fade_out": 0.2
+  },
+  {
+   "t": 14.911,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -21,
+   "bus": "sfx",
+   "note": "running across the yard"
+  },
+  {
+   "t": 15.027,
+   "file": "AUDIO/sound_effects/comedy/snore.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "the guard snores 4"
+  },
+  {
+   "t": 15.121,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -21,
+   "bus": "sfx",
+   "note": "running across the yard"
+  },
+  {
+   "t": 15.331,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -21,
+   "bus": "sfx",
+   "note": "running across the yard"
+  },
+  {
+   "t": 15.541,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -21,
+   "bus": "sfx",
+   "note": "running across the yard"
+  },
+  {
+   "t": 15.751,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -21,
+   "bus": "sfx",
+   "note": "running across the yard"
+  },
+  {
+   "t": 15.961,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -21,
+   "bus": "sfx",
+   "note": "running across the yard"
+  },
+  {
+   "t": 16.171,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -21,
+   "bus": "sfx",
+   "note": "running across the yard"
+  },
+  {
+   "t": 16.381,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -21,
+   "bus": "sfx",
+   "note": "running across the yard"
+  },
+  {
+   "t": 18.49,
+   "file": "AUDIO/sound_effects/environment/door_creak_slam.flac",
+   "gain": -19,
+   "bus": "sfx",
+   "note": "side door"
+  },
+  {
+   "t": 18.54,
+   "file": "AUDIO/ambience/room_tone.flac",
+   "gain": -17,
+   "bus": "amb",
+   "note": "empty corridor",
+   "dur": 4.373000000000001,
+   "fade_out": 0.1
+  },
+  {
+   "t": 18.64,
+   "file": "AUDIO/sound_effects/environment/button_click.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "flashlight on"
+  },
+  {
+   "t": 18.84,
+   "file": "AUDIO/sound_effects/comedy/footstep_echo.flac",
+   "gain": -16,
+   "bus": "sfx",
+   "note": "steps echo back at you"
+  },
+  {
+   "t": 19.24,
+   "file": "AUDIO/sound_effects/comedy/footstep_echo.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "steps echo back at you"
+  },
+  {
+   "t": 19.64,
+   "file": "AUDIO/sound_effects/comedy/footstep_echo.flac",
+   "gain": -16,
+   "bus": "sfx",
+   "note": "steps echo back at you"
+  },
+  {
+   "t": 20.04,
+   "file": "AUDIO/sound_effects/comedy/footstep_echo.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "steps echo back at you"
+  },
+  {
+   "t": 20.44,
+   "file": "AUDIO/sound_effects/comedy/footstep_echo.flac",
+   "gain": -16,
+   "bus": "sfx",
+   "note": "steps echo back at you"
+  },
+  {
+   "t": 20.84,
+   "file": "AUDIO/sound_effects/comedy/footstep_echo.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "steps echo back at you"
+  },
+  {
+   "t": 21.24,
+   "file": "AUDIO/sound_effects/comedy/footstep_echo.flac",
+   "gain": -16,
+   "bus": "sfx",
+   "note": "steps echo back at you"
+  },
+  {
+   "t": 21.64,
+   "file": "AUDIO/sound_effects/comedy/footstep_echo.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "steps echo back at you"
+  },
+  {
+   "t": 22.04,
+   "file": "AUDIO/sound_effects/comedy/footstep_echo.flac",
+   "gain": -16,
+   "bus": "sfx",
+   "note": "steps echo back at you"
+  },
+  {
+   "t": 22.44,
+   "file": "AUDIO/sound_effects/comedy/footstep_echo.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "steps echo back at you"
+  },
+  {
+   "t": 23.263,
+   "file": "AUDIO/sound_effects/comedy/lock_jiggle.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "key 1: no"
+  },
+  {
+   "t": 23.533,
+   "file": "AUDIO/sound_effects/comedy/lock_click.flac",
+   "gain": -7,
+   "bus": "sfx",
+   "note": "key 3 turns"
+  },
+  {
+   "t": 23.933,
+   "file": "AUDIO/sound_effects/comedy/creak_long.flac",
+   "gain": -10,
+   "bus": "sfx",
+   "note": "the office door creaks open"
+  },
+  {
+   "t": 24.213,
+   "file": "AUDIO/sound_effects/comedy/lock_jiggle.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "key 2: no"
+  },
+  {
+   "t": 25.81,
+   "file": "AUDIO/ambience/room_tone.flac",
+   "gain": -17,
+   "bus": "amb",
+   "note": "office room tone",
+   "dur": 25.455,
+   "fade_out": 0.02
+  },
+  {
+   "t": 26.01,
+   "file": "AUDIO/sound_effects/movement/object_slide.flac",
+   "gain": -14,
+   "bus": "sfx",
+   "note": "drawer slides out"
+  },
+  {
+   "t": 26.81,
+   "file": "AUDIO/sound_effects/comedy/paper_rustle.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "digging through files"
+  },
+  {
+   "t": 30.1,
+   "file": "AUDIO/sound_effects/comedy/paper_rustle.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "folder opens"
+  },
+  {
+   "t": 30.3,
+   "file": "AUDIO/sound_effects/comedy/horror_sting.flac",
+   "gain": -14,
+   "bus": "sfx",
+   "note": "these aren't tests"
+  },
+  {
+   "t": 37.322,
+   "file": "AUDIO/sound_effects/comedy/stamp_thud.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "KEPT stamp 1"
+  },
+  {
+   "t": 37.602,
+   "file": "AUDIO/sound_effects/comedy/stamp_thud.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "KEPT stamp 2"
+  },
+  {
+   "t": 37.882,
+   "file": "AUDIO/sound_effects/comedy/stamp_thud.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "KEPT stamp 3"
+  },
+  {
+   "t": 38.162,
+   "file": "AUDIO/sound_effects/comedy/stamp_thud.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "KEPT stamp 4"
+  },
+  {
+   "t": 38.442,
+   "file": "AUDIO/sound_effects/comedy/stamp_thud.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "KEPT stamp 5"
+  },
+  {
+   "t": 38.652,
+   "file": "AUDIO/sound_effects/comedy/stamp_thud.flac",
+   "gain": -6,
+   "bus": "sfx",
+   "note": "KEPT (the big one)"
+  },
+  {
+   "t": 39.594,
+   "file": "AUDIO/sound_effects/comedy/paper_rustle.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "the newest file slides in"
+  },
+  {
+   "t": 40.294,
+   "file": "AUDIO/sound_effects/comedy/horror_sting.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "your photo. the note."
+  },
+  {
+   "t": 42.536,
+   "file": "AUDIO/sound_effects/comedy/heavy_breath.flac",
+   "gain": -16,
+   "bus": "sfx",
+   "note": "you breathe"
+  },
+  {
+   "t": 44.61,
+   "file": "AUDIO/sound_effects/comedy/paper_rustle.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "the test"
+  },
+  {
+   "t": 49.637,
+   "file": "AUDIO/sound_effects/comedy/pen_scribble.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "3 becomes 8"
+  },
+  {
+   "t": 50.087,
+   "file": "AUDIO/sound_effects/comedy/pen_scribble.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "second loop"
+  },
+  {
+   "t": 51.265,
+   "file": "AUDIO/sound_effects/comedy/big_bang.flac",
+   "gain": -5,
+   "bus": "sfx",
+   "note": "BANG from the hallway"
+  },
+  {
+   "t": 51.285,
+   "file": "AUDIO/sound_effects/transitions/bass_impact.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "sub hit"
+  },
+  {
+   "t": 53.265,
+   "file": "AUDIO/ambience/room_tone.flac",
+   "gain": -14,
+   "bus": "amb",
+   "note": "dead silence after",
+   "dur": 4.748999999999995,
+   "fade_in": 0.4
+  },
+  {
+   "t": 53.849,
+   "file": "AUDIO/sound_effects/comedy/creak_long.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "door opens a crack"
+  },
+  {
+   "t": 58.014,
+   "file": "AUDIO/sound_effects/comedy/flicker_buzz.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "the last light flickers",
+   "loop": true,
+   "dur": 5.115000000000002
+  },
+  {
+   "t": 58.314,
+   "file": "AUDIO/sound_effects/bio/creature_presence.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "it breathes"
+  },
+  {
+   "t": 61.645,
+   "file": "AUDIO/sound_effects/comedy/monster_step.flac",
+   "gain": -14,
+   "bus": "sfx",
+   "note": "it shifts its weight"
+  },
+  {
+   "t": 63.329,
+   "file": "AUDIO/sound_effects/comedy/bone_clicks.flac",
+   "gain": -7,
+   "bus": "sfx",
+   "note": "its head turns: clicks"
+  },
+  {
+   "t": 64.969,
+   "file": "AUDIO/sound_effects/comedy/horror_sting.flac",
+   "gain": -6,
+   "bus": "sfx",
+   "note": "it LOOKS AT YOU"
+  },
+  {
+   "t": 64.989,
+   "file": "AUDIO/sound_effects/transitions/bass_impact.flac",
+   "gain": -8,
+   "bus": "sfx",
+   "note": "impact"
+  },
+  {
+   "t": 66.017,
+   "file": "AUDIO/sound_effects/comedy/heavy_breath.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "panic breathing"
+  },
+  {
+   "t": 68.332,
+   "file": "AUDIO/sound_effects/movement/cloth_rustle.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "you dive under the desk"
+  },
+  {
+   "t": 68.482,
+   "file": "AUDIO/sound_effects/comedy/body_thud.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "thud"
+  },
+  {
+   "t": 69.132,
+   "file": "AUDIO/sound_effects/comedy/monster_step.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "its footsteps come closer 1"
+  },
+  {
+   "t": 69.334,
+   "file": "AUDIO/sound_effects/comedy/monster_step.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "its footsteps come closer 2"
+  },
+  {
+   "t": 69.536,
+   "file": "AUDIO/sound_effects/comedy/monster_step.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "its footsteps come closer 3"
+  },
+  {
+   "t": 69.738,
+   "file": "AUDIO/sound_effects/comedy/monster_step.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "its footsteps come closer 4"
+  },
+  {
+   "t": 69.94,
+   "file": "AUDIO/sound_effects/comedy/monster_step.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "its footsteps come closer 5"
+  },
+  {
+   "t": 70.192,
+   "file": "AUDIO/sound_effects/comedy/monster_step.flac",
+   "gain": -6,
+   "bus": "sfx",
+   "note": "the footsteps STOP (right outside)"
+  },
+  {
+   "t": 70.742,
+   "file": "AUDIO/sound_effects/bio/heartbeat_muffled.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "heartbeat in the silence"
+  },
+  {
+   "t": 71.642,
+   "file": "AUDIO/ambience/room_tone.flac",
+   "gain": -16,
+   "bus": "amb",
+   "note": "silence",
+   "dur": 11.528000000000006,
+   "fade_out": 0.05
+  },
+  {
+   "t": 73.683,
+   "file": "AUDIO/sound_effects/comedy/heavy_breath.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "breathing under the choice"
+  },
+  {
+   "t": 75.783,
+   "file": "AUDIO/sound_effects/comedy/heavy_breath.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "breathing"
+  },
+  {
+   "t": 81.97,
+   "file": "AUDIO/sound_effects/comedy/knob_turn.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "the handle starts to turn -> loops into frame 0"
+  }
+ ]
+}

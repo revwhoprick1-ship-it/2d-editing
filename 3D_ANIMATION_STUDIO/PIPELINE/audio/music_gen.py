@@ -818,6 +818,69 @@ def cue_video006(dur=LOOP6):
 CUES['video006'] = cue_video006
 LOOPS['video006'] = LOOP6
 
+
+# ------------------------------------------------------------------ VIDEO_007 cue: "After Hours · Part 1" (horror)
+def cue_video007():
+    sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'VIDEOS', 'VIDEO_007'))
+    import edit_video007 as E7
+    B, END = E7.B, E7.END
+    S = Score(END + 3.0, bpm=70)
+    D = lambda t, d, f=36.7, g=-10: S.add('fx', t, sine(f, d) * env_adsr(int(d * SR), min(1.5, d / 3), 0.2, 0.9, min(1.0, d / 4)) * 0.8, g)
+    # hook: drone + slow heartbeat + high tremolo cluster
+    D(0.0, B['rewind0'] + 0.5)
+    S.add('pad', 0.0, inst_tremolo(C(['D5', 'D#5', 'A5']), B['rewind0'], rate=12, bright=3500), -19)
+    for i in range(int(B['rewind0'] / 0.9)):
+        S.add('perc', 0.3 + i * 0.9, drum_taiko(0.45, 50), -15)
+    # sneaking (booth -> office): low pizzicato ostinato in D minor + soft pad
+    b = 60 / 70
+    t = B['booth'] + 0.2
+    pat = ['D2', None, 'F2', 'D2', None, 'A1', 'C2', None]
+    k = 0
+    while t < B['files'] - 0.3:
+        nm = pat[k % len(pat)]
+        if nm:
+            S.add('bass', t, inst_pizz(mtof(n2m(nm)), 0.3, seed=k), -12)
+        if k % 8 == 0:
+            S.add('pad', t, inst_pad(C(['D3', 'F3', 'A3']) if (k // 8) % 2 == 0 else C(['A#2', 'D3', 'F3']), b * 4, bright=900, attack=0.6), -19)
+        t += b / 2
+        k += 1
+    D(B['corr'], B['files'] - B['corr'], 41.2, -12)
+    # files: music-box bells, slow and wrong; a hit on "Kept"
+    mel = ['A5', 'F5', 'E5', 'D5', 'C#5', 'D5', 'A4', None, 'A5', 'G5', 'F5', 'E5', 'F5', 'D5']
+    for i, nm in enumerate(mel):
+        tt = B['files'] + 0.2 + i * 0.55
+        if nm and tt < B['face']:
+            S.add('lead', tt, inst_bell(mtof(n2m(nm)) * 0.995, 1.2), -15)
+    S.add('perc', B['kept'], drum_taiko(1.2, 44), -5)
+    S.add('pad', B['kept'], inst_strings(C(['D3', 'D#3', 'A3', 'D#4']), 1.4, attack=0.02, bright=2200), -11)
+    D(B['note'], B['bang'] - B['note'], 34.6, -11)
+    # the pen: a riser into the BANG
+    S.add('pad', B['becomes'] - 0.5, inst_tremolo(C(['D4', 'D#4']), B['bang'] - B['becomes'] + 0.5, rate=16, bright=3000), -16)
+    S.add('perc', B['bang'], drum_taiko(1.6, 38), -2)
+    # peek -> the reveal: sub drone + high cluster growing; stab when it looks at you
+    D(B['peek'], B['face3'] - B['peek'] + 0.3, 30.9, -8)
+    S.add('pad', B['pov'], inst_tremolo(C(['D5', 'D#5', 'E5', 'A#5']), B['looks'] - B['pov'], rate=14, bright=4200), -16)
+    S.add('perc', B['looks'], drum_taiko(1.5, 40), -3)
+    S.add('lead', B['looks'], inst_stab(C(['D3', 'D#3', 'G#3', 'D4']), 0.8), -6)
+    # panic: fast low ostinato until the footsteps stop
+    t = B['face3']
+    k = 0
+    while t < B['stop']:
+        S.add('bass', t, inst_bass(mtof(n2m(['D2', 'D2', 'D#2', 'D2'][k % 4])), 0.1, cutoff=500), -11)
+        if k % 4 == 0:
+            S.add('perc', t, drum_taiko(0.8, 52), -10)
+        t += 0.14
+        k += 1
+    # the choice: drone + clock ticks to the end
+    D(B['stop'] + 1.2, END - B['stop'] - 1.0, 36.7, -11)
+    for i in range(int((END - B['choice']) / 0.5)):
+        S.add('perc', B['choice'] + i * 0.5, drum_tick(0.5), -12)
+    return S
+
+
+CUES['video007'] = cue_video007
+LOOPS['video007'] = None
+
 if __name__ == '__main__':
     cue, out = sys.argv[1], sys.argv[2]
     S = CUES[cue]()

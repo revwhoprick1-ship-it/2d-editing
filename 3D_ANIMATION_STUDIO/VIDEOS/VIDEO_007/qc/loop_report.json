@@ -1,0 +1,45 @@
+{
+ "file": "EXPORTS/VIDEO_007_After_Hours_Part_1.mp4",
+ "video": {
+  "frames": 2495,
+  "duration_s": 83.16666666666667,
+  "seam_diff": 0.0103,
+  "median_frame_diff": 0.0027,
+  "p90_frame_diff": 0.0128,
+  "largest_cut_diffs": [
+   0.453,
+   0.3835,
+   0.3274,
+   0.3004,
+   0.2964
+  ],
+  "seam_percentile_among_frame_changes": 87.9,
+  "first_frame_mean_luma": 0.189,
+  "last_frame_mean_luma": 0.19,
+  "darkest_frame_mean_luma": 0.029
+ },
+ "audio": {
+  "decoded_duration_s": 83.1573,
+  "video_minus_audio_ms": 9.3,
+  "rms_last_100ms_db": -26.8,
+  "rms_first_100ms_db": -19.5,
+  "rms_whole_db": -16.7,
+  "seam_sample_jump": 0.05868,
+  "local_median_sample_jump": 0.00041,
+  "local_max_sample_jump": 0.46662
+ },
+ "loop_x3": {
+  "black_segments": [],
+  "silences_over_250ms_below_-50dB": [],
+  "duration_s": 249.533333
+ },
+ "checks": {
+  "seam_picture_change_is_ordinary (below the 90th percentile of frame changes)": true,
+  "no_black_frame_at_seam": true,
+  "no_black_segments_in_3x_loop": true,
+  "no_silence_in_3x_loop": true,
+  "no_audio_gap_at_seam (both sides within 20 dB of the mix)": true,
+  "no_click_at_seam (jump <= local max)": true,
+  "audio_video_length_match_within_25ms": true
+ }
+}

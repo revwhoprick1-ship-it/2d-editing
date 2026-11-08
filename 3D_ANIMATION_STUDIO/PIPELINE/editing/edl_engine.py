@@ -628,10 +628,60 @@ def ov_text2d(cv, o, t):
     paste(cv, o['_lay'], W / 2, o.get('y', 1380), 1.0, 0, max(0.0, a))
 
 
+def ov_hud3(cv, o, t):
+    """Reference-style HUD: three columns, small grey label over a bold white value; a changed value flashes red.
+    o['cols'] = [(label_keys, value_keys), ...] with keys = [(t, text), ...]."""
+    if any(a <= t < b for a, b in o.get('hide', [])):
+        return
+    fl = font(FONT_CR, o.get('label_size', 26))
+    fv = font(FONT_C, o.get('size', 50))
+    lay = Image.new('RGBA', (W - 2 * SAFE_MARGIN, 120), (0, 0, 0, 0))
+    d = ImageDraw.Draw(lay)
+    n = len(o['cols'])
+    for i, (lk, vk) in enumerate(o['cols']):
+        lab, _ = _at(lk, t)
+        val, since = _at(vk, t)
+        hot = t - since < o.get('flash', 1.2) and since > o['t0'] + 0.01
+        x = [24, lay.width / 2, lay.width - 24][i] if n == 3 else 24 + i * (lay.width - 48) / max(1, n - 1)
+        anchor = ['la', 'ma', 'ra'][i] if n == 3 else 'la'
+        d.text((x + 2, 10), lab, font=fl, fill=(0, 0, 0, 150), anchor=anchor)
+        d.text((x, 8), lab, font=fl, fill=(200, 200, 205, 230), anchor=anchor)
+        d.text((x + 2, 42), val, font=fv, fill=(0, 0, 0, 170), anchor=anchor)
+        d.text((x, 40), val, font=fv, fill=RED + (255,) if hot else (255, 255, 255, 245), anchor=anchor)
+    if o.get('rec', True) and int(t * 1.6) % 2 == 0:
+        d.ellipse((2, 18, 14, 30), fill=RED + (230,))
+    paste(cv, lay, W / 2, o.get('y', 190), 1.0, 0, o.get('alpha', 1.0))
+
+
+def ov_choice(cv, o, t):
+    """Choose-your-path card: a header + numbered options (dark rounded rows, red number badges) + footer."""
+    a = min(1.0, (t - o['t0']) / 0.2, (o['t1'] - t) / 0.15)
+    fh, fo, ff = font(FONT_C, 58), font(FONT_C, 50), font(FONT_CR, 36)
+    rows = o['options']
+    wd, rh = 920, 104
+    lay = Image.new('RGBA', (wd, 130 + len(rows) * (rh + 18) + 80), (0, 0, 0, 0))
+    d = ImageDraw.Draw(lay)
+    d.text((wd / 2 + 3, 50), o['header'], font=fh, fill=(0, 0, 0, 160), anchor='mm')
+    d.text((wd / 2, 47), o['header'], font=fh, fill=(255, 255, 255, 255), anchor='mm')
+    for i, txt in enumerate(rows):
+        y0 = 110 + i * (rh + 18)
+        appear = min(1.0, max(0.0, (t - o['t0'] - 0.25 - i * o.get('stagger', 0.5)) / 0.15))
+        if appear <= 0:
+            continue
+        al = int(235 * appear)
+        d.rounded_rectangle((0, y0, wd, y0 + rh), 22, fill=(12, 12, 16, al), outline=(230, 40, 45, al), width=4)
+        d.rounded_rectangle((18, y0 + 16, 18 + 72, y0 + rh - 16), 16, fill=RED + (al,))
+        d.text((54, y0 + rh / 2), str(i + 1), font=fo, fill=(255, 255, 255, al), anchor='mm')
+        d.text((116, y0 + rh / 2), txt, font=fo, fill=(255, 255, 255, al), anchor='lm')
+    if o.get('footer'):
+        d.text((wd / 2, lay.height - 34), o['footer'], font=ff, fill=(255, 255, 255, 230), anchor='mm')
+    paste(cv, lay, W / 2, o.get('y', 980), pop_scale(t, o['t0'], 0.18, 1.06), 0, max(0.0, a))
+
+
 OVERLAYS_FN = {'title': ov_title, 'clock': ov_clock, 'counter': ov_counter, 'chip': ov_chip, 'banner': ov_banner,
                'stamp': ov_stamp, 'lower_third': ov_lower_third, 'ticker': ov_ticker, 'live_bug': ov_live_bug,
                'tag': ov_tag, 'speck': ov_speck, 'sweat': ov_sweat, 'enhance': ov_enhance, 'cctv_hud': ov_cctv_hud,
-               'rewind_hud': ov_rewind_hud, 'timer': ov_timer, 'physics': ov_physics, 'hud': ov_hud, 'text2d': ov_text2d}
+               'rewind_hud': ov_rewind_hud, 'timer': ov_timer, 'physics': ov_physics, 'hud': ov_hud, 'text2d': ov_text2d, 'hud3': ov_hud3, 'choice': ov_choice}
 
 
 # ============================================================================ captions
@@ -730,7 +780,9 @@ class Editor:
                                    edl.CAPTIONS.get('style') == '2dedit')
         for o in edl.OVERLAYS:
             if o['type'] == 'title':
-                o['_layer'] = text_layer([(tx, sz, col, FONT_B) for tx, sz, col in o['lines']], stroke=11)
+                fp = FONT_C if o.get('font') == 'condensed' else FONT_B
+                o['_layer'] = text_layer([(tx, sz, col, fp) for tx, sz, col in o['lines']], stroke=o.get('stroke', 11),
+                                         shadow=o.get('shadow', True), spacing=o.get('spacing', 10))
 
     def seg_at(self, t):
         for s in self.E.SEGMENTS:

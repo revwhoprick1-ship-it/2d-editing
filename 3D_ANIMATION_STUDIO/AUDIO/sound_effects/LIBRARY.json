@@ -1066,5 +1066,122 @@
   "duration_s": 6.0,
   "sample_rate": 48000,
   "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/snore.flac",
+  "category": "comedy",
+  "name": "snore",
+  "description": "Deep sleepy snore: in-breath rattle + out-breath (2.2 s).",
+  "duration_s": 2.2,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/snort.flac",
+  "category": "comedy",
+  "name": "snort",
+  "description": "Sleeper snorts and stirs (0.6 s).",
+  "duration_s": 0.6,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/keys_jingle.flac",
+  "category": "comedy",
+  "name": "keys_jingle",
+  "description": "Key ring lifted slowly: small metallic jingles (1.4 s).",
+  "duration_s": 1.4,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/lock_jiggle.flac",
+  "category": "comedy",
+  "name": "lock_jiggle",
+  "description": "Wrong key jiggled in an old lock (0.8 s).",
+  "duration_s": 0.8,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/lock_click.flac",
+  "category": "comedy",
+  "name": "lock_click",
+  "description": "Key turns: heavy deadbolt clack (0.4 s).",
+  "duration_s": 0.4,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/stamp_thud.flac",
+  "category": "comedy",
+  "name": "stamp_thud",
+  "description": "Rubber stamp slammed on paper on a wooden desk (0.4 s).",
+  "duration_s": 0.4,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/pen_scribble.flac",
+  "category": "comedy",
+  "name": "pen_scribble",
+  "description": "Felt pen drawing a loop on paper (1.0 s).",
+  "duration_s": 1.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/paper_rustle.flac",
+  "category": "comedy",
+  "name": "paper_rustle",
+  "description": "Files and folders shuffled (1.2 s).",
+  "duration_s": 1.2,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/heavy_breath.flac",
+  "category": "comedy",
+  "name": "heavy_breath",
+  "description": "Panicked held breathing, in and out (2.0 s).",
+  "duration_s": 2.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/monster_step.flac",
+  "category": "comedy",
+  "name": "monster_step",
+  "description": "Something heavy and wrong takes a step: thud + bone creak (0.9 s).",
+  "duration_s": 0.9,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/bone_clicks.flac",
+  "category": "comedy",
+  "name": "bone_clicks",
+  "description": "Its head turns: wet bone clicks / cracks (1.0 s).",
+  "duration_s": 1.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/big_bang.flac",
+  "category": "comedy",
+  "name": "big_bang",
+  "description": "Huge BANG down the hallway: locker slammed by something strong, boom + metal ring (2.4 s).",
+  "duration_s": 2.4,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/knob_turn.flac",
+  "category": "comedy",
+  "name": "knob_turn",
+  "description": "Door handle slowly pressed down: metal latch creak (1.2 s).",
+  "duration_s": 1.2,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
  }
 ]
