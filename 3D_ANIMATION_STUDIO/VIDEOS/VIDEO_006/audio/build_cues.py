@@ -46,7 +46,7 @@ for k in range(5):
 c(E.T_DOOR13, 'creak_long', -5, 'the far door creaks open')
 c(E.T_DOOR13 + 0.3, 'tv_static_bed', -21, 'TV static leaking from the apartment', bus='amb', dur=E.T_DARK - E.T_DOOR13 - 0.3,
   loop=True, fade_in=2.0, fade_out=0.02)
-for k in range(6):
+for k in range(7):
     c(E.T_WALK2 + 0.25 + k * 0.5, 'footstep_echo', -11 - (k % 2), 'walks to the open door')
 c(E.T_HEAD, 'cloth_rustle', -15, 'the double turns his head')
 c(E.T_STAND, 'cloth_rustle', -12, 'the double stands up')

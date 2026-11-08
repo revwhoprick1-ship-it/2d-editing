@@ -1,0 +1,70 @@
+{
+ "file": "EXPORTS/VIDEO_006_The_13th_Floor.mp4",
+ "video": {
+  "frames": 1140,
+  "duration_s": 38.0,
+  "seam_diff": 0.1747,
+  "median_frame_diff": 0.0034,
+  "p90_frame_diff": 0.0125,
+  "largest_cut_diffs": [
+   0.6066,
+   0.4,
+   0.2936,
+   0.2597,
+   0.2252
+  ],
+  "seam_percentile_among_frame_changes": 99.4,
+  "first_frame_mean_luma": 0.175,
+  "last_frame_mean_luma": 0.0,
+  "darkest_frame_mean_luma": 0.0
+ },
+ "audio": {
+  "decoded_duration_s": 38.016,
+  "video_minus_audio_ms": -16.0,
+  "rms_last_100ms_db": -18.9,
+  "rms_first_100ms_db": -15.9,
+  "rms_whole_db": -16.1,
+  "seam_sample_jump": 0.01264,
+  "local_median_sample_jump": 0.00813,
+  "local_max_sample_jump": 0.0378
+ },
+ "loop_x3": {
+  "black_segments": [
+   [
+    "29.9",
+    "30.4333"
+   ],
+   [
+    "37.8333",
+    "38.0333"
+   ],
+   [
+    "67.9",
+    "68.4333"
+   ],
+   [
+    "75.8333",
+    "76.0333"
+   ],
+   [
+    "105.9",
+    "106.433"
+   ],
+   [
+    "113.833",
+    "114"
+   ]
+  ],
+  "silences_over_250ms_below_-50dB": [],
+  "duration_s": 114.037333
+ },
+ "checks": {
+  "seam_picture_change_is_ordinary (below the 90th percentile of frame changes)": false,
+  "no_black_frame_at_seam": false,
+  "no_black_segments_in_3x_loop": false,
+  "no_silence_in_3x_loop": true,
+  "no_audio_gap_at_seam (both sides within 20 dB of the mix)": true,
+  "no_click_at_seam (jump <= local max)": true,
+  "audio_video_length_match_within_25ms": true
+ }
+}

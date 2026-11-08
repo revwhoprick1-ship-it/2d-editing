@@ -42,7 +42,7 @@ T_TURN = 16.9
 T_SLAM = 17.2            # elevator doors slam shut
 T_RUNB = 17.5
 T_DOOR13 = 20.4          # end door creaks open
-T_WALK2 = 22.4
+T_WALK2 = 21.5
 T_PEEK = 25.3
 T_HEAD = 25.7            # double turns his head
 T_STAND = 26.9
@@ -135,7 +135,9 @@ def hallway_set():
     photo = os.path.join(GFX, 'photo.png')
     if os.path.exists(photo):
         image_plane('Photo', photo, (0.38, 0.5), (-0.872, -3.6, 1.46), rot=(90, 0, -90), emit=0.25)
-    image_plane('Plaque', os.path.join(GFX, 'plaque_13.png'), (0.14, 0.07), (-0.872, -3.6, 1.1), rot=(90, 0, -90), emit=0.2)
+    pl = image_plane('Plaque', os.path.join(GFX, 'plaque_13.png'), (0.14, 0.07), (-0.872, -3.6, 1.1), rot=(90, 0, -90), emit=0.2)
+    if pl is not None:
+        pl.scale.x = -1                                                      # reads correctly from the hallway side
     # dust motes in the sconce light
     import random
     rnd = random.Random(13)
@@ -190,8 +192,10 @@ def build():
     sc = bpy.context.scene
     RS.world_color((0.02, 0.025, 0.035), 1.0)
     doors, disp, (b12, b13), ekey = elevator_set()
+    before = set(bpy.data.objects)
     hinge, sconces = hallway_set()
     lamp, spill = apartment_set()
+    beyond = [o for o in bpy.data.objects if o not in before and o.type == 'MESH']   # hallway + apartment
     A, colA = SK.append_mascot()
     B, colB = SK.append_mascot()
     C, colC = SK.append_mascot()
@@ -214,7 +218,7 @@ def build():
         for s, d in zip((-1, 1), doors):
             d.location.x = (0.335 + (0.62 if opened else 0)) * s
             d.keyframe_insert('location', frame=f)
-    door(0, True); door(F(T_DCLOSE), True); door(F(T_DCLOSE + 0.9), False)
+    door(0, False)                                                            # riding up, doors shut
     door(F(T_DING1 + 0.1), False); door(F(T_DING1 + 1.3), True)
     door(F(T_SLAM - 0.02), True); door(F(T_SLAM + 0.22), False)
     door(F(T_DING2 + 0.05), False); door(F(T_DING2 + 0.4), True); door(F(31.9), True); door(F(32.5), False)
@@ -227,6 +231,7 @@ def build():
         energy(L, pts)
     energy(lamp, [(0, 90), (F(T_DARK - 0.02), 90), (F(T_DARK), 0)])
     energy(spill, [(0, 0), (F(T_DOOR13), 0), (F(T_DOOR13 + 1.2), 60), (F(T_DARK - 0.02), 60), (F(T_DARK), 0)])
+    vis(beyond, [(0, True), (F(T_DARK), False)])          # after the lights-out the 13th floor is pure darkness beyond the doors
     tw = bpy.data.objects['Key_Twin']
     energy(tw, [(0, 0), (F(T_REFL), 0), (F(T_REFL + 0.4), 60)])
     hinge.rotation_euler = (0, 0, 0)
@@ -273,7 +278,8 @@ def build():
     expr(A, F(T_DOOR13), 'scared', 0.9, eyes=(0.0, 0.0), head=(0, 0, 0))
     root(A, F(T_DOOR13 + 0.3), back[0], -0.98, 180)
     root(A, F(T_DOOR13 + 0.9), back[0], -0.98, 0)                            # turns: the far door is open
-    end2 = API.walk(A, F(T_WALK2), F(T_PEEK - 0.1), speed=2.85, cycle=30, start_pos=(back[0], -0.98), heading_deg=0)
+    root(A, F(T_WALK2 - 0.05), 0.0, -0.98, 0)                                # (off camera) steps to the middle of the hall
+    end2 = API.walk(A, F(T_WALK2), F(T_PEEK - 0.1), speed=9.87 / (T_PEEK - 0.1 - T_WALK2), cycle=30, start_pos=(0.0, -0.98), heading_deg=0)
     end2 = (0.05, -10.85)
     root(A, F(T_PEEK), *end2, 0)
     key(A, F(T_PEEK), spine_pose=dict(bend=10), arm_0=dict(side='L', raise_=30, forward=50, elbow=60))
@@ -342,22 +348,20 @@ def cameras():
         c.location, t.location = loc, look
         cams[name] = (c, t)
         return c, t
-    mk('CAM_DISP', (0.0, 0.2, 2.0), (0.0, -0.8, 2.08), 70)                  # LED display CU (hook + flips)
-    c, t = mk('CAM_ELEV_MED', (-0.55, -0.7, 1.55), (0.15, 0.3, 1.05), 26)  # him in the elevator (front-left, high)
-    c, t = mk('CAM_FACE', (0.05, -0.55, 1.18), (0.1, 0.25, 1.15), 40)      # his face (from the doors)
+    mk('CAM_DISP', (-0.06, 0.2, 2.0), (-0.08, -0.8, 2.08), 45)                  # LED display CU (hook + flips)
+    c, t = mk('CAM_ELEV_MED', (0.5, -0.65, 1.65), (-0.4, 0.3, 0.85), 24)  # him in the elevator (front-left, high)
+    c, t = mk('CAM_FACE', (-0.3, -0.42, 1.08), (-0.4, 0.3, 1.1), 40)      # his face (from the doors)
     c, t = mk('CAM_OUT', (0.35, 0.75, 1.35), (0.0, -6.0, 1.2), 30)         # inside the elevator looking out (reveal)
     SK.key_cam(c, t, F(T_DING1), (0.35, 0.75, 1.35), (0.0, -6.0, 1.2), lens=30)
     SK.key_cam(c, t, F(T_OUT), (0.35, 0.4, 1.35), (0.0, -6.0, 1.2), lens=34)
     c, t = mk('CAM_TRACK', (0.25, 0.6, 1.5), (-0.4, -1.0, 1.1), 28)         # follows him out (behind, OTS)
     SK.key_cam(c, t, F(T_OUT), (0.3, 0.6, 1.5), (-0.4, -1.0, 1.1), lens=28)
     SK.key_cam(c, t, F(T_PHOTO), (0.35, -1.6, 1.5), (-0.6, -3.6, 1.3), lens=28)
-    mk('CAM_PHOTO', (-0.35, -3.6, 1.45), (-0.88, -3.6, 1.45), 40)          # the photograph
+    mk('CAM_PHOTO', (-0.05, -3.45, 1.4), (-0.88, -3.6, 1.45), 32)          # the photograph
     mk('CAM_EYES', (-0.75, -3.25, 1.2), (-0.4, -2.65, 1.15), 45)             # his eyes on recognising himself
-    c, t = mk('CAM_HALL', (0.35, -2.0, 1.25), (0.0, 0.0, 1.2), 26)         # looks back at the elevator (slam)
-    mk('CAM_DOORSIDE', (0.6, -2.2, 1.6), (0.0, -0.95, 1.2), 24)            # him pounding the doors (handheld in edit)
-    c, t = mk('CAM_LONG', (0.2, -0.6, 1.5), (0.0, -11.0, 1.1), 30)         # down the hallway: the far door opens
-    SK.key_cam(c, t, F(T_DOOR13), (0.2, -0.6, 1.5), (0.0, -11.0, 1.1), lens=30)
-    SK.key_cam(c, t, F(T_PEEK), (0.2, -7.0, 1.5), (0.0, -11.0, 1.1), lens=30)
+    c, t = mk('CAM_HALL', (0.3, -4.4, 1.45), (-0.1, -0.9, 1.05), 28)         # looks back at the elevator (slam)
+    mk('CAM_DOORSIDE', (0.45, -2.1, 1.5), (-0.3, -1.0, 0.95), 30)            # him pounding the doors (handheld in edit)
+    c, t = mk('CAM_LONG', (0.25, -1.5, 1.55), (0.0, -11.0, 1.0), 30)        # down the hallway: the far door opens, he walks into frame
     c, t = mk('CAM_OTS', (0.35, -10.1, 1.5), (-0.2, -13.2, 0.9), 28)       # over his shoulder into the apartment
     SK.key_cam(c, t, F(T_PEEK), (0.35, -10.1, 1.5), (-0.2, -13.2, 0.9), lens=28)
     SK.key_cam(c, t, F(T_STAND), (0.3, -10.4, 1.45), (-0.3, -13.2, 1.0), lens=36)

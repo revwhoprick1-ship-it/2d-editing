@@ -333,44 +333,51 @@
    "fade_out": 0.02
   },
   {
-   "t": 22.65,
+   "t": 21.75,
    "file": "AUDIO/sound_effects/comedy/footstep_echo.flac",
    "gain": -16,
    "bus": "sfx",
    "note": "walks to the open door"
   },
   {
-   "t": 23.15,
+   "t": 22.25,
    "file": "AUDIO/sound_effects/comedy/footstep_echo.flac",
    "gain": -17,
    "bus": "sfx",
    "note": "walks to the open door"
   },
   {
-   "t": 23.65,
+   "t": 22.75,
    "file": "AUDIO/sound_effects/comedy/footstep_echo.flac",
    "gain": -16,
    "bus": "sfx",
    "note": "walks to the open door"
   },
   {
-   "t": 24.15,
+   "t": 23.25,
    "file": "AUDIO/sound_effects/comedy/footstep_echo.flac",
    "gain": -17,
    "bus": "sfx",
    "note": "walks to the open door"
   },
   {
-   "t": 24.65,
+   "t": 23.75,
    "file": "AUDIO/sound_effects/comedy/footstep_echo.flac",
    "gain": -16,
    "bus": "sfx",
    "note": "walks to the open door"
   },
   {
-   "t": 25.15,
+   "t": 24.25,
    "file": "AUDIO/sound_effects/comedy/footstep_echo.flac",
    "gain": -17,
+   "bus": "sfx",
+   "note": "walks to the open door"
+  },
+  {
+   "t": 24.75,
+   "file": "AUDIO/sound_effects/comedy/footstep_echo.flac",
+   "gain": -16,
    "bus": "sfx",
    "note": "walks to the open door"
   },
