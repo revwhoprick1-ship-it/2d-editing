@@ -183,6 +183,39 @@ def fx_vignette(a, t):
     return a * _vignette(a.shape[0], a.shape[1], 0.55)
 
 
+def fx_glitch(a, t):
+    """Horror glitch: RGB split + torn horizontal slices + a few dead scanlines (seeded per frame)."""
+    rng = np.random.default_rng(int(t * 30) * 7 + 3)
+    out = a.copy()
+    sh = int(rng.integers(8, 28))
+    out[..., 0] = np.roll(a[..., 0], sh, axis=1)
+    out[..., 2] = np.roll(a[..., 2], -sh, axis=1)
+    h = a.shape[0]
+    for _ in range(int(rng.integers(3, 8))):
+        y0 = int(rng.integers(0, h - 40)); hh = int(rng.integers(10, 90))
+        out[y0:y0 + hh] = np.roll(out[y0:y0 + hh], int(rng.integers(-120, 120)), axis=1)
+    for _ in range(int(rng.integers(2, 6))):
+        y = int(rng.integers(0, h)); out[y:y + 3] = rng.uniform(0.6, 1.0)
+    return np.clip(out, 0, 1)
+
+
+def fx_chroma(a, t):
+    """Subtle wrongness: slight RGB split that breathes."""
+    sh = int(4 + 4 * math.sin(t * 3))
+    out = a.copy()
+    out[..., 0] = np.roll(a[..., 0], sh, axis=1)
+    out[..., 2] = np.roll(a[..., 2], -sh, axis=1)
+    return out
+
+
+def fx_redflash(a, t):
+    return np.clip(a * np.array([1.4, 0.45, 0.45], np.float32) + np.array([0.15, 0, 0], np.float32), 0, 1)
+
+
+def fx_invert(a, t):
+    return 1.0 - a
+
+
 def fx_pixelate(a, block):
     if block <= 1:
         return a
@@ -861,8 +894,12 @@ class Editor:
         for ta, tb, b0, b1 in s.get('pixelate', []):
             if ta <= t < tb:
                 a = fx_pixelate(a, int(b0 + (b1 - b0) * ease((t - ta) / (tb - ta))))
+        for ta, tb, name in s.get('fx_t', []):
+            if ta <= t < tb:
+                a = {'glitch': fx_glitch, 'chroma': fx_chroma, 'redflash': fx_redflash, 'invert': fx_invert}[name](a, t)
         for name in s.get('fx', []):
-            a = {'cctv': fx_cctv, 'vhs': fx_vhs, 'freeze_tint': fx_freeze_tint, 'vignette': fx_vignette}[name](a, t)
+            a = {'cctv': fx_cctv, 'vhs': fx_vhs, 'freeze_tint': fx_freeze_tint, 'vignette': fx_vignette, 'glitch': fx_glitch, 'chroma': fx_chroma,
+                 'redflash': fx_redflash, 'invert': fx_invert}[name](a, t)
         return a
 
     def frame(self, i):

@@ -1084,6 +1084,43 @@ def cue_video011():
 CUES['video011'] = cue_video011
 LOOPS['video011'] = None
 
+
+# ------------------------------------------------------------------ VIDEO_012 cue: "Don't Touch The Vase" (jumpscare horror)
+def cue_video012():
+    sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'VIDEOS', 'VIDEO_012'))
+    import edit_video012 as E12
+    B, END = E12.B, E12.END
+    S = Score(END + 3.0, bpm=60)
+    D = lambda t, d, f=36.7, g=-10: S.add('fx', t, sine(f, d) * env_adsr(int(d * SR), min(1.5, d / 3), 0.2, 0.9, min(1.0, d / 4)) * 0.8, g)
+    # hook: a music box (grandma's), slightly out of tune, that dies on the crash
+    mel = ['E5', 'G5', 'B5', 'A5', 'G5', 'E5', 'D#5', 'E5']
+    for i, nm in enumerate(mel):
+        tt = 0.05 + i * 0.32
+        if tt < B['crash']:
+            S.add('lead', tt, inst_bell(mtof(n2m(nm)) * 0.99, 1.0), -13)
+    S.add('perc', B['crash'], drum_taiko(1.6, 38), -2)
+    S.add('pad', B['crash'], inst_strings(C(['E3', 'F3', 'A#3', 'E4']), 2.4, attack=0.02, bright=2600), -9)
+    D(B['crash'] + 0.2, B['dinner'] - B['crash'], 32.7, -9)
+    # dinner: a 'normal' warm pad that keeps detuning; drone under
+    S.add('pad', B['dinner'], inst_pad(C(['C3', 'E3', 'G3', 'B3']), B['mom'] - B['dinner'] + 0.5, bright=1200, attack=0.3), -16)
+    S.add('pad', B['mom'], inst_pad([f * 0.985 for f in C(['C3', 'E3', 'G3', 'B3'])], B['dad'] - B['mom'], bright=1000, attack=0.8), -17)
+    D(B['mom'], B['js1'] - B['mom'], 34.6, -10)
+    S.add('pad', B['dad'], inst_tremolo(C(['E4', 'F4', 'A#4']), B['js1'] - B['dad'], rate=10, bright=2500), -18)
+    # night: dread
+    D(B['power'], B['js2'] - B['power'], 30.9, -8)
+    S.add('pad', B['window'], inst_tremolo(C(['D5', 'D#5', 'A5']), B['stairs'] - B['window'], rate=14, bright=3500), -18)
+    for i in range(int((B['bath'] - B['stairs']) / 0.45)):
+        S.add('perc', B['stairs'] + i * 0.45, drum_taiko(0.6 + 0.08 * i, 48), -12 + i)
+    D(B['js2'] + 0.6, B['choice'] - B['js2'], 29.1, -8)
+    D(B['choice'], B['js3'] - B['choice'], 36.7, -10)
+    for i in range(int((B['js3'] - B['choice'] - 1.2) / 0.5)):
+        S.add('perc', B['choice'] + i * 0.5, drum_tick(0.5), -12)
+    return S
+
+
+CUES['video012'] = cue_video012
+LOOPS['video012'] = None
+
 if __name__ == '__main__':
     cue, out = sys.argv[1], sys.argv[2]
     S = CUES[cue]()

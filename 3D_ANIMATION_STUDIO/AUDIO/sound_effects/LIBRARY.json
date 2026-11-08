@@ -1345,5 +1345,113 @@
   "duration_s": 0.3,
   "sample_rate": 48000,
   "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/jumpscare.flac",
+  "category": "comedy",
+  "name": "jumpscare",
+  "description": "JUMPSCARE: violent impact + dissonant shriek cluster + distorted roar (1.6 s).",
+  "duration_s": 1.6,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/subliminal_hit.flac",
+  "category": "comedy",
+  "name": "subliminal_hit",
+  "description": "A 0.1 s burst for a subliminal flash: click + shriek blip (0.5 s).",
+  "duration_s": 0.5,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/vase_shatter.flac",
+  "category": "comedy",
+  "name": "vase_shatter",
+  "description": "Porcelain vase hits a wooden floor and shatters: crack + ringing shards (2.0 s).",
+  "duration_s": 2.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/smoke_hiss.flac",
+  "category": "comedy",
+  "name": "smoke_hiss",
+  "description": "Black smoke pouring out: low hiss + reversed breath (2.4 s).",
+  "duration_s": 2.4,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/whispers.flac",
+  "category": "comedy",
+  "name": "whispers",
+  "description": "Layered unintelligible whispers moving around the head, loopable (4 s).",
+  "duration_s": 4.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/fork_scrape.flac",
+  "category": "comedy",
+  "name": "fork_scrape",
+  "description": "A fork scraping an empty plate, slow (1.6 s).",
+  "duration_s": 1.6,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/wet_chew.flac",
+  "category": "comedy",
+  "name": "wet_chew",
+  "description": "Slow wet chewing, close (2.0 s).",
+  "duration_s": 2.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/tinnitus.flac",
+  "category": "comedy",
+  "name": "tinnitus",
+  "description": "Post-scare ear ringing: high sine that fades (3.0 s).",
+  "duration_s": 3.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/thunder.flac",
+  "category": "comedy",
+  "name": "thunder",
+  "description": "Lightning crack + rolling thunder (3.0 s).",
+  "duration_s": 3.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/rain_window.flac",
+  "category": "comedy",
+  "name": "rain_window",
+  "description": "Heavy rain on a window, loopable (5 s).",
+  "duration_s": 5.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/stair_crawl.flac",
+  "category": "comedy",
+  "name": "stair_crawl",
+  "description": "Something climbing stairs on all fours: knuckle taps + creaks + scrape (3.0 s).",
+  "duration_s": 3.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/dread_drone.flac",
+  "category": "comedy",
+  "name": "dread_drone",
+  "description": "Sub-bass dread drone with a slow beating, loopable (8 s).",
+  "duration_s": 8.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
  }
 ]

@@ -1,0 +1,394 @@
+{
+ "duration": 66.26,
+ "loop": true,
+ "narration": "narration/narration_raw.wav",
+ "narration_offset": 0.0,
+ "music": "music_score.wav",
+ "music_gain_db": 2,
+ "music_cue": "cue_video012",
+ "music_gates": [
+  [
+   16.737000000000002,
+   17.617,
+   0.15
+  ],
+  [
+   41.564,
+   45.501999999999995,
+   0.2
+  ],
+  [
+   64.31,
+   65.49000000000001,
+   0.2
+  ]
+ ],
+ "targets": {
+  "narration_lufs": -16,
+  "master_lufs": -14,
+  "true_peak": -1.0,
+  "duck_db": 4
+ },
+ "cues": [
+  {
+   "t": 0.0,
+   "file": "AUDIO/ambience/room_tone.flac",
+   "gain": -6,
+   "bus": "amb",
+   "note": "house room tone (always on: no dead air)",
+   "loop": true,
+   "dur": 66.26,
+   "fade_out": 0.02
+  },
+  {
+   "t": 0.0,
+   "file": "AUDIO/sound_effects/comedy/counter_ticks.flac",
+   "gain": -23,
+   "bus": "sfx",
+   "note": "grandfather clock"
+  },
+  {
+   "t": 0.05,
+   "file": "AUDIO/sound_effects/movement/object_slide.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "the vase rocks on the shelf (frame 0)"
+  },
+  {
+   "t": 2.237,
+   "file": "AUDIO/sound_effects/movement/whoosh_short.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "it falls"
+  },
+  {
+   "t": 2.637,
+   "file": "AUDIO/sound_effects/comedy/vase_shatter.flac",
+   "gain": -3,
+   "bus": "sfx",
+   "note": "CRASH: the vase shatters"
+  },
+  {
+   "t": 2.787,
+   "file": "AUDIO/sound_effects/comedy/smoke_hiss.flac",
+   "gain": -7,
+   "bus": "sfx",
+   "note": "black smoke pours out"
+  },
+  {
+   "t": 3.055,
+   "file": "AUDIO/sound_effects/comedy/subliminal_hit.flac",
+   "gain": -5,
+   "bus": "sfx",
+   "note": "subliminal face (3 frames)"
+  },
+  {
+   "t": 3.355,
+   "file": "AUDIO/sound_effects/comedy/whispers.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "whispers",
+   "dur": 2.5,
+   "fade_out": 0.6
+  },
+  {
+   "t": 6.145,
+   "file": "AUDIO/sound_effects/comedy/bone_clicks.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "it slides into the wall"
+  },
+  {
+   "t": 6.865,
+   "file": "AUDIO/ambience/crowd.flac",
+   "gain": -32,
+   "bus": "amb",
+   "note": "dinner murmur",
+   "dur": 2.449,
+   "fade_out": 0.6
+  },
+  {
+   "t": 7.065,
+   "file": "AUDIO/sound_effects/environment/glass_clink.flac",
+   "gain": -19,
+   "bus": "sfx",
+   "note": "cutlery"
+  },
+  {
+   "t": 9.214,
+   "file": "AUDIO/sound_effects/bio/heartbeat_muffled.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "Mom has not blinked"
+  },
+  {
+   "t": 10.314,
+   "file": "AUDIO/sound_effects/comedy/whispers.flac",
+   "gain": -21,
+   "bus": "sfx",
+   "note": "faint whispers",
+   "dur": 2.0,
+   "fade_out": 0.5
+  },
+  {
+   "t": 11.768,
+   "file": "AUDIO/sound_effects/comedy/wet_chew.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "chewing on nothing"
+  },
+  {
+   "t": 12.168,
+   "file": "AUDIO/sound_effects/comedy/fork_scrape.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "fork on an empty plate"
+  },
+  {
+   "t": 14.293,
+   "file": "AUDIO/sound_effects/bio/heartbeat_lubdub.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "Dad looks up"
+  },
+  {
+   "t": 17.607,
+   "file": "AUDIO/sound_effects/comedy/jumpscare.flac",
+   "gain": -2,
+   "bus": "sfx",
+   "note": "JUMPSCARE 1: Dad lunges"
+  },
+  {
+   "t": 18.137,
+   "file": "AUDIO/sound_effects/comedy/tinnitus.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "ears ringing"
+  },
+  {
+   "t": 18.217,
+   "file": "AUDIO/sound_effects/environment/glass_clink.flac",
+   "gain": -21,
+   "bus": "sfx",
+   "note": "normal again..."
+  },
+  {
+   "t": 22.84,
+   "file": "AUDIO/sound_effects/comedy/power_cut.flac",
+   "gain": -5,
+   "bus": "sfx",
+   "note": "POWER OUT"
+  },
+  {
+   "t": 22.84,
+   "file": "AUDIO/sound_effects/comedy/rain_window.flac",
+   "gain": -10,
+   "bus": "amb",
+   "note": "rain",
+   "loop": true,
+   "dur": 43.42,
+   "fade_in": 1.0
+  },
+  {
+   "t": 23.74,
+   "file": "AUDIO/sound_effects/environment/button_click.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "phone flashlight on"
+  },
+  {
+   "t": 23.8,
+   "file": "AUDIO/sound_effects/comedy/phone_buzz.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "low battery"
+  },
+  {
+   "t": 26.842,
+   "file": "AUDIO/sound_effects/comedy/whispers.flac",
+   "gain": -23,
+   "bus": "sfx",
+   "note": "whispers below"
+  },
+  {
+   "t": 32.244,
+   "file": "AUDIO/sound_effects/comedy/thunder.flac",
+   "gain": -5,
+   "bus": "sfx",
+   "note": "lightning: the driveway is empty"
+  },
+  {
+   "t": 34.804,
+   "file": "AUDIO/sound_effects/comedy/stair_crawl.flac",
+   "gain": -7,
+   "bus": "sfx",
+   "note": "climbing on all fours",
+   "loop": true,
+   "dur": 2.992999999999995,
+   "fade_out": 0.1
+  },
+  {
+   "t": 37.044,
+   "file": "AUDIO/sound_effects/comedy/bone_clicks.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "joints cracking"
+  },
+  {
+   "t": 37.797,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "you run"
+  },
+  {
+   "t": 38.757,
+   "file": "AUDIO/sound_effects/comedy/metal_slam.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "bathroom door slams"
+  },
+  {
+   "t": 38.907,
+   "file": "AUDIO/sound_effects/comedy/lock_click.flac",
+   "gain": -7,
+   "bus": "sfx",
+   "note": "LOCK"
+  },
+  {
+   "t": 39.757,
+   "file": "AUDIO/sound_effects/comedy/stair_crawl.flac",
+   "gain": -19,
+   "bus": "sfx",
+   "note": "it stops outside...",
+   "dur": 0.6,
+   "fade_out": 0.3
+  },
+  {
+   "t": 42.164,
+   "file": "AUDIO/sound_effects/bio/heartbeat_muffled.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "nothing. (fake-out)"
+  },
+  {
+   "t": 44.133,
+   "file": "AUDIO/sound_effects/comedy/heavy_breath.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "your breathing in the mirror"
+  },
+  {
+   "t": 45.492,
+   "file": "AUDIO/sound_effects/comedy/jumpscare.flac",
+   "gain": -2,
+   "bus": "sfx",
+   "note": "JUMPSCARE 2: it is behind you in the mirror"
+  },
+  {
+   "t": 46.022,
+   "file": "AUDIO/sound_effects/comedy/tinnitus.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "ringing"
+  },
+  {
+   "t": 46.172,
+   "file": "AUDIO/sound_effects/comedy/power_cut.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "phone dies"
+  },
+  {
+   "t": 47.94,
+   "file": "AUDIO/sound_effects/comedy/whispers.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "whispers circling your head",
+   "loop": true,
+   "dur": 6.161000000000001,
+   "fade_out": 0.4
+  },
+  {
+   "t": 54.401,
+   "file": "AUDIO/sound_effects/comedy/heavy_breath.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "breathing under the choice"
+  },
+  {
+   "t": 55.501,
+   "file": "AUDIO/sound_effects/comedy/bone_clicks.flac",
+   "gain": -19,
+   "bus": "sfx",
+   "note": "another pair of eyes opens 1"
+  },
+  {
+   "t": 56.101,
+   "file": "AUDIO/sound_effects/comedy/whispers.flac",
+   "gain": -21,
+   "bus": "sfx",
+   "note": "whispers rising",
+   "loop": true,
+   "dur": 8.209000000000007,
+   "fade_in": 3.0,
+   "fade_out": 0.1
+  },
+  {
+   "t": 56.601,
+   "file": "AUDIO/sound_effects/bio/heartbeat_muffled.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "heartbeat"
+  },
+  {
+   "t": 56.901,
+   "file": "AUDIO/sound_effects/comedy/bone_clicks.flac",
+   "gain": -18,
+   "bus": "sfx",
+   "note": "another pair of eyes opens 2"
+  },
+  {
+   "t": 58.301,
+   "file": "AUDIO/sound_effects/comedy/bone_clicks.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "another pair of eyes opens 3"
+  },
+  {
+   "t": 59.701,
+   "file": "AUDIO/sound_effects/comedy/bone_clicks.flac",
+   "gain": -16,
+   "bus": "sfx",
+   "note": "another pair of eyes opens 4"
+  },
+  {
+   "t": 61.101,
+   "file": "AUDIO/sound_effects/comedy/bone_clicks.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "another pair of eyes opens 5"
+  },
+  {
+   "t": 62.501,
+   "file": "AUDIO/sound_effects/comedy/bone_clicks.flac",
+   "gain": -14,
+   "bus": "sfx",
+   "note": "another pair of eyes opens 6"
+  },
+  {
+   "t": 63.901,
+   "file": "AUDIO/sound_effects/comedy/bone_clicks.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "another pair of eyes opens 7"
+  },
+  {
+   "t": 65.48,
+   "file": "AUDIO/sound_effects/comedy/jumpscare.flac",
+   "gain": -1,
+   "bus": "sfx",
+   "note": "JUMPSCARE 3: the lunge -> frame 0"
+  }
+ ]
+}

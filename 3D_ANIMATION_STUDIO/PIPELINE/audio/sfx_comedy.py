@@ -770,6 +770,112 @@ def sneaker_squeak():
     return normalize(convolve_stereo(x, reverb_ir(0.9, 0.4, seed=1027), 0.3), -8)
 
 
+# ---------------------------------------------------------------- jumpscare pack (VIDEO_012 "Don't Touch The Vase")
+@reg('jumpscare', 'JUMPSCARE: violent impact + dissonant shriek cluster + distorted roar (1.6 s).')
+def jumpscare():
+    n = int(1.6 * SR); tt = np.arange(n) / SR
+    hit = np.sin(2 * np.pi * np.cumsum(45 * (1 + 3 * np.exp(-tt / 0.03))) / SR) * env_exp(n, 0.35) * 2.0
+    hit += lowpass(noise(n, 'white', 1101), 4000) * env_exp(n, 0.06) * 2.0
+    shriek = np.zeros(n)
+    for k, f in enumerate((1240, 1318, 1397, 1975, 2637)):
+        vib = 1 + 0.02 * np.sin(2 * np.pi * (11 + k) * tt)
+        shriek += np.sign(np.sin(2 * np.pi * np.cumsum(f * vib) / SR)) * 0.18
+    shriek = bandpass(shriek, 900, 6000) * env_adsr(n, 0.005, 0.25, 0.6, 0.6)
+    roar = soft_sat(bandpass(noise(n, 'pink', 1102), 80, 900) * (1 + np.sin(2 * np.pi * 37 * tt)), 4.0) * env_adsr(n, 0.01, 0.3, 0.5, 0.6) * 0.8
+    return normalize(convolve_stereo(soft_sat(hit + shriek + roar, 2.2), reverb_ir(1.8, 0.6, seed=1103), 0.35), -0.3)
+
+@reg('subliminal_hit', 'A 0.1 s burst for a subliminal flash: click + shriek blip (0.5 s).')
+def subliminal_hit():
+    n = int(0.5 * SR); tt = np.arange(n) / SR
+    x = np.sign(np.sin(2 * np.pi * 1975 * tt)) * env_exp(n, 0.05) * 0.6 + highpass(noise(n, 'white', 1104), 2000) * env_exp(n, 0.02)
+    return normalize(convolve_stereo(x, reverb_ir(1.2, 0.5, seed=1105), 0.5), -3)
+
+@reg('vase_shatter', 'Porcelain vase hits a wooden floor and shatters: crack + ringing shards (2.0 s).')
+def vase_shatter():
+    n = int(2.0 * SR); tt = np.arange(n) / SR; rng = np.random.default_rng(1106)
+    x = np.sin(2 * np.pi * np.cumsum(90 * (1 + np.exp(-tt / 0.02))) / SR) * env_exp(n, 0.1) * 1.2
+    x += highpass(noise(n, 'white', 1107), 2500) * env_exp(n, 0.05) * 1.5
+    for t0 in np.sort(rng.uniform(0.02, 1.4, 26)):
+        k = int(0.2 * SR); i = int(t0 * SR); f = rng.uniform(2500, 7000)
+        b = np.sin(2 * np.pi * f * np.arange(k) / SR) * env_exp(k, 0.03) * rng.uniform(0.1, 0.5)
+        x[i:i + k] += b[:n - i]
+    return normalize(convolve_stereo(x, reverb_ir(1.4, 0.45, seed=1108), 0.35), -0.5)
+
+@reg('smoke_hiss', 'Black smoke pouring out: low hiss + reversed breath (2.4 s).')
+def smoke_hiss():
+    n = int(2.4 * SR); tt = np.arange(n) / SR
+    x = sweep_filter(noise(n, 'white', 1109), 3000, 300, kind='lowpass') * env_adsr(n, 0.1, 0.4, 0.7, 0.8) * 0.8
+    x += bandpass(noise(n, 'pink', 1110), 100, 400) * np.clip(tt / 2.4, 0, 1) ** 2 * 1.2
+    return normalize(convolve_stereo(x, reverb_ir(2.0, 0.6, seed=1111), 0.5), -4)
+
+@reg('whispers', 'Layered unintelligible whispers moving around the head, loopable (4 s).')
+def whispers():
+    n = int(4.0 * SR); out = np.zeros((n, 2)); rng = np.random.default_rng(1112)
+    for k in range(9):
+        t0 = rng.uniform(0, 3.4); d = rng.uniform(0.3, 0.8); m = int(d * SR); i = int(t0 * SR)
+        tt = np.arange(m) / SR
+        syl = np.clip(np.sin(2 * np.pi * rng.uniform(5, 9) * tt), 0, 1) ** 2
+        w = bandpass(noise(m, 'white', 1113 + k), rng.uniform(1500, 2500), rng.uniform(4000, 7000)) * syl * env_adsr(m, 0.05, 0.1, 0.8, 0.1)
+        p = rng.uniform(-1, 1)
+        out[i:i + m, 0] += w[:n - i] * (1 - p) * 0.5
+        out[i:i + m, 1] += w[:n - i] * (1 + p) * 0.5
+    return normalize(out, -10)
+
+@reg('fork_scrape', 'A fork scraping an empty plate, slow (1.6 s).')
+def fork_scrape():
+    n = int(1.6 * SR); tt = np.arange(n) / SR
+    f = 2600 + 400 * np.sin(2 * np.pi * 0.7 * tt)
+    x = np.sin(2 * np.pi * np.cumsum(f) / SR) * (0.5 + 0.5 * np.abs(np.sin(2 * np.pi * 9 * tt))) * env_adsr(n, 0.1, 0.1, 0.8, 0.3) * 0.4
+    x += bandpass(noise(n, 'white', 1114), 2000, 6000) * 0.3 * env_adsr(n, 0.1, 0.1, 0.8, 0.3)
+    return normalize(x, -8)
+
+@reg('wet_chew', 'Slow wet chewing, close (2.0 s).')
+def wet_chew():
+    n = int(2.0 * SR); out = np.zeros(n); rng = np.random.default_rng(1115)
+    for t0 in np.arange(0.05, 1.9, 0.28):
+        k = int(0.14 * SR); i = int(t0 * SR)
+        b = bandpass(noise(k, 'pink', int(t0 * 100)), 300, 2500) * env_adsr(k, 0.02, 0.05, 0.5, 0.05) * rng.uniform(0.5, 1)
+        out[i:i + k] += b[:n - i]
+    return normalize(out, -8)
+
+@reg('tinnitus', 'Post-scare ear ringing: high sine that fades (3.0 s).')
+def tinnitus():
+    n = int(3.0 * SR); tt = np.arange(n) / SR
+    return normalize(np.sin(2 * np.pi * 7200 * tt) * env_adsr(n, 0.01, 0.2, 0.6, 2.4) * 0.3, -14)
+
+@reg('thunder', 'Lightning crack + rolling thunder (3.0 s).')
+def thunder():
+    n = int(3.0 * SR); tt = np.arange(n) / SR
+    x = highpass(noise(n, 'white', 1116), 1500) * env_exp(n, 0.04) * 1.5
+    x += lowpass(noise(n, 'brown', 1117), 300) * env_adsr(n, 0.05, 0.6, 0.6, 2.0) * 2.0 * (0.7 + 0.3 * np.sin(2 * np.pi * 3 * tt))
+    return normalize(convolve_stereo(soft_sat(x, 1.5), reverb_ir(2.5, 0.7, seed=1118), 0.45), -1)
+
+@reg('rain_window', 'Heavy rain on a window, loopable (5 s).')
+def rain_window():
+    n = int(5.0 * SR); rng = np.random.default_rng(1119)
+    x = bandpass(noise(n, 'pink', 1120), 800, 8000) * 0.5
+    drops = (rng.random(n) > 0.9985).astype(float) * rng.uniform(0.3, 1.0, n)
+    x += highpass(np.convolve(drops, np.exp(-np.arange(200) / 30), 'same'), 2000) * 0.8
+    return normalize(fade(x, 0.2, 0.2), -10)
+
+@reg('stair_crawl', 'Something climbing stairs on all fours: knuckle taps + creaks + scrape (3.0 s).')
+def stair_crawl():
+    n = int(3.0 * SR); out = np.zeros(n); rng = np.random.default_rng(1121)
+    for t0 in np.arange(0.05, 2.9, 0.19):
+        k = int(0.08 * SR); i = int((t0 + rng.uniform(0, 0.04)) * SR)
+        b = (np.sin(2 * np.pi * rng.uniform(150, 260) * np.arange(k) / SR) * 0.6 + bandpass(noise(k, 'white', int(t0 * 77)), 500, 3000)) * env_exp(k, 0.012)
+        out[i:i + k] += b[:n - i] * rng.uniform(0.4, 1.0)
+    out += bandpass(noise(n, 'white', 1122), 400, 1200) * (np.sin(2 * np.pi * 0.7 * np.arange(n) / SR) > 0.85) * 0.3
+    return normalize(convolve_stereo(out, reverb_ir(1.0, 0.4, seed=1123), 0.3), -4)
+
+@reg('dread_drone', 'Sub-bass dread drone with a slow beating, loopable (8 s).')
+def dread_drone():
+    n = int(8.0 * SR); tt = np.arange(n) / SR
+    x = np.sin(2 * np.pi * 36 * tt) + np.sin(2 * np.pi * 37.3 * tt) + 0.4 * np.sin(2 * np.pi * 72.4 * tt)
+    x += bandpass(noise(n, 'brown', 1124), 30, 200) * 0.8
+    return normalize(fade(x * 0.6, 0.5, 0.5), -6)
+
+
 def main():
     root = sys.argv[1]
     d = os.path.join(root, 'sound_effects', 'comedy')

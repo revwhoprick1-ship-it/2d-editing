@@ -1,0 +1,218 @@
+{
+ "title": "Don't Touch The Vase - Part 1",
+ "engine": "chatterbox",
+ "voice_ref": "kokoro:am_fenrir",
+ "tempo": 1.07,
+ "lines": [
+  {
+   "id": "N01",
+   "who": "N",
+   "text": "Grandma had one rule. Never touch the vase.",
+   "delivery": "low, ominous",
+   "exaggeration": 0.55,
+   "cfg": 0.5,
+   "pause_after": 0.2
+  },
+  {
+   "id": "N02",
+   "who": "N",
+   "text": "You just broke it.",
+   "delivery": "sudden, dread",
+   "exaggeration": 0.65,
+   "cfg": 0.5,
+   "pause_after": 0.4
+  },
+  {
+   "id": "N03",
+   "who": "N",
+   "text": "Something black crawls out of the pieces... and slides into the walls.",
+   "delivery": "creeping",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "N04",
+   "who": "N",
+   "text": "At dinner, everything seems normal.",
+   "delivery": "calm",
+   "exaggeration": 0.4,
+   "cfg": 0.5,
+   "pause_after": 0.2
+  },
+  {
+   "id": "N05",
+   "who": "N",
+   "text": "Until you notice Mom hasn't blinked. Not once.",
+   "delivery": "creeping",
+   "exaggeration": 0.55,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "N06",
+   "who": "N",
+   "text": "Your little sister is chewing... but her plate is empty.",
+   "delivery": "dread",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "N07",
+   "who": "N",
+   "text": "Then Dad slowly looks up at you.",
+   "delivery": "slow, quiet",
+   "exaggeration": 0.55,
+   "cfg": 0.5,
+   "pause_after": 0.6
+  },
+  {
+   "id": "D1",
+   "who": "DAD",
+   "text": "Why did you let it out?",
+   "delivery": "flat, cold",
+   "exaggeration": 0.4,
+   "cfg": 0.5,
+   "pause_after": 0.4,
+   "voice_ref": "kokoro:am_michael"
+  },
+  {
+   "id": "N08",
+   "who": "N",
+   "text": "You blink. And they're all just eating. Like nothing happened.",
+   "delivery": "shaky",
+   "exaggeration": 0.55,
+   "cfg": 0.5,
+   "pause_after": 0.4
+  },
+  {
+   "id": "N09",
+   "who": "N",
+   "text": "That night, the power goes out.",
+   "delivery": "low",
+   "exaggeration": 0.55,
+   "cfg": 0.5,
+   "pause_after": 0.6
+  },
+  {
+   "id": "N10",
+   "who": "N",
+   "text": "The house is pitch black. And your phone is at four percent.",
+   "delivery": "tense",
+   "exaggeration": 0.55,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "N11",
+   "who": "N",
+   "text": "Then you hear Mom, calling from downstairs.",
+   "delivery": "quiet",
+   "exaggeration": 0.5,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "D2",
+   "who": "MOM",
+   "text": "Sweetie? Come downstairs. I want to show you something.",
+   "delivery": "sweet, too calm",
+   "exaggeration": 0.4,
+   "cfg": 0.5,
+   "pause_after": 0.5,
+   "voice_ref": "kokoro:af_heart"
+  },
+  {
+   "id": "N12",
+   "who": "N",
+   "text": "But Mom's car isn't in the driveway. She's still at work.",
+   "delivery": "dread, slow",
+   "exaggeration": 0.7,
+   "cfg": 0.5,
+   "pause_after": 0.5
+  },
+  {
+   "id": "N13",
+   "who": "N",
+   "text": "Something is coming up the stairs. On all fours.",
+   "delivery": "whisper, terror",
+   "exaggeration": 0.7,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "N14",
+   "who": "N",
+   "text": "You lock yourself in the bathroom.",
+   "delivery": "fast",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "N15",
+   "who": "N",
+   "text": "It stops right outside the door. And then... nothing.",
+   "delivery": "whisper",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 1.4
+  },
+  {
+   "id": "N16",
+   "who": "N",
+   "text": "You look up at the mirror.",
+   "delivery": "whisper",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 1.2
+  },
+  {
+   "id": "N17",
+   "who": "N",
+   "text": "Your phone dies.",
+   "delivery": "flat",
+   "exaggeration": 0.55,
+   "cfg": 0.5,
+   "pause_after": 1.0
+  },
+  {
+   "id": "N18",
+   "who": "N",
+   "text": "And in the dark, something whispers right next to your ear.",
+   "delivery": "whisper, terror",
+   "exaggeration": 0.7,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "D3",
+   "who": "DEM",
+   "text": "You broke my home. Now I live in yours.",
+   "delivery": "whisper, evil",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.6,
+   "voice_ref": "kokoro:af_nicole"
+  },
+  {
+   "id": "N19",
+   "who": "N",
+   "text": "The pieces are still on your floor. Glue the vase back together. Burn the pieces. Or run to Grandma's house.",
+   "delivery": "urgent",
+   "exaggeration": 0.5,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "N20",
+   "who": "N",
+   "text": "Comment one, two, or three. If you survive... there's a part two.",
+   "delivery": "low, final",
+   "exaggeration": 0.5,
+   "cfg": 0.5,
+   "pause_after": 0.2
+  }
+ ]
+}

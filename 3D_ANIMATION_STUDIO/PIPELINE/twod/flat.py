@@ -242,6 +242,8 @@ def mascot(cv, x, y, s=1.0, **pose):
     cv.save()
     cv.translate(math.sin(math.radians(lean)) * 330, -900)
     cv.rotate(P['head_tilt'])
+    if P.get('stretch'):
+        cv.scale(1 - 0.25 * P['stretch'], 1 + P['stretch'])
     out['head'] = _hand_pos(cv, 0, 0)
     _head_front(cv, P, back)
     cv.restore()
@@ -252,6 +254,8 @@ def mascot(cv, x, y, s=1.0, **pose):
 def _head_front(cv, P, back):
     ls, turn = P['light_side'], P['head_turn']
     SK, SKS, HR, HRS = P['skin'], P['skin_sh'], P['hair'], P['hair_sh']
+    if P.get('long_hair'):
+        cv.drawPath(blob([(-200, -120), (0, -250), (200, -120), (230, 200), (180, 330), (0, 300), (-180, 330), (-230, 200)]), paint(HRS if not back else HR))
     cv.drawRect(skia.Rect(-38, 40, 38, 150), paint(SKS))
     head = blob([(-178, -40), (-150, -170), (0, -222), (150, -170), (178, -40), (160, 90), (90, 175), (0, 195), (-90, 175), (-160, 90)])
     cv.drawPath(head, paint(SK))
@@ -284,6 +288,10 @@ def _head_front(cv, P, back):
     lid = P['lids']
     for side in (-1, 1):
         ex, ey = fx + side * 72, -10
+        if P.get('void_eyes'):                            # black, empty eyes with a pinprick of light
+            cv.drawOval(skia.Rect(ex - 50, ey - 62, ex + 50, ey + 62), paint('#050505'))
+            cv.drawCircle(ex + P['look'][0] * 14, ey, 7, paint('#F0F0F0'))
+            continue
         cv.drawOval(skia.Rect(ex - 46, ey - 56, ex + 46, ey + 56), paint('#FFFFFF'))
         px, py = ex + P['look'][0] * 18, ey + P['look'][1] * 20
         cv.save()
@@ -350,6 +358,13 @@ def _mouth(cv, P, fx, my):
         cv.drawPath(poly([(fx - 44, my - 6), (fx, my + 18), (fx + 44, my - 6)], closed=False), mp)
     elif m == 'smirk':
         q = skia.Path(); q.moveTo(fx - 38, my + 6); q.quadTo(fx + 10, my + 16, fx + 52, my - 14)
+        cv.drawPath(q, mp)
+    elif m == 'wide':                                     # a smile that is far too wide
+        q = skia.Path(); q.moveTo(fx - 150, my - 50); q.quadTo(fx, my + 90, fx + 150, my - 50); q.quadTo(fx, my + 20, fx - 150, my - 50)
+        cv.drawPath(q, paint('#1A0808'))
+        for k in range(12):
+            tx = fx - 120 + k * 22
+            cv.drawPath(poly([(tx, my - 10 + abs(k - 5.5) * -6), (tx + 9, my + 26 - abs(k - 5.5) * 4), (tx + 18, my - 10 + abs(k - 5.5) * -6)]), paint('#EDE6D6'))
         cv.drawPath(q, mp)
     elif m == 'grin':
         q = skia.Path(); q.moveTo(fx - 60, my - 10); q.quadTo(fx, my + 40, fx + 60, my - 10); q.close()
