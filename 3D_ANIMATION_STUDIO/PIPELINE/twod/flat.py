@@ -135,7 +135,7 @@ def mascot(cv, x, y, s=1.0, **pose):
     # ---------------- legs
     hip_y = -430
     ph = P['walk']
-    for side in (-1, 1):
+    for side in ((-1, 1) if P.get('legs', True) else ()):
         if ph is None:
             th, kn = 2 * side, 0
         else:
@@ -162,7 +162,8 @@ def mascot(cv, x, y, s=1.0, **pose):
     cv.save()
     cv.clipPath(torso, skia.ClipOp.kIntersect, True)
     cv.drawRect(skia.Rect(-200 if ls > 0 else 30, sh_y - 40, -30 if ls > 0 else 200, hip_y + 60), paint(P['shirt_sh']))
-    if P['rim_a'] > 0:
+    if P['rim_a'] > 0:                                    # rim light only on the shadow side
+        cv.clipRect(skia.Rect(-400, -2000, -60, 2000) if ls > 0 else skia.Rect(60, -2000, 400, 2000))
         cv.drawPath(torso, paint(C(P['rim'], P['rim_a']), style='stroke', width=12, blur=3))
     cv.restore()
     if not back:                                          # collar
@@ -172,12 +173,9 @@ def mascot(cv, x, y, s=1.0, **pose):
         sx = side * 112
         col = SKIN if side == ls else SKIN_SH
         (ex, ey), (hx, hy) = _limb(cv, sx, sh_y + 40, ang, 175, bend, 165, 54, col, col, flip=side)
-        sleeve = skia.Path()
         a = math.radians(ang) * side
-        cv.drawPath(poly([(sx - 40 * math.cos(a), sh_y + 10 + 40 * math.sin(a) * side * 0),
-                          (sx + math.sin(a) * 110 - 42 * math.cos(a), sh_y + 40 + math.cos(a) * 110),
-                          (sx + math.sin(a) * 110 + 42 * math.cos(a), sh_y + 40 + math.cos(a) * 110),
-                          (sx + 40 * math.cos(a), sh_y + 30)]), paint(P['shirt'] if side == ls else P['shirt_sh']))
+        sx2, sy2 = sx + math.sin(a) * 95, sh_y + 40 + math.cos(a) * 95
+        cv.drawPath(poly([(sx, sh_y + 30), (sx2, sy2)], closed=False), paint(P['shirt'] if side == ls else P['shirt_sh'], style='stroke', width=82))
         r = 34 if hand != 'fist' else 36
         cv.drawCircle(hx, hy, r, paint(col))
         if hand == 'point':
@@ -198,6 +196,7 @@ def mascot(cv, x, y, s=1.0, **pose):
     cv.clipPath(head, skia.ClipOp.kIntersect, True)
     cv.drawOval(skia.Rect(-430, -280, -115, 280) if ls > 0 else skia.Rect(115, -280, 430, 280), paint(SKIN_SH, blur=18))
     if P['rim_a'] > 0:
+        cv.clipRect(skia.Rect(-400, -400, -70, 400) if ls > 0 else skia.Rect(70, -400, 400, 400))
         cv.drawPath(head, paint(C(P['rim'], P['rim_a']), style='stroke', width=14, blur=4))
     cv.restore()
     for side in (-1, 1):                                   # ears
@@ -224,9 +223,10 @@ def mascot(cv, x, y, s=1.0, **pose):
         px, py = ex + P['look'][0] * 18, ey + P['look'][1] * 20
         cv.save()
         cv.clipPath(skia.Path.Oval(skia.Rect(ex - 46, ey - 56, ex + 46, ey + 56)), skia.ClipOp.kIntersect, True)
-        cv.drawCircle(px, py + 6, 34, paint(EYE_IRIS))
-        cv.drawCircle(px, py + 6, 20, paint('#160C06'))
-        cv.drawCircle(px + 11, py - 6, 9, paint('#FFFFFF'))
+        k = P.get('pupil', 1.0)
+        cv.drawCircle(px, py + 6, 34 * k, paint(P.get('iris', EYE_IRIS)))
+        cv.drawCircle(px, py + 6, 20 * k, paint('#160C06'))
+        cv.drawCircle(px + 11 * k, py - 6 * k, 9 * min(1, k + 0.2), paint('#FFFFFF'))
         if lid > 0:
             cv.drawRect(skia.Rect(ex - 50, ey - 60, ex + 50, ey - 60 + 116 * lid), paint(SKIN))
             cv.drawLine(ex - 50, ey - 60 + 116 * lid, ex + 50, ey - 60 + 116 * lid, paint(LINE, style='stroke', width=6))
@@ -261,6 +261,9 @@ def mascot(cv, x, y, s=1.0, **pose):
         cv.drawPath(q, mp)
     else:
         cv.drawLine(fx - 30, my + 4, fx + 30, my + 4, mp)
+    if P.get('blush', 0) > 0:
+        for side in (-1, 1):
+            cv.drawOval(skia.Rect(fx + side * 112 - 34, 52, fx + side * 112 + 34, 80), paint(C('#E86A5A', P['blush']), blur=8))
     if P['sweat']:
         cv.drawPath(blob([(fx + 150, -80), (fx + 162, -40), (fx + 150, -26), (fx + 138, -40)]), paint('#BFE3FF'))
     cv.restore()

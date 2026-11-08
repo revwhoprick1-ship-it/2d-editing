@@ -2,12 +2,13 @@
 
 38.0 s · 1080×1920 · 30 fps · seamless loop · `EXPORTS/VIDEO_006_The_13th_Floor.mp4`
 
-## 1. Style: "2dEDIT"
-The user's reference look, applied to our own sets and mascot:
-* **Toon shading** (`studio_lib/toon.py`): every material becomes light → Shader‑to‑RGB → 3‑step eased ramp × base colour → emission. No gloss, flat fills, soft shadow steps. Lamps, screens and the display stay emissive. See‑through materials (the dark "mirror" steel) keep their alpha.
-* **Low‑key practical lighting:** a cool ceiling panel in the elevator, three warm wall sconces in the hallway, a lamp and a TV glow in the apartment. Dark, muted palette. Normal colour (no saturation boost).
-* **Captions** (`edl_engine` `CAPTIONS['style']='2dedit'`): Roboto Condensed Bold, white, thin outline + soft shadow, **one red keyword**, short phrases. Dialogue is in quotes with a small red speaker label (`HIM`, `???`).
-* **HUD** (`ov_hud`): one small top row, only story facts: `11:48 PM · FLOOR 12 · PASSENGERS: 1`. A value that changes flashes red.
+## 1. Style: "2dEDIT" = real 2D animation
+v1 was made in Blender with toon shading and still read as 3D, so it was scrapped. This version has no 3D at all:
+* Every frame is **flat vector art drawn with Skia** (`VIDEOS/VIDEO_006/anim2d.py`, puppet in `PIPELINE/twod/flat.py`).
+* **Characters** are 2D cut-out puppets. The mascot is redrawn flat (orange tee, brown swept hair, big eyes, jeans, white shoes). Each part has one flat fill, one cel-shadow tone and a rim light. The face rig has eyes, pupils, brows, lids, mouth shapes and blush, plus a walk cycle, arms, head tilt and a fake 3/4 turn.
+* **Sets** are flat paintings in one-point perspective: the elevator, the hallway (wallpaper, runner, sconces, the photo, the far door that swings open) and the apartment (lamp, TV static, sofa).
+* **Light is painted:** additive glows, light spill, flicker and a vignette. The mood is dark and muted.
+* **Captions and HUD:** Roboto Condensed Bold captions in white with one red keyword. Dialogue is in quotes with a small red speaker label. One small top HUD row (`11:48 PM · FLOOR 12 · PASSENGERS: 1`) shows only story facts; a value that changes flashes red.
 
 ## 2. Story → shots
 | Time | Beat | Shot / device |
@@ -34,3 +35,4 @@ New synthesised SFX (all original, `sfx_comedy.py`): eerie elevator ding, fluore
 Free local Chatterbox. Mascot: Kokoro `am_puck` timbre (D1, D2). The double: same timbre, calm and slow (D3). Narrator: Kokoro `am_fenrir` timbre (N1). Every word matched in the Whisper check.
 
 Render/QA: `RENDER_QA.md`.
+

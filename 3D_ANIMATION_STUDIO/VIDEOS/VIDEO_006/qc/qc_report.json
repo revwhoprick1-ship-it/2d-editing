@@ -1,7 +1,7 @@
 {
  "file": "EXPORTS/VIDEO_006_The_13th_Floor.mp4",
  "duration_s": 38.0,
- "size_mb": 14.61,
+ "size_mb": 8.83,
  "video": {
   "codec": "h264",
   "profile": "High",
@@ -10,7 +10,7 @@
   "fps": "30/1",
   "pix_fmt": "yuv420p",
   "color_primaries": "bt709",
-  "bitrate_kbps": 3075
+  "bitrate_kbps": 1860
  },
  "audio": {
   "codec": "aac",
@@ -27,7 +27,7 @@
   "black_segments": [
    [
     29.8667,
-    30.4
+    30.4333
    ],
    [
     37.8,

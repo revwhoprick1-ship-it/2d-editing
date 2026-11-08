@@ -3,18 +3,18 @@
  "video": {
   "frames": 1140,
   "duration_s": 38.0,
-  "seam_diff": 0.1747,
-  "median_frame_diff": 0.0034,
-  "p90_frame_diff": 0.0125,
+  "seam_diff": 0.1237,
+  "median_frame_diff": 0.0024,
+  "p90_frame_diff": 0.0135,
   "largest_cut_diffs": [
-   0.6066,
-   0.4,
-   0.2936,
-   0.2597,
-   0.2252
+   0.6943,
+   0.4709,
+   0.4578,
+   0.4043,
+   0.4008
   ],
-  "seam_percentile_among_frame_changes": 99.4,
-  "first_frame_mean_luma": 0.175,
+  "seam_percentile_among_frame_changes": 97.9,
+  "first_frame_mean_luma": 0.124,
   "last_frame_mean_luma": 0.0,
   "darkest_frame_mean_luma": 0.0
  },
@@ -24,15 +24,15 @@
   "rms_last_100ms_db": -18.9,
   "rms_first_100ms_db": -15.9,
   "rms_whole_db": -16.1,
-  "seam_sample_jump": 0.01264,
-  "local_median_sample_jump": 0.00813,
+  "seam_sample_jump": 0.01777,
+  "local_median_sample_jump": 0.00814,
   "local_max_sample_jump": 0.0378
  },
  "loop_x3": {
   "black_segments": [
    [
     "29.9",
-    "30.4333"
+    "30.5"
    ],
    [
     "37.8333",
@@ -40,7 +40,7 @@
    ],
    [
     "67.9",
-    "68.4333"
+    "68.5"
    ],
    [
     "75.8333",
@@ -48,7 +48,7 @@
    ],
    [
     "105.9",
-    "106.433"
+    "106.5"
    ],
    [
     "113.833",

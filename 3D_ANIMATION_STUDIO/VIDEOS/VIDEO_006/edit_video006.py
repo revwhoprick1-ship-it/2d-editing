@@ -30,7 +30,7 @@ def w(line, word, nth=1):
 
 
 def S(t0, t1, job, **kw):
-    d = dict(t0=t0, t1=t1, src=job, map=[(t0, t0 * FPS), (t1, t1 * FPS)], fx=['vignette'])
+    d = dict(t0=t0, t1=t1, src=job, map=[(t0, t0 * FPS), (t1, t1 * FPS)])
     d.update(kw)
     return d
 
