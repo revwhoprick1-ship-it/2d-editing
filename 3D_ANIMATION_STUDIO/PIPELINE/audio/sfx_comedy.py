@@ -715,6 +715,61 @@ def crowd_groan():
     return normalize(fade(lowpass(out, 1200), 0.3, 0.3), -8)
 
 
+# ---------------------------------------------------------------- basketball pack (VIDEO_011 "Benched")
+@reg('arena_crowd', 'Packed gym crowd murmur + cheers, loopable (6 s).')
+def arena_crowd():
+    n = int(6.0 * SR); tt = np.arange(n) / SR
+    x = bandpass(noise(n, 'pink', 1001), 300, 3000) * (0.7 + 0.3 * np.sin(2 * np.pi * 0.3 * tt))
+    x += bandpass(noise(n, 'white', 1002), 1500, 5000) * 0.15 * (0.5 + 0.5 * np.sin(2 * np.pi * 0.17 * tt + 1))
+    return normalize(convolve_stereo(fade(x, 0.3, 0.3), reverb_ir(1.5, 0.5, seed=1003), 0.4), -8)
+
+@reg('chant_23', 'Crowd chant: stomp-stomp-clap, twice a second, loopable (4 s).')
+def chant_23():
+    n = int(4.0 * SR); out = np.zeros(n)
+    for b in range(8):
+        t0 = b * 0.5
+        for d, kind in ((0.0, 'st'), (0.17, 'st'), (0.34, 'cl')):
+            k = int(0.15 * SR); i = int((t0 + d) * SR); tt = np.arange(k) / SR
+            if kind == 'st':
+                y = np.sin(2 * np.pi * 60 * tt) * env_exp(k, 0.05) + lowpass(noise(k, 'pink', 1004 + b), 400) * env_exp(k, 0.03)
+            else:
+                y = bandpass(noise(k, 'white', 1010 + b), 800, 4000) * env_exp(k, 0.02) * 1.4
+            out[i:i + k] += y[:n - i]
+    out += bandpass(noise(n, 'pink', 1020), 300, 2500) * 0.25
+    return normalize(convolve_stereo(out, reverb_ir(1.6, 0.5, seed=1021), 0.45), -6)
+
+@reg('ref_whistle', 'Referee whistle blast (0.7 s).')
+def ref_whistle():
+    n = int(0.7 * SR); tt = np.arange(n) / SR
+    f = 3100 + 60 * np.sin(2 * np.pi * 38 * tt)
+    x = np.sin(2 * np.pi * np.cumsum(f) / SR) * (1 + 0.4 * np.sin(2 * np.pi * 38 * tt)) * env_adsr(n, 0.01, 0.05, 0.9, 0.08)
+    return normalize(x + highpass(noise(n, 'white', 1022), 3000) * 0.15 * env_adsr(n, 0.01, 0.05, 0.9, 0.08), -4)
+
+@reg('arena_buzzer', 'Scoreboard buzzer/horn (1.0 s).')
+def arena_buzzer():
+    n = int(1.0 * SR); tt = np.arange(n) / SR
+    x = sum(np.sign(np.sin(2 * np.pi * f * tt)) * g for f, g in ((233, 0.6), (277, 0.4), (349, 0.3)))
+    return normalize(lowpass(x, 2500) * env_adsr(n, 0.01, 0.05, 0.9, 0.05), -4)
+
+@reg('ball_bounce', 'Basketball dribble on hardwood (0.4 s).')
+def ball_bounce():
+    n = int(0.4 * SR); tt = np.arange(n) / SR
+    x = np.sin(2 * np.pi * np.cumsum(180 * (1 + 0.5 * np.exp(-tt / 0.01))) / SR) * env_exp(n, 0.04) + bandpass(noise(n, 'pink', 1023), 200, 1500) * env_exp(n, 0.015)
+    return normalize(convolve_stereo(x, reverb_ir(1.2, 0.5, seed=1024), 0.35), -4)
+
+@reg('net_swish', 'Ball through the net: swish (0.6 s).')
+def net_swish():
+    n = int(0.6 * SR)
+    x = bandpass(noise(n, 'white', 1025), 2000, 9000) * env_adsr(n, 0.05, 0.1, 0.5, 0.3)
+    return normalize(convolve_stereo(x, reverb_ir(1.0, 0.5, seed=1026), 0.3), -6)
+
+@reg('sneaker_squeak', 'Sneaker squeak on a gym floor (0.3 s).')
+def sneaker_squeak():
+    n = int(0.3 * SR); tt = np.arange(n) / SR
+    x = np.sin(2 * np.pi * np.cumsum(1500 + 900 * tt / 0.3 + 200 * np.sin(2 * np.pi * 40 * tt)) / SR) * env_adsr(n, 0.01, 0.05, 0.7, 0.1)
+    return normalize(convolve_stereo(x, reverb_ir(0.9, 0.4, seed=1027), 0.3), -8)
+
+
 def main():
     root = sys.argv[1]
     d = os.path.join(root, 'sound_effects', 'comedy')

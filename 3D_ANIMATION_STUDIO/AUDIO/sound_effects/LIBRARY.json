@@ -1282,5 +1282,68 @@
   "duration_s": 5.0,
   "sample_rate": 48000,
   "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/arena_crowd.flac",
+  "category": "comedy",
+  "name": "arena_crowd",
+  "description": "Packed gym crowd murmur + cheers, loopable (6 s).",
+  "duration_s": 6.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/chant_23.flac",
+  "category": "comedy",
+  "name": "chant_23",
+  "description": "Crowd chant: stomp-stomp-clap, twice a second, loopable (4 s).",
+  "duration_s": 4.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/ref_whistle.flac",
+  "category": "comedy",
+  "name": "ref_whistle",
+  "description": "Referee whistle blast (0.7 s).",
+  "duration_s": 0.7,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/arena_buzzer.flac",
+  "category": "comedy",
+  "name": "arena_buzzer",
+  "description": "Scoreboard buzzer/horn (1.0 s).",
+  "duration_s": 1.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/ball_bounce.flac",
+  "category": "comedy",
+  "name": "ball_bounce",
+  "description": "Basketball dribble on hardwood (0.4 s).",
+  "duration_s": 0.4,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/net_swish.flac",
+  "category": "comedy",
+  "name": "net_swish",
+  "description": "Ball through the net: swish (0.6 s).",
+  "duration_s": 0.6,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/sneaker_squeak.flac",
+  "category": "comedy",
+  "name": "sneaker_squeak",
+  "description": "Sneaker squeak on a gym floor (0.3 s).",
+  "duration_s": 0.3,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
  }
 ]

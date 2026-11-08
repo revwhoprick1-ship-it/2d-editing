@@ -1025,6 +1025,65 @@ def cue_video010():
 CUES['video010'] = cue_video010
 LOOPS['video010'] = None
 
+
+# ------------------------------------------------------------------ VIDEO_011 cue: "Benched · Part 1" (sports drama)
+def cue_video011():
+    sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'VIDEOS', 'VIDEO_011'))
+    import edit_video011 as E11
+    B, END = E11.B, E11.END
+    S = Score(END + 3.0, bpm=90)
+    b = 60 / 90
+    D = lambda t, d, f=36.7, g=-10: S.add('fx', t, sine(f, d) * env_adsr(int(d * SR), min(1.5, d / 3), 0.2, 0.9, min(1.0, d / 4)) * 0.8, g)
+    # hook: heartbeat pulse + low drone; a hit on "That's you."
+    D(0.0, B['flash'], 41.2, -10)
+    for i in range(int(B['you'] / 0.8)):
+        S.add('perc', 0.2 + i * 0.8, drum_kick(0.8), -9)
+    S.add('perc', B['you'], drum_taiko(1.3, 44), -4)
+    S.add('pad', B['you'], inst_strings(C(['A2', 'E3', 'A3', 'C4']), 2.2, attack=0.05, bright=1800), -11)
+    # flashback: lonely piano in A minor
+    mel = ['A4', 'C5', 'E5', 'D5', 'C5', 'B4', 'A4', 'E4', 'F4', 'A4', 'G4', 'E4']
+    for i, nm in enumerate(mel):
+        tt = B['flash'] + 0.2 + i * b
+        if tt < B['night']:
+            S.add('lead', tt, inst_epiano(mtof(n2m(nm)), b * 0.9), -13)
+    S.add('pad', B['flash'], inst_pad(C(['A2', 'E3', 'A3', 'C4']), B['night'] - B['flash'], bright=1000, attack=0.8), -17)
+    # the grind: building beat (kick/snare/hats) + rising chords
+    t, k = B['night'], 0
+    prog = [['A2', 'E3', 'A3', 'C4'], ['F2', 'C3', 'F3', 'A3'], ['C3', 'G3', 'C4', 'E4'], ['G2', 'D3', 'G3', 'B3']]
+    while t < B['except_']:
+        if k % 2 == 0:
+            S.add('perc', t, drum_kick(1.0), -7)
+        if k % 4 == 2:
+            S.add('perc', t, drum_snare(0.9, seed=k), -10)
+        if t > B['shots']:
+            S.add('perc', t, drum_hat(0.5, seed=k), -15)
+        if k % 8 == 0:
+            S.add('pad', t, inst_strings(C(prog[(k // 8) % 4]), b * 4, attack=0.3, bright=2200), -14)
+            S.add('bass', t, inst_bass(mtof(n2m(prog[(k // 8) % 4][0])), b * 3.5, cutoff=600), -11)
+        t += b / 2
+        k += 1
+    # "except Coach": the beat drops out; low tension
+    D(B['except_'], B['crowd'] - B['except_'], 36.7, -10)
+    # the chant: stomp-clap rhythm builds, big swell on "You. Get in."
+    t, k = B['crowd'], 0
+    while t < B['c2']:
+        S.add('perc', t, drum_taiko(0.8, 50), -9 + min(4, k * 0.2))
+        t += 0.5
+        k += 1
+    S.add('pad', B['turn'], inst_tremolo(C(['A3', 'C4', 'E4']), B['c2'] - B['turn'], rate=12, bright=3000), -14)
+    S.add('perc', B['c2'] + 0.6, drum_taiko(1.5, 40), -2)
+    S.add('pad', B['c2'] + 0.6, inst_strings(C(['A2', 'E3', 'A3', 'C#4', 'E4']), 3.0, attack=0.05, bright=3000), -8)
+    S.add('lead', B['c2'] + 0.6, inst_stab(C(['A3', 'C#4', 'E4', 'A4']), 0.8), -7)
+    # the walk + choice: tension pulse, ticking clock
+    D(B['walk'], END - B['walk'], 41.2, -11)
+    for i in range(int((END - B['choice']) / 0.5)):
+        S.add('perc', B['choice'] + i * 0.5, drum_tick(0.5), -12)
+    return S
+
+
+CUES['video011'] = cue_video011
+LOOPS['video011'] = None
+
 if __name__ == '__main__':
     cue, out = sys.argv[1], sys.argv[2]
     S = CUES[cue]()

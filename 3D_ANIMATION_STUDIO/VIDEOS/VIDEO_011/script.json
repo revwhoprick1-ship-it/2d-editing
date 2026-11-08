@@ -1,0 +1,183 @@
+{
+ "title": "Benched - Part 1",
+ "engine": "chatterbox",
+ "voice_ref": "kokoro:am_fenrir",
+ "tempo": 1.06,
+ "lines": [
+  {
+   "id": "N01",
+   "who": "N",
+   "text": "Three seconds left in the championship. Down by two.",
+   "delivery": "tense, low",
+   "exaggeration": 0.55,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "N02",
+   "who": "N",
+   "text": "And the best player in this gym is sitting on the bench.",
+   "delivery": "dramatic",
+   "exaggeration": 0.55,
+   "cfg": 0.5,
+   "pause_after": 0.4
+  },
+  {
+   "id": "N03",
+   "who": "N",
+   "text": "That's you.",
+   "delivery": "quiet, heavy",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 1.2
+  },
+  {
+   "id": "N04",
+   "who": "N",
+   "text": "Two months ago, you showed up to tryouts in old shoes and a borrowed jersey.",
+   "delivery": "storyteller",
+   "exaggeration": 0.45,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "T1",
+   "who": "TY",
+   "text": "Nice shoes. Did your grandpa lend you those?",
+   "delivery": "mocking, laughing",
+   "exaggeration": 0.7,
+   "cfg": 0.5,
+   "pause_after": 0.3,
+   "voice_ref": "kokoro:am_adam"
+  },
+  {
+   "id": "N05",
+   "who": "N",
+   "text": "The whole team laughed. Coach laughed the loudest.",
+   "delivery": "flat",
+   "exaggeration": 0.5,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "C1",
+   "who": "CO",
+   "text": "Kid, you're here to fill water bottles.",
+   "delivery": "gruff, dismissive",
+   "exaggeration": 0.5,
+   "cfg": 0.5,
+   "pause_after": 0.4,
+   "voice_ref": "kokoro:am_onyx"
+  },
+  {
+   "id": "N06",
+   "who": "N",
+   "text": "So you filled water bottles. And every night, when the gym was empty... you practiced.",
+   "delivery": "building",
+   "exaggeration": 0.5,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "N07",
+   "who": "N",
+   "text": "Five hundred shots a night. Left hand. Right hand. Eyes closed.",
+   "delivery": "rhythmic, intense",
+   "exaggeration": 0.55,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "N08",
+   "who": "N",
+   "text": "Then one night, the janitor saw you hit twenty threes in a row. And he pressed record.",
+   "delivery": "excited, low",
+   "exaggeration": 0.55,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "N09",
+   "who": "N",
+   "text": "That video now has two million views. Everyone in this gym has seen it.",
+   "delivery": "building",
+   "exaggeration": 0.55,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "N10",
+   "who": "N",
+   "text": "Everyone... except Coach.",
+   "delivery": "dry",
+   "exaggeration": 0.5,
+   "cfg": 0.5,
+   "pause_after": 0.4
+  },
+  {
+   "id": "T2",
+   "who": "TY",
+   "text": "Stay on the bench, water boy.",
+   "delivery": "mocking",
+   "exaggeration": 0.65,
+   "cfg": 0.5,
+   "pause_after": 0.4,
+   "voice_ref": "kokoro:am_adam"
+  },
+  {
+   "id": "N11",
+   "who": "N",
+   "text": "Then Tyler fouls out. And the crowd starts chanting a number. Your number. Twenty-three.",
+   "delivery": "rising, excited",
+   "exaggeration": 0.65,
+   "cfg": 0.5,
+   "pause_after": 0.4
+  },
+  {
+   "id": "N12",
+   "who": "N",
+   "text": "Coach finally turns around. And looks right at you.",
+   "delivery": "slow, dramatic",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.4
+  },
+  {
+   "id": "C2",
+   "who": "CO",
+   "text": "You. Get in.",
+   "delivery": "gruff, reluctant",
+   "exaggeration": 0.45,
+   "cfg": 0.5,
+   "pause_after": 0.5,
+   "voice_ref": "kokoro:am_onyx"
+  },
+  {
+   "id": "N13",
+   "who": "N",
+   "text": "Three seconds. One play. The whole school is watching.",
+   "delivery": "intense",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "N14",
+   "who": "N",
+   "text": "Take the three for the win. Drive in for the tie. Or pass, and let someone else take the shot.",
+   "delivery": "urgent",
+   "exaggeration": 0.5,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "N15",
+   "who": "N",
+   "text": "Comment one, two, or three. Part two, you take the shot we pick.",
+   "delivery": "low, final",
+   "exaggeration": 0.45,
+   "cfg": 0.5,
+   "pause_after": 0.2
+  }
+ ]
+}

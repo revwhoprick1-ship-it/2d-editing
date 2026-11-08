@@ -118,6 +118,8 @@ DEFAULT_POSE = dict(
 )
 
 LEG_L1, LEG_L2, HIP_Y, SH_Y = 210, 205, -430, -760
+import os as _os
+_TF = skia.Typeface.MakeFromFile(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', 'ASSETS', 'fonts', 'RobotoCondensed-Bold.ttf'))
 
 
 def _seg(cv, pts, col, w):
@@ -185,7 +187,11 @@ def mascot(cv, x, y, s=1.0, **pose):
             fx = hx + side * 4
             kx, ky = hx + side * (10 + lift * 22), HIP_Y + (fy - HIP_Y) * 0.5
             col = P['pants'] if side == ls else P['pants_sh']
-            _seg(cv, [(hx, HIP_Y), (kx, ky), (fx, fy)], col, 92)
+            if P.get('shorts'):
+                _seg(cv, [(kx, ky), (fx, fy)], P['skin'] if side == ls else P['skin_sh'], 64)
+                _seg(cv, [(hx, HIP_Y), (kx, ky + 20)], col, 104)
+            else:
+                _seg(cv, [(hx, HIP_Y), (kx, ky), (fx, fy)], col, 92)
             _shoe(cv, fx, fy, P['shoe'] if side == ls else P['shoe_sh'], '#B9BCC4' if P['shoe'] == SHOE else P['shoe_sh'])
     # ---------------- torso
     lean = P['body_lean']
@@ -202,6 +208,10 @@ def mascot(cv, x, y, s=1.0, **pose):
         cv.clipRect(skia.Rect(-400, -2000, -60, 2000) if ls > 0 else skia.Rect(60, -2000, 400, 2000))
         cv.drawPath(torso, paint(C(P['rim'], P['rim_a']), style='stroke', width=12, blur=3))
     cv.restore()
+    if P.get('number') is not None:
+        f = skia.Font(_TF, 170)
+        txt = str(P['number'])
+        cv.drawString(txt, -f.measureText(txt) / 2, SH_Y + 260, f, paint(P.get('number_col', '#FFFFFF')))
     if not back:
         cv.drawPath(blob([(-46, SH_Y - 6), (0, SH_Y + 30), (46, SH_Y - 6), (0, SH_Y + 8)]), paint(P['skin_sh']))
     # crouched: knees pulled up in front of the body
@@ -221,7 +231,8 @@ def mascot(cv, x, y, s=1.0, **pose):
         a2 = a1 + math.radians(bend) * side
         x2, y2 = x1 + math.sin(a2) * 160, y1 + math.cos(a2) * 160
         _seg(cv, [(sx, SH_Y + 40), (x1, y1), (x2, y2)], col, 50)
-        _seg(cv, [(sx, SH_Y + 34), (sx + math.sin(a1) * 92, SH_Y + 40 + math.cos(a1) * 92)], P['shirt'] if side == ls else P['shirt_sh'], 80)
+        if not P.get('sleeveless'):
+            _seg(cv, [(sx, SH_Y + 34), (sx + math.sin(a1) * 92, SH_Y + 40 + math.cos(a1) * 92)], P['shirt'] if side == ls else P['shirt_sh'], 80)
         cv.drawCircle(x2, y2, 32, paint(col))
         if side > 0:
             _item(cv, P, x2, y2, math.degrees(a2))
@@ -375,7 +386,11 @@ def _side(cv, x, y, s, P):
         fx, fy = kx + math.sin(b) * LEG_L2, ky + math.cos(b) * LEG_L2
         lift = 0 if ph is None else max(0.0, -HIP_Y - fy + 0) * 0
         col = P['pants'] if near else P['pants_sh']
-        _seg(cv, [(0, HIP_Y), (kx, ky), (fx, fy)], col, 86)
+        if P.get('shorts'):
+            _seg(cv, [(kx, ky), (fx, fy)], P['skin'] if near else P['skin_sh'], 60)
+            _seg(cv, [(0, HIP_Y), (kx, ky + 20)], col, 98)
+        else:
+            _seg(cv, [(0, HIP_Y), (kx, ky), (fx, fy)], col, 86)
         _shoe(cv, fx, fy, P['shoe'] if near else P['shoe_sh'], '#B9BCC4', dirx=1)
 
     def arm(phase, near):
@@ -389,8 +404,12 @@ def _side(cv, x, y, s, P):
         a2 = a1 + math.radians(bend)
         x2, y2 = x1 + math.sin(a2) * 160, y1 + math.cos(a2) * 160
         col = P['skin'] if near else P['skin_sh']
+        if ang > 60:                                       # raised arm crosses the face: outline it so it reads
+            _seg(cv, [(sx, sy), (x1, y1), (x2, y2)], LINE, 60)
+            cv.drawCircle(x2, y2, 37, paint(LINE))
         _seg(cv, [(sx, sy), (x1, y1), (x2, y2)], col, 48)
-        _seg(cv, [(sx, sy - 6), (sx + math.sin(a1) * 90, sy + math.cos(a1) * 90)], P['shirt'] if near else P['shirt_sh'], 76)
+        if not P.get('sleeveless'):
+            _seg(cv, [(sx, sy - 6), (sx + math.sin(a1) * 90, sy + math.cos(a1) * 90)], P['shirt'] if near else P['shirt_sh'], 76)
         cv.drawCircle(x2, y2, 31, paint(col))
         if near:
             _item(cv, P, x2, y2, math.degrees(a2))
@@ -462,6 +481,8 @@ def _side(cv, x, y, s, P):
     if P['sweat']:
         cv.drawPath(blob([(40, -90), (52, -50), (40, -36), (28, -50)]), paint('#BFE3FF'))
     cv.restore()
+    if P['arm_r'][0] > 100 and ph is None:                # raised arm (shooting, waving): in front of the head
+        arm(phn, True)
     cv.restore()
     cv.restore()
     return out

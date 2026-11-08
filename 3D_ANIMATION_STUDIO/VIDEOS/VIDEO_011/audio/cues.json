@@ -1,0 +1,508 @@
+{
+ "duration": 61.77,
+ "loop": true,
+ "narration": "narration/narration_raw.wav",
+ "narration_offset": 0.0,
+ "music": "music_score.wav",
+ "music_gain_db": 1,
+ "music_cue": "cue_video011",
+ "targets": {
+  "narration_lufs": -16,
+  "master_lufs": -14,
+  "true_peak": -1.0,
+  "duck_db": 5
+ },
+ "cues": [
+  {
+   "t": 0.0,
+   "file": "AUDIO/sound_effects/comedy/arena_crowd.flac",
+   "gain": -6,
+   "bus": "amb",
+   "note": "packed gym (timeout)",
+   "loop": true,
+   "dur": 7.813,
+   "fade_out": 0.3
+  },
+  {
+   "t": 0.05,
+   "file": "AUDIO/sound_effects/comedy/arena_buzzer.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "timeout buzzer (frame 0)"
+  },
+  {
+   "t": 5.946,
+   "file": "AUDIO/sound_effects/bio/heartbeat_lubdub.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "that's you"
+  },
+  {
+   "t": 7.813,
+   "file": "AUDIO/sound_effects/comedy/vhs_rewind.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "two months ago"
+  },
+  {
+   "t": 7.813,
+   "file": "AUDIO/ambience/room_tone.flac",
+   "gain": -10,
+   "bus": "amb",
+   "note": "tryouts gym",
+   "loop": true,
+   "dur": 11.693000000000001,
+   "fade_out": 0.2
+  },
+  {
+   "t": 8.213,
+   "file": "AUDIO/sound_effects/comedy/ball_bounce.flac",
+   "gain": -19,
+   "bus": "sfx",
+   "note": "dribbles at tryouts"
+  },
+  {
+   "t": 8.813,
+   "file": "AUDIO/sound_effects/comedy/ball_bounce.flac",
+   "gain": -19,
+   "bus": "sfx",
+   "note": "dribbles at tryouts"
+  },
+  {
+   "t": 9.413,
+   "file": "AUDIO/sound_effects/comedy/ball_bounce.flac",
+   "gain": -19,
+   "bus": "sfx",
+   "note": "dribbles at tryouts"
+  },
+  {
+   "t": 10.013,
+   "file": "AUDIO/sound_effects/comedy/ball_bounce.flac",
+   "gain": -19,
+   "bus": "sfx",
+   "note": "dribbles at tryouts"
+  },
+  {
+   "t": 12.005,
+   "file": "AUDIO/sound_effects/comedy/sneaker_squeak.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "squeak"
+  },
+  {
+   "t": 14.098,
+   "file": "AUDIO/sound_effects/comedy/crowd_laugh.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "the whole team laughs"
+  },
+  {
+   "t": 18.805,
+   "file": "AUDIO/sound_effects/comedy/whistle_innocent.flac",
+   "gain": -19,
+   "bus": "sfx",
+   "note": "coach whistle"
+  },
+  {
+   "t": 19.506,
+   "file": "AUDIO/ambience/room_tone.flac",
+   "gain": -8,
+   "bus": "amb",
+   "note": "empty gym at night",
+   "loop": true,
+   "dur": 12.416,
+   "fade_out": 0.2
+  },
+  {
+   "t": 19.556,
+   "file": "AUDIO/sound_effects/comedy/ball_bounce.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "set"
+  },
+  {
+   "t": 20.146,
+   "file": "AUDIO/sound_effects/comedy/sneaker_squeak.flac",
+   "gain": -21,
+   "bus": "sfx",
+   "note": "jump"
+  },
+  {
+   "t": 20.866,
+   "file": "AUDIO/sound_effects/comedy/net_swish.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "SWISH"
+  },
+  {
+   "t": 21.156,
+   "file": "AUDIO/sound_effects/comedy/ball_bounce.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "set"
+  },
+  {
+   "t": 21.746,
+   "file": "AUDIO/sound_effects/comedy/sneaker_squeak.flac",
+   "gain": -21,
+   "bus": "sfx",
+   "note": "jump"
+  },
+  {
+   "t": 22.466,
+   "file": "AUDIO/sound_effects/comedy/net_swish.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "SWISH"
+  },
+  {
+   "t": 22.756,
+   "file": "AUDIO/sound_effects/comedy/ball_bounce.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "set"
+  },
+  {
+   "t": 23.346,
+   "file": "AUDIO/sound_effects/comedy/sneaker_squeak.flac",
+   "gain": -21,
+   "bus": "sfx",
+   "note": "jump"
+  },
+  {
+   "t": 24.066,
+   "file": "AUDIO/sound_effects/comedy/net_swish.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "SWISH"
+  },
+  {
+   "t": 24.356,
+   "file": "AUDIO/sound_effects/comedy/ball_bounce.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "set"
+  },
+  {
+   "t": 24.606,
+   "file": "AUDIO/sound_effects/comedy/sneaker_squeak.flac",
+   "gain": -21,
+   "bus": "sfx",
+   "note": "jump"
+  },
+  {
+   "t": 24.944,
+   "file": "AUDIO/sound_effects/comedy/net_swish.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "SWISH"
+  },
+  {
+   "t": 25.106,
+   "file": "AUDIO/sound_effects/comedy/ball_bounce.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "set"
+  },
+  {
+   "t": 25.356,
+   "file": "AUDIO/sound_effects/comedy/sneaker_squeak.flac",
+   "gain": -21,
+   "bus": "sfx",
+   "note": "jump"
+  },
+  {
+   "t": 25.694,
+   "file": "AUDIO/sound_effects/comedy/net_swish.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "SWISH"
+  },
+  {
+   "t": 25.856,
+   "file": "AUDIO/sound_effects/comedy/ball_bounce.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "set"
+  },
+  {
+   "t": 26.106,
+   "file": "AUDIO/sound_effects/comedy/sneaker_squeak.flac",
+   "gain": -21,
+   "bus": "sfx",
+   "note": "jump"
+  },
+  {
+   "t": 26.444,
+   "file": "AUDIO/sound_effects/comedy/net_swish.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "SWISH"
+  },
+  {
+   "t": 26.606,
+   "file": "AUDIO/sound_effects/comedy/ball_bounce.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "set"
+  },
+  {
+   "t": 26.856,
+   "file": "AUDIO/sound_effects/comedy/sneaker_squeak.flac",
+   "gain": -21,
+   "bus": "sfx",
+   "note": "jump"
+  },
+  {
+   "t": 27.194,
+   "file": "AUDIO/sound_effects/comedy/net_swish.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "SWISH"
+  },
+  {
+   "t": 27.356,
+   "file": "AUDIO/sound_effects/comedy/ball_bounce.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "set"
+  },
+  {
+   "t": 27.606,
+   "file": "AUDIO/sound_effects/comedy/sneaker_squeak.flac",
+   "gain": -21,
+   "bus": "sfx",
+   "note": "jump"
+  },
+  {
+   "t": 27.944,
+   "file": "AUDIO/sound_effects/comedy/net_swish.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "SWISH"
+  },
+  {
+   "t": 28.106,
+   "file": "AUDIO/sound_effects/comedy/ball_bounce.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "set"
+  },
+  {
+   "t": 28.356,
+   "file": "AUDIO/sound_effects/comedy/sneaker_squeak.flac",
+   "gain": -21,
+   "bus": "sfx",
+   "note": "jump"
+  },
+  {
+   "t": 28.694,
+   "file": "AUDIO/sound_effects/comedy/net_swish.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "SWISH"
+  },
+  {
+   "t": 28.856,
+   "file": "AUDIO/sound_effects/comedy/ball_bounce.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "set"
+  },
+  {
+   "t": 29.106,
+   "file": "AUDIO/sound_effects/comedy/sneaker_squeak.flac",
+   "gain": -21,
+   "bus": "sfx",
+   "note": "jump"
+  },
+  {
+   "t": 29.444,
+   "file": "AUDIO/sound_effects/comedy/net_swish.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "SWISH"
+  },
+  {
+   "t": 29.606,
+   "file": "AUDIO/sound_effects/comedy/ball_bounce.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "set"
+  },
+  {
+   "t": 29.856,
+   "file": "AUDIO/sound_effects/comedy/sneaker_squeak.flac",
+   "gain": -21,
+   "bus": "sfx",
+   "note": "jump"
+  },
+  {
+   "t": 30.194,
+   "file": "AUDIO/sound_effects/comedy/net_swish.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "SWISH"
+  },
+  {
+   "t": 30.356,
+   "file": "AUDIO/sound_effects/comedy/ball_bounce.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "set"
+  },
+  {
+   "t": 30.606,
+   "file": "AUDIO/sound_effects/comedy/sneaker_squeak.flac",
+   "gain": -21,
+   "bus": "sfx",
+   "note": "jump"
+  },
+  {
+   "t": 30.944,
+   "file": "AUDIO/sound_effects/comedy/net_swish.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "SWISH"
+  },
+  {
+   "t": 31.106,
+   "file": "AUDIO/sound_effects/comedy/ball_bounce.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "set"
+  },
+  {
+   "t": 31.356,
+   "file": "AUDIO/sound_effects/comedy/sneaker_squeak.flac",
+   "gain": -21,
+   "bus": "sfx",
+   "note": "jump"
+  },
+  {
+   "t": 31.39,
+   "file": "AUDIO/sound_effects/comedy/camera_snap.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "janitor presses record"
+  },
+  {
+   "t": 31.694,
+   "file": "AUDIO/sound_effects/comedy/net_swish.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "SWISH"
+  },
+  {
+   "t": 31.922,
+   "file": "AUDIO/sound_effects/comedy/arena_crowd.flac",
+   "gain": -16,
+   "bus": "amb",
+   "note": "back in the gym",
+   "loop": true,
+   "dur": 29.848000000000003,
+   "fade_in": 0.5
+  },
+  {
+   "t": 32.222,
+   "file": "AUDIO/sound_effects/comedy/counter_ticks.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "views counter"
+  },
+  {
+   "t": 32.522,
+   "file": "AUDIO/sound_effects/comedy/notif_pop.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "comments"
+  },
+  {
+   "t": 33.322,
+   "file": "AUDIO/sound_effects/comedy/notif_pop.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "comments"
+  },
+  {
+   "t": 40.563,
+   "file": "AUDIO/sound_effects/comedy/ref_whistle.flac",
+   "gain": -7,
+   "bus": "sfx",
+   "note": "FOUL. Tyler fouls out"
+  },
+  {
+   "t": 42.703,
+   "file": "AUDIO/sound_effects/comedy/chant_23.flac",
+   "gain": -7,
+   "bus": "sfx",
+   "note": "the crowd chants 23",
+   "loop": true,
+   "dur": 4.979999999999997,
+   "fade_out": 0.3
+  },
+  {
+   "t": 47.683,
+   "file": "AUDIO/sound_effects/comedy/crowd_gasp.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "the gym erupts"
+  },
+  {
+   "t": 48.741,
+   "file": "AUDIO/sound_effects/comedy/sneaker_squeak.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "you stand up"
+  },
+  {
+   "t": 49.041,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "walking onto the court"
+  },
+  {
+   "t": 49.491,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "walking onto the court"
+  },
+  {
+   "t": 49.941,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "walking onto the court"
+  },
+  {
+   "t": 50.391,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "walking onto the court"
+  },
+  {
+   "t": 51.041,
+   "file": "AUDIO/sound_effects/movement/whoosh_short.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "the inbound pass"
+  },
+  {
+   "t": 51.341,
+   "file": "AUDIO/sound_effects/comedy/ball_bounce.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "ball in your hands"
+  },
+  {
+   "t": 51.638,
+   "file": "AUDIO/sound_effects/bio/heartbeat_lubdub.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "the choice"
+  }
+ ]
+}
