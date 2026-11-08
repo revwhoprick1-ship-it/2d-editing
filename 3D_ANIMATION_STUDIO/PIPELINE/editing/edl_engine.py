@@ -625,7 +625,7 @@ def ov_text2d(cv, o, t):
         o['_lay'] = caption_2d_layer(o['text'].split(), o.get('size', 80), o.get('quote', False), o.get('label'),
                                      set(o.get('emph', ())))
     a = min(1.0, (t - o['t0']) / 0.12, (o['t1'] - t) / 0.12)
-    paste(cv, o['_lay'], W / 2, o.get('y', 1380), 1.0, 0, max(0.0, a))
+    paste(cv, o['_lay'], o.get('x', W / 2), o.get('y', 1380), 1.0, 0, max(0.0, a))
 
 
 def ov_hud3(cv, o, t):

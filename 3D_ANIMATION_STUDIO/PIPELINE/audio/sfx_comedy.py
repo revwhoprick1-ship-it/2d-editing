@@ -674,6 +674,47 @@ def glass_tap():
     return normalize(convolve_stereo(out, reverb_ir(0.6, 0.3, seed=807), 0.2), -6)
 
 
+# ---------------------------------------------------------------- zombie pack (VIDEO_009 "They Knock")
+@reg('door_knock', 'Two slow, deliberate knocks on a wooden classroom door (0.9 s).')
+def door_knock():
+    n = int(0.9 * SR); out = np.zeros(n)
+    for t0 in (0.0, 0.35):
+        k = int(0.3 * SR); i = int(t0 * SR); tt = np.arange(k) / SR
+        b = np.sin(2 * np.pi * np.cumsum(140 * (1 + 0.6 * np.exp(-tt / 0.01))) / SR) * env_exp(k, 0.05)
+        b += bandpass(noise(k, 'pink', 900 + i % 7), 300, 2500) * env_exp(k, 0.012) * 1.2
+        out[i:i + k] += b
+    return normalize(convolve_stereo(soft_sat(out, 1.4), reverb_ir(0.8, 0.35, seed=901), 0.25), -1)
+
+@reg('vent_scratch', 'Nails scratching inside a metal air duct, loopable (3 s).')
+def vent_scratch():
+    n = int(3.0 * SR); out = np.zeros(n); rng = np.random.default_rng(902)
+    for t0 in np.sort(rng.uniform(0, 2.8, 18)):
+        k = int(rng.uniform(0.08, 0.22) * SR); i = int(t0 * SR); tt = np.arange(k) / SR
+        f = rng.uniform(1500, 3800)
+        b = bandpass(noise(k, 'white', int(t0 * 1000)), f * 0.8, f * 1.2) * env_adsr(k, 0.01, 0.03, 0.7, 0.04)
+        b += np.sin(2 * np.pi * rng.uniform(300, 700) * tt) * env_exp(k, 0.05) * 0.2
+        out[i:i + k] += b[:n - i]
+    return normalize(convolve_stereo(out, reverb_ir(0.4, 0.3, seed=903), 0.35), -6)
+
+@reg('zombie_groan', 'Low wet zombie groan (1.8 s).')
+def zombie_groan():
+    n = int(1.8 * SR); tt = np.arange(n) / SR
+    f0 = 85 + 15 * np.sin(2 * np.pi * 0.7 * tt)
+    src = np.sign(np.sin(2 * np.pi * np.cumsum(f0) / SR)) * 0.5 + noise(n, 'pink', 904) * 0.4
+    x = bandpass(src, 200, 900) + bandpass(src, 1000, 1600) * 0.4
+    x *= env_adsr(n, 0.2, 0.3, 0.8, 0.5) * (0.7 + 0.3 * np.abs(np.sin(2 * np.pi * 3.1 * tt)))
+    return normalize(soft_sat(x, 2.0), -4)
+
+@reg('crowd_groan', 'Many zombies far below: a low murmuring groan bed, loopable (5 s).')
+def crowd_groan():
+    n = int(5.0 * SR); out = np.zeros(n); rng = np.random.default_rng(905)
+    for k in range(10):
+        f = rng.uniform(70, 120); tt = np.arange(n) / SR
+        src = np.sign(np.sin(2 * np.pi * np.cumsum(f + 10 * np.sin(2 * np.pi * rng.uniform(0.2, 0.6) * tt)) / SR)) * 0.3
+        out += bandpass(src + noise(n, 'pink', 906 + k) * 0.3, 180, 800) * (0.5 + 0.5 * np.sin(2 * np.pi * rng.uniform(0.1, 0.3) * tt + k)) * 0.3
+    return normalize(fade(lowpass(out, 1200), 0.3, 0.3), -8)
+
+
 def main():
     root = sys.argv[1]
     d = os.path.join(root, 'sound_effects', 'comedy')

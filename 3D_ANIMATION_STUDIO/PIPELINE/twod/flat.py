@@ -297,6 +297,17 @@ def _head_front(cv, P, back):
         b = P['brow']
         inner, outer = ey - 82 - b * 26, ey - 82 + b * 10
         cv.drawPath(poly([(ex - side * 30, inner), (ex + side * 40, outer)], closed=False), paint(HRS, style='stroke', width=17))
+    if P.get('glasses'):
+        gp = paint(P['glasses'], style='stroke', width=12)
+        for side in (-1, 1):
+            ex = fx + side * 72
+            cv.drawRRect(skia.RRect.MakeRectXY(skia.Rect(ex - 62, -72, ex + 62, 52), 26, 26), gp)
+        cv.drawLine(fx - 10, -20, fx + 10, -20, gp)
+    if P.get('zombie'):
+        for side in (-1, 1):
+            ex = fx + side * 72
+            cv.drawPath(skia.Path().addArc(skia.Rect(ex - 50, 10, ex + 50, 80), 20, 140), paint(C('#3A2A30', 0.8), style='stroke', width=10))
+        cv.drawPath(blob([(fx + 30, 120), (fx + 44, 118), (fx + 40, 190), (fx + 32, 192)]), paint('#7A1E1E'))
     cv.drawPath(blob([(fx - 10, 52), (fx + 2, 40), (fx + 14, 54), (fx + 2, 64)]), paint(SKS))
     if P['mustache']:
         cv.drawPath(blob([(fx - 70, 92), (fx, 74), (fx + 70, 92), (fx + 40, 104), (fx, 94), (fx - 40, 104)]), paint(P['mustache']))

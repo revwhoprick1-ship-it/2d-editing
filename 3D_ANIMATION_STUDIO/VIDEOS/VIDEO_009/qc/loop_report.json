@@ -1,0 +1,45 @@
+{
+ "file": "EXPORTS/VIDEO_009_They_Knock_Part_1.mp4",
+ "video": {
+  "frames": 1953,
+  "duration_s": 65.1,
+  "seam_diff": 0.0009,
+  "median_frame_diff": 0.0016,
+  "p90_frame_diff": 0.0121,
+  "largest_cut_diffs": [
+   0.4369,
+   0.3612,
+   0.2259,
+   0.192,
+   0.1796
+  ],
+  "seam_percentile_among_frame_changes": 29.5,
+  "first_frame_mean_luma": 0.219,
+  "last_frame_mean_luma": 0.219,
+  "darkest_frame_mean_luma": 0.109
+ },
+ "audio": {
+  "decoded_duration_s": 65.1307,
+  "video_minus_audio_ms": -30.7,
+  "rms_last_100ms_db": -20.9,
+  "rms_first_100ms_db": -21.3,
+  "rms_whole_db": -16.7,
+  "seam_sample_jump": 0.28932,
+  "local_median_sample_jump": 0.00181,
+  "local_max_sample_jump": 0.28932
+ },
+ "loop_x3": {
+  "black_segments": [],
+  "silences_over_250ms_below_-50dB": [],
+  "duration_s": 195.412
+ },
+ "checks": {
+  "seam_picture_change_is_ordinary (below the 90th percentile of frame changes)": true,
+  "no_black_frame_at_seam": true,
+  "no_black_segments_in_3x_loop": true,
+  "no_silence_in_3x_loop": true,
+  "no_audio_gap_at_seam (both sides within 20 dB of the mix)": true,
+  "no_click_at_seam (jump <= local max)": true,
+  "audio_video_length_match_within_25ms": false
+ }
+}

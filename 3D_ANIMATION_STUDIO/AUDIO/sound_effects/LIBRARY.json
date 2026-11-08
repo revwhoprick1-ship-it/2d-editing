@@ -1246,5 +1246,41 @@
   "duration_s": 1.2,
   "sample_rate": 48000,
   "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/door_knock.flac",
+  "category": "comedy",
+  "name": "door_knock",
+  "description": "Two slow, deliberate knocks on a wooden classroom door (0.9 s).",
+  "duration_s": 0.9,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/vent_scratch.flac",
+  "category": "comedy",
+  "name": "vent_scratch",
+  "description": "Nails scratching inside a metal air duct, loopable (3 s).",
+  "duration_s": 3.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/zombie_groan.flac",
+  "category": "comedy",
+  "name": "zombie_groan",
+  "description": "Low wet zombie groan (1.8 s).",
+  "duration_s": 1.8,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/crowd_groan.flac",
+  "category": "comedy",
+  "name": "crowd_groan",
+  "description": "Many zombies far below: a low murmuring groan bed, loopable (5 s).",
+  "duration_s": 5.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
  }
 ]

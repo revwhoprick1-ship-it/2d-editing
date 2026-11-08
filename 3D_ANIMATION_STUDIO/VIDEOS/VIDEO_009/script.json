@@ -1,0 +1,212 @@
+{
+ "title": "They Knock - Part 1",
+ "engine": "chatterbox",
+ "voice_ref": "kokoro:am_fenrir",
+ "tempo": 1.06,
+ "lines": [
+  {
+   "id": "N01",
+   "who": "N",
+   "text": "They don't break down doors anymore.",
+   "delivery": "low, ominous",
+   "exaggeration": 0.55,
+   "cfg": 0.5,
+   "pause_after": 0.5
+  },
+  {
+   "id": "N02",
+   "who": "N",
+   "text": "They knock.",
+   "delivery": "whisper, dread",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 1.4
+  },
+  {
+   "id": "N03",
+   "who": "N",
+   "text": "Three days ago, the infected were slow. Stupid. Easy to outrun.",
+   "delivery": "calm, low",
+   "exaggeration": 0.45,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "N04",
+   "who": "N",
+   "text": "Now they run. They set traps. And yesterday... one of them used a phone.",
+   "delivery": "creeping",
+   "exaggeration": 0.55,
+   "cfg": 0.5,
+   "pause_after": 0.4
+  },
+  {
+   "id": "N05",
+   "who": "N",
+   "text": "You're barricaded in room two-oh-four with your three best friends.",
+   "delivery": "tense",
+   "exaggeration": 0.5,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "N17",
+   "who": "N",
+   "text": "Bob. Lawrence. And Justin.",
+   "delivery": "quick",
+   "exaggeration": 0.45,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "B1",
+   "who": "BOB",
+   "text": "Nobody answer it.",
+   "delivery": "calm, whisper",
+   "exaggeration": 0.4,
+   "cfg": 0.5,
+   "pause_after": 0.2,
+   "voice_ref": "kokoro:am_michael"
+  },
+  {
+   "id": "J1",
+   "who": "JUS",
+   "text": "Obviously nobody's answering it!",
+   "delivery": "panicked whisper",
+   "exaggeration": 0.85,
+   "cfg": 0.5,
+   "pause_after": 0.4,
+   "voice_ref": "kokoro:am_liam"
+  },
+  {
+   "id": "N06",
+   "who": "N",
+   "text": "Then a voice comes through the door. And it sounds exactly like your teacher.",
+   "delivery": "dread",
+   "exaggeration": 0.55,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "Z1",
+   "who": "ZT",
+   "text": "Class... it's safe now. You can open the door.",
+   "delivery": "calm, gentle, wrong",
+   "exaggeration": 0.35,
+   "cfg": 0.5,
+   "pause_after": 0.4,
+   "voice_ref": "kokoro:am_onyx",
+   "tempo": 0.88
+  },
+  {
+   "id": "L1",
+   "who": "LAW",
+   "text": "Mr. Peterson got bitten on Monday.",
+   "delivery": "shaky whisper",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.4,
+   "voice_ref": "kokoro:am_eric"
+  },
+  {
+   "id": "N07",
+   "who": "N",
+   "text": "Lawrence checks the window. Three floors down, the courtyard is full.",
+   "delivery": "tense",
+   "exaggeration": 0.5,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "N08",
+   "who": "N",
+   "text": "And none of them are moving. They're all looking up. At this window.",
+   "delivery": "dread, slow",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.5
+  },
+  {
+   "id": "N09",
+   "who": "N",
+   "text": "Then Justin's phone lights up. A text... from Mr. Peterson.",
+   "delivery": "creeping",
+   "exaggeration": 0.55,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "N10",
+   "who": "N",
+   "text": "I know you're in two-oh-four.",
+   "delivery": "whisper, scary",
+   "exaggeration": 0.7,
+   "cfg": 0.5,
+   "pause_after": 0.6
+  },
+  {
+   "id": "N11",
+   "who": "N",
+   "text": "And the knocking stops.",
+   "delivery": "flat",
+   "exaggeration": 0.5,
+   "cfg": 0.5,
+   "pause_after": 1.0
+  },
+  {
+   "id": "N12",
+   "who": "N",
+   "text": "Something starts scratching inside the air vent. Right above you.",
+   "delivery": "terror",
+   "exaggeration": 0.65,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "B2",
+   "who": "BOB",
+   "text": "Guys. The vent.",
+   "delivery": "calm but scared",
+   "exaggeration": 0.5,
+   "cfg": 0.5,
+   "pause_after": 0.3,
+   "voice_ref": "kokoro:am_michael"
+  },
+  {
+   "id": "N13",
+   "who": "N",
+   "text": "They were never coming through the door. The knocking was to keep you looking at it.",
+   "delivery": "dread, fast",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.4
+  },
+  {
+   "id": "N14",
+   "who": "N",
+   "text": "You've got ten seconds.",
+   "delivery": "urgent",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "N15",
+   "who": "N",
+   "text": "Run for the hallway. Climb onto the roof. Or hide in the supply closet.",
+   "delivery": "urgent",
+   "exaggeration": 0.5,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "N16",
+   "who": "N",
+   "text": "Comment one, two, or three. Choose wrong... and someone doesn't make it to part two.",
+   "delivery": "low, final",
+   "exaggeration": 0.5,
+   "cfg": 0.5,
+   "pause_after": 0.2
+  }
+ ]
+}

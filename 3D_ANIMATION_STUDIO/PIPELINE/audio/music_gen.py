@@ -930,6 +930,58 @@ def cue_video008():
 CUES['video008'] = cue_video008
 LOOPS['video008'] = None
 
+
+# ------------------------------------------------------------------ VIDEO_009 cue: "They Knock · Part 1"
+def cue_video009():
+    sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'VIDEOS', 'VIDEO_009'))
+    import edit_video009 as E9
+    B, END = E9.B, E9.END
+    S = Score(END + 3.0, bpm=96)
+    D = lambda t, d, f=36.7, g=-10: S.add('fx', t, sine(f, d) * env_adsr(int(d * SR), min(1.5, d / 3), 0.2, 0.9, min(1.0, d / 4)) * 0.8, g)
+    D(0.0, B['flash'], 36.7, -10)
+    S.add('perc', B['knock'] + 0.7, drum_taiko(1.3, 42), -4)
+    S.add('pad', B['title'], inst_strings(C(['D3', 'D#3', 'A3']), 1.6, attack=0.02, bright=2000), -11)
+    # flashback -> 'now they run': driving low pulse
+    b = 60 / 96
+    t, k = B['run'], 0
+    while t < B['wide']:
+        S.add('bass', t, inst_bass(mtof(n2m(['D2', 'D2', 'F2', 'D#2'][k % 4])), b * 0.45, cutoff=600), -11)
+        if k % 2 == 0:
+            S.add('perc', t, drum_taiko(0.7, 52), -11)
+        t += b / 2
+        k += 1
+    S.add('perc', B['phone'], drum_taiko(1.2, 44), -6)
+    # the room: tense pad + clock-like pizz
+    D(B['wide'], B['window'] - B['wide'], 34.6, -11)
+    t, k = B['wide'], 0
+    while t < B['window']:
+        S.add('bass', t, inst_pizz(mtof(n2m(['D3', 'A2', 'D3', 'G#2'][k % 4])), 0.3, seed=k), -14)
+        t += b
+        k += 1
+    S.add('pad', B['z1'], inst_tremolo(C(['D4', 'D#4', 'A4']), B['l1'] - B['z1'] + 1.0, rate=12, bright=3000), -15)
+    # courtyard: they look up
+    D(B['window'], B['text'] - B['window'], 30.9, -9)
+    S.add('perc', B['up'], drum_taiko(1.4, 40), -3)
+    S.add('lead', B['up'], inst_stab(C(['D3', 'F3', 'G#3', 'D4']), 0.8), -6)
+    S.add('perc', B['msg'], drum_taiko(1.2, 44), -5)
+    # vent -> panic ostinato -> choice ticks
+    S.add('pad', B['vent'], inst_tremolo(C(['D5', 'D#5', 'E5']), B['vent2'] - B['vent'], rate=15, bright=4000), -16)
+    t, k = B['vent2'], 0
+    while t < B['choice']:
+        S.add('bass', t, inst_bass(mtof(n2m(['D2', 'D2', 'D#2', 'D2'][k % 4])), 0.1, cutoff=500), -10)
+        if k % 4 == 0:
+            S.add('perc', t, drum_taiko(0.9, 50), -9)
+        t += 0.13
+        k += 1
+    D(B['choice'], END - B['choice'], 36.7, -11)
+    for i in range(int((B['again'] - B['choice']) / 0.5)):
+        S.add('perc', B['choice'] + i * 0.5, drum_tick(0.5), -12)
+    return S
+
+
+CUES['video009'] = cue_video009
+LOOPS['video009'] = None
+
 if __name__ == '__main__':
     cue, out = sys.argv[1], sys.argv[2]
     S = CUES[cue]()
