@@ -71,7 +71,8 @@ OLD = ['freeze_tint']
 SEGMENTS = [
     S(0.0, B['rewind'], 'STARE', fx=['chroma'], zoom=Z((0, 1.0, 0.5, 0.5), (s('C01'), 1.06, 0.5, 0.52), (B['rewind'], 1.15, 0.5, 0.55))),
     dict(t0=B['rewind'], t1=B['ritual'], src='STARE', rewind=(B['rewind'] - 0.05, 0.0)),
-    S(B['ritual'], B['names'], 'RITUAL', zoom=Z((B['ritual'], 1.0, 0.5, 0.5), (B['names'], 1.1, 0.5, 0.55))),
+    S(B['ritual'], s('N02'), 'RITUAL', zoom=Z((B['ritual'], 1.0, 0.5, 0.5), (s('N02'), 1.1, 0.5, 0.55))),
+    S(s('N02'), B['names'], 'RVIDEO', zoom=Z((s('N02'), 1.0, 0.5, 0.5), (B['names'], 1.12, 0.5, 0.55))),
     S(B['names'], B['candles'], 'CANDLEFACE', zoom=Z((B['names'], 1.0, 0.5, 0.45), (B['candles'], 1.3, 0.5, 0.42))),
     S(B['candles'], B['bed'], 'CANDLES', zoom=Z((B['candles'], 1.0, 0.5, 0.5), (B['out'], 1.1, 0.5, 0.5), (B['bed'], 1.15, 0.5, 0.5))),
     S(B['bed'], B['corner'], 'DARKFACE', zoom=Z((B['bed'], 1.0, 0.5, 0.45), (B['corner'], 1.08, 0.5, 0.45))),

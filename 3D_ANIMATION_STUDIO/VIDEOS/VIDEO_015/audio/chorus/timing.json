@@ -1,0 +1,384 @@
+{
+ "voice": "chatterbox+kokoro:am_fenrir",
+ "sample_rate": 24000,
+ "lines": [
+  {
+   "id": "C11",
+   "who": "CH",
+   "text": "Because you called him.",
+   "start": 0.0,
+   "end": 1.821,
+   "delivery": "calm, unison",
+   "speed": 1.05
+  },
+  {
+   "id": "C12",
+   "who": "CH",
+   "text": "We've been waiting for you to blink.",
+   "start": 1.921,
+   "end": 3.517,
+   "delivery": "calm, unison",
+   "speed": 1.05
+  },
+  {
+   "id": "C13",
+   "who": "CH",
+   "text": "Because you called him.",
+   "start": 3.617,
+   "end": 4.546,
+   "delivery": "calm, unison",
+   "speed": 1.05
+  },
+  {
+   "id": "C14",
+   "who": "CH",
+   "text": "We've been waiting for you to blink.",
+   "start": 4.646,
+   "end": 6.231,
+   "delivery": "calm, unison",
+   "speed": 1.05
+  },
+  {
+   "id": "C15",
+   "who": "CH",
+   "text": "Because you called him.",
+   "start": 6.331,
+   "end": 7.512,
+   "delivery": "calm, unison",
+   "speed": 1.05
+  },
+  {
+   "id": "C16",
+   "who": "CH",
+   "text": "We've been waiting for you to blink.",
+   "start": 7.612,
+   "end": 9.303,
+   "delivery": "calm, unison",
+   "speed": 1.05
+  },
+  {
+   "id": "C17",
+   "who": "CH",
+   "text": "Because you called him.",
+   "start": 9.403,
+   "end": 10.709,
+   "delivery": "calm, unison",
+   "speed": 1.05
+  },
+  {
+   "id": "C18",
+   "who": "CH",
+   "text": "We've been waiting for you to blink.",
+   "start": 10.809,
+   "end": 12.218,
+   "delivery": "calm, unison",
+   "speed": 1.05
+  },
+  {
+   "id": "C19",
+   "who": "CH",
+   "text": "You're not dreaming. You're mine.",
+   "start": 12.318,
+   "end": 14.293,
+   "delivery": "calm, cold, slow",
+   "speed": 0.85
+  }
+ ],
+ "words": [
+  {
+   "line": "C11",
+   "text": "Because",
+   "start": 0.0,
+   "end": 0.455
+  },
+  {
+   "line": "C11",
+   "text": "you",
+   "start": 0.455,
+   "end": 0.91
+  },
+  {
+   "line": "C11",
+   "text": "called",
+   "start": 0.91,
+   "end": 1.366
+  },
+  {
+   "line": "C11",
+   "text": "him.",
+   "start": 1.366,
+   "end": 1.821
+  },
+  {
+   "line": "C12",
+   "text": "We've",
+   "start": 1.921,
+   "end": 2.181
+  },
+  {
+   "line": "C12",
+   "text": "been",
+   "start": 2.181,
+   "end": 2.301
+  },
+  {
+   "line": "C12",
+   "text": "waiting",
+   "start": 2.301,
+   "end": 2.521
+  },
+  {
+   "line": "C12",
+   "text": "for",
+   "start": 2.521,
+   "end": 2.801
+  },
+  {
+   "line": "C12",
+   "text": "you",
+   "start": 2.801,
+   "end": 2.941
+  },
+  {
+   "line": "C12",
+   "text": "to",
+   "start": 2.941,
+   "end": 3.081
+  },
+  {
+   "line": "C12",
+   "text": "blink.",
+   "start": 3.081,
+   "end": 3.281
+  },
+  {
+   "line": "C13",
+   "text": "Because",
+   "start": 3.617,
+   "end": 3.917
+  },
+  {
+   "line": "C13",
+   "text": "you",
+   "start": 3.917,
+   "end": 4.097
+  },
+  {
+   "line": "C13",
+   "text": "called",
+   "start": 4.097,
+   "end": 4.317
+  },
+  {
+   "line": "C13",
+   "text": "him.",
+   "start": 4.317,
+   "end": 4.517
+  },
+  {
+   "line": "C14",
+   "text": "We've",
+   "start": 4.646,
+   "end": 4.886
+  },
+  {
+   "line": "C14",
+   "text": "been",
+   "start": 4.886,
+   "end": 5.006
+  },
+  {
+   "line": "C14",
+   "text": "waiting",
+   "start": 5.006,
+   "end": 5.246
+  },
+  {
+   "line": "C14",
+   "text": "for",
+   "start": 5.246,
+   "end": 5.526
+  },
+  {
+   "line": "C14",
+   "text": "you",
+   "start": 5.526,
+   "end": 5.666
+  },
+  {
+   "line": "C14",
+   "text": "to",
+   "start": 5.666,
+   "end": 5.806
+  },
+  {
+   "line": "C14",
+   "text": "blink.",
+   "start": 5.806,
+   "end": 6.026
+  },
+  {
+   "line": "C15",
+   "text": "Because",
+   "start": 6.331,
+   "end": 6.651
+  },
+  {
+   "line": "C15",
+   "text": "you",
+   "start": 6.651,
+   "end": 6.871
+  },
+  {
+   "line": "C15",
+   "text": "called",
+   "start": 6.871,
+   "end": 7.131
+  },
+  {
+   "line": "C15",
+   "text": "him.",
+   "start": 7.131,
+   "end": 7.391
+  },
+  {
+   "line": "C16",
+   "text": "We've",
+   "start": 7.612,
+   "end": 7.892
+  },
+  {
+   "line": "C16",
+   "text": "been",
+   "start": 7.892,
+   "end": 8.032
+  },
+  {
+   "line": "C16",
+   "text": "waiting",
+   "start": 8.032,
+   "end": 8.272
+  },
+  {
+   "line": "C16",
+   "text": "for",
+   "start": 8.272,
+   "end": 8.532
+  },
+  {
+   "line": "C16",
+   "text": "you",
+   "start": 8.532,
+   "end": 8.692
+  },
+  {
+   "line": "C16",
+   "text": "to",
+   "start": 8.692,
+   "end": 8.832
+  },
+  {
+   "line": "C16",
+   "text": "blink.",
+   "start": 8.832,
+   "end": 9.072
+  },
+  {
+   "line": "C17",
+   "text": "Because",
+   "start": 9.403,
+   "end": 9.883
+  },
+  {
+   "line": "C17",
+   "text": "you",
+   "start": 9.883,
+   "end": 10.103
+  },
+  {
+   "line": "C17",
+   "text": "called",
+   "start": 10.103,
+   "end": 10.383
+  },
+  {
+   "line": "C17",
+   "text": "him.",
+   "start": 10.383,
+   "end": 10.603
+  },
+  {
+   "line": "C18",
+   "text": "We've",
+   "start": 10.809,
+   "end": 11.069
+  },
+  {
+   "line": "C18",
+   "text": "been",
+   "start": 11.069,
+   "end": 11.169
+  },
+  {
+   "line": "C18",
+   "text": "waiting",
+   "start": 11.169,
+   "end": 11.369
+  },
+  {
+   "line": "C18",
+   "text": "for",
+   "start": 11.369,
+   "end": 11.609
+  },
+  {
+   "line": "C18",
+   "text": "you",
+   "start": 11.609,
+   "end": 11.729
+  },
+  {
+   "line": "C18",
+   "text": "to",
+   "start": 11.729,
+   "end": 11.849
+  },
+  {
+   "line": "C18",
+   "text": "blink.",
+   "start": 11.849,
+   "end": 12.029
+  },
+  {
+   "line": "C19",
+   "text": "You're",
+   "start": 12.318,
+   "end": 12.538
+  },
+  {
+   "line": "C19",
+   "text": "not",
+   "start": 12.538,
+   "end": 12.678
+  },
+  {
+   "line": "C19",
+   "text": "dreaming.",
+   "start": 12.678,
+   "end": 13.118
+  },
+  {
+   "line": "C19",
+   "text": "You're",
+   "start": 13.518,
+   "end": 13.758
+  },
+  {
+   "line": "C19",
+   "text": "mine.",
+   "start": 13.758,
+   "end": 13.998
+  }
+ ],
+ "duration": 14.393
+}

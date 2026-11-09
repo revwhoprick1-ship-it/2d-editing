@@ -223,19 +223,47 @@ def shot_DARKFACE(cv, t):
 
 
 def shot_CORNER(cv, t):
-    """The dark corner of your room. Something blinks."""
-    cv.drawRect(skia.Rect(0, 0, W, H), paint('#050607'))
-    cv.drawPath(poly([(0, 0), (540, 600), (540, 1920), (0, 1920)]), paint('#0A0B0E'))
-    cv.drawPath(poly([(1080, 0), (540, 600), (540, 1920), (1080, 1920)]), paint('#0C0D10'))
+    """The corner of your room in moonlight: clothes on a chair, a shelf... and in the dark gap, something blinks."""
+    cv.drawRect(skia.Rect(0, 0, W, H), paint('#0E1016'))
+    cv.drawPath(poly([(0, 0), (540, 500), (540, 1920), (0, 1920)]), paint('#1A1E28'))
+    cv.drawPath(poly([(1080, 0), (540, 500), (540, 1920), (1080, 1920)]), paint('#151922'))
+    cv.drawPath(poly([(700, 300), (1000, 380), (900, 1400), (640, 1300)]), paint(C('#9FB8D8', 0.10), blur=20))       # moonlight
+    cv.drawRect(skia.Rect(140, 1100, 420, 1150), paint('#2A2420'))                                           # chair + clothes
+    cv.drawRect(skia.Rect(160, 1150, 180, 1500), paint('#2A2420'))
+    cv.drawRect(skia.Rect(380, 1150, 400, 1500), paint('#2A2420'))
+    cv.drawPath(blob([(150, 1100), (300, 980), (420, 1100), (380, 1180), (200, 1180)]), paint('#3A3E4A'))
+    cv.drawRect(skia.Rect(640, 900, 960, 930), paint('#2A2420'))                                             # shelf
+    for k in range(4):
+        cv.drawRect(skia.Rect(660 + k * 60, 820, 700 + k * 60, 900), paint(['#5A3A3A', '#3A4A5A', '#4A5A3A', '#5A5A3A'][k]))
     u = t - B['corner']
-    op = 1.0 if 0.6 < u < 2.2 else 0.0
-    if 1.2 < u < 1.35:
-        op = 0.0                                                                                  # it blinks
+    op = 1.0 if 0.5 < u < 3.0 else 0.0
+    if 1.3 < u < 1.5:
+        op = 0.0                                                                                              # it blinks
+    cv.drawPath(blob([(470, 1500), (480, 700), (540, 560), (600, 700), (610, 1500)]), paint(C('#030304', 0.85), blur=12))
     if op > 0:
         for side in (-1, 1):
-            cv.drawOval(skia.Rect(540 + side * 40 - 18, 700 - 8, 540 + side * 40 + 18, 700 + 8), paint('#F2EEE6'))
-            cv.drawCircle(540 + side * 40, 700, 6, paint('#B01212'))
-    shade(cv, (540, 700), 800, 0.6)
+            cv.drawOval(skia.Rect(540 + side * 46 - 26, 700 - 12, 540 + side * 46 + 26, 700 + 12), paint('#F2EEE6'))
+            cv.drawCircle(540 + side * 46, 700, 9, paint('#B01212'))
+            cv.drawCircle(540 + side * 46, 700, 40, paint(C('#B01212', 0.25), blur=14))
+    shade(cv, (540, 800), 1000, 0.5)
+
+
+def shot_RVIDEO(cv, t):
+    """The video on your phone: the ritual instructions."""
+    bedroom(cv, t)
+    cv.drawPath(skia.Path().addRRect(skia.RRect.MakeRectXY(skia.Rect(200, 260, 880, 1560), 60, 60)), paint('#101215'))
+    cv.drawRect(skia.Rect(230, 330, 850, 1490), paint('#0C0C0E'))
+    text(cv, 'HOW TO SUMMON', 540, 470, 64, '#E8E4DA')
+    text(cv, 'KESSRAH', 540, 580, 110, '#C83030')
+    for k, ln in enumerate(('1. 3:33 AM', '2. SALT CIRCLE', '3. THREE CANDLES', '4. SAY HIS NAME 3 TIMES', "5. DON'T BLINK")):
+        a = ease((t - B['ritual'] - 2.2 - k * 0.5) / 0.2)
+        text(cv, ln, 280, 760 + k * 120, 54, C('#E8E4DA' if k < 4 else '#C83030', a), align='left')
+    text(cv, '1.2M views  ·  "it actually worked??"', 540, 1420, 34, '#8A8F98')
+    glow(cv, (540, 900), 700, '#BFE0FF', 0.15)
+    for side in (-1, 1):
+        hx = 540 + side * 360
+        cv.drawPath(blob([(hx - 70, 1200), (hx + 70, 1180), (hx + 90, 1440), (hx - 60, 1500)]), paint('#F2C29B'))
+    shade(cv, (540, 900), 1100, 0.5)
 
 
 def shot_LOCKERS(cv, t):
@@ -293,7 +321,8 @@ def shot_BACK(cv, t):
     u = max(0.0, t - B['k01'])
     rise = min(1.0, u / 2.0)
     op = 0.0 if t < B['js2'] else min(1.0, (t - B['js2']) / 0.12)
-    kessrah(cv, 540, 1700 + (1 - rise) * 500, 0.62 + (0.35 if t >= B['js2'] else 0), open_=op, t=t, tilt=8 * math.sin(t * 1.5), reach=op * 0.6)
+    ks = 0.62 if t < B['js2'] else 0.95
+    kessrah(cv, 540, (1700 + (1 - rise) * 500) if t < B['js2'] else 780 + 2120 * ks, ks, open_=op, t=t, tilt=8 * math.sin(t * 1.5), reach=op * 0.6)
     shade(cv, (540, 900), 1100, 0.55)
 
 
@@ -326,17 +355,18 @@ def shot_CREEP(cv, t):
     n = sum(1 for (bt, *_r) in E.BLINKS if B['choice'] <= bt <= t)
     dist = max(0.0, 1 - n * 0.22)
     s_ = 0.5 + (1 - dist) * 0.9
-    kessrah(cv, 540, 1600 + (1 - dist) * 900, s_, open_=0.35 + 0.65 * (1 - dist), t=t, tilt=10 * math.sin(t), reach=(1 - dist) * 0.5)
+    kessrah(cv, 540, max(1600.0, 720 + 2120 * s_), s_, open_=0.35 + 0.65 * (1 - dist), t=t, tilt=10 * math.sin(t), reach=(1 - dist) * 0.5)
     shade(cv, (540, 900), 1100, 0.55)
 
 
 def shot_SCARE(cv, t):
     cv.drawRect(skia.Rect(0, 0, W, H), paint('#000000'))
     u = t - B['js3']
-    kessrah(cv, 540, 4600 + u * 1200, 2.0 + u * 1.5, open_=1.0, t=t, tilt=-6 + 14 * u)
+    ks = 2.0 + u * 1.5
+    kessrah(cv, 540, 900 + 2120 * ks, ks, open_=1.0, t=t, tilt=-6 + 14 * u)
 
 
-SHOTS = {'STARE': shot_STARE, 'EMPTY': shot_EMPTY, 'CLASS': shot_CLASS, 'HART': shot_HART, 'YOU': shot_YOU, 'RITUAL': shot_RITUAL,
+SHOTS = {'RVIDEO': shot_RVIDEO, 'STARE': shot_STARE, 'EMPTY': shot_EMPTY, 'CLASS': shot_CLASS, 'HART': shot_HART, 'YOU': shot_YOU, 'RITUAL': shot_RITUAL,
          'CANDLEFACE': shot_CANDLEFACE, 'CANDLES': shot_CANDLES, 'DARKFACE': shot_DARKFACE, 'CORNER': shot_CORNER, 'LOCKERS': shot_LOCKERS,
          'THEO': shot_THEO, 'BOARD': shot_BOARD, 'BACK': shot_BACK, 'EYE': shot_EYE, 'CREEP': shot_CREEP, 'SCARE': shot_SCARE}
 

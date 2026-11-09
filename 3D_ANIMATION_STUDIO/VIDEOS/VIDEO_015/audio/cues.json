@@ -1,0 +1,386 @@
+{
+ "duration": 87.75,
+ "loop": true,
+ "narration": "narration/narration_raw.wav",
+ "narration_offset": 0.0,
+ "music": "music_score.wav",
+ "music_gain_db": 2,
+ "music_cue": "cue_video015",
+ "music_gates": [
+  [
+   42.333000000000006,
+   42.963,
+   0.1
+  ],
+  [
+   71.095,
+   71.525,
+   0.15
+  ],
+  [
+   86.0,
+   86.98,
+   0.2
+  ]
+ ],
+ "targets": {
+  "narration_lufs": -16,
+  "master_lufs": -14,
+  "true_peak": -2.0,
+  "duck_db": 4
+ },
+ "cues": [
+  {
+   "t": 0.0,
+   "file": "AUDIO/ambience/room_tone.flac",
+   "gain": -5,
+   "bus": "amb",
+   "note": "air",
+   "loop": true,
+   "dur": 87.75
+  },
+  {
+   "t": 0.0,
+   "file": "AUDIO/sound_effects/comedy/flicker_buzz.flac",
+   "gain": -23,
+   "bus": "sfx",
+   "note": "fluorescent hum",
+   "loop": true,
+   "dur": 2.927
+  },
+  {
+   "t": 0.0,
+   "file": "AUDIO/sound_effects/comedy/heavy_breath.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "your held breath (frame 0)"
+  },
+  {
+   "t": 1.806,
+   "file": "AUDIO/sound_effects/comedy/head_turn_mass.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "chairs creak as they all lean"
+  },
+  {
+   "t": 2.927,
+   "file": "AUDIO/sound_effects/comedy/vhs_rewind.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "12 hours earlier"
+  },
+  {
+   "t": 4.861,
+   "file": "AUDIO/ambience/wind.flac",
+   "gain": -24,
+   "bus": "amb",
+   "note": "night outside",
+   "loop": true,
+   "dur": 20.525
+  },
+  {
+   "t": 5.061,
+   "file": "AUDIO/sound_effects/comedy/smoke_hiss.flac",
+   "gain": -27,
+   "bus": "sfx",
+   "note": "candles burning"
+  },
+  {
+   "t": 14.134,
+   "file": "AUDIO/sound_effects/comedy/whispers.flac",
+   "gain": -23,
+   "bus": "sfx",
+   "note": "the name, echoing 1",
+   "dur": 1.2,
+   "fade_out": 0.4
+  },
+  {
+   "t": 15.034,
+   "file": "AUDIO/sound_effects/comedy/whispers.flac",
+   "gain": -20,
+   "bus": "sfx",
+   "note": "the name, echoing 2",
+   "dur": 1.2,
+   "fade_out": 0.4
+  },
+  {
+   "t": 15.934,
+   "file": "AUDIO/sound_effects/comedy/whispers.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "the name, echoing 3",
+   "dur": 1.2,
+   "fade_out": 0.4
+  },
+  {
+   "t": 17.574,
+   "file": "AUDIO/sound_effects/comedy/power_cut.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "all three candles out at once"
+  },
+  {
+   "t": 17.624,
+   "file": "AUDIO/sound_effects/comedy/smoke_hiss.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "smoke"
+  },
+  {
+   "t": 19.751,
+   "file": "AUDIO/sound_effects/comedy/heavy_breath.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "shaky laugh breath"
+  },
+  {
+   "t": 23.5,
+   "file": "AUDIO/sound_effects/comedy/bone_clicks.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "something blinks"
+  },
+  {
+   "t": 25.386,
+   "file": "AUDIO/ambience/crowd.flac",
+   "gain": -26,
+   "bus": "amb",
+   "note": "school hallway",
+   "dur": 10.226000000000003,
+   "fade_out": 0.5
+  },
+  {
+   "t": 25.586,
+   "file": "AUDIO/sound_effects/comedy/metal_bang.flac",
+   "gain": -29,
+   "bus": "sfx",
+   "note": "locker"
+  },
+  {
+   "t": 33.077,
+   "file": "AUDIO/sound_effects/bio/heartbeat_muffled.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "what Theo said"
+  },
+  {
+   "t": 35.612,
+   "file": "AUDIO/sound_effects/comedy/flicker_buzz.flac",
+   "gain": -27,
+   "bus": "sfx",
+   "note": "classroom hum",
+   "loop": true,
+   "dur": 18.248999999999995
+  },
+  {
+   "t": 38.782,
+   "file": "AUDIO/sound_effects/comedy/subliminal_hit.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "\"...and Kessrah\""
+  },
+  {
+   "t": 39.657,
+   "file": "AUDIO/sound_effects/comedy/heavy_breath.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "breath"
+  },
+  {
+   "t": 42.633,
+   "file": "AUDIO/sound_effects/comedy/blink_cut.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "YOUR BLINK"
+  },
+  {
+   "t": 42.953,
+   "file": "AUDIO/sound_effects/comedy/jumpscare.flac",
+   "gain": -2,
+   "bus": "sfx",
+   "note": "JUMPSCARE 1: the whole class staring"
+  },
+  {
+   "t": 43.483,
+   "file": "AUDIO/sound_effects/comedy/tinnitus.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "ringing"
+  },
+  {
+   "t": 43.583,
+   "file": "AUDIO/sound_effects/comedy/whispers.flac",
+   "gain": -19,
+   "bus": "sfx",
+   "note": "whispering class",
+   "loop": true,
+   "dur": 7.457999999999993
+  },
+  {
+   "t": 44.855,
+   "file": "AUDIO/sound_effects/comedy/heavy_breath.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "panic breath"
+  },
+  {
+   "t": 51.341,
+   "file": "AUDIO/sound_effects/movement/cloth_rustle.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "rubbing your eyes"
+  },
+  {
+   "t": 53.861,
+   "file": "AUDIO/sound_effects/comedy/flicker_buzz.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "one buzzing light in an empty room",
+   "loop": true,
+   "dur": 33.139
+  },
+  {
+   "t": 53.961,
+   "file": "AUDIO/sound_effects/comedy/dread_drone.flac",
+   "gain": -10,
+   "bus": "amb",
+   "note": "emptiness",
+   "loop": true,
+   "dur": 33.139
+  },
+  {
+   "t": 55.703,
+   "file": "AUDIO/sound_effects/comedy/heavy_breath.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "crying breath"
+  },
+  {
+   "t": 59.355,
+   "file": "AUDIO/sound_effects/comedy/pen_scribble.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "chalk writing by itself",
+   "dur": 2.2
+  },
+  {
+   "t": 62.326,
+   "file": "AUDIO/sound_effects/comedy/heavy_breath.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "sobbing breath"
+  },
+  {
+   "t": 66.852,
+   "file": "AUDIO/sound_effects/comedy/whispers.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "from the back"
+  },
+  {
+   "t": 71.515,
+   "file": "AUDIO/sound_effects/comedy/jumpscare.flac",
+   "gain": -2,
+   "bus": "sfx",
+   "note": "JUMPSCARE 2: every eyelid opens"
+  },
+  {
+   "t": 71.795,
+   "file": "AUDIO/sound_effects/bio/heartbeat_lubdub.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "eyes burning"
+  },
+  {
+   "t": 72.045,
+   "file": "AUDIO/sound_effects/comedy/tinnitus.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "ringing"
+  },
+  {
+   "t": 73.775,
+   "file": "AUDIO/sound_effects/comedy/heavy_breath.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "begging breath"
+  },
+  {
+   "t": 78.191,
+   "file": "AUDIO/sound_effects/comedy/blink_cut.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "a blink"
+  },
+  {
+   "t": 78.341,
+   "file": "AUDIO/sound_effects/comedy/bone_clicks.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "it moved closer"
+  },
+  {
+   "t": 80.591,
+   "file": "AUDIO/sound_effects/comedy/blink_cut.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "a blink"
+  },
+  {
+   "t": 80.741,
+   "file": "AUDIO/sound_effects/comedy/bone_clicks.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "it moved closer"
+  },
+  {
+   "t": 82.511,
+   "file": "AUDIO/sound_effects/comedy/blink_cut.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "a blink"
+  },
+  {
+   "t": 82.661,
+   "file": "AUDIO/sound_effects/comedy/bone_clicks.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "it moved closer"
+  },
+  {
+   "t": 84.047,
+   "file": "AUDIO/sound_effects/comedy/blink_cut.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "a blink"
+  },
+  {
+   "t": 84.197,
+   "file": "AUDIO/sound_effects/comedy/bone_clicks.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "it moved closer"
+  },
+  {
+   "t": 85.276,
+   "file": "AUDIO/sound_effects/comedy/blink_cut.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "a blink"
+  },
+  {
+   "t": 85.426,
+   "file": "AUDIO/sound_effects/comedy/bone_clicks.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "it moved closer"
+  },
+  {
+   "t": 86.97,
+   "file": "AUDIO/sound_effects/comedy/jumpscare.flac",
+   "gain": -1,
+   "bus": "sfx",
+   "note": "JUMPSCARE 3: last blink -> frame 0"
+  }
+ ]
+}

@@ -311,25 +311,25 @@
    "line": "C01",
    "text": "Because",
    "start": 1.906,
-   "end": 2.146
+   "end": 2.136
   },
   {
    "line": "C01",
    "text": "you",
-   "start": 2.146,
-   "end": 2.326
+   "start": 2.136,
+   "end": 2.367
   },
   {
    "line": "C01",
    "text": "called",
-   "start": 2.326,
-   "end": 2.546
+   "start": 2.367,
+   "end": 2.597
   },
   {
    "line": "C01",
    "text": "him.",
-   "start": 2.546,
-   "end": 2.726
+   "start": 2.597,
+   "end": 2.827
   },
   {
    "line": "N01",
@@ -515,18 +515,18 @@
    "line": "Y03",
    "text": "Kessrah.",
    "start": 14.134,
-   "end": 14.614
+   "end": 14.594
   },
   {
    "line": "Y03",
    "text": "Kessrah...",
-   "start": 14.894,
-   "end": 15.294
+   "start": 14.834,
+   "end": 15.274
   },
   {
    "line": "Y03",
    "text": "Kessrah.",
-   "start": 15.434,
+   "start": 15.454,
    "end": 15.854
   },
   {
@@ -701,12 +701,12 @@
    "line": "Y05",
    "text": "did",
    "start": 25.846,
-   "end": 25.986
+   "end": 26.006
   },
   {
    "line": "Y05",
    "text": "the",
-   "start": 25.986,
+   "start": 26.006,
    "end": 26.146
   },
   {
@@ -1013,7 +1013,7 @@
    "line": "Y07",
    "text": "say?",
    "start": 40.577,
-   "end": 40.837
+   "end": 40.817
   },
   {
    "line": "N05",
@@ -1043,43 +1043,43 @@
    "line": "C02",
    "text": "We've",
    "start": 43.54,
-   "end": 43.72
+   "end": 43.8
   },
   {
    "line": "C02",
    "text": "been",
-   "start": 43.72,
-   "end": 43.82
+   "start": 43.8,
+   "end": 43.9
   },
   {
    "line": "C02",
    "text": "waiting",
-   "start": 43.82,
-   "end": 43.98
+   "start": 43.9,
+   "end": 44.14
   },
   {
    "line": "C02",
    "text": "for",
-   "start": 43.98,
-   "end": 44.2
+   "start": 44.14,
+   "end": 44.42
   },
   {
    "line": "C02",
    "text": "you",
-   "start": 44.2,
-   "end": 44.28
+   "start": 44.42,
+   "end": 44.56
   },
   {
    "line": "C02",
    "text": "to",
-   "start": 44.28,
-   "end": 44.38
+   "start": 44.56,
+   "end": 44.62
   },
   {
    "line": "C02",
    "text": "blink.",
-   "start": 44.38,
-   "end": 44.56
+   "start": 44.62,
+   "end": 44.68
   },
   {
    "line": "Y08",
@@ -1096,13 +1096,13 @@
   {
    "line": "Y08",
    "text": "Stop",
-   "start": 45.885,
-   "end": 45.965
+   "start": 45.865,
+   "end": 45.945
   },
   {
    "line": "Y08",
    "text": "looking",
-   "start": 45.965,
+   "start": 45.945,
    "end": 46.165
   },
   {
@@ -1115,7 +1115,7 @@
    "line": "Y08",
    "text": "me!",
    "start": 46.365,
-   "end": 46.505
+   "end": 46.485
   },
   {
    "line": "Y08",
@@ -1151,12 +1151,12 @@
    "line": "H02",
    "text": "sweetheart.",
    "start": 48.071,
-   "end": 48.591
+   "end": 48.571
   },
   {
    "line": "H02",
    "text": "Kessrah",
-   "start": 49.011,
+   "start": 49.031,
    "end": 49.251
   },
   {
@@ -1181,7 +1181,7 @@
    "line": "H02",
    "text": "now.",
    "start": 50.071,
-   "end": 50.431
+   "end": 50.451
   },
   {
    "line": "N06",
@@ -1451,12 +1451,12 @@
    "line": "Y10",
    "text": "Wake",
    "start": 66.236,
-   "end": 66.336
+   "end": 66.316
   },
   {
    "line": "Y10",
    "text": "up!",
-   "start": 66.336,
+   "start": 66.316,
    "end": 66.616
   },
   {
@@ -1469,25 +1469,25 @@
    "line": "K01",
    "text": "not",
    "start": 67.272,
-   "end": 67.392
+   "end": 67.412
   },
   {
    "line": "K01",
    "text": "dreaming.",
-   "start": 67.392,
-   "end": 67.792
+   "start": 67.412,
+   "end": 67.892
   },
   {
    "line": "K01",
    "text": "You're",
-   "start": 68.092,
-   "end": 68.272
+   "start": 68.252,
+   "end": 68.292
   },
   {
    "line": "K01",
    "text": "mine.",
-   "start": 68.272,
-   "end": 68.552
+   "start": 68.292,
+   "end": 68.692
   },
   {
    "line": "N08",

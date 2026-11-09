@@ -770,9 +770,11 @@ def ov_blink(cv, o, t):
             k = k * k * (3 - 2 * k)
             d = ImageDraw.Draw(cv)
             lid = int(H / 2 * k) + 2
-            d.rectangle((0, 0, W, lid - 60), fill=(0, 0, 0, 255))
+            if lid > 60:
+                d.rectangle((0, 0, W, lid - 60), fill=(0, 0, 0, 255))
             d.ellipse((-200, lid - 160, W + 200, lid + 20), fill=(0, 0, 0, 255))
-            d.rectangle((0, H - lid + 60, W, H), fill=(0, 0, 0, 255))
+            if lid > 60:
+                d.rectangle((0, H - lid + 60, W, H), fill=(0, 0, 0, 255))
             d.ellipse((-200, H - lid - 20, W + 200, H - lid + 160), fill=(0, 0, 0, 255))
             if k > 0.98:
                 d.rectangle((0, 0, W, H), fill=(0, 0, 0, 255))
