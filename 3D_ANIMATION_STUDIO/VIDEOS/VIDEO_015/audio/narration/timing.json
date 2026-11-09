@@ -1,0 +1,1824 @@
+{
+ "voice": "chatterbox+kokoro:am_fenrir",
+ "sample_rate": 24000,
+ "lines": [
+  {
+   "id": "Y01",
+   "who": "Y",
+   "text": "Okay... why is everyone looking at me?",
+   "start": 0.0,
+   "end": 1.606,
+   "delivery": "terrified whisper, voice shaking",
+   "speed": 1.05
+  },
+  {
+   "id": "C01",
+   "who": "CH",
+   "text": "Because you called him.",
+   "start": 1.906,
+   "end": 2.827,
+   "delivery": "calm, in unison, flat",
+   "speed": 1.05
+  },
+  {
+   "id": "N01",
+   "who": "N",
+   "text": "Twelve hours earlier.",
+   "start": 3.427,
+   "end": 4.561,
+   "delivery": "low",
+   "speed": 1.05
+  },
+  {
+   "id": "Y02",
+   "who": "Y",
+   "text": "Okay. Three candles. Salt circle. Three thirty-three. This is so stupid.",
+   "start": 4.861,
+   "end": 9.46,
+   "delivery": "nervous laugh, whisper",
+   "speed": 1.05
+  },
+  {
+   "id": "N02",
+   "who": "N",
+   "text": "The video said: say his name three times. And don't blink until the candles go out.",
+   "start": 9.76,
+   "end": 13.834,
+   "delivery": "low, ominous",
+   "speed": 1.05
+  },
+  {
+   "id": "Y03",
+   "who": "Y",
+   "text": "Kessrah. Kessrah... Kessrah.",
+   "start": 14.134,
+   "end": 15.954,
+   "delivery": "whisper, growing scared",
+   "speed": 1.05
+  },
+  {
+   "id": "N03",
+   "who": "N",
+   "text": "All three candles go out. At the exact same time.",
+   "start": 16.554,
+   "end": 19.151,
+   "delivery": "dread",
+   "speed": 1.05
+  },
+  {
+   "id": "Y04",
+   "who": "Y",
+   "text": "Nothing. See? Nothing happened. I'm going to bed.",
+   "start": 19.651,
+   "end": 21.9,
+   "delivery": "shaky laugh, trying to be brave",
+   "speed": 1.05
+  },
+  {
+   "id": "N04",
+   "who": "N",
+   "text": "In the corner of your room... something blinks.",
+   "start": 22.3,
+   "end": 24.586,
+   "delivery": "whisper",
+   "speed": 1.05
+  },
+  {
+   "id": "Y05",
+   "who": "Y",
+   "text": "Bro, I did the Kessrah thing last night. Nothing happened.",
+   "start": 25.386,
+   "end": 28.26,
+   "delivery": "casual, a bit nervous",
+   "speed": 1.05
+  },
+  {
+   "id": "T01",
+   "who": "THEO",
+   "text": "Wait. You said it three times? Out loud? Dude... you're not supposed to finish it.",
+   "start": 28.46,
+   "end": 31.654,
+   "delivery": "worried, urgent whisper",
+   "speed": 1.05
+  },
+  {
+   "id": "Y06",
+   "who": "Y",
+   "text": "What do you mean, finish it?",
+   "start": 31.854,
+   "end": 32.777,
+   "delivery": "confused, uneasy",
+   "speed": 1.05
+  },
+  {
+   "id": "T02",
+   "who": "THEO",
+   "text": "He doesn't come when you call him. He comes when you blink.",
+   "start": 32.977,
+   "end": 35.112,
+   "delivery": "scared, serious",
+   "speed": 1.05
+  },
+  {
+   "id": "H01",
+   "who": "HART",
+   "text": "Alright, attendance. Theo. Maya. And... Kessrah.",
+   "start": 35.612,
+   "end": 39.357,
+   "delivery": "calm, teacher",
+   "speed": 1.05
+  },
+  {
+   "id": "Y07",
+   "who": "Y",
+   "text": "Wait... what did she just say?",
+   "start": 39.857,
+   "end": 40.973,
+   "delivery": "horrified whisper",
+   "speed": 1.05
+  },
+  {
+   "id": "N05",
+   "who": "N",
+   "text": "You blink. Just once.",
+   "start": 41.373,
+   "end": 42.74,
+   "delivery": "whisper",
+   "speed": 1.05
+  },
+  {
+   "id": "C02",
+   "who": "CH",
+   "text": "We've been waiting for you to blink.",
+   "start": 43.54,
+   "end": 44.705,
+   "delivery": "calm, smiling, in unison",
+   "speed": 1.05
+  },
+  {
+   "id": "Y08",
+   "who": "Y",
+   "text": "Stop it. Stop looking at me! This isn't funny!",
+   "start": 45.105,
+   "end": 47.331,
+   "delivery": "panicked, crying, shouting",
+   "speed": 1.05
+  },
+  {
+   "id": "H02",
+   "who": "HART",
+   "text": "Sit down, sweetheart. Kessrah is taking attendance now.",
+   "start": 47.631,
+   "end": 50.541,
+   "delivery": "sweet, wrong, calm",
+   "speed": 1.05
+  },
+  {
+   "id": "N06",
+   "who": "N",
+   "text": "You rub your eyes as hard as you can. And when you open them... the classroom is empty.",
+   "start": 51.041,
+   "end": 55.453,
+   "delivery": "dread",
+   "speed": 1.05
+  },
+  {
+   "id": "Y09",
+   "who": "Y",
+   "text": "Hello? Theo? Ms. Hart? Anyone?",
+   "start": 55.953,
+   "end": 58.455,
+   "delivery": "crying, terrified whisper",
+   "speed": 1.05
+  },
+  {
+   "id": "N07",
+   "who": "N",
+   "text": "On the board, in chalk, someone has written one sentence.",
+   "start": 59.055,
+   "end": 62.176,
+   "delivery": "quiet",
+   "speed": 1.05
+  },
+  {
+   "id": "Y10",
+   "who": "Y",
+   "text": "No. No, no, no. I'm dreaming. I'm still dreaming. Wake up. Wake up!",
+   "start": 62.576,
+   "end": 66.652,
+   "delivery": "panic, sobbing",
+   "speed": 1.05
+  },
+  {
+   "id": "K01",
+   "who": "K",
+   "text": "You're not dreaming. You're mine.",
+   "start": 67.052,
+   "end": 68.801,
+   "delivery": "deep, evil, slow",
+   "speed": 0.85
+  },
+  {
+   "id": "N08",
+   "who": "N",
+   "text": "It came from the back of the room. In your voice.",
+   "start": 69.401,
+   "end": 71.395,
+   "delivery": "dread",
+   "speed": 1.05
+  },
+  {
+   "id": "N09",
+   "who": "N",
+   "text": "Your eyes are burning. You need to blink.",
+   "start": 71.795,
+   "end": 73.725,
+   "delivery": "tense",
+   "speed": 1.05
+  },
+  {
+   "id": "Y11",
+   "who": "Y",
+   "text": "Please. Please, I don't want to blink. I don't want to blink.",
+   "start": 74.025,
+   "end": 76.291,
+   "delivery": "begging, crying, shaking",
+   "speed": 1.05
+  },
+  {
+   "id": "N10",
+   "who": "N",
+   "text": "Run for the door. Keep your eyes open. Or say his name backwards.",
+   "start": 76.691,
+   "end": 80.22,
+   "delivery": "urgent",
+   "speed": 1.05
+  },
+  {
+   "id": "N11",
+   "who": "N",
+   "text": "Comment one, two, or three. And don't blink while you decide.",
+   "start": 80.52,
+   "end": 84.347,
+   "delivery": "low, final",
+   "speed": 1.05
+  }
+ ],
+ "words": [
+  {
+   "line": "Y01",
+   "text": "Okay...",
+   "start": 0.0,
+   "end": 0.2
+  },
+  {
+   "line": "Y01",
+   "text": "why",
+   "start": 0.46,
+   "end": 0.5
+  },
+  {
+   "line": "Y01",
+   "text": "is",
+   "start": 0.5,
+   "end": 0.68
+  },
+  {
+   "line": "Y01",
+   "text": "everyone",
+   "start": 0.68,
+   "end": 0.9
+  },
+  {
+   "line": "Y01",
+   "text": "looking",
+   "start": 0.9,
+   "end": 1.12
+  },
+  {
+   "line": "Y01",
+   "text": "at",
+   "start": 1.12,
+   "end": 1.24
+  },
+  {
+   "line": "Y01",
+   "text": "me?",
+   "start": 1.24,
+   "end": 1.46
+  },
+  {
+   "line": "C01",
+   "text": "Because",
+   "start": 1.906,
+   "end": 2.146
+  },
+  {
+   "line": "C01",
+   "text": "you",
+   "start": 2.146,
+   "end": 2.326
+  },
+  {
+   "line": "C01",
+   "text": "called",
+   "start": 2.326,
+   "end": 2.546
+  },
+  {
+   "line": "C01",
+   "text": "him.",
+   "start": 2.546,
+   "end": 2.726
+  },
+  {
+   "line": "N01",
+   "text": "Twelve",
+   "start": 3.427,
+   "end": 3.687
+  },
+  {
+   "line": "N01",
+   "text": "hours",
+   "start": 3.687,
+   "end": 3.967
+  },
+  {
+   "line": "N01",
+   "text": "earlier.",
+   "start": 3.967,
+   "end": 4.347
+  },
+  {
+   "line": "Y02",
+   "text": "Okay.",
+   "start": 4.861,
+   "end": 5.279
+  },
+  {
+   "line": "Y02",
+   "text": "Three",
+   "start": 5.279,
+   "end": 5.697
+  },
+  {
+   "line": "Y02",
+   "text": "candles.",
+   "start": 5.697,
+   "end": 6.115
+  },
+  {
+   "line": "Y02",
+   "text": "Salt",
+   "start": 6.115,
+   "end": 6.533
+  },
+  {
+   "line": "Y02",
+   "text": "circle.",
+   "start": 6.533,
+   "end": 6.951
+  },
+  {
+   "line": "Y02",
+   "text": "Three",
+   "start": 6.951,
+   "end": 7.369
+  },
+  {
+   "line": "Y02",
+   "text": "thirty-three.",
+   "start": 7.369,
+   "end": 7.787
+  },
+  {
+   "line": "Y02",
+   "text": "This",
+   "start": 7.787,
+   "end": 8.206
+  },
+  {
+   "line": "Y02",
+   "text": "is",
+   "start": 8.206,
+   "end": 8.624
+  },
+  {
+   "line": "Y02",
+   "text": "so",
+   "start": 8.624,
+   "end": 9.042
+  },
+  {
+   "line": "Y02",
+   "text": "stupid.",
+   "start": 9.042,
+   "end": 9.46
+  },
+  {
+   "line": "N02",
+   "text": "The",
+   "start": 9.76,
+   "end": 9.9
+  },
+  {
+   "line": "N02",
+   "text": "video",
+   "start": 9.9,
+   "end": 10.1
+  },
+  {
+   "line": "N02",
+   "text": "said:",
+   "start": 10.1,
+   "end": 10.46
+  },
+  {
+   "line": "N02",
+   "text": "say",
+   "start": 10.6,
+   "end": 10.84
+  },
+  {
+   "line": "N02",
+   "text": "his",
+   "start": 10.84,
+   "end": 11.0
+  },
+  {
+   "line": "N02",
+   "text": "name",
+   "start": 11.0,
+   "end": 11.18
+  },
+  {
+   "line": "N02",
+   "text": "three",
+   "start": 11.18,
+   "end": 11.44
+  },
+  {
+   "line": "N02",
+   "text": "times.",
+   "start": 11.44,
+   "end": 11.86
+  },
+  {
+   "line": "N02",
+   "text": "And",
+   "start": 12.12,
+   "end": 12.32
+  },
+  {
+   "line": "N02",
+   "text": "don't",
+   "start": 12.32,
+   "end": 12.62
+  },
+  {
+   "line": "N02",
+   "text": "blink",
+   "start": 12.62,
+   "end": 12.82
+  },
+  {
+   "line": "N02",
+   "text": "until",
+   "start": 12.82,
+   "end": 13.06
+  },
+  {
+   "line": "N02",
+   "text": "the",
+   "start": 13.06,
+   "end": 13.2
+  },
+  {
+   "line": "N02",
+   "text": "candles",
+   "start": 13.2,
+   "end": 13.42
+  },
+  {
+   "line": "N02",
+   "text": "go",
+   "start": 13.42,
+   "end": 13.62
+  },
+  {
+   "line": "N02",
+   "text": "out.",
+   "start": 13.62,
+   "end": 13.8
+  },
+  {
+   "line": "Y03",
+   "text": "Kessrah.",
+   "start": 14.134,
+   "end": 14.614
+  },
+  {
+   "line": "Y03",
+   "text": "Kessrah...",
+   "start": 14.894,
+   "end": 15.294
+  },
+  {
+   "line": "Y03",
+   "text": "Kessrah.",
+   "start": 15.434,
+   "end": 15.854
+  },
+  {
+   "line": "N03",
+   "text": "All",
+   "start": 16.554,
+   "end": 16.754
+  },
+  {
+   "line": "N03",
+   "text": "three",
+   "start": 16.754,
+   "end": 16.994
+  },
+  {
+   "line": "N03",
+   "text": "candles",
+   "start": 16.994,
+   "end": 17.374
+  },
+  {
+   "line": "N03",
+   "text": "go",
+   "start": 17.374,
+   "end": 17.574
+  },
+  {
+   "line": "N03",
+   "text": "out.",
+   "start": 17.574,
+   "end": 17.794
+  },
+  {
+   "line": "N03",
+   "text": "At",
+   "start": 17.794,
+   "end": 17.994
+  },
+  {
+   "line": "N03",
+   "text": "the",
+   "start": 17.994,
+   "end": 18.134
+  },
+  {
+   "line": "N03",
+   "text": "exact",
+   "start": 18.134,
+   "end": 18.454
+  },
+  {
+   "line": "N03",
+   "text": "same",
+   "start": 18.454,
+   "end": 18.754
+  },
+  {
+   "line": "N03",
+   "text": "time.",
+   "start": 18.754,
+   "end": 19.114
+  },
+  {
+   "line": "Y04",
+   "text": "Nothing.",
+   "start": 19.651,
+   "end": 19.932
+  },
+  {
+   "line": "Y04",
+   "text": "See?",
+   "start": 19.932,
+   "end": 20.213
+  },
+  {
+   "line": "Y04",
+   "text": "Nothing",
+   "start": 20.213,
+   "end": 20.494
+  },
+  {
+   "line": "Y04",
+   "text": "happened.",
+   "start": 20.494,
+   "end": 20.776
+  },
+  {
+   "line": "Y04",
+   "text": "I'm",
+   "start": 20.776,
+   "end": 21.057
+  },
+  {
+   "line": "Y04",
+   "text": "going",
+   "start": 21.057,
+   "end": 21.338
+  },
+  {
+   "line": "Y04",
+   "text": "to",
+   "start": 21.338,
+   "end": 21.619
+  },
+  {
+   "line": "Y04",
+   "text": "bed.",
+   "start": 21.619,
+   "end": 21.9
+  },
+  {
+   "line": "N04",
+   "text": "In",
+   "start": 22.3,
+   "end": 22.58
+  },
+  {
+   "line": "N04",
+   "text": "the",
+   "start": 22.58,
+   "end": 22.68
+  },
+  {
+   "line": "N04",
+   "text": "corner",
+   "start": 22.68,
+   "end": 22.92
+  },
+  {
+   "line": "N04",
+   "text": "of",
+   "start": 22.92,
+   "end": 23.14
+  },
+  {
+   "line": "N04",
+   "text": "your",
+   "start": 23.14,
+   "end": 23.26
+  },
+  {
+   "line": "N04",
+   "text": "room...",
+   "start": 23.26,
+   "end": 23.54
+  },
+  {
+   "line": "N04",
+   "text": "something",
+   "start": 23.78,
+   "end": 24.06
+  },
+  {
+   "line": "N04",
+   "text": "blinks.",
+   "start": 24.06,
+   "end": 24.44
+  },
+  {
+   "line": "Y05",
+   "text": "Bro,",
+   "start": 25.386,
+   "end": 25.586
+  },
+  {
+   "line": "Y05",
+   "text": "I",
+   "start": 25.766,
+   "end": 25.846
+  },
+  {
+   "line": "Y05",
+   "text": "did",
+   "start": 25.846,
+   "end": 25.986
+  },
+  {
+   "line": "Y05",
+   "text": "the",
+   "start": 25.986,
+   "end": 26.146
+  },
+  {
+   "line": "Y05",
+   "text": "Kessrah",
+   "start": 26.146,
+   "end": 26.506
+  },
+  {
+   "line": "Y05",
+   "text": "thing",
+   "start": 26.506,
+   "end": 26.686
+  },
+  {
+   "line": "Y05",
+   "text": "last",
+   "start": 26.686,
+   "end": 26.886
+  },
+  {
+   "line": "Y05",
+   "text": "night.",
+   "start": 26.886,
+   "end": 27.246
+  },
+  {
+   "line": "Y05",
+   "text": "Nothing",
+   "start": 27.546,
+   "end": 27.666
+  },
+  {
+   "line": "Y05",
+   "text": "happened.",
+   "start": 27.666,
+   "end": 28.106
+  },
+  {
+   "line": "T01",
+   "text": "Wait.",
+   "start": 28.46,
+   "end": 28.64
+  },
+  {
+   "line": "T01",
+   "text": "You",
+   "start": 28.82,
+   "end": 28.88
+  },
+  {
+   "line": "T01",
+   "text": "said",
+   "start": 28.88,
+   "end": 29.02
+  },
+  {
+   "line": "T01",
+   "text": "it",
+   "start": 29.02,
+   "end": 29.12
+  },
+  {
+   "line": "T01",
+   "text": "three",
+   "start": 29.12,
+   "end": 29.28
+  },
+  {
+   "line": "T01",
+   "text": "times?",
+   "start": 29.28,
+   "end": 29.6
+  },
+  {
+   "line": "T01",
+   "text": "Out",
+   "start": 29.94,
+   "end": 30.02
+  },
+  {
+   "line": "T01",
+   "text": "loud?",
+   "start": 30.02,
+   "end": 30.24
+  },
+  {
+   "line": "T01",
+   "text": "Dude...",
+   "start": 30.58,
+   "end": 30.68
+  },
+  {
+   "line": "T01",
+   "text": "you're",
+   "start": 30.8,
+   "end": 30.9
+  },
+  {
+   "line": "T01",
+   "text": "not",
+   "start": 30.9,
+   "end": 31.0
+  },
+  {
+   "line": "T01",
+   "text": "supposed",
+   "start": 31.0,
+   "end": 31.14
+  },
+  {
+   "line": "T01",
+   "text": "to",
+   "start": 31.14,
+   "end": 31.32
+  },
+  {
+   "line": "T01",
+   "text": "finish",
+   "start": 31.32,
+   "end": 31.42
+  },
+  {
+   "line": "T01",
+   "text": "it.",
+   "start": 31.42,
+   "end": 31.62
+  },
+  {
+   "line": "Y06",
+   "text": "What",
+   "start": 31.854,
+   "end": 31.954
+  },
+  {
+   "line": "Y06",
+   "text": "do",
+   "start": 31.954,
+   "end": 32.014
+  },
+  {
+   "line": "Y06",
+   "text": "you",
+   "start": 32.014,
+   "end": 32.074
+  },
+  {
+   "line": "Y06",
+   "text": "mean,",
+   "start": 32.074,
+   "end": 32.254
+  },
+  {
+   "line": "Y06",
+   "text": "finish",
+   "start": 32.474,
+   "end": 32.554
+  },
+  {
+   "line": "Y06",
+   "text": "it?",
+   "start": 32.554,
+   "end": 32.754
+  },
+  {
+   "line": "T02",
+   "text": "He",
+   "start": 32.977,
+   "end": 33.097
+  },
+  {
+   "line": "T02",
+   "text": "doesn't",
+   "start": 33.097,
+   "end": 33.337
+  },
+  {
+   "line": "T02",
+   "text": "come",
+   "start": 33.337,
+   "end": 33.457
+  },
+  {
+   "line": "T02",
+   "text": "when",
+   "start": 33.457,
+   "end": 33.577
+  },
+  {
+   "line": "T02",
+   "text": "you",
+   "start": 33.577,
+   "end": 33.697
+  },
+  {
+   "line": "T02",
+   "text": "call",
+   "start": 33.697,
+   "end": 33.837
+  },
+  {
+   "line": "T02",
+   "text": "him.",
+   "start": 33.837,
+   "end": 33.977
+  },
+  {
+   "line": "T02",
+   "text": "He",
+   "start": 34.117,
+   "end": 34.237
+  },
+  {
+   "line": "T02",
+   "text": "comes",
+   "start": 34.237,
+   "end": 34.437
+  },
+  {
+   "line": "T02",
+   "text": "when",
+   "start": 34.437,
+   "end": 34.637
+  },
+  {
+   "line": "T02",
+   "text": "you",
+   "start": 34.637,
+   "end": 34.757
+  },
+  {
+   "line": "T02",
+   "text": "blink.",
+   "start": 34.757,
+   "end": 34.957
+  },
+  {
+   "line": "H01",
+   "text": "Alright,",
+   "start": 35.612,
+   "end": 36.236
+  },
+  {
+   "line": "H01",
+   "text": "attendance.",
+   "start": 36.236,
+   "end": 36.86
+  },
+  {
+   "line": "H01",
+   "text": "Theo.",
+   "start": 36.86,
+   "end": 37.484
+  },
+  {
+   "line": "H01",
+   "text": "Maya.",
+   "start": 37.484,
+   "end": 38.108
+  },
+  {
+   "line": "H01",
+   "text": "And...",
+   "start": 38.108,
+   "end": 38.732
+  },
+  {
+   "line": "H01",
+   "text": "Kessrah.",
+   "start": 38.732,
+   "end": 39.357
+  },
+  {
+   "line": "Y07",
+   "text": "Wait...",
+   "start": 39.857,
+   "end": 40.017
+  },
+  {
+   "line": "Y07",
+   "text": "what",
+   "start": 40.157,
+   "end": 40.237
+  },
+  {
+   "line": "Y07",
+   "text": "did",
+   "start": 40.237,
+   "end": 40.317
+  },
+  {
+   "line": "Y07",
+   "text": "she",
+   "start": 40.317,
+   "end": 40.437
+  },
+  {
+   "line": "Y07",
+   "text": "just",
+   "start": 40.437,
+   "end": 40.577
+  },
+  {
+   "line": "Y07",
+   "text": "say?",
+   "start": 40.577,
+   "end": 40.837
+  },
+  {
+   "line": "N05",
+   "text": "You",
+   "start": 41.373,
+   "end": 41.533
+  },
+  {
+   "line": "N05",
+   "text": "blink.",
+   "start": 41.533,
+   "end": 41.753
+  },
+  {
+   "line": "N05",
+   "text": "Just",
+   "start": 42.013,
+   "end": 42.253
+  },
+  {
+   "line": "N05",
+   "text": "once.",
+   "start": 42.253,
+   "end": 42.533
+  },
+  {
+   "line": "C02",
+   "text": "We've",
+   "start": 43.54,
+   "end": 43.72
+  },
+  {
+   "line": "C02",
+   "text": "been",
+   "start": 43.72,
+   "end": 43.82
+  },
+  {
+   "line": "C02",
+   "text": "waiting",
+   "start": 43.82,
+   "end": 43.98
+  },
+  {
+   "line": "C02",
+   "text": "for",
+   "start": 43.98,
+   "end": 44.2
+  },
+  {
+   "line": "C02",
+   "text": "you",
+   "start": 44.2,
+   "end": 44.28
+  },
+  {
+   "line": "C02",
+   "text": "to",
+   "start": 44.28,
+   "end": 44.38
+  },
+  {
+   "line": "C02",
+   "text": "blink.",
+   "start": 44.38,
+   "end": 44.56
+  },
+  {
+   "line": "Y08",
+   "text": "Stop",
+   "start": 45.105,
+   "end": 45.405
+  },
+  {
+   "line": "Y08",
+   "text": "it.",
+   "start": 45.405,
+   "end": 45.605
+  },
+  {
+   "line": "Y08",
+   "text": "Stop",
+   "start": 45.885,
+   "end": 45.965
+  },
+  {
+   "line": "Y08",
+   "text": "looking",
+   "start": 45.965,
+   "end": 46.165
+  },
+  {
+   "line": "Y08",
+   "text": "at",
+   "start": 46.165,
+   "end": 46.365
+  },
+  {
+   "line": "Y08",
+   "text": "me!",
+   "start": 46.365,
+   "end": 46.505
+  },
+  {
+   "line": "Y08",
+   "text": "This",
+   "start": 46.665,
+   "end": 46.765
+  },
+  {
+   "line": "Y08",
+   "text": "isn't",
+   "start": 46.765,
+   "end": 47.045
+  },
+  {
+   "line": "Y08",
+   "text": "funny!",
+   "start": 47.045,
+   "end": 47.165
+  },
+  {
+   "line": "H02",
+   "text": "Sit",
+   "start": 47.631,
+   "end": 47.851
+  },
+  {
+   "line": "H02",
+   "text": "down,",
+   "start": 47.851,
+   "end": 48.071
+  },
+  {
+   "line": "H02",
+   "text": "sweetheart.",
+   "start": 48.071,
+   "end": 48.591
+  },
+  {
+   "line": "H02",
+   "text": "Kessrah",
+   "start": 49.011,
+   "end": 49.251
+  },
+  {
+   "line": "H02",
+   "text": "is",
+   "start": 49.251,
+   "end": 49.411
+  },
+  {
+   "line": "H02",
+   "text": "taking",
+   "start": 49.411,
+   "end": 49.651
+  },
+  {
+   "line": "H02",
+   "text": "attendance",
+   "start": 49.651,
+   "end": 50.071
+  },
+  {
+   "line": "H02",
+   "text": "now.",
+   "start": 50.071,
+   "end": 50.431
+  },
+  {
+   "line": "N06",
+   "text": "You",
+   "start": 51.041,
+   "end": 51.201
+  },
+  {
+   "line": "N06",
+   "text": "rub",
+   "start": 51.201,
+   "end": 51.401
+  },
+  {
+   "line": "N06",
+   "text": "your",
+   "start": 51.401,
+   "end": 51.561
+  },
+  {
+   "line": "N06",
+   "text": "eyes",
+   "start": 51.561,
+   "end": 51.881
+  },
+  {
+   "line": "N06",
+   "text": "as",
+   "start": 51.881,
+   "end": 52.121
+  },
+  {
+   "line": "N06",
+   "text": "hard",
+   "start": 52.121,
+   "end": 52.401
+  },
+  {
+   "line": "N06",
+   "text": "as",
+   "start": 52.401,
+   "end": 52.541
+  },
+  {
+   "line": "N06",
+   "text": "you",
+   "start": 52.541,
+   "end": 52.661
+  },
+  {
+   "line": "N06",
+   "text": "can.",
+   "start": 52.661,
+   "end": 52.961
+  },
+  {
+   "line": "N06",
+   "text": "And",
+   "start": 53.181,
+   "end": 53.321
+  },
+  {
+   "line": "N06",
+   "text": "when",
+   "start": 53.321,
+   "end": 53.441
+  },
+  {
+   "line": "N06",
+   "text": "you",
+   "start": 53.441,
+   "end": 53.561
+  },
+  {
+   "line": "N06",
+   "text": "open",
+   "start": 53.561,
+   "end": 53.861
+  },
+  {
+   "line": "N06",
+   "text": "them...",
+   "start": 53.861,
+   "end": 54.101
+  },
+  {
+   "line": "N06",
+   "text": "the",
+   "start": 54.301,
+   "end": 54.381
+  },
+  {
+   "line": "N06",
+   "text": "classroom",
+   "start": 54.381,
+   "end": 54.801
+  },
+  {
+   "line": "N06",
+   "text": "is",
+   "start": 54.801,
+   "end": 55.061
+  },
+  {
+   "line": "N06",
+   "text": "empty.",
+   "start": 55.061,
+   "end": 55.321
+  },
+  {
+   "line": "Y09",
+   "text": "Hello?",
+   "start": 55.953,
+   "end": 56.233
+  },
+  {
+   "line": "Y09",
+   "text": "Theo?",
+   "start": 56.573,
+   "end": 56.913
+  },
+  {
+   "line": "Y09",
+   "text": "Ms.",
+   "start": 57.313,
+   "end": 57.413
+  },
+  {
+   "line": "Y09",
+   "text": "Hart?",
+   "start": 57.633,
+   "end": 57.653
+  },
+  {
+   "line": "Y09",
+   "text": "Anyone?",
+   "start": 57.953,
+   "end": 58.093
+  },
+  {
+   "line": "N07",
+   "text": "On",
+   "start": 59.055,
+   "end": 59.215
+  },
+  {
+   "line": "N07",
+   "text": "the",
+   "start": 59.215,
+   "end": 59.335
+  },
+  {
+   "line": "N07",
+   "text": "board,",
+   "start": 59.335,
+   "end": 59.575
+  },
+  {
+   "line": "N07",
+   "text": "in",
+   "start": 59.895,
+   "end": 59.995
+  },
+  {
+   "line": "N07",
+   "text": "chalk,",
+   "start": 59.995,
+   "end": 60.335
+  },
+  {
+   "line": "N07",
+   "text": "someone",
+   "start": 60.675,
+   "end": 60.795
+  },
+  {
+   "line": "N07",
+   "text": "has",
+   "start": 60.795,
+   "end": 60.975
+  },
+  {
+   "line": "N07",
+   "text": "written",
+   "start": 60.975,
+   "end": 61.155
+  },
+  {
+   "line": "N07",
+   "text": "one",
+   "start": 61.155,
+   "end": 61.495
+  },
+  {
+   "line": "N07",
+   "text": "sentence.",
+   "start": 61.495,
+   "end": 61.915
+  },
+  {
+   "line": "Y10",
+   "text": "No.",
+   "start": 62.576,
+   "end": 62.836
+  },
+  {
+   "line": "Y10",
+   "text": "No,",
+   "start": 63.196,
+   "end": 63.316
+  },
+  {
+   "line": "Y10",
+   "text": "no,",
+   "start": 63.556,
+   "end": 63.556
+  },
+  {
+   "line": "Y10",
+   "text": "no.",
+   "start": 63.776,
+   "end": 63.776
+  },
+  {
+   "line": "Y10",
+   "text": "I'm",
+   "start": 63.996,
+   "end": 64.176
+  },
+  {
+   "line": "Y10",
+   "text": "dreaming.",
+   "start": 64.176,
+   "end": 64.376
+  },
+  {
+   "line": "Y10",
+   "text": "I'm",
+   "start": 64.756,
+   "end": 64.876
+  },
+  {
+   "line": "Y10",
+   "text": "still",
+   "start": 64.876,
+   "end": 65.036
+  },
+  {
+   "line": "Y10",
+   "text": "dreaming.",
+   "start": 65.036,
+   "end": 65.336
+  },
+  {
+   "line": "Y10",
+   "text": "Wake",
+   "start": 65.596,
+   "end": 65.676
+  },
+  {
+   "line": "Y10",
+   "text": "up.",
+   "start": 65.676,
+   "end": 65.936
+  },
+  {
+   "line": "Y10",
+   "text": "Wake",
+   "start": 66.236,
+   "end": 66.336
+  },
+  {
+   "line": "Y10",
+   "text": "up!",
+   "start": 66.336,
+   "end": 66.616
+  },
+  {
+   "line": "K01",
+   "text": "You're",
+   "start": 67.052,
+   "end": 67.272
+  },
+  {
+   "line": "K01",
+   "text": "not",
+   "start": 67.272,
+   "end": 67.392
+  },
+  {
+   "line": "K01",
+   "text": "dreaming.",
+   "start": 67.392,
+   "end": 67.792
+  },
+  {
+   "line": "K01",
+   "text": "You're",
+   "start": 68.092,
+   "end": 68.272
+  },
+  {
+   "line": "K01",
+   "text": "mine.",
+   "start": 68.272,
+   "end": 68.552
+  },
+  {
+   "line": "N08",
+   "text": "It",
+   "start": 69.401,
+   "end": 69.541
+  },
+  {
+   "line": "N08",
+   "text": "came",
+   "start": 69.541,
+   "end": 69.701
+  },
+  {
+   "line": "N08",
+   "text": "from",
+   "start": 69.701,
+   "end": 69.881
+  },
+  {
+   "line": "N08",
+   "text": "the",
+   "start": 69.881,
+   "end": 70.001
+  },
+  {
+   "line": "N08",
+   "text": "back",
+   "start": 70.001,
+   "end": 70.161
+  },
+  {
+   "line": "N08",
+   "text": "of",
+   "start": 70.161,
+   "end": 70.281
+  },
+  {
+   "line": "N08",
+   "text": "the",
+   "start": 70.281,
+   "end": 70.341
+  },
+  {
+   "line": "N08",
+   "text": "room.",
+   "start": 70.341,
+   "end": 70.541
+  },
+  {
+   "line": "N08",
+   "text": "In",
+   "start": 70.661,
+   "end": 70.761
+  },
+  {
+   "line": "N08",
+   "text": "your",
+   "start": 70.761,
+   "end": 70.901
+  },
+  {
+   "line": "N08",
+   "text": "voice.",
+   "start": 70.901,
+   "end": 71.181
+  },
+  {
+   "line": "N09",
+   "text": "Your",
+   "start": 71.795,
+   "end": 71.955
+  },
+  {
+   "line": "N09",
+   "text": "eyes",
+   "start": 71.955,
+   "end": 72.215
+  },
+  {
+   "line": "N09",
+   "text": "are",
+   "start": 72.215,
+   "end": 72.395
+  },
+  {
+   "line": "N09",
+   "text": "burning.",
+   "start": 72.395,
+   "end": 72.675
+  },
+  {
+   "line": "N09",
+   "text": "You",
+   "start": 72.975,
+   "end": 73.075
+  },
+  {
+   "line": "N09",
+   "text": "need",
+   "start": 73.075,
+   "end": 73.215
+  },
+  {
+   "line": "N09",
+   "text": "to",
+   "start": 73.215,
+   "end": 73.375
+  },
+  {
+   "line": "N09",
+   "text": "blink.",
+   "start": 73.375,
+   "end": 73.575
+  },
+  {
+   "line": "Y11",
+   "text": "Please.",
+   "start": 74.025,
+   "end": 74.445
+  },
+  {
+   "line": "Y11",
+   "text": "Please,",
+   "start": 74.745,
+   "end": 74.865
+  },
+  {
+   "line": "Y11",
+   "text": "I",
+   "start": 75.025,
+   "end": 75.045
+  },
+  {
+   "line": "Y11",
+   "text": "don't",
+   "start": 75.045,
+   "end": 75.145
+  },
+  {
+   "line": "Y11",
+   "text": "want",
+   "start": 75.145,
+   "end": 75.225
+  },
+  {
+   "line": "Y11",
+   "text": "to",
+   "start": 75.225,
+   "end": 75.325
+  },
+  {
+   "line": "Y11",
+   "text": "blink.",
+   "start": 75.325,
+   "end": 75.485
+  },
+  {
+   "line": "Y11",
+   "text": "I",
+   "start": 75.685,
+   "end": 75.765
+  },
+  {
+   "line": "Y11",
+   "text": "don't",
+   "start": 75.765,
+   "end": 75.885
+  },
+  {
+   "line": "Y11",
+   "text": "want",
+   "start": 75.885,
+   "end": 75.965
+  },
+  {
+   "line": "Y11",
+   "text": "to",
+   "start": 75.965,
+   "end": 76.065
+  },
+  {
+   "line": "Y11",
+   "text": "blink.",
+   "start": 76.065,
+   "end": 76.225
+  },
+  {
+   "line": "N10",
+   "text": "Run",
+   "start": 76.691,
+   "end": 76.891
+  },
+  {
+   "line": "N10",
+   "text": "for",
+   "start": 76.891,
+   "end": 77.071
+  },
+  {
+   "line": "N10",
+   "text": "the",
+   "start": 77.071,
+   "end": 77.211
+  },
+  {
+   "line": "N10",
+   "text": "door.",
+   "start": 77.211,
+   "end": 77.451
+  },
+  {
+   "line": "N10",
+   "text": "Keep",
+   "start": 77.671,
+   "end": 77.811
+  },
+  {
+   "line": "N10",
+   "text": "your",
+   "start": 77.811,
+   "end": 77.971
+  },
+  {
+   "line": "N10",
+   "text": "eyes",
+   "start": 77.971,
+   "end": 78.171
+  },
+  {
+   "line": "N10",
+   "text": "open.",
+   "start": 78.171,
+   "end": 78.491
+  },
+  {
+   "line": "N10",
+   "text": "Or",
+   "start": 78.751,
+   "end": 78.951
+  },
+  {
+   "line": "N10",
+   "text": "say",
+   "start": 78.951,
+   "end": 79.311
+  },
+  {
+   "line": "N10",
+   "text": "his",
+   "start": 79.311,
+   "end": 79.451
+  },
+  {
+   "line": "N10",
+   "text": "name",
+   "start": 79.451,
+   "end": 79.631
+  },
+  {
+   "line": "N10",
+   "text": "backwards.",
+   "start": 79.631,
+   "end": 79.971
+  },
+  {
+   "line": "N11",
+   "text": "Comment",
+   "start": 80.52,
+   "end": 80.88
+  },
+  {
+   "line": "N11",
+   "text": "one,",
+   "start": 80.88,
+   "end": 81.3
+  },
+  {
+   "line": "N11",
+   "text": "two,",
+   "start": 81.44,
+   "end": 81.68
+  },
+  {
+   "line": "N11",
+   "text": "or",
+   "start": 81.88,
+   "end": 81.98
+  },
+  {
+   "line": "N11",
+   "text": "three.",
+   "start": 81.98,
+   "end": 82.34
+  },
+  {
+   "line": "N11",
+   "text": "And",
+   "start": 82.66,
+   "end": 82.88
+  },
+  {
+   "line": "N11",
+   "text": "don't",
+   "start": 82.88,
+   "end": 83.24
+  },
+  {
+   "line": "N11",
+   "text": "blink",
+   "start": 83.24,
+   "end": 83.42
+  },
+  {
+   "line": "N11",
+   "text": "while",
+   "start": 83.42,
+   "end": 83.64
+  },
+  {
+   "line": "N11",
+   "text": "you",
+   "start": 83.64,
+   "end": 83.78
+  },
+  {
+   "line": "N11",
+   "text": "decide.",
+   "start": 83.78,
+   "end": 84.14
+  }
+ ],
+ "duration": 84.547
+}
