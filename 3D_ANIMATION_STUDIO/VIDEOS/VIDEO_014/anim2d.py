@@ -48,11 +48,15 @@ def rain(cv, t, n=60, alpha=0.35):
         cv.drawLine(x, y, x - 12, y + 60, paint(C('#9FB8D8', alpha), style='stroke', width=3))
 
 
-def sack(cv, x, y, s=1.0):
-    """The pillowcase full of broken porcelain."""
+def sack(cv, x, y, s=1.0, swing=0.0):
+    """The pillowcase full of broken porcelain, hanging from its knot at (x, y) (put that in the hand)."""
+    cv.save(); cv.translate(x, y); cv.rotate(swing); cv.translate(-x, -y)
+    cv.drawRect(skia.Rect(x - 14 * s, y - 10 * s, x + 14 * s, y + 40 * s), paint('#D8D2C4'))
+    y = y + 90 * s
     cv.drawPath(blob([(x - 70 * s, y - 40 * s), (x + 60 * s, y - 50 * s), (x + 90 * s, y + 90 * s), (x, y + 140 * s), (x - 90 * s, y + 90 * s)]),
                 paint('#E8E4DA'))
     cv.drawLine(x - 20 * s, y + 20 * s, x + 30 * s, y + 70 * s, paint(C('#2A4A9A', 0.6), style='stroke', width=6 * s))
+    cv.restore()
 
 
 # ---------------------------------------------------------------- recap (Part 1 shots)
@@ -101,8 +105,9 @@ def shot_PEEPOUT(cv, t):
     glow(cv, (540, 230), 300, LAMP, 0.5)                                                           # porch light
     cv.drawRect(skia.Rect(500, 210, 580, 250), paint('#FFE2A8'))
     cv.drawRect(skia.Rect(0, 1600, W, H), paint('#2A2622'))
-    mascot(cv, 320, 2550, 1.2, view='back', light_side=1, rim=LAMP, rim_a=0.5)                      # you, soaked, with the sack
-    sack(cv, 120, 1720, 1.3)
+    o = mascot(cv, 320, 2550, 1.2, view='back', light_side=1, rim=LAMP, rim_a=0.5, arm_r=(20, 10))   # you, soaked, with the sack
+    hx, hy = o['hand_r']
+    sack(cv, hx, hy, 1.2)
     rain(cv, t)
     shade(cv, (540, 900), 1150, 0.55)
 
@@ -128,9 +133,10 @@ def street(cv, t, scroll):
 def shot_RUN(cv, t):
     u = t - B['card']
     street(cv, t, u * 700)
-    mascot(cv, 520, 1760, 0.62, view='side', face=1, walk=(t * 2.6) % 1, run=True, brow=1.0, mouth='open', mouth_open=0.4, sweat=True,
+    o = mascot(cv, 520, 1760, 0.62, view='side', face=1, walk=(t * 2.6) % 1, run=True, arm_r=(35, 70), brow=1.0, mouth='open', mouth_open=0.4, sweat=True,
            light_side=1, rim=MOON, rim_a=0.5)
-    sack(cv, 470, 1240, 0.8)
+    hx, hy = o['hand_r']
+    sack(cv, hx, hy, 0.55, swing=12 * math.sin(t * 2.6 * 2 * math.pi))
     rain(cv, t)
     shade(cv, (540, 1100), 1250, 0.5)
 
@@ -147,9 +153,10 @@ def shot_FRONT(cv, t):
             cv.drawRect(skia.Rect(min(p0[0], p1[0]) - 120 / z * 10, p1[1], max(p0[0], p1[0]) + 120 / z * 10, p0[1]), paint('#0E1218'))
     far = cam.p(0.2, 0, 22)
     A.crawler(cv, far[0], far[1], 0.08, t)
-    mascot(cv, 540, 1900, 0.9, walk=(t * 2.6) % 1, run=True, brow=1.0, mouth='open', mouth_open=0.4, pupil=0.6, sweat=True, light_side=1,
+    o = mascot(cv, 540, 1900, 0.9, walk=(t * 2.6) % 1, run=True, arm_r=(22, 15), brow=1.0, mouth='open', mouth_open=0.4, pupil=0.6, sweat=True, light_side=1,
            rim=MOON, rim_a=0.5)
-    sack(cv, 760, 1250, 0.9)
+    hx, hy = o['hand_r']
+    sack(cv, hx, hy, 0.8, swing=8 * math.sin(t * 2.6 * 2 * math.pi))
     rain(cv, t)
     shade(cv, (540, 1000), 1200, 0.5)
 
