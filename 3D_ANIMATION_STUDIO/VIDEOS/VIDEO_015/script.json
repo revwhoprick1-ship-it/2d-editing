@@ -1,0 +1,288 @@
+{
+ "title": "Kessrah - Part 1",
+ "engine": "chatterbox",
+ "voice_ref": "kokoro:am_fenrir",
+ "tempo": 1.05,
+ "lines": [
+  {
+   "id": "Y01",
+   "who": "Y",
+   "text": "Okay... why is everyone looking at me?",
+   "delivery": "terrified whisper, voice shaking",
+   "exaggeration": 1.1,
+   "cfg": 0.3,
+   "pause_after": 0.3,
+   "voice_ref": "kokoro:am_puck"
+  },
+  {
+   "id": "C01",
+   "who": "CH",
+   "text": "Because you called him.",
+   "delivery": "calm, in unison, flat",
+   "exaggeration": 0.3,
+   "cfg": 0.5,
+   "pause_after": 0.6,
+   "voice_ref": "kokoro:am_adam"
+  },
+  {
+   "id": "N01",
+   "who": "N",
+   "text": "Twelve hours earlier.",
+   "delivery": "low",
+   "exaggeration": 0.45,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "Y02",
+   "who": "Y",
+   "text": "Okay. Three candles. Salt circle. Three thirty-three. This is so stupid.",
+   "delivery": "nervous laugh, whisper",
+   "exaggeration": 0.8,
+   "cfg": 0.3,
+   "pause_after": 0.3,
+   "voice_ref": "kokoro:am_puck"
+  },
+  {
+   "id": "N02",
+   "who": "N",
+   "text": "The video said: say his name three times. And don't blink until the candles go out.",
+   "delivery": "low, ominous",
+   "exaggeration": 0.55,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "Y03",
+   "who": "Y",
+   "text": "Kessrah. Kessrah... Kessrah.",
+   "delivery": "whisper, growing scared",
+   "exaggeration": 0.9,
+   "cfg": 0.3,
+   "pause_after": 0.6,
+   "voice_ref": "kokoro:am_puck"
+  },
+  {
+   "id": "N03",
+   "who": "N",
+   "text": "All three candles go out. At the exact same time.",
+   "delivery": "dread",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.5
+  },
+  {
+   "id": "Y04",
+   "who": "Y",
+   "text": "Nothing. See? Nothing happened. I'm going to bed.",
+   "delivery": "shaky laugh, trying to be brave",
+   "exaggeration": 0.9,
+   "cfg": 0.3,
+   "pause_after": 0.4,
+   "voice_ref": "kokoro:am_puck"
+  },
+  {
+   "id": "N04",
+   "who": "N",
+   "text": "In the corner of your room... something blinks.",
+   "delivery": "whisper",
+   "exaggeration": 0.65,
+   "cfg": 0.5,
+   "pause_after": 0.8
+  },
+  {
+   "id": "Y05",
+   "who": "Y",
+   "text": "Bro, I did the Kessrah thing last night. Nothing happened.",
+   "delivery": "casual, a bit nervous",
+   "exaggeration": 0.6,
+   "cfg": 0.3,
+   "pause_after": 0.2,
+   "voice_ref": "kokoro:am_puck"
+  },
+  {
+   "id": "T01",
+   "who": "THEO",
+   "text": "Wait. You said it three times? Out loud? Dude... you're not supposed to finish it.",
+   "delivery": "worried, urgent whisper",
+   "exaggeration": 0.8,
+   "cfg": 0.5,
+   "pause_after": 0.2,
+   "voice_ref": "kokoro:am_liam"
+  },
+  {
+   "id": "Y06",
+   "who": "Y",
+   "text": "What do you mean, finish it?",
+   "delivery": "confused, uneasy",
+   "exaggeration": 0.7,
+   "cfg": 0.3,
+   "pause_after": 0.2,
+   "voice_ref": "kokoro:am_puck"
+  },
+  {
+   "id": "T02",
+   "who": "THEO",
+   "text": "He doesn't come when you call him. He comes when you blink.",
+   "delivery": "scared, serious",
+   "exaggeration": 0.85,
+   "cfg": 0.5,
+   "pause_after": 0.5,
+   "voice_ref": "kokoro:am_liam"
+  },
+  {
+   "id": "H01",
+   "who": "HART",
+   "text": "Alright, attendance. Theo. Maya. And... Kessrah.",
+   "delivery": "calm, teacher",
+   "exaggeration": 0.4,
+   "cfg": 0.5,
+   "pause_after": 0.5,
+   "voice_ref": "kokoro:af_sarah"
+  },
+  {
+   "id": "Y07",
+   "who": "Y",
+   "text": "Wait... what did she just say?",
+   "delivery": "horrified whisper",
+   "exaggeration": 1.0,
+   "cfg": 0.3,
+   "pause_after": 0.4,
+   "voice_ref": "kokoro:am_puck"
+  },
+  {
+   "id": "N05",
+   "who": "N",
+   "text": "You blink. Just once.",
+   "delivery": "whisper",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.8
+  },
+  {
+   "id": "C02",
+   "who": "CH",
+   "text": "We've been waiting for you to blink.",
+   "delivery": "calm, smiling, in unison",
+   "exaggeration": 0.3,
+   "cfg": 0.5,
+   "pause_after": 0.4,
+   "voice_ref": "kokoro:am_adam"
+  },
+  {
+   "id": "Y08",
+   "who": "Y",
+   "text": "Stop it. Stop looking at me! This isn't funny!",
+   "delivery": "panicked, crying, shouting",
+   "exaggeration": 1.3,
+   "cfg": 0.3,
+   "pause_after": 0.3,
+   "voice_ref": "kokoro:am_puck"
+  },
+  {
+   "id": "H02",
+   "who": "HART",
+   "text": "Sit down, sweetheart. Kessrah is taking attendance now.",
+   "delivery": "sweet, wrong, calm",
+   "exaggeration": 0.4,
+   "cfg": 0.5,
+   "pause_after": 0.5,
+   "voice_ref": "kokoro:af_sarah"
+  },
+  {
+   "id": "N06",
+   "who": "N",
+   "text": "You rub your eyes as hard as you can. And when you open them... the classroom is empty.",
+   "delivery": "dread",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.5
+  },
+  {
+   "id": "Y09",
+   "who": "Y",
+   "text": "Hello? Theo? Ms. Hart? Anyone?",
+   "delivery": "crying, terrified whisper",
+   "exaggeration": 1.2,
+   "cfg": 0.3,
+   "pause_after": 0.6,
+   "voice_ref": "kokoro:am_puck"
+  },
+  {
+   "id": "N07",
+   "who": "N",
+   "text": "On the board, in chalk, someone has written one sentence.",
+   "delivery": "quiet",
+   "exaggeration": 0.55,
+   "cfg": 0.5,
+   "pause_after": 0.4
+  },
+  {
+   "id": "Y10",
+   "who": "Y",
+   "text": "No. No, no, no. I'm dreaming. I'm still dreaming. Wake up. Wake up!",
+   "delivery": "panic, sobbing",
+   "exaggeration": 1.4,
+   "cfg": 0.3,
+   "pause_after": 0.4,
+   "voice_ref": "kokoro:am_puck"
+  },
+  {
+   "id": "K01",
+   "who": "K",
+   "text": "You're not dreaming. You're mine.",
+   "delivery": "deep, evil, slow",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.6,
+   "voice_ref": "kokoro:am_onyx",
+   "tempo": 0.85
+  },
+  {
+   "id": "N08",
+   "who": "N",
+   "text": "It came from the back of the room. In your voice.",
+   "delivery": "dread",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.4
+  },
+  {
+   "id": "N09",
+   "who": "N",
+   "text": "Your eyes are burning. You need to blink.",
+   "delivery": "tense",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "Y11",
+   "who": "Y",
+   "text": "Please. Please, I don't want to blink. I don't want to blink.",
+   "delivery": "begging, crying, shaking",
+   "exaggeration": 1.4,
+   "cfg": 0.3,
+   "pause_after": 0.4,
+   "voice_ref": "kokoro:am_puck"
+  },
+  {
+   "id": "N10",
+   "who": "N",
+   "text": "Run for the door. Keep your eyes open. Or say his name backwards.",
+   "delivery": "urgent",
+   "exaggeration": 0.55,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "N11",
+   "who": "N",
+   "text": "Comment one, two, or three. And don't blink while you decide.",
+   "delivery": "low, final",
+   "exaggeration": 0.5,
+   "cfg": 0.5,
+   "pause_after": 0.2
+  }
+ ]
+}

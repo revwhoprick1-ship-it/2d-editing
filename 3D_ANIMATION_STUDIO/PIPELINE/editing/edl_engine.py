@@ -761,10 +761,27 @@ def ov_watermark(cv, o, t):
     paste(cv, o['_lay'], o.get('x', W / 2), o.get('y', 1585), 1.0, 0, o.get('alpha', 0.38))
 
 
+def ov_blink(cv, o, t):
+    """POV eyelids: o['blinks'] = [(t_start, close_s, hold_s, open_s)]. Curved black lids close from top and bottom."""
+    for t0, c_, h_, op in o['blinks']:
+        if t0 <= t < t0 + c_ + h_ + op:
+            u = t - t0
+            k = min(1.0, u / c_) if u < c_ else (1.0 if u < c_ + h_ else max(0.0, 1 - (u - c_ - h_) / op))
+            k = k * k * (3 - 2 * k)
+            d = ImageDraw.Draw(cv)
+            lid = int(H / 2 * k) + 2
+            d.rectangle((0, 0, W, lid - 60), fill=(0, 0, 0, 255))
+            d.ellipse((-200, lid - 160, W + 200, lid + 20), fill=(0, 0, 0, 255))
+            d.rectangle((0, H - lid + 60, W, H), fill=(0, 0, 0, 255))
+            d.ellipse((-200, H - lid - 20, W + 200, H - lid + 160), fill=(0, 0, 0, 255))
+            if k > 0.98:
+                d.rectangle((0, 0, W, H), fill=(0, 0, 0, 255))
+
+
 OVERLAYS_FN = {'title': ov_title, 'clock': ov_clock, 'counter': ov_counter, 'chip': ov_chip, 'banner': ov_banner,
                'stamp': ov_stamp, 'lower_third': ov_lower_third, 'ticker': ov_ticker, 'live_bug': ov_live_bug,
                'tag': ov_tag, 'speck': ov_speck, 'sweat': ov_sweat, 'enhance': ov_enhance, 'cctv_hud': ov_cctv_hud,
-               'rewind_hud': ov_rewind_hud, 'timer': ov_timer, 'physics': ov_physics, 'hud': ov_hud, 'text2d': ov_text2d, 'hud3': ov_hud3, 'choice': ov_choice, 'comment': ov_comment, 'watermark': ov_watermark}
+               'rewind_hud': ov_rewind_hud, 'timer': ov_timer, 'physics': ov_physics, 'hud': ov_hud, 'text2d': ov_text2d, 'hud3': ov_hud3, 'choice': ov_choice, 'comment': ov_comment, 'watermark': ov_watermark, 'blink': ov_blink}
 
 
 # ============================================================================ captions

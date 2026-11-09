@@ -1,0 +1,99 @@
+{
+ "title": "chorus",
+ "engine": "chatterbox",
+ "voice_ref": "kokoro:am_fenrir",
+ "tempo": 1.05,
+ "lines": [
+  {
+   "id": "C11",
+   "who": "CH",
+   "text": "Because you called him.",
+   "delivery": "calm, unison",
+   "exaggeration": 0.3,
+   "cfg": 0.5,
+   "pause_after": 0.1,
+   "voice_ref": "kokoro:af_bella"
+  },
+  {
+   "id": "C12",
+   "who": "CH",
+   "text": "We've been waiting for you to blink.",
+   "delivery": "calm, unison",
+   "exaggeration": 0.3,
+   "cfg": 0.5,
+   "pause_after": 0.1,
+   "voice_ref": "kokoro:af_bella"
+  },
+  {
+   "id": "C13",
+   "who": "CH",
+   "text": "Because you called him.",
+   "delivery": "calm, unison",
+   "exaggeration": 0.3,
+   "cfg": 0.5,
+   "pause_after": 0.1,
+   "voice_ref": "kokoro:am_eric"
+  },
+  {
+   "id": "C14",
+   "who": "CH",
+   "text": "We've been waiting for you to blink.",
+   "delivery": "calm, unison",
+   "exaggeration": 0.3,
+   "cfg": 0.5,
+   "pause_after": 0.1,
+   "voice_ref": "kokoro:am_eric"
+  },
+  {
+   "id": "C15",
+   "who": "CH",
+   "text": "Because you called him.",
+   "delivery": "calm, unison",
+   "exaggeration": 0.3,
+   "cfg": 0.5,
+   "pause_after": 0.1,
+   "voice_ref": "kokoro:af_kore"
+  },
+  {
+   "id": "C16",
+   "who": "CH",
+   "text": "We've been waiting for you to blink.",
+   "delivery": "calm, unison",
+   "exaggeration": 0.3,
+   "cfg": 0.5,
+   "pause_after": 0.1,
+   "voice_ref": "kokoro:af_kore"
+  },
+  {
+   "id": "C17",
+   "who": "CH",
+   "text": "Because you called him.",
+   "delivery": "calm, unison",
+   "exaggeration": 0.3,
+   "cfg": 0.5,
+   "pause_after": 0.1,
+   "voice_ref": "kokoro:am_michael"
+  },
+  {
+   "id": "C18",
+   "who": "CH",
+   "text": "We've been waiting for you to blink.",
+   "delivery": "calm, unison",
+   "exaggeration": 0.3,
+   "cfg": 0.5,
+   "pause_after": 0.1,
+   "voice_ref": "kokoro:am_michael"
+  },
+  {
+   "id": "C19",
+   "who": "CH",
+   "text": "You're not dreaming. You're mine.",
+   "delivery": "calm, cold, slow",
+   "exaggeration": 0.4,
+   "cfg": 0.5,
+   "pause_after": 0.1,
+   "voice_ref": "kokoro:am_puck",
+   "tempo": 0.85
+  }
+ ]
+}

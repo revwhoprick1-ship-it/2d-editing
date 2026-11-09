@@ -1229,6 +1229,44 @@ def cue_video014():
 CUES['video014'] = cue_video014
 LOOPS['video014'] = None
 
+
+# ------------------------------------------------------------------ VIDEO_015 cue: "Kessrah · Part 1"
+def cue_video015():
+    sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'VIDEOS', 'VIDEO_015'))
+    import edit_video015 as E15
+    B, END = E15.B, E15.END
+    S = Score(END + 3.0, bpm=60)
+    D = lambda t, d, f=36.7, g=-10: S.add('fx', t, sine(f, d) * env_adsr(int(d * SR), min(1.5, d / 3), 0.2, 0.9, min(1.0, d / 4)) * 0.8, g)
+    D(0.0, B['rewind'], 34.6, -9)
+    S.add('pad', 0.0, inst_tremolo(C(['E4', 'F4', 'A#4']), B['rewind'], rate=11, bright=2600), -17)
+    # 3:33 AM: a slow, low choir-ish pad; a hit when the candles die
+    S.add('pad', B['ritual'], inst_pad(C(['D2', 'A2', 'D3', 'F3']), B['candles'] - B['ritual'] + 1.0, bright=900, attack=1.0), -15)
+    S.add('perc', B['out'], drum_taiko(1.4, 42), -4)
+    S.add('pad', B['out'], inst_strings(C(['D3', 'D#3', 'A3']), 1.8, attack=0.02, bright=2200), -11)
+    D(B['bed'], B['school'] - B['bed'], 32.7, -10)
+    # morning: deceptively normal soft piano, with a wrong note that keeps coming back
+    mel = ['C5', 'E5', 'G5', 'E5', 'C5', 'D5', 'F#5', 'D5', 'C5', 'E5', 'G5', 'F#5']
+    for i, nm in enumerate(mel * 3):
+        tt = B['school'] + 0.2 + i * 0.5
+        if tt < B['class_']:
+            S.add('lead', tt, inst_epiano(mtof(n2m(nm)), 0.45), -16)
+    D(B['class_'], B['js1'] - B['class_'], 36.7, -11)
+    S.add('pad', B['kname'], inst_tremolo(C(['E4', 'F4']), B['js1'] - B['kname'], rate=13, bright=3000), -16)
+    D(B['js1'] + 0.6, B['empty'] - B['js1'], 30.9, -8)
+    D(B['empty'], B['js2'] - B['empty'], 29.1, -8)
+    for i, nm in enumerate(['E5', 'G5', 'B5', 'A#5', 'G5', 'E5']):
+        tt = B['board'] + i * 0.7
+        if tt < B['k01']:
+            S.add('lead', tt, inst_bell(mtof(n2m(nm)) * 0.99, 1.2), -15)
+    D(B['js2'] + 0.6, B['js3'] - B['js2'], 30.9, -8)
+    for i in range(int((B['js3'] - B['choice'] - 1.0) / 0.5)):
+        S.add('perc', B['choice'] + i * 0.5, drum_tick(0.5), -12)
+    return S
+
+
+CUES['video015'] = cue_video015
+LOOPS['video015'] = None
+
 if __name__ == '__main__':
     cue, out = sys.argv[1], sys.argv[2]
     S = CUES[cue]()

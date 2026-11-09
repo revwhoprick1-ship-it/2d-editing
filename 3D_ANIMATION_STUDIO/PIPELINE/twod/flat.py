@@ -554,3 +554,48 @@ def monster(cv, x, y, s=1.0, look=(0.0, 0.0), head_tilt=20.0, arm=0.0, step=None
         cv.drawCircle(ex + look[0] * 6, ey, 6, paint('#000000'))
     cv.restore()
     cv.restore()
+
+
+def kessrah(cv, x, y, s=1.0, open_=0.0, t=0.0, tilt=0.0, reach=0.0):
+    """Kessrah, the One Behind the Eyelids: tall, black, too-long fingers; a pale face made of closed eyelids that open (red irises).
+    Feet at (x, y); s=1 ~ 2400 px tall. open_: 0 all lids closed .. 1 all open."""
+    cv.save(); cv.translate(x, y); cv.scale(s, s)
+    body = '#060607'
+    for side in (-1, 1):
+        cv.drawPath(poly([(side * 50, -1150), (side * 80, -600), (side * 60, 0)], closed=False), paint(body, style='stroke', width=50))
+    cv.drawPath(blob([(-150, -1900), (0, -1960), (150, -1900), (110, -1500), (80, -1150), (0, -1120), (-80, -1150), (-110, -1500)]), paint(body))
+    for side in (-1, 1):
+        r = reach if side > 0 else 0.0
+        pts = [(side * 140, -1880), (side * 230 + r * 200, -1500 - r * 250), (side * 260 + r * 420, -1100 - r * 450)]
+        cv.drawPath(poly(pts, closed=False), paint(body, style='stroke', width=36))
+        fx, fy = pts[-1]
+        for f in range(5):
+            cv.drawLine(fx, fy, fx + side * (f * 22 - 30) + r * 80, fy + 200 + f * 10 - r * 120, paint(body, style='stroke', width=11))
+    cv.save(); cv.translate(0, -2120); cv.rotate(tilt)
+    cv.drawRect(skia.Rect(-30, 0, 30, 180), paint(body))
+    face = blob([(-150, -60), (-120, -220), (0, -260), (120, -220), (150, -60), (110, 140), (0, 200), (-110, 140)])
+    cv.drawPath(face, paint('#D9D4CC'))
+    cv.save(); cv.clipPath(face, skia.ClipOp.kIntersect, True)
+    cv.drawOval(skia.Rect(-240, -300, -60, 300), paint(C('#A8A29A', 0.8), blur=30))
+    k = 0
+    for row in range(5):                                                       # dozens of eyelids
+        n = 3 + (row % 2)
+        for c in range(n):
+            ex = -110 + c * (220 / max(1, n - 1)) + (row % 2) * 8
+            ey = -200 + row * 80
+            w_ = 40 - abs(row - 2) * 3
+            o = max(0.0, min(1.0, open_ * 1.6 - (k % 7) * 0.08))
+            if o > 0.05:
+                cv.drawOval(skia.Rect(ex - w_, ey - 18 * o, ex + w_, ey + 18 * o), paint('#F2EEE6'))
+                cv.drawCircle(ex, ey, 12 * o, paint('#B01212'))
+                cv.drawCircle(ex, ey, 5 * o, paint('#050505'))
+            q = skia.Path(); q.moveTo(ex - w_, ey); q.quadTo(ex, ey + 22 * (1 - o) - 18 * o, ex + w_, ey)
+            cv.drawPath(q, paint('#3A2E2A', style='stroke', width=5))
+            for l in range(4):
+                lx = ex - w_ * 0.6 + l * w_ * 0.4
+                cv.drawLine(lx, ey + 4, lx - 2, ey + 14, paint('#2A201C', style='stroke', width=3))
+            k += 1
+    cv.restore()
+    cv.drawPath(face, paint(C('#8A8278', 0.6), style='stroke', width=6))
+    cv.restore()
+    cv.restore()
