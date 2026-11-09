@@ -6,6 +6,8 @@
   quotes with a small red speaker label. Implementation: `PIPELINE/twod/flat.py` (Skia, BSD) draws every frame at
   1080x1920; captions/HUD from edl_engine (`CAPTIONS['style'] = '2dedit'`, `ASSETS/fonts/RobotoCondensed-Bold.ttf`).
 * Always **send the exported video first**, then run QA and fix/re-render.
+* Every video gets the slightly transparent watermark **@insidethemindlessvault** (edl overlay `{'type': 'watermark'}`).
+* Series parts: hook must work for new viewers; recap ≤ ~6 s; keep a lore bible (e.g. `VIDEOS/VASE_LORE.md`) and never contradict it.
 * Always send a **title + description** (with hashtags + pinned comment) with every video.
 * Normal (non-vibrant) colour unless asked. Keep all on-screen text inside the safe area. Narrator: free local
   Chatterbox (Kokoro timbre), never paid TTS without approval.

@@ -1,0 +1,1599 @@
+{
+ "voice": "chatterbox+kokoro:am_fenrir",
+ "sample_rate": 24000,
+ "lines": [
+  {
+   "id": "G1",
+   "who": "GMA",
+   "text": "Before I open this door... blink.",
+   "start": 0.0,
+   "end": 2.231,
+   "delivery": "old, stern, whisper",
+   "speed": 0.92
+  },
+  {
+   "id": "N01",
+   "who": "N",
+   "text": "Because the thing from the vase never blinks.",
+   "start": 2.631,
+   "end": 5.086,
+   "delivery": "low, ominous",
+   "speed": 1.07
+  },
+  {
+   "id": "N02",
+   "who": "N",
+   "text": "Last night, in Grandma's old house, you broke her vase. Something crawled out, and took your family's voices.",
+   "start": 5.286,
+   "end": 10.252,
+   "delivery": "fast, tense",
+   "speed": 1.07
+  },
+  {
+   "id": "N03",
+   "who": "N",
+   "text": "And you chose to grab the pieces and run to Grandma's.",
+   "start": 10.452,
+   "end": 13.139,
+   "delivery": "tense",
+   "speed": 1.07
+  },
+  {
+   "id": "N04",
+   "who": "N",
+   "text": "Three streets. In the rain. With a pillowcase full of broken porcelain.",
+   "start": 13.439,
+   "end": 17.122,
+   "delivery": "fast, breathless",
+   "speed": 1.07
+  },
+  {
+   "id": "N05",
+   "who": "N",
+   "text": "Behind you, it calls out in Dad's voice.",
+   "start": 17.322,
+   "end": 19.304,
+   "delivery": "dread",
+   "speed": 1.07
+  },
+  {
+   "id": "D1",
+   "who": "DAD",
+   "text": "Come home, buddy.",
+   "start": 19.504,
+   "end": 20.25,
+   "delivery": "flat, cold",
+   "speed": 1.07
+  },
+  {
+   "id": "N06",
+   "who": "N",
+   "text": "Then, in Mom's voice.",
+   "start": 20.55,
+   "end": 21.839,
+   "delivery": "dread",
+   "speed": 1.07
+  },
+  {
+   "id": "D2",
+   "who": "MOM",
+   "text": "Sweetie, you forgot something.",
+   "start": 22.039,
+   "end": 23.384,
+   "delivery": "sweet, too calm",
+   "speed": 1.07
+  },
+  {
+   "id": "N07",
+   "who": "N",
+   "text": "Then... in yours.",
+   "start": 23.684,
+   "end": 24.968,
+   "delivery": "whisper",
+   "speed": 1.07
+  },
+  {
+   "id": "D3",
+   "who": "YOU",
+   "text": "Don't let her in.",
+   "start": 25.168,
+   "end": 25.949,
+   "delivery": "flat, eerie whisper",
+   "speed": 1.07
+  },
+  {
+   "id": "N08",
+   "who": "N",
+   "text": "Lightning. And for one second, you see it on the roofs, keeping up.",
+   "start": 26.549,
+   "end": 29.287,
+   "delivery": "terror",
+   "speed": 1.07
+  },
+  {
+   "id": "N09",
+   "who": "N",
+   "text": "You blink. The door opens.",
+   "start": 29.687,
+   "end": 31.238,
+   "delivery": "relieved, fast",
+   "speed": 1.07
+  },
+  {
+   "id": "G2",
+   "who": "GMA",
+   "text": "Good. Now give me the pieces. All of them.",
+   "start": 31.538,
+   "end": 34.205,
+   "delivery": "old, urgent",
+   "speed": 0.92
+  },
+  {
+   "id": "N10",
+   "who": "N",
+   "text": "She lays them out on the kitchen table. And goes pale.",
+   "start": 34.505,
+   "end": 36.878,
+   "delivery": "quiet",
+   "speed": 1.07
+  },
+  {
+   "id": "G3",
+   "who": "GMA",
+   "text": "The face. Where is the face?",
+   "start": 37.178,
+   "end": 39.125,
+   "delivery": "old, frightened",
+   "speed": 0.92
+  },
+  {
+   "id": "N11",
+   "who": "N",
+   "text": "Twenty-three pieces. One is missing. The one with the painted face.",
+   "start": 39.425,
+   "end": 42.784,
+   "delivery": "dread",
+   "speed": 1.07
+  },
+  {
+   "id": "G4",
+   "who": "GMA",
+   "text": "In nineteen sixty-eight, that thing took my twin brother, Eli. My mother painted every room of our house onto that vase, so it would think the vase was home.",
+   "start": 43.084,
+   "end": 51.4,
+   "delivery": "old, haunted",
+   "speed": 0.92
+  },
+  {
+   "id": "G5",
+   "who": "GMA",
+   "text": "Without the face, we can't seal it back in.",
+   "start": 51.7,
+   "end": 54.471,
+   "delivery": "old, grim",
+   "speed": 0.92
+  },
+  {
+   "id": "N12",
+   "who": "N",
+   "text": "Then someone knocks. Three slow knocks.",
+   "start": 54.871,
+   "end": 57.485,
+   "delivery": "whisper",
+   "speed": 1.07
+  },
+  {
+   "id": "E1",
+   "who": "ELI",
+   "text": "Rosie? It's me. It's Eli. Let me in.",
+   "start": 58.485,
+   "end": 60.739,
+   "delivery": "child, sweet, eerie",
+   "speed": 1.07
+  },
+  {
+   "id": "N13",
+   "who": "N",
+   "text": "Grandma's brother would be seventy years old now. That voice... is still twelve.",
+   "start": 61.339,
+   "end": 64.938,
+   "delivery": "dread, slow",
+   "speed": 1.07
+  },
+  {
+   "id": "N14",
+   "who": "N",
+   "text": "Go back for the face piece. Let Grandma face it alone. Or open the door for Eli.",
+   "start": 66.138,
+   "end": 70.24,
+   "delivery": "urgent",
+   "speed": 1.07
+  },
+  {
+   "id": "N15",
+   "who": "N",
+   "text": "Comment one, two, or three. Part three... if you're still here.",
+   "start": 70.54,
+   "end": 73.776,
+   "delivery": "low, final",
+   "speed": 1.07
+  }
+ ],
+ "words": [
+  {
+   "line": "G1",
+   "text": "Before",
+   "start": 0.0,
+   "end": 0.38
+  },
+  {
+   "line": "G1",
+   "text": "I",
+   "start": 0.38,
+   "end": 0.62
+  },
+  {
+   "line": "G1",
+   "text": "open",
+   "start": 0.62,
+   "end": 0.88
+  },
+  {
+   "line": "G1",
+   "text": "this",
+   "start": 0.88,
+   "end": 1.14
+  },
+  {
+   "line": "G1",
+   "text": "door...",
+   "start": 1.14,
+   "end": 1.48
+  },
+  {
+   "line": "G1",
+   "text": "blink.",
+   "start": 1.94,
+   "end": 2.02
+  },
+  {
+   "line": "N01",
+   "text": "Because",
+   "start": 2.631,
+   "end": 2.931
+  },
+  {
+   "line": "N01",
+   "text": "the",
+   "start": 2.931,
+   "end": 3.171
+  },
+  {
+   "line": "N01",
+   "text": "thing",
+   "start": 3.171,
+   "end": 3.411
+  },
+  {
+   "line": "N01",
+   "text": "from",
+   "start": 3.411,
+   "end": 3.651
+  },
+  {
+   "line": "N01",
+   "text": "the",
+   "start": 3.651,
+   "end": 3.791
+  },
+  {
+   "line": "N01",
+   "text": "vase",
+   "start": 3.791,
+   "end": 4.191
+  },
+  {
+   "line": "N01",
+   "text": "never",
+   "start": 4.191,
+   "end": 4.491
+  },
+  {
+   "line": "N01",
+   "text": "blinks.",
+   "start": 4.491,
+   "end": 4.851
+  },
+  {
+   "line": "N02",
+   "text": "Last",
+   "start": 5.286,
+   "end": 5.526
+  },
+  {
+   "line": "N02",
+   "text": "night,",
+   "start": 5.526,
+   "end": 5.806
+  },
+  {
+   "line": "N02",
+   "text": "in",
+   "start": 5.926,
+   "end": 6.026
+  },
+  {
+   "line": "N02",
+   "text": "Grandma's",
+   "start": 6.026,
+   "end": 6.366
+  },
+  {
+   "line": "N02",
+   "text": "old",
+   "start": 6.366,
+   "end": 6.506
+  },
+  {
+   "line": "N02",
+   "text": "house,",
+   "start": 6.506,
+   "end": 6.806
+  },
+  {
+   "line": "N02",
+   "text": "you",
+   "start": 6.966,
+   "end": 7.026
+  },
+  {
+   "line": "N02",
+   "text": "broke",
+   "start": 7.026,
+   "end": 7.206
+  },
+  {
+   "line": "N02",
+   "text": "her",
+   "start": 7.206,
+   "end": 7.386
+  },
+  {
+   "line": "N02",
+   "text": "vase.",
+   "start": 7.386,
+   "end": 7.726
+  },
+  {
+   "line": "N02",
+   "text": "Something",
+   "start": 8.086,
+   "end": 8.286
+  },
+  {
+   "line": "N02",
+   "text": "crawled",
+   "start": 8.286,
+   "end": 8.546
+  },
+  {
+   "line": "N02",
+   "text": "out,",
+   "start": 8.546,
+   "end": 8.826
+  },
+  {
+   "line": "N02",
+   "text": "and",
+   "start": 8.826,
+   "end": 9.026
+  },
+  {
+   "line": "N02",
+   "text": "took",
+   "start": 9.026,
+   "end": 9.206
+  },
+  {
+   "line": "N02",
+   "text": "your",
+   "start": 9.206,
+   "end": 9.386
+  },
+  {
+   "line": "N02",
+   "text": "family's",
+   "start": 9.386,
+   "end": 9.786
+  },
+  {
+   "line": "N02",
+   "text": "voices.",
+   "start": 9.786,
+   "end": 9.986
+  },
+  {
+   "line": "N03",
+   "text": "And",
+   "start": 10.452,
+   "end": 10.592
+  },
+  {
+   "line": "N03",
+   "text": "you",
+   "start": 10.592,
+   "end": 10.732
+  },
+  {
+   "line": "N03",
+   "text": "chose",
+   "start": 10.732,
+   "end": 10.952
+  },
+  {
+   "line": "N03",
+   "text": "to",
+   "start": 10.952,
+   "end": 11.232
+  },
+  {
+   "line": "N03",
+   "text": "grab",
+   "start": 11.232,
+   "end": 11.412
+  },
+  {
+   "line": "N03",
+   "text": "the",
+   "start": 11.412,
+   "end": 11.592
+  },
+  {
+   "line": "N03",
+   "text": "pieces",
+   "start": 11.592,
+   "end": 11.892
+  },
+  {
+   "line": "N03",
+   "text": "and",
+   "start": 11.892,
+   "end": 12.252
+  },
+  {
+   "line": "N03",
+   "text": "run",
+   "start": 12.252,
+   "end": 12.412
+  },
+  {
+   "line": "N03",
+   "text": "to",
+   "start": 12.412,
+   "end": 12.552
+  },
+  {
+   "line": "N03",
+   "text": "Grandma's.",
+   "start": 12.552,
+   "end": 13.112
+  },
+  {
+   "line": "N04",
+   "text": "Three",
+   "start": 13.439,
+   "end": 13.679
+  },
+  {
+   "line": "N04",
+   "text": "streets.",
+   "start": 13.679,
+   "end": 14.139
+  },
+  {
+   "line": "N04",
+   "text": "In",
+   "start": 14.399,
+   "end": 14.499
+  },
+  {
+   "line": "N04",
+   "text": "the",
+   "start": 14.499,
+   "end": 14.639
+  },
+  {
+   "line": "N04",
+   "text": "rain.",
+   "start": 14.639,
+   "end": 14.879
+  },
+  {
+   "line": "N04",
+   "text": "With",
+   "start": 15.139,
+   "end": 15.279
+  },
+  {
+   "line": "N04",
+   "text": "a",
+   "start": 15.279,
+   "end": 15.399
+  },
+  {
+   "line": "N04",
+   "text": "pillowcase",
+   "start": 15.399,
+   "end": 15.859
+  },
+  {
+   "line": "N04",
+   "text": "full",
+   "start": 15.859,
+   "end": 16.119
+  },
+  {
+   "line": "N04",
+   "text": "of",
+   "start": 16.119,
+   "end": 16.299
+  },
+  {
+   "line": "N04",
+   "text": "broken",
+   "start": 16.299,
+   "end": 16.539
+  },
+  {
+   "line": "N04",
+   "text": "porcelain.",
+   "start": 16.539,
+   "end": 17.039
+  },
+  {
+   "line": "N05",
+   "text": "Behind",
+   "start": 17.322,
+   "end": 17.602
+  },
+  {
+   "line": "N05",
+   "text": "you,",
+   "start": 17.602,
+   "end": 17.822
+  },
+  {
+   "line": "N05",
+   "text": "it",
+   "start": 17.822,
+   "end": 17.982
+  },
+  {
+   "line": "N05",
+   "text": "calls",
+   "start": 17.982,
+   "end": 18.222
+  },
+  {
+   "line": "N05",
+   "text": "out",
+   "start": 18.222,
+   "end": 18.442
+  },
+  {
+   "line": "N05",
+   "text": "in",
+   "start": 18.442,
+   "end": 18.622
+  },
+  {
+   "line": "N05",
+   "text": "Dad's",
+   "start": 18.622,
+   "end": 18.902
+  },
+  {
+   "line": "N05",
+   "text": "voice.",
+   "start": 18.902,
+   "end": 19.082
+  },
+  {
+   "line": "D1",
+   "text": "Come",
+   "start": 19.504,
+   "end": 19.704
+  },
+  {
+   "line": "D1",
+   "text": "home,",
+   "start": 19.704,
+   "end": 19.904
+  },
+  {
+   "line": "D1",
+   "text": "buddy.",
+   "start": 20.044,
+   "end": 20.084
+  },
+  {
+   "line": "N06",
+   "text": "Then,",
+   "start": 20.55,
+   "end": 20.89
+  },
+  {
+   "line": "N06",
+   "text": "in",
+   "start": 20.89,
+   "end": 21.21
+  },
+  {
+   "line": "N06",
+   "text": "Mom's",
+   "start": 21.21,
+   "end": 21.49
+  },
+  {
+   "line": "N06",
+   "text": "voice.",
+   "start": 21.49,
+   "end": 21.65
+  },
+  {
+   "line": "D2",
+   "text": "Sweetie,",
+   "start": 22.039,
+   "end": 22.479
+  },
+  {
+   "line": "D2",
+   "text": "you",
+   "start": 22.579,
+   "end": 22.699
+  },
+  {
+   "line": "D2",
+   "text": "forgot",
+   "start": 22.699,
+   "end": 22.899
+  },
+  {
+   "line": "D2",
+   "text": "something.",
+   "start": 22.899,
+   "end": 23.179
+  },
+  {
+   "line": "N07",
+   "text": "Then...",
+   "start": 23.684,
+   "end": 24.064
+  },
+  {
+   "line": "N07",
+   "text": "in",
+   "start": 24.064,
+   "end": 24.404
+  },
+  {
+   "line": "N07",
+   "text": "yours.",
+   "start": 24.404,
+   "end": 24.664
+  },
+  {
+   "line": "D3",
+   "text": "Don't",
+   "start": 25.168,
+   "end": 25.448
+  },
+  {
+   "line": "D3",
+   "text": "let",
+   "start": 25.448,
+   "end": 25.528
+  },
+  {
+   "line": "D3",
+   "text": "her",
+   "start": 25.528,
+   "end": 25.628
+  },
+  {
+   "line": "D3",
+   "text": "in.",
+   "start": 25.628,
+   "end": 25.828
+  },
+  {
+   "line": "N08",
+   "text": "Lightning.",
+   "start": 26.549,
+   "end": 26.829
+  },
+  {
+   "line": "N08",
+   "text": "And",
+   "start": 26.829,
+   "end": 27.129
+  },
+  {
+   "line": "N08",
+   "text": "for",
+   "start": 27.129,
+   "end": 27.289
+  },
+  {
+   "line": "N08",
+   "text": "one",
+   "start": 27.289,
+   "end": 27.569
+  },
+  {
+   "line": "N08",
+   "text": "second,",
+   "start": 27.569,
+   "end": 27.849
+  },
+  {
+   "line": "N08",
+   "text": "you",
+   "start": 27.849,
+   "end": 28.069
+  },
+  {
+   "line": "N08",
+   "text": "see",
+   "start": 28.069,
+   "end": 28.229
+  },
+  {
+   "line": "N08",
+   "text": "it",
+   "start": 28.229,
+   "end": 28.349
+  },
+  {
+   "line": "N08",
+   "text": "on",
+   "start": 28.349,
+   "end": 28.429
+  },
+  {
+   "line": "N08",
+   "text": "the",
+   "start": 28.429,
+   "end": 28.529
+  },
+  {
+   "line": "N08",
+   "text": "roofs,",
+   "start": 28.529,
+   "end": 28.749
+  },
+  {
+   "line": "N08",
+   "text": "keeping",
+   "start": 28.749,
+   "end": 29.029
+  },
+  {
+   "line": "N08",
+   "text": "up.",
+   "start": 29.029,
+   "end": 29.249
+  },
+  {
+   "line": "N09",
+   "text": "You",
+   "start": 29.687,
+   "end": 29.827
+  },
+  {
+   "line": "N09",
+   "text": "blink.",
+   "start": 29.827,
+   "end": 30.047
+  },
+  {
+   "line": "N09",
+   "text": "The",
+   "start": 30.307,
+   "end": 30.447
+  },
+  {
+   "line": "N09",
+   "text": "door",
+   "start": 30.447,
+   "end": 30.627
+  },
+  {
+   "line": "N09",
+   "text": "opens.",
+   "start": 30.627,
+   "end": 30.947
+  },
+  {
+   "line": "G2",
+   "text": "Good.",
+   "start": 31.538,
+   "end": 31.778
+  },
+  {
+   "line": "G2",
+   "text": "Now",
+   "start": 32.198,
+   "end": 32.318
+  },
+  {
+   "line": "G2",
+   "text": "give",
+   "start": 32.318,
+   "end": 32.498
+  },
+  {
+   "line": "G2",
+   "text": "me",
+   "start": 32.498,
+   "end": 32.618
+  },
+  {
+   "line": "G2",
+   "text": "the",
+   "start": 32.618,
+   "end": 32.738
+  },
+  {
+   "line": "G2",
+   "text": "pieces.",
+   "start": 32.738,
+   "end": 33.058
+  },
+  {
+   "line": "G2",
+   "text": "All",
+   "start": 33.558,
+   "end": 33.758
+  },
+  {
+   "line": "G2",
+   "text": "of",
+   "start": 33.758,
+   "end": 33.918
+  },
+  {
+   "line": "G2",
+   "text": "them.",
+   "start": 33.918,
+   "end": 34.098
+  },
+  {
+   "line": "N10",
+   "text": "She",
+   "start": 34.505,
+   "end": 34.685
+  },
+  {
+   "line": "N10",
+   "text": "lays",
+   "start": 34.685,
+   "end": 34.905
+  },
+  {
+   "line": "N10",
+   "text": "them",
+   "start": 34.905,
+   "end": 35.105
+  },
+  {
+   "line": "N10",
+   "text": "out",
+   "start": 35.105,
+   "end": 35.265
+  },
+  {
+   "line": "N10",
+   "text": "on",
+   "start": 35.265,
+   "end": 35.385
+  },
+  {
+   "line": "N10",
+   "text": "the",
+   "start": 35.385,
+   "end": 35.485
+  },
+  {
+   "line": "N10",
+   "text": "kitchen",
+   "start": 35.485,
+   "end": 35.685
+  },
+  {
+   "line": "N10",
+   "text": "table.",
+   "start": 35.685,
+   "end": 36.025
+  },
+  {
+   "line": "N10",
+   "text": "And",
+   "start": 36.025,
+   "end": 36.265
+  },
+  {
+   "line": "N10",
+   "text": "goes",
+   "start": 36.265,
+   "end": 36.485
+  },
+  {
+   "line": "N10",
+   "text": "pale.",
+   "start": 36.485,
+   "end": 36.725
+  },
+  {
+   "line": "G3",
+   "text": "The",
+   "start": 37.178,
+   "end": 37.338
+  },
+  {
+   "line": "G3",
+   "text": "face.",
+   "start": 37.338,
+   "end": 37.638
+  },
+  {
+   "line": "G3",
+   "text": "Where",
+   "start": 38.038,
+   "end": 38.398
+  },
+  {
+   "line": "G3",
+   "text": "is",
+   "start": 38.398,
+   "end": 38.558
+  },
+  {
+   "line": "G3",
+   "text": "the",
+   "start": 38.558,
+   "end": 38.718
+  },
+  {
+   "line": "G3",
+   "text": "face?",
+   "start": 38.718,
+   "end": 38.918
+  },
+  {
+   "line": "N11",
+   "text": "Twenty-three",
+   "start": 39.425,
+   "end": 39.825
+  },
+  {
+   "line": "N11",
+   "text": "pieces.",
+   "start": 39.825,
+   "end": 40.165
+  },
+  {
+   "line": "N11",
+   "text": "One",
+   "start": 40.685,
+   "end": 40.765
+  },
+  {
+   "line": "N11",
+   "text": "is",
+   "start": 40.765,
+   "end": 40.905
+  },
+  {
+   "line": "N11",
+   "text": "missing.",
+   "start": 40.905,
+   "end": 41.165
+  },
+  {
+   "line": "N11",
+   "text": "The",
+   "start": 41.605,
+   "end": 41.705
+  },
+  {
+   "line": "N11",
+   "text": "one",
+   "start": 41.705,
+   "end": 41.865
+  },
+  {
+   "line": "N11",
+   "text": "with",
+   "start": 41.865,
+   "end": 41.985
+  },
+  {
+   "line": "N11",
+   "text": "the",
+   "start": 41.985,
+   "end": 42.105
+  },
+  {
+   "line": "N11",
+   "text": "painted",
+   "start": 42.105,
+   "end": 42.305
+  },
+  {
+   "line": "N11",
+   "text": "face.",
+   "start": 42.305,
+   "end": 42.585
+  },
+  {
+   "line": "G4",
+   "text": "In",
+   "start": 43.084,
+   "end": 43.371
+  },
+  {
+   "line": "G4",
+   "text": "nineteen",
+   "start": 43.371,
+   "end": 43.658
+  },
+  {
+   "line": "G4",
+   "text": "sixty-eight,",
+   "start": 43.658,
+   "end": 43.945
+  },
+  {
+   "line": "G4",
+   "text": "that",
+   "start": 43.945,
+   "end": 44.231
+  },
+  {
+   "line": "G4",
+   "text": "thing",
+   "start": 44.231,
+   "end": 44.518
+  },
+  {
+   "line": "G4",
+   "text": "took",
+   "start": 44.518,
+   "end": 44.805
+  },
+  {
+   "line": "G4",
+   "text": "my",
+   "start": 44.805,
+   "end": 45.092
+  },
+  {
+   "line": "G4",
+   "text": "twin",
+   "start": 45.092,
+   "end": 45.378
+  },
+  {
+   "line": "G4",
+   "text": "brother,",
+   "start": 45.378,
+   "end": 45.665
+  },
+  {
+   "line": "G4",
+   "text": "Eli.",
+   "start": 45.665,
+   "end": 45.952
+  },
+  {
+   "line": "G4",
+   "text": "My",
+   "start": 45.952,
+   "end": 46.239
+  },
+  {
+   "line": "G4",
+   "text": "mother",
+   "start": 46.239,
+   "end": 46.525
+  },
+  {
+   "line": "G4",
+   "text": "painted",
+   "start": 46.525,
+   "end": 46.812
+  },
+  {
+   "line": "G4",
+   "text": "every",
+   "start": 46.812,
+   "end": 47.099
+  },
+  {
+   "line": "G4",
+   "text": "room",
+   "start": 47.099,
+   "end": 47.386
+  },
+  {
+   "line": "G4",
+   "text": "of",
+   "start": 47.386,
+   "end": 47.672
+  },
+  {
+   "line": "G4",
+   "text": "our",
+   "start": 47.672,
+   "end": 47.959
+  },
+  {
+   "line": "G4",
+   "text": "house",
+   "start": 47.959,
+   "end": 48.246
+  },
+  {
+   "line": "G4",
+   "text": "onto",
+   "start": 48.246,
+   "end": 48.532
+  },
+  {
+   "line": "G4",
+   "text": "that",
+   "start": 48.532,
+   "end": 48.819
+  },
+  {
+   "line": "G4",
+   "text": "vase,",
+   "start": 48.819,
+   "end": 49.106
+  },
+  {
+   "line": "G4",
+   "text": "so",
+   "start": 49.106,
+   "end": 49.393
+  },
+  {
+   "line": "G4",
+   "text": "it",
+   "start": 49.393,
+   "end": 49.679
+  },
+  {
+   "line": "G4",
+   "text": "would",
+   "start": 49.679,
+   "end": 49.966
+  },
+  {
+   "line": "G4",
+   "text": "think",
+   "start": 49.966,
+   "end": 50.253
+  },
+  {
+   "line": "G4",
+   "text": "the",
+   "start": 50.253,
+   "end": 50.54
+  },
+  {
+   "line": "G4",
+   "text": "vase",
+   "start": 50.54,
+   "end": 50.826
+  },
+  {
+   "line": "G4",
+   "text": "was",
+   "start": 50.826,
+   "end": 51.113
+  },
+  {
+   "line": "G4",
+   "text": "home.",
+   "start": 51.113,
+   "end": 51.4
+  },
+  {
+   "line": "G5",
+   "text": "Without",
+   "start": 51.7,
+   "end": 51.98
+  },
+  {
+   "line": "G5",
+   "text": "the",
+   "start": 51.98,
+   "end": 52.14
+  },
+  {
+   "line": "G5",
+   "text": "face,",
+   "start": 52.14,
+   "end": 52.46
+  },
+  {
+   "line": "G5",
+   "text": "we",
+   "start": 52.92,
+   "end": 53.1
+  },
+  {
+   "line": "G5",
+   "text": "can't",
+   "start": 53.1,
+   "end": 53.42
+  },
+  {
+   "line": "G5",
+   "text": "seal",
+   "start": 53.42,
+   "end": 53.6
+  },
+  {
+   "line": "G5",
+   "text": "it",
+   "start": 53.6,
+   "end": 53.72
+  },
+  {
+   "line": "G5",
+   "text": "back",
+   "start": 53.72,
+   "end": 53.92
+  },
+  {
+   "line": "G5",
+   "text": "in.",
+   "start": 53.92,
+   "end": 54.24
+  },
+  {
+   "line": "N12",
+   "text": "Then",
+   "start": 54.871,
+   "end": 55.091
+  },
+  {
+   "line": "N12",
+   "text": "someone",
+   "start": 55.091,
+   "end": 55.611
+  },
+  {
+   "line": "N12",
+   "text": "knocks.",
+   "start": 55.611,
+   "end": 56.011
+  },
+  {
+   "line": "N12",
+   "text": "Three",
+   "start": 56.311,
+   "end": 56.571
+  },
+  {
+   "line": "N12",
+   "text": "slow",
+   "start": 56.571,
+   "end": 56.931
+  },
+  {
+   "line": "N12",
+   "text": "knocks.",
+   "start": 56.931,
+   "end": 57.271
+  },
+  {
+   "line": "E1",
+   "text": "Rosie?",
+   "start": 58.485,
+   "end": 58.865
+  },
+  {
+   "line": "E1",
+   "text": "It's",
+   "start": 59.025,
+   "end": 59.225
+  },
+  {
+   "line": "E1",
+   "text": "me.",
+   "start": 59.225,
+   "end": 59.385
+  },
+  {
+   "line": "E1",
+   "text": "It's",
+   "start": 59.665,
+   "end": 59.785
+  },
+  {
+   "line": "E1",
+   "text": "Eli.",
+   "start": 59.785,
+   "end": 59.985
+  },
+  {
+   "line": "E1",
+   "text": "Let",
+   "start": 60.325,
+   "end": 60.365
+  },
+  {
+   "line": "E1",
+   "text": "me",
+   "start": 60.365,
+   "end": 60.465
+  },
+  {
+   "line": "E1",
+   "text": "in.",
+   "start": 60.465,
+   "end": 60.625
+  },
+  {
+   "line": "N13",
+   "text": "Grandma's",
+   "start": 61.339,
+   "end": 61.719
+  },
+  {
+   "line": "N13",
+   "text": "brother",
+   "start": 61.719,
+   "end": 61.879
+  },
+  {
+   "line": "N13",
+   "text": "would",
+   "start": 61.879,
+   "end": 62.059
+  },
+  {
+   "line": "N13",
+   "text": "be",
+   "start": 62.059,
+   "end": 62.219
+  },
+  {
+   "line": "N13",
+   "text": "seventy",
+   "start": 62.219,
+   "end": 62.519
+  },
+  {
+   "line": "N13",
+   "text": "years",
+   "start": 62.519,
+   "end": 62.719
+  },
+  {
+   "line": "N13",
+   "text": "old",
+   "start": 62.719,
+   "end": 62.959
+  },
+  {
+   "line": "N13",
+   "text": "now.",
+   "start": 62.959,
+   "end": 63.199
+  },
+  {
+   "line": "N13",
+   "text": "That",
+   "start": 63.459,
+   "end": 63.599
+  },
+  {
+   "line": "N13",
+   "text": "voice...",
+   "start": 63.599,
+   "end": 63.899
+  },
+  {
+   "line": "N13",
+   "text": "is",
+   "start": 63.899,
+   "end": 64.259
+  },
+  {
+   "line": "N13",
+   "text": "still",
+   "start": 64.259,
+   "end": 64.459
+  },
+  {
+   "line": "N13",
+   "text": "twelve.",
+   "start": 64.459,
+   "end": 64.719
+  },
+  {
+   "line": "N14",
+   "text": "Go",
+   "start": 66.138,
+   "end": 66.379
+  },
+  {
+   "line": "N14",
+   "text": "back",
+   "start": 66.379,
+   "end": 66.62
+  },
+  {
+   "line": "N14",
+   "text": "for",
+   "start": 66.62,
+   "end": 66.862
+  },
+  {
+   "line": "N14",
+   "text": "the",
+   "start": 66.862,
+   "end": 67.103
+  },
+  {
+   "line": "N14",
+   "text": "face",
+   "start": 67.103,
+   "end": 67.344
+  },
+  {
+   "line": "N14",
+   "text": "piece.",
+   "start": 67.344,
+   "end": 67.586
+  },
+  {
+   "line": "N14",
+   "text": "Let",
+   "start": 67.586,
+   "end": 67.827
+  },
+  {
+   "line": "N14",
+   "text": "Grandma",
+   "start": 67.827,
+   "end": 68.068
+  },
+  {
+   "line": "N14",
+   "text": "face",
+   "start": 68.068,
+   "end": 68.309
+  },
+  {
+   "line": "N14",
+   "text": "it",
+   "start": 68.309,
+   "end": 68.551
+  },
+  {
+   "line": "N14",
+   "text": "alone.",
+   "start": 68.551,
+   "end": 68.792
+  },
+  {
+   "line": "N14",
+   "text": "Or",
+   "start": 68.792,
+   "end": 69.033
+  },
+  {
+   "line": "N14",
+   "text": "open",
+   "start": 69.033,
+   "end": 69.275
+  },
+  {
+   "line": "N14",
+   "text": "the",
+   "start": 69.275,
+   "end": 69.516
+  },
+  {
+   "line": "N14",
+   "text": "door",
+   "start": 69.516,
+   "end": 69.757
+  },
+  {
+   "line": "N14",
+   "text": "for",
+   "start": 69.757,
+   "end": 69.999
+  },
+  {
+   "line": "N14",
+   "text": "Eli.",
+   "start": 69.999,
+   "end": 70.24
+  },
+  {
+   "line": "N15",
+   "text": "Comment",
+   "start": 70.54,
+   "end": 70.8
+  },
+  {
+   "line": "N15",
+   "text": "one,",
+   "start": 70.8,
+   "end": 71.16
+  },
+  {
+   "line": "N15",
+   "text": "two,",
+   "start": 71.36,
+   "end": 71.6
+  },
+  {
+   "line": "N15",
+   "text": "or",
+   "start": 71.8,
+   "end": 71.86
+  },
+  {
+   "line": "N15",
+   "text": "three.",
+   "start": 71.86,
+   "end": 72.18
+  },
+  {
+   "line": "N15",
+   "text": "Part",
+   "start": 72.4,
+   "end": 72.56
+  },
+  {
+   "line": "N15",
+   "text": "three...",
+   "start": 72.56,
+   "end": 72.86
+  },
+  {
+   "line": "N15",
+   "text": "if",
+   "start": 72.86,
+   "end": 73.14
+  },
+  {
+   "line": "N15",
+   "text": "you're",
+   "start": 73.14,
+   "end": 73.32
+  },
+  {
+   "line": "N15",
+   "text": "still",
+   "start": 73.32,
+   "end": 73.46
+  },
+  {
+   "line": "N15",
+   "text": "here.",
+   "start": 73.46,
+   "end": 73.74
+  }
+ ],
+ "duration": 73.976
+}

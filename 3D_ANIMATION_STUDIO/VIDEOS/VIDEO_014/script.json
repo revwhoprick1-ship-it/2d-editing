@@ -1,0 +1,238 @@
+{
+ "title": "Don't Touch The Vase - Part 2",
+ "engine": "chatterbox",
+ "voice_ref": "kokoro:am_fenrir",
+ "tempo": 1.07,
+ "lines": [
+  {
+   "id": "G1",
+   "who": "GMA",
+   "text": "Before I open this door... blink.",
+   "delivery": "old, stern, whisper",
+   "exaggeration": 0.5,
+   "cfg": 0.5,
+   "pause_after": 0.4,
+   "voice_ref": "kokoro:af_sarah",
+   "tempo": 0.92
+  },
+  {
+   "id": "N01",
+   "who": "N",
+   "text": "Because the thing from the vase never blinks.",
+   "delivery": "low, ominous",
+   "exaggeration": 0.55,
+   "cfg": 0.5,
+   "pause_after": 0.2
+  },
+  {
+   "id": "N02",
+   "who": "N",
+   "text": "Last night, in Grandma's old house, you broke her vase. Something crawled out, and took your family's voices.",
+   "delivery": "fast, tense",
+   "exaggeration": 0.55,
+   "cfg": 0.5,
+   "pause_after": 0.2
+  },
+  {
+   "id": "N03",
+   "who": "N",
+   "text": "And you chose to grab the pieces and run to Grandma's.",
+   "delivery": "tense",
+   "exaggeration": 0.5,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "N04",
+   "who": "N",
+   "text": "Three streets. In the rain. With a pillowcase full of broken porcelain.",
+   "delivery": "fast, breathless",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.2
+  },
+  {
+   "id": "N05",
+   "who": "N",
+   "text": "Behind you, it calls out in Dad's voice.",
+   "delivery": "dread",
+   "exaggeration": 0.55,
+   "cfg": 0.5,
+   "pause_after": 0.2
+  },
+  {
+   "id": "D1",
+   "who": "DAD",
+   "text": "Come home, buddy.",
+   "delivery": "flat, cold",
+   "exaggeration": 0.4,
+   "cfg": 0.5,
+   "pause_after": 0.3,
+   "voice_ref": "kokoro:am_michael"
+  },
+  {
+   "id": "N06",
+   "who": "N",
+   "text": "Then, in Mom's voice.",
+   "delivery": "dread",
+   "exaggeration": 0.55,
+   "cfg": 0.5,
+   "pause_after": 0.2
+  },
+  {
+   "id": "D2",
+   "who": "MOM",
+   "text": "Sweetie, you forgot something.",
+   "delivery": "sweet, too calm",
+   "exaggeration": 0.4,
+   "cfg": 0.5,
+   "pause_after": 0.3,
+   "voice_ref": "kokoro:af_heart"
+  },
+  {
+   "id": "N07",
+   "who": "N",
+   "text": "Then... in yours.",
+   "delivery": "whisper",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.2
+  },
+  {
+   "id": "D3",
+   "who": "YOU",
+   "text": "Don't let her in.",
+   "delivery": "flat, eerie whisper",
+   "exaggeration": 0.5,
+   "cfg": 0.5,
+   "pause_after": 0.6,
+   "voice_ref": "kokoro:am_puck"
+  },
+  {
+   "id": "N08",
+   "who": "N",
+   "text": "Lightning. And for one second, you see it on the roofs, keeping up.",
+   "delivery": "terror",
+   "exaggeration": 0.7,
+   "cfg": 0.5,
+   "pause_after": 0.4
+  },
+  {
+   "id": "N09",
+   "who": "N",
+   "text": "You blink. The door opens.",
+   "delivery": "relieved, fast",
+   "exaggeration": 0.5,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "G2",
+   "who": "GMA",
+   "text": "Good. Now give me the pieces. All of them.",
+   "delivery": "old, urgent",
+   "exaggeration": 0.5,
+   "cfg": 0.5,
+   "pause_after": 0.3,
+   "voice_ref": "kokoro:af_sarah",
+   "tempo": 0.92
+  },
+  {
+   "id": "N10",
+   "who": "N",
+   "text": "She lays them out on the kitchen table. And goes pale.",
+   "delivery": "quiet",
+   "exaggeration": 0.55,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "G3",
+   "who": "GMA",
+   "text": "The face. Where is the face?",
+   "delivery": "old, frightened",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.3,
+   "voice_ref": "kokoro:af_sarah",
+   "tempo": 0.92
+  },
+  {
+   "id": "N11",
+   "who": "N",
+   "text": "Twenty-three pieces. One is missing. The one with the painted face.",
+   "delivery": "dread",
+   "exaggeration": 0.55,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "G4",
+   "who": "GMA",
+   "text": "In nineteen sixty-eight, that thing took my twin brother, Eli. My mother painted every room of our house onto that vase, so it would think the vase was home.",
+   "delivery": "old, haunted",
+   "exaggeration": 0.55,
+   "cfg": 0.5,
+   "pause_after": 0.3,
+   "voice_ref": "kokoro:af_sarah",
+   "tempo": 0.92
+  },
+  {
+   "id": "G5",
+   "who": "GMA",
+   "text": "Without the face, we can't seal it back in.",
+   "delivery": "old, grim",
+   "exaggeration": 0.5,
+   "cfg": 0.5,
+   "pause_after": 0.4,
+   "voice_ref": "kokoro:af_sarah",
+   "tempo": 0.92
+  },
+  {
+   "id": "N12",
+   "who": "N",
+   "text": "Then someone knocks. Three slow knocks.",
+   "delivery": "whisper",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 1.0
+  },
+  {
+   "id": "E1",
+   "who": "ELI",
+   "text": "Rosie? It's me. It's Eli. Let me in.",
+   "delivery": "child, sweet, eerie",
+   "exaggeration": 0.5,
+   "cfg": 0.5,
+   "pause_after": 0.6,
+   "voice_ref": "kokoro:am_puck"
+  },
+  {
+   "id": "N13",
+   "who": "N",
+   "text": "Grandma's brother would be seventy years old now. That voice... is still twelve.",
+   "delivery": "dread, slow",
+   "exaggeration": 0.7,
+   "cfg": 0.5,
+   "pause_after": 1.2
+  },
+  {
+   "id": "N14",
+   "who": "N",
+   "text": "Go back for the face piece. Let Grandma face it alone. Or open the door for Eli.",
+   "delivery": "urgent",
+   "exaggeration": 0.5,
+   "cfg": 0.5,
+   "pause_after": 0.3
+  },
+  {
+   "id": "N15",
+   "who": "N",
+   "text": "Comment one, two, or three. Part three... if you're still here.",
+   "delivery": "low, final",
+   "exaggeration": 0.5,
+   "cfg": 0.5,
+   "pause_after": 0.2
+  }
+ ]
+}

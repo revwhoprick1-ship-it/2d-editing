@@ -1185,6 +1185,50 @@ def cue_video013():
 CUES['video013'] = cue_video013
 LOOPS['video013'] = None
 
+
+# ------------------------------------------------------------------ VIDEO_014 cue: "Don't Touch The Vase · Part 2"
+def cue_video014():
+    sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'VIDEOS', 'VIDEO_014'))
+    import edit_video014 as E14
+    B, END = E14.B, E14.END
+    S = Score(END + 3.0, bpm=60)
+    D = lambda t, d, f=36.7, g=-10: S.add('fx', t, sine(f, d) * env_adsr(int(d * SR), min(1.5, d / 3), 0.2, 0.9, min(1.0, d / 4)) * 0.8, g)
+    D(0.0, B['recap'], 34.6, -10)
+    S.add('pad', 0.0, inst_tremolo(C(['E4', 'F4']), B['recap'], rate=10, bright=2500), -18)
+    S.add('perc', B['recap'], drum_taiko(1.2, 44), -5)
+    # the run: fast pulse
+    t, k = B['card'], 0
+    while t < B['lightning']:
+        S.add('bass', t, inst_bass(mtof(n2m(['E2', 'E2', 'F2', 'E2'][k % 4])), 0.12, cutoff=500), -11)
+        if k % 4 == 0:
+            S.add('perc', t, drum_taiko(0.7, 50), -11)
+        t += 0.16
+        k += 1
+    D(B['door'], B['g4'] - B['door'], 32.7, -10)
+    # Grandma's kitchen: grandma's music box (the same tune as Part 1), slower
+    mel = ['E5', 'G5', 'B5', 'A5', 'G5', 'E5', 'D#5', 'E5']
+    for i, nm in enumerate(mel):
+        tt = B['kitchen'] + 0.3 + i * 0.45
+        if tt < B['g3']:
+            S.add('lead', tt, inst_bell(mtof(n2m(nm)) * 0.99, 1.2), -15)
+    S.add('perc', B['missing'] + 0.6, drum_taiko(1.2, 44), -5)
+    # 1968: a faded, warped lullaby
+    for i, nm in enumerate(['E4', 'G4', 'B4', 'A4', 'G4', 'E4', 'D#4', 'E4', 'B3', 'E4']):
+        tt = B['g4'] + 0.2 + i * 0.6
+        if tt < B['g5']:
+            S.add('lead', tt, inst_epiano(mtof(n2m(nm)) * 0.985, 0.55), -14)
+    S.add('pad', B['g4'], inst_pad([f * 0.985 for f in C(['E3', 'G3', 'B3'])], B['g5'] - B['g4'], bright=900, attack=0.6), -17)
+    D(B['knock'], B['js2'] - B['knock'], 30.9, -8)
+    S.add('pad', B['e1'], inst_tremolo(C(['D5', 'D#5', 'A5']), B['js2'] - B['e1'], rate=14, bright=3500), -17)
+    D(B['js2'] + 0.6, B['js3'] - B['js2'], 29.1, -8)
+    for i in range(int((B['js3'] - B['choice'] - 1.2) / 0.5)):
+        S.add('perc', B['choice'] + i * 0.5, drum_tick(0.5), -12)
+    return S
+
+
+CUES['video014'] = cue_video014
+LOOPS['video014'] = None
+
 if __name__ == '__main__':
     cue, out = sys.argv[1], sys.argv[2]
     S = CUES[cue]()

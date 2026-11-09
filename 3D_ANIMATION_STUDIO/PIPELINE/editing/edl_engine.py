@@ -747,10 +747,24 @@ def ov_comment(cv, o, t):
     paste(cv, lay, W / 2, o.get('y', 560), pop_scale(t, o['t0'], 0.18, 1.06), 0, max(0.0, a))
 
 
+def ov_watermark(cv, o, t):
+    """Channel watermark: small, slightly transparent, inside the safe area."""
+    if '_lay' not in o:
+        f = font(FONT_C, o.get('size', 40))
+        txt = o.get('text', '@insidethemindlessvault')
+        wd = int(f.getlength(txt)) + 20
+        lay = Image.new('RGBA', (wd, o.get('size', 40) + 24), (0, 0, 0, 0))
+        d = ImageDraw.Draw(lay)
+        d.text((12, 14), txt, font=f, fill=(0, 0, 0, 90))
+        d.text((10, 12), txt, font=f, fill=(255, 255, 255, 255))
+        o['_lay'] = lay
+    paste(cv, o['_lay'], o.get('x', W / 2), o.get('y', 1585), 1.0, 0, o.get('alpha', 0.38))
+
+
 OVERLAYS_FN = {'title': ov_title, 'clock': ov_clock, 'counter': ov_counter, 'chip': ov_chip, 'banner': ov_banner,
                'stamp': ov_stamp, 'lower_third': ov_lower_third, 'ticker': ov_ticker, 'live_bug': ov_live_bug,
                'tag': ov_tag, 'speck': ov_speck, 'sweat': ov_sweat, 'enhance': ov_enhance, 'cctv_hud': ov_cctv_hud,
-               'rewind_hud': ov_rewind_hud, 'timer': ov_timer, 'physics': ov_physics, 'hud': ov_hud, 'text2d': ov_text2d, 'hud3': ov_hud3, 'choice': ov_choice, 'comment': ov_comment}
+               'rewind_hud': ov_rewind_hud, 'timer': ov_timer, 'physics': ov_physics, 'hud': ov_hud, 'text2d': ov_text2d, 'hud3': ov_hud3, 'choice': ov_choice, 'comment': ov_comment, 'watermark': ov_watermark}
 
 
 # ============================================================================ captions

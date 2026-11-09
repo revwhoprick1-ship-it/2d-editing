@@ -1,0 +1,834 @@
+{
+ "duration": 76.78,
+ "loop": true,
+ "narration": "narration/narration_raw.wav",
+ "narration_offset": 0.0,
+ "music": "music_score.wav",
+ "music_gain_db": 2,
+ "music_cue": "cue_video014",
+ "music_gates": [
+  [
+   25.948999999999998,
+   26.529,
+   0.1
+  ],
+  [
+   64.938,
+   65.36800000000001,
+   0.15
+  ],
+  [
+   74.83,
+   76.01,
+   0.2
+  ]
+ ],
+ "targets": {
+  "narration_lufs": -16,
+  "master_lufs": -14,
+  "true_peak": -2.0,
+  "duck_db": 4
+ },
+ "cues": [
+  {
+   "t": 0.0,
+   "file": "AUDIO/ambience/room_tone.flac",
+   "gain": -6,
+   "bus": "amb",
+   "note": "air (never dead silence)",
+   "loop": true,
+   "dur": 76.78
+  },
+  {
+   "t": 0.0,
+   "file": "AUDIO/sound_effects/comedy/rain_window.flac",
+   "gain": -8,
+   "bus": "amb",
+   "note": "rain",
+   "loop": true,
+   "dur": 31.538,
+   "fade_out": 0.4
+  },
+  {
+   "t": 0.1,
+   "file": "AUDIO/sound_effects/bio/heartbeat_lubdub.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "the eye in the peephole"
+  },
+  {
+   "t": 5.286,
+   "file": "AUDIO/sound_effects/comedy/vhs_rewind.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "previously"
+  },
+  {
+   "t": 5.386,
+   "file": "AUDIO/sound_effects/comedy/vase_shatter.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "recap: the vase"
+  },
+  {
+   "t": 9.026,
+   "file": "AUDIO/sound_effects/comedy/jumpscare.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "recap: Dad (quiet)"
+  },
+  {
+   "t": 10.452,
+   "file": "AUDIO/sound_effects/reactions/pop.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "top comment card"
+  },
+  {
+   "t": 10.452,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 10.652,
+   "file": "AUDIO/sound_effects/comedy/heavy_breath.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "panting",
+   "loop": true,
+   "dur": 15.897000000000002
+  },
+  {
+   "t": 10.662,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 10.752,
+   "file": "AUDIO/sound_effects/comedy/keys_jingle.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "porcelain rattling in the sack",
+   "loop": true,
+   "dur": 15.797
+  },
+  {
+   "t": 10.872,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 11.082,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 11.292,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 11.502,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 11.712,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 11.922,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 12.132,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 12.342,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 12.552,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 12.762,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 12.972,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 13.182,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 13.392,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 13.602,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 13.812,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 14.022,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 14.232,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 14.442,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 14.652,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 14.862,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 15.072,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 15.282,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 15.492,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 15.702,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 15.912,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 16.122,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 16.332,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 16.542,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 16.752,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 16.962,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 17.172,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 17.382,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 17.592,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 17.622,
+   "file": "AUDIO/sound_effects/comedy/stair_crawl.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "it keeps pace on the roofs",
+   "loop": true,
+   "dur": 9.227
+  },
+  {
+   "t": 17.802,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 18.012,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 18.222,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 18.432,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 18.642,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 18.852,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 19.062,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 19.272,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 19.482,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 19.692,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 19.902,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 20.112,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 20.322,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 20.532,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 20.742,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 20.952,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 21.162,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 21.372,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 21.582,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 21.792,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 22.002,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 22.212,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 22.422,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 22.632,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 22.842,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 23.052,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 23.262,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 23.472,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 23.682,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 23.892,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 24.102,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 24.312,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 24.522,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 24.732,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 24.942,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 25.068,
+   "file": "AUDIO/sound_effects/comedy/whispers.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "your own voice behind you"
+  },
+  {
+   "t": 25.152,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 25.362,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 25.572,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 25.782,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 25.992,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 26.202,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "splashing steps"
+  },
+  {
+   "t": 26.519,
+   "file": "AUDIO/sound_effects/comedy/jumpscare.flac",
+   "gain": -3,
+   "bus": "sfx",
+   "note": "JUMPSCARE 1: lightning, it is right there"
+  },
+  {
+   "t": 26.549,
+   "file": "AUDIO/sound_effects/comedy/thunder.flac",
+   "gain": -7,
+   "bus": "sfx",
+   "note": "thunder"
+  },
+  {
+   "t": 29.827,
+   "file": "AUDIO/sound_effects/comedy/lock_click.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "locks turning"
+  },
+  {
+   "t": 30.627,
+   "file": "AUDIO/sound_effects/comedy/creak_long.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "the door opens"
+  },
+  {
+   "t": 31.538,
+   "file": "AUDIO/sound_effects/comedy/rain_window.flac",
+   "gain": -18,
+   "bus": "amb",
+   "note": "rain on Grandma's window",
+   "loop": true,
+   "dur": 45.242000000000004
+  },
+  {
+   "t": 32.138,
+   "file": "AUDIO/sound_effects/comedy/vase_shatter.flac",
+   "gain": -23,
+   "bus": "sfx",
+   "note": "pieces poured onto the table"
+  },
+  {
+   "t": 40.025,
+   "file": "AUDIO/sound_effects/comedy/horror_sting.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "23 / 24: the face is missing"
+  },
+  {
+   "t": 43.084,
+   "file": "AUDIO/sound_effects/comedy/vhs_rewind.flac",
+   "gain": -19,
+   "bus": "sfx",
+   "note": "1968"
+  },
+  {
+   "t": 49.406,
+   "file": "AUDIO/sound_effects/comedy/smoke_hiss.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "the smoke sucked into the vase"
+  },
+  {
+   "t": 50.206,
+   "file": "AUDIO/sound_effects/comedy/stamp_thud.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "wax seal pressed"
+  },
+  {
+   "t": 55.771,
+   "file": "AUDIO/sound_effects/comedy/door_knock.flac",
+   "gain": -5,
+   "bus": "sfx",
+   "note": "knock knock"
+  },
+  {
+   "t": 56.971,
+   "file": "AUDIO/sound_effects/comedy/door_knock.flac",
+   "gain": -7,
+   "bus": "sfx",
+   "note": "knock"
+  },
+  {
+   "t": 61.739,
+   "file": "AUDIO/sound_effects/bio/heartbeat_muffled.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "Grandma frozen"
+  },
+  {
+   "t": 65.358,
+   "file": "AUDIO/sound_effects/comedy/jumpscare.flac",
+   "gain": -2,
+   "bus": "sfx",
+   "note": "JUMPSCARE 2: the peephole"
+  },
+  {
+   "t": 65.888,
+   "file": "AUDIO/sound_effects/comedy/tinnitus.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "ringing"
+  },
+  {
+   "t": 66.388,
+   "file": "AUDIO/sound_effects/comedy/door_knock.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "knocking resumes"
+  },
+  {
+   "t": 66.888,
+   "file": "AUDIO/sound_effects/comedy/bone_clicks.flac",
+   "gain": -19,
+   "bus": "sfx",
+   "note": "eyes open 1"
+  },
+  {
+   "t": 67.538,
+   "file": "AUDIO/sound_effects/comedy/whispers.flac",
+   "gain": -21,
+   "bus": "sfx",
+   "note": "whispers rising",
+   "loop": true,
+   "dur": 7.29199999999999,
+   "fade_in": 2.0
+  },
+  {
+   "t": 67.988,
+   "file": "AUDIO/sound_effects/comedy/door_knock.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "harder"
+  },
+  {
+   "t": 68.388,
+   "file": "AUDIO/sound_effects/comedy/bone_clicks.flac",
+   "gain": -18,
+   "bus": "sfx",
+   "note": "eyes open 2"
+  },
+  {
+   "t": 68.688,
+   "file": "AUDIO/sound_effects/comedy/knob_turn.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "the handle turns"
+  },
+  {
+   "t": 69.888,
+   "file": "AUDIO/sound_effects/comedy/bone_clicks.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "eyes open 3"
+  },
+  {
+   "t": 71.388,
+   "file": "AUDIO/sound_effects/comedy/bone_clicks.flac",
+   "gain": -16,
+   "bus": "sfx",
+   "note": "eyes open 4"
+  },
+  {
+   "t": 72.888,
+   "file": "AUDIO/sound_effects/comedy/bone_clicks.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "eyes open 5"
+  },
+  {
+   "t": 76.0,
+   "file": "AUDIO/sound_effects/comedy/jumpscare.flac",
+   "gain": -1,
+   "bus": "sfx",
+   "note": "JUMPSCARE 3: lunge -> frame 0"
+  }
+ ]
+}
