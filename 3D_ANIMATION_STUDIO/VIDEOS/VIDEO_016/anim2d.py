@@ -365,14 +365,20 @@ def shot_HALL(cv, t):
 def shot_CHASE(cv, t):
     """Side-scroll: all five running through the forest at night; it lopes behind them, far too fast."""
     u = t - B['chase']
-    forest(cv, t, cam_x=u * 3.0, fog=0.5)
-    leaves(cv, 30, int(u * 10))
+    if t < B['exit']:                                                                 # still inside: the hallway, scrolling
+        house_room(cv, t, lit=flicker(t, 5, 9.0, 0.4))
+        for k in range(6):
+            x = (k * 260 - u * 900) % 1400 - 200
+            cv.drawRect(skia.Rect(x, 500, x + 160, 1300), paint('#1A120C'))
+    else:
+        forest(cv, t, cam_x=u * 3.0, fog=0.5)
+        leaves(cv, 30, int(u * 10))
     for i, who in enumerate('MBLJK'):
         x = 1000 - i * 175 + 20 * math.sin(t * 3 + i)
         P = face_pose(who, t)
         mascot(cv, x, 1800 + (i % 2) * 50, 0.42 * (1.2 if who == 'J' else 1.0), view='side', face=1, walk=(t * 2.8 + i * 0.3) % 1, run=True,
                light_side=1, rim=MOON, rim_a=0.6, **P)
-    gap = max(-120.0, 80 - u * 40)
+    gap = max(-120.0, min(80.0, 80 - u * 40))
     mimic(cv, gap, 1840, 0.42, t=t, tilt=30, grin=1.0, run=(t * 2.2) % 1, reach=1.0, rim=MOON, rim_a=0.5)
     shade(cv, (600, 1100), 1250, 0.5)
 

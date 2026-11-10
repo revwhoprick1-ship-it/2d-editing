@@ -74,8 +74,9 @@ for i, lid in enumerate(ORDER):
     if st - prev_end > 0.05:                                                      # the gap before this line: action
         g = GAP_SHOT.get(lid, shot)
         SEGMENTS.append(S(prev_end, st, g if g != 'BLACK' else None, zoom=push(prev_end, st, 1.0, 1.08) if g != 'BLACK' else []))
-    SEGMENTS.append(S(st, nxt, shot if shot != 'BLACK' else None, zoom=push(st, nxt, 1.0, 1.12) if shot != 'BLACK' else []))
-    prev_end = nxt
+    hold = nxt if nxt - en < 1.0 else en + 0.35                                  # long silence after a line = action gap shot
+    SEGMENTS.append(S(st, hold, shot if shot != 'BLACK' else None, zoom=push(st, hold, 1.0, 1.12) if shot != 'BLACK' else []))
+    prev_end = hold
 
 # one continuous slow push per run of the same shot (no zoom snapping back at a cut to the same picture)
 _runs = []
