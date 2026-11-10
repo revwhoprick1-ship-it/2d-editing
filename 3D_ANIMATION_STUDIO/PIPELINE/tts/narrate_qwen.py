@@ -45,7 +45,7 @@ def to16k(y, sr):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('script'); ap.add_argument('out')
-    ap.add_argument('--only', default=None); ap.add_argument('--takes', type=int, default=2)
+    ap.add_argument('--only', default=None); ap.add_argument('--takes', type=int, default=3)
     a = ap.parse_args()
     S = json.load(open(a.script))
     torch.set_num_threads(os.cpu_count())
@@ -77,7 +77,8 @@ def main():
         best = None
         for k in range(a.takes):
             torch.manual_seed(1000 * k + int(ln['id'][1:]))
-            ys, sr = m.generate_voice_clone(text=ln['text'], language='English', voice_clone_prompt=prompts[who])
+            ys, sr = m.generate_voice_clone(text=ln['text'], language='English', voice_clone_prompt=prompts[who],
+                                               max_new_tokens=int(12 * (0.55 * len(ln['text'].split()) + 2.5)))  # stops runaway takes
             y = trim(np.asarray(ys[0], np.float32), sr)
             y = trim(atempo(y, sr, ln.get('tempo', tempo)), sr)
             segs, _ = wm.transcribe(to16k(y, sr), word_timestamps=False)
