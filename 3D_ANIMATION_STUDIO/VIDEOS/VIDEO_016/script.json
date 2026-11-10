@@ -1,8 +1,8 @@
 {
  "title": "The Forest That Eats People",
- "engine": "chatterbox",
+ "engine": "qwen3-tts",
  "voice_ref": "kokoro:am_fenrir",
- "tempo": 1.05,
+ "tempo": 1.1,
  "lines": [
   {
    "id": "X01",
@@ -530,5 +530,12 @@
    "voice_ref": "kokoro:am_puck",
    "as": "M"
   }
- ]
+ ],
+ "qwen_voices": {
+  "K": "Male, 20 years old, American. Mid-low pitched, slightly raspy, loud and cocky, energetic reckless class clown, fast excited delivery.",
+  "L": "Male, 20 years old, American. Medium pitched, nasal sarcastic tone, jokey but nervous, quick talker.",
+  "B": "Male, 19 years old, American nerd. Medium-low pitch, soft careful precise voice, anxious and breathy, slightly fast.",
+  "J": "Male, 22 years old, American, big strong guy. Very deep low bass voice, slow, calm and heavy, few words.",
+  "M": "Male, 20 years old, American. Low-mid pitch, warm clear steady voice, calm logical leader, quietly tense."
+ }
 }

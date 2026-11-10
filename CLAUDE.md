@@ -10,5 +10,5 @@
 * Series parts: hook must work for new viewers; recap ≤ ~6 s; keep a lore bible (e.g. `VIDEOS/VASE_LORE.md`) and never contradict it.
 * Always send a **title + description** (with hashtags + pinned comment) with every video.
 * Normal (non-vibrant) colour unless asked. Keep all on-screen text inside the safe area. Narrator: free local
-  Chatterbox (Kokoro timbre), never paid TTS without approval.
+  Qwen3-TTS ONLY (Apache-2.0, `/opt/tools/qwen`: VoiceDesign ref per character -> Base voice clone per line), never paid TTS/ElevenLabs.
 * Reply in short "caveman" talk.
