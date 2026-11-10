@@ -77,6 +77,19 @@ for i, lid in enumerate(ORDER):
     SEGMENTS.append(S(st, nxt, shot if shot != 'BLACK' else None, zoom=push(st, nxt, 1.0, 1.12) if shot != 'BLACK' else []))
     prev_end = nxt
 
+# one continuous slow push per run of the same shot (no zoom snapping back at a cut to the same picture)
+_runs = []
+for sg in SEGMENTS:
+    if _runs and _runs[-1]['src'] == sg['src']:
+        _runs[-1]['t1'] = sg['t1']
+    else:
+        _runs.append(dict(sg))
+SEGMENTS = []
+for k, r in enumerate(_runs):
+    zin = k % 2 == 0                                                              # alternate push-in / pull-out
+    a, b = (1.0, 1.06) if zin else (1.06, 1.0)
+    SEGMENTS.append(S(r['t0'], r['t1'], r['src'], zoom=push(r['t0'], r['t1'], a, b) if r['src'] else []))
+
 
 def override(t0, t1, job, **kw):
     """Cut [t0, t1) out of the list and insert a special segment."""
