@@ -935,6 +935,59 @@ def chase_run():
     return normalize(fade(out, 0.05, 0.2), -4)
 
 
+@reg('seatbelt_ding', 'Airliner seatbelt chime: two soft tones, high then low (1.6 s).')
+def seatbelt_ding():
+    n = int(1.6 * SR); out = np.zeros(n)
+    for t0, f in ((0.0, 1046.5), (0.35, 784.0)):
+        k = int(1.2 * SR); i = int(t0 * SR)
+        x = fm_bell(f, 1.2, ratio=2.0, index=1.2, decay=0.9)[:k]
+        out[i:i + len(x)] += x[:n - i] * 0.6
+    return normalize(convolve_stereo(out, reverb_ir(1.0, 0.4, seed=1701), 0.25), -3)
+
+@reg('buckle_click', 'Seatbelt buckle unlatching: sharp metal click + strap slide (0.4 s).')
+def buckle_click():
+    n = int(0.4 * SR); out = np.zeros(n)
+    k = int(0.03 * SR)
+    out[:k] += bandpass(noise(k, 'white', 1702), 2500, 9000) * env_exp(k, 0.004)
+    out[int(0.05 * SR):int(0.05 * SR) + k] += bandpass(noise(k, 'white', 1703), 1500, 6000) * env_exp(k, 0.006) * 0.6
+    m = int(0.3 * SR)
+    out[int(0.08 * SR):int(0.08 * SR) + m] += bandpass(noise(m, 'pink', 1704), 800, 4000) * env_adsr(m, 0.02, 0.1, 0.3, 0.1) * 0.25
+    return normalize(out, -2)
+
+@reg('cabin_drone', 'Airliner cabin at night: jet engine roar + air hiss, loopable (10 s).')
+def cabin_drone():
+    n = int(10.0 * SR); tt = np.arange(n) / SR
+    x = lowpass(noise(n, 'brown', 1705), 400) * 1.0 + bandpass(noise(n, 'pink', 1706), 2000, 6000) * 0.15
+    x += 0.15 * np.sin(2 * np.pi * 110 * tt) * (1 + 0.1 * np.sin(2 * np.pi * 0.3 * tt))
+    return normalize(fade(x, 0.5, 0.5), -8)
+
+@reg('cart_rattle', 'Drinks trolley rolling down the aisle: wheel rumble + bottles clinking (3 s).')
+def cart_rattle():
+    n = int(3.0 * SR); rng = np.random.default_rng(1707)
+    x = lowpass(noise(n, 'brown', 1708), 300) * 0.6 * (1 + 0.3 * np.sin(2 * np.pi * 9 * np.arange(n) / SR))
+    for t0 in np.sort(rng.uniform(0, 2.8, 16)):
+        k = int(0.2 * SR); i = int(t0 * SR)
+        x[i:i + k] += fm_bell(rng.uniform(1800, 3200), 0.2, ratio=3.1, index=2.0, decay=0.15)[:k] * 0.25
+    return normalize(fade(x, 0.2, 0.3), -5)
+
+@reg('bin_slam', 'Overhead bin slammed shut, plastic + latch, with cabin echo (1.2 s).')
+def bin_slam():
+    n = int(1.2 * SR); out = np.zeros(n)
+    k = int(0.15 * SR)
+    out[:k] += (lowpass(noise(k, 'white', 1709), 600) * 1.4 + bandpass(noise(k, 'white', 1710), 1000, 5000) * 0.6) * env_exp(k, 0.04)
+    out[int(0.06 * SR):int(0.06 * SR) + int(0.03 * SR)] += bandpass(noise(int(0.03 * SR), 'white', 1711), 3000, 9000) * 0.5
+    return normalize(convolve_stereo(out, reverb_ir(0.9, 0.4, seed=1712), 0.3), -1)
+
+@reg('crunch', 'Wet bone crunch from inside a box: cracks + squelch, muffled (1.4 s).')
+def crunch():
+    n = int(1.4 * SR); out = np.zeros(n); rng = np.random.default_rng(1713)
+    for t0 in np.sort(rng.uniform(0, 1.2, 9)):
+        k = int(0.07 * SR); i = int(t0 * SR)
+        out[i:i + k] += bandpass(noise(k, 'white', int(t0 * 1e4)), 600, 3500) * env_exp(k, 0.015) * rng.uniform(0.5, 1)
+    out += lowpass(noise(n, 'brown', 1714), 250) * env_adsr(n, 0.05, 0.3, 0.5, 0.4) * 0.8
+    return normalize(lowpass(out, 2500), -2)
+
+
 def main():
     root = sys.argv[1]
     d = os.path.join(root, 'sound_effects', 'comedy')

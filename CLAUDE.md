@@ -11,4 +11,6 @@
 * Always send a **title + description** (with hashtags + pinned comment) with every video.
 * Normal (non-vibrant) colour unless asked. Keep all on-screen text inside the safe area. Narrator: free local
   Qwen3-TTS ONLY (Apache-2.0, `/opt/tools/qwen`: VoiceDesign ref per character -> Base voice clone per line), never paid TTS/ElevenLabs.
+* **Retention rules** (from real stats): read `3D_ANIMATION_STUDIO/VIDEOS/RETENTION_LESSONS.md` before every new video. Frame 0 =
+  character in danger; no flashbacks/recaps; standalone stories (no "Part 2"); no end choice card; 60–75 s.
 * Reply in short "caveman" talk.

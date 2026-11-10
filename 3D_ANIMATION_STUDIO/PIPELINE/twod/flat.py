@@ -659,3 +659,87 @@ def mimic(cv, x, y, s=1.0, t=0.0, tilt=70.0, grin=1.0, reach=0.0, run=None, look
     cv.drawPath(head, paint(C(rim, rim_a), style='stroke', width=10, blur=4))
     cv.restore()
     cv.restore()
+
+
+def purser(cv, x, y, s=1.0, t=0.0, neck=0.0, mask=0.0, reach=0.0, head_turn=0.0, crawl=False, wrong=0.0, rim='#E8C890', rim_a=0.5,
+           blood_=0.0):
+    """The Purser (VIDEO_017): a flight attendant from far away. Up close: 2.4 m, navy uniform, pillbox hat, gold wings.
+    Its face is a yellow oxygen mask with a smile painted on it; mask=1 lifts the mask off a round mouth of teeth (lamprey).
+    neck 0..1 unfolds an accordion neck (like a jet bridge); arms fold out in three hinged slats like tray tables.
+    wrong 0..1: knees bend backwards, shoes on backwards (heels forward). head_turn in degrees (180 = facing behind).
+    crawl=True: drawn for a ceiling crawl (caller rotates the canvas 180). Feet at (x, y); s=1 ~ 2400 px tall."""
+    navy, navy_sh, skin, sh, gold, blood = '#1E2A44', '#141C30', '#D8CFC6', '#ADA49A', '#D8B45A', '#6A1010'
+    cv.save(); cv.translate(x, y); cv.scale(s, s)
+    for side in (-1, 1):                                                       # legs, stockings; knees bend the wrong way
+        kx = side * 70 + (90 * wrong) * (1 if not crawl else -1)
+        pts = [(side * 60, -1150), (kx, -620), (side * 55, -60)]
+        cv.drawPath(poly(pts, closed=False), paint(sh if side < 0 else skin, style='stroke', width=58))
+        hx = -1 if wrong > 0.5 else 1                                          # shoes: toe forward, or heel forward
+        cv.drawPath(blob([(side * 55 - 40 * hx, -70), (side * 55 + 90 * hx, -40), (side * 55 + 100 * hx, 0), (side * 55 - 50 * hx, 0)]), paint('#0E0E12'))
+        cv.drawRect(skia.Rect(side * 55 - 50 * hx - 6, -40, side * 55 - 50 * hx + 6, 0), paint('#0E0E12'))
+    skirt = blob([(-150, -1450), (150, -1450), (130, -1050), (-130, -1050)])
+    cv.drawPath(skirt, paint(navy_sh))
+    torso = blob([(-180, -2000), (0, -2050), (180, -2000), (150, -1650), (140, -1430), (0, -1410), (-140, -1430), (-150, -1650)])
+    cv.drawPath(torso, paint(navy))
+    cv.save(); cv.clipPath(torso, skia.ClipOp.kIntersect, True)
+    cv.drawRect(skia.Rect(-300, -2100, -30, -1400), paint(navy_sh))
+    cv.drawPath(poly([(-60, -2040), (0, -1840), (60, -2040)]), paint('#EDE6DA'))   # blouse V + scarf
+    cv.drawPath(poly([(-40, -1990), (0, -1900), (40, -1990), (70, -1860), (0, -1880), (-70, -1860)]), paint('#9A1E24'))
+    for k in range(3):
+        cv.drawCircle(0, -1780 + k * 110, 12, paint(gold))
+    cv.drawPath(poly([(70, -1820), (150, -1830), (110, -1800)]), paint(gold))  # wings pin
+    cv.drawRect(skia.Rect(-150, -1840, -60, -1805), paint('#EDE6DA'))         # name tag
+    if blood_ > 0:
+        for bx, by, br in ((-60, -1700, 60), (40, -1560, 45), (-20, -1480, 35)):
+            cv.drawPath(blob([(bx - br, by), (bx, by - br), (bx + br, by), (bx + 8, by + br * 1.8)]), paint(C(blood, 0.9 * blood_)))
+    cv.drawPath(torso, paint(C(rim, rim_a), style='stroke', width=12, blur=4))
+    cv.restore()
+    for side in (-1, 1):                                                       # arms: three hinged slats, too long
+        r = reach if side > 0 else reach * 0.7
+        p0 = (side * 170, -1980)
+        p1 = (side * (220 + 200 * r), -1650 - 300 * r)
+        p2 = (side * (200 + 480 * r), -1300 - 560 * r)
+        p3 = (side * (230 + 760 * r), -1050 - 760 * r)
+        for a, b in ((p0, p1), (p1, p2), (p2, p3)):
+            cv.drawPath(poly([a, b], closed=False), paint(navy if (a == p0) else (skin if side > 0 else sh), style='stroke', width=42))
+            cv.drawCircle(b[0], b[1], 26, paint(sh))                           # hinges
+        for f in range(4):
+            ang = math.radians(-30 + f * 20) + 0.5 * r * side
+            cv.drawLine(p3[0], p3[1], p3[0] + math.sin(ang) * 230 * side, p3[1] + math.cos(ang) * 230 - 160 * r, paint(skin, style='stroke', width=13))
+    nl = 140 + 900 * neck                                                      # accordion neck
+    cv.save(); cv.translate(0, -2040)
+    for k in range(int(4 + 14 * neck)):
+        yy = -k * nl / (4 + 14 * neck)
+        w_ = 46 if k % 2 == 0 else 34
+        cv.drawRect(skia.Rect(-w_, yy - nl / (4 + 14 * neck), w_, yy), paint(skin if k % 2 == 0 else sh))
+    cv.translate(0, -nl)
+    cv.rotate(head_turn * 0.15 + 6 * math.sin(t * 1.3))
+    head = blob([(-140, -30), (-120, -200), (0, -250), (120, -200), (140, -30), (100, 110), (0, 150), (-100, 110)])
+    cv.drawPath(head, paint(skin))
+    cv.drawPath(blob([(-150, -120), (-110, -270), (0, -300), (110, -270), (150, -120), (90, -170), (0, -190), (-90, -170)]), paint('#1A1410'))
+    cv.drawRect(skia.Rect(-90, -330, 90, -250), paint(navy)); cv.drawRect(skia.Rect(-90, -275, 90, -258), paint(gold))   # pillbox hat
+    if abs(head_turn) > 120:                                                   # facing behind: only hair, but the mask is on the back
+        cv.drawPath(head, paint('#1A1410'))
+    my = -60 - 260 * mask                                                      # the mouth under the mask: a ring of teeth
+    cv.drawCircle(0, 0, 92, paint('#1A0606'))
+    for k in range(18):
+        a = 2 * math.pi * k / 18
+        cv.drawPath(poly([(math.cos(a) * 92, math.sin(a) * 92), (math.cos(a + 0.12) * 92, math.sin(a + 0.12) * 92), (math.cos(a + 0.06) * 50, math.sin(a + 0.06) * 50)]), paint('#E8E0CC'))
+    cv.drawCircle(0, 0, 40, paint('#000000'))
+    if blood_ > 0:
+        cv.drawPath(blob([(-60, 70), (60, 70), (30, 200), (-20, 230)]), paint(C(blood, blood_)))
+    cv.save(); cv.translate(0, my * (1 if mask > 0 else 0) + (0 if mask > 0 else -60)); cv.rotate(-25 * mask)
+    cup = blob([(-120, -40), (-100, -110), (0, -130), (100, -110), (120, -40), (90, 110), (0, 140), (-90, 110)])
+    cv.drawPath(cup, paint('#E6C23A'))
+    cv.drawPath(cup, paint('#B8961E', style='stroke', width=8))
+    for side in (-1, 1):                                                       # painted-on eyes and lashes
+        cv.drawCircle(side * 50, -40, 14, paint('#1A1410'))
+        for l_ in range(3):
+            cv.drawLine(side * 50, -54, side * (50 + 10 + l_ * 8), -74 - l_ * 4, paint('#1A1410', style='stroke', width=4))
+    q = skia.Path(); q.moveTo(-60, 40); q.quadTo(0, 95, 60, 40)
+    cv.drawPath(q, paint('#B01E2A', style='stroke', width=12))               # painted smile
+    cv.drawLine(0, 140, 40 * math.sin(t * 2), 420, paint('#D8D0C0', style='stroke', width=6))   # the dangling tube
+    cv.restore()
+    cv.drawPath(head, paint(C(rim, rim_a), style='stroke', width=10, blur=4))
+    cv.restore()
+    cv.restore()

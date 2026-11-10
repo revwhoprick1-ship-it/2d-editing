@@ -1320,6 +1320,46 @@ def cue_video016():
 CUES['video016'] = cue_video016
 LOOPS['video016'] = None
 
+def cue_video017():
+    sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'VIDEOS', 'VIDEO_017'))
+    import edit_video017 as E17
+    B, END, s17, e17 = E17.B, E17.END, E17.s, E17.e
+    S = Score(END + 3.0, bpm=60)
+    D = lambda t, d, f=36.7, g=-10: S.add('fx', t, sine(f, d) * env_adsr(int(d * SR), min(1.5, d / 3), 0.2, 0.9, min(1.0, d / 4)) * 0.8, g)
+    # the flight: a slow, sweet "airline" chime melody slowly going out of tune over a cold pad
+    S.add('pad', 0.0, inst_pad(C(['D3', 'A3', 'F4']), B['cart'], bright=1000, attack=0.4), -17)
+    for i, nm in enumerate(['A5', 'F5', 'D5', 'E5', 'F5', 'A5', 'G5', 'C#5'] * 3):
+        tt = 0.6 + i * 0.75
+        if tt < B['cart'] - 0.3:
+            S.add('lead', tt, inst_bell(mtof(n2m(nm)) * (1.0 + 0.004 * i * (i % 2)), 1.1), -20)
+    S.add('pad', B['cart'], inst_tremolo(C(['D#4', 'E4']), B['js1'] - B['cart'], rate=10, bright=2600), -16)
+    D(B['cart'], B['js1'] - B['cart'], 34.6, -10)
+    S.add('perc', B['js1'], drum_taiko(1.4, 38), -2)
+    S.add('pad', B['js1'], inst_strings(C(['D3', 'D#3', 'A3']), 1.4, attack=0.02, bright=2400), -10)
+    D(B['js1'] + 0.6, B['click2'] - B['js1'] - 0.6, 32.7, -11)
+    # Lawrence unbuckles: total silence (music gated), then the hit
+    S.add('perc', B['js2'], drum_taiko(1.6, 36), -1)
+    S.add('pad', B['js2'], inst_strings(C(['C3', 'C#3', 'G3']), 1.8, attack=0.01, bright=2600), -9)
+    D(B['tray'], B['reveal'] - B['tray'], 30.9, -9)
+    S.add('pad', B['stowed'], inst_tremolo(C(['A3', 'A#3']), B['reveal'] - B['stowed'], rate=12, bright=2400), -16)
+    # the Purser: pulse that speeds up through the belt + ceiling crawl
+    t, i = B['reveal'], 0
+    while t < B['js3'] - 0.4:
+        sp = 0.5 - 0.3 * min(1.0, (t - B['reveal']) / max(0.1, B['js3'] - B['reveal']))
+        S.add('perc', t, drum_taiko(0.8, 50 if i % 2 else 42), -8)
+        t += sp; i += 1
+    S.add('pad', B['reveal'], inst_strings(C(['D3', 'D#3']), B['js3'] - B['reveal'], attack=0.8, bright=2000), -14)
+    S.add('perc', B['js3'], drum_taiko(1.6, 36), -1)
+    # landed: warm major chime (a lie)... then the window: the same melody, wrong
+    S.add('pad', B['land'], inst_pad(C(['D3', 'F#3', 'A3', 'D4']), B['window'] - B['land'] + 0.5, bright=1500, attack=0.4), -15)
+    S.add('pad', B['window'], inst_tremolo(C(['D4', 'D#4', 'A4']), END - B['window'], rate=13, bright=3000), -14)
+    D(B['window'], END - B['window'], 29.1, -8)
+    return S
+
+
+CUES['video017'] = cue_video017
+LOOPS['video017'] = None
+
 if __name__ == '__main__':
     cue, out = sys.argv[1], sys.argv[2]
     S = CUES[cue]()

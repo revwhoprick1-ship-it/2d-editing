@@ -1507,5 +1507,59 @@
   "duration_s": 4.0,
   "sample_rate": 48000,
   "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/seatbelt_ding.flac",
+  "category": "comedy",
+  "name": "seatbelt_ding",
+  "description": "Airliner seatbelt chime: two soft tones, high then low (1.6 s).",
+  "duration_s": 1.6,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/buckle_click.flac",
+  "category": "comedy",
+  "name": "buckle_click",
+  "description": "Seatbelt buckle unlatching: sharp metal click + strap slide (0.4 s).",
+  "duration_s": 0.4,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/cabin_drone.flac",
+  "category": "comedy",
+  "name": "cabin_drone",
+  "description": "Airliner cabin at night: jet engine roar + air hiss, loopable (10 s).",
+  "duration_s": 10.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/cart_rattle.flac",
+  "category": "comedy",
+  "name": "cart_rattle",
+  "description": "Drinks trolley rolling down the aisle: wheel rumble + bottles clinking (3 s).",
+  "duration_s": 3.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/bin_slam.flac",
+  "category": "comedy",
+  "name": "bin_slam",
+  "description": "Overhead bin slammed shut, plastic + latch, with cabin echo (1.2 s).",
+  "duration_s": 1.2,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/crunch.flac",
+  "category": "comedy",
+  "name": "crunch",
+  "description": "Wet bone crunch from inside a box: cracks + squelch, muffled (1.4 s).",
+  "duration_s": 1.4,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
  }
 ]

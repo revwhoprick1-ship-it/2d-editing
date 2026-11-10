@@ -1,0 +1,183 @@
+{
+ "title": "Flight 404",
+ "engine": "qwen3-tts",
+ "tempo": 1.08,
+ "qwen_voices": {
+  "M": "Male, 20 years old, American. Low-mid pitch, warm clear steady voice, calm logical leader, quietly tense.",
+  "B": "Male, 19 years old, American nerd. Medium-low pitch, soft careful precise voice, anxious and breathy, slightly fast.",
+  "L": "Male, 20 years old, American. Medium pitched, nasal sarcastic tone, jokey but nervous, quick talker.",
+  "A": "Female, 30 years old, American flight attendant. Sweet, soft, sing-song airline announcement voice, far too calm and polite, a fixed smile in the voice.",
+  "C": "Male, 50 years old, American airline captain. Low, calm, flat intercom voice, slow and bored."
+ },
+ "lines": [
+  {
+   "id": "A01",
+   "who": "A",
+   "text": "The seatbelt sign is on. Nobody unbuckles. For any reason.",
+   "delivery": "",
+   "pause_after": 0.3
+  },
+  {
+   "id": "L01",
+   "who": "L",
+   "text": "Any reason? Bro, I drank four Sprites.",
+   "delivery": "",
+   "pause_after": 0.2
+  },
+  {
+   "id": "M01",
+   "who": "M",
+   "text": "Lawrence. Don't.",
+   "delivery": "",
+   "pause_after": 0.4
+  },
+  {
+   "id": "B01",
+   "who": "B",
+   "text": "Guys... look at the map. We've been circling the same spot for six hours.",
+   "delivery": "",
+   "pause_after": 0.3
+  },
+  {
+   "id": "M02",
+   "who": "M",
+   "text": "And why is row fourteen empty... with every seatbelt still buckled?",
+   "delivery": "",
+   "pause_after": 0.5
+  },
+  {
+   "id": "A02",
+   "who": "A",
+   "text": "Something to drink?",
+   "delivery": "",
+   "pause_after": 0.5
+  },
+  {
+   "id": "M03",
+   "who": "M",
+   "text": "Bob. Don't look at her feet.",
+   "delivery": "",
+   "pause_after": 0.3
+  },
+  {
+   "id": "B02",
+   "who": "B",
+   "text": "Why not?",
+   "delivery": "",
+   "pause_after": 0.6
+  },
+  {
+   "id": "A03",
+   "who": "A",
+   "text": "You looked.",
+   "delivery": "",
+   "pause_after": 0.6
+  },
+  {
+   "id": "L02",
+   "who": "L",
+   "text": "Okay. I'm not peeing in a bottle. Ten seconds. I'll be quick.",
+   "delivery": "",
+   "pause_after": 0.2
+  },
+  {
+   "id": "M04",
+   "who": "M",
+   "text": "Lawrence, no!",
+   "delivery": "",
+   "pause_after": 0.8
+  },
+  {
+   "id": "L03",
+   "who": "L",
+   "text": "Why is everyone looking at me?",
+   "delivery": "",
+   "pause_after": 0.8
+  },
+  {
+   "id": "M05",
+   "who": "M",
+   "text": "Lawrence, get down!",
+   "delivery": "",
+   "pause_after": 0.6
+  },
+  {
+   "id": "B03",
+   "who": "B",
+   "text": "It folded him. It folded him into the bin!",
+   "delivery": "",
+   "pause_after": 0.4
+  },
+  {
+   "id": "C01",
+   "who": "C",
+   "text": "This is your captain. The passenger out of his seat... has been stowed.",
+   "delivery": "",
+   "pause_after": 0.6
+  },
+  {
+   "id": "B04",
+   "who": "B",
+   "text": "Every bin is moving.",
+   "delivery": "",
+   "pause_after": 0.6
+  },
+  {
+   "id": "M06",
+   "who": "M",
+   "text": "Bob. Whatever happens, keep your belt on.",
+   "delivery": "",
+   "pause_after": 0.6
+  },
+  {
+   "id": "B05",
+   "who": "B",
+   "text": "My belt... it's broken!",
+   "delivery": "",
+   "pause_after": 0.3
+  },
+  {
+   "id": "M07",
+   "who": "M",
+   "text": "Hold my arm! Don't let go!",
+   "delivery": "",
+   "pause_after": 0.6
+  },
+  {
+   "id": "X01",
+   "who": "X",
+   "text": "Bro... it's just ten seconds.",
+   "delivery": "",
+   "pause_after": 0.6,
+   "as": "L"
+  },
+  {
+   "id": "A04",
+   "who": "A",
+   "text": "We have landed. You may now unbuckle.",
+   "delivery": "",
+   "pause_after": 0.4
+  },
+  {
+   "id": "B06",
+   "who": "B",
+   "text": "We made it! We actually made it!",
+   "delivery": "",
+   "pause_after": 0.4
+  },
+  {
+   "id": "M08",
+   "who": "M",
+   "text": "Bob... look out the window.",
+   "delivery": "",
+   "pause_after": 0.6
+  },
+  {
+   "id": "M09",
+   "who": "M",
+   "text": "We never landed.",
+   "delivery": "",
+   "pause_after": 0.2
+  }
+ ]
+}
