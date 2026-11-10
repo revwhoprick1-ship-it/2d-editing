@@ -21,7 +21,7 @@ def norm(s):
     return re.sub(r"[^a-z0-9' ]", ' ', s.lower().replace('2001', 'two thousand one')).split()
 
 
-def trim(y, sr, th=0.012, pad=0.04):
+def trim(y, sr, th=0.006, pad=0.12):
     a = np.abs(y)
     idx = np.where(a > th * a.max())[0]
     if not len(idx):

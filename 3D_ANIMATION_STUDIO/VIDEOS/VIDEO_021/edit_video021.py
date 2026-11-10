@@ -34,7 +34,7 @@ def w_at(lid, word):
 
 SHOT = {'O01': 'HOOK', 'N01': 'KITCHEN', 'N02': 'MONTAGE', 'O02': 'CU_O', 'N03': 'CAR', 'Q01': 'CAR', 'M01': 'CU_M', 'O03': 'CU_O',
         'N04': 'HALL', 'P01': 'FLOOR', 'M02': 'CU_MN', 'P02': 'DOOR', 'N05': 'STAIRS', 'P03': 'BASEMENT', 'O04': 'UPSTAIRS',
-        'P04': 'CU_P', 'O05': 'CU_OS', 'N06': 'BOTH', 'X01': 'BOTH'}
+        'P04': 'CU_P', 'O05': 'CU_OS', 'N06': 'BOTH', 'N07': 'BOTH', 'N08': 'BOTH', 'X01': 'BOTH'}
 GAP_SHOT = {'O01': 'HOOK', 'M01': 'KITCHEN', 'N04': 'HALL', 'P01': 'FLOOR', 'N05': 'DOOR', 'P03': 'BASEMENT', 'O04': 'BASEMENT',
             'N03': 'CAR', 'X01': 'BOTH'}
 
@@ -44,7 +44,7 @@ B = dict(
     knocks=[s('P01') - 1.05, s('P01') - 0.7, s('P01') - 0.35], door=s('N05') - 0.6, js2=w_at('N05', 'thirteen'),
     basement=s('P03') - 1.0, upstairs=s('O04') - 0.5, both=s('N06'), choice=e('N06') + 0.15,
 )
-B['js3'] = B['choice'] + 1.7
+B['js3'] = e('N07') + 0.3
 B['pick'] = s('X01')
 B['montage'] = [s('N02'), w_at('N02', 'same'), w_at('N02', 'smile') - 0.25]
 
@@ -133,7 +133,9 @@ OVERLAYS = [
 ]
 NAMES = {'N': None, 'M': 'YOU', 'O': 'MOM', 'Q': 'MOM (2 YEARS AGO)', 'P': 'MOM?', 'X': 'BOTH OF THEM'}
 SPK = {l['id']: NAMES[l['id'][0]] for l in _T['lines'] if NAMES[l['id'][0]]}
-CAPTIONS = dict(timing=TIMING, offset=0.0, style='2dedit', y=1420, size=74, max_words=4, speakers=SPK, hide=SCARES + [(B['choice'], B['pick'] - 0.05)],
+CAPTIONS = dict(timing=TIMING, offset=0.0, style='2dedit', y=1290, size=74, max_words=4, speakers=SPK, hide=SCARES + [(B['choice'], B['pick'] - 0.05)],  # the card shows the options while the narrator reads them
+               
                 emphasis={'basement', 'died', 'breakfast', 'same', 'smile', 'crash', 'voice', 'not', 'car', 'love', 'night', 'floor',
                           'asleep', 'hear', 'thirteen', 'two', "isn't", 'remember', 'crawled', 'pick'})
-CAPTIONS['y_over'] = [(sg['t0'], sg['t1'], 1700) for sg in SEGMENTS if sg['src'] in ('KITCHEN', 'MONTAGE', 'HALL', 'BASEMENT', 'UPSTAIRS', 'BOTH', 'HOOK', 'DOOR', 'STAIRS', 'CAR', 'FLOOR')]
+CAPTIONS['y_over'] = [(sg['t0'], sg['t1'], 1180) for sg in SEGMENTS if sg['src'] in ('KITCHEN', 'MONTAGE', 'HALL', 'BASEMENT', 'UPSTAIRS', 'HOOK', 'DOOR', 'STAIRS', 'CAR', 'FLOOR')]
+CAPTIONS['y_over'] += [(sg['t0'], sg['t1'], 1480) for sg in SEGMENTS if sg['src'] == 'BOTH']

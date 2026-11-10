@@ -15,4 +15,6 @@
   character in danger; no flashbacks/recaps; standalone stories (no "Part 2"); no end choice card; 60–75 s.
 * **Always be creative**: never a plain "what if" list. Give the premise a character with a problem, a goal and escalating
   situations (e.g. a disease that forces a funny behaviour during a school day), with a twist.
+* **Captions mid-screen** (y ~1150-1300, max 1480): the bottom ~25% is covered by the platforms' own captions/UI.
+  Voice lines never hard-cut: soft fades on every line, keep reverb tails (no trim-to-length after FX).
 * Reply in short "caveman" talk.

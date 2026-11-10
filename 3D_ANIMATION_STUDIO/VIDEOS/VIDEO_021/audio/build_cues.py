@@ -34,7 +34,7 @@ c(B['car'] + 0.05, 'glitch_stab', -6, 'memory tears open')
 c(e('Q01') - 0.15, 'fall_crash', -6, 'the crash (cut off)')
 c(B['kitchen2'], 'kitchen_morning', -8, 'back in the kitchen', bus='amb', loop=True, dur=B['night'] - B['kitchen2'])
 # JS1: mid-word "love", 5 frames
-c(B['js1'], 'glitch_stab', 2, 'JS1 subliminal true face')
+c(B['js1'], 'glitch_stab', -2, 'JS1 subliminal true face')
 c(B['js1'], 'scare_shriek', -4, 'JS1 shriek (short)', dur=0.35, fade_out=0.1)
 # night 2
 c(B['night'], 'house_night', -4, 'night', bus='amb', loop=True, dur=B['door'] - B['night'])

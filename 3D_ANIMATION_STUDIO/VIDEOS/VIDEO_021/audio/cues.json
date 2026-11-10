@@ -1,5 +1,5 @@
 {
- "duration": 63.27,
+ "duration": 67.84,
  "loop": false,
  "narration": "narration/narration_raw.wav",
  "narration_offset": 0.0,
@@ -8,8 +8,8 @@
  "music_cue": "cue_video021",
  "music_gates": [
   [
-   60.693000000000005,
-   61.313,
+   61.256,
+   61.876,
    0.2
   ]
  ],
@@ -27,7 +27,7 @@
    "bus": "amb",
    "note": "night house",
    "loop": true,
-   "dur": 3.229
+   "dur": 1.939
   },
   {
    "t": 0.0,
@@ -44,84 +44,84 @@
    "note": "she is suddenly right behind you"
   },
   {
-   "t": 3.029,
+   "t": 1.739,
    "file": "AUDIO/sound_effects/comedy/heavy_breath.flac",
    "gain": -13,
    "bus": "sfx",
    "note": "you freeze"
   },
   {
-   "t": 3.229,
+   "t": 1.939,
    "file": "AUDIO/sound_effects/comedy/kitchen_morning.flac",
    "gain": -6,
    "bus": "amb",
    "note": "sizzle + birds",
    "loop": true,
-   "dur": 12.388000000000002
+   "dur": 12.389000000000001
   },
   {
-   "t": 8.233,
+   "t": 6.944,
    "file": "AUDIO/sound_effects/comedy/record_scratch.flac",
    "gain": -19,
    "bus": "sfx",
    "note": "same morning, again"
   },
   {
-   "t": 10.753,
+   "t": 9.464,
    "file": "AUDIO/sound_effects/comedy/blink_cut.flac",
    "gain": -19,
    "bus": "sfx",
    "note": "same morning, again"
   },
   {
-   "t": 13.243,
+   "t": 11.954,
    "file": "AUDIO/sound_effects/comedy/blink_cut.flac",
    "gain": -19,
    "bus": "sfx",
    "note": "same morning, again"
   },
   {
-   "t": 15.617,
+   "t": 14.328,
    "file": "AUDIO/ambience/rain.flac",
    "gain": -6,
    "bus": "amb",
    "note": "rain on the windshield",
    "loop": true,
-   "dur": 7.9830000000000005,
+   "dur": 6.978,
    "fade_out": 0.2
   },
   {
-   "t": 15.667,
+   "t": 14.378,
    "file": "AUDIO/sound_effects/comedy/glitch_stab.flac",
    "gain": -11,
    "bus": "sfx",
    "note": "memory tears open"
   },
   {
-   "t": 23.35,
+   "t": 21.056,
    "file": "AUDIO/sound_effects/reactions/fall_crash.flac",
    "gain": -11,
    "bus": "sfx",
    "note": "the crash (cut off)"
   },
   {
-   "t": 23.6,
+   "t": 21.306,
    "file": "AUDIO/sound_effects/comedy/kitchen_morning.flac",
    "gain": -8,
    "bus": "amb",
    "note": "back in the kitchen",
    "loop": true,
-   "dur": 4.288999999999998
+   "dur": 4.287999999999997
   },
   {
-   "t": 27.236,
+   "t": 24.942,
    "file": "AUDIO/sound_effects/comedy/glitch_stab.flac",
-   "gain": -3,
+   "gain": -7,
    "bus": "sfx",
    "note": "JS1 subliminal true face"
   },
   {
-   "t": 27.236,
+   "t": 24.942,
    "file": "AUDIO/sound_effects/comedy/scare_shriek.flac",
    "gain": -9,
    "bus": "sfx",
@@ -130,162 +130,162 @@
    "fade_out": 0.1
   },
   {
-   "t": 27.889,
+   "t": 25.594,
    "file": "AUDIO/sound_effects/comedy/house_night.flac",
    "gain": -4,
    "bus": "amb",
    "note": "night",
    "loop": true,
-   "dur": 10.623999999999999
+   "dur": 8.697
   },
   {
-   "t": 32.595,
+   "t": 30.301,
    "file": "AUDIO/sound_effects/comedy/door_knock.flac",
    "gain": -5,
    "bus": "sfx",
    "note": "KNOCK 1 from under the floor"
   },
   {
-   "t": 32.945,
+   "t": 30.651,
    "file": "AUDIO/sound_effects/comedy/door_knock.flac",
    "gain": -6,
    "bus": "sfx",
    "note": "KNOCK 2 from under the floor"
   },
   {
-   "t": 33.295,
+   "t": 31.001,
    "file": "AUDIO/sound_effects/comedy/door_knock.flac",
    "gain": -7,
    "bus": "sfx",
    "note": "KNOCK 3 from under the floor"
   },
   {
-   "t": 33.645,
+   "t": 31.351,
    "file": "AUDIO/sound_effects/bio/heartbeat_muffled.flac",
    "gain": -15,
    "bus": "sfx",
    "note": "her voice from below"
   },
   {
-   "t": 38.513,
+   "t": 34.291,
    "file": "AUDIO/sound_effects/comedy/creak_long.flac",
    "gain": -9,
    "bus": "sfx",
    "note": "basement door opens"
   },
   {
-   "t": 38.913,
+   "t": 34.691,
    "file": "AUDIO/sound_effects/comedy/dread_drone.flac",
    "gain": -12,
    "bus": "amb",
    "note": "basement air",
    "loop": true,
-   "dur": 20.6
+   "dur": 16.657000000000004
   },
   {
-   "t": 39.313,
+   "t": 35.091,
    "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
    "gain": -15,
    "bus": "sfx",
    "note": "step 1"
   },
   {
-   "t": 39.863,
+   "t": 35.641,
    "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
    "gain": -16,
    "bus": "sfx",
    "note": "step 2"
   },
   {
-   "t": 40.413,
+   "t": 36.191,
    "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
    "gain": -17,
    "bus": "sfx",
    "note": "step 3"
   },
   {
-   "t": 40.963,
+   "t": 36.741,
    "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
    "gain": -18,
    "bus": "sfx",
    "note": "step 4"
   },
   {
-   "t": 41.513,
+   "t": 37.291,
    "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
    "gain": -19,
    "bus": "sfx",
    "note": "step 5"
   },
   {
-   "t": 43.113,
+   "t": 38.891,
    "file": "AUDIO/sound_effects/comedy/scare_slam.flac",
    "gain": -4,
    "bus": "sfx",
    "note": "JS2 hand grabs your ankle"
   },
   {
-   "t": 43.163,
+   "t": 38.941,
    "file": "AUDIO/sound_effects/comedy/scare_shriek.flac",
    "gain": -11,
    "bus": "sfx",
    "note": "JS2 shriek"
   },
   {
-   "t": 44.16,
+   "t": 39.938,
    "file": "AUDIO/sound_effects/comedy/sweat_drip.flac",
    "gain": -17,
    "bus": "sfx",
    "note": "drip",
    "loop": true,
-   "dur": 14.953000000000003
+   "dur": 11.009999999999998
   },
   {
-   "t": 44.66,
+   "t": 40.438,
    "file": "AUDIO/sound_effects/comedy/keys_jingle.flac",
    "gain": -17,
    "bus": "sfx",
    "note": "the chain moves"
   },
   {
-   "t": 47.315,
+   "t": 42.085,
    "file": "AUDIO/sound_effects/comedy/creak_long.flac",
    "gain": -15,
    "bus": "sfx",
    "note": "the top step creaks: she is there"
   },
   {
-   "t": 59.113,
+   "t": 50.948,
    "file": "AUDIO/sound_effects/bio/heartbeat_lubdub.flac",
    "gain": -13,
    "bus": "sfx",
    "note": "heartbeat under the card",
    "loop": true,
-   "dur": 4.157000000000004
+   "dur": 16.892000000000003
   },
   {
-   "t": 60.693,
+   "t": 61.256,
    "file": "AUDIO/sound_effects/comedy/power_cut.flac",
    "gain": -7,
    "bus": "sfx",
    "note": "lights die"
   },
   {
-   "t": 60.813,
+   "t": 61.376,
    "file": "AUDIO/sound_effects/comedy/scare_slam.flac",
    "gain": -3,
    "bus": "sfx",
    "note": "JS3 both lunge"
   },
   {
-   "t": 60.833,
+   "t": 61.396,
    "file": "AUDIO/sound_effects/comedy/scare_shriek.flac",
    "gain": -5,
    "bus": "sfx",
    "note": "JS3 shriek"
   },
   {
-   "t": 61.703,
+   "t": 66.53,
    "file": "AUDIO/sound_effects/comedy/whispers.flac",
    "gain": -15,
    "bus": "sfx",

@@ -1020,7 +1020,7 @@ def glitch_stab():
         i = int(rng.uniform(0, 0.25) * SR); m = int(0.015 * SR)
         x[i:i + m] += np.sign(np.sin(2 * np.pi * rng.uniform(200, 3000) * np.arange(m) / SR)) * rng.uniform(0.4, 1)
     x += np.sin(2 * np.pi * 1760 * tt) * np.exp(-tt * 12) * 0.8 + np.sin(2 * np.pi * 45 * tt) * np.exp(-tt * 8) * 1.2
-    return normalize(soft_sat(x, 2.0), -0.5)
+    return normalize(lowpass(soft_sat(x, 2.0), 6500, order=4), -1.5)   # smoothed: raw square bursts overshoot after AAC
 
 @reg('house_night', 'Quiet house at night: fridge hum + clock tick + distant wind, loopable (8 s).')
 def house_night():

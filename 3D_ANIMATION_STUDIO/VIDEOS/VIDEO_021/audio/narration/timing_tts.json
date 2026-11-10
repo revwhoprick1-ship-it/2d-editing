@@ -79,7 +79,7 @@
    "who": "N",
    "text": "That night, something knocked. From under the floor.",
    "start": 28.479,
-   "end": 32.306,
+   "end": 32.305,
    "delivery": "",
    "speed": 1.06
   },
@@ -87,7 +87,7 @@
    "id": "P01",
    "who": "P",
    "text": "Sweetie? Is she asleep?",
-   "start": 32.606,
+   "start": 32.605,
    "end": 34.356,
    "delivery": "",
    "speed": 1.06
@@ -165,11 +165,29 @@
    "speed": 1.06
   },
   {
+   "id": "N07",
+   "who": "N",
+   "text": "So which one is real? One, the mom in the basement. Two, the mom on the stairs. Or three... I run.",
+   "start": 57.913,
+   "end": 67.651,
+   "delivery": "",
+   "speed": 1.06
+  },
+  {
+   "id": "N08",
+   "who": "N",
+   "text": "Comment your pick. One hidden detail gives it away.",
+   "start": 67.951,
+   "end": 71.945,
+   "delivery": "",
+   "speed": 1.06
+  },
+  {
    "id": "X01",
    "who": "X",
    "text": "Pick me.",
-   "start": 57.913,
-   "end": 58.459,
+   "start": 72.245,
+   "end": 72.791,
    "delivery": "",
    "speed": 1.06
   }
@@ -646,26 +664,26 @@
   {
    "line": "P01",
    "text": "Sweetie?",
-   "start": 32.606,
-   "end": 33.126
+   "start": 32.605,
+   "end": 33.105
   },
   {
    "line": "P01",
    "text": "Is",
-   "start": 33.586,
-   "end": 33.706
+   "start": 33.585,
+   "end": 33.725
   },
   {
    "line": "P01",
    "text": "she",
-   "start": 33.706,
-   "end": 33.866
+   "start": 33.725,
+   "end": 33.865
   },
   {
    "line": "P01",
    "text": "asleep?",
-   "start": 33.866,
-   "end": 34.146
+   "start": 33.865,
+   "end": 34.145
   },
   {
    "line": "M02",
@@ -706,13 +724,13 @@
   {
    "line": "P02",
    "text": "Come",
-   "start": 36.929,
-   "end": 37.149
+   "start": 36.889,
+   "end": 37.129
   },
   {
    "line": "P02",
    "text": "down.",
-   "start": 37.149,
+   "start": 37.129,
    "end": 37.369
   },
   {
@@ -851,18 +869,18 @@
    "line": "P04",
    "text": "the",
    "start": 48.457,
-   "end": 48.637
+   "end": 48.617
   },
   {
    "line": "P04",
    "text": "car.",
-   "start": 48.637,
-   "end": 48.957
+   "start": 48.617,
+   "end": 48.937
   },
   {
    "line": "P04",
    "text": "Remember",
-   "start": 49.757,
+   "start": 49.717,
    "end": 49.937
   },
   {
@@ -899,12 +917,12 @@
    "line": "O05",
    "text": "what",
    "start": 51.138,
-   "end": 51.358
+   "end": 51.378
   },
   {
    "line": "O05",
    "text": "I",
-   "start": 51.358,
+   "start": 51.378,
    "end": 51.498
   },
   {
@@ -922,8 +940,8 @@
   {
    "line": "O05",
    "text": "sweetie.",
-   "start": 51.918,
-   "end": 52.258
+   "start": 51.898,
+   "end": 52.278
   },
   {
    "line": "N06",
@@ -1010,17 +1028,197 @@
    "end": 57.316
   },
   {
+   "line": "N07",
+   "text": "So",
+   "start": 58.533,
+   "end": 58.953
+  },
+  {
+   "line": "N07",
+   "text": "which",
+   "start": 58.953,
+   "end": 59.113
+  },
+  {
+   "line": "N07",
+   "text": "one",
+   "start": 59.113,
+   "end": 59.313
+  },
+  {
+   "line": "N07",
+   "text": "is",
+   "start": 59.313,
+   "end": 59.453
+  },
+  {
+   "line": "N07",
+   "text": "real?",
+   "start": 59.453,
+   "end": 59.733
+  },
+  {
+   "line": "N07",
+   "text": "One,",
+   "start": 61.013,
+   "end": 61.033
+  },
+  {
+   "line": "N07",
+   "text": "the",
+   "start": 61.933,
+   "end": 62.013
+  },
+  {
+   "line": "N07",
+   "text": "mom",
+   "start": 62.013,
+   "end": 62.233
+  },
+  {
+   "line": "N07",
+   "text": "in",
+   "start": 62.233,
+   "end": 62.413
+  },
+  {
+   "line": "N07",
+   "text": "the",
+   "start": 62.413,
+   "end": 62.493
+  },
+  {
+   "line": "N07",
+   "text": "basement.",
+   "start": 62.493,
+   "end": 62.793
+  },
+  {
+   "line": "N07",
+   "text": "Two,",
+   "start": 63.593,
+   "end": 63.953
+  },
+  {
+   "line": "N07",
+   "text": "the",
+   "start": 64.473,
+   "end": 64.533
+  },
+  {
+   "line": "N07",
+   "text": "mom",
+   "start": 64.533,
+   "end": 64.753
+  },
+  {
+   "line": "N07",
+   "text": "on",
+   "start": 64.753,
+   "end": 64.913
+  },
+  {
+   "line": "N07",
+   "text": "the",
+   "start": 64.913,
+   "end": 65.033
+  },
+  {
+   "line": "N07",
+   "text": "stairs.",
+   "start": 65.033,
+   "end": 65.333
+  },
+  {
+   "line": "N07",
+   "text": "Or",
+   "start": 65.873,
+   "end": 66.053
+  },
+  {
+   "line": "N07",
+   "text": "three...",
+   "start": 66.053,
+   "end": 66.393
+  },
+  {
+   "line": "N07",
+   "text": "I",
+   "start": 67.073,
+   "end": 67.273
+  },
+  {
+   "line": "N07",
+   "text": "run.",
+   "start": 67.273,
+   "end": 67.453
+  },
+  {
+   "line": "N08",
+   "text": "Comment",
+   "start": 68.451,
+   "end": 68.931
+  },
+  {
+   "line": "N08",
+   "text": "your",
+   "start": 68.931,
+   "end": 69.151
+  },
+  {
+   "line": "N08",
+   "text": "pick.",
+   "start": 69.151,
+   "end": 69.431
+  },
+  {
+   "line": "N08",
+   "text": "One",
+   "start": 70.131,
+   "end": 70.311
+  },
+  {
+   "line": "N08",
+   "text": "hidden",
+   "start": 70.311,
+   "end": 70.551
+  },
+  {
+   "line": "N08",
+   "text": "detail",
+   "start": 70.551,
+   "end": 71.011
+  },
+  {
+   "line": "N08",
+   "text": "gives",
+   "start": 71.011,
+   "end": 71.251
+  },
+  {
+   "line": "N08",
+   "text": "it",
+   "start": 71.251,
+   "end": 71.411
+  },
+  {
+   "line": "N08",
+   "text": "away.",
+   "start": 71.411,
+   "end": 71.691
+  },
+  {
    "line": "X01",
    "text": "Pick",
-   "start": 57.913,
-   "end": 58.133
+   "start": 72.245,
+   "end": 72.465
   },
   {
    "line": "X01",
    "text": "me.",
-   "start": 58.133,
-   "end": 58.313
+   "start": 72.465,
+   "end": 72.665
   }
  ],
- "duration": 58.659
+ "duration": 72.991
 }

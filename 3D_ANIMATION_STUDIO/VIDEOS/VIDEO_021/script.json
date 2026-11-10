@@ -137,6 +137,20 @@
    "pause_after": 0.4
   },
   {
+   "id": "N07",
+   "who": "N",
+   "text": "So which one is real? One, the mom in the basement. Two, the mom on the stairs. Or three... I run.",
+   "delivery": "",
+   "pause_after": 0.3
+  },
+  {
+   "id": "N08",
+   "who": "N",
+   "text": "Comment your pick. One hidden detail gives it away.",
+   "delivery": "",
+   "pause_after": 0.3
+  },
+  {
    "id": "X01",
    "who": "X",
    "text": "Pick me.",

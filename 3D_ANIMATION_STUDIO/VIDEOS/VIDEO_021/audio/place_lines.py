@@ -5,7 +5,7 @@ import json, os
 import numpy as np, soundfile as sf
 HERE = os.path.dirname(os.path.abspath(__file__))
 N = os.path.join(HERE, 'narration')
-GAP = {'O01': 0.35, 'N03': 0.2, 'M01': 0.3, 'N04': 0.4, 'P01': 1.15, 'N05': 0.5, 'P03': 0.75, 'O04': 0.4, 'X01': 2.6}
+GAP = {'O01': 0.35, 'N03': 0.2, 'M01': 0.3, 'N04': 0.4, 'P01': 1.15, 'N05': 0.5, 'P03': 0.75, 'O04': 0.4, 'N07': 0.3, 'N08': 0.8, 'X01': 0.4}
 TAIL = 0.8
 src = json.load(open(os.path.join(N, 'timing_tts.json') if os.path.exists(os.path.join(N, 'timing_tts.json')) else os.path.join(N, 'timing.json')))
 json.dump(src, open(os.path.join(N, 'timing_tts.json'), 'w'), indent=1)
@@ -18,6 +18,8 @@ for l in src['lines']:
     y, _ = sf.read(os.path.join(N, 'lines', l['id'] + '.wav'))
     if y.ndim > 1:
         y = y.mean(1)
+    fi, fo = int(0.012 * sr), int(0.09 * sr)                                    # soft edges: no hard cuts
+    y = y.copy(); y[:fi] *= np.linspace(0, 1, fi); y[-fo:] *= np.linspace(1, 0, fo) ** 2
     d = t - l['start']
     clips.append((t, y))
     lines.append(dict(l, start=round(t, 3), end=round(t + len(y) / sr, 3)))

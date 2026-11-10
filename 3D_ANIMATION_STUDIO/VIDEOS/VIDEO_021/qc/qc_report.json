@@ -1,7 +1,7 @@
 {
  "file": "EXPORTS/VIDEO_021_My_Mother_Isnt_Real.mp4",
- "duration_s": 63.267,
- "size_mb": 23.45,
+ "duration_s": 67.833,
+ "size_mb": 22.78,
  "video": {
   "codec": "h264",
   "profile": "High",
@@ -10,18 +10,18 @@
   "fps": "30/1",
   "pix_fmt": "yuv420p",
   "color_primaries": "bt709",
-  "bitrate_kbps": 2965
+  "bitrate_kbps": 2687
  },
  "audio": {
   "codec": "aac",
   "sample_rate": "48000",
   "channels": 2,
-  "bitrate_kbps": 306
+  "bitrate_kbps": 307
  },
  "loudness": {
   "integrated_lufs": -14.1,
   "lra_lu": 2.9,
-  "true_peak_dbfs": -1.9
+  "true_peak_dbfs": 2.4
  },
  "detect": {
   "black_segments": [],
@@ -34,7 +34,7 @@
   "yuv420p": true,
   "aac": true,
   "loudness_-14_to_-16": true,
-  "true_peak_le_-1": true,
+  "true_peak_le_-1": false,
   "no_black_segments": true
  }
 }

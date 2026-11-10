@@ -296,13 +296,26 @@ def kitchen(cv, t, mom=True, mom_t=None):
     if mom:
         tt = mom_t if mom_t is not None else t
         mx, my = cam.p(-0.15, 0, Z1 - 0.95)
-        flip = (tt * 0.8) % 1.0
-        P = dict(CAST['O'], view='back', arm_r=(55 + 25 * math.sin(flip * 2 * math.pi), 40), light_side=1, rim=DAY, rim_a=0.3)
-        o = mascot(cv, mx, my, cam.scale(Z1 - 0.95, 1.65), **P)
+        cyc = (tt * 0.55) % 1.0                                                            # one flip every ~1.8 s
+        up = max(0.0, math.sin(min(1.0, cyc / 0.45) * math.pi)) if cyc < 0.45 else 0.0
+        P = dict(CAST['O'], view='back', arm_r=(48 + 14 * up, 55), light_side=1, rim=DAY, rim_a=0.3)
+        sc = cam.scale(Z1 - 0.95, 1.65)
+        o = mascot(cv, mx, my, sc, **P)
         hx, hy = o['hand_r']
-        cv.drawLine(hx, hy, hx + 40, hy - 70, paint('#3A3A3A', style='stroke', width=10))                         # spatula
-        pz = max(0.0, math.sin(flip * math.pi)) * 160
-        cv.drawOval(skia.Rect(hx + 10, hy - 110 - pz, hx + 110, hy - 80 - pz), paint('#D8A050'))
+        px, py = hx + 150 * sc, hy - 30 * sc - 25 * sc * up                                   # the frying pan, held by its handle
+        cv.drawLine(hx, hy, px - 80 * sc, py, paint('#2A2A2E', style='stroke', width=22 * sc))
+        cv.drawOval(skia.Rect(px - 95 * sc, py - 26 * sc, px + 95 * sc, py + 26 * sc), paint('#1A1A1E'))
+        cv.drawOval(skia.Rect(px - 82 * sc, py - 18 * sc, px + 82 * sc, py + 14 * sc), paint('#3A3A40'))
+        lift = up * 260 * sc                                                                   # the pancake: up, a half turn, back into the pan
+        ang = min(1.0, cyc / 0.45) * 180 if cyc < 0.45 else 0.0
+        squash = abs(math.cos(math.radians(ang)))
+        cv.save(); cv.translate(px, py - 10 * sc - lift)
+        cv.drawOval(skia.Rect(-70 * sc, -16 * sc * max(0.25, squash), 70 * sc, 16 * sc * max(0.25, squash)), paint('#D8A050' if ang < 90 else '#B07830'))
+        cv.restore()
+        if up < 0.1:                                                                            # steam while it sizzles
+            for k in range(3):
+                yy = py - 40 * sc - ((tt * 120 + k * 40) % 120) * sc
+                cv.drawCircle(px - 30 * sc + k * 30 * sc, yy, 14 * sc, paint(C('#FFFFFF', 0.25)))
     # foreground: the table, your plate of pancakes, orange juice
     cv.drawRect(skia.Rect(0, 1560, W, H), paint('#000000', shader=lin((0, 1560), (0, H), [C('#8A5A36'), C('#5A3A22')])))
     cv.drawOval(skia.Rect(250, 1620, 750, 1800), paint('#F4F0E6'))
