@@ -1,0 +1,534 @@
+{
+ "title": "The Forest That Eats People",
+ "engine": "chatterbox",
+ "voice_ref": "kokoro:am_fenrir",
+ "tempo": 1.05,
+ "lines": [
+  {
+   "id": "X01",
+   "who": "X",
+   "text": "Ken... why did you bring them here?",
+   "delivery": "distorted whisper, evil",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.8,
+   "voice_ref": "kokoro:am_adam",
+   "as": "K"
+  },
+  {
+   "id": "K01",
+   "who": "K",
+   "text": "Come on, guys! This is supposed to be the most dangerous forest in the country!",
+   "delivery": "excited, energetic, loud",
+   "exaggeration": 0.9,
+   "cfg": 0.35,
+   "pause_after": 0.2,
+   "voice_ref": "kokoro:am_adam"
+  },
+  {
+   "id": "L01",
+   "who": "L",
+   "text": "Great. Exactly where I wanted to spend my weekend. In a forest where people mysteriously disappear.",
+   "delivery": "sarcastic, dry, deadpan",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.2,
+   "voice_ref": "kokoro:am_liam"
+  },
+  {
+   "id": "B01",
+   "who": "B",
+   "text": "Actually, there have been reports of missing hikers here for decades.",
+   "delivery": "fast, nerdy, matter-of-fact",
+   "exaggeration": 0.5,
+   "cfg": 0.5,
+   "pause_after": 0.2,
+   "voice_ref": "kokoro:am_eric"
+  },
+  {
+   "id": "J01",
+   "who": "J",
+   "text": "Then why are we here?",
+   "delivery": "deep, flat, annoyed",
+   "exaggeration": 0.5,
+   "cfg": 0.5,
+   "pause_after": 0.2,
+   "voice_ref": "kokoro:am_onyx"
+  },
+  {
+   "id": "K02",
+   "who": "K",
+   "text": "Because it's an adventure!",
+   "delivery": "excited, loud",
+   "exaggeration": 1.0,
+   "cfg": 0.35,
+   "pause_after": 0.4,
+   "voice_ref": "kokoro:am_adam"
+  },
+  {
+   "id": "M01",
+   "who": "M",
+   "text": "Something doesn't feel right. Have you noticed that we haven't seen a single animal?",
+   "delivery": "calm, observant, quiet",
+   "exaggeration": 0.5,
+   "cfg": 0.5,
+   "pause_after": 1.0,
+   "voice_ref": "kokoro:am_puck"
+  },
+  {
+   "id": "B02",
+   "who": "B",
+   "text": "That's... actually unusual.",
+   "delivery": "uneasy, hesitant",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.6,
+   "voice_ref": "kokoro:am_eric"
+  },
+  {
+   "id": "K03",
+   "who": "K",
+   "text": "Well, obviously we're taking this one.",
+   "delivery": "cocky, excited",
+   "exaggeration": 0.8,
+   "cfg": 0.5,
+   "pause_after": 0.2,
+   "voice_ref": "kokoro:am_adam"
+  },
+  {
+   "id": "L02",
+   "who": "L",
+   "text": "Can we please have one camping trip where we don't almost die?",
+   "delivery": "sarcastic, exasperated",
+   "exaggeration": 0.7,
+   "cfg": 0.5,
+   "pause_after": 0.2,
+   "voice_ref": "kokoro:am_liam"
+  },
+  {
+   "id": "J02",
+   "who": "J",
+   "text": "Ken, seriously. Let's take the other path.",
+   "delivery": "firm, serious",
+   "exaggeration": 0.5,
+   "cfg": 0.5,
+   "pause_after": 0.2,
+   "voice_ref": "kokoro:am_onyx"
+  },
+  {
+   "id": "K04",
+   "who": "K",
+   "text": "Relax! It's just a sign.",
+   "delivery": "dismissive, laughing",
+   "exaggeration": 0.8,
+   "cfg": 0.5,
+   "pause_after": 0.5,
+   "voice_ref": "kokoro:am_adam"
+  },
+  {
+   "id": "B03",
+   "who": "B",
+   "text": "Wait... these scratches look like someone was desperately trying to remove something.",
+   "delivery": "nervous, fast",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.2,
+   "voice_ref": "kokoro:am_eric"
+  },
+  {
+   "id": "M02",
+   "who": "M",
+   "text": "Or trying to warn us.",
+   "delivery": "quiet, serious",
+   "exaggeration": 0.5,
+   "cfg": 0.5,
+   "pause_after": 0.6,
+   "voice_ref": "kokoro:am_puck"
+  },
+  {
+   "id": "K05",
+   "who": "K",
+   "text": "Whoa. Free Halloween decorations!",
+   "delivery": "excited, joking",
+   "exaggeration": 0.9,
+   "cfg": 0.35,
+   "pause_after": 0.2,
+   "voice_ref": "kokoro:am_adam"
+  },
+  {
+   "id": "L03",
+   "who": "L",
+   "text": "That's a human skull, you idiot!",
+   "delivery": "shouting, cracking voice",
+   "exaggeration": 1.1,
+   "cfg": 0.35,
+   "pause_after": 0.2,
+   "voice_ref": "kokoro:am_liam"
+  },
+  {
+   "id": "B04",
+   "who": "B",
+   "text": "These aren't animal remains. They're human.",
+   "delivery": "shaky, scared",
+   "exaggeration": 0.8,
+   "cfg": 0.5,
+   "pause_after": 0.2,
+   "voice_ref": "kokoro:am_eric"
+  },
+  {
+   "id": "J03",
+   "who": "J",
+   "text": "Everyone stay together.",
+   "delivery": "deep, protective, firm",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.8,
+   "voice_ref": "kokoro:am_onyx"
+  },
+  {
+   "id": "M03",
+   "who": "M",
+   "text": "Guys... I think something is following us.",
+   "delivery": "whisper, tense",
+   "exaggeration": 0.7,
+   "cfg": 0.5,
+   "pause_after": 0.6,
+   "voice_ref": "kokoro:am_puck"
+  },
+  {
+   "id": "X02",
+   "who": "X",
+   "text": "Help...",
+   "delivery": "weak, distant, desperate",
+   "exaggeration": 0.8,
+   "cfg": 0.5,
+   "pause_after": 0.8,
+   "voice_ref": "kokoro:am_adam",
+   "as": "K"
+  },
+  {
+   "id": "K06",
+   "who": "K",
+   "text": "Okay... that wasn't me.",
+   "delivery": "scared, quiet, nervous laugh",
+   "exaggeration": 0.8,
+   "cfg": 0.5,
+   "pause_after": 0.8,
+   "voice_ref": "kokoro:am_adam"
+  },
+  {
+   "id": "K07",
+   "who": "K",
+   "text": "Perfect! Shelter!",
+   "delivery": "relieved, excited",
+   "exaggeration": 0.9,
+   "cfg": 0.35,
+   "pause_after": 0.2,
+   "voice_ref": "kokoro:am_adam"
+  },
+  {
+   "id": "L04",
+   "who": "L",
+   "text": "Of course. Because walking into a creepy abandoned house in a demonic forest is obviously safer.",
+   "delivery": "sarcastic, nervous",
+   "exaggeration": 0.7,
+   "cfg": 0.5,
+   "pause_after": 0.2,
+   "voice_ref": "kokoro:am_liam"
+  },
+  {
+   "id": "J04",
+   "who": "J",
+   "text": "We can't stay outside all night.",
+   "delivery": "firm, tired",
+   "exaggeration": 0.5,
+   "cfg": 0.5,
+   "pause_after": 0.2,
+   "voice_ref": "kokoro:am_onyx"
+  },
+  {
+   "id": "M04",
+   "who": "M",
+   "text": "We go in together. Nobody splits up. If anything feels wrong, we leave. Immediately.",
+   "delivery": "calm, clear, leader",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.6,
+   "voice_ref": "kokoro:am_puck"
+  },
+  {
+   "id": "B05",
+   "who": "B",
+   "text": "Guys...",
+   "delivery": "uneasy",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.2,
+   "voice_ref": "kokoro:am_eric"
+  },
+  {
+   "id": "J05",
+   "who": "J",
+   "text": "What?",
+   "delivery": "sharp",
+   "exaggeration": 0.5,
+   "cfg": 0.5,
+   "pause_after": 0.2,
+   "voice_ref": "kokoro:am_onyx"
+  },
+  {
+   "id": "B06",
+   "who": "B",
+   "text": "Someone set this table. For five.",
+   "delivery": "scared whisper",
+   "exaggeration": 0.8,
+   "cfg": 0.5,
+   "pause_after": 0.3,
+   "voice_ref": "kokoro:am_eric"
+  },
+  {
+   "id": "K08",
+   "who": "K",
+   "text": "Maybe we have a ghost butler.",
+   "delivery": "joking, nervous laugh",
+   "exaggeration": 0.8,
+   "cfg": 0.5,
+   "pause_after": 0.2,
+   "voice_ref": "kokoro:am_adam"
+  },
+  {
+   "id": "L05",
+   "who": "L",
+   "text": "Please. Stop. Talking.",
+   "delivery": "annoyed, scared",
+   "exaggeration": 0.7,
+   "cfg": 0.5,
+   "pause_after": 0.8,
+   "voice_ref": "kokoro:am_liam"
+  },
+  {
+   "id": "X03",
+   "who": "X",
+   "text": "Guys? Open the door.",
+   "delivery": "calm, muffled, from outside",
+   "exaggeration": 0.4,
+   "cfg": 0.5,
+   "pause_after": 0.6,
+   "voice_ref": "kokoro:am_puck",
+   "as": "M"
+  },
+  {
+   "id": "M05",
+   "who": "M",
+   "text": "Nobody open that door.",
+   "delivery": "urgent whisper",
+   "exaggeration": 0.8,
+   "cfg": 0.5,
+   "pause_after": 0.3,
+   "voice_ref": "kokoro:am_puck"
+  },
+  {
+   "id": "K09",
+   "who": "K",
+   "text": "Wait... if you're in here... then who's outside?",
+   "delivery": "scared, confused",
+   "exaggeration": 0.9,
+   "cfg": 0.35,
+   "pause_after": 0.6,
+   "voice_ref": "kokoro:am_adam"
+  },
+  {
+   "id": "X04",
+   "who": "X",
+   "text": "Guys, please. It's cold.",
+   "delivery": "pleading, muffled, from outside",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.6,
+   "voice_ref": "kokoro:am_onyx",
+   "as": "J"
+  },
+  {
+   "id": "J06",
+   "who": "J",
+   "text": "That's not me.",
+   "delivery": "deep, scared, quiet",
+   "exaggeration": 0.8,
+   "cfg": 0.5,
+   "pause_after": 0.3,
+   "voice_ref": "kokoro:am_onyx"
+  },
+  {
+   "id": "B07",
+   "who": "B",
+   "text": "Whatever is out there... it's copying our voices.",
+   "delivery": "panicked, shaky",
+   "exaggeration": 1.0,
+   "cfg": 0.35,
+   "pause_after": 0.2,
+   "voice_ref": "kokoro:am_eric"
+  },
+  {
+   "id": "L06",
+   "who": "L",
+   "text": "Okay. New plan. We leave. Right now.",
+   "delivery": "panicked, voice cracking",
+   "exaggeration": 1.0,
+   "cfg": 0.35,
+   "pause_after": 0.8,
+   "voice_ref": "kokoro:am_liam"
+  },
+  {
+   "id": "X05",
+   "who": "X",
+   "text": "Why are you all leaving?",
+   "delivery": "calm, wrong, distorted",
+   "exaggeration": 0.5,
+   "cfg": 0.5,
+   "pause_after": 0.4,
+   "voice_ref": "kokoro:am_adam",
+   "as": "K"
+  },
+  {
+   "id": "K10",
+   "who": "K",
+   "text": "What the hell is that?!",
+   "delivery": "screaming, terrified",
+   "exaggeration": 1.4,
+   "cfg": 0.35,
+   "pause_after": 0.2,
+   "voice_ref": "kokoro:am_adam"
+  },
+  {
+   "id": "J07",
+   "who": "J",
+   "text": "Run! Run!",
+   "delivery": "shouting, desperate",
+   "exaggeration": 1.3,
+   "cfg": 0.35,
+   "pause_after": 0.1,
+   "voice_ref": "kokoro:am_onyx"
+  },
+  {
+   "id": "L07",
+   "who": "L",
+   "text": "I told you! I literally told you!",
+   "delivery": "screaming, panicked",
+   "exaggeration": 1.3,
+   "cfg": 0.35,
+   "pause_after": 0.1,
+   "voice_ref": "kokoro:am_liam"
+  },
+  {
+   "id": "B08",
+   "who": "B",
+   "text": "It's coming!",
+   "delivery": "screaming, terrified",
+   "exaggeration": 1.3,
+   "cfg": 0.35,
+   "pause_after": 0.2,
+   "voice_ref": "kokoro:am_eric"
+  },
+  {
+   "id": "M06",
+   "who": "M",
+   "text": "There! The door!",
+   "delivery": "shouting, urgent",
+   "exaggeration": 1.2,
+   "cfg": 0.35,
+   "pause_after": 0.8,
+   "voice_ref": "kokoro:am_puck"
+  },
+  {
+   "id": "L08",
+   "who": "L",
+   "text": "Okay... never again. Never again.",
+   "delivery": "exhausted, out of breath",
+   "exaggeration": 0.8,
+   "cfg": 0.5,
+   "pause_after": 0.3,
+   "voice_ref": "kokoro:am_liam"
+  },
+  {
+   "id": "J08",
+   "who": "J",
+   "text": "Is everyone here?",
+   "delivery": "out of breath, protective",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.2,
+   "voice_ref": "kokoro:am_onyx"
+  },
+  {
+   "id": "B09",
+   "who": "B",
+   "text": "One... two... three... four... five.",
+   "delivery": "counting, out of breath",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.6,
+   "voice_ref": "kokoro:am_eric"
+  },
+  {
+   "id": "K11",
+   "who": "K",
+   "text": "Guys... that was actually kind of fun.",
+   "delivery": "laughing, excited",
+   "exaggeration": 0.9,
+   "cfg": 0.35,
+   "pause_after": 0.8,
+   "voice_ref": "kokoro:am_adam"
+  },
+  {
+   "id": "M07",
+   "who": "M",
+   "text": "Guys...",
+   "delivery": "quiet, scared",
+   "exaggeration": 0.7,
+   "cfg": 0.5,
+   "pause_after": 0.3,
+   "voice_ref": "kokoro:am_puck"
+  },
+  {
+   "id": "B10",
+   "who": "B",
+   "text": "What?",
+   "delivery": "nervous",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.3,
+   "voice_ref": "kokoro:am_eric"
+  },
+  {
+   "id": "M08",
+   "who": "M",
+   "text": "Don't move.",
+   "delivery": "whisper, terrified",
+   "exaggeration": 0.9,
+   "cfg": 0.35,
+   "pause_after": 1.0,
+   "voice_ref": "kokoro:am_puck"
+  },
+  {
+   "id": "K12",
+   "who": "K",
+   "text": "You forgot something.",
+   "delivery": "calm, wrong, smiling",
+   "exaggeration": 0.4,
+   "cfg": 0.5,
+   "pause_after": 0.8,
+   "voice_ref": "kokoro:am_adam"
+  },
+  {
+   "id": "X06",
+   "who": "X",
+   "text": "One of us is still inside.",
+   "delivery": "whisper, evil",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.2,
+   "voice_ref": "kokoro:am_puck",
+   "as": "M"
+  }
+ ]
+}

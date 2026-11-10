@@ -1,0 +1,58 @@
+{
+ "title": "The Forest That Eats People",
+ "engine": "chatterbox",
+ "voice_ref": "kokoro:am_fenrir",
+ "tempo": 1.05,
+ "lines": [
+  {
+   "id": "K01",
+   "who": "K",
+   "text": "Come on, guys! This is supposed to be the most dangerous forest in the country!",
+   "delivery": "excited, energetic, loud",
+   "exaggeration": 0.9,
+   "cfg": 0.35,
+   "pause_after": 0.2,
+   "voice_ref": "kokoro:am_adam"
+  },
+  {
+   "id": "L03",
+   "who": "L",
+   "text": "That's a human skull, you idiot!",
+   "delivery": "shouting, cracking voice",
+   "exaggeration": 1.1,
+   "cfg": 0.35,
+   "pause_after": 0.2,
+   "voice_ref": "kokoro:am_liam"
+  },
+  {
+   "id": "M04",
+   "who": "M",
+   "text": "We go in together. Nobody splits up. If anything feels wrong, we leave. Immediately.",
+   "delivery": "calm, clear, leader",
+   "exaggeration": 0.6,
+   "cfg": 0.5,
+   "pause_after": 0.6,
+   "voice_ref": "kokoro:am_puck"
+  },
+  {
+   "id": "B07",
+   "who": "B",
+   "text": "Whatever is out there... it's copying our voices.",
+   "delivery": "panicked, shaky",
+   "exaggeration": 1.0,
+   "cfg": 0.35,
+   "pause_after": 0.2,
+   "voice_ref": "kokoro:am_eric"
+  },
+  {
+   "id": "J07",
+   "who": "J",
+   "text": "Run! Run!",
+   "delivery": "shouting, desperate",
+   "exaggeration": 1.3,
+   "cfg": 0.35,
+   "pause_after": 0.1,
+   "voice_ref": "kokoro:am_onyx"
+  }
+ ]
+}

@@ -599,3 +599,63 @@ def kessrah(cv, x, y, s=1.0, open_=0.0, t=0.0, tilt=0.0, reach=0.0):
     cv.drawPath(face, paint(C('#8A8278', 0.6), style='stroke', width=6))
     cv.restore()
     cv.restore()
+
+
+def mimic(cv, x, y, s=1.0, t=0.0, tilt=70.0, grin=1.0, reach=0.0, run=None, look=(0.0, 0.0), rim='#9FC3E0', rim_a=0.5):
+    """The Mimic (VIDEO_016): something trying to look human and failing. 2.6 m, limbs too long, fingers too long, pale bloodied skin,
+    neck bent sideways, a stretched human smile, small human eyes that stare at the viewer. Feet at (x, y); s=1 ~ 2600 px tall.
+    run: phase 0..1 for a lurching gallop (leaning forward, arms reaching)."""
+    skin, sh, blood = '#C9BFB2', '#9E9488', '#6A1414'
+    cv.save(); cv.translate(x, y); cv.scale(s, s)
+    lean = 0.0 if run is None else 35.0
+    cv.rotate(lean, 0, -1300)
+    ph = 0.0 if run is None else math.sin(2 * math.pi * run)
+    for side in (-1, 1):                                                       # legs: thin, jointed wrong
+        k = ph * side
+        pts = [(side * 60, -1300), (side * (110 + 60 * k), -800), (side * (40 - 70 * k), -380), (side * (90 + 40 * k), 0)]
+        cv.drawPath(poly(pts, closed=False), paint(sh if side < 0 else skin, style='stroke', width=60))
+    torso = blob([(-170, -2050), (0, -2110), (170, -2050), (120, -1650), (90, -1300), (0, -1270), (-90, -1300), (-120, -1650)])
+    cv.drawPath(torso, paint(skin))
+    cv.save(); cv.clipPath(torso, skia.ClipOp.kIntersect, True)
+    cv.drawRect(skia.Rect(-300, -2200, -20, -1200), paint(sh))
+    for r in range(5):
+        cv.drawLine(-90, -1950 + r * 60, 90, -1930 + r * 60, paint(C('#8A8075', 0.8), style='stroke', width=7))
+    for bx, by, br in ((40, -1800, 70), (-60, -1600, 50), (80, -1450, 40)):
+        cv.drawPath(blob([(bx - br, by), (bx, by - br * 0.8), (bx + br, by - 10), (bx + 10, by + br * 1.6)]), paint(C(blood, 0.85)))
+    cv.drawPath(torso, paint(C(rim, rim_a), style='stroke', width=12, blur=4))
+    cv.restore()
+    for side in (-1, 1):                                                       # arms to the knees, fingers like twigs
+        r = reach if side > 0 else reach * 0.6
+        sw = ph * side * 0.5
+        pts = [(side * 160, -2030), (side * (230 + 260 * r), -1600 - 380 * r + 120 * sw), (side * (210 + 520 * r), -1050 - 650 * r + 200 * sw)]
+        cv.drawPath(poly(pts, closed=False), paint(skin if side > 0 else sh, style='stroke', width=44))
+        fx, fy = pts[-1]
+        for f in range(5):
+            a = math.radians(-40 + f * 20) + (0.6 * r * side)
+            cv.drawLine(fx, fy, fx + math.sin(a) * 220 * side, fy + math.cos(a) * 220 - 150 * r, paint(skin, style='stroke', width=14))
+        cv.drawCircle(fx, fy, 30, paint(C(blood, 0.7)))
+    cv.save(); cv.translate(0, -2100); cv.rotate(tilt)                       # the neck bends too far; the head hangs sideways
+    cv.drawRect(skia.Rect(-34, -330, 34, 0), paint(skin))
+    cv.translate(0, -330)
+    head = blob([(-150, -40), (-130, -190), (0, -230), (130, -190), (150, -40), (120, 110), (0, 160), (-120, 110)])
+    cv.drawPath(head, paint(skin))
+    cv.save(); cv.clipPath(head, skia.ClipOp.kIntersect, True)
+    cv.drawOval(skia.Rect(-260, -260, -40, 260), paint(sh, blur=20))
+    cv.drawPath(blob([(-130, -200), (-40, -240), (40, -180), (-60, -120)]), paint(C('#2A2420', 0.9)))     # patchy hair
+    cv.restore()
+    for side in (-1, 1):                                                       # small human eyes, too far apart, staring
+        ex = side * 70
+        cv.drawOval(skia.Rect(ex - 30, -70, ex + 30, -34), paint('#EEE8DE'))
+        cv.drawCircle(ex + look[0] * 8, -52 + look[1] * 6, 9, paint('#0A0A0A'))
+        cv.drawCircle(ex + look[0] * 8 + 3, -56, 3, paint('#FFFFFF'))
+    w_ = 70 + 70 * grin                                                        # the stretched smile, cheek to cheek
+    q = skia.Path(); q.moveTo(-w_, 30); q.quadTo(0, 30 + 90 * grin, w_, 30); q.quadTo(0, 50 + 40 * grin, -w_, 30)
+    cv.drawPath(q, paint('#1A0808'))
+    for k in range(12):
+        tx = -w_ * 0.85 + k * (w_ * 1.7 / 11)
+        cv.drawRect(skia.Rect(tx - 7, 34 + 8 * grin, tx + 7, 52 + 18 * grin), paint('#E4DCC8'))
+    cv.drawPath(q, paint('#2A0A0A', style='stroke', width=6))
+    cv.drawPath(blob([(w_ - 10, 40), (w_ + 10, 50), (w_, 140), (w_ - 14, 120)]), paint(C(blood, 0.9)))
+    cv.drawPath(head, paint(C(rim, rim_a), style='stroke', width=10, blur=4))
+    cv.restore()
+    cv.restore()
