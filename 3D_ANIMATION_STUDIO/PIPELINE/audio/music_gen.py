@@ -1360,6 +1360,38 @@ def cue_video017():
 CUES['video017'] = cue_video017
 LOOPS['video017'] = None
 
+def cue_video018():
+    sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'VIDEOS', 'VIDEO_018'))
+    import edit_video018 as E18
+    B, END, s18, e18 = E18.B, E18.END, E18.s, E18.e
+    S = Score(END + 3.0, bpm=60)
+    D = lambda t, d, f=36.7, g=-10: S.add('fx', t, sine(f, d) * env_adsr(int(d * SR), min(1.5, d / 3), 0.2, 0.9, min(1.0, d / 4)) * 0.8, g)
+    # a ticking count: one soft note per second that climbs a semitone at every new passenger
+    base = n2m('D4')
+    for i in range(int(B['dark'])):
+        step = sum(1 for c in B['counts'] if c <= i)
+        S.add('lead', i + 0.5, inst_bell(mtof(base + step), 0.9), -21)
+    S.add('pad', 0.0, inst_pad(C(['D2', 'A2', 'F3']), B['dark'], bright=900, attack=1.0), -16)
+    D(s18('A02'), B['dark'] - s18('A02'), 34.6, -10)
+    S.add('pad', B['girl'], inst_tremolo(C(['A4', 'A#4']), B['dark'] - B['girl'], rate=9, bright=2600), -18)
+    S.add('perc', B['js1'], drum_taiko(1.5, 38), -2)
+    S.add('pad', B['js1'], inst_strings(C(['D3', 'D#3', 'A3']), 1.4, attack=0.02, bright=2400), -10)
+    D(s18('A03'), B['js2'] - s18('A03'), 32.7, -9)
+    S.add('pad', B['tickets'], inst_tremolo(C(['F4', 'F#4']), B['js2'] - B['tickets'], rate=12, bright=2800), -16)
+    S.add('perc', B['js2'], drum_taiko(1.6, 36), -1)
+    S.add('pad', B['js2'], inst_strings(C(['C3', 'C#3', 'G3']), 1.6, attack=0.01, bright=2600), -9)
+    t, i = B['girl2'], 0
+    while t < B['js3'] - 0.3:
+        S.add('perc', t, drum_tick(0.6), -10)
+        t += 0.5 - 0.25 * min(1.0, (t - B['girl2']) / max(0.1, B['js3'] - B['girl2'])); i += 1
+    S.add('pad', B['choice'], inst_tremolo(C(['D4', 'D#4', 'G#4']), B['js3'] - B['choice'], rate=13, bright=3000), -14)
+    S.add('perc', B['js3'], drum_taiko(1.6, 36), -1)
+    return S
+
+
+CUES['video018'] = cue_video018
+LOOPS['video018'] = None
+
 if __name__ == '__main__':
     cue, out = sys.argv[1], sys.argv[2]
     S = CUES[cue]()

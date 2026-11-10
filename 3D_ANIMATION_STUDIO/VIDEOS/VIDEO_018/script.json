@@ -1,0 +1,135 @@
+{
+ "title": "The Extra Passenger",
+ "engine": "qwen3-tts",
+ "tempo": 1.08,
+ "qwen_voices": {
+  "M": "Male, 20 years old, American. Low-mid pitch, warm clear steady voice, calm logical leader, quietly tense.",
+  "B": "Male, 19 years old, American nerd. Medium-low pitch, soft careful precise voice, anxious and breathy, slightly fast.",
+  "L": "Male, 20 years old, American. Medium pitched, nasal sarcastic tone, jokey but nervous, quick talker.",
+  "A": "Female, 30 years old, American flight attendant. Sweet, soft, sing-song airline announcement voice, far too calm and polite, a fixed smile in the voice.",
+  "C": "Male, 50 years old, American airline captain. Low, calm, flat intercom voice, slow and bored.",
+  "G": "Girl, 8 years old, American. Small, soft, sweet voice, calm and slow, slightly sing-song, unsettlingly polite."
+ },
+ "lines": [
+  {
+   "id": "A01",
+   "who": "A",
+   "text": "Two hundred and eleven. Two hundred and twelve. Two hundred and thirteen.",
+   "delivery": "",
+   "pause_after": 0.3
+  },
+  {
+   "id": "A02",
+   "who": "A",
+   "text": "This plane only has two hundred and twelve seats.",
+   "delivery": "",
+   "pause_after": 0.4
+  },
+  {
+   "id": "L01",
+   "who": "L",
+   "text": "So somebody's sitting on somebody's lap?",
+   "delivery": "",
+   "pause_after": 0.2
+  },
+  {
+   "id": "M01",
+   "who": "M",
+   "text": "Every seat is full. Nobody's standing.",
+   "delivery": "",
+   "pause_after": 0.2
+  },
+  {
+   "id": "B01",
+   "who": "B",
+   "text": "Then who's the extra passenger?",
+   "delivery": "",
+   "pause_after": 0.6
+  },
+  {
+   "id": "M02",
+   "who": "M",
+   "text": "The man in twenty-two C. He hasn't moved since takeoff.",
+   "delivery": "",
+   "pause_after": 0.2
+  },
+  {
+   "id": "B02",
+   "who": "B",
+   "text": "He's not breathing. Look at his chest.",
+   "delivery": "",
+   "pause_after": 0.6
+  },
+  {
+   "id": "L02",
+   "who": "L",
+   "text": "And that kid has been drawing us. For three hours.",
+   "delivery": "",
+   "pause_after": 0.3
+  },
+  {
+   "id": "G01",
+   "who": "G",
+   "text": "I'm drawing everyone on the plane.",
+   "delivery": "",
+   "pause_after": 0.5
+  },
+  {
+   "id": "B03",
+   "who": "B",
+   "text": "She drew someone sitting between us. With no face.",
+   "delivery": "",
+   "pause_after": 0.6
+  },
+  {
+   "id": "A03",
+   "who": "A",
+   "text": "Two hundred and fourteen.",
+   "delivery": "",
+   "pause_after": 0.4
+  },
+  {
+   "id": "M03",
+   "who": "M",
+   "text": "Now there's two of them.",
+   "delivery": "",
+   "pause_after": 0.5
+  },
+  {
+   "id": "B04",
+   "who": "B",
+   "text": "Wait. I booked two seats. You and me.",
+   "delivery": "",
+   "pause_after": 0.3
+  },
+  {
+   "id": "M04",
+   "who": "M",
+   "text": "Then Lawrence... where's your ticket?",
+   "delivery": "",
+   "pause_after": 0.6
+  },
+  {
+   "id": "L03",
+   "who": "L",
+   "text": "Guys. Come on. I've always been here.",
+   "delivery": "",
+   "pause_after": 0.6
+  },
+  {
+   "id": "X01",
+   "who": "X",
+   "text": "He's lying.",
+   "delivery": "",
+   "pause_after": 0.6,
+   "as": "C"
+  },
+  {
+   "id": "G02",
+   "who": "G",
+   "text": "One of us isn't real. Pick wrong... and you become the extra passenger.",
+   "delivery": "",
+   "pause_after": 0.3
+  }
+ ]
+}
