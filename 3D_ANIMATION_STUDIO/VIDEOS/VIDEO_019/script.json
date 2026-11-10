@@ -1,0 +1,66 @@
+{
+ "title": "What If You Never Stopped",
+ "engine": "qwen3-tts",
+ "tempo": 1.12,
+ "qwen_voices": {
+  "C": "Male, 50 years old, American airline captain. Low, calm, flat intercom voice, slow and bored."
+ },
+ "lines": [
+  {
+   "id": "N01",
+   "who": "C",
+   "text": "What if you never stopped? Not for one single second.",
+   "delivery": "",
+   "pause_after": 0.2
+  },
+  {
+   "id": "N02",
+   "who": "C",
+   "text": "Hour one. You burned a hundred calories. That's one cookie.",
+   "delivery": "",
+   "pause_after": 0.3
+  },
+  {
+   "id": "N03",
+   "who": "C",
+   "text": "Day one. You lost two liters of water. You're a raisin now.",
+   "delivery": "",
+   "pause_after": 0.3
+  },
+  {
+   "id": "N04",
+   "who": "C",
+   "text": "Day three. Your wrist files for divorce.",
+   "delivery": "",
+   "pause_after": 0.4
+  },
+  {
+   "id": "N05",
+   "who": "C",
+   "text": "Week one. Friction wins. Friction always wins.",
+   "delivery": "",
+   "pause_after": 0.3
+  },
+  {
+   "id": "N06",
+   "who": "C",
+   "text": "Plus, after round one, your body forces a cooldown. Science says: no.",
+   "delivery": "",
+   "pause_after": 0.3
+  },
+  {
+   "id": "N07",
+   "who": "C",
+   "text": "So you'd just be sitting there. Forever.",
+   "delivery": "",
+   "pause_after": 0.4
+  },
+  {
+   "id": "N08",
+   "who": "C",
+   "text": "Then your mom opens the door.",
+   "delivery": "",
+   "pause_after": 0.2
+  }
+ ]
+}

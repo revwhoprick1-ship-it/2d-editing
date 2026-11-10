@@ -1,0 +1,9 @@
+{
+ "master_integrated_lufs": -14.04,
+ "true_peak_dbtp_approx": -2.2,
+ "narration_lufs_pre_master": -16,
+ "music_lufs_in_mix": -19.19,
+ "sfx_lufs_in_mix": -28.03,
+ "amb_lufs_in_mix": -50.55,
+ "clipped_samples": 0
+}

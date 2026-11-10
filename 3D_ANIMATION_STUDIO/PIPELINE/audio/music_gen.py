@@ -1392,6 +1392,27 @@ def cue_video018():
 CUES['video018'] = cue_video018
 LOOPS['video018'] = None
 
+def cue_video019():
+    sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'VIDEOS', 'VIDEO_019'))
+    import edit_video019 as E19
+    B, END = E19.B, E19.END
+    S = Score(END + 2.0, bpm=150)
+    beat = 60 / 150
+    bass = ['C3', 'G2', 'A2', 'E2']
+    mel = ['E5', 'G5', 'C6', 'G5', 'A5', 'G5', 'E5', 'D5']
+    t, i = 0.0, 0
+    while t < B['freeze'] - 0.05:
+        S.add('bass', t, inst_pizz(mtof(n2m(bass[(i // 4) % 4])), 0.3), -12)
+        if i % 2 == 0:
+            S.add('lead', t, inst_marimba(mtof(n2m(mel[(i // 2) % 8])), 0.4), -15)
+        S.add('perc', t, drum_tick(0.4 if i % 2 else 0.25), -18)
+        t += beat; i += 1
+    return S
+
+
+CUES['video019'] = cue_video019
+LOOPS['video019'] = None
+
 if __name__ == '__main__':
     cue, out = sys.argv[1], sys.argv[2]
     S = CUES[cue]()

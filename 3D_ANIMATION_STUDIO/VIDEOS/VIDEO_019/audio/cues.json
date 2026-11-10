@@ -1,0 +1,151 @@
+{
+ "duration": 28.77,
+ "loop": true,
+ "narration": "narration/narration_raw.wav",
+ "narration_offset": 0.0,
+ "music": "music_score.wav",
+ "music_gain_db": 2,
+ "music_cue": "cue_video019",
+ "music_gates": [
+  [
+   27.221,
+   28.77,
+   0.03
+  ]
+ ],
+ "targets": {
+  "narration_lufs": -16,
+  "master_lufs": -14,
+  "true_peak": -2.0,
+  "duck_db": 6
+ },
+ "cues": [
+  {
+   "t": 0.0,
+   "file": "AUDIO/ambience/room_tone.flac",
+   "gain": -12,
+   "bus": "amb",
+   "note": "room",
+   "loop": true,
+   "dur": 28.77
+  },
+  {
+   "t": 0.0,
+   "file": "AUDIO/sound_effects/movement/cloth_rustle.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "blanket, nonstop",
+   "loop": true,
+   "dur": 22.843
+  },
+  {
+   "t": 0.0,
+   "file": "AUDIO/sound_effects/comedy/creak_long.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "bed creak",
+   "loop": true,
+   "dur": 22.843
+  },
+  {
+   "t": 3.374,
+   "file": "AUDIO/sound_effects/comedy/cash_register.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "100 kcal"
+  },
+  {
+   "t": 4.874,
+   "file": "AUDIO/sound_effects/comedy/crunch.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "cookie bite"
+  },
+  {
+   "t": 7.21,
+   "file": "AUDIO/sound_effects/reactions/slide_whistle_down.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "shrinks into a raisin"
+  },
+  {
+   "t": 11.115,
+   "file": "AUDIO/sound_effects/comedy/bone_clicks.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "wrist crack"
+  },
+  {
+   "t": 11.915,
+   "file": "AUDIO/sound_effects/comedy/stamp_thud.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "divorce papers stamped"
+  },
+  {
+   "t": 13.798,
+   "file": "AUDIO/sound_effects/comedy/smoke_hiss.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "fire",
+   "dur": 3.8139999999999983
+  },
+  {
+   "t": 14.998,
+   "file": "AUDIO/sound_effects/comedy/water_spray.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "extinguisher"
+  },
+  {
+   "t": 17.612,
+   "file": "AUDIO/sound_effects/comedy/power_cut.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "system shutdown"
+  },
+  {
+   "t": 18.012,
+   "file": "AUDIO/sound_effects/environment/electronic_beep.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "rebooting"
+  },
+  {
+   "t": 22.943,
+   "file": "AUDIO/sound_effects/comedy/counter_ticks.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "time passes",
+   "dur": 2.7989999999999995
+  },
+  {
+   "t": 23.543,
+   "file": "AUDIO/sound_effects/comedy/whistle_innocent.flac",
+   "gain": -19,
+   "bus": "sfx",
+   "note": "just sitting"
+  },
+  {
+   "t": 25.742,
+   "file": "AUDIO/sound_effects/comedy/creak_long.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "door opens"
+  },
+  {
+   "t": 27.221,
+   "file": "AUDIO/sound_effects/comedy/record_scratch.flac",
+   "gain": -5,
+   "bus": "sfx",
+   "note": "FREEZE"
+  },
+  {
+   "t": 27.421,
+   "file": "AUDIO/sound_effects/comedy/crowd_gasp.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "gasp"
+  }
+ ]
+}
