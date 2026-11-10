@@ -1,0 +1,118 @@
+{
+ "title": "Testicular Pressure Syndrome",
+ "engine": "qwen3-tts",
+ "tempo": 1.1,
+ "qwen_voices": {
+  "M": "x",
+  "B": "x",
+  "A": "x",
+  "C": "x"
+ },
+ "lines": [
+  {
+   "id": "C01",
+   "who": "C",
+   "text": "Bad news. If you stop for even one second... your balls explode.",
+   "delivery": "",
+   "pause_after": 0.3
+  },
+  {
+   "id": "M01",
+   "who": "M",
+   "text": "Define stop.",
+   "delivery": "",
+   "pause_after": 0.3
+  },
+  {
+   "id": "C02",
+   "who": "C",
+   "text": "Every second. For the rest of your life.",
+   "delivery": "",
+   "pause_after": 0.3
+  },
+  {
+   "id": "M02",
+   "who": "M",
+   "text": "I have a job interview in ten minutes.",
+   "delivery": "",
+   "pause_after": 0.2
+  },
+  {
+   "id": "A01",
+   "who": "A",
+   "text": "So. Where do you see yourself in five years?",
+   "delivery": "",
+   "pause_after": 0.4
+  },
+  {
+   "id": "M03",
+   "who": "M",
+   "text": "Mmmmmm... Mmmmanagement.",
+   "delivery": "",
+   "pause_after": 0.3
+  },
+  {
+   "id": "A02",
+   "who": "A",
+   "text": "Are you... okay?",
+   "delivery": "",
+   "pause_after": 0.2
+  },
+  {
+   "id": "M04",
+   "who": "M",
+   "text": "Mm-hmm! Very... very motivated!",
+   "delivery": "",
+   "pause_after": 0.4
+  },
+  {
+   "id": "B01",
+   "who": "B",
+   "text": "Dude. Both hands on the mic.",
+   "delivery": "",
+   "pause_after": 0.2
+  },
+  {
+   "id": "M05",
+   "who": "M",
+   "text": "Bob. I physically can't.",
+   "delivery": "",
+   "pause_after": 0.3
+  },
+  {
+   "id": "M06",
+   "who": "M",
+   "text": "Ohhh... Ohhhh... Oh, what a beautiful couple!",
+   "delivery": "",
+   "pause_after": 0.4
+  },
+  {
+   "id": "C03",
+   "who": "C",
+   "text": "Hey, good news! Wrong chart. You're perfectly healthy.",
+   "delivery": "",
+   "pause_after": 0.3
+  },
+  {
+   "id": "M07",
+   "who": "M",
+   "text": "I've been doing this for three years.",
+   "delivery": "",
+   "pause_after": 0.2
+  },
+  {
+   "id": "C04",
+   "who": "C",
+   "text": "So you can stop!",
+   "delivery": "",
+   "pause_after": 0.6
+  },
+  {
+   "id": "M08",
+   "who": "M",
+   "text": "Doctor... I don't think I can.",
+   "delivery": "",
+   "pause_after": 0.2
+  }
+ ]
+}

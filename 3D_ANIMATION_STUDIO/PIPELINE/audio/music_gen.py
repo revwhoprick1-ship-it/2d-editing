@@ -1413,6 +1413,31 @@ def cue_video019():
 CUES['video019'] = cue_video019
 LOOPS['video019'] = None
 
+def cue_video020():
+    sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'VIDEOS', 'VIDEO_020'))
+    import edit_video020 as E20
+    B, END, s20 = E20.B, E20.END, E20.s
+    S = Score(END + 2.0, bpm=128)
+    beat = 60 / 128
+    # elevator-smooth "professional" jazz that pretends everything is fine
+    ch = [['D3', 'F3', 'A3', 'C4'], ['G2', 'B2', 'D3', 'F3'], ['C3', 'E3', 'G3', 'B3'], ['A2', 'C#3', 'E3', 'G3']]
+    t, i = 0.0, 0
+    while t < END:
+        if not (B['stop'] <= t < s20('M06')):
+            if i % 4 == 0:
+                S.add('pad', t, inst_epiano(mtof(n2m(ch[(i // 4) % 4][0])), beat * 3.6), -16)
+                for nm in ch[(i // 4) % 4][1:]:
+                    S.add('pad', t, inst_epiano(mtof(n2m(nm)), beat * 3.6), -20)
+            S.add('bass', t, inst_pizz(mtof(n2m(ch[(i // 4) % 4][0]) - 12), 0.3), -14)
+            S.add('perc', t, drum_shaker(0.3), -20)
+        t += beat; i += 1
+    S.add('perc', B['alarm'], drum_taiko(1.2, 40), -4)
+    return S
+
+
+CUES['video020'] = cue_video020
+LOOPS['video020'] = None
+
 if __name__ == '__main__':
     cue, out = sys.argv[1], sys.argv[2]
     S = CUES[cue]()
