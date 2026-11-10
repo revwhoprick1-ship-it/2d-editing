@@ -1,0 +1,160 @@
+{
+ "duration": 41.77,
+ "loop": true,
+ "narration": "narration/narration_raw.wav",
+ "narration_offset": 0.0,
+ "music": "music_score.wav",
+ "music_gain_db": 2,
+ "music_cue": "cue_video020",
+ "music_gates": [
+  [
+   25.220000000000002,
+   26.82,
+   0.05
+  ]
+ ],
+ "targets": {
+  "narration_lufs": -16,
+  "master_lufs": -14,
+  "true_peak": -2.0,
+  "duck_db": 6
+ },
+ "cues": [
+  {
+   "t": 0.0,
+   "file": "AUDIO/ambience/room_tone.flac",
+   "gain": -12,
+   "bus": "amb",
+   "note": "room",
+   "loop": true,
+   "dur": 41.77
+  },
+  {
+   "t": 0.0,
+   "file": "AUDIO/sound_effects/bio/heartbeat_lubdub.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "x-ray pulse",
+   "dur": 4.445
+  },
+  {
+   "t": 0.0,
+   "file": "AUDIO/sound_effects/movement/cloth_rustle.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "keeps going",
+   "loop": true,
+   "dur": 25.220000000000002
+  },
+  {
+   "t": 3.745,
+   "file": "AUDIO/sound_effects/reactions/dramatic_hit.flac",
+   "gain": -7,
+   "bus": "sfx",
+   "note": "\"...your balls explode\""
+  },
+  {
+   "t": 10.552,
+   "file": "AUDIO/sound_effects/comedy/creak_long.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "desk creak",
+   "loop": true,
+   "dur": 9.861
+  },
+  {
+   "t": 10.852,
+   "file": "AUDIO/sound_effects/environment/glass_clink.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "coffee cup rattling"
+  },
+  {
+   "t": 16.35,
+   "file": "AUDIO/sound_effects/comedy/record_scratch.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "interviewer stares"
+  },
+  {
+   "t": 20.413,
+   "file": "AUDIO/ambience/crowd.flac",
+   "gain": -16,
+   "bus": "amb",
+   "note": "wedding guests",
+   "loop": true,
+   "dur": 9.762999999999998,
+   "fade_out": 0.4
+  },
+  {
+   "t": 20.613,
+   "file": "AUDIO/sound_effects/comedy/glass_tap.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "toast"
+  },
+  {
+   "t": 25.22,
+   "file": "AUDIO/sound_effects/comedy/counter_ticks.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "he stopped...",
+   "dur": 1.5999999999999979
+  },
+  {
+   "t": 25.42,
+   "file": "AUDIO/sound_effects/environment/electronic_beep.flac",
+   "gain": -7,
+   "bus": "sfx",
+   "note": "PRESSURE ALARM",
+   "loop": true,
+   "dur": 1.5999999999999985
+  },
+  {
+   "t": 25.42,
+   "file": "AUDIO/sound_effects/comedy/thunder.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "rumble"
+  },
+  {
+   "t": 25.62,
+   "file": "AUDIO/sound_effects/reactions/tension_riser.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "about to blow"
+  },
+  {
+   "t": 28.62,
+   "file": "AUDIO/sound_effects/comedy/arena_crowd.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "guests applaud",
+   "dur": 2.0,
+   "fade_out": 0.6
+  },
+  {
+   "t": 29.976,
+   "file": "AUDIO/sound_effects/comedy/phone_buzz.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "doctor calling"
+  },
+  {
+   "t": 37.21,
+   "file": "AUDIO/sound_effects/movement/cloth_rustle.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "still going",
+   "loop": true,
+   "dur": 4.560000000000004
+  },
+  {
+   "t": 38.887,
+   "file": "AUDIO/sound_effects/reactions/surprise_sting.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "button"
+  }
+ ]
+}

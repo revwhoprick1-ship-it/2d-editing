@@ -85,4 +85,5 @@ SPK = {l['id']: {'M': 'YOU', 'C': 'DOCTOR', 'A': 'INTERVIEWER', 'B': 'BOB'}[l['i
 CAPTIONS = dict(timing=TIMING, offset=0.0, style='2dedit', y=1420, size=76, max_words=4, speakers=SPK,
                 emphasis={'explode', 'stop', 'life', 'interview', 'mmmmanagement', 'okay', 'motivated', 'hands', "can't", 'beautiful',
                           'healthy', 'three', "don't"})
-CAPTIONS['y_over'] = [(sg['t0'], sg['t1'], 1790) for sg in SEGMENTS if sg['src'] in ('OFFICE', 'WEDDING', 'DOC', 'PHONE', 'XRAY')]
+CAPTIONS['y_over'] = [(sg['t0'], sg['t1'], 1790) for sg in SEGMENTS if sg['src'] in ('OFFICE', 'WEDDING', 'DOC', 'XRAY', 'ALARM')] + \
+    [(sg['t0'], sg['t1'], 1480) for sg in SEGMENTS if sg['src'] == 'PHONE']

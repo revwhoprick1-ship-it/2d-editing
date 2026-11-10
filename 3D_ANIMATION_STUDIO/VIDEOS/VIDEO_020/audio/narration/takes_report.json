@@ -1,0 +1,62 @@
+[
+ {
+  "id": "C01",
+  "word_misses": 0
+ },
+ {
+  "id": "M01",
+  "word_misses": 0
+ },
+ {
+  "id": "C02",
+  "word_misses": 0
+ },
+ {
+  "id": "M02",
+  "word_misses": 1
+ },
+ {
+  "id": "A01",
+  "word_misses": 0
+ },
+ {
+  "id": "M03",
+  "word_misses": 3
+ },
+ {
+  "id": "A02",
+  "word_misses": 0
+ },
+ {
+  "id": "M04",
+  "word_misses": 0
+ },
+ {
+  "id": "B01",
+  "word_misses": 0
+ },
+ {
+  "id": "M05",
+  "word_misses": 0
+ },
+ {
+  "id": "M06",
+  "word_misses": 2
+ },
+ {
+  "id": "C03",
+  "word_misses": 0
+ },
+ {
+  "id": "M07",
+  "word_misses": 0
+ },
+ {
+  "id": "C04",
+  "word_misses": 0
+ },
+ {
+  "id": "M08",
+  "word_misses": 0
+ }
+]

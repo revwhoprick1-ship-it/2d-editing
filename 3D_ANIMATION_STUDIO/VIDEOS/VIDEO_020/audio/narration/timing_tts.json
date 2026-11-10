@@ -1,0 +1,684 @@
+{
+ "voice": "qwen3-tts",
+ "sample_rate": 24000,
+ "lines": [
+  {
+   "id": "C01",
+   "who": "C",
+   "text": "Bad news. If you stop for even one second... your balls explode.",
+   "start": 0.0,
+   "end": 4.145,
+   "delivery": "",
+   "speed": 1.1
+  },
+  {
+   "id": "M01",
+   "who": "M",
+   "text": "Define stop.",
+   "start": 4.445,
+   "end": 5.807,
+   "delivery": "",
+   "speed": 1.1
+  },
+  {
+   "id": "C02",
+   "who": "C",
+   "text": "Every second. For the rest of your life.",
+   "start": 6.107,
+   "end": 8.373,
+   "delivery": "",
+   "speed": 1.1
+  },
+  {
+   "id": "M02",
+   "who": "M",
+   "text": "I have a job interview in ten minutes.",
+   "start": 8.673,
+   "end": 10.352,
+   "delivery": "",
+   "speed": 1.1
+  },
+  {
+   "id": "A01",
+   "who": "A",
+   "text": "So. Where do you see yourself in five years?",
+   "start": 10.552,
+   "end": 13.121,
+   "delivery": "",
+   "speed": 1.1
+  },
+  {
+   "id": "M03",
+   "who": "M",
+   "text": "Mmmmmm... Mmmmanagement.",
+   "start": 13.521,
+   "end": 15.45,
+   "delivery": "",
+   "speed": 1.1
+  },
+  {
+   "id": "A02",
+   "who": "A",
+   "text": "Are you... okay?",
+   "start": 15.75,
+   "end": 16.494,
+   "delivery": "",
+   "speed": 1.1
+  },
+  {
+   "id": "M04",
+   "who": "M",
+   "text": "Mm-hmm! Very... very motivated!",
+   "start": 16.694,
+   "end": 19.213,
+   "delivery": "",
+   "speed": 1.1
+  },
+  {
+   "id": "B01",
+   "who": "B",
+   "text": "Dude. Both hands on the mic.",
+   "start": 19.613,
+   "end": 21.417,
+   "delivery": "",
+   "speed": 1.1
+  },
+  {
+   "id": "M05",
+   "who": "M",
+   "text": "Bob. I physically can't.",
+   "start": 21.617,
+   "end": 23.42,
+   "delivery": "",
+   "speed": 1.1
+  },
+  {
+   "id": "M06",
+   "who": "M",
+   "text": "Ohhh... Ohhhh... Oh, what a beautiful couple!",
+   "start": 23.72,
+   "end": 26.676,
+   "delivery": "",
+   "speed": 1.1
+  },
+  {
+   "id": "C03",
+   "who": "C",
+   "text": "Hey, good news! Wrong chart. You're perfectly healthy.",
+   "start": 27.076,
+   "end": 30.593,
+   "delivery": "",
+   "speed": 1.1
+  },
+  {
+   "id": "M07",
+   "who": "M",
+   "text": "I've been doing this for three years.",
+   "start": 30.893,
+   "end": 32.71,
+   "delivery": "",
+   "speed": 1.1
+  },
+  {
+   "id": "C04",
+   "who": "C",
+   "text": "So you can stop!",
+   "start": 32.91,
+   "end": 33.787,
+   "delivery": "",
+   "speed": 1.1
+  },
+  {
+   "id": "M08",
+   "who": "M",
+   "text": "Doctor... I don't think I can.",
+   "start": 34.387,
+   "end": 36.274,
+   "delivery": "",
+   "speed": 1.1
+  }
+ ],
+ "words": [
+  {
+   "line": "C01",
+   "text": "Bad",
+   "start": 0.0,
+   "end": 0.24
+  },
+  {
+   "line": "C01",
+   "text": "news.",
+   "start": 0.24,
+   "end": 0.54
+  },
+  {
+   "line": "C01",
+   "text": "If",
+   "start": 0.98,
+   "end": 1.08
+  },
+  {
+   "line": "C01",
+   "text": "you",
+   "start": 1.08,
+   "end": 1.2
+  },
+  {
+   "line": "C01",
+   "text": "stop",
+   "start": 1.2,
+   "end": 1.42
+  },
+  {
+   "line": "C01",
+   "text": "for",
+   "start": 1.42,
+   "end": 1.64
+  },
+  {
+   "line": "C01",
+   "text": "even",
+   "start": 1.64,
+   "end": 1.8
+  },
+  {
+   "line": "C01",
+   "text": "one",
+   "start": 1.8,
+   "end": 2.12
+  },
+  {
+   "line": "C01",
+   "text": "second...",
+   "start": 2.12,
+   "end": 2.52
+  },
+  {
+   "line": "C01",
+   "text": "your",
+   "start": 2.96,
+   "end": 3.06
+  },
+  {
+   "line": "C01",
+   "text": "balls",
+   "start": 3.06,
+   "end": 3.4
+  },
+  {
+   "line": "C01",
+   "text": "explode.",
+   "start": 3.4,
+   "end": 3.94
+  },
+  {
+   "line": "M01",
+   "text": "Define",
+   "start": 4.445,
+   "end": 4.985
+  },
+  {
+   "line": "M01",
+   "text": "stop.",
+   "start": 5.465,
+   "end": 5.605
+  },
+  {
+   "line": "C02",
+   "text": "Every",
+   "start": 6.107,
+   "end": 6.367
+  },
+  {
+   "line": "C02",
+   "text": "second.",
+   "start": 6.367,
+   "end": 6.807
+  },
+  {
+   "line": "C02",
+   "text": "For",
+   "start": 6.807,
+   "end": 7.387
+  },
+  {
+   "line": "C02",
+   "text": "the",
+   "start": 7.387,
+   "end": 7.487
+  },
+  {
+   "line": "C02",
+   "text": "rest",
+   "start": 7.487,
+   "end": 7.647
+  },
+  {
+   "line": "C02",
+   "text": "of",
+   "start": 7.647,
+   "end": 7.867
+  },
+  {
+   "line": "C02",
+   "text": "your",
+   "start": 7.867,
+   "end": 7.967
+  },
+  {
+   "line": "C02",
+   "text": "life.",
+   "start": 7.967,
+   "end": 8.207
+  },
+  {
+   "line": "M02",
+   "text": "I",
+   "start": 8.673,
+   "end": 8.793
+  },
+  {
+   "line": "M02",
+   "text": "have",
+   "start": 8.793,
+   "end": 8.913
+  },
+  {
+   "line": "M02",
+   "text": "a",
+   "start": 8.913,
+   "end": 9.013
+  },
+  {
+   "line": "M02",
+   "text": "job",
+   "start": 9.013,
+   "end": 9.213
+  },
+  {
+   "line": "M02",
+   "text": "interview",
+   "start": 9.213,
+   "end": 9.513
+  },
+  {
+   "line": "M02",
+   "text": "in",
+   "start": 9.513,
+   "end": 9.733
+  },
+  {
+   "line": "M02",
+   "text": "ten",
+   "start": 9.733,
+   "end": 9.913
+  },
+  {
+   "line": "M02",
+   "text": "minutes.",
+   "start": 9.913,
+   "end": 10.113
+  },
+  {
+   "line": "A01",
+   "text": "So.",
+   "start": 10.552,
+   "end": 10.832
+  },
+  {
+   "line": "A01",
+   "text": "Where",
+   "start": 11.072,
+   "end": 11.492
+  },
+  {
+   "line": "A01",
+   "text": "do",
+   "start": 11.492,
+   "end": 11.612
+  },
+  {
+   "line": "A01",
+   "text": "you",
+   "start": 11.612,
+   "end": 11.732
+  },
+  {
+   "line": "A01",
+   "text": "see",
+   "start": 11.732,
+   "end": 11.912
+  },
+  {
+   "line": "A01",
+   "text": "yourself",
+   "start": 11.912,
+   "end": 12.172
+  },
+  {
+   "line": "A01",
+   "text": "in",
+   "start": 12.172,
+   "end": 12.392
+  },
+  {
+   "line": "A01",
+   "text": "five",
+   "start": 12.392,
+   "end": 12.592
+  },
+  {
+   "line": "A01",
+   "text": "years?",
+   "start": 12.592,
+   "end": 12.872
+  },
+  {
+   "line": "M03",
+   "text": "Mmmmmm...",
+   "start": 13.521,
+   "end": 14.486
+  },
+  {
+   "line": "M03",
+   "text": "Mmmmanagement.",
+   "start": 14.486,
+   "end": 15.45
+  },
+  {
+   "line": "A02",
+   "text": "Are",
+   "start": 15.75,
+   "end": 15.87
+  },
+  {
+   "line": "A02",
+   "text": "you...",
+   "start": 15.87,
+   "end": 16.07
+  },
+  {
+   "line": "A02",
+   "text": "okay?",
+   "start": 16.07,
+   "end": 16.33
+  },
+  {
+   "line": "M04",
+   "text": "Mm-hmm!",
+   "start": 16.694,
+   "end": 17.324
+  },
+  {
+   "line": "M04",
+   "text": "Very...",
+   "start": 17.324,
+   "end": 17.954
+  },
+  {
+   "line": "M04",
+   "text": "very",
+   "start": 17.954,
+   "end": 18.583
+  },
+  {
+   "line": "M04",
+   "text": "motivated!",
+   "start": 18.583,
+   "end": 19.213
+  },
+  {
+   "line": "B01",
+   "text": "Dude.",
+   "start": 19.613,
+   "end": 19.873
+  },
+  {
+   "line": "B01",
+   "text": "Both",
+   "start": 20.393,
+   "end": 20.493
+  },
+  {
+   "line": "B01",
+   "text": "hands",
+   "start": 20.493,
+   "end": 20.793
+  },
+  {
+   "line": "B01",
+   "text": "on",
+   "start": 20.793,
+   "end": 20.973
+  },
+  {
+   "line": "B01",
+   "text": "the",
+   "start": 20.973,
+   "end": 21.073
+  },
+  {
+   "line": "B01",
+   "text": "mic.",
+   "start": 21.073,
+   "end": 21.253
+  },
+  {
+   "line": "M05",
+   "text": "Bob.",
+   "start": 21.617,
+   "end": 21.877
+  },
+  {
+   "line": "M05",
+   "text": "I",
+   "start": 22.257,
+   "end": 22.477
+  },
+  {
+   "line": "M05",
+   "text": "physically",
+   "start": 22.477,
+   "end": 22.757
+  },
+  {
+   "line": "M05",
+   "text": "can't.",
+   "start": 22.757,
+   "end": 23.397
+  },
+  {
+   "line": "M06",
+   "text": "Ohhh...",
+   "start": 23.72,
+   "end": 24.142
+  },
+  {
+   "line": "M06",
+   "text": "Ohhhh...",
+   "start": 24.142,
+   "end": 24.565
+  },
+  {
+   "line": "M06",
+   "text": "Oh,",
+   "start": 24.565,
+   "end": 24.987
+  },
+  {
+   "line": "M06",
+   "text": "what",
+   "start": 24.987,
+   "end": 25.409
+  },
+  {
+   "line": "M06",
+   "text": "a",
+   "start": 25.409,
+   "end": 25.832
+  },
+  {
+   "line": "M06",
+   "text": "beautiful",
+   "start": 25.832,
+   "end": 26.254
+  },
+  {
+   "line": "M06",
+   "text": "couple!",
+   "start": 26.254,
+   "end": 26.676
+  },
+  {
+   "line": "C03",
+   "text": "Hey,",
+   "start": 27.076,
+   "end": 27.336
+  },
+  {
+   "line": "C03",
+   "text": "good",
+   "start": 27.616,
+   "end": 27.716
+  },
+  {
+   "line": "C03",
+   "text": "news!",
+   "start": 27.716,
+   "end": 28.076
+  },
+  {
+   "line": "C03",
+   "text": "Wrong",
+   "start": 28.556,
+   "end": 28.696
+  },
+  {
+   "line": "C03",
+   "text": "chart.",
+   "start": 28.696,
+   "end": 29.116
+  },
+  {
+   "line": "C03",
+   "text": "You're",
+   "start": 29.536,
+   "end": 29.716
+  },
+  {
+   "line": "C03",
+   "text": "perfectly",
+   "start": 29.716,
+   "end": 30.036
+  },
+  {
+   "line": "C03",
+   "text": "healthy.",
+   "start": 30.036,
+   "end": 30.376
+  },
+  {
+   "line": "M07",
+   "text": "I've",
+   "start": 30.893,
+   "end": 31.073
+  },
+  {
+   "line": "M07",
+   "text": "been",
+   "start": 31.073,
+   "end": 31.173
+  },
+  {
+   "line": "M07",
+   "text": "doing",
+   "start": 31.173,
+   "end": 31.353
+  },
+  {
+   "line": "M07",
+   "text": "this",
+   "start": 31.353,
+   "end": 31.553
+  },
+  {
+   "line": "M07",
+   "text": "for",
+   "start": 31.553,
+   "end": 31.733
+  },
+  {
+   "line": "M07",
+   "text": "three",
+   "start": 31.733,
+   "end": 31.953
+  },
+  {
+   "line": "M07",
+   "text": "years.",
+   "start": 31.953,
+   "end": 32.213
+  },
+  {
+   "line": "C04",
+   "text": "So",
+   "start": 32.91,
+   "end": 33.09
+  },
+  {
+   "line": "C04",
+   "text": "you",
+   "start": 33.09,
+   "end": 33.23
+  },
+  {
+   "line": "C04",
+   "text": "can",
+   "start": 33.23,
+   "end": 33.35
+  },
+  {
+   "line": "C04",
+   "text": "stop!",
+   "start": 33.35,
+   "end": 33.61
+  },
+  {
+   "line": "M08",
+   "text": "Doctor...",
+   "start": 34.387,
+   "end": 34.707
+  },
+  {
+   "line": "M08",
+   "text": "I",
+   "start": 35.247,
+   "end": 35.467
+  },
+  {
+   "line": "M08",
+   "text": "don't",
+   "start": 35.467,
+   "end": 35.647
+  },
+  {
+   "line": "M08",
+   "text": "think",
+   "start": 35.647,
+   "end": 35.727
+  },
+  {
+   "line": "M08",
+   "text": "I",
+   "start": 35.727,
+   "end": 35.847
+  },
+  {
+   "line": "M08",
+   "text": "can.",
+   "start": 35.847,
+   "end": 36.087
+  }
+ ],
+ "duration": 36.474
+}

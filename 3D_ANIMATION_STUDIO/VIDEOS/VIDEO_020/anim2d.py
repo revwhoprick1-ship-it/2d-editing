@@ -123,6 +123,7 @@ def hospital(cv, t):
         cv.drawRect(skia.Rect(0, 1300, W, H), paint('#7A8A90'))
         cv.drawCircle(540, 260, 60, paint(C('#FFFFFF', 0.8)))
     glow(cv, (540, 260), 1200, '#FFFFFF', 0.2)
+    cv.drawRect(skia.Rect(0, 0, W, 330), paint('#000000', shader=lin((0, 0), (0, 330), [C('#0A1418', 0.75), C('#0A1418', 0.0)])))   # dark band so the HUD reads
 
 
 def office(cv, t):
