@@ -46,7 +46,7 @@ c(B['door'] + 0.4, 'dread_drone', -12, 'basement air', bus='amb', loop=True, dur
 for k in range(5):
     c(s('N05') + 0.2 + k * 0.55, 'footstep_hard', -10 - k, f'step {k + 1}')
 # JS2: on "thirteen"
-c(B['js2'], 'scare_slam', 3, 'JS2 hand grabs your ankle')
+c(B['js2'], 'scare_slam', 1, 'JS2 hand grabs your ankle')
 c(B['js2'] + 0.05, 'scare_shriek', -6, 'JS2 shriek')
 c(B['basement'], 'sweat_drip', -12, 'drip', loop=True, dur=B['choice'] - B['basement'])
 c(B['basement'] + 0.5, 'keys_jingle', -12, 'the chain moves')
@@ -54,14 +54,14 @@ c(B['upstairs'], 'creak_long', -10, 'the top step creaks: she is there')
 # choice: a slow pulse... and JS3 in the middle of it
 c(B['choice'], 'heartbeat_lubdub', -8, 'heartbeat under the card', loop=True, dur=END - B['choice'])
 c(B['js3'] - 0.12, 'power_cut', -2, 'lights die')
-c(B['js3'], 'scare_slam', 4, 'JS3 both lunge')
+c(B['js3'], 'scare_slam', 2, 'JS3 both lunge')
 c(B['js3'] + 0.02, 'scare_shriek', 0, 'JS3 shriek')
 c(B['pick'] - 0.1, 'whispers', -10, '"Pick me." from everywhere', dur=1.4, fade_out=0.4)
 
 C = {'duration': END, 'loop': False, 'narration': 'narration/narration_raw.wav', 'narration_offset': 0.0,
      'music': 'music_score.wav', 'music_gain_db': 2, 'music_cue': 'cue_video021',
      'music_gates': [[B['js3'] - 0.12, B['js3'] + 0.5, 0.2]],
-     'targets': {'narration_lufs': -16, 'master_lufs': -14, 'true_peak': -2.0, 'duck_db': 5},
+     'targets': {'narration_lufs': -16, 'master_lufs': -14, 'true_peak': -3.2, 'duck_db': 5},
      'cues': sorted(cues, key=lambda d: d['t'])}
 json.dump(C, open(os.path.join(HERE, 'cues.json'), 'w'), indent=1, ensure_ascii=False)
 print('CUES_OK', len(cues))

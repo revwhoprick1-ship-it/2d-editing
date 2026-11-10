@@ -16,7 +16,7 @@
  "targets": {
   "narration_lufs": -16,
   "master_lufs": -14,
-  "true_peak": -2.0,
+  "true_peak": -3.2,
   "duck_db": 5
  },
  "cues": [
@@ -220,7 +220,7 @@
   {
    "t": 43.113,
    "file": "AUDIO/sound_effects/comedy/scare_slam.flac",
-   "gain": -2,
+   "gain": -4,
    "bus": "sfx",
    "note": "JS2 hand grabs your ankle"
   },
@@ -273,7 +273,7 @@
   {
    "t": 60.813,
    "file": "AUDIO/sound_effects/comedy/scare_slam.flac",
-   "gain": -1,
+   "gain": -3,
    "bus": "sfx",
    "note": "JS3 both lunge"
   },
