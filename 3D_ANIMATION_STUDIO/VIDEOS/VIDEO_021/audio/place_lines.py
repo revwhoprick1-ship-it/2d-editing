@@ -5,8 +5,8 @@ import json, os
 import numpy as np, soundfile as sf
 HERE = os.path.dirname(os.path.abspath(__file__))
 N = os.path.join(HERE, 'narration')
-GAP = {'O01': 0.35, 'N03': 0.2, 'M01': 0.5, 'N04': 0.6, 'P01': 1.4, 'N05': 0.6, 'P03': 1.0, 'O04': 0.5, 'X01': 3.0}
-TAIL = 1.2
+GAP = {'O01': 0.35, 'N03': 0.2, 'M01': 0.3, 'N04': 0.4, 'P01': 1.15, 'N05': 0.5, 'P03': 0.75, 'O04': 0.4, 'X01': 2.6}
+TAIL = 0.8
 src = json.load(open(os.path.join(N, 'timing_tts.json') if os.path.exists(os.path.join(N, 'timing_tts.json')) else os.path.join(N, 'timing.json')))
 json.dump(src, open(os.path.join(N, 'timing_tts.json'), 'w'), indent=1)
 script = {l['id']: l for l in json.load(open(os.path.join(HERE, '..', 'script.json')))['lines']}
@@ -22,7 +22,7 @@ for l in src['lines']:
     clips.append((t, y))
     lines.append(dict(l, start=round(t, 3), end=round(t + len(y) / sr, 3)))
     words += [dict(w, start=round(w['start'] + d, 3), end=round(w['end'] + d, 3)) for w in src['words'] if w['line'] == l['id']]
-    t += len(y) / sr + script[l['id']].get('pause_after', 0.2)
+    t += len(y) / sr + 0.6 * script[l['id']].get('pause_after', 0.2)
 END = t + TAIL
 out = np.zeros(int(END * sr) + 1)
 for t0, y in clips:

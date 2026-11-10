@@ -274,6 +274,8 @@ def _head_front(cv, P, back):
             hair = blob([(-190, -20), (-185, -150), (-90, -245), (40, -252), (160, -190), (192, -60), (185, 70), (120, 150), (0, 175), (-120, 150), (-185, 70)])
             cv.drawPath(hair, paint(HR))
             cv.drawPath(blob([(-60, -200), (30, -230), (100, -170), (20, -150)]), paint(HRS))
+            if P.get('long_hair'):                                                    # long hair covers the whole back of the head
+                cv.drawPath(blob([(-200, -120), (0, -250), (200, -120), (230, 200), (180, 330), (0, 300), (-180, 330), (-230, 200)]), paint(HR))
         _cap(cv, P, 0)
         return
     fx = turn * 60

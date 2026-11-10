@@ -1,0 +1,1026 @@
+{
+ "voice": "qwen3-tts",
+ "sample_rate": 24000,
+ "lines": [
+  {
+   "id": "O01",
+   "who": "O",
+   "text": "Sweetie. What did I say about the basement?",
+   "start": 0.35,
+   "end": 2.929,
+   "delivery": "",
+   "speed": 1.06
+  },
+  {
+   "id": "N01",
+   "who": "N",
+   "text": "My mom died two years ago. So who's been making my breakfast?",
+   "start": 3.229,
+   "end": 7.993,
+   "delivery": "",
+   "speed": 1.06
+  },
+  {
+   "id": "N02",
+   "who": "N",
+   "text": "Since the accident, every morning is the same. Same song. Same smile.",
+   "start": 8.233,
+   "end": 14.288,
+   "delivery": "",
+   "speed": 1.06
+  },
+  {
+   "id": "O02",
+   "who": "O",
+   "text": "Eat up, sweetie.",
+   "start": 14.408,
+   "end": 15.377,
+   "delivery": "",
+   "speed": 1.06
+  },
+  {
+   "id": "N03",
+   "who": "N",
+   "text": "I can't remember the crash. Just her voice, saying something I can't hear.",
+   "start": 15.817,
+   "end": 21.37,
+   "delivery": "",
+   "speed": 1.06
+  },
+  {
+   "id": "Q01",
+   "who": "Q",
+   "text": "If I don't come back... it's not...",
+   "start": 21.49,
+   "end": 23.5,
+   "delivery": "",
+   "speed": 1.06
+  },
+  {
+   "id": "M01",
+   "who": "M",
+   "text": "Mom... what did you say to me in the car?",
+   "start": 24.1,
+   "end": 26.576,
+   "delivery": "",
+   "speed": 1.06
+  },
+  {
+   "id": "O03",
+   "who": "O",
+   "text": "I said I love you.",
+   "start": 26.756,
+   "end": 27.729,
+   "delivery": "",
+   "speed": 1.06
+  },
+  {
+   "id": "N04",
+   "who": "N",
+   "text": "That night, something knocked. From under the floor.",
+   "start": 28.489,
+   "end": 32.316,
+   "delivery": "",
+   "speed": 1.06
+  },
+  {
+   "id": "P01",
+   "who": "P",
+   "text": "Sweetie? Is she asleep?",
+   "start": 33.645,
+   "end": 35.396,
+   "delivery": "",
+   "speed": 1.06
+  },
+  {
+   "id": "M02",
+   "who": "M",
+   "text": "Mom?",
+   "start": 35.576,
+   "end": 36.029,
+   "delivery": "",
+   "speed": 1.06
+  },
+  {
+   "id": "P02",
+   "who": "P",
+   "text": "Don't let her hear you. Come down.",
+   "start": 36.209,
+   "end": 38.313,
+   "delivery": "",
+   "speed": 1.06
+  },
+  {
+   "id": "N05",
+   "who": "N",
+   "text": "Twelve steps to the basement. Tonight, there were thirteen.",
+   "start": 39.113,
+   "end": 44.05,
+   "delivery": "",
+   "speed": 1.06
+  },
+  {
+   "id": "P03",
+   "who": "P",
+   "text": "She put me down here two years ago.",
+   "start": 45.16,
+   "end": 47.175,
+   "delivery": "",
+   "speed": 1.06
+  },
+  {
+   "id": "O04",
+   "who": "O",
+   "text": "Sweetie. That isn't me.",
+   "start": 47.815,
+   "end": 49.687,
+   "delivery": "",
+   "speed": 1.06
+  },
+  {
+   "id": "P04",
+   "who": "P",
+   "text": "Remember the car. Remember what I told you.",
+   "start": 49.867,
+   "end": 52.428,
+   "delivery": "",
+   "speed": 1.06
+  },
+  {
+   "id": "O05",
+   "who": "O",
+   "text": "Remember what I told you, sweetie.",
+   "start": 52.548,
+   "end": 53.986,
+   "delivery": "",
+   "speed": 1.06
+  },
+  {
+   "id": "N06",
+   "who": "N",
+   "text": "One of them is my mom. The other one crawled out of that car.",
+   "start": 54.286,
+   "end": 58.963,
+   "delivery": "",
+   "speed": 1.06
+  },
+  {
+   "id": "X01",
+   "who": "X",
+   "text": "Pick me.",
+   "start": 61.803,
+   "end": 62.349,
+   "delivery": "",
+   "speed": 1.06
+  }
+ ],
+ "words": [
+  {
+   "line": "O01",
+   "text": "Sweetie.",
+   "start": 0.35,
+   "end": 0.91
+  },
+  {
+   "line": "O01",
+   "text": "What",
+   "start": 1.37,
+   "end": 1.63
+  },
+  {
+   "line": "O01",
+   "text": "did",
+   "start": 1.63,
+   "end": 1.77
+  },
+  {
+   "line": "O01",
+   "text": "I",
+   "start": 1.77,
+   "end": 1.89
+  },
+  {
+   "line": "O01",
+   "text": "say",
+   "start": 1.89,
+   "end": 2.05
+  },
+  {
+   "line": "O01",
+   "text": "about",
+   "start": 2.05,
+   "end": 2.23
+  },
+  {
+   "line": "O01",
+   "text": "the",
+   "start": 2.23,
+   "end": 2.37
+  },
+  {
+   "line": "O01",
+   "text": "basement?",
+   "start": 2.37,
+   "end": 2.59
+  },
+  {
+   "line": "N01",
+   "text": "My",
+   "start": 3.229,
+   "end": 4.269
+  },
+  {
+   "line": "N01",
+   "text": "mom",
+   "start": 4.269,
+   "end": 4.549
+  },
+  {
+   "line": "N01",
+   "text": "died",
+   "start": 4.549,
+   "end": 4.849
+  },
+  {
+   "line": "N01",
+   "text": "two",
+   "start": 4.849,
+   "end": 5.149
+  },
+  {
+   "line": "N01",
+   "text": "years",
+   "start": 5.149,
+   "end": 5.409
+  },
+  {
+   "line": "N01",
+   "text": "ago.",
+   "start": 5.409,
+   "end": 5.749
+  },
+  {
+   "line": "N01",
+   "text": "So",
+   "start": 6.189,
+   "end": 6.489
+  },
+  {
+   "line": "N01",
+   "text": "who's",
+   "start": 6.489,
+   "end": 6.729
+  },
+  {
+   "line": "N01",
+   "text": "been",
+   "start": 6.729,
+   "end": 6.849
+  },
+  {
+   "line": "N01",
+   "text": "making",
+   "start": 6.849,
+   "end": 7.109
+  },
+  {
+   "line": "N01",
+   "text": "my",
+   "start": 7.109,
+   "end": 7.369
+  },
+  {
+   "line": "N01",
+   "text": "breakfast?",
+   "start": 7.369,
+   "end": 7.649
+  },
+  {
+   "line": "N02",
+   "text": "Since",
+   "start": 8.233,
+   "end": 9.073
+  },
+  {
+   "line": "N02",
+   "text": "the",
+   "start": 9.073,
+   "end": 9.273
+  },
+  {
+   "line": "N02",
+   "text": "accident,",
+   "start": 9.273,
+   "end": 9.733
+  },
+  {
+   "line": "N02",
+   "text": "every",
+   "start": 9.933,
+   "end": 10.153
+  },
+  {
+   "line": "N02",
+   "text": "morning",
+   "start": 10.153,
+   "end": 10.393
+  },
+  {
+   "line": "N02",
+   "text": "is",
+   "start": 10.393,
+   "end": 10.593
+  },
+  {
+   "line": "N02",
+   "text": "the",
+   "start": 10.593,
+   "end": 10.753
+  },
+  {
+   "line": "N02",
+   "text": "same.",
+   "start": 10.753,
+   "end": 11.053
+  },
+  {
+   "line": "N02",
+   "text": "Same",
+   "start": 12.093,
+   "end": 12.253
+  },
+  {
+   "line": "N02",
+   "text": "song.",
+   "start": 12.253,
+   "end": 12.653
+  },
+  {
+   "line": "N02",
+   "text": "Same",
+   "start": 13.373,
+   "end": 13.493
+  },
+  {
+   "line": "N02",
+   "text": "smile.",
+   "start": 13.493,
+   "end": 13.893
+  },
+  {
+   "line": "O02",
+   "text": "Eat",
+   "start": 14.408,
+   "end": 14.588
+  },
+  {
+   "line": "O02",
+   "text": "up,",
+   "start": 14.588,
+   "end": 14.808
+  },
+  {
+   "line": "O02",
+   "text": "sweetie.",
+   "start": 15.048,
+   "end": 15.288
+  },
+  {
+   "line": "N03",
+   "text": "I",
+   "start": 15.817,
+   "end": 16.577
+  },
+  {
+   "line": "N03",
+   "text": "can't",
+   "start": 16.577,
+   "end": 16.797
+  },
+  {
+   "line": "N03",
+   "text": "remember",
+   "start": 16.797,
+   "end": 17.057
+  },
+  {
+   "line": "N03",
+   "text": "the",
+   "start": 17.057,
+   "end": 17.217
+  },
+  {
+   "line": "N03",
+   "text": "crash.",
+   "start": 17.217,
+   "end": 17.597
+  },
+  {
+   "line": "N03",
+   "text": "Just",
+   "start": 18.397,
+   "end": 18.637
+  },
+  {
+   "line": "N03",
+   "text": "her",
+   "start": 18.637,
+   "end": 18.857
+  },
+  {
+   "line": "N03",
+   "text": "voice,",
+   "start": 18.857,
+   "end": 19.237
+  },
+  {
+   "line": "N03",
+   "text": "saying",
+   "start": 19.237,
+   "end": 20.077
+  },
+  {
+   "line": "N03",
+   "text": "something",
+   "start": 20.077,
+   "end": 20.397
+  },
+  {
+   "line": "N03",
+   "text": "I",
+   "start": 20.397,
+   "end": 20.617
+  },
+  {
+   "line": "N03",
+   "text": "can't",
+   "start": 20.617,
+   "end": 20.937
+  },
+  {
+   "line": "N03",
+   "text": "hear.",
+   "start": 20.937,
+   "end": 21.117
+  },
+  {
+   "line": "Q01",
+   "text": "If",
+   "start": 21.49,
+   "end": 21.777
+  },
+  {
+   "line": "Q01",
+   "text": "I",
+   "start": 21.777,
+   "end": 22.064
+  },
+  {
+   "line": "Q01",
+   "text": "don't",
+   "start": 22.064,
+   "end": 22.352
+  },
+  {
+   "line": "Q01",
+   "text": "come",
+   "start": 22.352,
+   "end": 22.639
+  },
+  {
+   "line": "Q01",
+   "text": "back...",
+   "start": 22.639,
+   "end": 22.926
+  },
+  {
+   "line": "Q01",
+   "text": "it's",
+   "start": 22.926,
+   "end": 23.213
+  },
+  {
+   "line": "Q01",
+   "text": "not...",
+   "start": 23.213,
+   "end": 23.5
+  },
+  {
+   "line": "M01",
+   "text": "Mom...",
+   "start": 24.1,
+   "end": 24.38
+  },
+  {
+   "line": "M01",
+   "text": "what",
+   "start": 25.08,
+   "end": 25.42
+  },
+  {
+   "line": "M01",
+   "text": "did",
+   "start": 25.42,
+   "end": 25.52
+  },
+  {
+   "line": "M01",
+   "text": "you",
+   "start": 25.52,
+   "end": 25.64
+  },
+  {
+   "line": "M01",
+   "text": "say",
+   "start": 25.64,
+   "end": 25.8
+  },
+  {
+   "line": "M01",
+   "text": "to",
+   "start": 25.8,
+   "end": 25.88
+  },
+  {
+   "line": "M01",
+   "text": "me",
+   "start": 25.88,
+   "end": 26.0
+  },
+  {
+   "line": "M01",
+   "text": "in",
+   "start": 26.0,
+   "end": 26.1
+  },
+  {
+   "line": "M01",
+   "text": "the",
+   "start": 26.1,
+   "end": 26.18
+  },
+  {
+   "line": "M01",
+   "text": "car?",
+   "start": 26.18,
+   "end": 26.42
+  },
+  {
+   "line": "O03",
+   "text": "I",
+   "start": 26.756,
+   "end": 26.916
+  },
+  {
+   "line": "O03",
+   "text": "said",
+   "start": 26.916,
+   "end": 27.096
+  },
+  {
+   "line": "O03",
+   "text": "I",
+   "start": 27.096,
+   "end": 27.236
+  },
+  {
+   "line": "O03",
+   "text": "love",
+   "start": 27.236,
+   "end": 27.396
+  },
+  {
+   "line": "O03",
+   "text": "you.",
+   "start": 27.396,
+   "end": 27.616
+  },
+  {
+   "line": "N04",
+   "text": "That",
+   "start": 28.489,
+   "end": 29.589
+  },
+  {
+   "line": "N04",
+   "text": "night,",
+   "start": 29.589,
+   "end": 29.929
+  },
+  {
+   "line": "N04",
+   "text": "something",
+   "start": 29.929,
+   "end": 30.329
+  },
+  {
+   "line": "N04",
+   "text": "knocked.",
+   "start": 30.329,
+   "end": 30.869
+  },
+  {
+   "line": "N04",
+   "text": "From",
+   "start": 30.869,
+   "end": 31.449
+  },
+  {
+   "line": "N04",
+   "text": "under",
+   "start": 31.449,
+   "end": 31.609
+  },
+  {
+   "line": "N04",
+   "text": "the",
+   "start": 31.609,
+   "end": 31.789
+  },
+  {
+   "line": "N04",
+   "text": "floor.",
+   "start": 31.789,
+   "end": 32.089
+  },
+  {
+   "line": "P01",
+   "text": "Sweetie?",
+   "start": 33.645,
+   "end": 34.165
+  },
+  {
+   "line": "P01",
+   "text": "Is",
+   "start": 34.625,
+   "end": 34.745
+  },
+  {
+   "line": "P01",
+   "text": "she",
+   "start": 34.745,
+   "end": 34.905
+  },
+  {
+   "line": "P01",
+   "text": "asleep?",
+   "start": 34.905,
+   "end": 35.185
+  },
+  {
+   "line": "M02",
+   "text": "Mom?",
+   "start": 35.576,
+   "end": 35.836
+  },
+  {
+   "line": "P02",
+   "text": "Don't",
+   "start": 36.209,
+   "end": 36.489
+  },
+  {
+   "line": "P02",
+   "text": "let",
+   "start": 36.489,
+   "end": 36.589
+  },
+  {
+   "line": "P02",
+   "text": "her",
+   "start": 36.589,
+   "end": 36.789
+  },
+  {
+   "line": "P02",
+   "text": "hear",
+   "start": 36.789,
+   "end": 36.989
+  },
+  {
+   "line": "P02",
+   "text": "you.",
+   "start": 36.989,
+   "end": 37.309
+  },
+  {
+   "line": "P02",
+   "text": "Come",
+   "start": 37.729,
+   "end": 37.949
+  },
+  {
+   "line": "P02",
+   "text": "down.",
+   "start": 37.949,
+   "end": 38.169
+  },
+  {
+   "line": "N05",
+   "text": "Twelve",
+   "start": 40.113,
+   "end": 40.713
+  },
+  {
+   "line": "N05",
+   "text": "steps",
+   "start": 40.713,
+   "end": 41.013
+  },
+  {
+   "line": "N05",
+   "text": "to",
+   "start": 41.013,
+   "end": 41.273
+  },
+  {
+   "line": "N05",
+   "text": "the",
+   "start": 41.273,
+   "end": 41.373
+  },
+  {
+   "line": "N05",
+   "text": "basement.",
+   "start": 41.373,
+   "end": 41.733
+  },
+  {
+   "line": "N05",
+   "text": "Tonight,",
+   "start": 42.713,
+   "end": 42.733
+  },
+  {
+   "line": "N05",
+   "text": "there",
+   "start": 42.733,
+   "end": 42.973
+  },
+  {
+   "line": "N05",
+   "text": "were",
+   "start": 42.973,
+   "end": 43.113
+  },
+  {
+   "line": "N05",
+   "text": "thirteen.",
+   "start": 43.113,
+   "end": 43.593
+  },
+  {
+   "line": "P03",
+   "text": "She",
+   "start": 45.16,
+   "end": 45.56
+  },
+  {
+   "line": "P03",
+   "text": "put",
+   "start": 45.56,
+   "end": 45.7
+  },
+  {
+   "line": "P03",
+   "text": "me",
+   "start": 45.7,
+   "end": 45.86
+  },
+  {
+   "line": "P03",
+   "text": "down",
+   "start": 45.86,
+   "end": 46.06
+  },
+  {
+   "line": "P03",
+   "text": "here",
+   "start": 46.06,
+   "end": 46.28
+  },
+  {
+   "line": "P03",
+   "text": "two",
+   "start": 46.28,
+   "end": 46.5
+  },
+  {
+   "line": "P03",
+   "text": "years",
+   "start": 46.5,
+   "end": 46.76
+  },
+  {
+   "line": "P03",
+   "text": "ago.",
+   "start": 46.76,
+   "end": 47.04
+  },
+  {
+   "line": "O04",
+   "text": "Sweetie.",
+   "start": 47.815,
+   "end": 48.415
+  },
+  {
+   "line": "O04",
+   "text": "That",
+   "start": 48.875,
+   "end": 49.075
+  },
+  {
+   "line": "O04",
+   "text": "isn't",
+   "start": 49.075,
+   "end": 49.375
+  },
+  {
+   "line": "O04",
+   "text": "me.",
+   "start": 49.375,
+   "end": 49.515
+  },
+  {
+   "line": "P04",
+   "text": "Remember",
+   "start": 49.867,
+   "end": 50.187
+  },
+  {
+   "line": "P04",
+   "text": "the",
+   "start": 50.187,
+   "end": 50.367
+  },
+  {
+   "line": "P04",
+   "text": "car.",
+   "start": 50.367,
+   "end": 50.687
+  },
+  {
+   "line": "P04",
+   "text": "Remember",
+   "start": 51.487,
+   "end": 51.667
+  },
+  {
+   "line": "P04",
+   "text": "what",
+   "start": 51.667,
+   "end": 51.867
+  },
+  {
+   "line": "P04",
+   "text": "I",
+   "start": 51.867,
+   "end": 51.967
+  },
+  {
+   "line": "P04",
+   "text": "told",
+   "start": 51.967,
+   "end": 52.127
+  },
+  {
+   "line": "P04",
+   "text": "you.",
+   "start": 52.127,
+   "end": 52.327
+  },
+  {
+   "line": "O05",
+   "text": "Remember",
+   "start": 52.548,
+   "end": 52.788
+  },
+  {
+   "line": "O05",
+   "text": "what",
+   "start": 52.788,
+   "end": 53.008
+  },
+  {
+   "line": "O05",
+   "text": "I",
+   "start": 53.008,
+   "end": 53.148
+  },
+  {
+   "line": "O05",
+   "text": "told",
+   "start": 53.148,
+   "end": 53.328
+  },
+  {
+   "line": "O05",
+   "text": "you,",
+   "start": 53.328,
+   "end": 53.548
+  },
+  {
+   "line": "O05",
+   "text": "sweetie.",
+   "start": 53.568,
+   "end": 53.908
+  },
+  {
+   "line": "N06",
+   "text": "One",
+   "start": 54.986,
+   "end": 55.326
+  },
+  {
+   "line": "N06",
+   "text": "of",
+   "start": 55.326,
+   "end": 55.446
+  },
+  {
+   "line": "N06",
+   "text": "them",
+   "start": 55.446,
+   "end": 55.566
+  },
+  {
+   "line": "N06",
+   "text": "is",
+   "start": 55.566,
+   "end": 55.726
+  },
+  {
+   "line": "N06",
+   "text": "my",
+   "start": 55.726,
+   "end": 55.906
+  },
+  {
+   "line": "N06",
+   "text": "mom.",
+   "start": 55.906,
+   "end": 56.186
+  },
+  {
+   "line": "N06",
+   "text": "The",
+   "start": 57.046,
+   "end": 57.186
+  },
+  {
+   "line": "N06",
+   "text": "other",
+   "start": 57.186,
+   "end": 57.326
+  },
+  {
+   "line": "N06",
+   "text": "one",
+   "start": 57.326,
+   "end": 57.566
+  },
+  {
+   "line": "N06",
+   "text": "crawled",
+   "start": 57.566,
+   "end": 57.886
+  },
+  {
+   "line": "N06",
+   "text": "out",
+   "start": 57.886,
+   "end": 58.186
+  },
+  {
+   "line": "N06",
+   "text": "of",
+   "start": 58.186,
+   "end": 58.306
+  },
+  {
+   "line": "N06",
+   "text": "that",
+   "start": 58.306,
+   "end": 58.466
+  },
+  {
+   "line": "N06",
+   "text": "car.",
+   "start": 58.466,
+   "end": 58.766
+  },
+  {
+   "line": "X01",
+   "text": "Pick",
+   "start": 61.803,
+   "end": 62.023
+  },
+  {
+   "line": "X01",
+   "text": "me.",
+   "start": 62.023,
+   "end": 62.203
+  }
+ ],
+ "duration": 63.269
+}

@@ -41,7 +41,7 @@ GAP_SHOT = {'O01': 'HOOK', 'M01': 'KITCHEN', 'N04': 'HALL', 'P01': 'FLOOR', 'N05
 JS = 0.42
 B = dict(
     kitchen=s('N01'), car=s('N03') - 0.2, kitchen2=s('M01') - 0.5, js1=w_at('O03', 'love'), night=s('N04') - 0.6,
-    knocks=[s('P01') - 1.3, s('P01') - 0.9, s('P01') - 0.5], door=s('N05') - 0.6, js2=w_at('N05', 'thirteen'),
+    knocks=[s('P01') - 1.05, s('P01') - 0.7, s('P01') - 0.35], door=s('N05') - 0.6, js2=w_at('N05', 'thirteen'),
     basement=s('P03') - 1.0, upstairs=s('O04') - 0.5, both=s('N06'), choice=e('N06') + 0.15,
 )
 B['js3'] = B['choice'] + 1.7

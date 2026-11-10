@@ -475,16 +475,16 @@ def shot_CAR(cv, t):
     wa = math.radians(-40 + 70 * abs(math.sin(t * 2.4)))                                  # wiper
     cv.drawLine(200, 1150, 200 + math.cos(wa) * 700, 1150 - math.sin(wa) * 700, paint('#0A0A0A', style='stroke', width=14))
     cv.drawRect(skia.Rect(0, 1150, W, 1360), paint('#141418'))                               # dashboard
-    cv.drawRoundRect(skia.Rect(640, 1190, 860, 1270), 10, 10, paint('#0A0E0A'))
-    text(cv, '11:47', 750, 1250, 66, '#7AF07A')
+    cv.drawRoundRect(skia.Rect(780, 1190, 1000, 1270), 10, 10, paint('#0A0E0A'))
+    text(cv, '11:47', 890, 1250, 66, '#7AF07A')
     P = dict(CAST['O'], head_turn=-0.6, look=(-0.6, 0.1), brow=0.9, mouth='open' if talk(t, 'Q') > 0 else 'o', mouth_open=talk(t, 'Q'),
              pupil=0.6, sweat=True)
-    mascot(cv, 330, 2500, 1.5, legs=False, light_side=1, rim='#E0342C', rim_a=0.5, **P)
-    cv.drawRoundRect(skia.Rect(-60, 1450, 420, H), 120, 120, paint('#1E1E24'))                # driver seat back
-    cv.drawRoundRect(skia.Rect(660, 1450, 1140, H), 120, 120, paint('#1E1E24'))               # passenger seat back
-    cv.drawCircle(560, 1370, 160, paint('#1A1A1E', style='stroke', width=26))                 # steering wheel + her hand with the ring
-    cv.drawCircle(445, 1300, 30, paint(CAST['O']['skin']))
-    ring(cv, 452, 1292, 1.4)
+    cv.drawCircle(150, 1330, 150, paint('#1A1A1E', style='stroke', width=26))                 # steering wheel (in front of her)
+    mascot(cv, 380, 2500, 1.5, legs=False, light_side=1, rim='#E0342C', rim_a=0.5, **P)
+    cv.drawRoundRect(skia.Rect(-60, 1500, 420, H), 120, 120, paint('#1E1E24'))                # driver seat back
+    cv.drawRoundRect(skia.Rect(660, 1500, 1140, H), 120, 120, paint('#1E1E24'))               # passenger seat back
+    cv.drawCircle(70, 1240, 34, paint(CAST['O']['skin']))                                     # her left hand on the wheel, with the ring
+    ring(cv, 78, 1232, 1.5)
     cv.drawRect(skia.Rect(0, 0, W, H), paint(C('#2A0A10', 0.25)))
     grain(cv, t, 0.14)
 
@@ -583,10 +583,14 @@ def shot_GRAB(cv, t):
     cv.drawRect(skia.Rect(0, 1100, W, 1180), paint('#000000'))                                  # the gap under it
     cv.drawRoundRect(skia.Rect(380, 640, 640, 1000), 60, 60, paint('#2E4A7A'))                  # your jeans
     cv.drawRoundRect(skia.Rect(330, 940, 720, 1060), 50, 50, paint('#E8E8EC'))                  # sneaker
-    rr = min(1.0, u / 0.08)
-    for f in range(5):                                                                          # long grey fingers
-        cv.drawLine(560, 1180, 420 + f * 50, 1180 - 260 * rr - (f % 2) * 30, paint('#B8B0A8', style='stroke', width=26))
-    cv.drawRect(skia.Rect(470, 1140, 650, 1300), paint('#A8A098'))
+    rr = min(1.0, u / 0.06)
+    cv.drawRoundRect(skia.Rect(470, 1120, 650, 1920), 60, 60, paint('#7A706A'))               # grey forearm out of the gap
+    for f in range(5):                                                                          # long fingers wrapped around your ankle
+        x0 = 440 + f * 45
+        cv.drawPath(poly([(x0, 1140), (x0 - 40 * rr, 1000 - 120 * rr), (x0 + 60 * rr, 860 - 60 * rr)], closed=False),
+                    paint('#8A8078', style='stroke', width=24))
+        cv.drawCircle(x0 + 60 * rr, 860 - 60 * rr, 13, paint('#3A2A24'))                       # dark nails
+    cv.drawLine(380, 820, 640, 900, paint('#5A1010', style='stroke', width=6))
     glow(cv, (540, 1000), 600, TORCH, 0.25)
     grain(cv, t, 0.15)
 
@@ -642,7 +646,7 @@ def shot_BOTH(cv, t):
     lean = min(1.0, max(0.0, (t - B['pick'] + 0.3) / 0.4))
     P = dict(CAST['O'], mouth='smile' if talk(t, 'X') == 0 else 'open', mouth_open=talk(t, 'X'), look=(0.3, 0.4), head_tilt=12 * lean)
     mascot(cv, 300, 250, 0.2 + 0.04 * lean, light_side=1, rim=HALLWARM, rim_a=1.0, **P)
-    mascot(cv, 520, 2300, 1.0, view='back', item='flashlight', arm_r=(40, 30), light_side=1, rim=TORCH, rim_a=0.4)
+    mascot(cv, 250, 2350, 0.9, view='back', item='flashlight', arm_r=(40, 30), light_side=1, rim=TORCH, rim_a=0.4)
     grain(cv, t, 0.1)
 
 
