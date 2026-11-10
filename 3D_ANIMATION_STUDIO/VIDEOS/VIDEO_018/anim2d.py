@@ -120,7 +120,7 @@ def lamp(t):
 def cone(cv, x, y, w0, w1, h, col, a):
     """Volumetric reading-light cone: soft gradient wedge."""
     pth = poly([(x - w0, y), (x + w0, y), (x + w1, y + h), (x - w1, y + h)])
-    cv.drawPath(pth, paint('#000', shader=lin((x, y), (x, y + h), [C(col, a), C(col, 0.0)]), blur=10))
+    cv.drawPath(pth, paint('#000000', shader=lin((x, y), (x, y + h), [C(col, a), C(col, 0.0)]), blur=10))
     cv.drawCircle(x, y, w0 * 1.3, paint(C(col, min(1.0, a * 3))))
     glow(cv, (x, y), w0 * 6, col, a * 0.8)
 
@@ -136,7 +136,7 @@ def fabric(cv, rect, base, t=0.0):
     for yy in range(int(y0), int(y1), step):
         for xx in range(int(x0) + (yy // step % 2) * step // 2, int(x1), step):
             cv.drawCircle(xx, yy, step * 0.12, dot)
-    cv.drawRect(skia.Rect(x0, y0, x1, y1), paint('#000', shader=lin((x0, 0), (x1, 0), [C('#000000', 0.35), C('#000000', 0.0), C('#000000', 0.0), C('#000000', 0.4)], [0, 0.25, 0.75, 1])))
+    cv.drawRect(skia.Rect(x0, y0, x1, y1), paint('#000000', shader=lin((x0, 0), (x1, 0), [C('#000000', 0.35), C('#000000', 0.0), C('#000000', 0.0), C('#000000', 0.4)], [0, 0.25, 0.75, 1])))
     cv.restore()
 
 
@@ -147,14 +147,14 @@ def cabin(cv, cam, t, near_sharp=3.0, blur_far=5.0, heads=True, staring=0.0, ext
     vx, vy = cam.p(0, 1.2, 60)
     # ceiling + walls + floor as gradients toward the vanishing point
     cv.drawPath(quad(cam, [(-2.0, 2.4, 0.3), (2.0, 2.4, 0.3), (2.0, 2.4, 60), (-2.0, 2.4, 60)]),
-                paint('#000', shader=lin((0, 0), (vx, vy), [C('#0C1220'), C('#1E2A44' if st != 'red' else '#3A1414')])))
+                paint('#000000', shader=lin((0, 0), (vx, vy), [C('#0C1220'), C('#1E2A44' if st != 'red' else '#3A1414')])))
     for side in (-1, 1):
         cv.drawPath(quad(cam, [(side * 2.0, 0, 0.3), (side * 2.0, 2.4, 0.3), (side * 2.0, 2.4, 60), (side * 2.0, 0, 60)]),
-                    paint('#000', shader=lin(cam.p(side * 2.0, 1.2, 0.5), (vx, vy), [C('#0A0E18'), C('#1A2438' if st != 'red' else '#2E1010')])))
+                    paint('#000000', shader=lin(cam.p(side * 2.0, 1.2, 0.5), (vx, vy), [C('#0A0E18'), C('#1A2438' if st != 'red' else '#2E1010')])))
     cv.drawPath(quad(cam, [(-2.0, 0, 0.3), (2.0, 0, 0.3), (2.0, 0, 60), (-2.0, 0, 60)]),
-                paint('#000', shader=lin((0, H), (vx, vy), [C('#141824'), C('#262E44')])))
+                paint('#000000', shader=lin((0, H), (vx, vy), [C('#141824'), C('#262E44')])))
     cv.drawPath(quad(cam, [(-0.38, 0.002, 0.3), (0.38, 0.002, 0.3), (0.38, 0.002, 60), (-0.38, 0.002, 60)]),
-                paint('#000', shader=lin((0, H), (vx, vy), [C('#3A2030'), C('#24182A')])))
+                paint('#000000', shader=lin((0, H), (vx, vy), [C('#3A2030'), C('#24182A')])))
     for k in range(0, 60, 2):                                                                 # carpet pattern stripes
         cv.drawPath(quad(cam, [(-0.38, 0.003, k), (0.38, 0.003, k), (0.38, 0.003, k + 0.25), (-0.38, 0.003, k + 0.25)]), paint(C('#000000', 0.18)))
     if st == 'dark':                                                                          # emergency floor path lights
@@ -208,7 +208,7 @@ def cabin(cv, cam, t, near_sharp=3.0, blur_far=5.0, heads=True, staring=0.0, ext
         for k in far:
             for side in (-1, 1):
                 row(k, side)
-        cv.drawCircle(vx, vy, 900, paint('#000', shader=rad((vx, vy), 900, [C('#3A4A6A' if st != 'red' else '#4A1818', 0.55), C('#000000', 0.0)])))
+        cv.drawCircle(vx, vy, 900, paint('#000000', shader=rad((vx, vy), 900, [C('#3A4A6A' if st != 'red' else '#4A1818', 0.55), C('#000000', 0.0)])))
     for k in near:
         for side in (-1, 1):
             row(k, side)
@@ -314,8 +314,8 @@ def row_front(cv, t, who='BML', faceless=False, dark_=False):
     cam = Cam(0.0, eye=1.3, vy=700)
     with blurred(cv, 8):
         cabin(cv, cam, t, near_sharp=-1, blur_far=0.1, staring=0.0)
-    cv.drawRect(skia.Rect(0, 0, W, 360), paint('#000', shader=lin((0, 0), (0, 360), [C('#1A2236'), C('#2A3550')])))     # bins above
-    cv.drawRect(skia.Rect(0, 340, W, 380), paint('#000', shader=lin((0, 340), (0, 380), [C('#000000', 0.5), C('#000000', 0.0)])))
+    cv.drawRect(skia.Rect(0, 0, W, 360), paint('#000000', shader=lin((0, 0), (0, 360), [C('#1A2236'), C('#2A3550')])))     # bins above
+    cv.drawRect(skia.Rect(0, 340, W, 380), paint('#000000', shader=lin((0, 340), (0, 380), [C('#000000', 0.5), C('#000000', 0.0)])))
     for i, w_ in enumerate(who):
         x = (220, 540, 860)[i]
         fabric(cv, (x - 165, 720, x + 165, 1950), '#22314E')
@@ -329,7 +329,7 @@ def row_front(cv, t, who='BML', faceless=False, dark_=False):
                hair='#0A0A0A', hair_sh='#000000', light_side=1, rim=RED, rim_a=0.7)
     for x in (60, 380, 700, 1020):
         cv.drawRoundRect(skia.Rect(x - 25, 1560, x + 25, 1920), 20, 20, paint('#2A2E36', shader=lin((x - 25, 0), (x + 25, 0), [C('#3A3E48'), C('#1A1E26')])))
-    cv.drawRect(skia.Rect(0, 1840, W, H), paint('#000', shader=lin((0, 1840), (0, H), [C('#000000', 0.0), C('#000000', 0.6)])))
+    cv.drawRect(skia.Rect(0, 1840, W, H), paint('#000000', shader=lin((0, 1840), (0, H), [C('#000000', 0.0), C('#000000', 0.6)])))
     if dark_ or state(t) == 'dark':
         dim(cv, 0.7)
 
@@ -355,7 +355,7 @@ def seat_closeup(cv, t, x, y, sc, flip=False, window=True):
     if window:
         wx = 140 if not flip else 940
         cv.drawRoundRect(skia.Rect(wx - 110, 500, wx + 110, 900), 100, 100, paint('#1A2034'))
-        cv.drawRoundRect(skia.Rect(wx - 90, 520, wx + 90, 880), 85, 85, paint('#000', shader=lin((0, 520), (0, 880), [C('#04060E'), C('#101C34')])))
+        cv.drawRoundRect(skia.Rect(wx - 90, 520, wx + 90, 880), 85, 85, paint('#000000', shader=lin((0, 520), (0, 880), [C('#04060E'), C('#101C34')])))
     fabric(cv, (x - 260 * sc, y - 1300 * sc, x + 260 * sc, y + 100), '#22314E')
     cv.drawRoundRect(skia.Rect(x - 190 * sc, y - 1270 * sc, x + 190 * sc, y - 1060 * sc), 40, 40, paint('#E6E2DA'))
 
@@ -490,10 +490,9 @@ def shot_GIRL2(cv, t):
     girl(cv, t, 540, 2350, 1.25, dict(look=(0.0, 0.0)))
     cv.save(); cv.rotate(-5, 540, 1500)                                                       # she holds the drawing up
     cv.drawRect(skia.Rect(180, 1180, 900, 1760), paint('#F4F0E6'))
-    for k, (x, lab, col) in enumerate(((300, '1', '#4A4A52'), (540, '2', '#C83030'), (780, '3', '#6A4A8A'))):
+    for k, (x, lab, col) in enumerate(((300, '1', '#4A4A52'), (540, '2', '#2A6A2A'), (780, '3', '#6A4A8A'))):
         figure(cv, x, 1360, 1.4, col)
         text(cv, lab, x, 1660, 60, col)
-    cv.drawCircle(540, 1360, 120, paint('#C83030', style='stroke', width=6))
     cv.restore()
     lit(cv, t, 700, 300, 1100, 0.18)
     shade(cv, (540, 950), 1100, 0.5)

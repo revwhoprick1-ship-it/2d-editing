@@ -1,0 +1,906 @@
+{
+ "voice": "qwen3-tts",
+ "sample_rate": 24000,
+ "lines": [
+  {
+   "id": "A01",
+   "who": "A",
+   "text": "Two hundred and eleven. Two hundred and twelve. Two hundred and thirteen.",
+   "start": 0.0,
+   "end": 3.889,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "A02",
+   "who": "A",
+   "text": "This plane only has two hundred and twelve seats.",
+   "start": 4.189,
+   "end": 6.618,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "L01",
+   "who": "L",
+   "text": "So somebody's sitting on somebody's lap?",
+   "start": 7.018,
+   "end": 9.113,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "M01",
+   "who": "M",
+   "text": "Every seat is full. Nobody's standing.",
+   "start": 9.313,
+   "end": 12.228,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "B01",
+   "who": "B",
+   "text": "Then who's the extra passenger?",
+   "start": 12.428,
+   "end": 13.99,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "M02",
+   "who": "M",
+   "text": "The man in twenty-two C. He hasn't moved since takeoff.",
+   "start": 14.59,
+   "end": 18.088,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "B02",
+   "who": "B",
+   "text": "He's not breathing. Look at his chest.",
+   "start": 18.288,
+   "end": 20.333,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "L02",
+   "who": "L",
+   "text": "And that kid has been drawing us. For three hours.",
+   "start": 20.933,
+   "end": 23.262,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "G01",
+   "who": "G",
+   "text": "I'm drawing everyone on the plane.",
+   "start": 23.562,
+   "end": 25.256,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "B03",
+   "who": "B",
+   "text": "She drew someone sitting between us. With no face.",
+   "start": 25.756,
+   "end": 28.325,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "A03",
+   "who": "A",
+   "text": "Two hundred and fourteen.",
+   "start": 28.925,
+   "end": 30.199,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "M03",
+   "who": "M",
+   "text": "Now there's two of them.",
+   "start": 30.599,
+   "end": 31.793,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "B04",
+   "who": "B",
+   "text": "Wait. I booked two seats. You and me.",
+   "start": 32.293,
+   "end": 34.717,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "M04",
+   "who": "M",
+   "text": "Then Lawrence... where's your ticket?",
+   "start": 35.017,
+   "end": 37.165,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "L03",
+   "who": "L",
+   "text": "Guys. Come on. I've always been here.",
+   "start": 37.765,
+   "end": 40.054,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "X01",
+   "who": "X",
+   "text": "He's lying.",
+   "start": 40.654,
+   "end": 41.31,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "G02",
+   "who": "G",
+   "text": "One of us isn't real. Pick wrong... and you become the extra passenger.",
+   "start": 41.91,
+   "end": 46.317,
+   "delivery": "",
+   "speed": 1.08
+  }
+ ],
+ "words": [
+  {
+   "line": "A01",
+   "text": "Two",
+   "start": 0.0,
+   "end": 0.324
+  },
+  {
+   "line": "A01",
+   "text": "hundred",
+   "start": 0.324,
+   "end": 0.648
+  },
+  {
+   "line": "A01",
+   "text": "and",
+   "start": 0.648,
+   "end": 0.972
+  },
+  {
+   "line": "A01",
+   "text": "eleven.",
+   "start": 0.972,
+   "end": 1.296
+  },
+  {
+   "line": "A01",
+   "text": "Two",
+   "start": 1.296,
+   "end": 1.62
+  },
+  {
+   "line": "A01",
+   "text": "hundred",
+   "start": 1.62,
+   "end": 1.944
+  },
+  {
+   "line": "A01",
+   "text": "and",
+   "start": 1.944,
+   "end": 2.268
+  },
+  {
+   "line": "A01",
+   "text": "twelve.",
+   "start": 2.268,
+   "end": 2.593
+  },
+  {
+   "line": "A01",
+   "text": "Two",
+   "start": 2.593,
+   "end": 2.917
+  },
+  {
+   "line": "A01",
+   "text": "hundred",
+   "start": 2.917,
+   "end": 3.241
+  },
+  {
+   "line": "A01",
+   "text": "and",
+   "start": 3.241,
+   "end": 3.565
+  },
+  {
+   "line": "A01",
+   "text": "thirteen.",
+   "start": 3.565,
+   "end": 3.889
+  },
+  {
+   "line": "A02",
+   "text": "This",
+   "start": 4.189,
+   "end": 4.459
+  },
+  {
+   "line": "A02",
+   "text": "plane",
+   "start": 4.459,
+   "end": 4.729
+  },
+  {
+   "line": "A02",
+   "text": "only",
+   "start": 4.729,
+   "end": 4.998
+  },
+  {
+   "line": "A02",
+   "text": "has",
+   "start": 4.998,
+   "end": 5.268
+  },
+  {
+   "line": "A02",
+   "text": "two",
+   "start": 5.268,
+   "end": 5.538
+  },
+  {
+   "line": "A02",
+   "text": "hundred",
+   "start": 5.538,
+   "end": 5.808
+  },
+  {
+   "line": "A02",
+   "text": "and",
+   "start": 5.808,
+   "end": 6.078
+  },
+  {
+   "line": "A02",
+   "text": "twelve",
+   "start": 6.078,
+   "end": 6.348
+  },
+  {
+   "line": "A02",
+   "text": "seats.",
+   "start": 6.348,
+   "end": 6.618
+  },
+  {
+   "line": "L01",
+   "text": "So",
+   "start": 7.018,
+   "end": 7.318
+  },
+  {
+   "line": "L01",
+   "text": "somebody's",
+   "start": 7.318,
+   "end": 7.958
+  },
+  {
+   "line": "L01",
+   "text": "sitting",
+   "start": 7.958,
+   "end": 8.058
+  },
+  {
+   "line": "L01",
+   "text": "on",
+   "start": 8.058,
+   "end": 8.258
+  },
+  {
+   "line": "L01",
+   "text": "somebody's",
+   "start": 8.258,
+   "end": 8.718
+  },
+  {
+   "line": "L01",
+   "text": "lap?",
+   "start": 8.718,
+   "end": 8.958
+  },
+  {
+   "line": "M01",
+   "text": "Every",
+   "start": 9.313,
+   "end": 9.713
+  },
+  {
+   "line": "M01",
+   "text": "seat",
+   "start": 9.713,
+   "end": 10.013
+  },
+  {
+   "line": "M01",
+   "text": "is",
+   "start": 10.013,
+   "end": 10.153
+  },
+  {
+   "line": "M01",
+   "text": "full.",
+   "start": 10.153,
+   "end": 10.473
+  },
+  {
+   "line": "M01",
+   "text": "Nobody's",
+   "start": 11.313,
+   "end": 11.733
+  },
+  {
+   "line": "M01",
+   "text": "standing.",
+   "start": 11.733,
+   "end": 11.973
+  },
+  {
+   "line": "B01",
+   "text": "Then",
+   "start": 12.428,
+   "end": 12.648
+  },
+  {
+   "line": "B01",
+   "text": "who's",
+   "start": 12.648,
+   "end": 12.968
+  },
+  {
+   "line": "B01",
+   "text": "the",
+   "start": 12.968,
+   "end": 13.088
+  },
+  {
+   "line": "B01",
+   "text": "extra",
+   "start": 13.088,
+   "end": 13.328
+  },
+  {
+   "line": "B01",
+   "text": "passenger?",
+   "start": 13.328,
+   "end": 13.708
+  },
+  {
+   "line": "M02",
+   "text": "The",
+   "start": 14.59,
+   "end": 14.939
+  },
+  {
+   "line": "M02",
+   "text": "man",
+   "start": 14.939,
+   "end": 15.289
+  },
+  {
+   "line": "M02",
+   "text": "in",
+   "start": 15.289,
+   "end": 15.639
+  },
+  {
+   "line": "M02",
+   "text": "twenty-two",
+   "start": 15.639,
+   "end": 15.989
+  },
+  {
+   "line": "M02",
+   "text": "C.",
+   "start": 15.989,
+   "end": 16.339
+  },
+  {
+   "line": "M02",
+   "text": "He",
+   "start": 16.339,
+   "end": 16.689
+  },
+  {
+   "line": "M02",
+   "text": "hasn't",
+   "start": 16.689,
+   "end": 17.039
+  },
+  {
+   "line": "M02",
+   "text": "moved",
+   "start": 17.039,
+   "end": 17.388
+  },
+  {
+   "line": "M02",
+   "text": "since",
+   "start": 17.388,
+   "end": 17.738
+  },
+  {
+   "line": "M02",
+   "text": "takeoff.",
+   "start": 17.738,
+   "end": 18.088
+  },
+  {
+   "line": "B02",
+   "text": "He's",
+   "start": 18.288,
+   "end": 18.488
+  },
+  {
+   "line": "B02",
+   "text": "not",
+   "start": 18.488,
+   "end": 18.628
+  },
+  {
+   "line": "B02",
+   "text": "breathing.",
+   "start": 18.628,
+   "end": 18.968
+  },
+  {
+   "line": "B02",
+   "text": "Look",
+   "start": 19.468,
+   "end": 19.668
+  },
+  {
+   "line": "B02",
+   "text": "at",
+   "start": 19.668,
+   "end": 19.768
+  },
+  {
+   "line": "B02",
+   "text": "his",
+   "start": 19.768,
+   "end": 19.888
+  },
+  {
+   "line": "B02",
+   "text": "chest.",
+   "start": 19.888,
+   "end": 20.168
+  },
+  {
+   "line": "L02",
+   "text": "And",
+   "start": 20.933,
+   "end": 21.073
+  },
+  {
+   "line": "L02",
+   "text": "that",
+   "start": 21.073,
+   "end": 21.233
+  },
+  {
+   "line": "L02",
+   "text": "kid",
+   "start": 21.233,
+   "end": 21.433
+  },
+  {
+   "line": "L02",
+   "text": "has",
+   "start": 21.433,
+   "end": 21.573
+  },
+  {
+   "line": "L02",
+   "text": "been",
+   "start": 21.573,
+   "end": 21.693
+  },
+  {
+   "line": "L02",
+   "text": "drawing",
+   "start": 21.693,
+   "end": 21.993
+  },
+  {
+   "line": "L02",
+   "text": "us.",
+   "start": 21.993,
+   "end": 22.213
+  },
+  {
+   "line": "L02",
+   "text": "For",
+   "start": 22.213,
+   "end": 22.433
+  },
+  {
+   "line": "L02",
+   "text": "three",
+   "start": 22.433,
+   "end": 22.673
+  },
+  {
+   "line": "L02",
+   "text": "hours.",
+   "start": 22.673,
+   "end": 23.013
+  },
+  {
+   "line": "G01",
+   "text": "I'm",
+   "start": 23.562,
+   "end": 23.782
+  },
+  {
+   "line": "G01",
+   "text": "drawing",
+   "start": 23.782,
+   "end": 23.982
+  },
+  {
+   "line": "G01",
+   "text": "everyone",
+   "start": 23.982,
+   "end": 24.422
+  },
+  {
+   "line": "G01",
+   "text": "on",
+   "start": 24.422,
+   "end": 24.682
+  },
+  {
+   "line": "G01",
+   "text": "the",
+   "start": 24.682,
+   "end": 24.782
+  },
+  {
+   "line": "G01",
+   "text": "plane.",
+   "start": 24.782,
+   "end": 25.042
+  },
+  {
+   "line": "B03",
+   "text": "She",
+   "start": 25.756,
+   "end": 26.076
+  },
+  {
+   "line": "B03",
+   "text": "drew",
+   "start": 26.076,
+   "end": 26.276
+  },
+  {
+   "line": "B03",
+   "text": "someone",
+   "start": 26.276,
+   "end": 26.596
+  },
+  {
+   "line": "B03",
+   "text": "sitting",
+   "start": 26.596,
+   "end": 26.856
+  },
+  {
+   "line": "B03",
+   "text": "between",
+   "start": 26.856,
+   "end": 27.216
+  },
+  {
+   "line": "B03",
+   "text": "us.",
+   "start": 27.216,
+   "end": 27.416
+  },
+  {
+   "line": "B03",
+   "text": "With",
+   "start": 27.416,
+   "end": 27.596
+  },
+  {
+   "line": "B03",
+   "text": "no",
+   "start": 27.596,
+   "end": 27.776
+  },
+  {
+   "line": "B03",
+   "text": "face.",
+   "start": 27.776,
+   "end": 28.036
+  },
+  {
+   "line": "A03",
+   "text": "Two",
+   "start": 28.925,
+   "end": 29.243
+  },
+  {
+   "line": "A03",
+   "text": "hundred",
+   "start": 29.243,
+   "end": 29.562
+  },
+  {
+   "line": "A03",
+   "text": "and",
+   "start": 29.562,
+   "end": 29.881
+  },
+  {
+   "line": "A03",
+   "text": "fourteen.",
+   "start": 29.881,
+   "end": 30.199
+  },
+  {
+   "line": "M03",
+   "text": "Now",
+   "start": 30.599,
+   "end": 30.839
+  },
+  {
+   "line": "M03",
+   "text": "there's",
+   "start": 30.839,
+   "end": 31.159
+  },
+  {
+   "line": "M03",
+   "text": "two",
+   "start": 31.159,
+   "end": 31.339
+  },
+  {
+   "line": "M03",
+   "text": "of",
+   "start": 31.339,
+   "end": 31.479
+  },
+  {
+   "line": "M03",
+   "text": "them.",
+   "start": 31.479,
+   "end": 31.639
+  },
+  {
+   "line": "B04",
+   "text": "Wait.",
+   "start": 32.293,
+   "end": 32.493
+  },
+  {
+   "line": "B04",
+   "text": "I",
+   "start": 32.833,
+   "end": 32.973
+  },
+  {
+   "line": "B04",
+   "text": "booked",
+   "start": 32.973,
+   "end": 33.113
+  },
+  {
+   "line": "B04",
+   "text": "two",
+   "start": 33.113,
+   "end": 33.413
+  },
+  {
+   "line": "B04",
+   "text": "seats.",
+   "start": 33.413,
+   "end": 33.713
+  },
+  {
+   "line": "B04",
+   "text": "You",
+   "start": 34.073,
+   "end": 34.193
+  },
+  {
+   "line": "B04",
+   "text": "and",
+   "start": 34.193,
+   "end": 34.353
+  },
+  {
+   "line": "B04",
+   "text": "me.",
+   "start": 34.353,
+   "end": 34.593
+  },
+  {
+   "line": "M04",
+   "text": "Then",
+   "start": 35.017,
+   "end": 35.177
+  },
+  {
+   "line": "M04",
+   "text": "Lawrence...",
+   "start": 35.177,
+   "end": 35.537
+  },
+  {
+   "line": "M04",
+   "text": "where's",
+   "start": 36.557,
+   "end": 36.777
+  },
+  {
+   "line": "M04",
+   "text": "your",
+   "start": 36.777,
+   "end": 36.857
+  },
+  {
+   "line": "M04",
+   "text": "ticket?",
+   "start": 36.857,
+   "end": 37.017
+  },
+  {
+   "line": "L03",
+   "text": "Guys.",
+   "start": 37.765,
+   "end": 38.105
+  },
+  {
+   "line": "L03",
+   "text": "Come",
+   "start": 38.465,
+   "end": 38.545
+  },
+  {
+   "line": "L03",
+   "text": "on.",
+   "start": 38.545,
+   "end": 38.825
+  },
+  {
+   "line": "L03",
+   "text": "I've",
+   "start": 39.105,
+   "end": 39.285
+  },
+  {
+   "line": "L03",
+   "text": "always",
+   "start": 39.285,
+   "end": 39.465
+  },
+  {
+   "line": "L03",
+   "text": "been",
+   "start": 39.465,
+   "end": 39.705
+  },
+  {
+   "line": "L03",
+   "text": "here.",
+   "start": 39.705,
+   "end": 39.965
+  },
+  {
+   "line": "X01",
+   "text": "He's",
+   "start": 40.654,
+   "end": 40.814
+  },
+  {
+   "line": "X01",
+   "text": "lying.",
+   "start": 40.814,
+   "end": 41.074
+  },
+  {
+   "line": "G02",
+   "text": "One",
+   "start": 41.91,
+   "end": 42.07
+  },
+  {
+   "line": "G02",
+   "text": "of",
+   "start": 42.07,
+   "end": 42.21
+  },
+  {
+   "line": "G02",
+   "text": "us",
+   "start": 42.21,
+   "end": 42.35
+  },
+  {
+   "line": "G02",
+   "text": "isn't",
+   "start": 42.35,
+   "end": 42.69
+  },
+  {
+   "line": "G02",
+   "text": "real.",
+   "start": 42.69,
+   "end": 42.95
+  },
+  {
+   "line": "G02",
+   "text": "Pick",
+   "start": 43.59,
+   "end": 43.79
+  },
+  {
+   "line": "G02",
+   "text": "wrong...",
+   "start": 43.79,
+   "end": 44.13
+  },
+  {
+   "line": "G02",
+   "text": "and",
+   "start": 44.13,
+   "end": 44.69
+  },
+  {
+   "line": "G02",
+   "text": "you",
+   "start": 44.69,
+   "end": 44.83
+  },
+  {
+   "line": "G02",
+   "text": "become",
+   "start": 44.83,
+   "end": 45.11
+  },
+  {
+   "line": "G02",
+   "text": "the",
+   "start": 45.11,
+   "end": 45.29
+  },
+  {
+   "line": "G02",
+   "text": "extra",
+   "start": 45.29,
+   "end": 45.59
+  },
+  {
+   "line": "G02",
+   "text": "passenger.",
+   "start": 45.59,
+   "end": 45.99
+  }
+ ],
+ "duration": 46.617
+}

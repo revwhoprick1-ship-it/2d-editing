@@ -1,0 +1,70 @@
+[
+ {
+  "id": "A01",
+  "word_misses": 12
+ },
+ {
+  "id": "A02",
+  "word_misses": 4
+ },
+ {
+  "id": "L01",
+  "word_misses": 0
+ },
+ {
+  "id": "M01",
+  "word_misses": 0
+ },
+ {
+  "id": "B01",
+  "word_misses": 0
+ },
+ {
+  "id": "M02",
+  "word_misses": 3
+ },
+ {
+  "id": "B02",
+  "word_misses": 0
+ },
+ {
+  "id": "L02",
+  "word_misses": 0
+ },
+ {
+  "id": "G01",
+  "word_misses": 0
+ },
+ {
+  "id": "B03",
+  "word_misses": 0
+ },
+ {
+  "id": "A03",
+  "word_misses": 4
+ },
+ {
+  "id": "M03",
+  "word_misses": 0
+ },
+ {
+  "id": "B04",
+  "word_misses": 0
+ },
+ {
+  "id": "M04",
+  "word_misses": 0
+ },
+ {
+  "id": "L03",
+  "word_misses": 0
+ },
+ {
+  "id": "X01",
+  "word_misses": 0
+ },
+ {
+  "id": "G02",
+  "word_misses": 0
+ }
+]
