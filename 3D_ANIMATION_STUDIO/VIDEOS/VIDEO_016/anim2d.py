@@ -112,16 +112,16 @@ def leaves(cv, n=40, seed=0):
         cv.drawOval(skia.Rect(x - 14, y - 6, x + 14, y + 6), paint(C(['#3A2A18', '#4A3420', '#2A2010'][k % 3], 0.9)))
 
 
-def group_walk(cv, t, order='KLBJM', y0=1820, s=0.62, walking=True, mood_=None, spread=190, views=None, bob_=True):
-    xs = [540 + (i - 2) * spread for i in range(5)]
+def group_walk(cv, t, order='KLBJM', y0=1900, s=0.46, walking=True, mood_=None, spread=205, views=None, bob_=True, xs=None):
+    xs = xs or [540 + (i - 2) * spread for i in range(5)]
     for i, who in enumerate(order):
         P = face_pose(who, t)
         if mood_:
             P.update(mood_)
         ph = ((t * 0.9) + i * 0.27) % 1 if walking else None
         v = (views or {}).get(who, 'front')
-        yy = y0 + (i % 2) * 40
-        mascot(cv, xs[i], yy, s * (1.25 if who == 'J' else 1.0) * (0.92 if who == 'B' else 1.0), walk=ph, view=v, light_side=1, rim=MOON,
+        yy = y0 + (i % 2) * 50
+        mascot(cv, xs[i], yy, s * (0.94 if i % 2 == 0 else 1.0) * (1.25 if who == 'J' else 1.0) * (0.92 if who == 'B' else 1.0), walk=ph, view=v, light_side=1, rim=MOON,
                rim_a=0.5, **P)
 
 
@@ -186,10 +186,12 @@ def cu_bg(cv, t, place):
 
 
 def place_at(t):
-    if t < B['house_in']:
+    if t < B['dining']:
         return 'forest'
-    if t < B['escape']:
+    if t < B['exit']:
         return 'house'
+    if t < B['edge']:
+        return 'forest'
     return 'edge'
 
 
@@ -219,7 +221,7 @@ def shot_FORK(cv, t):
     cv.drawRect(skia.Rect(660, 1080, 940, 1260), paint('#5A4028'))
     text(cv, 'DO NOT ENTER', 800, 1150, 44, '#C8C0A8')
     text(cv, 'TURN BACK', 800, 1220, 40, '#C83030')
-    group_walk(cv, t, y0=2050, s=0.66, walking=False, views={w: 'back' for w in 'KLBJM'}, spread=200)
+    group_walk(cv, t, y0=2080, s=0.5, walking=False, views={w: 'back' for w in 'KLBJM'}, xs=[90, 260, 430, 140, 330])
     shade(cv, (540, 1100), 1300, 0.5)
 
 
@@ -247,19 +249,19 @@ def shot_BONES(cv, t):
     pan = (t - B['bones']) * 0.12
     forest(cv, t, cam_x=0.8 + pan, fog=0.7)
     for k in range(12):
-        x, y = 140 + (k * 173) % 820, 1560 + (k * 89) % 260
+        x, y = 300 + (k * 173) % 480, 1300 + (k * 89) % 200
         cv.save(); cv.rotate((k * 47) % 180, x, y)
         cv.drawRect(skia.Rect(x - 50, y - 8, x + 50, y + 8), paint('#D8D0BC'))
         cv.drawCircle(x - 50, y, 13, paint('#D8D0BC')); cv.drawCircle(x + 50, y, 13, paint('#D8D0BC'))
         cv.restore()
-    sx, sy = 520, 1640                                                                          # the skull, half in the dirt
+    sx, sy = 540, 1380                                                                          # the skull, half in the dirt
     cv.drawPath(blob([(sx - 90, sy), (sx - 80, sy - 110), (sx, sy - 150), (sx + 80, sy - 110), (sx + 90, sy)]), paint('#E4DCC8'))
     for side in (-1, 1):
         cv.drawOval(skia.Rect(sx + side * 40 - 26, sy - 90, sx + side * 40 + 26, sy - 50), paint('#1A1410'))
     cv.drawRect(skia.Rect(sx - 110, sy, sx + 110, sy + 40), paint('#0E1A16'))
     if B['figure'] <= t < B['figure'] + 0.35:                                                 # nobody notices
         mimic(cv, 900, 1520, 0.36, t=t, tilt=40, grin=1.0, rim=MOON, rim_a=0.4)
-    group_walk(cv, t, y0=1950, s=0.55, walking=False, spread=150)
+    group_walk(cv, t, y0=1960, s=0.44, walking=False, xs=[100, 260, 820, 980, 540])
     shade(cv, (540, 1100), 1300, 0.5)
 
 
@@ -281,7 +283,7 @@ def shot_HOUSE(cv, t):
     cv.drawRect(skia.Rect(470, 1150, 610, 1500), paint('#05070A'))
     cv.drawRect(skia.Rect(470, 1150, 560, 1500), paint('#2A2018'))                                 # door ajar
     cv.drawRect(skia.Rect(hx0, 800, hx1, hy), paint(C(MOON, 0.06)))
-    group_walk(cv, t, y0=2000, s=0.6, walking=t < B['house_in'] - 1.5, views={w: 'back' for w in 'KLBJM'}, spread=190)
+    group_walk(cv, t, walking=t < B['house_in'] - 1.5, views={w: 'back' for w in 'KLBJM'}, s=0.4, y0=2080, xs=[110, 280, 800, 970, 540])
     shade(cv, (540, 1100), 1300, 0.5)
 
 
@@ -289,9 +291,9 @@ def shot_DINING(cv, t):
     """Inside: a table set for five. Five plates, five glasses. The group around it."""
     house_room(cv, t)
     for k, who in enumerate('BJKLM'):
-        x = 140 + k * 200
+        x = 150 + k * 195
         P = face_pose(who, t)
-        mascot(cv, x, 1900, 0.62 * (1.2 if who == 'J' else 1.0), light_side=1, rim=TUNG, rim_a=0.4, legs=False, **P)
+        mascot(cv, x, 1560, 0.46 * (1.15 if who == 'J' else 1.0), light_side=1, rim=TUNG, rim_a=0.4, legs=False, **P)
     table(cv, t)
     shade(cv, (540, 1000), 1250, 0.55)
 
@@ -332,8 +334,8 @@ def shot_DOOR(cv, t):
     if t >= B['knocks'][0]:
         for x in (450, 600):
             cv.drawRect(skia.Rect(x, 1490, x + 60, 1505), paint('#000000'))
-    for i, who in enumerate('JMK'):
-        mascot(cv, 160 + i * 380, 2550, 1.0 * (1.2 if who == 'J' else 1.0), view='back', light_side=1, rim=TUNG, rim_a=0.4, **CAST[who])
+    for i, who in enumerate('JK'):
+        mascot(cv, (120, 960)[i], 2600, 0.85 * (1.15 if who == 'J' else 1.0), view='back', light_side=1, rim=TUNG, rim_a=0.4, **CAST[who])
     if t >= B['dark'] and t < B['reveal']:
         dim(cv, 0.97)
     shade(cv, (540, 1000), 1200, 0.55)
@@ -366,9 +368,9 @@ def shot_CHASE(cv, t):
     forest(cv, t, cam_x=u * 3.0, fog=0.5)
     leaves(cv, 30, int(u * 10))
     for i, who in enumerate('MBLJK'):
-        x = 980 - i * 150 + 20 * math.sin(t * 3 + i)
+        x = 1000 - i * 175 + 20 * math.sin(t * 3 + i)
         P = face_pose(who, t)
-        mascot(cv, x, 1780 + (i % 2) * 40, 0.5 * (1.2 if who == 'J' else 1.0), view='side', face=1, walk=(t * 2.8 + i * 0.3) % 1, run=True,
+        mascot(cv, x, 1800 + (i % 2) * 50, 0.42 * (1.2 if who == 'J' else 1.0), view='side', face=1, walk=(t * 2.8 + i * 0.3) % 1, run=True,
                light_side=1, rim=MOON, rim_a=0.6, **P)
     gap = max(-120.0, 80 - u * 40)
     mimic(cv, gap, 1840, 0.42, t=t, tilt=30, grin=1.0, run=(t * 2.2) % 1, reach=1.0, rim=MOON, rim_a=0.5)
@@ -386,8 +388,9 @@ def shot_EXIT(cv, t):
     cv.drawRect(skia.Rect(0, 380, 560, 1500), paint('#3A2618'))
     cv.restore()
     for i, who in enumerate('MBLJ'):
-        x = 540 + (i - 1.5) * 170
-        mascot(cv, x, 1700 + i * 40 - (t - B['exit']) * 300 * (i % 2), 0.55, view='back', walk=(t * 2.8 + i * 0.3) % 1, run=True, light_side=1, rim=MOON,
+        u = min(1.5, t - B['exit'])
+        x = 540 + (i - 1.5) * 150 * (1 - 0.3 * u / 1.5)
+        mascot(cv, x, 1720 + i * 30 - u * 120, 0.5 * (1 - 0.35 * u / 1.5), view='back', walk=(t * 2.8 + i * 0.3) % 1, run=True, light_side=1, rim=MOON,
                rim_a=0.5, **CAST[who])
     shade(cv, (540, 1000), 1200, 0.5)
 
@@ -409,7 +412,7 @@ def shot_EDGE(cv, t):
     for i, who in enumerate('LJBKM'):
         P = face_pose(who, t)
         crouch = 0.35 if who in 'LB' else 0.0
-        mascot(cv, 140 + i * 200, 1820 + (i % 2) * 30, 0.6 * (1.2 if who == 'J' else 1.0), crouch=crouch, light_side=-1, rim='#E8F4F0', rim_a=0.6,
+        mascot(cv, 120 + i * 210, 1860 + (i % 2) * 40, 0.47 * (1.2 if who == 'J' else 1.0), crouch=crouch, light_side=-1, rim='#E8F4F0', rim_a=0.6,
                **P)
     shade(cv, (540, 1100), 1300, 0.4)
 

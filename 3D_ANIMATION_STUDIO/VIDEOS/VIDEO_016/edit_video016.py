@@ -133,3 +133,5 @@ CAPTIONS = dict(timing=TIMING, offset=0.0, style='2dedit', y=1420, size=74, max_
                           'halloween', 'skull', 'human', 'together', 'following', 'help', "wasn't", 'shelter', 'demonic', 'immediately',
                           'five', 'butler', 'stop', 'door', 'outside', 'cold', 'copying', 'now', 'leaving', 'hell', 'run', 'told', 'coming',
                           'never', 'everyone', 'fun', 'move', 'forgot', 'inside'})
+# group shots: captions sit above the heads, not on them
+CAPTIONS['y_over'] = [(sg['t0'], sg['t1'], 1150) for sg in SEGMENTS if sg['src'] in ('ENTER', 'BONES', 'EDGE', 'CHASE', 'EXIT')]
