@@ -26,13 +26,17 @@ FX = {'Q01': ['lowpass', '1800', 'tremolo', '5', '40', 'reverb', '70', 'pitch', 
       'O01': ['reverb', '12'], 'O04': ['reverb', '35', '50', '40'], 'O05': ['reverb', '35', '50', '40']}
 for k, fx in FX.items():
     src = os.path.join(O, k + '.wav')
-    sox(src, os.path.join(N, k + '.wav'), *fx, 'fade', 't', '0.01', '-0', '0.25', 'norm', '-3')   # keep the reverb tail, fade it
+    tmpf = os.path.join(tempfile.gettempdir(), k + '_fx.wav')
+    sox(src, tmpf, *fx)                                                                  # keep the reverb tail...
+    sox(tmpf, os.path.join(N, k + '.wav'), 'fade', 't', '0.01', dur(tmpf), '0.25', 'norm', '-3')   # ...and fade it (explicit length)
 tmp = tempfile.mkdtemp()
 src = os.path.join(O, 'X01.wav')
 a, b, m = (os.path.join(tmp, x) for x in ('a.wav', 'b.wav', 'm.wav'))
 sox(src, '-r', '24000', '-c', '1', a, 'norm', '-6')
 sox(src, '-r', '24000', '-c', '1', b, 'pitch', '-180', 'overdrive', '6', 'pad', '0.025', 'norm', '-7')
 sox('-m', a, b, m)
-sox(m, os.path.join(N, 'X01.wav'), 'reverb', '40', 'fade', 't', '0.01', '-0', '0.3', 'norm', '-3')
+m2 = os.path.join(tmp, 'm2.wav')
+sox(m, m2, 'reverb', '40')
+sox(m2, os.path.join(N, 'X01.wav'), 'fade', 't', '0.01', dur(m2), '0.3', 'norm', '-3')
 shutil.rmtree(tmp)
 print('VOICE_FX_OK')
