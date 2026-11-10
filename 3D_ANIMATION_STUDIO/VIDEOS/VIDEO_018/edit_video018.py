@@ -118,4 +118,5 @@ SPK = {l['id']: NAMES[l['id'][0]] for l in _T['lines']}
 CAPTIONS = dict(timing=TIMING, offset=0.0, style='2dedit', y=1420, size=74, max_words=4, speakers=SPK, hide=SCARES,
                 emphasis={'thirteen', 'twelve', 'lap', 'full', 'extra', 'moved', 'breathing', 'drawing', 'everyone', 'face', 'fourteen', 'two',
                           'booked', 'ticket', 'always', 'lying', 'real', 'wrong'})
-CAPTIONS['y_over'] = [(sg['t0'], sg['t1'], 1150) for sg in SEGMENTS if sg['src'] in ('ROW', 'AISLE', 'MAN', 'GIRL', 'GIRL2', 'COUNT')]
+CAPTIONS['y_over'] = [(sg['t0'], sg['t1'], 1150) for sg in SEGMENTS if sg['src'] in ('ROW', 'AISLE')] + \
+    [(sg['t0'], sg['t1'], 1800) for sg in SEGMENTS if sg['src'] in ('MAN', 'GIRL', 'GIRL2', 'COUNT')]
