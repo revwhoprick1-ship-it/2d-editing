@@ -13,4 +13,6 @@
   Qwen3-TTS ONLY (Apache-2.0, `/opt/tools/qwen`: VoiceDesign ref per character -> Base voice clone per line), never paid TTS/ElevenLabs.
 * **Retention rules** (from real stats): read `3D_ANIMATION_STUDIO/VIDEOS/RETENTION_LESSONS.md` before every new video. Frame 0 =
   character in danger; no flashbacks/recaps; standalone stories (no "Part 2"); no end choice card; 60–75 s.
+* **Always be creative**: never a plain "what if" list. Give the premise a character with a problem, a goal and escalating
+  situations (e.g. a disease that forces a funny behaviour during a school day), with a twist.
 * Reply in short "caveman" talk.
