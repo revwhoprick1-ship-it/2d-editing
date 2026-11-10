@@ -876,6 +876,65 @@ def dread_drone():
     return normalize(fade(x * 0.6, 0.5, 0.5), -6)
 
 
+@reg('forest_night', 'Night forest bed: soft wind in leaves + sparse crickets + far owl, loopable (12 s).')
+def forest_night():
+    n = int(12.0 * SR); tt = np.arange(n) / SR; rng = np.random.default_rng(1601)
+    x = bandpass(noise(n, 'pink', 1602), 300, 3500) * (0.5 + 0.5 * np.sin(2 * np.pi * 0.09 * tt) ** 2) * 0.5
+    cr = np.sin(2 * np.pi * 4300 * tt) * (np.sin(2 * np.pi * 28 * tt) > 0.3) * (np.sin(2 * np.pi * 0.6 * tt) > 0.2) * 0.04
+    x += cr
+    for t0 in (3.0, 9.5):
+        k = int(0.5 * SR); i = int(t0 * SR); f = 370 + 30 * rng.uniform()
+        x[i:i + k] += np.sin(2 * np.pi * f * np.arange(k) / SR) * env_adsr(k, 0.08, 0.1, 0.6, 0.25) * 0.08
+    return normalize(fade(convolve_stereo(x, reverb_ir(1.5, 0.5, seed=1603), 0.3), 0.5, 0.5), -8)
+
+@reg('leaf_steps', 'Several people walking on dry leaves and twigs (4 s).')
+def leaf_steps():
+    n = int(4.0 * SR); out = np.zeros(n); rng = np.random.default_rng(1604)
+    for t0 in np.arange(0.0, 3.8, 0.17):
+        k = int(0.18 * SR); i = int((t0 + rng.uniform(0, 0.08)) * SR)
+        b = bandpass(noise(k, 'white', int(t0 * 91)), 900, 7000) * env_exp(k, 0.05) * (rng.uniform(0, 1, k) > 0.6)
+        out[i:i + k] += b[:n - i] * rng.uniform(0.3, 0.9)
+    return normalize(fade(out, 0.05, 0.2), -6)
+
+@reg('branch_snap', 'A dry branch snapping in the dark, close (0.8 s).')
+def branch_snap():
+    n = int(0.8 * SR); out = np.zeros(n)
+    for j, (t0, a) in enumerate(((0.0, 1.0), (0.03, 0.7), (0.07, 0.5), (0.12, 0.3))):
+        k = int(0.06 * SR); i = int(t0 * SR)
+        out[i:i + k] += bandpass(noise(k, 'white', 1605 + j), 1200, 6000) * env_exp(k, 0.012) * a
+    out += lowpass(noise(n, 'white', 1609), 300) * env_exp(n, 0.05) * 0.6
+    return normalize(convolve_stereo(out, reverb_ir(1.2, 0.5, seed=1610), 0.35), -3)
+
+@reg('house_creak', 'Old wooden house settling: slow low creaks (3 s).')
+def house_creak():
+    n = int(3.0 * SR); tt = np.arange(n) / SR
+    f = 95 + 25 * np.sin(2 * np.pi * 0.4 * tt)
+    x = np.sign(np.sin(2 * np.pi * np.cumsum(f) / SR)) * bandpass(noise(n, 'white', 1611), 200, 1800)
+    x = bandpass(x, 150, 1500) * (np.sin(np.pi * tt / 3.0) ** 2) * (0.6 + 0.4 * np.sin(2 * np.pi * 7 * tt))
+    return normalize(convolve_stereo(x, reverb_ir(1.4, 0.5, seed=1612), 0.4), -6)
+
+@reg('mimic_click', 'Wet clicking throat of something imitating a voice (1.5 s).')
+def mimic_click():
+    n = int(1.5 * SR); out = np.zeros(n); rng = np.random.default_rng(1613)
+    for t0 in np.sort(rng.uniform(0, 1.4, 14)):
+        k = int(0.03 * SR); i = int(t0 * SR)
+        out[i:i + k] += bandpass(noise(k, 'white', int(t0 * 1e4)), 800, 4000) * env_exp(k, 0.006) * rng.uniform(0.4, 1)
+    out += lowpass(noise(n, 'brown', 1614), 200) * 0.4 * env_adsr(n, 0.3, 0.2, 0.7, 0.5)
+    return normalize(convolve_stereo(out, reverb_ir(0.9, 0.4, seed=1615), 0.3), -4)
+
+@reg('chase_run', 'Five people sprinting through brush, branches whipping (4 s).')
+def chase_run():
+    n = int(4.0 * SR); out = np.zeros(n); rng = np.random.default_rng(1616)
+    for t0 in np.arange(0.0, 3.9, 0.11):
+        k = int(0.12 * SR); i = int((t0 + rng.uniform(0, 0.05)) * SR)
+        b = (lowpass(noise(k, 'white', int(t0 * 97)), 400) * 1.5 + bandpass(noise(k, 'white', int(t0 * 31)), 1500, 6000) * 0.5) * env_exp(k, 0.04)
+        out[i:i + k] += b[:n - i] * rng.uniform(0.5, 1)
+    for t0 in rng.uniform(0.2, 3.6, 6):
+        k = int(0.25 * SR); i = int(t0 * SR)
+        out[i:i + k] += bandpass(noise(k, 'pink', int(t0 * 53)), 600, 5000) * env_adsr(k, 0.03, 0.05, 0.5, 0.15) * 0.6
+    return normalize(fade(out, 0.05, 0.2), -4)
+
+
 def main():
     root = sys.argv[1]
     d = os.path.join(root, 'sound_effects', 'comedy')

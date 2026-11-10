@@ -1267,6 +1267,59 @@ def cue_video015():
 CUES['video015'] = cue_video015
 LOOPS['video015'] = None
 
+def cue_video016():
+    sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'VIDEOS', 'VIDEO_016'))
+    import edit_video016 as E16
+    B, END, s16, e16 = E16.B, E16.END, E16.s, E16.e
+    S = Score(END + 3.0, bpm=60)
+    D = lambda t, d, f=36.7, g=-10: S.add('fx', t, sine(f, d) * env_adsr(int(d * SR), min(1.5, d / 3), 0.2, 0.9, min(1.0, d / 4)) * 0.8, g)
+    # hook: one low pulse under the whisper, then a hit on the title
+    D(0.0, B['title'], 32.7, -9)
+    S.add('perc', B['title'], drum_taiko(1.6, 40), -3)
+    S.add('pad', B['title'], inst_strings(C(['C3', 'C#3', 'G3']), 1.6, attack=0.02, bright=2000), -10)
+    # the forest: cold, open minor pad (blue-green), a lonely bell figure
+    S.add('pad', B['enter'], inst_pad(C(['A2', 'E3', 'C4']), B['sign'] - B['enter'], bright=1100, attack=1.5), -16)
+    for i, nm in enumerate(['E5', 'C5', 'A4', 'B4', 'E5', 'C5', 'A4', 'G#4'] * 2):
+        tt = B['enter'] + 1.0 + i * 1.1
+        if tt < B['sign'] - 0.5:
+            S.add('lead', tt, inst_bell(mtof(n2m(nm)), 1.4), -19)
+    # the sign + bones: the floor drops out
+    S.add('pad', B['sign'], inst_pad(C(['A1', 'A2', 'D#3']), B['house_in'] - B['sign'], bright=700, attack=1.0), -14)
+    D(B['bones'], B['house_in'] - B['bones'], 30.9, -9)
+    S.add('pad', B['figure'], inst_tremolo(C(['D#5', 'E5']), 2.5, rate=14, bright=3200), -15)
+    S.add('perc', B['help'], drum_taiko(1.0, 46), -9)
+    # the house: warm but wrong (a slow out-of-tune music box)
+    for i, nm in enumerate(['A4', 'C5', 'E5', 'D#5', 'C5', 'A4', 'B4', 'F5'] * 4):
+        tt = B['house_in'] + 0.5 + i * 0.6
+        if tt < B['knock'] - 0.6:
+            S.add('lead', tt, inst_bell(mtof(n2m(nm)) * (1.0 + 0.012 * (i % 3 - 1)), 1.0), -18)
+    S.add('pad', B['wall'], inst_tremolo(C(['A3', 'A#3']), B['knock'] - B['wall'], rate=9, bright=2200), -17)
+    # knocks: almost nothing, just a sub; then lights out
+    D(B['knock'], B['reveal'] - B['knock'], 29.1, -8)
+    # the reveal + chase: hits, then driving taiko 8ths and string ostinato
+    S.add('perc', B['js1'], drum_taiko(1.4, 38), -2)
+    S.add('pad', B['js1'], inst_strings(C(['D3', 'D#3', 'A3']), 1.6, attack=0.02, bright=2400), -10)
+    S.add('pad', B['x05'], inst_tremolo(C(['D4', 'D#4', 'G#4']), B['rush'] - B['x05'], rate=12, bright=2800), -14)
+    S.add('perc', B['js2'], drum_taiko(1.4, 36), -1)
+    t, i = B['chase'], 0
+    while t < B['edge'] - 0.3:
+        S.add('perc', t, drum_taiko(0.8, 55 if i % 4 else 44), -9 if i % 4 else -5)
+        if i % 2 == 0:
+            S.add('lead', t, inst_strings(C(['D3' if (i // 8) % 2 == 0 else 'D#3']), 0.24, attack=0.005, bright=3000), -13)
+        t += 0.2; i += 1
+    S.add('perc', B['edge'] - 0.3, drum_taiko(1.2, 40), -5)
+    # the edge: grey dawn relief... then the twist
+    S.add('pad', B['edge'], inst_pad(C(['F3', 'A3', 'C4', 'E4']), B['twist'] - B['edge'] + 0.5, bright=1300, attack=1.2), -16)
+    S.add('pad', B['twist'], inst_strings(C(['F3', 'F#3', 'C4']), 1.4, attack=0.01, bright=2600), -10)
+    D(B['twist'], B['js3'] - B['twist'], 30.9, -8)
+    S.add('pad', B['shadows'], inst_tremolo(C(['F#4', 'G4']), B['js3'] - B['shadows'], rate=13, bright=3000), -15)
+    S.add('perc', B['js3'], drum_taiko(1.6, 36), -1)
+    return S
+
+
+CUES['video016'] = cue_video016
+LOOPS['video016'] = None
+
 if __name__ == '__main__':
     cue, out = sys.argv[1], sys.argv[2]
     S = CUES[cue]()

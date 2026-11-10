@@ -1453,5 +1453,59 @@
   "duration_s": 8.0,
   "sample_rate": 48000,
   "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/forest_night.flac",
+  "category": "comedy",
+  "name": "forest_night",
+  "description": "Night forest bed: soft wind in leaves + sparse crickets + far owl, loopable (12 s).",
+  "duration_s": 12.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/leaf_steps.flac",
+  "category": "comedy",
+  "name": "leaf_steps",
+  "description": "Several people walking on dry leaves and twigs (4 s).",
+  "duration_s": 4.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/branch_snap.flac",
+  "category": "comedy",
+  "name": "branch_snap",
+  "description": "A dry branch snapping in the dark, close (0.8 s).",
+  "duration_s": 0.8,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/house_creak.flac",
+  "category": "comedy",
+  "name": "house_creak",
+  "description": "Old wooden house settling: slow low creaks (3 s).",
+  "duration_s": 3.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/mimic_click.flac",
+  "category": "comedy",
+  "name": "mimic_click",
+  "description": "Wet clicking throat of something imitating a voice (1.5 s).",
+  "duration_s": 1.5,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/chase_run.flac",
+  "category": "comedy",
+  "name": "chase_run",
+  "description": "Five people sprinting through brush, branches whipping (4 s).",
+  "duration_s": 4.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
  }
 ]
