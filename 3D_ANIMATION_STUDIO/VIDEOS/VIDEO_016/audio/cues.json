@@ -1,0 +1,465 @@
+{
+ "duration": 151.13,
+ "loop": false,
+ "narration": "narration/narration_raw.wav",
+ "narration_offset": 0.0,
+ "music": "music_score.wav",
+ "music_gain_db": 2,
+ "music_cue": "cue_video016",
+ "music_gates": [
+  [
+   91.10000000000001,
+   112.547,
+   0.15
+  ],
+  [
+   112.16699999999999,
+   112.547,
+   0.1
+  ],
+  [
+   145.812,
+   146.292,
+   0.1
+  ]
+ ],
+ "targets": {
+  "narration_lufs": -16,
+  "master_lufs": -14,
+  "true_peak": -2.0,
+  "duck_db": 5
+ },
+ "cues": [
+  {
+   "t": 0.0,
+   "file": "AUDIO/sound_effects/comedy/forest_night.flac",
+   "gain": -14,
+   "bus": "amb",
+   "note": "night forest, no animals",
+   "loop": true,
+   "dur": 3.1500000000000004
+  },
+  {
+   "t": 0.0,
+   "file": "AUDIO/sound_effects/comedy/heavy_breath.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "Ken breathing"
+  },
+  {
+   "t": 2.55,
+   "file": "AUDIO/sound_effects/comedy/branch_snap.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "branch behind Ken"
+  },
+  {
+   "t": 3.2,
+   "file": "AUDIO/sound_effects/comedy/dread_drone.flac",
+   "gain": -12,
+   "bus": "amb",
+   "note": "under the whisper",
+   "dur": 1.7889999999999997,
+   "fade_out": 0.3
+  },
+  {
+   "t": 4.939,
+   "file": "AUDIO/sound_effects/reactions/dramatic_hit.flac",
+   "gain": -7,
+   "bus": "sfx",
+   "note": "TITLE"
+  },
+  {
+   "t": 6.589,
+   "file": "AUDIO/sound_effects/comedy/forest_night.flac",
+   "gain": -10,
+   "bus": "amb",
+   "note": "forest bed",
+   "loop": true,
+   "dur": 59.22,
+   "fade_out": 1.0
+  },
+  {
+   "t": 6.589,
+   "file": "AUDIO/ambience/wind.flac",
+   "gain": -20,
+   "bus": "amb",
+   "note": "high wind in the canopy",
+   "loop": true,
+   "dur": 59.22,
+   "fade_out": 1.0
+  },
+  {
+   "t": 6.889,
+   "file": "AUDIO/sound_effects/comedy/leaf_steps.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "group walking on leaves"
+  },
+  {
+   "t": 10.889,
+   "file": "AUDIO/sound_effects/comedy/leaf_steps.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "group walking on leaves"
+  },
+  {
+   "t": 14.889,
+   "file": "AUDIO/sound_effects/comedy/leaf_steps.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "group walking on leaves"
+  },
+  {
+   "t": 30.308,
+   "file": "AUDIO/sound_effects/comedy/leaf_steps.flac",
+   "gain": -19,
+   "bus": "sfx",
+   "note": "walking to the fork"
+  },
+  {
+   "t": 41.18,
+   "file": "AUDIO/sound_effects/comedy/creak_long.flac",
+   "gain": -21,
+   "bus": "sfx",
+   "note": "old sign swinging"
+  },
+  {
+   "t": 47.023,
+   "file": "AUDIO/sound_effects/comedy/leaf_steps.flac",
+   "gain": -19,
+   "bus": "sfx",
+   "note": "stepping"
+  },
+  {
+   "t": 50.327,
+   "file": "AUDIO/sound_effects/comedy/bone_clicks.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "skull kicked"
+  },
+  {
+   "t": 55.711,
+   "file": "AUDIO/sound_effects/comedy/subliminal_hit.flac",
+   "gain": -19,
+   "bus": "sfx",
+   "note": "figure in the trees (nobody sees it)"
+  },
+  {
+   "t": 58.226,
+   "file": "AUDIO/sound_effects/comedy/branch_snap.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "something in the trees"
+  },
+  {
+   "t": 62.409,
+   "file": "AUDIO/sound_effects/movement/whoosh_short.flac",
+   "gain": -21,
+   "bus": "sfx",
+   "note": "wind gust"
+  },
+  {
+   "t": 63.709,
+   "file": "AUDIO/sound_effects/comedy/heavy_breath.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "gasp"
+  },
+  {
+   "t": 65.209,
+   "file": "AUDIO/sound_effects/environment/door_creak_slam.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "front door"
+  },
+  {
+   "t": 65.809,
+   "file": "AUDIO/ambience/room_tone.flac",
+   "gain": -8,
+   "bus": "amb",
+   "note": "house air",
+   "loop": true,
+   "dur": 46.757999999999996
+  },
+  {
+   "t": 65.809,
+   "file": "AUDIO/ambience/wind.flac",
+   "gain": -26,
+   "bus": "amb",
+   "note": "wind outside",
+   "loop": true,
+   "dur": 57.78200000000001
+  },
+  {
+   "t": 67.809,
+   "file": "AUDIO/sound_effects/comedy/house_creak.flac",
+   "gain": -19,
+   "bus": "sfx",
+   "note": "house settling"
+  },
+  {
+   "t": 75.309,
+   "file": "AUDIO/sound_effects/comedy/house_creak.flac",
+   "gain": -19,
+   "bus": "sfx",
+   "note": "house settling"
+  },
+  {
+   "t": 81.744,
+   "file": "AUDIO/sound_effects/comedy/glass_tap.flac",
+   "gain": -19,
+   "bus": "sfx",
+   "note": "plates, set for five"
+  },
+  {
+   "t": 82.809,
+   "file": "AUDIO/sound_effects/comedy/house_creak.flac",
+   "gain": -19,
+   "bus": "sfx",
+   "note": "house settling"
+  },
+  {
+   "t": 89.045,
+   "file": "AUDIO/sound_effects/comedy/subliminal_hit.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "WELCOME BACK"
+  },
+  {
+   "t": 89.445,
+   "file": "AUDIO/sound_effects/bio/heartbeat_muffled.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "dread"
+  },
+  {
+   "t": 90.309,
+   "file": "AUDIO/sound_effects/comedy/house_creak.flac",
+   "gain": -19,
+   "bus": "sfx",
+   "note": "house settling"
+  },
+  {
+   "t": 91.5,
+   "file": "AUDIO/sound_effects/comedy/door_knock.flac",
+   "gain": -7,
+   "bus": "sfx",
+   "note": "KNOCK 1"
+  },
+  {
+   "t": 92.1,
+   "file": "AUDIO/sound_effects/comedy/door_knock.flac",
+   "gain": -8,
+   "bus": "sfx",
+   "note": "KNOCK 2"
+  },
+  {
+   "t": 92.7,
+   "file": "AUDIO/sound_effects/comedy/door_knock.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "KNOCK 3"
+  },
+  {
+   "t": 93.4,
+   "file": "AUDIO/sound_effects/comedy/mimic_click.flac",
+   "gain": -23,
+   "bus": "sfx",
+   "note": "wet clicking outside"
+  },
+  {
+   "t": 101.335,
+   "file": "AUDIO/sound_effects/comedy/heavy_breath.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "held breath"
+  },
+  {
+   "t": 109.867,
+   "file": "AUDIO/sound_effects/comedy/knob_turn.flac",
+   "gain": -7,
+   "bus": "sfx",
+   "note": "the handle turns"
+  },
+  {
+   "t": 111.167,
+   "file": "AUDIO/sound_effects/comedy/power_cut.flac",
+   "gain": -8,
+   "bus": "sfx",
+   "note": "lights out"
+  },
+  {
+   "t": 111.467,
+   "file": "AUDIO/sound_effects/comedy/heavy_breath.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "panic in the dark"
+  },
+  {
+   "t": 111.767,
+   "file": "AUDIO/sound_effects/comedy/monster_step.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "something inside"
+  },
+  {
+   "t": 112.537,
+   "file": "AUDIO/sound_effects/comedy/jumpscare.flac",
+   "gain": -2,
+   "bus": "sfx",
+   "note": "JUMPSCARE 1: the Mimic in the hallway"
+  },
+  {
+   "t": 113.067,
+   "file": "AUDIO/sound_effects/comedy/tinnitus.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "ringing"
+  },
+  {
+   "t": 114.167,
+   "file": "AUDIO/sound_effects/comedy/mimic_click.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "its throat"
+  },
+  {
+   "t": 116.411,
+   "file": "AUDIO/sound_effects/comedy/jumpscare.flac",
+   "gain": -1,
+   "bus": "sfx",
+   "note": "JUMPSCARE 2: it rushes"
+  },
+  {
+   "t": 116.841,
+   "file": "AUDIO/sound_effects/comedy/zombie_groan.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "it screams"
+  },
+  {
+   "t": 122.108,
+   "file": "AUDIO/sound_effects/environment/door_creak_slam.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "side door"
+  },
+  {
+   "t": 123.591,
+   "file": "AUDIO/sound_effects/comedy/chase_run.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "running",
+   "loop": true,
+   "dur": 4.899999999999989
+  },
+  {
+   "t": 123.591,
+   "file": "AUDIO/ambience/wind.flac",
+   "gain": -16,
+   "bus": "amb",
+   "note": "forest wind (chase)",
+   "loop": true,
+   "dur": 5.199999999999989
+  },
+  {
+   "t": 123.791,
+   "file": "AUDIO/sound_effects/comedy/heavy_breath.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "running breath"
+  },
+  {
+   "t": 124.591,
+   "file": "AUDIO/sound_effects/comedy/branch_snap.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "branches whipping"
+  },
+  {
+   "t": 125.591,
+   "file": "AUDIO/sound_effects/comedy/monster_step.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "it is behind you"
+  },
+  {
+   "t": 126.191,
+   "file": "AUDIO/sound_effects/comedy/branch_snap.flac",
+   "gain": -16,
+   "bus": "sfx",
+   "note": "branches whipping"
+  },
+  {
+   "t": 127.791,
+   "file": "AUDIO/sound_effects/comedy/branch_snap.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "branches whipping"
+  },
+  {
+   "t": 128.491,
+   "file": "AUDIO/sound_effects/movement/whoosh_long.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "burst out of the trees"
+  },
+  {
+   "t": 128.791,
+   "file": "AUDIO/ambience/nature.flac",
+   "gain": -18,
+   "bus": "amb",
+   "note": "open air, first birds",
+   "loop": true,
+   "dur": 8.60499999999999,
+   "fade_out": 0.8
+  },
+  {
+   "t": 129.091,
+   "file": "AUDIO/sound_effects/comedy/heavy_breath.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "catching breath"
+  },
+  {
+   "t": 137.396,
+   "file": "AUDIO/sound_effects/comedy/subliminal_hit.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "GROUP: 5?"
+  },
+  {
+   "t": 137.396,
+   "file": "AUDIO/sound_effects/comedy/dread_drone.flac",
+   "gain": -10,
+   "bus": "amb",
+   "note": "something is wrong",
+   "loop": true,
+   "dur": 13.734000000000009
+  },
+  {
+   "t": 140.688,
+   "file": "AUDIO/sound_effects/comedy/tinnitus.flac",
+   "gain": -19,
+   "bus": "sfx",
+   "note": "shadow points the wrong way"
+  },
+  {
+   "t": 146.282,
+   "file": "AUDIO/sound_effects/comedy/jumpscare.flac",
+   "gain": -2,
+   "bus": "sfx",
+   "note": "JUMPSCARE 3: Ken smiles"
+  },
+  {
+   "t": 147.662,
+   "file": "AUDIO/sound_effects/comedy/whispers.flac",
+   "gain": -21,
+   "bus": "sfx",
+   "note": "whisper",
+   "dur": 1.6,
+   "fade_out": 0.4
+  }
+ ]
+}

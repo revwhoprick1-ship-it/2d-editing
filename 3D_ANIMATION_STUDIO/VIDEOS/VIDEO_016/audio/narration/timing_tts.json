@@ -1,0 +1,2295 @@
+{
+ "voice": "qwen3-tts",
+ "sample_rate": 24000,
+ "lines": [
+  {
+   "id": "X01",
+   "who": "X",
+   "text": "Ken... why did you bring them here?",
+   "start": 0.0,
+   "end": 1.589,
+   "delivery": "distorted whisper, evil",
+   "speed": 1.1
+  },
+  {
+   "id": "K01",
+   "who": "K",
+   "text": "Come on, guys! This is supposed to be the most dangerous forest in the country!",
+   "start": 2.389,
+   "end": 5.949,
+   "delivery": "excited, energetic, loud",
+   "speed": 1.1
+  },
+  {
+   "id": "L01",
+   "who": "L",
+   "text": "Great. Exactly where I wanted to spend my weekend. In a forest where people mysteriously disappear.",
+   "start": 6.149,
+   "end": 11.297,
+   "delivery": "sarcastic, dry, deadpan",
+   "speed": 1.1
+  },
+  {
+   "id": "B01",
+   "who": "B",
+   "text": "Actually, there have been reports of missing hikers here for decades.",
+   "start": 11.497,
+   "end": 14.463,
+   "delivery": "fast, nerdy, matter-of-fact",
+   "speed": 1.1
+  },
+  {
+   "id": "J01",
+   "who": "J",
+   "text": "Then why are we here?",
+   "start": 14.663,
+   "end": 15.657,
+   "delivery": "deep, flat, annoyed",
+   "speed": 1.1
+  },
+  {
+   "id": "K02",
+   "who": "K",
+   "text": "Because it's an adventure!",
+   "start": 15.857,
+   "end": 16.941,
+   "delivery": "excited, loud",
+   "speed": 1.1
+  },
+  {
+   "id": "M01",
+   "who": "M",
+   "text": "Something doesn't feel right. Have you noticed that we haven't seen a single animal?",
+   "start": 17.341,
+   "end": 21.234,
+   "delivery": "calm, observant, quiet",
+   "speed": 1.1
+  },
+  {
+   "id": "B02",
+   "who": "B",
+   "text": "That's... actually unusual.",
+   "start": 22.234,
+   "end": 24.108,
+   "delivery": "uneasy, hesitant",
+   "speed": 1.1
+  },
+  {
+   "id": "K03",
+   "who": "K",
+   "text": "Well, obviously we're taking this one.",
+   "start": 24.708,
+   "end": 26.872,
+   "delivery": "cocky, excited",
+   "speed": 1.1
+  },
+  {
+   "id": "L02",
+   "who": "L",
+   "text": "Can we please have one camping trip where we don't almost die?",
+   "start": 27.072,
+   "end": 30.081,
+   "delivery": "sarcastic, exasperated",
+   "speed": 1.1
+  },
+  {
+   "id": "J02",
+   "who": "J",
+   "text": "Ken, seriously. Let's take the other path.",
+   "start": 30.281,
+   "end": 32.74,
+   "delivery": "firm, serious",
+   "speed": 1.1
+  },
+  {
+   "id": "K04",
+   "who": "K",
+   "text": "Relax! It's just a sign.",
+   "start": 32.94,
+   "end": 34.68,
+   "delivery": "dismissive, laughing",
+   "speed": 1.1
+  },
+  {
+   "id": "B03",
+   "who": "B",
+   "text": "Wait... these scratches look like someone was desperately trying to remove something.",
+   "start": 35.18,
+   "end": 38.712,
+   "delivery": "nervous, fast",
+   "speed": 1.1
+  },
+  {
+   "id": "M02",
+   "who": "M",
+   "text": "Or trying to warn us.",
+   "start": 38.912,
+   "end": 40.023,
+   "delivery": "quiet, serious",
+   "speed": 1.1
+  },
+  {
+   "id": "K05",
+   "who": "K",
+   "text": "Whoa, free Halloween decorations!",
+   "start": 40.623,
+   "end": 43.127,
+   "delivery": "excited, joking",
+   "speed": 1.1
+  },
+  {
+   "id": "L03",
+   "who": "L",
+   "text": "That's a human skull, you idiot!",
+   "start": 43.327,
+   "end": 45.188,
+   "delivery": "shouting, cracking voice",
+   "speed": 1.1
+  },
+  {
+   "id": "B04",
+   "who": "B",
+   "text": "These aren't animal remains. They're human.",
+   "start": 45.388,
+   "end": 47.611,
+   "delivery": "shaky, scared",
+   "speed": 1.1
+  },
+  {
+   "id": "J03",
+   "who": "J",
+   "text": "Everyone stay together.",
+   "start": 47.811,
+   "end": 49.026,
+   "delivery": "deep, protective, firm",
+   "speed": 1.1
+  },
+  {
+   "id": "M03",
+   "who": "M",
+   "text": "Guys... I think something is following us.",
+   "start": 49.826,
+   "end": 52.109,
+   "delivery": "whisper, tense",
+   "speed": 1.1
+  },
+  {
+   "id": "X02",
+   "who": "X",
+   "text": "Help...",
+   "start": 52.709,
+   "end": 53.166,
+   "delivery": "weak, distant, desperate",
+   "speed": 1.1
+  },
+  {
+   "id": "K06",
+   "who": "K",
+   "text": "Okay... that wasn't me.",
+   "start": 53.966,
+   "end": 55.009,
+   "delivery": "scared, quiet, nervous laugh",
+   "speed": 1.1
+  },
+  {
+   "id": "K07",
+   "who": "K",
+   "text": "Perfect! Shelter!",
+   "start": 55.809,
+   "end": 56.661,
+   "delivery": "relieved, excited",
+   "speed": 1.1
+  },
+  {
+   "id": "L04",
+   "who": "L",
+   "text": "Of course. Because walking into a creepy abandoned house in a demonic forest is obviously safer.",
+   "start": 56.861,
+   "end": 61.867,
+   "delivery": "sarcastic, nervous",
+   "speed": 1.1
+  },
+  {
+   "id": "J04",
+   "who": "J",
+   "text": "We can't stay outside all night.",
+   "start": 62.067,
+   "end": 63.596,
+   "delivery": "firm, tired",
+   "speed": 1.1
+  },
+  {
+   "id": "M04",
+   "who": "M",
+   "text": "We go in together. Nobody splits up. If anything feels wrong, we leave. Immediately.",
+   "start": 63.796,
+   "end": 69.644,
+   "delivery": "calm, clear, leader",
+   "speed": 1.1
+  },
+  {
+   "id": "B05",
+   "who": "B",
+   "text": "Guys...",
+   "start": 70.244,
+   "end": 70.937,
+   "delivery": "uneasy",
+   "speed": 1.1
+  },
+  {
+   "id": "J05",
+   "who": "J",
+   "text": "What?",
+   "start": 71.137,
+   "end": 71.502,
+   "delivery": "sharp",
+   "speed": 1.1
+  },
+  {
+   "id": "B06",
+   "who": "B",
+   "text": "Someone set this table. For five.",
+   "start": 71.702,
+   "end": 73.595,
+   "delivery": "scared whisper",
+   "speed": 1.1
+  },
+  {
+   "id": "K08",
+   "who": "K",
+   "text": "Maybe we have a ghost butler.",
+   "start": 73.895,
+   "end": 75.445,
+   "delivery": "joking, nervous laugh",
+   "speed": 1.1
+  },
+  {
+   "id": "L05",
+   "who": "L",
+   "text": "Please. Stop. Talking.",
+   "start": 75.645,
+   "end": 77.3,
+   "delivery": "annoyed, scared",
+   "speed": 1.1
+  },
+  {
+   "id": "X03",
+   "who": "X",
+   "text": "Guys? Open the door.",
+   "start": 78.1,
+   "end": 79.746,
+   "delivery": "calm, muffled, from outside",
+   "speed": 1.1
+  },
+  {
+   "id": "M05",
+   "who": "M",
+   "text": "Nobody open that door.",
+   "start": 80.346,
+   "end": 81.562,
+   "delivery": "urgent whisper",
+   "speed": 1.1
+  },
+  {
+   "id": "K09",
+   "who": "K",
+   "text": "Wait... if you're in here... then who's outside?",
+   "start": 81.862,
+   "end": 85.035,
+   "delivery": "scared, confused",
+   "speed": 1.1
+  },
+  {
+   "id": "X04",
+   "who": "X",
+   "text": "Guys, please. It's cold.",
+   "start": 85.635,
+   "end": 87.449,
+   "delivery": "pleading, muffled, from outside",
+   "speed": 1.1
+  },
+  {
+   "id": "J06",
+   "who": "J",
+   "text": "That's not me.",
+   "start": 88.049,
+   "end": 88.936,
+   "delivery": "deep, scared, quiet",
+   "speed": 1.1
+  },
+  {
+   "id": "B07",
+   "who": "B",
+   "text": "Whatever is out there... it's copying our voices.",
+   "start": 89.236,
+   "end": 91.395,
+   "delivery": "panicked, shaky",
+   "speed": 1.1
+  },
+  {
+   "id": "L06",
+   "who": "L",
+   "text": "Okay. New plan. We leave. Right now.",
+   "start": 91.595,
+   "end": 94.167,
+   "delivery": "panicked, voice cracking",
+   "speed": 1.1
+  },
+  {
+   "id": "X05",
+   "who": "X",
+   "text": "Why are you all leaving?",
+   "start": 94.967,
+   "end": 96.05,
+   "delivery": "calm, wrong, distorted",
+   "speed": 1.1
+  },
+  {
+   "id": "K10",
+   "who": "K",
+   "text": "What the hell is that?!",
+   "start": 96.45,
+   "end": 97.541,
+   "delivery": "screaming, terrified",
+   "speed": 1.1
+  },
+  {
+   "id": "J07",
+   "who": "J",
+   "text": "Run! Run!",
+   "start": 97.741,
+   "end": 99.521,
+   "delivery": "shouting, desperate",
+   "speed": 1.1
+  },
+  {
+   "id": "L07",
+   "who": "L",
+   "text": "I told you! I literally told you!",
+   "start": 99.621,
+   "end": 101.546,
+   "delivery": "screaming, panicked",
+   "speed": 1.1
+  },
+  {
+   "id": "B08",
+   "who": "B",
+   "text": "It's coming!",
+   "start": 101.646,
+   "end": 102.208,
+   "delivery": "screaming, terrified",
+   "speed": 1.1
+  },
+  {
+   "id": "M06",
+   "who": "M",
+   "text": "There! The door!",
+   "start": 102.408,
+   "end": 103.491,
+   "delivery": "shouting, urgent",
+   "speed": 1.1
+  },
+  {
+   "id": "L08",
+   "who": "L",
+   "text": "Okay... never again. Never again.",
+   "start": 104.291,
+   "end": 106.708,
+   "delivery": "exhausted, out of breath",
+   "speed": 1.1
+  },
+  {
+   "id": "J08",
+   "who": "J",
+   "text": "Is everyone here?",
+   "start": 107.008,
+   "end": 107.968,
+   "delivery": "out of breath, protective",
+   "speed": 1.1
+  },
+  {
+   "id": "B09",
+   "who": "B",
+   "text": "One... two... three... four... five.",
+   "start": 108.168,
+   "end": 110.896,
+   "delivery": "counting, out of breath",
+   "speed": 1.1
+  },
+  {
+   "id": "K11",
+   "who": "K",
+   "text": "Guys... that was actually kind of fun.",
+   "start": 111.496,
+   "end": 113.588,
+   "delivery": "laughing, excited",
+   "speed": 1.1
+  },
+  {
+   "id": "M07",
+   "who": "M",
+   "text": "Guys...",
+   "start": 114.388,
+   "end": 114.921,
+   "delivery": "quiet, scared",
+   "speed": 1.1
+  },
+  {
+   "id": "B10",
+   "who": "B",
+   "text": "What?",
+   "start": 115.221,
+   "end": 115.584,
+   "delivery": "nervous",
+   "speed": 1.1
+  },
+  {
+   "id": "M08",
+   "who": "M",
+   "text": "Don't move.",
+   "start": 115.884,
+   "end": 116.565,
+   "delivery": "whisper, terrified",
+   "speed": 1.1
+  },
+  {
+   "id": "K12",
+   "who": "K",
+   "text": "You forgot something.",
+   "start": 117.565,
+   "end": 118.562,
+   "delivery": "calm, wrong, smiling",
+   "speed": 1.1
+  },
+  {
+   "id": "X06",
+   "who": "X",
+   "text": "One of us is still inside.",
+   "start": 119.362,
+   "end": 120.831,
+   "delivery": "whisper, evil",
+   "speed": 1.1
+  }
+ ],
+ "words": [
+  {
+   "line": "X01",
+   "text": "Ken...",
+   "start": 0.0,
+   "end": 0.24
+  },
+  {
+   "line": "X01",
+   "text": "why",
+   "start": 0.4,
+   "end": 0.48
+  },
+  {
+   "line": "X01",
+   "text": "did",
+   "start": 0.48,
+   "end": 0.62
+  },
+  {
+   "line": "X01",
+   "text": "you",
+   "start": 0.62,
+   "end": 0.74
+  },
+  {
+   "line": "X01",
+   "text": "bring",
+   "start": 0.74,
+   "end": 0.96
+  },
+  {
+   "line": "X01",
+   "text": "them",
+   "start": 0.96,
+   "end": 1.16
+  },
+  {
+   "line": "X01",
+   "text": "here?",
+   "start": 1.16,
+   "end": 1.42
+  },
+  {
+   "line": "K01",
+   "text": "Come",
+   "start": 2.389,
+   "end": 2.569
+  },
+  {
+   "line": "K01",
+   "text": "on,",
+   "start": 2.569,
+   "end": 2.809
+  },
+  {
+   "line": "K01",
+   "text": "guys!",
+   "start": 2.889,
+   "end": 3.109
+  },
+  {
+   "line": "K01",
+   "text": "This",
+   "start": 3.449,
+   "end": 3.569
+  },
+  {
+   "line": "K01",
+   "text": "is",
+   "start": 3.569,
+   "end": 3.669
+  },
+  {
+   "line": "K01",
+   "text": "supposed",
+   "start": 3.669,
+   "end": 3.909
+  },
+  {
+   "line": "K01",
+   "text": "to",
+   "start": 3.909,
+   "end": 4.049
+  },
+  {
+   "line": "K01",
+   "text": "be",
+   "start": 4.049,
+   "end": 4.149
+  },
+  {
+   "line": "K01",
+   "text": "the",
+   "start": 4.149,
+   "end": 4.229
+  },
+  {
+   "line": "K01",
+   "text": "most",
+   "start": 4.229,
+   "end": 4.369
+  },
+  {
+   "line": "K01",
+   "text": "dangerous",
+   "start": 4.369,
+   "end": 4.829
+  },
+  {
+   "line": "K01",
+   "text": "forest",
+   "start": 4.829,
+   "end": 5.169
+  },
+  {
+   "line": "K01",
+   "text": "in",
+   "start": 5.169,
+   "end": 5.369
+  },
+  {
+   "line": "K01",
+   "text": "the",
+   "start": 5.369,
+   "end": 5.489
+  },
+  {
+   "line": "K01",
+   "text": "country!",
+   "start": 5.489,
+   "end": 5.689
+  },
+  {
+   "line": "L01",
+   "text": "Great.",
+   "start": 6.149,
+   "end": 6.469
+  },
+  {
+   "line": "L01",
+   "text": "Exactly",
+   "start": 6.889,
+   "end": 7.349
+  },
+  {
+   "line": "L01",
+   "text": "where",
+   "start": 7.349,
+   "end": 7.669
+  },
+  {
+   "line": "L01",
+   "text": "I",
+   "start": 7.669,
+   "end": 7.789
+  },
+  {
+   "line": "L01",
+   "text": "wanted",
+   "start": 7.789,
+   "end": 7.969
+  },
+  {
+   "line": "L01",
+   "text": "to",
+   "start": 7.969,
+   "end": 8.149
+  },
+  {
+   "line": "L01",
+   "text": "spend",
+   "start": 8.149,
+   "end": 8.309
+  },
+  {
+   "line": "L01",
+   "text": "my",
+   "start": 8.309,
+   "end": 8.469
+  },
+  {
+   "line": "L01",
+   "text": "weekend.",
+   "start": 8.469,
+   "end": 8.769
+  },
+  {
+   "line": "L01",
+   "text": "In",
+   "start": 8.769,
+   "end": 9.029
+  },
+  {
+   "line": "L01",
+   "text": "a",
+   "start": 9.029,
+   "end": 9.169
+  },
+  {
+   "line": "L01",
+   "text": "forest",
+   "start": 9.169,
+   "end": 9.409
+  },
+  {
+   "line": "L01",
+   "text": "where",
+   "start": 9.409,
+   "end": 9.689
+  },
+  {
+   "line": "L01",
+   "text": "people",
+   "start": 9.689,
+   "end": 9.929
+  },
+  {
+   "line": "L01",
+   "text": "mysteriously",
+   "start": 9.929,
+   "end": 10.549
+  },
+  {
+   "line": "L01",
+   "text": "disappear.",
+   "start": 10.549,
+   "end": 11.149
+  },
+  {
+   "line": "B01",
+   "text": "Actually,",
+   "start": 11.497,
+   "end": 11.937
+  },
+  {
+   "line": "B01",
+   "text": "there",
+   "start": 12.037,
+   "end": 12.117
+  },
+  {
+   "line": "B01",
+   "text": "have",
+   "start": 12.117,
+   "end": 12.217
+  },
+  {
+   "line": "B01",
+   "text": "been",
+   "start": 12.217,
+   "end": 12.357
+  },
+  {
+   "line": "B01",
+   "text": "reports",
+   "start": 12.357,
+   "end": 12.697
+  },
+  {
+   "line": "B01",
+   "text": "of",
+   "start": 12.697,
+   "end": 12.877
+  },
+  {
+   "line": "B01",
+   "text": "missing",
+   "start": 12.877,
+   "end": 13.117
+  },
+  {
+   "line": "B01",
+   "text": "hikers",
+   "start": 13.117,
+   "end": 13.397
+  },
+  {
+   "line": "B01",
+   "text": "here",
+   "start": 13.397,
+   "end": 13.657
+  },
+  {
+   "line": "B01",
+   "text": "for",
+   "start": 13.657,
+   "end": 13.837
+  },
+  {
+   "line": "B01",
+   "text": "decades.",
+   "start": 13.837,
+   "end": 14.117
+  },
+  {
+   "line": "J01",
+   "text": "Then",
+   "start": 14.663,
+   "end": 14.823
+  },
+  {
+   "line": "J01",
+   "text": "why",
+   "start": 14.823,
+   "end": 15.023
+  },
+  {
+   "line": "J01",
+   "text": "are",
+   "start": 15.023,
+   "end": 15.163
+  },
+  {
+   "line": "J01",
+   "text": "we",
+   "start": 15.163,
+   "end": 15.263
+  },
+  {
+   "line": "J01",
+   "text": "here?",
+   "start": 15.263,
+   "end": 15.463
+  },
+  {
+   "line": "K02",
+   "text": "Because",
+   "start": 15.857,
+   "end": 16.097
+  },
+  {
+   "line": "K02",
+   "text": "it's",
+   "start": 16.097,
+   "end": 16.297
+  },
+  {
+   "line": "K02",
+   "text": "an",
+   "start": 16.297,
+   "end": 16.357
+  },
+  {
+   "line": "K02",
+   "text": "adventure!",
+   "start": 16.357,
+   "end": 16.697
+  },
+  {
+   "line": "M01",
+   "text": "Something",
+   "start": 17.341,
+   "end": 17.601
+  },
+  {
+   "line": "M01",
+   "text": "doesn't",
+   "start": 17.601,
+   "end": 17.921
+  },
+  {
+   "line": "M01",
+   "text": "feel",
+   "start": 17.921,
+   "end": 18.061
+  },
+  {
+   "line": "M01",
+   "text": "right.",
+   "start": 18.061,
+   "end": 18.381
+  },
+  {
+   "line": "M01",
+   "text": "Have",
+   "start": 19.041,
+   "end": 19.141
+  },
+  {
+   "line": "M01",
+   "text": "you",
+   "start": 19.141,
+   "end": 19.261
+  },
+  {
+   "line": "M01",
+   "text": "noticed",
+   "start": 19.261,
+   "end": 19.481
+  },
+  {
+   "line": "M01",
+   "text": "that",
+   "start": 19.481,
+   "end": 19.701
+  },
+  {
+   "line": "M01",
+   "text": "we",
+   "start": 19.701,
+   "end": 19.821
+  },
+  {
+   "line": "M01",
+   "text": "haven't",
+   "start": 19.821,
+   "end": 20.181
+  },
+  {
+   "line": "M01",
+   "text": "seen",
+   "start": 20.181,
+   "end": 20.341
+  },
+  {
+   "line": "M01",
+   "text": "a",
+   "start": 20.341,
+   "end": 20.521
+  },
+  {
+   "line": "M01",
+   "text": "single",
+   "start": 20.521,
+   "end": 20.761
+  },
+  {
+   "line": "M01",
+   "text": "animal?",
+   "start": 20.761,
+   "end": 21.081
+  },
+  {
+   "line": "B02",
+   "text": "That's...",
+   "start": 22.234,
+   "end": 22.714
+  },
+  {
+   "line": "B02",
+   "text": "actually",
+   "start": 22.714,
+   "end": 23.294
+  },
+  {
+   "line": "B02",
+   "text": "unusual.",
+   "start": 23.294,
+   "end": 23.774
+  },
+  {
+   "line": "K03",
+   "text": "Well,",
+   "start": 24.708,
+   "end": 25.008
+  },
+  {
+   "line": "K03",
+   "text": "obviously",
+   "start": 25.468,
+   "end": 25.788
+  },
+  {
+   "line": "K03",
+   "text": "we're",
+   "start": 25.788,
+   "end": 26.188
+  },
+  {
+   "line": "K03",
+   "text": "taking",
+   "start": 26.188,
+   "end": 26.348
+  },
+  {
+   "line": "K03",
+   "text": "this",
+   "start": 26.348,
+   "end": 26.628
+  },
+  {
+   "line": "K03",
+   "text": "one.",
+   "start": 26.628,
+   "end": 26.848
+  },
+  {
+   "line": "L02",
+   "text": "Can",
+   "start": 27.072,
+   "end": 27.332
+  },
+  {
+   "line": "L02",
+   "text": "we",
+   "start": 27.332,
+   "end": 27.492
+  },
+  {
+   "line": "L02",
+   "text": "please",
+   "start": 27.492,
+   "end": 27.672
+  },
+  {
+   "line": "L02",
+   "text": "have",
+   "start": 27.672,
+   "end": 27.892
+  },
+  {
+   "line": "L02",
+   "text": "one",
+   "start": 27.892,
+   "end": 28.172
+  },
+  {
+   "line": "L02",
+   "text": "camping",
+   "start": 28.172,
+   "end": 28.512
+  },
+  {
+   "line": "L02",
+   "text": "trip",
+   "start": 28.512,
+   "end": 28.772
+  },
+  {
+   "line": "L02",
+   "text": "where",
+   "start": 28.772,
+   "end": 28.972
+  },
+  {
+   "line": "L02",
+   "text": "we",
+   "start": 28.972,
+   "end": 29.112
+  },
+  {
+   "line": "L02",
+   "text": "don't",
+   "start": 29.112,
+   "end": 29.412
+  },
+  {
+   "line": "L02",
+   "text": "almost",
+   "start": 29.412,
+   "end": 29.632
+  },
+  {
+   "line": "L02",
+   "text": "die?",
+   "start": 29.632,
+   "end": 29.952
+  },
+  {
+   "line": "J02",
+   "text": "Ken,",
+   "start": 30.281,
+   "end": 30.521
+  },
+  {
+   "line": "J02",
+   "text": "seriously.",
+   "start": 31.141,
+   "end": 31.161
+  },
+  {
+   "line": "J02",
+   "text": "Let's",
+   "start": 31.681,
+   "end": 31.921
+  },
+  {
+   "line": "J02",
+   "text": "take",
+   "start": 31.921,
+   "end": 32.041
+  },
+  {
+   "line": "J02",
+   "text": "the",
+   "start": 32.041,
+   "end": 32.201
+  },
+  {
+   "line": "J02",
+   "text": "other",
+   "start": 32.201,
+   "end": 32.361
+  },
+  {
+   "line": "J02",
+   "text": "path.",
+   "start": 32.361,
+   "end": 32.601
+  },
+  {
+   "line": "K04",
+   "text": "Relax!",
+   "start": 32.94,
+   "end": 33.34
+  },
+  {
+   "line": "K04",
+   "text": "It's",
+   "start": 33.82,
+   "end": 33.96
+  },
+  {
+   "line": "K04",
+   "text": "just",
+   "start": 33.96,
+   "end": 34.12
+  },
+  {
+   "line": "K04",
+   "text": "a",
+   "start": 34.12,
+   "end": 34.3
+  },
+  {
+   "line": "K04",
+   "text": "sign.",
+   "start": 34.3,
+   "end": 34.54
+  },
+  {
+   "line": "B03",
+   "text": "Wait...",
+   "start": 35.18,
+   "end": 35.38
+  },
+  {
+   "line": "B03",
+   "text": "these",
+   "start": 35.82,
+   "end": 35.98
+  },
+  {
+   "line": "B03",
+   "text": "scratches",
+   "start": 35.98,
+   "end": 36.32
+  },
+  {
+   "line": "B03",
+   "text": "look",
+   "start": 36.32,
+   "end": 36.56
+  },
+  {
+   "line": "B03",
+   "text": "like",
+   "start": 36.56,
+   "end": 36.72
+  },
+  {
+   "line": "B03",
+   "text": "someone",
+   "start": 36.72,
+   "end": 36.96
+  },
+  {
+   "line": "B03",
+   "text": "was",
+   "start": 36.96,
+   "end": 37.16
+  },
+  {
+   "line": "B03",
+   "text": "desperately",
+   "start": 37.16,
+   "end": 37.5
+  },
+  {
+   "line": "B03",
+   "text": "trying",
+   "start": 37.5,
+   "end": 37.84
+  },
+  {
+   "line": "B03",
+   "text": "to",
+   "start": 37.84,
+   "end": 37.98
+  },
+  {
+   "line": "B03",
+   "text": "remove",
+   "start": 37.98,
+   "end": 38.2
+  },
+  {
+   "line": "B03",
+   "text": "something.",
+   "start": 38.2,
+   "end": 38.52
+  },
+  {
+   "line": "M02",
+   "text": "Or",
+   "start": 38.912,
+   "end": 39.052
+  },
+  {
+   "line": "M02",
+   "text": "trying",
+   "start": 39.052,
+   "end": 39.292
+  },
+  {
+   "line": "M02",
+   "text": "to",
+   "start": 39.292,
+   "end": 39.432
+  },
+  {
+   "line": "M02",
+   "text": "warn",
+   "start": 39.432,
+   "end": 39.632
+  },
+  {
+   "line": "M02",
+   "text": "us.",
+   "start": 39.632,
+   "end": 39.832
+  },
+  {
+   "line": "K05",
+   "text": "Whoa,",
+   "start": 40.623,
+   "end": 41.223
+  },
+  {
+   "line": "K05",
+   "text": "free",
+   "start": 41.403,
+   "end": 41.823
+  },
+  {
+   "line": "K05",
+   "text": "Halloween",
+   "start": 41.823,
+   "end": 42.243
+  },
+  {
+   "line": "K05",
+   "text": "decorations!",
+   "start": 42.243,
+   "end": 42.703
+  },
+  {
+   "line": "L03",
+   "text": "That's",
+   "start": 43.327,
+   "end": 43.827
+  },
+  {
+   "line": "L03",
+   "text": "a",
+   "start": 43.827,
+   "end": 43.947
+  },
+  {
+   "line": "L03",
+   "text": "human",
+   "start": 43.947,
+   "end": 44.167
+  },
+  {
+   "line": "L03",
+   "text": "skull,",
+   "start": 44.167,
+   "end": 44.587
+  },
+  {
+   "line": "L03",
+   "text": "you",
+   "start": 44.787,
+   "end": 44.827
+  },
+  {
+   "line": "L03",
+   "text": "idiot!",
+   "start": 44.827,
+   "end": 44.987
+  },
+  {
+   "line": "B04",
+   "text": "These",
+   "start": 45.388,
+   "end": 45.548
+  },
+  {
+   "line": "B04",
+   "text": "aren't",
+   "start": 45.548,
+   "end": 46.128
+  },
+  {
+   "line": "B04",
+   "text": "animal",
+   "start": 46.128,
+   "end": 46.128
+  },
+  {
+   "line": "B04",
+   "text": "remains.",
+   "start": 46.128,
+   "end": 46.528
+  },
+  {
+   "line": "B04",
+   "text": "They're",
+   "start": 47.048,
+   "end": 47.208
+  },
+  {
+   "line": "B04",
+   "text": "human.",
+   "start": 47.208,
+   "end": 47.428
+  },
+  {
+   "line": "J03",
+   "text": "Everyone",
+   "start": 47.811,
+   "end": 48.191
+  },
+  {
+   "line": "J03",
+   "text": "stay",
+   "start": 48.191,
+   "end": 48.491
+  },
+  {
+   "line": "J03",
+   "text": "together.",
+   "start": 48.491,
+   "end": 48.791
+  },
+  {
+   "line": "M03",
+   "text": "Guys...",
+   "start": 49.826,
+   "end": 50.126
+  },
+  {
+   "line": "M03",
+   "text": "I",
+   "start": 50.546,
+   "end": 50.766
+  },
+  {
+   "line": "M03",
+   "text": "think",
+   "start": 50.766,
+   "end": 50.906
+  },
+  {
+   "line": "M03",
+   "text": "something",
+   "start": 50.906,
+   "end": 51.126
+  },
+  {
+   "line": "M03",
+   "text": "is",
+   "start": 51.126,
+   "end": 51.366
+  },
+  {
+   "line": "M03",
+   "text": "following",
+   "start": 51.366,
+   "end": 51.686
+  },
+  {
+   "line": "M03",
+   "text": "us.",
+   "start": 51.686,
+   "end": 51.986
+  },
+  {
+   "line": "X02",
+   "text": "Help...",
+   "start": 52.709,
+   "end": 52.929
+  },
+  {
+   "line": "K06",
+   "text": "Okay...",
+   "start": 53.966,
+   "end": 54.266
+  },
+  {
+   "line": "K06",
+   "text": "that",
+   "start": 54.406,
+   "end": 54.466
+  },
+  {
+   "line": "K06",
+   "text": "wasn't",
+   "start": 54.466,
+   "end": 54.746
+  },
+  {
+   "line": "K06",
+   "text": "me.",
+   "start": 54.746,
+   "end": 54.906
+  },
+  {
+   "line": "K07",
+   "text": "Perfect!",
+   "start": 55.809,
+   "end": 56.149
+  },
+  {
+   "line": "K07",
+   "text": "Shelter!",
+   "start": 56.149,
+   "end": 56.449
+  },
+  {
+   "line": "L04",
+   "text": "Of",
+   "start": 56.861,
+   "end": 57.001
+  },
+  {
+   "line": "L04",
+   "text": "course.",
+   "start": 57.001,
+   "end": 57.281
+  },
+  {
+   "line": "L04",
+   "text": "Because",
+   "start": 57.701,
+   "end": 57.961
+  },
+  {
+   "line": "L04",
+   "text": "walking",
+   "start": 57.961,
+   "end": 58.221
+  },
+  {
+   "line": "L04",
+   "text": "into",
+   "start": 58.221,
+   "end": 58.521
+  },
+  {
+   "line": "L04",
+   "text": "a",
+   "start": 58.521,
+   "end": 58.721
+  },
+  {
+   "line": "L04",
+   "text": "creepy",
+   "start": 58.721,
+   "end": 58.881
+  },
+  {
+   "line": "L04",
+   "text": "abandoned",
+   "start": 58.881,
+   "end": 59.281
+  },
+  {
+   "line": "L04",
+   "text": "house",
+   "start": 59.281,
+   "end": 59.561
+  },
+  {
+   "line": "L04",
+   "text": "in",
+   "start": 59.561,
+   "end": 59.741
+  },
+  {
+   "line": "L04",
+   "text": "a",
+   "start": 59.741,
+   "end": 59.821
+  },
+  {
+   "line": "L04",
+   "text": "demonic",
+   "start": 59.821,
+   "end": 60.141
+  },
+  {
+   "line": "L04",
+   "text": "forest",
+   "start": 60.141,
+   "end": 60.541
+  },
+  {
+   "line": "L04",
+   "text": "is",
+   "start": 60.541,
+   "end": 60.781
+  },
+  {
+   "line": "L04",
+   "text": "obviously",
+   "start": 60.781,
+   "end": 61.261
+  },
+  {
+   "line": "L04",
+   "text": "safer.",
+   "start": 61.261,
+   "end": 61.701
+  },
+  {
+   "line": "J04",
+   "text": "We",
+   "start": 62.067,
+   "end": 62.207
+  },
+  {
+   "line": "J04",
+   "text": "can't",
+   "start": 62.207,
+   "end": 62.527
+  },
+  {
+   "line": "J04",
+   "text": "stay",
+   "start": 62.527,
+   "end": 62.667
+  },
+  {
+   "line": "J04",
+   "text": "outside",
+   "start": 62.667,
+   "end": 62.987
+  },
+  {
+   "line": "J04",
+   "text": "all",
+   "start": 62.987,
+   "end": 63.227
+  },
+  {
+   "line": "J04",
+   "text": "night.",
+   "start": 63.227,
+   "end": 63.447
+  },
+  {
+   "line": "M04",
+   "text": "We",
+   "start": 63.796,
+   "end": 63.916
+  },
+  {
+   "line": "M04",
+   "text": "go",
+   "start": 63.916,
+   "end": 64.056
+  },
+  {
+   "line": "M04",
+   "text": "in",
+   "start": 64.056,
+   "end": 64.236
+  },
+  {
+   "line": "M04",
+   "text": "together.",
+   "start": 64.236,
+   "end": 64.536
+  },
+  {
+   "line": "M04",
+   "text": "Nobody",
+   "start": 65.496,
+   "end": 65.796
+  },
+  {
+   "line": "M04",
+   "text": "splits",
+   "start": 65.796,
+   "end": 66.156
+  },
+  {
+   "line": "M04",
+   "text": "up.",
+   "start": 66.156,
+   "end": 66.436
+  },
+  {
+   "line": "M04",
+   "text": "If",
+   "start": 66.896,
+   "end": 66.936
+  },
+  {
+   "line": "M04",
+   "text": "anything",
+   "start": 66.936,
+   "end": 67.216
+  },
+  {
+   "line": "M04",
+   "text": "feels",
+   "start": 67.216,
+   "end": 67.556
+  },
+  {
+   "line": "M04",
+   "text": "wrong,",
+   "start": 67.556,
+   "end": 67.856
+  },
+  {
+   "line": "M04",
+   "text": "we",
+   "start": 68.016,
+   "end": 68.096
+  },
+  {
+   "line": "M04",
+   "text": "leave.",
+   "start": 68.096,
+   "end": 68.416
+  },
+  {
+   "line": "M04",
+   "text": "Immediately.",
+   "start": 68.416,
+   "end": 69.296
+  },
+  {
+   "line": "B05",
+   "text": "Guys...",
+   "start": 70.244,
+   "end": 70.684
+  },
+  {
+   "line": "J05",
+   "text": "What?",
+   "start": 71.137,
+   "end": 71.337
+  },
+  {
+   "line": "B06",
+   "text": "Someone",
+   "start": 71.702,
+   "end": 72.162
+  },
+  {
+   "line": "B06",
+   "text": "set",
+   "start": 72.162,
+   "end": 72.442
+  },
+  {
+   "line": "B06",
+   "text": "this",
+   "start": 72.442,
+   "end": 72.642
+  },
+  {
+   "line": "B06",
+   "text": "table.",
+   "start": 72.642,
+   "end": 72.922
+  },
+  {
+   "line": "B06",
+   "text": "For",
+   "start": 72.922,
+   "end": 73.102
+  },
+  {
+   "line": "B06",
+   "text": "five.",
+   "start": 73.102,
+   "end": 73.382
+  },
+  {
+   "line": "K08",
+   "text": "Maybe",
+   "start": 73.895,
+   "end": 74.195
+  },
+  {
+   "line": "K08",
+   "text": "we",
+   "start": 74.195,
+   "end": 74.355
+  },
+  {
+   "line": "K08",
+   "text": "have",
+   "start": 74.355,
+   "end": 74.535
+  },
+  {
+   "line": "K08",
+   "text": "a",
+   "start": 74.535,
+   "end": 74.675
+  },
+  {
+   "line": "K08",
+   "text": "ghost",
+   "start": 74.675,
+   "end": 74.895
+  },
+  {
+   "line": "K08",
+   "text": "butler.",
+   "start": 74.895,
+   "end": 75.335
+  },
+  {
+   "line": "L05",
+   "text": "Please.",
+   "start": 75.645,
+   "end": 76.065
+  },
+  {
+   "line": "L05",
+   "text": "Stop.",
+   "start": 76.065,
+   "end": 76.685
+  },
+  {
+   "line": "L05",
+   "text": "Talking.",
+   "start": 76.685,
+   "end": 77.085
+  },
+  {
+   "line": "X03",
+   "text": "Guys?",
+   "start": 78.1,
+   "end": 78.38
+  },
+  {
+   "line": "X03",
+   "text": "Open",
+   "start": 79.0,
+   "end": 79.12
+  },
+  {
+   "line": "X03",
+   "text": "the",
+   "start": 79.12,
+   "end": 79.34
+  },
+  {
+   "line": "X03",
+   "text": "door.",
+   "start": 79.34,
+   "end": 79.6
+  },
+  {
+   "line": "M05",
+   "text": "Nobody",
+   "start": 80.346,
+   "end": 80.606
+  },
+  {
+   "line": "M05",
+   "text": "open",
+   "start": 80.606,
+   "end": 80.906
+  },
+  {
+   "line": "M05",
+   "text": "that",
+   "start": 80.906,
+   "end": 81.146
+  },
+  {
+   "line": "M05",
+   "text": "door.",
+   "start": 81.146,
+   "end": 81.366
+  },
+  {
+   "line": "K09",
+   "text": "Wait...",
+   "start": 81.862,
+   "end": 82.102
+  },
+  {
+   "line": "K09",
+   "text": "if",
+   "start": 82.722,
+   "end": 82.722
+  },
+  {
+   "line": "K09",
+   "text": "you're",
+   "start": 82.722,
+   "end": 83.322
+  },
+  {
+   "line": "K09",
+   "text": "in",
+   "start": 83.322,
+   "end": 83.462
+  },
+  {
+   "line": "K09",
+   "text": "here...",
+   "start": 83.462,
+   "end": 83.722
+  },
+  {
+   "line": "K09",
+   "text": "then",
+   "start": 84.022,
+   "end": 84.102
+  },
+  {
+   "line": "K09",
+   "text": "who's",
+   "start": 84.102,
+   "end": 84.382
+  },
+  {
+   "line": "K09",
+   "text": "outside?",
+   "start": 84.382,
+   "end": 84.742
+  },
+  {
+   "line": "X04",
+   "text": "Guys,",
+   "start": 85.635,
+   "end": 85.935
+  },
+  {
+   "line": "X04",
+   "text": "please.",
+   "start": 86.095,
+   "end": 86.235
+  },
+  {
+   "line": "X04",
+   "text": "It's",
+   "start": 86.815,
+   "end": 86.955
+  },
+  {
+   "line": "X04",
+   "text": "cold.",
+   "start": 86.955,
+   "end": 87.175
+  },
+  {
+   "line": "J06",
+   "text": "That's",
+   "start": 88.049,
+   "end": 88.349
+  },
+  {
+   "line": "J06",
+   "text": "not",
+   "start": 88.349,
+   "end": 88.489
+  },
+  {
+   "line": "J06",
+   "text": "me.",
+   "start": 88.489,
+   "end": 88.709
+  },
+  {
+   "line": "B07",
+   "text": "Whatever",
+   "start": 89.236,
+   "end": 89.436
+  },
+  {
+   "line": "B07",
+   "text": "is",
+   "start": 89.436,
+   "end": 89.636
+  },
+  {
+   "line": "B07",
+   "text": "out",
+   "start": 89.636,
+   "end": 89.796
+  },
+  {
+   "line": "B07",
+   "text": "there...",
+   "start": 89.796,
+   "end": 90.036
+  },
+  {
+   "line": "B07",
+   "text": "it's",
+   "start": 90.136,
+   "end": 90.296
+  },
+  {
+   "line": "B07",
+   "text": "copying",
+   "start": 90.296,
+   "end": 90.576
+  },
+  {
+   "line": "B07",
+   "text": "our",
+   "start": 90.576,
+   "end": 90.816
+  },
+  {
+   "line": "B07",
+   "text": "voices.",
+   "start": 90.816,
+   "end": 91.096
+  },
+  {
+   "line": "L06",
+   "text": "Okay.",
+   "start": 91.595,
+   "end": 91.895
+  },
+  {
+   "line": "L06",
+   "text": "New",
+   "start": 92.115,
+   "end": 92.295
+  },
+  {
+   "line": "L06",
+   "text": "plan.",
+   "start": 92.295,
+   "end": 92.575
+  },
+  {
+   "line": "L06",
+   "text": "We",
+   "start": 92.875,
+   "end": 93.035
+  },
+  {
+   "line": "L06",
+   "text": "leave.",
+   "start": 93.035,
+   "end": 93.315
+  },
+  {
+   "line": "L06",
+   "text": "Right",
+   "start": 93.315,
+   "end": 93.695
+  },
+  {
+   "line": "L06",
+   "text": "now.",
+   "start": 93.695,
+   "end": 94.035
+  },
+  {
+   "line": "X05",
+   "text": "Why",
+   "start": 94.967,
+   "end": 95.167
+  },
+  {
+   "line": "X05",
+   "text": "are",
+   "start": 95.167,
+   "end": 95.287
+  },
+  {
+   "line": "X05",
+   "text": "you",
+   "start": 95.287,
+   "end": 95.407
+  },
+  {
+   "line": "X05",
+   "text": "all",
+   "start": 95.407,
+   "end": 95.547
+  },
+  {
+   "line": "X05",
+   "text": "leaving?",
+   "start": 95.547,
+   "end": 95.807
+  },
+  {
+   "line": "K10",
+   "text": "What",
+   "start": 96.45,
+   "end": 96.65
+  },
+  {
+   "line": "K10",
+   "text": "the",
+   "start": 96.65,
+   "end": 96.79
+  },
+  {
+   "line": "K10",
+   "text": "hell",
+   "start": 96.79,
+   "end": 96.97
+  },
+  {
+   "line": "K10",
+   "text": "is",
+   "start": 96.97,
+   "end": 97.15
+  },
+  {
+   "line": "K10",
+   "text": "that?!",
+   "start": 97.15,
+   "end": 97.39
+  },
+  {
+   "line": "J07",
+   "text": "Run!",
+   "start": 97.741,
+   "end": 98.101
+  },
+  {
+   "line": "J07",
+   "text": "Run!",
+   "start": 98.921,
+   "end": 99.261
+  },
+  {
+   "line": "L07",
+   "text": "I",
+   "start": 99.621,
+   "end": 99.821
+  },
+  {
+   "line": "L07",
+   "text": "told",
+   "start": 99.821,
+   "end": 99.981
+  },
+  {
+   "line": "L07",
+   "text": "you!",
+   "start": 99.981,
+   "end": 100.241
+  },
+  {
+   "line": "L07",
+   "text": "I",
+   "start": 100.441,
+   "end": 100.621
+  },
+  {
+   "line": "L07",
+   "text": "literally",
+   "start": 100.621,
+   "end": 100.841
+  },
+  {
+   "line": "L07",
+   "text": "told",
+   "start": 100.841,
+   "end": 101.201
+  },
+  {
+   "line": "L07",
+   "text": "you!",
+   "start": 101.201,
+   "end": 101.461
+  },
+  {
+   "line": "B08",
+   "text": "It's",
+   "start": 101.646,
+   "end": 101.806
+  },
+  {
+   "line": "B08",
+   "text": "coming!",
+   "start": 101.806,
+   "end": 102.006
+  },
+  {
+   "line": "M06",
+   "text": "There!",
+   "start": 102.408,
+   "end": 102.708
+  },
+  {
+   "line": "M06",
+   "text": "The",
+   "start": 103.008,
+   "end": 103.088
+  },
+  {
+   "line": "M06",
+   "text": "door!",
+   "start": 103.088,
+   "end": 103.268
+  },
+  {
+   "line": "L08",
+   "text": "Okay...",
+   "start": 104.291,
+   "end": 104.611
+  },
+  {
+   "line": "L08",
+   "text": "never",
+   "start": 105.051,
+   "end": 105.191
+  },
+  {
+   "line": "L08",
+   "text": "again.",
+   "start": 105.191,
+   "end": 105.551
+  },
+  {
+   "line": "L08",
+   "text": "Never",
+   "start": 106.111,
+   "end": 106.251
+  },
+  {
+   "line": "L08",
+   "text": "again.",
+   "start": 106.251,
+   "end": 106.591
+  },
+  {
+   "line": "J08",
+   "text": "Is",
+   "start": 107.008,
+   "end": 107.208
+  },
+  {
+   "line": "J08",
+   "text": "everyone",
+   "start": 107.208,
+   "end": 107.488
+  },
+  {
+   "line": "J08",
+   "text": "here?",
+   "start": 107.488,
+   "end": 107.808
+  },
+  {
+   "line": "B09",
+   "text": "One...",
+   "start": 108.168,
+   "end": 108.448
+  },
+  {
+   "line": "B09",
+   "text": "two...",
+   "start": 108.688,
+   "end": 108.968
+  },
+  {
+   "line": "B09",
+   "text": "three...",
+   "start": 109.248,
+   "end": 109.568
+  },
+  {
+   "line": "B09",
+   "text": "four...",
+   "start": 109.668,
+   "end": 110.148
+  },
+  {
+   "line": "B09",
+   "text": "five.",
+   "start": 110.268,
+   "end": 110.688
+  },
+  {
+   "line": "K11",
+   "text": "Guys...",
+   "start": 111.496,
+   "end": 111.816
+  },
+  {
+   "line": "K11",
+   "text": "that",
+   "start": 112.056,
+   "end": 112.236
+  },
+  {
+   "line": "K11",
+   "text": "was",
+   "start": 112.236,
+   "end": 112.416
+  },
+  {
+   "line": "K11",
+   "text": "actually",
+   "start": 112.416,
+   "end": 112.796
+  },
+  {
+   "line": "K11",
+   "text": "kind",
+   "start": 112.796,
+   "end": 113.016
+  },
+  {
+   "line": "K11",
+   "text": "of",
+   "start": 113.016,
+   "end": 113.196
+  },
+  {
+   "line": "K11",
+   "text": "fun.",
+   "start": 113.196,
+   "end": 113.416
+  },
+  {
+   "line": "M07",
+   "text": "Guys...",
+   "start": 114.388,
+   "end": 114.788
+  },
+  {
+   "line": "B10",
+   "text": "What?",
+   "start": 115.221,
+   "end": 115.421
+  },
+  {
+   "line": "M08",
+   "text": "Don't",
+   "start": 115.884,
+   "end": 116.164
+  },
+  {
+   "line": "M08",
+   "text": "move.",
+   "start": 116.164,
+   "end": 116.364
+  },
+  {
+   "line": "K12",
+   "text": "You",
+   "start": 117.565,
+   "end": 117.765
+  },
+  {
+   "line": "K12",
+   "text": "forgot",
+   "start": 117.765,
+   "end": 118.065
+  },
+  {
+   "line": "K12",
+   "text": "something.",
+   "start": 118.065,
+   "end": 118.405
+  },
+  {
+   "line": "X06",
+   "text": "One",
+   "start": 119.362,
+   "end": 119.562
+  },
+  {
+   "line": "X06",
+   "text": "of",
+   "start": 119.562,
+   "end": 119.682
+  },
+  {
+   "line": "X06",
+   "text": "us",
+   "start": 119.682,
+   "end": 119.862
+  },
+  {
+   "line": "X06",
+   "text": "is",
+   "start": 119.862,
+   "end": 120.122
+  },
+  {
+   "line": "X06",
+   "text": "still",
+   "start": 120.122,
+   "end": 120.222
+  },
+  {
+   "line": "X06",
+   "text": "inside.",
+   "start": 120.222,
+   "end": 120.642
+  }
+ ],
+ "duration": 121.031
+}
