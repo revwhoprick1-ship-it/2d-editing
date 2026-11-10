@@ -988,6 +988,59 @@ def crunch():
     return normalize(lowpass(out, 2500), -2)
 
 
+@reg('scare_slam', 'INSTANT jumpscare: zero attack. Sub-bass slam + metal screech + noise burst + dissonant cluster (1.4 s).')
+def scare_slam():
+    n = int(1.4 * SR); tt = np.arange(n) / SR
+    f = 60 * np.exp(-tt * 3) + 28
+    sub = np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-tt * 2.2) * 1.4
+    fs = 1300 + 1600 * (1 - np.exp(-tt * 6))
+    mod = np.sin(2 * np.pi * np.cumsum(fs * 1.41) / SR) * 6
+    scr = np.sin(2 * np.pi * np.cumsum(fs) / SR + mod) * np.exp(-tt * 1.6) * 0.55
+    burst = bandpass(noise(n, 'white', 1801), 300, 9000) * np.exp(-tt * 9) * 1.2
+    cl = sum(np.sin(2 * np.pi * f0 * tt) for f0 in (233.1, 246.9, 261.6, 277.2, 293.7)) * np.exp(-tt * 1.4) * 0.12
+    x = soft_sat(sub + scr + burst + cl, 3.0)
+    return normalize(convolve_stereo(x, reverb_ir(1.6, 0.5, seed=1802), 0.3), -0.5)
+
+@reg('scare_shriek', 'Inhuman shriek for a face lunge: a screaming vowel with harsh vibrato + doubled an octave down (1.1 s).')
+def scare_shriek():
+    n = int(1.1 * SR); tt = np.arange(n) / SR
+    f0 = 520 + 260 * np.sin(2 * np.pi * 9 * tt) * (tt < 0.9) + 300 * tt
+    src = sum(np.sin(2 * np.pi * np.cumsum(f0 * h) / SR) / h for h in range(1, 12))
+    vow = bandpass(src, 700, 1300) * 1.0 + bandpass(src, 2200, 3200) * 0.7
+    low = sum(np.sin(2 * np.pi * np.cumsum(f0 * 0.5 * h) / SR) / h for h in range(1, 6)) * 0.4
+    env = np.minimum(1.0, tt / 0.004) * np.exp(-np.maximum(0, tt - 0.6) * 6)
+    x = soft_sat((vow + low + bandpass(noise(n, 'white', 1803), 1000, 6000) * 0.25) * env, 2.5)
+    return normalize(convolve_stereo(x, reverb_ir(1.2, 0.4, seed=1804), 0.25), -0.5)
+
+@reg('glitch_stab', 'Subliminal glitch stab: 0.25 s of digital tearing + a sharp sine stab (for 5-frame flashes).')
+def glitch_stab():
+    n = int(0.3 * SR); tt = np.arange(n) / SR; rng = np.random.default_rng(1805)
+    x = np.zeros(n)
+    for k in range(10):
+        i = int(rng.uniform(0, 0.25) * SR); m = int(0.015 * SR)
+        x[i:i + m] += np.sign(np.sin(2 * np.pi * rng.uniform(200, 3000) * np.arange(m) / SR)) * rng.uniform(0.4, 1)
+    x += np.sin(2 * np.pi * 1760 * tt) * np.exp(-tt * 12) * 0.8 + np.sin(2 * np.pi * 45 * tt) * np.exp(-tt * 8) * 1.2
+    return normalize(soft_sat(x, 2.0), -0.5)
+
+@reg('house_night', 'Quiet house at night: fridge hum + clock tick + distant wind, loopable (8 s).')
+def house_night():
+    n = int(8.0 * SR); tt = np.arange(n) / SR
+    x = np.sin(2 * np.pi * 60 * tt) * 0.05 + np.sin(2 * np.pi * 120 * tt) * 0.03 + lowpass(noise(n, 'brown', 1806), 300) * 0.4
+    for k in range(8):
+        i = int(k * SR); m = int(0.02 * SR)
+        x[i:i + m] += bandpass(noise(m, 'white', 1807 + k), 2000, 6000) * env_exp(m, 0.004) * 0.35
+    return normalize(fade(x, 0.3, 0.3), -14)
+
+@reg('kitchen_morning', 'Morning kitchen: pancake sizzle + birds outside + humming fridge, loopable (8 s).')
+def kitchen_morning():
+    n = int(8.0 * SR); tt = np.arange(n) / SR; rng = np.random.default_rng(1808)
+    x = bandpass(noise(n, 'white', 1809), 3000, 9000) * (0.25 + 0.05 * np.sin(2 * np.pi * 3 * tt)) + np.sin(2 * np.pi * 60 * tt) * 0.03
+    for t0 in rng.uniform(0, 7.5, 9):
+        i = int(t0 * SR); m = int(0.12 * SR)
+        x[i:i + m] += np.sin(2 * np.pi * np.cumsum(np.linspace(3200, 4200, m)) / SR) * env_adsr(m, 0.01, 0.03, 0.4, 0.05) * 0.12
+    return normalize(fade(x, 0.3, 0.3), -12)
+
+
 def main():
     root = sys.argv[1]
     d = os.path.join(root, 'sound_effects', 'comedy')

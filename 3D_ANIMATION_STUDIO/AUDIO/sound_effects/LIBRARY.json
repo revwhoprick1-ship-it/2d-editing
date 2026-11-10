@@ -1561,5 +1561,50 @@
   "duration_s": 1.4,
   "sample_rate": 48000,
   "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/scare_slam.flac",
+  "category": "comedy",
+  "name": "scare_slam",
+  "description": "INSTANT jumpscare: zero attack. Sub-bass slam + metal screech + noise burst + dissonant cluster (1.4 s).",
+  "duration_s": 1.4,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/scare_shriek.flac",
+  "category": "comedy",
+  "name": "scare_shriek",
+  "description": "Inhuman shriek for a face lunge: a screaming vowel with harsh vibrato + doubled an octave down (1.1 s).",
+  "duration_s": 1.1,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/glitch_stab.flac",
+  "category": "comedy",
+  "name": "glitch_stab",
+  "description": "Subliminal glitch stab: 0.25 s of digital tearing + a sharp sine stab (for 5-frame flashes).",
+  "duration_s": 0.3,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/house_night.flac",
+  "category": "comedy",
+  "name": "house_night",
+  "description": "Quiet house at night: fridge hum + clock tick + distant wind, loopable (8 s).",
+  "duration_s": 8.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/comedy/kitchen_morning.flac",
+  "category": "comedy",
+  "name": "kitchen_morning",
+  "description": "Morning kitchen: pancake sizzle + birds outside + humming fridge, loopable (8 s).",
+  "duration_s": 8.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
  }
 ]

@@ -1438,6 +1438,54 @@ def cue_video020():
 CUES['video020'] = cue_video020
 LOOPS['video020'] = None
 
+def cue_video021():
+    sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'VIDEOS', 'VIDEO_021'))
+    import edit_video021 as E21
+    B, END, s21, e21 = E21.B, E21.END, E21.s, E21.e
+    S = Score(END + 3.0, bpm=60)
+    D = lambda t, d, f=36.7, g=-10: S.add('fx', t, sine(f, d) * env_adsr(int(d * SR), min(1.5, d / 3), 0.2, 0.9, min(1.0, d / 4)) * 0.8, g)
+    # hook: one low tone under Mom's voice
+    D(0.0, B['kitchen'], 32.7, -10)
+    # mornings: Mom's lullaby on a music box, one note slightly wrong every bar (it's a copy)
+    mel = ['E5', 'G5', 'A5', 'G5', 'E5', 'D5', 'E5', 'C5']
+    for i in range(40):
+        tt = B['kitchen'] + i * 0.42
+        if tt >= B['car'] - 0.1:
+            break
+        f = mtof(n2m(mel[i % 8])) * (1.035 if i % 8 == 6 else 1.0)
+        S.add('lead', tt, inst_bell(f, 0.9), -18)
+    S.add('pad', B['kitchen'], inst_pad(C(['C3', 'G3', 'E4']), B['car'] - B['kitchen'], bright=1400, attack=0.5), -19)
+    # the memory: underwater pad
+    S.add('pad', B['car'], inst_pad(C(['A2', 'E3', 'C4']), B['kitchen2'] - B['car'], bright=600, attack=0.3), -14)
+    # back in the kitchen: the lullaby again, slower and more wrong (keeps going THROUGH the scare: no warning)
+    for i in range(30):
+        tt = B['kitchen2'] + i * 0.5
+        if tt >= B['night'] - 0.2:
+            break
+        f = mtof(n2m(mel[i % 8])) * (1.06 if i % 4 == 2 else 1.0)
+        S.add('lead', tt, inst_bell(f, 1.0), -18)
+    S.add('perc', B['js1'], drum_taiko(1.2, 40), -3)
+    # night: drone + slow heartbeat-like pulse
+    D(B['night'], B['door'] - B['night'], 34.6, -9)
+    S.add('pad', s21('P01'), inst_tremolo(C(['D#4', 'E4']), B['door'] - s21('P01'), rate=9, bright=2400), -17)
+    # basement: low strings cluster that keeps climbing
+    S.add('pad', B['door'], inst_strings(C(['D3', 'D#3', 'A3']), B['choice'] - B['door'], attack=1.0, bright=1800), -15)
+    D(B['door'], B['choice'] - B['door'], 30.9, -9)
+    S.add('perc', B['js2'], drum_taiko(1.6, 36), -1)
+    S.add('pad', B['upstairs'], inst_tremolo(C(['A4', 'A#4', 'E5']), B['choice'] - B['upstairs'], rate=12, bright=3000), -16)
+    # the choice: a ticking pulse; JS3 lands in the MIDDLE of it, then "Pick me."
+    t, i = B['choice'], 0
+    while t < END - 0.2:
+        S.add('perc', t, drum_tick(0.5), -12)
+        t += 0.5; i += 1
+    S.add('perc', B['js3'], drum_taiko(1.6, 34), -1)
+    D(B['choice'], END - B['choice'], 29.1, -8)
+    return S
+
+
+CUES['video021'] = cue_video021
+LOOPS['video021'] = None
+
 if __name__ == '__main__':
     cue, out = sys.argv[1], sys.argv[2]
     S = CUES[cue]()

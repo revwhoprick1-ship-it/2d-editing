@@ -1,0 +1,148 @@
+{
+ "title": "My Mother Isn't Real",
+ "engine": "qwen3-tts",
+ "tempo": 1.06,
+ "qwen_voices": {
+  "N": "Male, 18 years old, American. Low, soft, intimate storytelling voice, very close to the microphone, calm but haunted, slightly husky.",
+  "M": "Male, 17 years old, American. Soft, slightly husky, nervous teenage voice, breathy and quiet.",
+  "O": "Female, 40 years old, American mother. Warm, sweet, slow and perfectly calm motherly voice, a smile in every word.",
+  "P": "Female, 40 years old, American. Weak, hoarse, trembling whisper of an exhausted mother, desperate and frightened."
+ },
+ "lines": [
+  {
+   "id": "O01",
+   "who": "O",
+   "text": "Sweetie. What did I say about the basement?",
+   "delivery": "",
+   "pause_after": 0.5
+  },
+  {
+   "id": "N01",
+   "who": "N",
+   "text": "My mom died two years ago. So who's been making my breakfast?",
+   "delivery": "",
+   "pause_after": 0.4
+  },
+  {
+   "id": "N02",
+   "who": "N",
+   "text": "Since the accident, every morning is the same. Same song. Same smile.",
+   "delivery": "",
+   "pause_after": 0.2
+  },
+  {
+   "id": "O02",
+   "who": "O",
+   "text": "Eat up, sweetie.",
+   "delivery": "",
+   "pause_after": 0.4
+  },
+  {
+   "id": "N03",
+   "who": "N",
+   "text": "I can't remember the crash. Just her voice, saying something I can't hear.",
+   "delivery": "",
+   "pause_after": 0.2
+  },
+  {
+   "id": "Q01",
+   "who": "Q",
+   "text": "If I don't come back... it's not...",
+   "delivery": "",
+   "pause_after": 0.5,
+   "as": "O"
+  },
+  {
+   "id": "M01",
+   "who": "M",
+   "text": "Mom... what did you say to me in the car?",
+   "delivery": "",
+   "pause_after": 0.3
+  },
+  {
+   "id": "O03",
+   "who": "O",
+   "text": "I said I love you.",
+   "delivery": "",
+   "pause_after": 0.6
+  },
+  {
+   "id": "N04",
+   "who": "N",
+   "text": "That night, something knocked. From under the floor.",
+   "delivery": "",
+   "pause_after": 0.3
+  },
+  {
+   "id": "P01",
+   "who": "P",
+   "text": "Sweetie? Is she asleep?",
+   "delivery": "",
+   "pause_after": 0.3
+  },
+  {
+   "id": "M02",
+   "who": "M",
+   "text": "Mom?",
+   "delivery": "",
+   "pause_after": 0.3
+  },
+  {
+   "id": "P02",
+   "who": "P",
+   "text": "Don't let her hear you. Come down.",
+   "delivery": "",
+   "pause_after": 0.5
+  },
+  {
+   "id": "N05",
+   "who": "N",
+   "text": "Twelve steps to the basement. Tonight, there were thirteen.",
+   "delivery": "",
+   "pause_after": 0.6
+  },
+  {
+   "id": "P03",
+   "who": "P",
+   "text": "She put me down here two years ago.",
+   "delivery": "",
+   "pause_after": 0.4
+  },
+  {
+   "id": "O04",
+   "who": "O",
+   "text": "Sweetie. That isn't me.",
+   "delivery": "",
+   "pause_after": 0.3
+  },
+  {
+   "id": "P04",
+   "who": "P",
+   "text": "Remember the car. Remember what I told you.",
+   "delivery": "",
+   "pause_after": 0.2
+  },
+  {
+   "id": "O05",
+   "who": "O",
+   "text": "Remember what I told you, sweetie.",
+   "delivery": "",
+   "pause_after": 0.5
+  },
+  {
+   "id": "N06",
+   "who": "N",
+   "text": "One of them is my mom. The other one crawled out of that car.",
+   "delivery": "",
+   "pause_after": 0.4
+  },
+  {
+   "id": "X01",
+   "who": "X",
+   "text": "Pick me.",
+   "delivery": "",
+   "pause_after": 0.2,
+   "as": "O"
+  }
+ ]
+}
