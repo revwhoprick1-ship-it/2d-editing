@@ -1,0 +1,358 @@
+{
+ "duration": 75.54,
+ "loop": true,
+ "narration": "narration/narration_raw.wav",
+ "narration_offset": 0.0,
+ "music": "music_score.wav",
+ "music_gain_db": 2,
+ "music_cue": "cue_video017",
+ "music_gates": [
+  [
+   32.794,
+   40.425,
+   0.05
+  ],
+  [
+   24.578,
+   25.058,
+   0.1
+  ],
+  [
+   62.618,
+   63.098,
+   0.1
+  ]
+ ],
+ "targets": {
+  "narration_lufs": -16,
+  "master_lufs": -14,
+  "true_peak": -2.0,
+  "duck_db": 5
+ },
+ "cues": [
+  {
+   "t": 0.0,
+   "file": "AUDIO/sound_effects/comedy/seatbelt_ding.flac",
+   "gain": -5,
+   "bus": "sfx",
+   "note": "DING (frame 0)"
+  },
+  {
+   "t": 0.0,
+   "file": "AUDIO/sound_effects/comedy/cabin_drone.flac",
+   "gain": -6,
+   "bus": "amb",
+   "note": "engines",
+   "loop": true,
+   "dur": 32.794,
+   "fade_out": 0.05
+  },
+  {
+   "t": 0.05,
+   "file": "AUDIO/sound_effects/movement/cloth_rustle.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "212 passengers sit up at once"
+  },
+  {
+   "t": 5.557,
+   "file": "AUDIO/sound_effects/comedy/buckle_click.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "Lawrence fiddles with the buckle (not open)"
+  },
+  {
+   "t": 9.058,
+   "file": "AUDIO/sound_effects/environment/electronic_beep.flac",
+   "gain": -21,
+   "bus": "sfx",
+   "note": "screen"
+  },
+  {
+   "t": 14.17,
+   "file": "AUDIO/sound_effects/comedy/phone_buzz.flac",
+   "gain": -23,
+   "bus": "sfx",
+   "note": "the phone on the empty seat"
+  },
+  {
+   "t": 17.97,
+   "file": "AUDIO/sound_effects/comedy/cart_rattle.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "the cart",
+   "dur": 7.107999999999997,
+   "fade_out": 0.3
+  },
+  {
+   "t": 23.009,
+   "file": "AUDIO/sound_effects/comedy/creak_long.flac",
+   "gain": -19,
+   "bus": "sfx",
+   "note": "joints bending the wrong way"
+  },
+  {
+   "t": 25.048,
+   "file": "AUDIO/sound_effects/comedy/jumpscare.flac",
+   "gain": -2,
+   "bus": "sfx",
+   "note": "JUMPSCARE 1: \"You looked.\""
+  },
+  {
+   "t": 25.578,
+   "file": "AUDIO/sound_effects/comedy/tinnitus.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "ringing"
+  },
+  {
+   "t": 32.794,
+   "file": "AUDIO/sound_effects/comedy/buckle_click.flac",
+   "gain": -5,
+   "bus": "sfx",
+   "note": "CLICK. Lawrence unbuckles"
+  },
+  {
+   "t": 32.894,
+   "file": "AUDIO/sound_effects/comedy/dread_drone.flac",
+   "gain": -14,
+   "bus": "amb",
+   "note": "silence... except this",
+   "dur": 7.651000000000003,
+   "fade_out": 0.1
+  },
+  {
+   "t": 33.144,
+   "file": "AUDIO/sound_effects/comedy/head_turn_mass.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "212 heads turn at once"
+  },
+  {
+   "t": 35.044,
+   "file": "AUDIO/sound_effects/comedy/creak_long.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "the bin opens by itself"
+  },
+  {
+   "t": 40.415,
+   "file": "AUDIO/sound_effects/comedy/jumpscare.flac",
+   "gain": -1,
+   "bus": "sfx",
+   "note": "JUMPSCARE 2: Lawrence yanked up"
+  },
+  {
+   "t": 40.445,
+   "file": "AUDIO/sound_effects/comedy/cabin_drone.flac",
+   "gain": -8,
+   "bus": "amb",
+   "note": "engines back",
+   "loop": true,
+   "dur": 23.936,
+   "fade_out": 0.5
+  },
+  {
+   "t": 40.745,
+   "file": "AUDIO/sound_effects/comedy/bin_slam.flac",
+   "gain": -3,
+   "bus": "sfx",
+   "note": "SLAM"
+  },
+  {
+   "t": 41.045,
+   "file": "AUDIO/sound_effects/comedy/crunch.flac",
+   "gain": -7,
+   "bus": "sfx",
+   "note": "inside the bin"
+  },
+  {
+   "t": 41.295,
+   "file": "AUDIO/sound_effects/comedy/sweat_drip.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "blood drips on the tray"
+  },
+  {
+   "t": 41.745,
+   "file": "AUDIO/sound_effects/comedy/sweat_drip.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "blood drips on the tray"
+  },
+  {
+   "t": 42.045,
+   "file": "AUDIO/sound_effects/comedy/crunch.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "again"
+  },
+  {
+   "t": 42.145,
+   "file": "AUDIO/sound_effects/comedy/body_thud.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "his sneaker hits the tray"
+  },
+  {
+   "t": 42.195,
+   "file": "AUDIO/sound_effects/comedy/sweat_drip.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "blood drips on the tray"
+  },
+  {
+   "t": 42.645,
+   "file": "AUDIO/sound_effects/comedy/sweat_drip.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "blood drips on the tray"
+  },
+  {
+   "t": 43.095,
+   "file": "AUDIO/sound_effects/comedy/sweat_drip.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "blood drips on the tray"
+  },
+  {
+   "t": 45.141,
+   "file": "AUDIO/sound_effects/comedy/seatbelt_ding.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "ding: captain"
+  },
+  {
+   "t": 50.271,
+   "file": "AUDIO/sound_effects/comedy/vent_scratch.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "every bin thumping",
+   "loop": true,
+   "dur": 1.7289999999999992
+  },
+  {
+   "t": 50.271,
+   "file": "AUDIO/sound_effects/comedy/door_knock.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "bin bangs"
+  },
+  {
+   "t": 50.621,
+   "file": "AUDIO/sound_effects/comedy/door_knock.flac",
+   "gain": -16,
+   "bus": "sfx",
+   "note": "bin bangs"
+  },
+  {
+   "t": 50.971,
+   "file": "AUDIO/sound_effects/comedy/door_knock.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "bin bangs"
+  },
+  {
+   "t": 51.321,
+   "file": "AUDIO/sound_effects/comedy/door_knock.flac",
+   "gain": -18,
+   "bus": "sfx",
+   "note": "bin bangs"
+  },
+  {
+   "t": 51.6,
+   "file": "AUDIO/sound_effects/comedy/mimic_click.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "it unfolds"
+  },
+  {
+   "t": 52.0,
+   "file": "AUDIO/sound_effects/comedy/creak_long.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "neck unfolding"
+  },
+  {
+   "t": 57.085,
+   "file": "AUDIO/sound_effects/comedy/thunder.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "turbulence"
+  },
+  {
+   "t": 57.385,
+   "file": "AUDIO/sound_effects/comedy/buckle_click.flac",
+   "gain": -7,
+   "bus": "sfx",
+   "note": "Bob's belt pops open"
+  },
+  {
+   "t": 61.568,
+   "file": "AUDIO/sound_effects/movement/whoosh_long.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "oxygen masks drop"
+  },
+  {
+   "t": 61.968,
+   "file": "AUDIO/sound_effects/comedy/stair_crawl.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "crawling on the ceiling"
+  },
+  {
+   "t": 63.088,
+   "file": "AUDIO/sound_effects/comedy/jumpscare.flac",
+   "gain": -2,
+   "bus": "sfx",
+   "note": "JUMPSCARE 3: its face, upside down"
+  },
+  {
+   "t": 64.981,
+   "file": "AUDIO/sound_effects/comedy/seatbelt_ding.flac",
+   "gain": -7,
+   "bus": "sfx",
+   "note": "DING: landed"
+  },
+  {
+   "t": 65.381,
+   "file": "AUDIO/ambience/room_tone.flac",
+   "gain": -10,
+   "bus": "amb",
+   "note": "quiet cabin",
+   "loop": true,
+   "dur": 9.405000000000001
+  },
+  {
+   "t": 69.862,
+   "file": "AUDIO/sound_effects/comedy/buckle_click.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "Bob unbuckles"
+  },
+  {
+   "t": 73.274,
+   "file": "AUDIO/sound_effects/comedy/cabin_drone.flac",
+   "gain": -10,
+   "bus": "amb",
+   "note": "engines: still flying",
+   "loop": true,
+   "dur": 2.2660000000000053
+  },
+  {
+   "t": 74.186,
+   "file": "AUDIO/sound_effects/comedy/creak_long.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "the bin above Bob opens"
+  },
+  {
+   "t": 75.29,
+   "file": "AUDIO/sound_effects/comedy/seatbelt_ding.flac",
+   "gain": -7,
+   "bus": "sfx",
+   "note": "DING -> loops into frame 0"
+  }
+ ]
+}

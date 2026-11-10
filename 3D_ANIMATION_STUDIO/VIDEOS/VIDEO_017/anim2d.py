@@ -23,7 +23,7 @@ import edit_video017 as E  # noqa
 
 FPS = 30
 OUT = os.path.join(HERE, 'frames2d')
-B, LS, WORDS = E.B, E.LS, E.WORDS
+B, LS, WORDS, JS, s = E.B, E.LS, E.WORDS, E.JS, E.s
 MOON = '#9FD0C8'          # blue-green moonlight
 TUNG = '#FFC27A'          # weak tungsten
 
@@ -175,7 +175,7 @@ def cabin(cv, cam, t, rows=14, heads=True, staring=0.0, bins_moving=0.0, masks=0
                 cv.drawPath(quad(cam, [(x - 0.2, 0.45, z), (x + 0.2, 0.45, z), (x + 0.2, 1.2, z), (x - 0.2, 1.2, z)]), paint('#22314E'))
                 if heads and not (k == 4 and side == -1):
                     hx, hy = cam.p(x, 1.28, z + 0.3)
-                    hr = cam.scale(z + 0.3, 0.13) * 1150 / 2
+                    hr = cam.scale(z + 0.3, 0.28) * 1150 / 2
                     seed = (k * 7 + s_ * 3 + side) % 5
                     cv.drawCircle(hx, hy, hr, paint(['#2A1A12', '#1A1A1A', '#6A4A2A', '#D8B060', '#3A2A1A'][seed]))
                     if staring > 0:
@@ -251,7 +251,7 @@ def shot_ROW14(cv, t):
 def shot_AISLE(cv, t):
     cam = Cam(0.0, eye=1.4, vy=860)
     cabin(cv, cam, t)
-    z = max(2.2, 9.0 - (t - B['cart']) * 2.4)                                              # the cart comes down the aisle
+    z = max(1.5, 6.0 - (t - B['cart']) * 2.2)                                              # the cart comes down the aisle
     fx, fy = cam.p(0, 0, z + 0.6)
     purser(cv, fx, fy, cam.scale(z + 0.6, 2.4) * 1150 / 2400, t=t, rim=WARM, rim_a=0.3)
     cv.drawPath(quad(cam, [(-0.3, 0, z), (0.3, 0, z), (0.3, 1.0, z), (-0.3, 1.0, z)]), paint('#B8BCC4'))
@@ -368,8 +368,8 @@ def shot_REVEAL(cv, t):
     cam = Cam(0.0, eye=1.2, vy=900)
     cabin(cv, cam, t, bins_moving=0.4)
     u = min(1.0, max(0.0, (t - B['reveal']) / 1.8))
-    fx, fy = cam.p(0, 0, 4.0)
-    sc = cam.scale(4.0, 2.4) * 1150 / 2400
+    fx, fy = cam.p(0, 0, 3.2)
+    sc = cam.scale(3.2, 2.4) * 1150 / 2400
     purser(cv, fx, fy - (1 - u) * 900, sc, t=t, neck=0.15 + 0.55 * u, mask=1.0 if u > 0.6 else 0.0, reach=0.5 * u, blood_=1.0,
            wrong=1.0, rim=RED, rim_a=0.7)
     tint(cv, t)
@@ -394,7 +394,7 @@ def shot_CEILING(cv, t):
     cam = Cam(0.0, eye=1.0, vy=1250)
     cabin(cv, cam, t, masks=1.0)
     u = t - B['ceiling']
-    z = max(2.0, 9.0 - u * 4.0)                                                              # crawling along the ceiling at us
+    z = max(1.4, 5.5 - u * 3.0)                                                              # crawling along the ceiling at us
     fx, fy = cam.p(0, 2.4, z)
     sc = cam.scale(z, 2.4) * 1150 / 2400
     cv.save(); cv.translate(fx, fy); cv.rotate(180)
@@ -407,7 +407,7 @@ def shot_CEILING(cv, t):
 def shot_FACE(cv, t):
     cv.drawRect(skia.Rect(0, 0, W, H), paint('#120606'))
     cv.save(); cv.translate(540, 1000); cv.rotate(180)
-    purser(cv, 0, -3700, 2.6, t=t, neck=0.0, mask=1.0, blood_=1.0, rim=RED, rim_a=0.8)
+    purser(cv, 0, 5600, 2.5, t=t, neck=0.0, mask=1.0, blood_=1.0, rim=RED, rim_a=0.8)
     cv.restore()
     tint(cv, t)
     shade(cv, (540, 1000), 900, 0.4)

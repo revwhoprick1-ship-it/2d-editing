@@ -5,9 +5,9 @@ import json, os
 import numpy as np, soundfile as sf
 HERE = os.path.dirname(os.path.abspath(__file__))
 N = os.path.join(HERE, 'narration')
-GAP = {'B01': 0.8, 'A02': 1.4, 'B02': 0.7, 'A03': 0.4, 'L02': 1.3, 'L03': 2.4, 'M05': 1.0, 'B03': 2.6, 'B04': 0.3, 'M06': 2.2,
-       'M07': 0.5, 'X01': 1.6, 'A04': 1.6}
-TAIL = 1.0
+GAP = {'B01': 0.8, 'A02': 1.4, 'B02': 0.7, 'A03': 0.4, 'L02': 1.3, 'L03': 1.9, 'M05': 1.0, 'B03': 2.0, 'B04': 0.3, 'M06': 1.8,
+       'M07': 0.5, 'X01': 1.2, 'A04': 1.2}
+TAIL = 0.7
 src = json.load(open(os.path.join(N, 'timing_tts.json') if os.path.exists(os.path.join(N, 'timing_tts.json')) else os.path.join(N, 'timing.json')))
 json.dump(src, open(os.path.join(N, 'timing_tts.json'), 'w'), indent=1)
 script = {l['id']: l for l in json.load(open(os.path.join(HERE, '..', 'script.json')))['lines']}

@@ -1,0 +1,1125 @@
+{
+ "voice": "qwen3-tts",
+ "sample_rate": 24000,
+ "lines": [
+  {
+   "id": "A01",
+   "who": "A",
+   "text": "The seatbelt sign is on. Nobody unbuckles. For any reason.",
+   "start": 0.0,
+   "end": 4.057,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "L01",
+   "who": "L",
+   "text": "Any reason? Bro, I drank four Sprites.",
+   "start": 4.357,
+   "end": 7.204,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "M01",
+   "who": "M",
+   "text": "Lawrence. Don't.",
+   "start": 7.404,
+   "end": 8.558,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "B01",
+   "who": "B",
+   "text": "Guys... look at the map. We've been circling the same spot for six hours.",
+   "start": 9.758,
+   "end": 13.67,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "M02",
+   "who": "M",
+   "text": "And why is row fourteen empty... with every seatbelt still buckled?",
+   "start": 13.97,
+   "end": 17.47,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "A02",
+   "who": "A",
+   "text": "Something to drink?",
+   "start": 19.37,
+   "end": 20.219,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "M03",
+   "who": "M",
+   "text": "Bob. Don't look at her feet.",
+   "start": 20.719,
+   "end": 22.609,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "B02",
+   "who": "B",
+   "text": "Why not?",
+   "start": 23.609,
+   "end": 24.198,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "A03",
+   "who": "A",
+   "text": "You looked.",
+   "start": 25.198,
+   "end": 25.754,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "L02",
+   "who": "L",
+   "text": "Okay. I'm not peeing in a bottle. Ten seconds. I'll be quick.",
+   "start": 27.654,
+   "end": 31.276,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "M04",
+   "who": "M",
+   "text": "Lawrence, no!",
+   "start": 31.476,
+   "end": 32.744,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "L03",
+   "who": "L",
+   "text": "Why is everyone looking at me?",
+   "start": 35.444,
+   "end": 36.866,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "M05",
+   "who": "M",
+   "text": "Lawrence, get down!",
+   "start": 38.666,
+   "end": 40.395,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "B03",
+   "who": "B",
+   "text": "It folded him. It folded him into the bin!",
+   "start": 42.995,
+   "end": 45.341,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "C01",
+   "who": "C",
+   "text": "This is your captain. The passenger out of his seat... has been stowed.",
+   "start": 45.741,
+   "end": 49.371,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "B04",
+   "who": "B",
+   "text": "Every bin is moving.",
+   "start": 50.271,
+   "end": 51.4,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "M06",
+   "who": "M",
+   "text": "Bob. Whatever happens, keep your belt on.",
+   "start": 53.8,
+   "end": 56.685,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "B05",
+   "who": "B",
+   "text": "My belt... it's broken!",
+   "start": 57.285,
+   "end": 58.855,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "M07",
+   "who": "M",
+   "text": "Hold my arm! Don't let go!",
+   "start": 59.655,
+   "end": 61.368,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "X01",
+   "who": "X",
+   "text": "Bro... it's just ten seconds.",
+   "start": 63.168,
+   "end": 65.181,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "A04",
+   "who": "A",
+   "text": "We have landed. You may now unbuckle.",
+   "start": 66.981,
+   "end": 69.112,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "B06",
+   "who": "B",
+   "text": "We made it! We actually made it!",
+   "start": 69.512,
+   "end": 71.213,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "M08",
+   "who": "M",
+   "text": "Bob... look out the window.",
+   "start": 71.613,
+   "end": 73.174,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "M09",
+   "who": "M",
+   "text": "We never landed.",
+   "start": 73.774,
+   "end": 74.636,
+   "delivery": "",
+   "speed": 1.08
+  }
+ ],
+ "words": [
+  {
+   "line": "A01",
+   "text": "The",
+   "start": 0.0,
+   "end": 0.14
+  },
+  {
+   "line": "A01",
+   "text": "seatbelt",
+   "start": 0.14,
+   "end": 0.46
+  },
+  {
+   "line": "A01",
+   "text": "sign",
+   "start": 0.46,
+   "end": 0.72
+  },
+  {
+   "line": "A01",
+   "text": "is",
+   "start": 0.72,
+   "end": 0.86
+  },
+  {
+   "line": "A01",
+   "text": "on.",
+   "start": 0.86,
+   "end": 1.2
+  },
+  {
+   "line": "A01",
+   "text": "Nobody",
+   "start": 1.96,
+   "end": 2.28
+  },
+  {
+   "line": "A01",
+   "text": "unbuckles.",
+   "start": 2.28,
+   "end": 2.88
+  },
+  {
+   "line": "A01",
+   "text": "For",
+   "start": 2.88,
+   "end": 3.32
+  },
+  {
+   "line": "A01",
+   "text": "any",
+   "start": 3.32,
+   "end": 3.56
+  },
+  {
+   "line": "A01",
+   "text": "reason.",
+   "start": 3.56,
+   "end": 3.86
+  },
+  {
+   "line": "L01",
+   "text": "Any",
+   "start": 4.357,
+   "end": 4.597
+  },
+  {
+   "line": "L01",
+   "text": "reason?",
+   "start": 4.597,
+   "end": 4.957
+  },
+  {
+   "line": "L01",
+   "text": "Bro,",
+   "start": 5.277,
+   "end": 5.277
+  },
+  {
+   "line": "L01",
+   "text": "I",
+   "start": 5.737,
+   "end": 5.917
+  },
+  {
+   "line": "L01",
+   "text": "drank",
+   "start": 5.917,
+   "end": 6.197
+  },
+  {
+   "line": "L01",
+   "text": "four",
+   "start": 6.197,
+   "end": 6.517
+  },
+  {
+   "line": "L01",
+   "text": "Sprites.",
+   "start": 6.517,
+   "end": 6.897
+  },
+  {
+   "line": "M01",
+   "text": "Lawrence.",
+   "start": 7.404,
+   "end": 7.844
+  },
+  {
+   "line": "M01",
+   "text": "Don't.",
+   "start": 8.144,
+   "end": 8.524
+  },
+  {
+   "line": "B01",
+   "text": "Guys...",
+   "start": 9.758,
+   "end": 10.058
+  },
+  {
+   "line": "B01",
+   "text": "look",
+   "start": 10.438,
+   "end": 10.558
+  },
+  {
+   "line": "B01",
+   "text": "at",
+   "start": 10.558,
+   "end": 10.658
+  },
+  {
+   "line": "B01",
+   "text": "the",
+   "start": 10.658,
+   "end": 10.738
+  },
+  {
+   "line": "B01",
+   "text": "map.",
+   "start": 10.738,
+   "end": 10.938
+  },
+  {
+   "line": "B01",
+   "text": "We've",
+   "start": 11.458,
+   "end": 11.598
+  },
+  {
+   "line": "B01",
+   "text": "been",
+   "start": 11.598,
+   "end": 11.698
+  },
+  {
+   "line": "B01",
+   "text": "circling",
+   "start": 11.698,
+   "end": 12.038
+  },
+  {
+   "line": "B01",
+   "text": "the",
+   "start": 12.038,
+   "end": 12.238
+  },
+  {
+   "line": "B01",
+   "text": "same",
+   "start": 12.238,
+   "end": 12.438
+  },
+  {
+   "line": "B01",
+   "text": "spot",
+   "start": 12.438,
+   "end": 12.738
+  },
+  {
+   "line": "B01",
+   "text": "for",
+   "start": 12.738,
+   "end": 12.938
+  },
+  {
+   "line": "B01",
+   "text": "six",
+   "start": 12.938,
+   "end": 13.178
+  },
+  {
+   "line": "B01",
+   "text": "hours.",
+   "start": 13.178,
+   "end": 13.478
+  },
+  {
+   "line": "M02",
+   "text": "And",
+   "start": 13.971,
+   "end": 14.271
+  },
+  {
+   "line": "M02",
+   "text": "why",
+   "start": 14.271,
+   "end": 14.451
+  },
+  {
+   "line": "M02",
+   "text": "is",
+   "start": 14.451,
+   "end": 14.611
+  },
+  {
+   "line": "M02",
+   "text": "row",
+   "start": 14.611,
+   "end": 14.75
+  },
+  {
+   "line": "M02",
+   "text": "fourteen",
+   "start": 14.75,
+   "end": 15.17
+  },
+  {
+   "line": "M02",
+   "text": "empty...",
+   "start": 15.17,
+   "end": 15.471
+  },
+  {
+   "line": "M02",
+   "text": "with",
+   "start": 15.471,
+   "end": 15.85
+  },
+  {
+   "line": "M02",
+   "text": "every",
+   "start": 15.85,
+   "end": 16.191
+  },
+  {
+   "line": "M02",
+   "text": "seatbelt",
+   "start": 16.191,
+   "end": 16.65
+  },
+  {
+   "line": "M02",
+   "text": "still",
+   "start": 16.65,
+   "end": 16.989
+  },
+  {
+   "line": "M02",
+   "text": "buckled?",
+   "start": 16.989,
+   "end": 17.391
+  },
+  {
+   "line": "A02",
+   "text": "Something",
+   "start": 19.37,
+   "end": 19.65
+  },
+  {
+   "line": "A02",
+   "text": "to",
+   "start": 19.65,
+   "end": 19.85
+  },
+  {
+   "line": "A02",
+   "text": "drink?",
+   "start": 19.85,
+   "end": 20.03
+  },
+  {
+   "line": "M03",
+   "text": "Bob.",
+   "start": 20.719,
+   "end": 20.979
+  },
+  {
+   "line": "M03",
+   "text": "Don't",
+   "start": 21.559,
+   "end": 21.879
+  },
+  {
+   "line": "M03",
+   "text": "look",
+   "start": 21.879,
+   "end": 21.998
+  },
+  {
+   "line": "M03",
+   "text": "at",
+   "start": 21.998,
+   "end": 22.099
+  },
+  {
+   "line": "M03",
+   "text": "her",
+   "start": 22.099,
+   "end": 22.239
+  },
+  {
+   "line": "M03",
+   "text": "feet.",
+   "start": 22.239,
+   "end": 22.459
+  },
+  {
+   "line": "B02",
+   "text": "Why",
+   "start": 23.609,
+   "end": 23.809
+  },
+  {
+   "line": "B02",
+   "text": "not?",
+   "start": 23.809,
+   "end": 24.049
+  },
+  {
+   "line": "A03",
+   "text": "You",
+   "start": 25.198,
+   "end": 25.338
+  },
+  {
+   "line": "A03",
+   "text": "looked.",
+   "start": 25.338,
+   "end": 25.538
+  },
+  {
+   "line": "L02",
+   "text": "Okay.",
+   "start": 27.654,
+   "end": 27.974
+  },
+  {
+   "line": "L02",
+   "text": "I'm",
+   "start": 28.334,
+   "end": 28.494
+  },
+  {
+   "line": "L02",
+   "text": "not",
+   "start": 28.494,
+   "end": 28.634
+  },
+  {
+   "line": "L02",
+   "text": "peeing",
+   "start": 28.634,
+   "end": 28.894
+  },
+  {
+   "line": "L02",
+   "text": "in",
+   "start": 28.894,
+   "end": 28.954
+  },
+  {
+   "line": "L02",
+   "text": "a",
+   "start": 28.954,
+   "end": 29.054
+  },
+  {
+   "line": "L02",
+   "text": "bottle.",
+   "start": 29.054,
+   "end": 29.274
+  },
+  {
+   "line": "L02",
+   "text": "Ten",
+   "start": 29.694,
+   "end": 29.874
+  },
+  {
+   "line": "L02",
+   "text": "seconds.",
+   "start": 29.874,
+   "end": 30.274
+  },
+  {
+   "line": "L02",
+   "text": "I'll",
+   "start": 30.594,
+   "end": 30.774
+  },
+  {
+   "line": "L02",
+   "text": "be",
+   "start": 30.774,
+   "end": 30.894
+  },
+  {
+   "line": "L02",
+   "text": "quick.",
+   "start": 30.894,
+   "end": 31.134
+  },
+  {
+   "line": "M04",
+   "text": "Lawrence,",
+   "start": 31.476,
+   "end": 31.856
+  },
+  {
+   "line": "M04",
+   "text": "no!",
+   "start": 32.256,
+   "end": 32.536
+  },
+  {
+   "line": "L03",
+   "text": "Why",
+   "start": 35.444,
+   "end": 35.664
+  },
+  {
+   "line": "L03",
+   "text": "is",
+   "start": 35.664,
+   "end": 35.844
+  },
+  {
+   "line": "L03",
+   "text": "everyone",
+   "start": 35.844,
+   "end": 36.064
+  },
+  {
+   "line": "L03",
+   "text": "looking",
+   "start": 36.064,
+   "end": 36.384
+  },
+  {
+   "line": "L03",
+   "text": "at",
+   "start": 36.384,
+   "end": 36.604
+  },
+  {
+   "line": "L03",
+   "text": "me?",
+   "start": 36.604,
+   "end": 36.784
+  },
+  {
+   "line": "M05",
+   "text": "Lawrence,",
+   "start": 38.666,
+   "end": 39.086
+  },
+  {
+   "line": "M05",
+   "text": "get",
+   "start": 39.646,
+   "end": 39.866
+  },
+  {
+   "line": "M05",
+   "text": "down!",
+   "start": 39.866,
+   "end": 40.206
+  },
+  {
+   "line": "B03",
+   "text": "It",
+   "start": 42.995,
+   "end": 43.255
+  },
+  {
+   "line": "B03",
+   "text": "folded",
+   "start": 43.255,
+   "end": 43.516
+  },
+  {
+   "line": "B03",
+   "text": "him.",
+   "start": 43.516,
+   "end": 43.777
+  },
+  {
+   "line": "B03",
+   "text": "It",
+   "start": 43.777,
+   "end": 44.038
+  },
+  {
+   "line": "B03",
+   "text": "folded",
+   "start": 44.038,
+   "end": 44.298
+  },
+  {
+   "line": "B03",
+   "text": "him",
+   "start": 44.298,
+   "end": 44.559
+  },
+  {
+   "line": "B03",
+   "text": "into",
+   "start": 44.559,
+   "end": 44.82
+  },
+  {
+   "line": "B03",
+   "text": "the",
+   "start": 44.82,
+   "end": 45.08
+  },
+  {
+   "line": "B03",
+   "text": "bin!",
+   "start": 45.08,
+   "end": 45.341
+  },
+  {
+   "line": "C01",
+   "text": "This",
+   "start": 45.741,
+   "end": 45.921
+  },
+  {
+   "line": "C01",
+   "text": "is",
+   "start": 45.921,
+   "end": 46.061
+  },
+  {
+   "line": "C01",
+   "text": "your",
+   "start": 46.061,
+   "end": 46.221
+  },
+  {
+   "line": "C01",
+   "text": "captain.",
+   "start": 46.221,
+   "end": 46.581
+  },
+  {
+   "line": "C01",
+   "text": "The",
+   "start": 47.141,
+   "end": 47.261
+  },
+  {
+   "line": "C01",
+   "text": "passenger",
+   "start": 47.261,
+   "end": 47.641
+  },
+  {
+   "line": "C01",
+   "text": "out",
+   "start": 47.641,
+   "end": 47.941
+  },
+  {
+   "line": "C01",
+   "text": "of",
+   "start": 47.941,
+   "end": 48.061
+  },
+  {
+   "line": "C01",
+   "text": "his",
+   "start": 48.061,
+   "end": 48.161
+  },
+  {
+   "line": "C01",
+   "text": "seat...",
+   "start": 48.161,
+   "end": 48.461
+  },
+  {
+   "line": "C01",
+   "text": "has",
+   "start": 48.461,
+   "end": 48.641
+  },
+  {
+   "line": "C01",
+   "text": "been",
+   "start": 48.641,
+   "end": 48.841
+  },
+  {
+   "line": "C01",
+   "text": "stowed.",
+   "start": 48.841,
+   "end": 49.241
+  },
+  {
+   "line": "B04",
+   "text": "Every",
+   "start": 50.271,
+   "end": 50.531
+  },
+  {
+   "line": "B04",
+   "text": "bin",
+   "start": 50.531,
+   "end": 50.751
+  },
+  {
+   "line": "B04",
+   "text": "is",
+   "start": 50.751,
+   "end": 50.951
+  },
+  {
+   "line": "B04",
+   "text": "moving.",
+   "start": 50.951,
+   "end": 51.211
+  },
+  {
+   "line": "M06",
+   "text": "Bob.",
+   "start": 53.8,
+   "end": 54.02
+  },
+  {
+   "line": "M06",
+   "text": "Whatever",
+   "start": 54.58,
+   "end": 54.78
+  },
+  {
+   "line": "M06",
+   "text": "happens,",
+   "start": 54.78,
+   "end": 55.28
+  },
+  {
+   "line": "M06",
+   "text": "keep",
+   "start": 55.74,
+   "end": 55.84
+  },
+  {
+   "line": "M06",
+   "text": "your",
+   "start": 55.84,
+   "end": 56.02
+  },
+  {
+   "line": "M06",
+   "text": "belt",
+   "start": 56.02,
+   "end": 56.24
+  },
+  {
+   "line": "M06",
+   "text": "on.",
+   "start": 56.24,
+   "end": 56.54
+  },
+  {
+   "line": "B05",
+   "text": "My",
+   "start": 57.285,
+   "end": 57.425
+  },
+  {
+   "line": "B05",
+   "text": "belt...",
+   "start": 57.425,
+   "end": 57.705
+  },
+  {
+   "line": "B05",
+   "text": "it's",
+   "start": 58.225,
+   "end": 58.385
+  },
+  {
+   "line": "B05",
+   "text": "broken!",
+   "start": 58.385,
+   "end": 58.645
+  },
+  {
+   "line": "M07",
+   "text": "Hold",
+   "start": 59.655,
+   "end": 59.935
+  },
+  {
+   "line": "M07",
+   "text": "my",
+   "start": 59.935,
+   "end": 60.135
+  },
+  {
+   "line": "M07",
+   "text": "arm!",
+   "start": 60.135,
+   "end": 60.435
+  },
+  {
+   "line": "M07",
+   "text": "Don't",
+   "start": 60.595,
+   "end": 60.795
+  },
+  {
+   "line": "M07",
+   "text": "let",
+   "start": 60.795,
+   "end": 60.895
+  },
+  {
+   "line": "M07",
+   "text": "go!",
+   "start": 60.895,
+   "end": 61.175
+  },
+  {
+   "line": "X01",
+   "text": "Bro...",
+   "start": 63.168,
+   "end": 63.448
+  },
+  {
+   "line": "X01",
+   "text": "it's",
+   "start": 63.748,
+   "end": 63.948
+  },
+  {
+   "line": "X01",
+   "text": "just",
+   "start": 63.948,
+   "end": 64.148
+  },
+  {
+   "line": "X01",
+   "text": "ten",
+   "start": 64.148,
+   "end": 64.468
+  },
+  {
+   "line": "X01",
+   "text": "seconds.",
+   "start": 64.468,
+   "end": 64.848
+  },
+  {
+   "line": "A04",
+   "text": "We",
+   "start": 66.981,
+   "end": 67.101
+  },
+  {
+   "line": "A04",
+   "text": "have",
+   "start": 67.101,
+   "end": 67.241
+  },
+  {
+   "line": "A04",
+   "text": "landed.",
+   "start": 67.241,
+   "end": 67.621
+  },
+  {
+   "line": "A04",
+   "text": "You",
+   "start": 68.001,
+   "end": 68.081
+  },
+  {
+   "line": "A04",
+   "text": "may",
+   "start": 68.081,
+   "end": 68.221
+  },
+  {
+   "line": "A04",
+   "text": "now",
+   "start": 68.221,
+   "end": 68.501
+  },
+  {
+   "line": "A04",
+   "text": "unbuckle.",
+   "start": 68.501,
+   "end": 68.901
+  },
+  {
+   "line": "B06",
+   "text": "We",
+   "start": 69.512,
+   "end": 69.632
+  },
+  {
+   "line": "B06",
+   "text": "made",
+   "start": 69.632,
+   "end": 69.832
+  },
+  {
+   "line": "B06",
+   "text": "it!",
+   "start": 69.832,
+   "end": 69.992
+  },
+  {
+   "line": "B06",
+   "text": "We",
+   "start": 70.252,
+   "end": 70.332
+  },
+  {
+   "line": "B06",
+   "text": "actually",
+   "start": 70.332,
+   "end": 70.672
+  },
+  {
+   "line": "B06",
+   "text": "made",
+   "start": 70.672,
+   "end": 70.952
+  },
+  {
+   "line": "B06",
+   "text": "it!",
+   "start": 70.952,
+   "end": 71.092
+  },
+  {
+   "line": "M08",
+   "text": "Bob...",
+   "start": 71.613,
+   "end": 71.833
+  },
+  {
+   "line": "M08",
+   "text": "look",
+   "start": 72.313,
+   "end": 72.473
+  },
+  {
+   "line": "M08",
+   "text": "out",
+   "start": 72.473,
+   "end": 72.653
+  },
+  {
+   "line": "M08",
+   "text": "the",
+   "start": 72.653,
+   "end": 72.773
+  },
+  {
+   "line": "M08",
+   "text": "window.",
+   "start": 72.773,
+   "end": 72.973
+  },
+  {
+   "line": "M09",
+   "text": "We",
+   "start": 73.774,
+   "end": 73.874
+  },
+  {
+   "line": "M09",
+   "text": "never",
+   "start": 73.874,
+   "end": 74.094
+  },
+  {
+   "line": "M09",
+   "text": "landed.",
+   "start": 74.094,
+   "end": 74.434
+  }
+ ],
+ "duration": 75.536
+}
