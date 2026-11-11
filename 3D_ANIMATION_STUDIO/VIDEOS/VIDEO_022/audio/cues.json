@@ -1,0 +1,378 @@
+{
+ "duration": 69.18,
+ "loop": false,
+ "narration": "narration/narration_raw.wav",
+ "narration_offset": 0.0,
+ "music": "music_score.wav",
+ "music_gain_db": 2,
+ "music_cue": "cue_video022",
+ "targets": {
+  "narration_lufs": -16,
+  "master_lufs": -14,
+  "true_peak": -3.2,
+  "duck_db": 5
+ },
+ "cues": [
+  {
+   "t": 0.0,
+   "file": "AUDIO/sound_effects/comedy/house_night.flac",
+   "gain": -2,
+   "bus": "amb",
+   "note": "night house",
+   "loop": true,
+   "dur": 69.18
+  },
+  {
+   "t": 0.6,
+   "file": "AUDIO/sound_effects/movement/whoosh_short.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "the vase tips"
+  },
+  {
+   "t": 4.884,
+   "file": "AUDIO/sound_effects/comedy/vase_shatter.flac",
+   "gain": -3,
+   "bus": "sfx",
+   "note": "CRASH"
+  },
+  {
+   "t": 4.984,
+   "file": "AUDIO/sound_effects/comedy/smoke_hiss.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "black smoke"
+  },
+  {
+   "t": 7.154,
+   "file": "AUDIO/sound_effects/comedy/stair_crawl.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "it slides under the bed",
+   "dur": 2.0,
+   "fade_out": 0.5
+  },
+  {
+   "t": 11.724,
+   "file": "AUDIO/sound_effects/comedy/paper_rustle.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "the note"
+  },
+  {
+   "t": 17.899,
+   "file": "AUDIO/sound_effects/comedy/pen_scribble.flac",
+   "gain": -19,
+   "bus": "sfx",
+   "note": "rule 1",
+   "dur": 0.8
+  },
+  {
+   "t": 20.099,
+   "file": "AUDIO/sound_effects/comedy/pen_scribble.flac",
+   "gain": -19,
+   "bus": "sfx",
+   "note": "rule 2",
+   "dur": 0.8
+  },
+  {
+   "t": 22.159,
+   "file": "AUDIO/sound_effects/comedy/pen_scribble.flac",
+   "gain": -19,
+   "bus": "sfx",
+   "note": "rule 3",
+   "dur": 0.8
+  },
+  {
+   "t": 23.402,
+   "file": "AUDIO/sound_effects/comedy/glass_tap.flac",
+   "gain": -27,
+   "bus": "sfx",
+   "note": "counting pieces"
+  },
+  {
+   "t": 23.462,
+   "file": "AUDIO/sound_effects/comedy/glass_tap.flac",
+   "gain": -27,
+   "bus": "sfx",
+   "note": "counting pieces"
+  },
+  {
+   "t": 23.522,
+   "file": "AUDIO/sound_effects/comedy/glass_tap.flac",
+   "gain": -27,
+   "bus": "sfx",
+   "note": "counting pieces"
+  },
+  {
+   "t": 23.582,
+   "file": "AUDIO/sound_effects/comedy/glass_tap.flac",
+   "gain": -27,
+   "bus": "sfx",
+   "note": "counting pieces"
+  },
+  {
+   "t": 23.642,
+   "file": "AUDIO/sound_effects/comedy/glass_tap.flac",
+   "gain": -27,
+   "bus": "sfx",
+   "note": "counting pieces"
+  },
+  {
+   "t": 23.702,
+   "file": "AUDIO/sound_effects/comedy/glass_tap.flac",
+   "gain": -27,
+   "bus": "sfx",
+   "note": "counting pieces"
+  },
+  {
+   "t": 23.762,
+   "file": "AUDIO/sound_effects/comedy/glass_tap.flac",
+   "gain": -27,
+   "bus": "sfx",
+   "note": "counting pieces"
+  },
+  {
+   "t": 23.822,
+   "file": "AUDIO/sound_effects/comedy/glass_tap.flac",
+   "gain": -27,
+   "bus": "sfx",
+   "note": "counting pieces"
+  },
+  {
+   "t": 23.882,
+   "file": "AUDIO/sound_effects/comedy/glass_tap.flac",
+   "gain": -27,
+   "bus": "sfx",
+   "note": "counting pieces"
+  },
+  {
+   "t": 23.942,
+   "file": "AUDIO/sound_effects/comedy/glass_tap.flac",
+   "gain": -27,
+   "bus": "sfx",
+   "note": "counting pieces"
+  },
+  {
+   "t": 24.002,
+   "file": "AUDIO/sound_effects/comedy/glass_tap.flac",
+   "gain": -27,
+   "bus": "sfx",
+   "note": "counting pieces"
+  },
+  {
+   "t": 24.062,
+   "file": "AUDIO/sound_effects/comedy/glass_tap.flac",
+   "gain": -27,
+   "bus": "sfx",
+   "note": "counting pieces"
+  },
+  {
+   "t": 24.122,
+   "file": "AUDIO/sound_effects/comedy/glass_tap.flac",
+   "gain": -27,
+   "bus": "sfx",
+   "note": "counting pieces"
+  },
+  {
+   "t": 24.182,
+   "file": "AUDIO/sound_effects/comedy/glass_tap.flac",
+   "gain": -27,
+   "bus": "sfx",
+   "note": "counting pieces"
+  },
+  {
+   "t": 24.242,
+   "file": "AUDIO/sound_effects/comedy/glass_tap.flac",
+   "gain": -27,
+   "bus": "sfx",
+   "note": "counting pieces"
+  },
+  {
+   "t": 24.302,
+   "file": "AUDIO/sound_effects/comedy/glass_tap.flac",
+   "gain": -27,
+   "bus": "sfx",
+   "note": "counting pieces"
+  },
+  {
+   "t": 24.362,
+   "file": "AUDIO/sound_effects/comedy/glass_tap.flac",
+   "gain": -27,
+   "bus": "sfx",
+   "note": "counting pieces"
+  },
+  {
+   "t": 24.422,
+   "file": "AUDIO/sound_effects/comedy/glass_tap.flac",
+   "gain": -27,
+   "bus": "sfx",
+   "note": "counting pieces"
+  },
+  {
+   "t": 24.482,
+   "file": "AUDIO/sound_effects/comedy/glass_tap.flac",
+   "gain": -27,
+   "bus": "sfx",
+   "note": "counting pieces"
+  },
+  {
+   "t": 24.542,
+   "file": "AUDIO/sound_effects/comedy/glass_tap.flac",
+   "gain": -27,
+   "bus": "sfx",
+   "note": "counting pieces"
+  },
+  {
+   "t": 24.602,
+   "file": "AUDIO/sound_effects/comedy/glass_tap.flac",
+   "gain": -27,
+   "bus": "sfx",
+   "note": "counting pieces"
+  },
+  {
+   "t": 24.662,
+   "file": "AUDIO/sound_effects/comedy/glass_tap.flac",
+   "gain": -27,
+   "bus": "sfx",
+   "note": "counting pieces"
+  },
+  {
+   "t": 24.722,
+   "file": "AUDIO/sound_effects/comedy/glass_tap.flac",
+   "gain": -27,
+   "bus": "sfx",
+   "note": "counting pieces"
+  },
+  {
+   "t": 24.802,
+   "file": "AUDIO/sound_effects/comedy/subliminal_hit.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "23 / 24"
+  },
+  {
+   "t": 29.278,
+   "file": "AUDIO/sound_effects/bio/heartbeat_muffled.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "her voice downstairs"
+  },
+  {
+   "t": 31.897,
+   "file": "AUDIO/sound_effects/comedy/stamp_thud.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "label: MOM'S CAR: GONE"
+  },
+  {
+   "t": 34.933,
+   "file": "AUDIO/sound_effects/comedy/phone_buzz.flac",
+   "gain": -7,
+   "bus": "sfx",
+   "note": "Grandma calling"
+  },
+  {
+   "t": 40.056,
+   "file": "AUDIO/sound_effects/comedy/creak_long.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "the floor right outside your door"
+  },
+  {
+   "t": 40.656,
+   "file": "AUDIO/sound_effects/comedy/knob_turn.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "the handle turns"
+  },
+  {
+   "t": 42.7,
+   "file": "AUDIO/sound_effects/comedy/tinnitus.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "eyes burning",
+   "dur": 5.9510000000000005
+  },
+  {
+   "t": 42.7,
+   "file": "AUDIO/sound_effects/bio/heartbeat_lubdub.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "heartbeat speeds up",
+   "loop": true,
+   "dur": 5.9510000000000005
+  },
+  {
+   "t": 48.811,
+   "file": "AUDIO/sound_effects/comedy/scare_slam.flac",
+   "gain": -4,
+   "bus": "sfx",
+   "note": "JS1: you blinked. it is right there"
+  },
+  {
+   "t": 48.831,
+   "file": "AUDIO/sound_effects/comedy/scare_shriek.flac",
+   "gain": -7,
+   "bus": "sfx",
+   "note": "JS1 shriek"
+  },
+  {
+   "t": 49.171,
+   "file": "AUDIO/sound_effects/comedy/mimic_click.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "porcelain clicking into place",
+   "loop": true,
+   "dur": 2.833999999999998
+  },
+  {
+   "t": 52.305,
+   "file": "AUDIO/sound_effects/comedy/subliminal_hit.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "the face piece"
+  },
+  {
+   "t": 54.926,
+   "file": "AUDIO/sound_effects/bio/heartbeat_lubdub.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "heartbeat under the choice",
+   "loop": true,
+   "dur": 13.185999999999993
+  },
+  {
+   "t": 54.926,
+   "file": "AUDIO/sound_effects/comedy/bone_clicks.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "it steps closer",
+   "loop": true,
+   "dur": 13.185999999999993
+  },
+  {
+   "t": 66.728,
+   "file": "AUDIO/sound_effects/comedy/whispers.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "\"Blink.\"",
+   "dur": 1.0,
+   "fade_out": 0.3
+  },
+  {
+   "t": 68.112,
+   "file": "AUDIO/sound_effects/comedy/scare_slam.flac",
+   "gain": -3,
+   "bus": "sfx",
+   "note": "JS2 end lunge"
+  },
+  {
+   "t": 68.132,
+   "file": "AUDIO/sound_effects/comedy/scare_shriek.flac",
+   "gain": -5,
+   "bus": "sfx",
+   "note": "JS2 shriek"
+  }
+ ]
+}

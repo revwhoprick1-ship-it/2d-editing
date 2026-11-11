@@ -65,6 +65,10 @@ for sg in SEGMENTS:
     else:
         _runs.append(dict(sg))
 SEGMENTS = [S(r['t0'], r['t1'], r['src']) for r in _runs]          # camera moves are drawn in the scene (parallax)
+for k, sg in enumerate(SEGMENTS):                                      # shots without a drawn camera move get a slow push (no still frames)
+    if sg['src'] in ('NOTE', 'PIECES', 'WINDOW', 'DOOR', 'PHONE', 'EYES', 'HAND'):
+        a_, b_ = (1.0, 1.1) if k % 2 == 0 else (1.1, 1.0)
+        sg['zoom'] = [(sg['t0'], a_, 0.5, 0.45), (sg['t1'], b_, 0.5, 0.45)]
 
 
 def override(t0, t1, job, **kw):
@@ -89,7 +93,7 @@ override(B['js2'], END, 'FACE', flash=[(B['js2'], 0.03)], shake=[(B['js2'], END,
 
 BLINKS = [(B['js1'] - 0.02, 0.08, 0.1, 0.06)]           # the forced blink: lids slam shut... and open on its face
 SCARES = [(B['js1'], B['js1'] + JS), (B['js2'], END)]
-CARD = dict(type='choice', y=930, header='WHAT DO YOU DO?', options=['GIVE IT THE FACE', 'SMASH THE FACE', "RUN TO GRANDMA'S"],
+CARD = dict(type='choice', y=1250, header='WHAT DO YOU DO?', options=['GIVE IT THE FACE', 'SMASH THE FACE', "RUN TO GRANDMA'S"],
             footer='FOLLOW FOR PART 2  ·  GRANDMA LEFT A 4TH RULE', stagger=0.35)
 OVERLAYS = [
     dict(type='hud3', t0=0.0, t1=END, y=190, size=48, hide=SCARES,

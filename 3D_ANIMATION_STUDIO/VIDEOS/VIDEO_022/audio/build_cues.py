@@ -4,7 +4,7 @@ import json, os, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.dirname(HERE))
 import edit_video022 as E  # noqa
-B, s, e, END = E.B, E.s, E.e, E.END
+B, s, e, END, JS = E.B, E.s, E.e, E.END, E.JS
 LIB = {d['name']: 'AUDIO/' + d['file'] for d in json.load(open(os.path.join(HERE, '..', '..', '..', 'AUDIO', 'sound_effects', 'LIBRARY.json')))}
 cues = []
 
