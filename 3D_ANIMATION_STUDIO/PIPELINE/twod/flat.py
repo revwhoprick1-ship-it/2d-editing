@@ -745,3 +745,113 @@ def purser(cv, x, y, s=1.0, t=0.0, neck=0.0, mask=0.0, reach=0.0, head_turn=0.0,
     cv.drawPath(head, paint(C(rim, rim_a), style='stroke', width=10, blur=4))
     cv.restore()
     cv.restore()
+
+
+def tenant(cv, x, y, s=1.0, t=0.0, assemble=1.0, mouth=0.0, reach=0.0, eyes_open=1.0, look=(0.0, 0.0), tilt=0.0, rim='#A8A4E0',
+           rim_a=0.6, ink=True):
+    """The Tenant (VIDEO_022, the vase): a body rebuilt from the broken vase. The broken BASE of the vase is its pelvis and
+    pours black smoke; above it, curved porcelain shards stacked into a torso, held by black wax seams that drip; Grandma's
+    blue painted rooms (windows, doors, stairs) cover the shards; a FACE-SHAPED HOLE in the chest (the missing piece); arms of
+    hinged shards ending in blade fingers; a tall cracked mask with two lidless eyes (it never blinks) and a ring of small
+    painted eyes on the brow that open (eyes_open). mouth 0..1 opens a jagged crack full of shard teeth.
+    assemble 0..1: the shards fly in from the floor and lock into place. Feet at (x, y); s=1 ~ 2400 px tall."""
+    POR, POR_SH, BLUE, WAX, VOID = '#ECE8DE', '#B8B2A6', '#2A4A9A', '#0A0A0E', '#050306'
+    rng = np.random.default_rng(22) if 'np' in globals() else None
+    cv.save(); cv.translate(x, y); cv.scale(s, s)
+    a = max(0.0, min(1.0, assemble))
+    off = lambda k: ((math.sin(k * 12.9) * 900) * (1 - a), (300 + abs(math.cos(k * 7.1)) * 600) * (1 - a), (k * 47 % 180) * (1 - a))  # noqa
+
+    def shard(k, pts, col=POR, pattern=True):
+        dx, dy, rot = off(k)
+        cv.save(); cv.translate(dx, dy)
+        cx = sum(p[0] for p in pts) / len(pts); cy = sum(p[1] for p in pts) / len(pts)
+        cv.rotate(rot, cx, cy)
+        pth = poly(pts)
+        cv.drawPath(pth, paint(col))
+        cv.save(); cv.clipPath(pth, skia.ClipOp.kIntersect, True)
+        cv.drawRect(skia.Rect(cx, cy - 400, cx + 600, cy + 400), paint(C(POR_SH, 0.6)))           # cel shadow on one side
+        if pattern:                                                                                # Grandma's painted rooms
+            for j in range(3):
+                wx, wy = cx - 50 + j * 45 + (k % 3) * 10, cy - 30 + (j % 2) * 40
+                cv.drawRect(skia.Rect(wx, wy, wx + 26, wy + 34), paint(BLUE, style='stroke', width=5))
+                cv.drawLine(wx + 13, wy, wx + 13, wy + 34, paint(BLUE, style='stroke', width=3))
+            cv.drawLine(cx - 90, cy + 60, cx + 90, cy + 50, paint(BLUE, style='stroke', width=6))
+            cv.drawPath(poly([(cx - 70, cy + 50), (cx - 40, cy + 20), (cx - 10, cy + 50)], closed=False), paint(BLUE, style='stroke', width=4))
+        cv.restore()
+        cv.drawPath(pth, paint(WAX, style='stroke', width=14))                                     # black wax seam
+        if k % 3 == 0:
+            cv.drawPath(blob([(cx + 10, pts[0][1] + 6), (cx + 22, pts[0][1] + 6), (cx + 18, pts[0][1] + 70), (cx + 14, pts[0][1] + 80)]), paint(WAX))  # drip
+        cv.restore()
+
+    # smoke pouring out of the broken base
+    for k in range(7):
+        ph = (t * 0.5 + k / 7) % 1.0
+        r = 60 + 140 * ph
+        cv.drawCircle(-140 + k * 45 + math.sin(t + k) * 30, -120 + ph * 160, r, paint(C(VOID, 0.55 * (1 - ph)), blur=30))
+    # BASE: the broken bottom half of the vase (bowl with a jagged rim)
+    rim_pts = [(-260, -330), (-200, -380), (-150, -340), (-90, -400), (-20, -350), (40, -410), (110, -345), (170, -390), (230, -335), (260, -330)]
+    shard(0, [(-260, -330), (-300, -200), (-250, -60), (-150, 0), (150, 0), (250, -60), (300, -200), (260, -330)] + rim_pts[::-1][1:-1])
+    cv.drawOval(skia.Rect(-150, -30, 150, 20), paint(BLUE))                                          # the foot ring
+    # TORSO: stacked curved shards
+    T = [((-150, -390), (150, -400), (175, -600), (-160, -620)), ((-165, -620), (175, -600), (190, -820), (-175, -830)),
+         ((-175, -830), (190, -820), (205, -1040), (-195, -1050)), ((-195, -1050), (205, -1040), (230, -1200), (0, -1260), (-225, -1210))]
+    for k, q in enumerate(T):
+        shard(k + 1, list(q))
+    # the face-shaped hole in the chest (the missing piece): void + faint red glow
+    if a > 0.8:
+        hole = blob([(-70, -980), (0, -1020), (70, -980), (80, -880), (40, -800), (0, -790), (-40, -800), (-80, -880)])
+        cv.drawPath(hole, paint(VOID))
+        cv.drawPath(hole, paint('#6A1010', style='stroke', width=6, blur=6))
+        cv.drawPath(hole, paint(WAX, style='stroke', width=12))
+    # ARMS: hinged shard plates + blade fingers
+    for side in (-1, 1):
+        r_ = reach * (1.0 if side > 0 else 0.7)
+        P = [(side * 200, -1180), (side * (300 + 150 * r_), -950 - 250 * r_), (side * (330 + 380 * r_), -700 - 450 * r_),
+             (side * (300 + 620 * r_), -470 - 600 * r_)]
+        for j in range(3):
+            (ax, ay), (bx, by) = P[j], P[j + 1]
+            nx, ny = (by - ay), -(bx - ax)
+            ln = math.hypot(nx, ny) or 1
+            nx, ny = nx / ln * 34, ny / ln * 34
+            shard(10 + j + (side > 0) * 5, [(ax + nx, ay + ny), (bx + nx * 0.7, by + ny * 0.7), (bx - nx * 0.7, by - ny * 0.7), (ax - nx, ay - ny)], pattern=False)
+            cv.drawCircle(bx, by, 26, paint(WAX))
+        fx, fy = P[3]
+        for f in range(5):
+            ang = math.radians(-40 + f * 20) + 0.5 * r_ * side
+            ex, ey = fx + math.sin(ang) * 230 * side, fy + math.cos(ang) * 230 - 150 * r_
+            cv.drawPath(poly([(fx - 12, fy), (fx + 12, fy), (ex, ey)]), paint(POR))
+            cv.drawPath(poly([(fx - 12, fy), (fx + 12, fy), (ex, ey)]), paint(WAX, style='stroke', width=5))
+    # HEAD: tall cracked mask on a short wax neck
+    dx, dy, rot = off(30)
+    cv.save(); cv.translate(dx, dy); cv.translate(0, -1260); cv.rotate(tilt + rot)
+    cv.drawRect(skia.Rect(-40, -120, 40, 0), paint(WAX))
+    cv.translate(0, -120)
+    head = blob([(-170, -60), (-150, -330), (0, -420), (150, -330), (170, -60), (110, 120), (0, 160), (-110, 120)])
+    cv.drawPath(head, paint(POR))
+    cv.save(); cv.clipPath(head, skia.ClipOp.kIntersect, True)
+    cv.drawRect(skia.Rect(40, -450, 300, 200), paint(C(POR_SH, 0.7)))
+    for k, (p0, p1) in enumerate((((-60, -400), (-20, -250)), ((-20, -250), (-90, -150)), ((90, -380), (60, -280)), ((60, -280), (110, -200)))):
+        cv.drawLine(p0[0], p0[1], p1[0], p1[1], paint(WAX, style='stroke', width=7))               # cracks
+    cv.restore()
+    for k in range(5):                                                                             # ring of painted eyes on the brow
+        ex, ey = -100 + k * 50, -300 + abs(k - 2) * 18
+        cv.drawOval(skia.Rect(ex - 18, ey - 10 * eyes_open - 2, ex + 18, ey + 10 * eyes_open + 2), paint(BLUE))
+        if eyes_open > 0.3:
+            cv.drawCircle(ex + look[0] * 5, ey, 6 * eyes_open, paint('#0A0A0A'))
+    for side in (-1, 1):                                                                           # two big LIDLESS eyes
+        ex, ey = side * 70, -150
+        cv.drawCircle(ex, ey, 52, paint('#F8F6F0'))
+        cv.drawCircle(ex, ey, 52, paint(BLUE, style='stroke', width=8))
+        cv.drawCircle(ex + look[0] * 14, ey + look[1] * 12, 20, paint('#0A0A0A'))
+        cv.drawCircle(ex + look[0] * 14 + 7, ey + look[1] * 12 - 7, 6, paint('#FFFFFF'))
+    mw, mh = 110, 20 + 150 * mouth                                                                 # jagged crack mouth
+    mpts = [(-mw, -10)] + [(-mw + i * mw / 4, -10 + (12 if i % 2 else -12)) for i in range(1, 8)] + [(mw, -10), (mw * 0.6, mh), (0, mh + 20), (-mw * 0.6, mh)]
+    cv.drawPath(poly(mpts), paint(VOID))
+    for i in range(7):
+        tx = -mw * 0.8 + i * mw * 1.6 / 6
+        cv.drawPath(poly([(tx - 12, -6), (tx + 12, -6), (tx, 20 + 30 * mouth)]), paint('#F4F0E6'))
+    cv.drawPath(head, paint(WAX, style='stroke', width=14))
+    if rim_a > 0:
+        cv.drawPath(head, paint(C(rim, rim_a), style='stroke', width=10, blur=6))
+    cv.restore()
+    cv.restore()

@@ -1,0 +1,142 @@
+{
+ "title": "Don't Touch The Vase (remake)",
+ "engine": "qwen3-tts",
+ "tempo": 1.06,
+ "qwen_voices": {
+  "N": "x",
+  "M": "x",
+  "O": "x",
+  "P": "x"
+ },
+ "lines": [
+  {
+   "id": "N01",
+   "who": "N",
+   "text": "Grandma has one rule. Never touch the vase.",
+   "delivery": "",
+   "pause_after": 0.1
+  },
+  {
+   "id": "N02",
+   "who": "N",
+   "text": "I just broke it.",
+   "delivery": "",
+   "pause_after": 0.5
+  },
+  {
+   "id": "N03",
+   "who": "N",
+   "text": "Something black crawled out of the pieces... and slid under my bed.",
+   "delivery": "",
+   "pause_after": 0.4
+  },
+  {
+   "id": "N04",
+   "who": "N",
+   "text": "Inside the vase, there was a note. In Grandma's handwriting.",
+   "delivery": "",
+   "pause_after": 0.2
+  },
+  {
+   "id": "N05",
+   "who": "N",
+   "text": "If it breaks. Don't blink when it's in the room. Don't answer when I call you. Count the pieces.",
+   "delivery": "",
+   "pause_after": 0.4
+  },
+  {
+   "id": "N06",
+   "who": "N",
+   "text": "Twenty-four pieces. I counted twenty-three.",
+   "delivery": "",
+   "pause_after": 0.3
+  },
+  {
+   "id": "N07",
+   "who": "N",
+   "text": "The face piece was gone.",
+   "delivery": "",
+   "pause_after": 0.5
+  },
+  {
+   "id": "O01",
+   "who": "O",
+   "text": "Sweetie? Dinner's ready!",
+   "delivery": "",
+   "pause_after": 0.4
+  },
+  {
+   "id": "N08",
+   "who": "N",
+   "text": "Mom's car wasn't in the driveway.",
+   "delivery": "",
+   "pause_after": 0.4
+  },
+  {
+   "id": "G01",
+   "who": "G",
+   "text": "Did it break? Listen to me. Don't let it see you blink.",
+   "delivery": "",
+   "pause_after": 0.3,
+   "as": "P"
+  },
+  {
+   "id": "O02",
+   "who": "O",
+   "text": "Who are you talking to, sweetie?",
+   "delivery": "",
+   "pause_after": 0.5
+  },
+  {
+   "id": "N09",
+   "who": "N",
+   "text": "My eyes started burning.",
+   "delivery": "",
+   "pause_after": 0.2
+  },
+  {
+   "id": "M01",
+   "who": "M",
+   "text": "Don't blink. Don't blink. Don't blink.",
+   "delivery": "",
+   "pause_after": 0.6
+  },
+  {
+   "id": "X01",
+   "who": "X",
+   "text": "Give me my face.",
+   "delivery": "",
+   "pause_after": 0.4,
+   "as": "P"
+  },
+  {
+   "id": "N10",
+   "who": "N",
+   "text": "That's when I noticed what was in my hand.",
+   "delivery": "",
+   "pause_after": 0.5
+  },
+  {
+   "id": "N11",
+   "who": "N",
+   "text": "So what do I do? One, give it the face. Two, smash it. Three, run to Grandma's house.",
+   "delivery": "",
+   "pause_after": 0.3
+  },
+  {
+   "id": "N12",
+   "who": "N",
+   "text": "Comment fast. It's getting closer.",
+   "delivery": "",
+   "pause_after": 0.4
+  },
+  {
+   "id": "X02",
+   "who": "X",
+   "text": "Blink.",
+   "delivery": "",
+   "pause_after": 0.2,
+   "as": "P"
+  }
+ ]
+}

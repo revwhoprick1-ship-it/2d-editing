@@ -1486,6 +1486,44 @@ def cue_video021():
 CUES['video021'] = cue_video021
 LOOPS['video021'] = None
 
+def cue_video022():
+    sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'VIDEOS', 'VIDEO_022'))
+    import edit_video022 as E22
+    B, END, s22, e22 = E22.B, E22.END, E22.s, E22.e
+    S = Score(END + 3.0, bpm=60)
+    D = lambda t, d, f=36.7, g=-10: S.add('fx', t, sine(f, d) * env_adsr(int(d * SR), min(1.5, d / 3), 0.2, 0.9, min(1.0, d / 4)) * 0.8, g)
+    # Grandma's music box: a gentle lullaby... the crash cuts it off mid-phrase
+    mel = ['A5', 'C6', 'E6', 'D6', 'C6', 'A5', 'B5', 'G5']
+    for i in range(12):
+        tt = 0.1 + i * 0.32
+        if tt >= B['crash']:
+            break
+        S.add('lead', tt, inst_bell(mtof(n2m(mel[i % 8])), 0.8), -16)
+    S.add('perc', B['crash'], drum_taiko(1.4, 40), -3)
+    # build: low drone + a slow pulse that speeds up as the rules pile up
+    D(B['crash'], B['eyes'] - B['crash'], 34.6, -10)
+    S.add('pad', B['note'], inst_pad(C(['A2', 'E3', 'C4']), B['eyes'] - B['note'], bright=900, attack=1.0), -17)
+    t = B['count']
+    while t < B['eyes']:
+        S.add('perc', t, drum_tick(0.5), -14)
+        t += 0.6 - 0.3 * min(1.0, (t - B['count']) / max(1.0, B['eyes'] - B['count']))
+    # the no-blink countdown: a high tremolo that climbs
+    S.add('pad', B['eyes'], inst_tremolo(C(['E5', 'F5']), B['js1'] - B['eyes'], rate=12, bright=3200), -13)
+    S.add('perc', B['js1'] + 0.16, drum_taiko(1.6, 36), -1)
+    S.add('pad', B['js1'] + JS22, inst_strings(C(['D3', 'D#3', 'A3']), B['choice'] - B['js1'], attack=0.5, bright=2200), -12)
+    D(B['choice'], B['js2'] - B['choice'], 30.9, -8)
+    t = B['choice']
+    while t < B['js2'] - 0.2:
+        S.add('perc', t, drum_tick(0.6), -11)
+        t += 0.5
+    S.add('perc', B['js2'], drum_taiko(1.6, 34), -1)
+    return S
+
+
+JS22 = 0.42
+CUES['video022'] = cue_video022
+LOOPS['video022'] = None
+
 if __name__ == '__main__':
     cue, out = sys.argv[1], sys.argv[2]
     S = CUES[cue]()
