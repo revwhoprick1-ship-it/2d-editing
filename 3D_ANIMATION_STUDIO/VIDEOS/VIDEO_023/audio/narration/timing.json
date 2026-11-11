@@ -1,0 +1,744 @@
+{
+ "voice": "qwen3-tts",
+ "sample_rate": 24000,
+ "lines": [
+  {
+   "id": "K01",
+   "who": "K",
+   "text": "Everyone on Earth turned into zombies. Fast ones. Smart ones.",
+   "start": 0.25,
+   "end": 4.164,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "K02",
+   "who": "K",
+   "text": "Everyone except me and Tara.",
+   "start": 4.164,
+   "end": 5.952,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "Z01",
+   "who": "Z",
+   "text": "We don't want to hurt you. Open the gate.",
+   "start": 7.432,
+   "end": 9.969,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "K03",
+   "who": "K",
+   "text": "They talk now. And they brought a drone.",
+   "start": 10.149,
+   "end": 12.434,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "D01",
+   "who": "D",
+   "text": "Two warm bodies. Aisle seven.",
+   "start": 13.454,
+   "end": 16.136,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "K04",
+   "who": "K",
+   "text": "The freezer! If we're cold, they can't see us!",
+   "start": 16.316,
+   "end": 19.185,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "D02",
+   "who": "D",
+   "text": "One warm body. Freezer.",
+   "start": 20.965,
+   "end": 23.632,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "K05",
+   "who": "K",
+   "text": "One? Then I saw it. Tara's breath wasn't fogging.",
+   "start": 23.872,
+   "end": 27.799,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "T01",
+   "who": "T",
+   "text": "Mika... it bit me at the gate.",
+   "start": 27.979,
+   "end": 30.108,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "T02",
+   "who": "T",
+   "text": "Lock the door behind me.",
+   "start": 30.228,
+   "end": 31.554,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "T03",
+   "who": "T",
+   "text": "Hey! Over here!",
+   "start": 32.734,
+   "end": 34.506,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "K06",
+   "who": "K",
+   "text": "She bought me ten seconds.",
+   "start": 36.406,
+   "end": 37.964,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "T04",
+   "who": "T",
+   "text": "Mika. It's me. They're gone. Open the door.",
+   "start": 39.424,
+   "end": 43.212,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "K07",
+   "who": "K",
+   "text": "Her breath doesn't fog the glass.",
+   "start": 43.452,
+   "end": 45.398,
+   "delivery": "",
+   "speed": 1.08
+  },
+  {
+   "id": "K08",
+   "who": "K",
+   "text": "Open, stay, or back door? Comment now.",
+   "start": 45.518,
+   "end": 48.505,
+   "delivery": "",
+   "speed": 1.08
+  }
+ ],
+ "words": [
+  {
+   "line": "K01",
+   "text": "Everyone",
+   "start": 0.25,
+   "end": 0.71
+  },
+  {
+   "line": "K01",
+   "text": "on",
+   "start": 0.71,
+   "end": 0.91
+  },
+  {
+   "line": "K01",
+   "text": "Earth",
+   "start": 0.91,
+   "end": 1.05
+  },
+  {
+   "line": "K01",
+   "text": "turned",
+   "start": 1.05,
+   "end": 1.31
+  },
+  {
+   "line": "K01",
+   "text": "into",
+   "start": 1.31,
+   "end": 1.55
+  },
+  {
+   "line": "K01",
+   "text": "zombies.",
+   "start": 1.55,
+   "end": 1.89
+  },
+  {
+   "line": "K01",
+   "text": "Fast",
+   "start": 2.81,
+   "end": 2.85
+  },
+  {
+   "line": "K01",
+   "text": "ones.",
+   "start": 2.85,
+   "end": 3.09
+  },
+  {
+   "line": "K01",
+   "text": "Smart",
+   "start": 3.55,
+   "end": 3.63
+  },
+  {
+   "line": "K01",
+   "text": "ones.",
+   "start": 3.63,
+   "end": 3.89
+  },
+  {
+   "line": "K02",
+   "text": "Everyone",
+   "start": 4.164,
+   "end": 4.644
+  },
+  {
+   "line": "K02",
+   "text": "except",
+   "start": 4.644,
+   "end": 4.964
+  },
+  {
+   "line": "K02",
+   "text": "me",
+   "start": 4.964,
+   "end": 5.244
+  },
+  {
+   "line": "K02",
+   "text": "and",
+   "start": 5.244,
+   "end": 5.404
+  },
+  {
+   "line": "K02",
+   "text": "Tara.",
+   "start": 5.404,
+   "end": 5.624
+  },
+  {
+   "line": "Z01",
+   "text": "We",
+   "start": 7.432,
+   "end": 7.632
+  },
+  {
+   "line": "Z01",
+   "text": "don't",
+   "start": 7.632,
+   "end": 7.912
+  },
+  {
+   "line": "Z01",
+   "text": "want",
+   "start": 7.912,
+   "end": 8.012
+  },
+  {
+   "line": "Z01",
+   "text": "to",
+   "start": 8.012,
+   "end": 8.132
+  },
+  {
+   "line": "Z01",
+   "text": "hurt",
+   "start": 8.132,
+   "end": 8.312
+  },
+  {
+   "line": "Z01",
+   "text": "you.",
+   "start": 8.312,
+   "end": 8.572
+  },
+  {
+   "line": "Z01",
+   "text": "Open",
+   "start": 8.912,
+   "end": 9.072
+  },
+  {
+   "line": "Z01",
+   "text": "the",
+   "start": 9.072,
+   "end": 9.292
+  },
+  {
+   "line": "Z01",
+   "text": "gate.",
+   "start": 9.292,
+   "end": 9.492
+  },
+  {
+   "line": "K03",
+   "text": "They",
+   "start": 10.149,
+   "end": 10.369
+  },
+  {
+   "line": "K03",
+   "text": "talk",
+   "start": 10.369,
+   "end": 10.589
+  },
+  {
+   "line": "K03",
+   "text": "now.",
+   "start": 10.589,
+   "end": 10.929
+  },
+  {
+   "line": "K03",
+   "text": "And",
+   "start": 11.269,
+   "end": 11.449
+  },
+  {
+   "line": "K03",
+   "text": "they",
+   "start": 11.449,
+   "end": 11.589
+  },
+  {
+   "line": "K03",
+   "text": "brought",
+   "start": 11.589,
+   "end": 11.749
+  },
+  {
+   "line": "K03",
+   "text": "a",
+   "start": 11.749,
+   "end": 11.889
+  },
+  {
+   "line": "K03",
+   "text": "drone.",
+   "start": 11.889,
+   "end": 12.149
+  },
+  {
+   "line": "D01",
+   "text": "Two",
+   "start": 13.454,
+   "end": 13.734
+  },
+  {
+   "line": "D01",
+   "text": "warm",
+   "start": 13.734,
+   "end": 13.994
+  },
+  {
+   "line": "D01",
+   "text": "bodies.",
+   "start": 13.994,
+   "end": 14.414
+  },
+  {
+   "line": "D01",
+   "text": "Aisle",
+   "start": 15.094,
+   "end": 15.094
+  },
+  {
+   "line": "D01",
+   "text": "seven.",
+   "start": 15.094,
+   "end": 15.474
+  },
+  {
+   "line": "K04",
+   "text": "The",
+   "start": 16.316,
+   "end": 16.536
+  },
+  {
+   "line": "K04",
+   "text": "freezer!",
+   "start": 16.536,
+   "end": 16.816
+  },
+  {
+   "line": "K04",
+   "text": "If",
+   "start": 17.336,
+   "end": 17.496
+  },
+  {
+   "line": "K04",
+   "text": "we're",
+   "start": 17.496,
+   "end": 17.676
+  },
+  {
+   "line": "K04",
+   "text": "cold,",
+   "start": 17.676,
+   "end": 17.936
+  },
+  {
+   "line": "K04",
+   "text": "they",
+   "start": 18.156,
+   "end": 18.295
+  },
+  {
+   "line": "K04",
+   "text": "can't",
+   "start": 18.295,
+   "end": 18.595
+  },
+  {
+   "line": "K04",
+   "text": "see",
+   "start": 18.595,
+   "end": 18.775
+  },
+  {
+   "line": "K04",
+   "text": "us!",
+   "start": 18.775,
+   "end": 18.995
+  },
+  {
+   "line": "D02",
+   "text": "One",
+   "start": 20.965,
+   "end": 21.285
+  },
+  {
+   "line": "D02",
+   "text": "warm",
+   "start": 21.285,
+   "end": 21.545
+  },
+  {
+   "line": "D02",
+   "text": "body.",
+   "start": 21.545,
+   "end": 22.005
+  },
+  {
+   "line": "D02",
+   "text": "Freezer.",
+   "start": 22.585,
+   "end": 23.005
+  },
+  {
+   "line": "K05",
+   "text": "One?",
+   "start": 23.872,
+   "end": 24.192
+  },
+  {
+   "line": "K05",
+   "text": "Then",
+   "start": 24.832,
+   "end": 25.012
+  },
+  {
+   "line": "K05",
+   "text": "I",
+   "start": 25.012,
+   "end": 25.152
+  },
+  {
+   "line": "K05",
+   "text": "saw",
+   "start": 25.152,
+   "end": 25.432
+  },
+  {
+   "line": "K05",
+   "text": "it.",
+   "start": 25.432,
+   "end": 25.692
+  },
+  {
+   "line": "K05",
+   "text": "Tara's",
+   "start": 26.372,
+   "end": 26.592
+  },
+  {
+   "line": "K05",
+   "text": "breath",
+   "start": 26.592,
+   "end": 26.772
+  },
+  {
+   "line": "K05",
+   "text": "wasn't",
+   "start": 26.772,
+   "end": 27.272
+  },
+  {
+   "line": "K05",
+   "text": "fogging.",
+   "start": 27.272,
+   "end": 27.692
+  },
+  {
+   "line": "T01",
+   "text": "Mika...",
+   "start": 27.979,
+   "end": 28.479
+  },
+  {
+   "line": "T01",
+   "text": "it",
+   "start": 28.839,
+   "end": 29.059
+  },
+  {
+   "line": "T01",
+   "text": "bit",
+   "start": 29.059,
+   "end": 29.239
+  },
+  {
+   "line": "T01",
+   "text": "me",
+   "start": 29.239,
+   "end": 29.439
+  },
+  {
+   "line": "T01",
+   "text": "at",
+   "start": 29.439,
+   "end": 29.539
+  },
+  {
+   "line": "T01",
+   "text": "the",
+   "start": 29.539,
+   "end": 29.659
+  },
+  {
+   "line": "T01",
+   "text": "gate.",
+   "start": 29.659,
+   "end": 29.899
+  },
+  {
+   "line": "T02",
+   "text": "Lock",
+   "start": 30.228,
+   "end": 30.528
+  },
+  {
+   "line": "T02",
+   "text": "the",
+   "start": 30.528,
+   "end": 30.728
+  },
+  {
+   "line": "T02",
+   "text": "door",
+   "start": 30.728,
+   "end": 30.868
+  },
+  {
+   "line": "T02",
+   "text": "behind",
+   "start": 30.868,
+   "end": 31.208
+  },
+  {
+   "line": "T02",
+   "text": "me.",
+   "start": 31.208,
+   "end": 31.448
+  },
+  {
+   "line": "T03",
+   "text": "Hey!",
+   "start": 32.734,
+   "end": 33.094
+  },
+  {
+   "line": "T03",
+   "text": "Over",
+   "start": 33.474,
+   "end": 33.674
+  },
+  {
+   "line": "T03",
+   "text": "here!",
+   "start": 33.674,
+   "end": 33.974
+  },
+  {
+   "line": "K06",
+   "text": "She",
+   "start": 36.406,
+   "end": 36.666
+  },
+  {
+   "line": "K06",
+   "text": "bought",
+   "start": 36.666,
+   "end": 36.826
+  },
+  {
+   "line": "K06",
+   "text": "me",
+   "start": 36.826,
+   "end": 37.026
+  },
+  {
+   "line": "K06",
+   "text": "ten",
+   "start": 37.026,
+   "end": 37.266
+  },
+  {
+   "line": "K06",
+   "text": "seconds.",
+   "start": 37.266,
+   "end": 37.646
+  },
+  {
+   "line": "T04",
+   "text": "Mika.",
+   "start": 39.424,
+   "end": 39.784
+  },
+  {
+   "line": "T04",
+   "text": "It's",
+   "start": 40.224,
+   "end": 40.404
+  },
+  {
+   "line": "T04",
+   "text": "me.",
+   "start": 40.404,
+   "end": 40.644
+  },
+  {
+   "line": "T04",
+   "text": "They're",
+   "start": 40.964,
+   "end": 41.124
+  },
+  {
+   "line": "T04",
+   "text": "gone.",
+   "start": 41.124,
+   "end": 41.364
+  },
+  {
+   "line": "T04",
+   "text": "Open",
+   "start": 42.084,
+   "end": 42.284
+  },
+  {
+   "line": "T04",
+   "text": "the",
+   "start": 42.284,
+   "end": 42.484
+  },
+  {
+   "line": "T04",
+   "text": "door.",
+   "start": 42.484,
+   "end": 42.704
+  },
+  {
+   "line": "K07",
+   "text": "Her",
+   "start": 43.452,
+   "end": 43.712
+  },
+  {
+   "line": "K07",
+   "text": "breath",
+   "start": 43.712,
+   "end": 43.972
+  },
+  {
+   "line": "K07",
+   "text": "doesn't",
+   "start": 43.972,
+   "end": 44.352
+  },
+  {
+   "line": "K07",
+   "text": "fog",
+   "start": 44.352,
+   "end": 44.532
+  },
+  {
+   "line": "K07",
+   "text": "the",
+   "start": 44.532,
+   "end": 44.712
+  },
+  {
+   "line": "K07",
+   "text": "glass.",
+   "start": 44.712,
+   "end": 45.012
+  },
+  {
+   "line": "K08",
+   "text": "Open,",
+   "start": 45.518,
+   "end": 45.857
+  },
+  {
+   "line": "K08",
+   "text": "stay,",
+   "start": 46.179,
+   "end": 46.45
+  },
+  {
+   "line": "K08",
+   "text": "or",
+   "start": 46.756,
+   "end": 46.874
+  },
+  {
+   "line": "K08",
+   "text": "back",
+   "start": 46.874,
+   "end": 47.044
+  },
+  {
+   "line": "K08",
+   "text": "door?",
+   "start": 47.044,
+   "end": 47.332
+  },
+  {
+   "line": "K08",
+   "text": "Comment",
+   "start": 47.824,
+   "end": 48.028
+  },
+  {
+   "line": "K08",
+   "text": "now.",
+   "start": 48.028,
+   "end": 48.316
+  }
+ ],
+ "duration": 49.315
+}

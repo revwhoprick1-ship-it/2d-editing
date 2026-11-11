@@ -99,7 +99,8 @@ def breath(cv, x, y, t, sc=1.0, seed=0, on=True):
         return
     for k in range(3):
         ph = (t * 0.7 + k / 3 + seed * 0.13) % 1.0
-        cv.drawCircle(x + ph * 90 * sc, y - ph * 120 * sc, (20 + 50 * ph) * sc, paint(C('#FFFFFF', 0.35 * (1 - ph)), blur=10))
+        cv.drawCircle(x + ph * 90 * sc, y - ph * 120 * sc, (26 + 60 * ph) * sc, paint(C('#FFFFFF', 0.75 * (1 - ph)), blur=6))
+        cv.drawCircle(x + ph * 90 * sc, y - ph * 120 * sc, (26 + 60 * ph) * sc, paint(C('#6A8AAA', 0.35 * (1 - ph)), style='stroke', width=3, blur=2))
 
 
 # ===================================================================== STREET (side-scroll, 4 parallax layers)
@@ -208,19 +209,21 @@ def shot_GATE(cv, t):
         zx = 1300 - min(1.0, u / 0.9) * (700 - k * 60) + k * 40
         runner(cv, zx, 1500, 0.42, t * 2.6 + k * 0.3, dict(zomb(k), arm_r=(85, 10)), face=-1, lean=18, ink_w=3)
     grating(cv, yb)
-    sx = -200 + min(1.0, u / 0.45) * 760                                                        # Mika slides in, under the gate
-    with inked(cv, 6):
-        mascot(cv, sx, 1820, 0.62, view='side', face=1, crouch=0.8, body_lean=-35, light_side=-1, rim=FIRE, rim_a=0.5,
-               **dict(MIKA, brow=1.0, mouth='open', mouth_open=0.6, sweat=True))
-        tx = -420 + min(1.0, max(0.0, (u - 0.15) / 0.45)) * 700
-        mascot(cv, tx, 1840, 0.6, view='side', face=1, crouch=0.8, body_lean=-35, light_side=-1, rim=FIRE, rim_a=0.5,
-               **dict(TARA, brow=1.0, mouth='open', mouth_open=0.6, sweat=True))
     cv.drawRect(skia.Rect(0, 1500, W, H), paint('#000000', shader=lin((0, 1500), (0, H), [C('#3A4A40'), C('#1A221E')])))
-    with inked(cv, 6):                                                                         # redraw girls over the floor
-        mascot(cv, sx, 1820, 0.62, view='side', face=1, crouch=0.8, body_lean=-35, light_side=-1, rim=FIRE, rim_a=0.5,
-               **dict(MIKA, brow=1.0, mouth='open', mouth_open=0.6, sweat=True))
-        mascot(cv, tx, 1840, 0.6, view='side', face=1, crouch=0.8, body_lean=-35, light_side=-1, rim=FIRE, rim_a=0.5,
-               **dict(TARA, brow=1.0, mouth='open', mouth_open=0.6, sweat=True))
+
+    def slider(x, P, delay):
+        k = min(1.0, max(0.0, (u - delay) / 0.45))
+        xx = -40 + k * 820 + x
+        cv.save(); cv.translate(xx, 1820); cv.rotate(-72)                                       # feet-first slide, body almost flat
+        with inked(cv, 6):
+            mascot(cv, 0, 0, 0.6, view='side', face=1, walk=0.15, run=True, arm_r=(150, 20), light_side=-1, rim=FIRE, rim_a=0.5,
+                   **dict(P, brow=1.0, mouth='open', mouth_open=0.6, sweat=True))
+        cv.restore()
+        if 0 < k < 1:                                                                            # dust kicked up
+            for d in range(5):
+                cv.drawCircle(xx - 120 - d * 40, 1830 - d * 12, 18 + d * 6, paint(C('#C8B8A0', 0.4 * (1 - k)), blur=8))
+    slider(0, MIKA, 0.0)
+    slider(-60, TARA, 0.18)
     shade(cv, (540, 1000), 1150, 0.45)
     grain(cv, t)
 
@@ -405,10 +408,12 @@ def shot_CU_T(cv, t):
     with inked(cv, 8):
         o = mascot(cv, 540 + 4 * math.sin(t * 30), 2800 - 200 * min(1.0, rise), 2.0, light_side=1, rim=ICE, rim_a=0.6, **P)
     hx, hy = o['head']
-    for j in range(5):                                                                              # veins
-        x0 = hx - 120 + j * 55
-        cv.drawPath(poly([(x0, hy + 520), (x0 + 15, hy + 420 - 120 * k), (x0 - 10, hy + 330 - 160 * k)], closed=False),
-                    paint(C('#3A4A6A', 0.3 + 0.6 * k), style='stroke', width=6))
+    for side in (-1, 1):                                                                            # veins creeping up the neck onto the cheeks
+        for j in range(3):
+            x0 = hx + side * (250 + j * 45)
+            cv.drawPath(poly([(x0, hy + 420), (x0 - side * 20, hy + 260 - 60 * k), (x0 + side * 10, hy + 120 - 140 * k),
+                              (x0 - side * 25, hy + 40 - 160 * k)], closed=False),
+                        paint(C('#3A4A6A', 0.25 + 0.6 * k), style='stroke', width=7))
     shade(cv, (540, 950), 1050, 0.45)
     grain(cv, t)
 
@@ -481,10 +486,17 @@ def glass_door(cv, t, blood=0.0, shadow=None, knocks=None):
     if shadow:
         shadow(cv, t)
     if blood > 0:                                                                                  # blood hits the glass, runs down
-        for k in range(7):
-            bx = 360 + k * 60
-            cv.drawCircle(bx, 600 + (k * 37) % 120, 30 + (k % 3) * 18, paint(C('#8A0A0A', 0.9 * blood)))
-            cv.drawRect(skia.Rect(bx - 6, 600, bx + 6, 600 + 380 * blood * (0.4 + (k % 3) * 0.3)), paint(C('#8A0A0A', 0.85 * blood)))
+        rng = np.random.default_rng(7)
+        for k in range(5):
+            bx, by = 380 + k * 85 + rng.uniform(-20, 20), 640 + rng.uniform(-60, 60)
+            r = 40 + rng.uniform(0, 40)
+            pts = [(bx + math.cos(a) * r * rng.uniform(0.5, 1.4), by + math.sin(a) * r * rng.uniform(0.5, 1.4)) for a in np.linspace(0, 2 * math.pi, 11)[:-1]]
+            cv.drawPath(blob(pts), paint(C('#7A0808', 0.9 * blood)))
+            for d in range(2):
+                dx = bx + rng.uniform(-r * 0.6, r * 0.6)
+                cv.drawRect(skia.Rect(dx - 5, by, dx + 5, by + 360 * blood * rng.uniform(0.3, 1.0)), paint(C('#7A0808', 0.85 * blood)))
+            for d in range(6):
+                cv.drawCircle(bx + rng.uniform(-r * 2, r * 2), by + rng.uniform(-r * 2, r * 2), rng.uniform(4, 10), paint(C('#7A0808', 0.8 * blood)))
     cv.drawRect(win, paint(C('#E8F0F8', 0.35)))                                                    # frost
     cv.restore()
     with inked(cv, 4):

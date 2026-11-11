@@ -28,5 +28,8 @@ for k, fx in FX.items():
     a = os.path.join(tmp, k + '.wav')
     sox(os.path.join(O, k + '.wav'), a, *fx, 'pad', '0', '0.3')
     sox(a, os.path.join(N, k + '.wav'), 'fade', 't', '0.01', dur(a), '0.25', 'norm', '-3')
+a = os.path.join(tmp, 'K08_t.wav')                                                     # CTA must stay under 3 s
+sox(os.path.join(O, 'K08.wav'), a, 'tempo', '-s', '1.22', 'pad', '0', '0.1')
+sox(a, os.path.join(N, 'K08.wav'), 'fade', 't', '0.01', dur(a), '0.2', 'norm', '-3')
 shutil.rmtree(tmp)
 print('VOICE_FX_OK')
