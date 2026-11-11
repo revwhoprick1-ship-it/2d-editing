@@ -30,7 +30,7 @@ SHOT = {'N01': 'HOOK', 'N02': 'HOOK', 'N03': 'SMOKE', 'N04': 'NOTE', 'N05': 'NOT
         'N12': 'CHOICE', 'X02': 'CHOICE'}
 GAP_SHOT = {'N03': 'SHATTER', 'G01': 'PHONE', 'O02': 'DOOR', 'X01': 'REVEAL', 'N10': 'HAND', 'X02': 'CHOICE'}
 
-B = dict(crash=e('N02') - 0.15, note=s('N04'), count=s('N06'), phone=s('G01') - 0.6, feet=s('O02') - 0.3, eyes=s('N09'))
+B = dict(crash=[w['start'] for w in WORDS if w['line'] == 'N02' and w['text'].lower().startswith('broke')][0], note=s('N04'), count=s('N06'), phone=s('G01') - 0.6, feet=s('O02') - 0.3, eyes=s('N09'))
 B['js1'] = e('M01') + 0.1                     # the blink you couldn't stop -> it is RIGHT there
 B['choice'] = s('N11')
 B['js2'] = e('X02') + 0.05

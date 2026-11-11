@@ -86,7 +86,7 @@ def vase(cv, x, y, sc, rot=0.0, face_detail=True):
 Z1 = 5.0
 
 
-def room(cv, cam, t, lamp=1.0, door_light=0.0, vase_on=True, under_bed_smoke=0.0):
+def room(cv, cam, t, lamp=1.0, door_light=0.0, vase_on=False, under_bed_smoke=0.0):   # the vase is broken in every shot after the hook
     q = lambda p: quad(cam, p)  # noqa
     cv.drawRect(skia.Rect(0, 0, W, H), paint(INK))
     with inked(cv, 4):
@@ -149,9 +149,9 @@ def you(cv, cam, z, x=0.0, **P):
 def shot_HOOK(cv, t):
     """Low dolly toward the shelf; you knock the vase; it falls in slow motion (rotating), then CRASH (cut)."""
     u = min(1.0, t / max(0.5, B['crash']))
-    cam = Cam(0.2 + 1.2 * u, eye=0.9, vy=1050, x=-0.5, f=880)
+    cam = Cam(1.7 + 0.9 * u, eye=1.0, vy=1000, x=-0.8, f=880)
     room(cv, cam, t, vase_on=False)
-    you(cv, cam, 3.8, x=-0.8, view='back', arm_r=(80, 10))
+    you(cv, cam, 3.9, x=-0.15, view='back', arm_l=(95, 5))                 # beside the shelf, reaching for it
     fall = max(0.0, (t - 0.6) / max(0.4, B['crash'] - 0.6))                                    # the fall
     h = 1.4 - 1.4 * fall ** 2
     vx, vy = cam.p(-1.05 + 0.2 * fall, h, Z1 - 0.15 - 0.6 * fall)
@@ -325,10 +325,10 @@ def shot_REVEAL(cv, t):
     """Wide: the room, the lamp flickering, IT standing by the bed. Pieces of it still clicking into place."""
     cam = Cam(0.3 + 0.2 * math.sin(t * 0.3), eye=1.25, vy=900, x=-0.3, f=880)
     room(cv, cam, t, vase_on=False, lamp=flicker(t, 4, 7.0, 0.3))
-    tx, ty = cam.p(0.35, 0, 3.4)
+    tx, ty = cam.p(0.35, 0, 2.6)
     a = min(1.0, 0.85 + (t - B['js1'] - JS) * 0.3)
     with inked(cv, 6):
-        tenant(cv, tx, ty, cam.scale(3.4, 2.3) * 1150 / 2400, t=t, assemble=a, mouth=talk(t, 'X') * 0.8, reach=0.3, eyes_open=0.6,
+        tenant(cv, tx, ty, cam.scale(2.6, 2.3) * 1150 / 2400, t=t, assemble=a, mouth=talk(t, 'X') * 0.8, reach=0.3, eyes_open=0.6,
                look=(-0.4, 0.2), tilt=-12, rim=LAV, rim_a=0.6, ink=False)
     you(cv, cam, 1.6, x=-0.9, view='back')
     shade(cv, (540, 960), 1150, 0.5)
@@ -360,7 +360,7 @@ def shot_CHOICE(cv, t):
     u = min(1.0, max(0.0, (t - B['choice']) / max(1.0, B['js2'] - B['choice'])))
     cam = Cam(0.3, eye=1.25, vy=900, x=-0.3, f=880)
     room(cv, cam, t, vase_on=False, lamp=flicker(t, 6, 9.0, 0.2))
-    z = 3.4 - 1.6 * u
+    z = 2.6 - 1.0 * u
     tx, ty = cam.p(0.2 - 0.3 * u, 0, z)
     with inked(cv, 6):
         tenant(cv, tx, ty, cam.scale(z, 2.3) * 1150 / 2400, t=t, mouth=0.3 + 0.6 * u, reach=0.3 + 0.6 * u, eyes_open=1.0, look=(-0.3, 0.3),
