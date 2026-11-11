@@ -1524,6 +1524,43 @@ JS22 = 0.42
 CUES['video022'] = cue_video022
 LOOPS['video022'] = None
 
+def cue_video023():
+    sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'VIDEOS', 'VIDEO_023'))
+    import edit_video023 as E23
+    B, END, s23, e23 = E23.B, E23.END, E23.s, E23.e
+    S = Score(END + 3.0, bpm=150)
+    D = lambda t, d, f=36.7, g=-10: S.add('fx', t, sine(f, d) * env_adsr(int(d * SR), min(1.5, d / 3), 0.2, 0.9, min(1.0, d / 4)) * 0.8, g)
+    # the chase: driving taiko 8ths + low string ostinato from frame 0 (energy instantly)
+    t, i = 0.0, 0
+    while t < B['gate']:
+        S.add('perc', t, drum_taiko(0.9 if i % 4 == 0 else 0.6, 52 if i % 4 else 42), -6 if i % 4 == 0 else -10)
+        if i % 2 == 0:
+            S.add('lead', t, inst_strings(C(['D3' if (i // 8) % 2 == 0 else 'F3']), 0.2, attack=0.005, bright=3000), -12)
+        t += 0.2; i += 1
+    S.add('perc', B['gate'], drum_taiko(1.5, 38), -2)
+    # store: tense pulse that tightens through the drone and the run to the freezer
+    D(B['gate'], B['freezer'] - B['gate'], 34.6, -10)
+    t = B['drone']
+    while t < B['freezer']:
+        S.add('perc', t, drum_tick(0.6), -12)
+        t += 0.4
+    # freezer: cold high tremolo + low drone; Tara's choice = a sad held chord; then the swarm hit
+    S.add('pad', B['freezer'], inst_tremolo(C(['E5', 'F5']), B['lock'] - B['freezer'], rate=9, bright=3200), -16)
+    D(B['freezer'], END - B['freezer'], 30.9, -9)
+    S.add('pad', s23('T01'), inst_strings(C(['A3', 'C4', 'E4']), B['lock'] - s23('T01') + 0.5, attack=0.6, bright=1800), -14)
+    S.add('perc', B['js1'], drum_taiko(1.6, 36), -1)
+    S.add('pad', B['glass'], inst_strings(C(['D3', 'D#3', 'A3']), B['choice'] - B['glass'], attack=0.8, bright=2000), -14)
+    t = B['choice']
+    while t < B['js2'] - 0.1:
+        S.add('perc', t, drum_tick(0.7), -10)
+        t += 0.25
+    S.add('perc', B['js2'], drum_taiko(1.6, 34), -1)
+    return S
+
+
+CUES['video023'] = cue_video023
+LOOPS['video023'] = None
+
 if __name__ == '__main__':
     cue, out = sys.argv[1], sys.argv[2]
     S = CUES[cue]()

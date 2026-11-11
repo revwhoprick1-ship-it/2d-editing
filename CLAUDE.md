@@ -12,7 +12,7 @@
 * Normal (non-vibrant) colour unless asked. Keep all on-screen text inside the safe area. Narrator: free local
   Qwen3-TTS ONLY (Apache-2.0, `/opt/tools/qwen`: VoiceDesign ref per character -> Base voice clone per line), never paid TTS/ElevenLabs.
 * **Retention rules** (from real stats): read `3D_ANIMATION_STUDIO/VIDEOS/RETENTION_LESSONS.md` before every new video. Frame 0 =
-  character in danger; no flashbacks/recaps; standalone stories (no "Part 2"); no end choice card; 60–75 s.
+  character in danger; no flashbacks/recaps; standalone stories (no "Part 2"); choice card + CTA under 3 s; ~55-60 s; never reset tension; characters always moving.
 * **Always be creative**: never a plain "what if" list. Give the premise a character with a problem, a goal and escalating
   situations (e.g. a disease that forces a funny behaviour during a school day), with a twist.
 * **Captions mid-screen** (y ~1150-1300, max 1480): the bottom ~25% is covered by the platforms' own captions/UI.

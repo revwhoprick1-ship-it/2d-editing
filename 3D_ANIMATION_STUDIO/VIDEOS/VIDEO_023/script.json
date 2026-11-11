@@ -1,0 +1,120 @@
+{
+ "title": "The Last Two Humans",
+ "engine": "qwen3-tts",
+ "tempo": 1.08,
+ "qwen_voices": {
+  "K": "Female, 17 years old, American. Breathy, scared, slightly husky low-mid voice, fast and urgent, intense whisper, very close to the microphone.",
+  "T": "Female, 17 years old, American. Brave, raspy, slightly higher voice, out of breath, determined but in pain.",
+  "C": "x"
+ },
+ "lines": [
+  {
+   "id": "K01",
+   "who": "K",
+   "text": "Everyone on Earth turned into zombies. Fast ones. Smart ones.",
+   "delivery": "",
+   "pause_after": 0.0
+  },
+  {
+   "id": "K02",
+   "who": "K",
+   "text": "Everyone except me and Tara.",
+   "delivery": "",
+   "pause_after": 0.3
+  },
+  {
+   "id": "Z01",
+   "who": "Z",
+   "text": "We don't want to hurt you. Open the gate.",
+   "delivery": "",
+   "pause_after": 0.3,
+   "as": "C"
+  },
+  {
+   "id": "K03",
+   "who": "K",
+   "text": "They talk now. And they brought a drone.",
+   "delivery": "",
+   "pause_after": 0.2
+  },
+  {
+   "id": "D01",
+   "who": "D",
+   "text": "Two warm bodies. Aisle seven.",
+   "delivery": "",
+   "pause_after": 0.3,
+   "as": "C"
+  },
+  {
+   "id": "K04",
+   "who": "K",
+   "text": "The freezer! If we're cold, they can't see us!",
+   "delivery": "",
+   "pause_after": 0.3
+  },
+  {
+   "id": "D02",
+   "who": "D",
+   "text": "One warm body. Freezer.",
+   "delivery": "",
+   "pause_after": 0.4,
+   "as": "C"
+  },
+  {
+   "id": "K05",
+   "who": "K",
+   "text": "One? Then I saw it. Tara's breath wasn't fogging.",
+   "delivery": "",
+   "pause_after": 0.3
+  },
+  {
+   "id": "T01",
+   "who": "T",
+   "text": "Mika... it bit me at the gate.",
+   "delivery": "",
+   "pause_after": 0.2
+  },
+  {
+   "id": "T02",
+   "who": "T",
+   "text": "Lock the door behind me.",
+   "delivery": "",
+   "pause_after": 0.3
+  },
+  {
+   "id": "T03",
+   "who": "T",
+   "text": "Hey! Over here!",
+   "delivery": "",
+   "pause_after": 0.5
+  },
+  {
+   "id": "K06",
+   "who": "K",
+   "text": "She bought me ten seconds.",
+   "delivery": "",
+   "pause_after": 0.6
+  },
+  {
+   "id": "T04",
+   "who": "T",
+   "text": "Mika. It's me. They're gone. Open the door.",
+   "delivery": "",
+   "pause_after": 0.4
+  },
+  {
+   "id": "K07",
+   "who": "K",
+   "text": "Her breath doesn't fog the glass.",
+   "delivery": "",
+   "pause_after": 0.2
+  },
+  {
+   "id": "K08",
+   "who": "K",
+   "text": "Open, stay, or back door? Comment now.",
+   "delivery": "",
+   "pause_after": 0.1
+  }
+ ]
+}

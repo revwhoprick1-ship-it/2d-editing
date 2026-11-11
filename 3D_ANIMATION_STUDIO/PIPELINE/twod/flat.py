@@ -300,7 +300,7 @@ def _head_front(cv, P, back):
         cv.clipPath(skia.Path.Oval(skia.Rect(ex - 46, ey - 56, ex + 46, ey + 56)), skia.ClipOp.kIntersect, True)
         k = P.get('pupil', 1.0)
         cv.drawCircle(px, py + 6, 34 * k, paint(P.get('iris', EYE_IRIS)))
-        cv.drawCircle(px, py + 6, 20 * k, paint('#160C06'))
+        cv.drawCircle(px, py + 6, 20 * k, paint(P.get('pupil_col', '#160C06')))
         cv.drawCircle(px + 11 * k, py - 6 * k, 9 * min(1, k + 0.2), paint('#FFFFFF'))
         if lid >= 0.95:                                  # closed: skin + a curved lash line, no white
             cv.restore()
@@ -457,6 +457,9 @@ def _side(cv, x, y, s, P):
     cv.rotate(P['head_tilt'])
     out['head'] = _hand_pos(cv, 0, 0)
     SK, SKS, HR, HRS = P['skin'], P['skin_sh'], P['hair'], P['hair_sh']
+    if P.get('long_hair'):                                                       # long hair / ponytail behind the head, swinging
+        sw = 30 * math.sin(2 * math.pi * (ph or 0.0)) if ph is not None else 0.0
+        cv.drawPath(blob([(-60, -230), (-170, -160), (-230, 40), (-250 + sw, 250), (-190 + sw, 330), (-120, 200), (-60, 60)]), paint(HRS))
     cv.drawRect(skia.Rect(-40, 40, 30, 150), paint(SKS))
     head = blob([(-160, -40), (-140, -170), (0, -222), (130, -175), (172, -60), (190, 20), (168, 60), (150, 120), (80, 180), (-20, 192), (-120, 160), (-158, 80)])
     cv.drawPath(head, paint(SK))
@@ -478,8 +481,8 @@ def _side(cv, x, y, s, P):
     cv.clipPath(skia.Path.Oval(skia.Rect(ex - 30, ey - 52, ex + 34, ey + 52)), skia.ClipOp.kIntersect, True)
     k = P.get('pupil', 1.0)
     px, py = ex + 8 + P['look'][0] * 10, ey + 6 + P['look'][1] * 18
-    cv.drawCircle(px, py, 28 * k, paint(EYE_IRIS))
-    cv.drawCircle(px, py, 16 * k, paint('#160C06'))
+    cv.drawCircle(px, py, 28 * k, paint(P.get('iris', EYE_IRIS)))
+    cv.drawCircle(px, py, 16 * k, paint(P.get('pupil_col', '#160C06')))
     cv.drawCircle(px + 8, py - 10, 7, paint('#FFFFFF'))
     if P['lids'] > 0:
         cv.drawRect(skia.Rect(ex - 34, ey - 56, ex + 38, ey - 56 + 108 * P['lids']), paint(SK))
