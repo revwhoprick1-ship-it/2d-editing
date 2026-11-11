@@ -28,7 +28,7 @@ SHOT = {'K01': 'CHASE', 'K02': 'CHASE', 'Z01': 'GATEFACE', 'K03': 'DRONE', 'D01'
         'K05': 'FREEZER', 'T01': 'CU_T', 'T02': 'CU_T', 'T03': 'STORE', 'K06': 'GLASS', 'T04': 'GLASS', 'K07': 'GLASSCU', 'K08': 'CHOICE'}
 GAP_SHOT = {'Z01': 'GATE', 'D01': 'DRONE', 'D02': 'FREEZER', 'T03': 'DOORLOCK', 'K06': 'GLASS', 'T04': 'GLASS'}
 
-B = dict(gate=e('K02') + 0.05, drone=s('K03'), thermal=s('D01'), aisle=s('K04'), freezer=e('K04') + 0.05, lock=e('T02') + 0.05,
+B = dict(gate=e('K02') + 0.3, drone=s('K03'), thermal=s('D01'), aisle=s('K04'), freezer=e('K04') + 0.05, lock=e('T02') + 0.05,
          out=s('T03') - 0.3, swarm=e('T03') + 0.15, glass=s('K06') - 1.0, knock=s('T04') - 0.9, choice=s('K08'))
 B['vault'] = 2.6
 B['js1'] = B['swarm']
@@ -107,3 +107,4 @@ CAPTIONS = dict(timing=TIMING, offset=0.0, style='2dedit', y=1230, size=66, max_
                 hide=SCARES + [(B['choice'], END)],
                 emphasis={'zombies', 'smart', 'fast', 'tara', 'hurt', 'drone', 'warm', 'freezer', 'cold', 'one', 'fogging', 'bit',
                           'lock', 'here', 'ten', 'gone', 'glass'})
+CAPTIONS['y_over'] = [(sg['t0'], sg['t1'], 980) for sg in SEGMENTS if sg['src'] == 'DRONE']

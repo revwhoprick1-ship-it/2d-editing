@@ -1,7 +1,7 @@
 {
  "file": "EXPORTS/VIDEO_023_The_Last_Two_Humans.mp4",
  "duration_s": 49.3,
- "size_mb": 20.68,
+ "size_mb": 20.67,
  "video": {
   "codec": "h264",
   "profile": "High",
@@ -10,18 +10,18 @@
   "fps": "30/1",
   "pix_fmt": "yuv420p",
   "color_primaries": "bt709",
-  "bitrate_kbps": 3356
+  "bitrate_kbps": 3354
  },
  "audio": {
   "codec": "aac",
   "sample_rate": "48000",
   "channels": 2,
-  "bitrate_kbps": 300
+  "bitrate_kbps": 302
  },
  "loudness": {
   "integrated_lufs": -14.4,
   "lra_lu": 3.4,
-  "true_peak_dbfs": -2.3
+  "true_peak_dbfs": -2.4
  },
  "detect": {
   "black_segments": [],

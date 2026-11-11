@@ -27,7 +27,7 @@
    "bus": "amb",
    "note": "burning city wind",
    "loop": true,
-   "dur": 6.601999999999999
+   "dur": 6.851999999999999
   },
   {
    "t": 0.0,
@@ -36,7 +36,7 @@
    "bus": "sfx",
    "note": "our feet",
    "loop": true,
-   "dur": 6.402
+   "dur": 6.652
   },
   {
    "t": 0.0,
@@ -45,7 +45,7 @@
    "bus": "sfx",
    "note": "the horde",
    "loop": true,
-   "dur": 6.802
+   "dur": 7.052
   },
   {
    "t": 0.0,
@@ -54,7 +54,7 @@
    "bus": "sfx",
    "note": "panting",
    "loop": true,
-   "dur": 6.002
+   "dur": 6.252
   },
   {
    "t": 2.6,
@@ -71,30 +71,30 @@
    "note": "lands"
   },
   {
-   "t": 6.002,
+   "t": 6.252,
    "file": "AUDIO/sound_effects/comedy/metal_slam.flac",
    "gain": -5,
    "bus": "sfx",
    "note": "the gate slams down"
   },
   {
-   "t": 6.002,
+   "t": 6.252,
    "file": "AUDIO/sound_effects/comedy/flicker_buzz.flac",
    "gain": -19,
    "bus": "sfx",
    "note": "store lights",
    "loop": true,
-   "dur": 13.233
+   "dur": 12.983
   },
   {
-   "t": 6.502,
+   "t": 6.752,
    "file": "AUDIO/sound_effects/comedy/metal_bang.flac",
    "gain": -7,
    "bus": "sfx",
    "note": "zombies hit the gate"
   },
   {
-   "t": 6.802,
+   "t": 7.052,
    "file": "AUDIO/sound_effects/comedy/metal_bang.flac",
    "gain": -9,
    "bus": "sfx",
