@@ -1,7 +1,7 @@
 {
  "file": "EXPORTS/VIDEO_022_Dont_Touch_The_Vase_Remake.mp4",
  "duration_s": 69.167,
- "size_mb": 19.69,
+ "size_mb": 19.73,
  "video": {
   "codec": "h264",
   "profile": "High",
@@ -10,7 +10,7 @@
   "fps": "30/1",
   "pix_fmt": "yuv420p",
   "color_primaries": "bt709",
-  "bitrate_kbps": 2278
+  "bitrate_kbps": 2282
  },
  "audio": {
   "codec": "aac",
