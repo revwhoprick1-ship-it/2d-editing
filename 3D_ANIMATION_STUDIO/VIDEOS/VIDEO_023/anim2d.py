@@ -93,14 +93,15 @@ def label(cv, x, y, txt, t0, t, col='#C8302A', size=48):
     cv.restore()
 
 
-def breath(cv, x, y, t, sc=1.0, seed=0, on=True):
-    """Cold breath puffs (the clue: Tara's stop)."""
+def breath(cv, x, y, t, sc=1.0, seed=0, on=True, dx=1.0):
+    """Cold breath puffs from the mouth at (x, y), drifting outward (dx = +1 right / -1 left) and up. The clue: Tara's stop."""
     if not on:
         return
     for k in range(3):
         ph = (t * 0.7 + k / 3 + seed * 0.13) % 1.0
-        cv.drawCircle(x + ph * 90 * sc, y - ph * 120 * sc, (26 + 60 * ph) * sc, paint(C('#FFFFFF', 0.75 * (1 - ph)), blur=6))
-        cv.drawCircle(x + ph * 90 * sc, y - ph * 120 * sc, (26 + 60 * ph) * sc, paint(C('#6A8AAA', 0.35 * (1 - ph)), style='stroke', width=3, blur=2))
+        px, py = x + dx * (30 + ph * 150) * sc, y - ph * 110 * sc
+        cv.drawCircle(px, py, (18 + 50 * ph) * sc, paint(C('#FFFFFF', 0.75 * (1 - ph)), blur=6))
+        cv.drawCircle(px, py, (18 + 50 * ph) * sc, paint(C('#6A8AAA', 0.35 * (1 - ph)), style='stroke', width=3, blur=2))
 
 
 # ===================================================================== STREET (side-scroll, 4 parallax layers)
@@ -156,91 +157,155 @@ def runner(cv, x, y, sc, ph, P, face=1, lean=0.0, ink_w=6):
         mascot(cv, x, y, sc, view='side', face=face, walk=ph % 1.0, run=True, body_lean=lean, light_side=-1, rim=FIRE, rim_a=0.5, **P)
 
 
+def barrier(cv, x, y, sc=1.0):
+    """Road barrier (striped sawhorse) Tara jumps over."""
+    with inked(cv, 4):
+        for lx in (x - 110 * sc, x + 110 * sc):
+            cv.drawLine(lx - 30 * sc, y, lx, y - 150 * sc, paint('#3A3A40', style='stroke', width=12 * sc))
+            cv.drawLine(lx + 30 * sc, y, lx, y - 150 * sc, paint('#3A3A40', style='stroke', width=12 * sc))
+        cv.drawRect(skia.Rect(x - 170 * sc, y - 170 * sc, x + 170 * sc, y - 120 * sc), paint('#F4F0E6'))
+        for k in range(5):
+            bx = x - 170 * sc + k * 70 * sc
+            cv.drawPath(poly([(bx, y - 120 * sc), (bx + 35 * sc, y - 170 * sc), (bx + 70 * sc, y - 170 * sc), (bx + 35 * sc, y - 120 * sc)]), paint('#E05A2A'))
+
+
 def shot_CHASE(cv, t):
-    """Frame 0: already running. The two girls sprint right; the horde pours in behind, gaining; Tara vaults a car."""
+    """Frame 0: already running. The two girls sprint right; the horde pours in behind, gaining. A road barrier comes at them:
+    Tara vaults it, the zombies LEAP it. Everything is drawn back-to-front by ground line (depth)."""
     street(cv, t)
     cam_x = t * 900
-    cx = 1700 - (cam_x % 2400)                                                               # a wrecked car Tara vaults over
+    cx = 1700 - (cam_x % 2400)                                                               # parked burning car, far lane (background)
     if -500 < cx < 1200:
-        car(cv, cx, 1520, 1.0, burning=True)
-    # the horde: 9 zombies, sprinting faster than they should, arms out
-    for k in range(9):
-        zx = -260 + k * 70 + 140 * math.sin(t * 0.9 + k) + min(1.0, t / 5) * 120
+        car(cv, cx, 1470, 0.8, burning=True)
+    bxs = 520 + (B['vault'] + 0.3 - t) * 900                                                  # barrier in the girls' lane, scrolling
+    items = []
+    for k in range(9):                                                                        # the horde
+        zx = min(380.0, -260 + k * 70 + 140 * math.sin(t * 0.9 + k) + min(1.0, t / 5) * 120)        # right on their heels, never overlapping
         zy = 1640 + (k % 3) * 40
-        runner(cv, zx, zy, 0.48 + (k % 3) * 0.04, t * 2.6 + k * 0.37, dict(zomb(k), arm_r=(85, 10), arm_l=(80, 15)), lean=18, ink_w=4)
-    # Tara: vaults the car around B['vault']
+        hop = max(0.0, 1 - abs(zx - bxs) / 160) * 180                                          # they leap the barrier too
+        items.append((zy, lambda zx=zx, zy=zy, k=k, hop=hop: runner(cv, zx, zy - hop, 0.48 + (k % 3) * 0.04, t * 2.6 + k * 0.37,
+                                                                      dict(zomb(k), arm_r=(85, 10), arm_l=(80, 15)), lean=18, ink_w=4)))
+    if -300 < bxs < 1400:
+        items.append((1695, lambda: barrier(cv, bxs, 1695, 0.9)))
     u = (t - B['vault']) / 0.6
     jump = max(0.0, math.sin(min(1.0, max(0.0, u)) * math.pi)) * 260
-    P = dict(TARA, brow=1.0, mouth='open', mouth_open=0.5, sweat=True, pupil=0.6)
+    PT = dict(TARA, brow=1.0, mouth='open', mouth_open=0.5, sweat=True, pupil=0.6)
     if 0 < u < 1:
-        P.update(arm_r=(150, 20), arm_l=(140, 30))
-    runner(cv, 520, 1680 - jump, 0.62, t * 2.4 + 0.4, P, lean=12)
-    # Mika (you), closest to camera
-    P = dict(MIKA, brow=1.0, mouth='open', mouth_open=0.35 + 0.3 * abs(math.sin(t * 7)), sweat=True, pupil=0.55, look=(-0.6, 0.0))
-    runner(cv, 760, 1760, 0.7, t * 2.4, P, lean=12)
+        PT.update(arm_r=(150, 20), arm_l=(140, 30))
+    items.append((1700, lambda: runner(cv, 520, 1700 - jump, 0.62, t * 2.4 + 0.4, PT, lean=12)))
+    PM = dict(MIKA, brow=1.0, mouth='open', mouth_open=0.35 + 0.3 * abs(math.sin(t * 7)), sweat=True, pupil=0.55, look=(-0.6, 0.0))
+    items.append((1780, lambda: runner(cv, 760, 1780, 0.7, t * 2.4, PM, lean=12)))
+    for _, fn in sorted(items, key=lambda it: it[0]):
+        fn()
     shade(cv, (600, 1100), 1250, 0.45)
     grain(cv, t)
 
 
-def gate_store_bg(cv, t, inside=True):
-    """Store front from INSIDE: the roll-up gate (grating), dusk fire glow outside, the checkout counter."""
-    cv.drawRect(skia.Rect(0, 0, W, H), paint('#2A3A30'))
-    with blurred(cv, 4):
-        cv.drawRect(skia.Rect(80, 380, 1000, 1500), paint('#000000', shader=lin((0, 380), (0, 1500), [C('#C8462A'), C('#FF9A50')])))
-    glow(cv, (540, 1100), 900, FIRE, 0.35)
+GATE_R = skia.Rect(80, 380, 1000, 1500)                                                      # the store's front opening (fixed)
 
 
-def grating(cv, y_bottom):
+def outside_view(cv, t):
+    """What is seen THROUGH the opening: burning street at dusk."""
+    cv.drawRect(GATE_R, paint('#000000', shader=lin((0, 380), (0, 1500), [C('#C8462A'), C('#FF9A50')])))
+    for k in range(4):
+        x = 60 + k * 260
+        cv.drawRect(skia.Rect(x, 700 - (k % 2) * 120, x + 200, 1300), paint('#5A3A3A'))
+    cv.drawRect(skia.Rect(80, 1300, 1000, 1500), paint('#4A3E44'))
+    glow(cv, (540, 1000), 600, FIRE, 0.35)
+
+
+def store_front_wall(cv):
+    """The wall around the opening, drawn ON TOP of everything outside (so nothing outside overlaps the wall)."""
+    pth = skia.Path(); pth.addRect(skia.Rect(0, 0, W, 1500)); pth.addRect(GATE_R)
+    pth.setFillType(skia.PathFillType.kEvenOdd)
+    cv.drawPath(pth, paint('#2A3A30'))
+    with inked(cv, 4):
+        cv.drawRect(skia.Rect(GATE_R.left() - 30, GATE_R.top() - 60, GATE_R.right() + 30, GATE_R.top()), paint('#3A4A40'))   # gate housing
+    for side in (-1, 1):
+        x = GATE_R.left() - 16 if side < 0 else GATE_R.right()
+        cv.drawRect(skia.Rect(x, GATE_R.top(), x + 16, GATE_R.bottom()), paint('#5A5A62'))      # gate rails
+    cv.drawRect(skia.Rect(0, 1500, W, H), paint('#000000', shader=lin((0, 1500), (0, H), [C('#3A4A40'), C('#1A221E')])))
+    glow(cv, (540, 1300), 800, FIRE, 0.2)
+
+
+def grating(cv, y_bottom, jolt=0.0):
+    cv.save(); cv.clipRect(GATE_R); cv.translate(0, jolt)
     with inked(cv, 3):
-        cv.drawRect(skia.Rect(80, 380, 1000, y_bottom), paint(C('#5A5A62', 0.0)))
         for x in range(90, 1000, 46):
             cv.drawLine(x, 380, x, y_bottom, paint('#7A7A84', style='stroke', width=8))
         for y in range(400, int(y_bottom), 46):
             cv.drawLine(80, y, 1000, y, paint('#7A7A84', style='stroke', width=6))
         cv.drawRect(skia.Rect(80, y_bottom - 24, 1000, y_bottom), paint('#9A9AA4'))
+    cv.restore()
 
 
 def shot_GATE(cv, t):
-    """The girls slide under the closing gate; it slams; the horde hits it."""
+    """Inside the store, facing the front. The girls sprint in from the street, DUCK under the gate as it rolls down, and stop in
+    the foreground, backs to us, panting; the horde slams into the grating a beat later."""
     u = t - B['gate']
-    gate_store_bg(cv, t)
-    yb = 380 + min(1.0, u / 0.7) * 1120                                                       # gate rolls down
-    for k in range(6):                                                                        # zombies racing at the gate (outside)
-        zx = 1300 - min(1.0, u / 0.9) * (700 - k * 60) + k * 40
-        runner(cv, zx, 1500, 0.42, t * 2.6 + k * 0.3, dict(zomb(k), arm_r=(85, 10)), face=-1, lean=18, ink_w=3)
-    grating(cv, yb)
-    cv.drawRect(skia.Rect(0, 1500, W, H), paint('#000000', shader=lin((0, 1500), (0, H), [C('#3A4A40'), C('#1A221E')])))
+    yb = 380 + min(1.0, u / 0.6) * 1120                                                        # the gate rolls down (0.6 s)
+    hit = 0.62
+    jolt = 14 * math.sin(u * 60) * max(0.0, 1 - abs(u - hit - 0.1) / 0.15) if u > hit else 0.0
+    cv.save(); cv.clipRect(GATE_R)                                                              # ---- outside (clipped to the opening)
+    outside_view(cv, t)
+    for k in range(7):                                                                          # the horde runs AT us, then hits the gate
+        zk = min(1.0, (u + 0.25) / (hit + 0.25))
+        zs = 0.22 + 0.28 * zk
+        zx = 540 + (k - 3) * (90 + 60 * zk)
+        zy = 1330 + 170 * zk + (k % 2) * 10
+        with inked(cv, 3):
+            mascot(cv, zx, zy, zs, walk=(t * 3 + k * 0.3) % 1, run=True, arm_r=(85, 10), arm_l=(80, 15), light_side=1, rim=FIRE, rim_a=0.4, **zomb(k))
+    cv.restore()
 
-    def slider(x, P, delay):
-        k = min(1.0, max(0.0, (u - delay) / 0.45))
-        xx = -40 + k * 820 + x
-        cv.save(); cv.translate(xx, 1820); cv.rotate(-72)                                       # feet-first slide, body almost flat
-        with inked(cv, 6):
-            mascot(cv, 0, 0, 0.6, view='side', face=1, walk=0.15, run=True, arm_r=(150, 20), light_side=-1, rim=FIRE, rim_a=0.5,
-                   **dict(P, brow=1.0, mouth='open', mouth_open=0.6, sweat=True))
-        cv.restore()
-        if 0 < k < 1:                                                                            # dust kicked up
-            for d in range(5):
-                cv.drawCircle(xx - 120 - d * 40, 1830 - d * 12, 18 + d * 6, paint(C('#C8B8A0', 0.4 * (1 - k)), blur=8))
-    slider(0, MIKA, 0.0)
-    slider(-60, TARA, 0.18)
+    def girl(P, x0, x1, delay, outside):
+        k = min(1.0, max(0.0, (u - delay) / 0.5))                                                # 0 = at the gate line, 1 = foreground
+        inside = k > 0.0
+        if outside == inside:
+            return
+        y = 1500 + 420 * k
+        sc = 0.45 + 0.5 * k
+        x = x0 + (x1 - x0) * k
+        duck = 0.5 if k < 0.35 else 0.0
+        if k < 1.0:
+            with inked(cv, 6):
+                mascot(cv, x, y, sc, walk=(t * 2.6 + delay) % 1, run=True, crouch=duck, light_side=1, rim=FIRE, rim_a=0.5,
+                       **dict(P, brow=1.0, mouth='open', mouth_open=0.6, sweat=True))
+        else:                                                                                   # stopped, turned to the gate, panting
+            bob = 8 * math.sin(t * 9)
+            with inked(cv, 6):
+                mascot(cv, x, y + bob, sc, view='back', light_side=1, rim=FIRE, rim_a=0.6, **P)
+    cv.save(); cv.clipRect(GATE_R)
+    girl(TARA, 640, 760, 0.12, True)
+    girl(MIKA, 440, 300, 0.0, True)
+    cv.restore()
+    grating(cv, yb, jolt)
+    store_front_wall(cv)
+    girl(TARA, 640, 760, 0.12, False)                                                           # inside: drawn over the wall/floor
+    girl(MIKA, 440, 300, 0.0, False)
     shade(cv, (540, 1000), 1150, 0.45)
     grain(cv, t)
 
 
 def shot_GATEFACE(cv, t):
-    """Close: a zombie presses its face to the grating and talks. Calm. Polite. More of them behind, shifting."""
-    gate_store_bg(cv, t)
+    """Close: a zombie presses its face to the grating and talks. Calm. Polite. More of them behind, shifting.
+    (Camera pushed in: the opening fills the frame; everything outside stays behind the bars.)"""
+    cv.drawRect(skia.Rect(0, 0, W, H), paint('#2A3A30'))
+    win = skia.Rect(0, 150, W, 1750)
+    cv.save(); cv.clipRect(win)
+    cv.drawRect(win, paint('#000000', shader=lin((0, 150), (0, 1750), [C('#C8462A'), C('#FF9A50')])))
     for k in range(5):
         with blurred(cv, 6):
-            mascot(cv, 120 + k * 220, 2000 + (k % 2) * 80, 1.0, light_side=1, rim=FIRE, rim_a=0.3, **dict(zomb(k + 2), mouth='flat', brow=0.0))
+            mascot(cv, 100 + k * 220, 1900 + (k % 2) * 80, 1.0, light_side=1, rim=FIRE, rim_a=0.3, **dict(zomb(k + 2), mouth='flat', brow=0.0))
     P = dict(zomb(0), mouth='smile' if talk(t, 'Z') == 0 else 'open', mouth_open=talk(t, 'Z'), brow=0.2, look=(0.0, 0.1))
     with inked(cv, 8):
-        mascot(cv, 540 + 10 * math.sin(t * 1.3), 2700, 1.8, light_side=1, rim=FIRE, rim_a=0.6, head_tilt=-8 + 5 * math.sin(t * 0.8), **P)
-    for x in range(90, 1000, 46):
-        cv.drawLine(x, 380, x, 1500, paint('#7A7A84', style='stroke', width=10))
-    for y in range(400, 1500, 46):
-        cv.drawLine(80, y, 1000, y, paint('#7A7A84', style='stroke', width=7))
+        mascot(cv, 540 + 10 * math.sin(t * 1.3), 2650, 1.8, light_side=1, rim=FIRE, rim_a=0.6, head_tilt=-8 + 5 * math.sin(t * 0.8), **P)
+    cv.restore()
+    for x in range(10, W, 70):                                                                  # the grating, close
+        cv.drawLine(x, 150, x, 1750, paint('#7A7A84', style='stroke', width=14))
+    for y in range(170, 1750, 70):
+        cv.drawLine(0, y, W, y, paint('#7A7A84', style='stroke', width=10))
+    cv.drawRect(skia.Rect(0, 1750, W, H), paint('#1A221E'))                                      # inside floor
+    cv.drawRect(skia.Rect(0, 0, W, 150), paint('#3A4A40'))                                       # gate housing
     shade(cv, (540, 960), 1100, 0.45)
     grain(cv, t)
 
@@ -381,15 +446,16 @@ def shot_FREEZER(cv, t):
     slam = max(0.0, 1 - u / 0.3)
     shiver = 6 * math.sin(t * 40)
     with inked(cv, 6):
-        mascot(cv, 330 + shiver, 1900, 0.95, crouch=1.0, light_side=1, rim=ICE, rim_a=0.6,
-               **dict(MIKA, brow=1.0, mouth='o', mouth_open=talk(t, 'K'), sweat=False, pupil=0.6, look=(0.6 if t > s('K05') else 0.0, 0.0)))
+        om = mascot(cv, 330 + shiver, 1900, 0.95, crouch=1.0, light_side=1, rim=ICE, rim_a=0.6,
+                    **dict(MIKA, brow=1.0, mouth='o', mouth_open=talk(t, 'K'), sweat=False, pupil=0.6, look=(0.6 if t > s('K05') else 0.0, 0.0)))
         tara_cold = min(1.0, max(0.0, (t - B['freezer']) / 4.0))
-        mascot(cv, 760, 1910, 0.92, crouch=1.0, light_side=1, rim=ICE, rim_a=0.6, head_tilt=-6,
-               **dict(TARA, skin='#E8D0C8', skin_sh='#B8A8B0', brow=0.6, mouth='o', lids=0.3 + 0.2 * tara_cold, pupil=0.5,
-                      pupil_col='#3A3030', sweat=False))
-    cv.drawPath(blob([(690, 1830), (760, 1820), (770, 1880), (700, 1890)]), paint('#8A1414'))       # blood at her ankle
-    breath(cv, 410, 1310, t, 1.0, 0)                                                                # Mika's breath
-    breath(cv, 840, 1330, t, 1.0, 2, on=t < B['freezer'] + 1.0)                                     # Tara's stops early
+        ot = mascot(cv, 760, 1910, 0.92, crouch=1.0, light_side=1, rim=ICE, rim_a=0.6, head_tilt=-6,
+                    **dict(TARA, skin='#E8D0C8', skin_sh='#B8A8B0', brow=0.6, mouth='o', lids=0.3 + 0.2 * tara_cold, pupil=0.5,
+                           pupil_col='#3A3030', sweat=False))
+    (mx, my), (tx, ty) = om['head'], ot['head']
+    cv.drawPath(blob([(tx - 40, 1840), (tx + 30, 1832), (tx + 40, 1885), (tx - 30, 1892)]), paint('#8A1414'))   # blood at her ankle
+    breath(cv, mx - 60, my + 110, t, 1.0, 0, dx=-1.0)                                                # Mika's breath (from her mouth, outward)
+    breath(cv, tx + 60, ty + 110, t, 1.0, 2, on=t < B['freezer'] + 1.0, dx=1.0)                     # Tara's stops early
     if slam > 0:
         cv.drawRect(skia.Rect(0, 0, W, H), paint(C('#FFFFFF', 0.25 * slam)))
     shade(cv, (540, 1100), 1150, 0.45)
@@ -425,9 +491,12 @@ def shot_DOORLOCK(cv, t):
     with inked(cv, 6):
         cv.drawRect(skia.Rect(200, 260, 880, 1700), paint('#9AAABA'))
         cv.drawRect(skia.Rect(380, 520, 700, 900), paint('#C8D8E4'))                                  # frosted window
+    cv.save(); cv.clipRect(skia.Rect(380, 520, 700, 900))                                         # seen only through the frosted window
     with blurred(cv, 10):
         sx = 540 + min(1.0, u / 0.8) * 260
         mascot(cv, sx, 1500, 0.65, view='back', **dict(TARA, skin='#5A6070', skin_sh='#4A5060', shirt='#3A4A44', hair='#6A3A1E'))
+    cv.drawRect(skia.Rect(380, 520, 700, 900), paint(C('#E8F0F8', 0.35)))
+    cv.restore()
     lx = 250 + min(1.0, max(0.0, (u - 0.5) / 0.2)) * 200                                               # latch slams across
     with inked(cv, 5):
         cv.drawRect(skia.Rect(240, 1080, 700, 1120), paint('#5A6A7A'))
@@ -443,16 +512,25 @@ def shot_STORE(cv, t):
     cam = Cam(2.0 + u * 0.8, eye=1.5, vy=880, x=-0.2 + u * 0.3, f=860)
     store_aisle(cv, cam, t)
     tz = cam.z + 3.0
+    items = []
     tx, ty = cam.p(0.1 + 0.15 * math.sin(t * 3), 0, tz)
-    with inked(cv, 6):
-        mascot(cv, tx, ty, cam.scale(tz, 1.55), view='back', walk=(t * 2.6) % 1, run=True, arm_r=(160, 10), arm_l=(150, 20),
-               light_side=1, rim=FLUO, rim_a=0.4, **TARA)
+
+    def tara():
+        with inked(cv, 6):
+            mascot(cv, tx, ty, cam.scale(tz, 1.55), view='back', walk=(t * 2.6) % 1, run=True, arm_r=(160, 10), arm_l=(150, 20),
+                   light_side=1, rim=FLUO, rim_a=0.4, **TARA)
+    items.append((tz, tara))
     for k in range(10):                                                                             # horde sprinting toward her
         zz = cam.z + 9.0 - min(1.0, u / 1.5) * 5.0 + (k % 4) * 0.6
         zx, zy = cam.p(-0.7 + (k % 5) * 0.35, 0, zz)
-        with inked(cv, 3):
-            mascot(cv, zx, zy, cam.scale(zz, 1.6), walk=(t * 3 + k * 0.29) % 1, run=True, arm_r=(85, 10), arm_l=(80, 15),
-                   light_side=1, rim=FLUO, rim_a=0.3, **zomb(k))
+
+        def zf(zx=zx, zy=zy, zz=zz, k=k):
+            with inked(cv, 3):
+                mascot(cv, zx, zy, cam.scale(zz, 1.6), walk=(t * 3 + k * 0.29) % 1, run=True, arm_r=(85, 10), arm_l=(80, 15),
+                       light_side=1, rim=FLUO, rim_a=0.3, **zomb(k))
+        items.append((zz, zf))
+    for _, fn in sorted(items, key=lambda it: -it[0]):                                              # far -> near
+        fn()
     shade(cv, (540, 900), 1150, 0.45)
     grain(cv, t)
 
@@ -550,8 +628,9 @@ def shot_CHOICE(cv, t):
             mascot(cv, 540, 1500, 0.9, **dict(TARA, skin='#2A3038', skin_sh='#1A2028', shirt='#1A2420', hair='#2A1A10', head_tilt=-14 + 6 * math.sin(t * 2)))
     glass_door(cv, t, blood=1.0, shadow=sil)
     with inked(cv, 7):                                                                                 # you, in the foreground, backing away
-        mascot(cv, 860, 2200, 1.15, view='back', light_side=1, rim=ICE, rim_a=0.6, **MIKA)
-    breath(cv, 760, 1180, t, 1.2, 0)
+        oc = mascot(cv, 860, 2200, 1.15, view='back', light_side=1, rim=ICE, rim_a=0.6, **MIKA)
+    hx_, hy_ = oc['head']
+    breath(cv, hx_ - 180, hy_ + 60, t, 1.2, 0, dx=-1.0)
     shade(cv, (540, 950), 1100, 0.5)
     grain(cv, t)
 
