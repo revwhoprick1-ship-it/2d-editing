@@ -301,14 +301,17 @@ def shot_EYES(cv, t):
     with inked(cv, 10):
         mascot(cv, 540, 4300, 4.2, brow=1.0, mouth='o', pupil=0.35 - 0.1 * u, sweat=True, look=(0.0, 0.0), mouth_open=talk(t, 'M'),
                light_side=-1, rim=LAV, rim_a=0.7, skin='#E8C0B0', skin_sh='#C09A90')
-    for side in (-1, 1):                                                                        # red veins + tears
-        cx = 540 + side * 190
-        for k in range(6):
-            a = k * 1.05
-            cv.drawLine(cx + math.cos(a) * 60, 760 + math.sin(a) * 60, cx + math.cos(a) * (110 + 20 * u), 760 + math.sin(a) * (110 + 20 * u),
-                        paint(C('#C82020', 0.3 + 0.5 * u), style='stroke', width=4))
-        ty = 860 + (t * 300) % 400
-        cv.drawPath(blob([(cx + 70, ty), (cx + 85, ty + 40), (cx + 70, ty + 60), (cx + 55, ty + 40)]), paint(C('#BFE3FF', 0.8)))
+    for side in (-1, 1):                                                                        # red veins in the WHITE of each eye + tears
+        cx, cy = 540 + side * 255, 550                                                          # measured eye centres (scale 4.2)
+        for k in range(8):
+            a = k * 0.785 + 0.3
+            r0, r1 = 72, 118 + 18 * u
+            mx, my = cx + math.cos(a + 0.15) * (r0 + r1) / 2, cy + math.sin(a + 0.15) * (r0 + r1) / 2
+            pth = skia.Path(); pth.moveTo(cx + math.cos(a) * r1, cy + math.sin(a) * r1)
+            pth.quadTo(mx, my, cx + math.cos(a) * r0, cy + math.sin(a) * r0)
+            cv.drawPath(pth, paint(C('#C82020', 0.35 + 0.5 * u), style='stroke', width=4))
+        ty = cy + 150 + (t * 300) % 400
+        cv.drawPath(blob([(cx + 60, ty), (cx + 75, ty + 40), (cx + 60, ty + 60), (cx + 45, ty + 40)]), paint(C('#BFE3FF', 0.8)))
     shade(cv, (540, 800), 900, 0.45)
     grain(cv, t)
 
