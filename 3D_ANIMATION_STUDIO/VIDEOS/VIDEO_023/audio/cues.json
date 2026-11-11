@@ -1,0 +1,269 @@
+{
+ "duration": 49.31,
+ "loop": false,
+ "narration": "narration/narration_raw.wav",
+ "narration_offset": 0.0,
+ "music": "music_score.wav",
+ "music_gain_db": 2,
+ "music_cue": "cue_video023",
+ "targets": {
+  "narration_lufs": -16,
+  "master_lufs": -14,
+  "true_peak": -3.2,
+  "duck_db": 5
+ },
+ "cues": [
+  {
+   "t": 0.0,
+   "file": "AUDIO/sound_effects/comedy/scare_slam.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "frame 0 hit"
+  },
+  {
+   "t": 0.0,
+   "file": "AUDIO/ambience/wind.flac",
+   "gain": -10,
+   "bus": "amb",
+   "note": "burning city wind",
+   "loop": true,
+   "dur": 6.601999999999999
+  },
+  {
+   "t": 0.0,
+   "file": "AUDIO/sound_effects/comedy/chase_run.flac",
+   "gain": -7,
+   "bus": "sfx",
+   "note": "our feet",
+   "loop": true,
+   "dur": 6.402
+  },
+  {
+   "t": 0.0,
+   "file": "AUDIO/sound_effects/comedy/zombie_groan.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "the horde",
+   "loop": true,
+   "dur": 6.802
+  },
+  {
+   "t": 0.0,
+   "file": "AUDIO/sound_effects/comedy/heavy_breath.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "panting",
+   "loop": true,
+   "dur": 6.002
+  },
+  {
+   "t": 2.6,
+   "file": "AUDIO/sound_effects/movement/whoosh_short.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "Tara vaults the car"
+  },
+  {
+   "t": 3.2,
+   "file": "AUDIO/sound_effects/comedy/body_thud.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "lands"
+  },
+  {
+   "t": 6.002,
+   "file": "AUDIO/sound_effects/comedy/metal_slam.flac",
+   "gain": -5,
+   "bus": "sfx",
+   "note": "the gate slams down"
+  },
+  {
+   "t": 6.002,
+   "file": "AUDIO/sound_effects/comedy/flicker_buzz.flac",
+   "gain": -19,
+   "bus": "sfx",
+   "note": "store lights",
+   "loop": true,
+   "dur": 13.233
+  },
+  {
+   "t": 6.502,
+   "file": "AUDIO/sound_effects/comedy/metal_bang.flac",
+   "gain": -7,
+   "bus": "sfx",
+   "note": "zombies hit the gate"
+  },
+  {
+   "t": 6.802,
+   "file": "AUDIO/sound_effects/comedy/metal_bang.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "again"
+  },
+  {
+   "t": 10.149,
+   "file": "AUDIO/sound_effects/comedy/cable_hum.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "drone rotors",
+   "loop": true,
+   "dur": 4.905000000000001
+  },
+  {
+   "t": 13.254,
+   "file": "AUDIO/sound_effects/environment/electronic_beep.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "thermal on"
+  },
+  {
+   "t": 16.316,
+   "file": "AUDIO/sound_effects/comedy/chase_run.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "running down the aisle",
+   "dur": 2.9190000000000005
+  },
+  {
+   "t": 19.235,
+   "file": "AUDIO/sound_effects/comedy/metal_slam.flac",
+   "gain": -7,
+   "bus": "sfx",
+   "note": "freezer door slams"
+  },
+  {
+   "t": 19.235,
+   "file": "AUDIO/sound_effects/environment/machinery_hum.flac",
+   "gain": -12,
+   "bus": "amb",
+   "note": "freezer compressor",
+   "loop": true,
+   "dur": 30.075000000000003
+  },
+  {
+   "t": 20.665,
+   "file": "AUDIO/sound_effects/environment/electronic_beep.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "thermal again"
+  },
+  {
+   "t": 25.072,
+   "file": "AUDIO/sound_effects/bio/heartbeat_muffled.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "her breath is not fogging"
+  },
+  {
+   "t": 32.104,
+   "file": "AUDIO/sound_effects/comedy/lock_click.flac",
+   "gain": -5,
+   "bus": "sfx",
+   "note": "latch"
+  },
+  {
+   "t": 32.434,
+   "file": "AUDIO/sound_effects/movement/footstep_hard.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "Tara running out",
+   "loop": true,
+   "dur": 2.221999999999994
+  },
+  {
+   "t": 33.334,
+   "file": "AUDIO/sound_effects/comedy/crowd_gasp.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "the horde turns"
+  },
+  {
+   "t": 34.656,
+   "file": "AUDIO/sound_effects/comedy/scare_slam.flac",
+   "gain": -3,
+   "bus": "sfx",
+   "note": "JS1 the swarm leaps"
+  },
+  {
+   "t": 34.676,
+   "file": "AUDIO/sound_effects/comedy/scare_shriek.flac",
+   "gain": -7,
+   "bus": "sfx",
+   "note": "JS1"
+  },
+  {
+   "t": 35.406,
+   "file": "AUDIO/sound_effects/comedy/wet_chew.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "behind the door",
+   "dur": 1.2,
+   "fade_out": 0.3
+  },
+  {
+   "t": 35.706,
+   "file": "AUDIO/sound_effects/bio/squelch.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "blood on the glass"
+  },
+  {
+   "t": 38.524,
+   "file": "AUDIO/sound_effects/comedy/door_knock.flac",
+   "gain": -7,
+   "bus": "sfx",
+   "note": "knock 1"
+  },
+  {
+   "t": 38.824,
+   "file": "AUDIO/sound_effects/comedy/door_knock.flac",
+   "gain": -8,
+   "bus": "sfx",
+   "note": "knock 2"
+  },
+  {
+   "t": 39.124,
+   "file": "AUDIO/sound_effects/comedy/door_knock.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "knock 3"
+  },
+  {
+   "t": 45.518,
+   "file": "AUDIO/sound_effects/bio/heartbeat_lubdub.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "heartbeat",
+   "loop": true,
+   "dur": 3.7920000000000016
+  },
+  {
+   "t": 45.818,
+   "file": "AUDIO/sound_effects/comedy/knob_turn.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "the handle turns"
+  },
+  {
+   "t": 48.755,
+   "file": "AUDIO/sound_effects/comedy/scare_slam.flac",
+   "gain": -3,
+   "bus": "sfx",
+   "note": "JS2 Tara slams the glass"
+  },
+  {
+   "t": 48.775,
+   "file": "AUDIO/sound_effects/environment/glass_shatter.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "glass cracks"
+  },
+  {
+   "t": 48.795,
+   "file": "AUDIO/sound_effects/comedy/scare_shriek.flac",
+   "gain": -7,
+   "bus": "sfx",
+   "note": "JS2"
+  }
+ ]
+}

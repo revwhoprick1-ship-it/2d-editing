@@ -529,8 +529,15 @@ def shot_GLASSCU(cv, t):
             mascot(cv, 540, 2600, 1.9, **dict(TARA, skin='#B8C0C0', skin_sh='#8A9294', iris='#D0D8DC', pupil_col='#9AA2A6', mouth='smile',
                                              brow=0.0, head_tilt=-12, look=(0.0, 0.0)))
     cv.drawRect(skia.Rect(0, 0, W, H), paint(C('#E8F0F8', 0.3)))
-    for k in range(5):                                                                               # blood streaks still on the glass
-        cv.drawRect(skia.Rect(150 + k * 190, 0, 165 + k * 190, 600 + k * 90), paint(C('#7A0A0A', 0.7)))
+    rng = np.random.default_rng(11)                                                                   # blood smears + drips on the glass
+    for k in range(4):
+        bx, by, r = 140 + k * 260 + rng.uniform(-40, 40), rng.uniform(380, 560), rng.uniform(60, 110)
+        pts = [(bx + math.cos(a) * r * rng.uniform(0.6, 1.5), by + math.sin(a) * r * rng.uniform(0.4, 1.2)) for a in np.linspace(0, 2 * math.pi, 12)[:-1]]
+        cv.drawPath(blob(pts), paint(C('#6A0A0A', 0.75)))
+        for d in range(3):
+            dx, w_, L_ = bx + rng.uniform(-r * 0.7, r * 0.7), rng.uniform(8, 16), rng.uniform(150, 520)
+            cv.drawRoundRect(skia.Rect(dx - w_ / 2, by, dx + w_ / 2, by + L_), w_ / 2, w_ / 2, paint(C('#6A0A0A', 0.7)))
+            cv.drawCircle(dx, by + L_, w_ * 0.8, paint(C('#6A0A0A', 0.7)))
     ph = (t * 0.6) % 1.0                                                                              # YOUR breath fogging the glass
     cv.drawCircle(540, 1500, 260 + 120 * ph, paint(C('#FFFFFF', 0.4 * (1 - ph)), blur=40))
     grain(cv, t)
