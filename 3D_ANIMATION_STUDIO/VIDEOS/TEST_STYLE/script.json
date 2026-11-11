@@ -1,0 +1,3 @@
+{"title": "Style test", "engine": "qwen3-tts", "tempo": 1.0,
+ "qwen_voices": {"N": "x"},
+ "lines": [{"id": "N01", "who": "N", "text": "Mom says the basement door stays locked. So why do I have the key?", "delivery": "", "pause_after": 0.2}]}
