@@ -18,3 +18,8 @@
 * **Captions mid-screen** (y ~1150-1300, max 1480): the bottom ~25% is covered by the platforms' own captions/UI.
   Voice lines never hard-cut: soft fades on every line, keep reverb tails (no trim-to-length after FX).
 * Reply in short "caveman" talk.
+* **Always render as FAST as possible** (cloud session = 4 CPU, no GPU; EEVEE ~8 s/frame). Never render 3D frame-by-frame.
+  3D look = HYBRID (user's ref reels: 3D world + flat 2D characters): Blender renders ONE overscanned still per shot
+  (`VIDEOS/TEST_3D/scene3d.py --plates 1` pattern, DOF baked in, ~1 min/shot) + projection json; camera push/pan,
+  handheld, props that move, flicker and the characters are drawn in 2D on top (`VIDEOS/TEST_3D/comp2d.py`, Pool(4)).
+  Only render frames the edit uses; edl `--preset fast` for tests; delete frames after export.

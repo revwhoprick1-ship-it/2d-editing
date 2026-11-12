@@ -1,6 +1,8 @@
 """TEST_3D — real 3D render in the "2.5D ink" look (toon-shaded 3D + black ink outlines), 10 s, 1080x1920, 30 fps.
 
-    blender -b --factory-startup --python VIDEOS/TEST_3D/scene3d.py -- [--frames 0,300] [--still 60] [--res 1080x1920] [--samples 8] [--bg 1]
+    blender -b --factory-startup --python VIDEOS/TEST_3D/scene3d.py -- [--frames 0,300] [--still 60] [--res 1080x1920] [--samples 8] [--bg 1] [--plates 1]
+
+  --plates 1 = FAST (default from now on): 3 stills (one per shot, overscan K) + plates.json; comp2d.py does the moves in 2D.
 
   --bg 1 = HYBRID (the look of the reference reels): Blender renders only the 3D set + camera moves + depth of field,
   writes track.json (where the character stands on screen each frame), and comp2d.py draws the FLAT 2D mascot on top.
@@ -360,6 +362,39 @@ for name, lens, f0, f1, l0, l1, t0, t1, md in SHOTS:
         sc.camera = cam
 
 # ----------------------------------------------------------------------------------------------- hybrid mode: 3D set only + 2D character track
+# ----------------------------------------------------------------------------------------------- FAST mode: one plate per shot
+if '--plates' in opt:
+    """CPU cloud = slow EEVEE (~8 s/frame). So: ONE still per shot from the shot's start camera, rendered K x larger
+    (overscan for the 2D push-in), with DOF. The camera move, the handle turning, the lamp flicker and the character are
+    all done in 2D by comp2d.py. 3 renders instead of 300."""
+    import json
+    from bpy_extras.object_utils import world_to_camera_view
+    for ob in [root] + list(root.children_recursive) + [lever]:
+        ob.hide_render = True
+    PL = {'A': ('camA', F_A, 2.0, 'head'), 'B': ('camB', F_B, 1.15, 'head'), 'C': ('camC', F_C, 1.8, 'knob')}
+    meta = {}
+    os.makedirs(os.path.join(HERE, 'plates'), exist_ok=True)
+    for key, (cname, f0, K, focus) in PL.items():
+        sc.frame_set(f0)
+        cam = bpy.data.objects[cname]; sc.camera = cam
+        sc.render.resolution_x, sc.render.resolution_y = int(1080 * K) // 2 * 2, int(1920 * K) // 2 * 2
+        Wp, Hp = sc.render.resolution_x, sc.render.resolution_y
+        fpx = cam.data.lens / cam.data.sensor_width * Hp
+
+        def pr(co):
+            v = world_to_camera_view(sc, cam, Vector(co))
+            return [round(v.x * Wp, 1), round((1 - v.y) * Hp, 1), round(v.z, 4), round(fpx / max(v.z, 1e-3), 2)]
+        kp = Vector((1.2, 3.88, 1.0))
+        tips = {a: pr(kp + Vector((-0.01, -0.16 * math.cos(math.radians(a)), -0.16 * math.sin(math.radians(a))))) for a in (0, 42)}
+        tgt = bpy.data.objects[cname + '_tgt']
+        meta[key] = dict(K=K, W=Wp, H=Hp, feet=pr(root.matrix_world.translation), head=pr(bpy.data.objects['head'].matrix_world.translation),
+                         knob=pr(kp), tip0=tips[0], tip42=tips[42])
+        sc.render.filepath = os.path.join(HERE, 'plates', f'{key}.png')
+        bpy.ops.render.render(write_still=True)
+        print('PLATE_OK', key, Wp, Hp)
+    json.dump(meta, open(os.path.join(HERE, 'plates', 'plates.json'), 'w'), indent=1)
+    sys.exit(0)
+
 BG = '--bg' in opt
 if BG:                                    # the character is drawn flat in 2D on top (comp2d.py), so hide the 3D one
     for ob in [root] + list(root.children_recursive):
