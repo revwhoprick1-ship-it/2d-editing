@@ -1,0 +1,32 @@
+{
+ "title": "The World Ends In 60 Seconds",
+ "engine": "qwen3-tts",
+ "tempo": 1.05,
+ "qwen_voices": {
+  "N": "x", "M": "x", "P": "x", "A": "x",
+  "S": "Female child, 7 years old, American little girl. Small, high, soft and sweet voice, a little shaky and teary but brave, speaking quietly, very close to the microphone."
+ },
+ "lines": [
+  {"id": "N01", "who": "N", "text": "At eleven fifty-nine, every phone on Earth screamed.", "pause_after": 0.2},
+  {"id": "A01", "who": "A", "text": "The world ends in sixty seconds. This is not a test.", "pause_after": 0.2},
+  {"id": "N02", "who": "N", "text": "My little sister was home alone. Three blocks away.", "pause_after": 0.2},
+  {"id": "N03", "who": "N", "text": "Fifty seconds. I ran.", "pause_after": 0.2},
+  {"id": "N04", "who": "N", "text": "Then gravity... blinked.", "pause_after": 0.2},
+  {"id": "P01", "who": "P", "text": "Are you with Mia?", "pause_after": 0.2},
+  {"id": "M01", "who": "M", "text": "Almost!", "pause_after": 0.2},
+  {"id": "P02", "who": "P", "text": "Don't let go of her hand. Promise me.", "pause_after": 0.2},
+  {"id": "M02", "who": "M", "text": "I promise.", "pause_after": 0.2},
+  {"id": "N05", "who": "N", "text": "Then the lights came down. They were looking for someone.", "pause_after": 0.2},
+  {"id": "S01", "who": "S", "text": "I knew you'd come.", "tempo": 1.0, "pause_after": 0.2},
+  {"id": "N06", "who": "N", "text": "I held her hand. I didn't let go.", "pause_after": 0.2},
+  {"id": "A02", "who": "A", "text": "Selection complete. One human will be kept.", "pause_after": 0.2},
+  {"id": "N07", "who": "N", "text": "It picked me.", "pause_after": 0.2},
+  {"id": "S02", "who": "S", "text": "It picked you...", "tempo": 1.0, "pause_after": 0.2},
+  {"id": "S03", "who": "S", "text": "It's okay. Go.", "tempo": 1.0, "pause_after": 0.2},
+  {"id": "M03", "who": "M", "text": "Not without you!", "pause_after": 0.2},
+  {"id": "S04", "who": "S", "text": "Does it hurt... when the world ends?", "tempo": 1.0, "pause_after": 0.2},
+  {"id": "N08", "who": "N", "text": "The light only takes one.", "pause_after": 0.2},
+  {"id": "N09", "who": "N", "text": "I could go. I could give it to her. Or I could stay.", "pause_after": 0.2},
+  {"id": "N10", "who": "N", "text": "One, two, or three. Choose.", "pause_after": 0.2}
+ ]
+}

@@ -1,0 +1,412 @@
+{
+ "duration": 60.0,
+ "loop": true,
+ "narration": "narration/narration_raw.wav",
+ "narration_offset": 0.0,
+ "music": "music_score.wav",
+ "music_gain_db": 1,
+ "music_cue": "cue_video025",
+ "targets": {
+  "narration_lufs": -16,
+  "master_lufs": -14,
+  "true_peak": -4.5,
+  "duck_db": 7
+ },
+ "cues": [
+  {
+   "t": 0.0,
+   "file": "AUDIO/sound_effects/world/sky_crack.flac",
+   "gain": -5,
+   "bus": "sfx",
+   "note": "frame 0: the sky splits"
+  },
+  {
+   "t": 0.0,
+   "file": "AUDIO/sound_effects/world/alert_tone.flac",
+   "gain": -8,
+   "bus": "sfx",
+   "note": "every phone screams"
+  },
+  {
+   "t": 0.0,
+   "file": "AUDIO/sound_effects/world/sirens_far.flac",
+   "gain": -12,
+   "bus": "amb",
+   "note": "sirens across the city",
+   "loop": true,
+   "dur": 27.4,
+   "fade_out": 0.6
+  },
+  {
+   "t": 0.0,
+   "file": "AUDIO/sound_effects/world/rumble_bed.flac",
+   "gain": -12,
+   "bus": "amb",
+   "note": "the ground shaking",
+   "loop": true,
+   "dur": 59.65,
+   "fade_out": 0.05
+  },
+  {
+   "t": 0.35,
+   "file": "AUDIO/sound_effects/reactions/fall_crash.flac",
+   "gain": -5,
+   "bus": "sfx",
+   "note": "the burning car lands"
+  },
+  {
+   "t": 0.35,
+   "file": "AUDIO/sound_effects/movement/impact_heavy.flac",
+   "gain": -7,
+   "bus": "sfx",
+   "note": "car impact"
+  },
+  {
+   "t": 0.35,
+   "file": "AUDIO/sound_effects/world/fire_bed.flac",
+   "gain": -6,
+   "bus": "amb",
+   "note": "car burning (street)",
+   "loop": true,
+   "dur": 11.85,
+   "fade_out": 0.4
+  },
+  {
+   "t": 3.3,
+   "file": "AUDIO/sound_effects/comedy/phone_buzz.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "phone vibrating (insert)"
+  },
+  {
+   "t": 3.35,
+   "file": "AUDIO/sound_effects/world/alert_tone.flac",
+   "gain": -12,
+   "bus": "sfx",
+   "note": "alert on the screen"
+  },
+  {
+   "t": 6.6,
+   "file": "AUDIO/sound_effects/comedy/chase_run.flac",
+   "gain": -14,
+   "bus": "sfx",
+   "note": "running",
+   "loop": true,
+   "dur": 6.4,
+   "fade_out": 0.2
+  },
+  {
+   "t": 6.6,
+   "file": "AUDIO/sound_effects/comedy/heavy_breath.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "breathing",
+   "loop": true,
+   "dur": 7.9,
+   "fade_out": 0.3
+  },
+  {
+   "t": 10.55,
+   "file": "AUDIO/sound_effects/movement/impact_heavy.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "a piece of sky hits the sidewalk"
+  },
+  {
+   "t": 10.55,
+   "file": "AUDIO/sound_effects/environment/glass_shatter.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "sky shard shatters"
+  },
+  {
+   "t": 13.0,
+   "file": "AUDIO/sound_effects/world/gravity_up.flac",
+   "gain": -7,
+   "bus": "sfx",
+   "note": "gravity blinks: everything lifts"
+  },
+  {
+   "t": 13.0,
+   "file": "AUDIO/sound_effects/comedy/air_float.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "floating",
+   "dur": 1.5,
+   "fade_out": 0.05
+  },
+  {
+   "t": 14.5,
+   "file": "AUDIO/sound_effects/movement/impact_heavy.flac",
+   "gain": -5,
+   "bus": "sfx",
+   "note": "SLAM: everything falls"
+  },
+  {
+   "t": 14.5,
+   "file": "AUDIO/sound_effects/transitions/bass_impact.flac",
+   "gain": -7,
+   "bus": "sfx",
+   "note": "slam sub"
+  },
+  {
+   "t": 14.54,
+   "file": "AUDIO/sound_effects/comedy/metal_slam.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "cars hit the road"
+  },
+  {
+   "t": 14.6,
+   "file": "AUDIO/sound_effects/comedy/chase_run.flac",
+   "gain": -14,
+   "bus": "sfx",
+   "note": "running again",
+   "loop": true,
+   "dur": 2.0000000000000013,
+   "fade_out": 0.2
+  },
+  {
+   "t": 15.75,
+   "file": "AUDIO/sound_effects/comedy/scare_slam.flac",
+   "gain": -5,
+   "bus": "sfx",
+   "note": "JUMPSCARE: a car from the sky (unannounced)"
+  },
+  {
+   "t": 15.75,
+   "file": "AUDIO/sound_effects/comedy/metal_bang.flac",
+   "gain": -8,
+   "bus": "sfx",
+   "note": "car crunch"
+  },
+  {
+   "t": 15.75,
+   "file": "AUDIO/sound_effects/comedy/glitch_stab.flac",
+   "gain": -14,
+   "bus": "sfx",
+   "note": "glitch"
+  },
+  {
+   "t": 15.77,
+   "file": "AUDIO/sound_effects/environment/glass_shatter.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "windows burst"
+  },
+  {
+   "t": 15.85,
+   "file": "AUDIO/sound_effects/world/fire_bed.flac",
+   "gain": -8,
+   "bus": "amb",
+   "note": "second car burning",
+   "loop": true,
+   "dur": 7.6,
+   "fade_out": 0.3
+  },
+  {
+   "t": 16.6,
+   "file": "AUDIO/sound_effects/world/phone_ring.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "MOM calling",
+   "dur": 0.6499999999999979,
+   "fade_out": 0.05
+  },
+  {
+   "t": 17.2,
+   "file": "AUDIO/sound_effects/comedy/chase_run.flac",
+   "gain": -16,
+   "bus": "sfx",
+   "note": "running with the phone",
+   "loop": true,
+   "dur": 5.650000000000002,
+   "fade_out": 0.3
+  },
+  {
+   "t": 22.85,
+   "file": "AUDIO/sound_effects/world/call_fail.flac",
+   "gain": -10,
+   "bus": "sfx",
+   "note": "CALL FAILED"
+  },
+  {
+   "t": 23.45,
+   "file": "AUDIO/sound_effects/world/beam_hum.flac",
+   "gain": -12,
+   "bus": "amb",
+   "note": "the lights come down",
+   "loop": true,
+   "dur": 3.9499999999999993,
+   "fade_out": 0.4
+  },
+  {
+   "t": 23.45,
+   "file": "AUDIO/sound_effects/taxi/light_whoosh.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "beam 1 lands"
+  },
+  {
+   "t": 23.85,
+   "file": "AUDIO/sound_effects/taxi/light_whoosh.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "beam 2 lands"
+  },
+  {
+   "t": 24.35,
+   "file": "AUDIO/sound_effects/taxi/light_whoosh.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "beam 3 lands"
+  },
+  {
+   "t": 24.85,
+   "file": "AUDIO/sound_effects/taxi/light_whoosh.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "beam 4 lands"
+  },
+  {
+   "t": 25.65,
+   "file": "AUDIO/sound_effects/comedy/subliminal_hit.flac",
+   "gain": -12,
+   "bus": "sfx",
+   "note": "the beam stops ON you (foreshadow)"
+  },
+  {
+   "t": 27.4,
+   "file": "AUDIO/sound_effects/environment/door_creak_slam.flac",
+   "gain": -8,
+   "bus": "sfx",
+   "note": "you burst in"
+  },
+  {
+   "t": 28.0,
+   "file": "AUDIO/sound_effects/comedy/flicker_buzz.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "lamp flickers"
+  },
+  {
+   "t": 29.2,
+   "file": "AUDIO/sound_effects/bio/heartbeat_lubdub.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "heartbeat (Mia)",
+   "loop": true,
+   "dur": 4.800000000000001,
+   "fade_out": 0.3
+  },
+  {
+   "t": 34.0,
+   "file": "AUDIO/sound_effects/world/rumble_bed.flac",
+   "gain": -1,
+   "bus": "amb",
+   "note": "the house starts shaking",
+   "dur": 1.05,
+   "fade_out": 0.3
+  },
+  {
+   "t": 34.05,
+   "file": "AUDIO/sound_effects/comedy/house_creak.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "the house groans"
+  },
+  {
+   "t": 34.3,
+   "file": "AUDIO/sound_effects/comedy/flicker_buzz.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "lights die"
+  },
+  {
+   "t": 34.75,
+   "file": "AUDIO/sound_effects/world/roof_rip.flac",
+   "gain": -5,
+   "bus": "sfx",
+   "note": "THE ROOF IS TORN OFF"
+  },
+  {
+   "t": 34.75,
+   "file": "AUDIO/sound_effects/world/sky_crack.flac",
+   "gain": -8,
+   "bus": "sfx",
+   "note": "the sky right above"
+  },
+  {
+   "t": 34.75,
+   "file": "AUDIO/sound_effects/world/wind_roar.flac",
+   "gain": -5,
+   "bus": "amb",
+   "note": "open sky wind",
+   "loop": true,
+   "dur": 24.9,
+   "fade_out": 0.05
+  },
+  {
+   "t": 36.6,
+   "file": "AUDIO/sound_effects/comedy/phone_buzz.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "phones on the floor light up"
+  },
+  {
+   "t": 36.65,
+   "file": "AUDIO/sound_effects/world/alert_tone.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "second alert"
+  },
+  {
+   "t": 39.731,
+   "file": "AUDIO/sound_effects/comedy/glitch_stab.flac",
+   "gain": -12,
+   "bus": "sfx",
+   "note": "KEPT: YOU"
+  },
+  {
+   "t": 40.364,
+   "file": "AUDIO/sound_effects/world/beam_slam.flac",
+   "gain": -5,
+   "bus": "sfx",
+   "note": "THE BEAM LOCKS ON YOU"
+  },
+  {
+   "t": 40.364,
+   "file": "AUDIO/sound_effects/world/beam_hum.flac",
+   "gain": -7,
+   "bus": "amb",
+   "note": "inside the light",
+   "loop": true,
+   "dur": 19.286,
+   "fade_out": 0.05
+  },
+  {
+   "t": 56.9,
+   "file": "AUDIO/sound_effects/comedy/stamp_thud.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "choice card"
+  },
+  {
+   "t": 56.9,
+   "file": "AUDIO/sound_effects/bio/heartbeat_lubdub.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "heartbeat under the choice",
+   "loop": true,
+   "dur": 2.75,
+   "fade_out": 0.05
+  },
+  {
+   "t": 59.65,
+   "file": "AUDIO/sound_effects/world/end_boom.flac",
+   "gain": -5,
+   "bus": "sfx",
+   "note": "0:00: the world ends (white) -> loop"
+  }
+ ]
+}

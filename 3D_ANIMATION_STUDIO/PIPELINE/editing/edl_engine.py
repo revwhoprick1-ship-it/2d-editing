@@ -87,13 +87,16 @@ class Frames:
     def avail(self, job):
         if job not in self._avail:
             d = os.path.join(self.root, job)
-            fs = sorted(int(f[:-4]) for f in os.listdir(d) if f.endswith('.png')) if os.path.isdir(d) else []
+            fs = sorted(int(f[:-4]) for f in os.listdir(d) if f.endswith(('.png', '.jpg'))) if os.path.isdir(d) else []
             self._avail[job] = fs
         return self._avail[job]
 
     @lru_cache(maxsize=48)
     def load(self, job, f):
-        im = Image.open(os.path.join(self.root, job, f'{f:04d}.png')).convert('RGB')
+        p = os.path.join(self.root, job, f'{f:04d}.png')
+        if not os.path.exists(p):                                   # jpg frames (hybrid renders: 5x smaller on disk)
+            p = p[:-4] + '.jpg'
+        im = Image.open(p).convert('RGB')
         return np.asarray(im, dtype=np.float32) / 255.0
 
     def get(self, job, fr):

@@ -1651,5 +1651,122 @@
   "duration_s": 0.7,
   "sample_rate": 48000,
   "licence": "Original procedural synthesis (VIDEOS/VIDEO_024/audio_synth.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/world/alert_tone.flac",
+  "category": "world",
+  "name": "alert_tone",
+  "description": "3 urgent pulses, two notes a fifth apart, soft square, smoothed (no harsh overshoot).",
+  "duration_s": 2.4,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (VIDEOS/VIDEO_025/audio_synth.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/world/sky_crack.flac",
+  "category": "world",
+  "name": "sky_crack",
+  "description": "The sky splitting: a sharp glassy crackle + a huge low boom that rolls away (4 s).",
+  "duration_s": 4.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (VIDEOS/VIDEO_025/audio_synth.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/world/fire_bed.flac",
+  "category": "world",
+  "name": "fire_bed",
+  "description": "Burning car: roar + random crackles, loopable (8 s).",
+  "duration_s": 8.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (VIDEOS/VIDEO_025/audio_synth.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/world/rumble_bed.flac",
+  "category": "world",
+  "name": "rumble_bed",
+  "description": "The ground shaking: sub rumble with slow surges, loopable (10 s).",
+  "duration_s": 10.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (VIDEOS/VIDEO_025/audio_synth.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/world/wind_roar.flac",
+  "category": "world",
+  "name": "wind_roar",
+  "description": "Open sky after the roof is gone: howling wind (10 s).",
+  "duration_s": 10.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (VIDEOS/VIDEO_025/audio_synth.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/world/beam_hum.flac",
+  "category": "world",
+  "name": "beam_hum",
+  "description": "The light: an airy chord that breathes + shimmer (10 s, loopable).",
+  "duration_s": 10.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (VIDEOS/VIDEO_025/audio_synth.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/world/beam_slam.flac",
+  "category": "world",
+  "name": "beam_slam",
+  "description": "The light locks on: instant sub drop + white blast + ringing shimmer (zero attack).",
+  "duration_s": 3.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (VIDEOS/VIDEO_025/audio_synth.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/world/gravity_up.flac",
+  "category": "world",
+  "name": "gravity_up",
+  "description": "Everything lifts: a rising airy sweep with a sub swell (1.4 s).",
+  "duration_s": 1.4,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (VIDEOS/VIDEO_025/audio_synth.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/world/roof_rip.flac",
+  "category": "world",
+  "name": "roof_rip",
+  "description": "Wood and nails tearing + a roar of air (2.5 s).",
+  "duration_s": 2.5,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (VIDEOS/VIDEO_025/audio_synth.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/world/phone_ring.flac",
+  "category": "world",
+  "name": "phone_ring",
+  "description": "A ringtone (soft marimba-ish, 2 rings, 2.4 s).",
+  "duration_s": 2.4,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (VIDEOS/VIDEO_025/audio_synth.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/world/call_fail.flac",
+  "category": "world",
+  "name": "call_fail",
+  "description": "Call failed: three falling beeps.",
+  "duration_s": 1.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (VIDEOS/VIDEO_025/audio_synth.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/world/sirens_far.flac",
+  "category": "world",
+  "name": "sirens_far",
+  "description": "Distant sirens across the city, wailing slowly (10 s, loopable).",
+  "duration_s": 10.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (VIDEOS/VIDEO_025/audio_synth.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/world/end_boom.flac",
+  "category": "world",
+  "name": "end_boom",
+  "description": "The end (0:00): one enormous white-out boom (sample 0 = peak), long tail (5 s).",
+  "duration_s": 5.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (VIDEOS/VIDEO_025/audio_synth.py). Free for monetised use."
  }
 ]

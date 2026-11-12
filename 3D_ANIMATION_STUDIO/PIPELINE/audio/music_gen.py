@@ -1585,6 +1585,54 @@ def cue_video024():
 CUES['video024'] = cue_video024
 LOOPS['video024'] = None
 
+
+def cue_video025():
+    """The World Ends In 60 Seconds: a ticking clock on every real second; low pulsing drone in the street; a soft piano motif
+    at home (Mia); a drop on the rumble; dissonance after the roof; strings + music-box motif build under the light; strip back
+    to the clock for the choice; silence at 0:00 (the end boom is SFX)."""
+    sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'VIDEOS', 'VIDEO_025'))
+    import timeline as TL25
+    T, END = TL25.T, TL25.END
+    S = Score(END + 2.0, bpm=60)
+    n = int(T['door'] * SR); tt = np.arange(n) / SR
+    drone = (np.tanh(1.6 * np.sin(2 * np.pi * 36.71 * tt)) * 0.6 + 0.4 * np.sin(2 * np.pi * 73.42 * tt)) * (0.7 + 0.3 * np.sin(2 * np.pi * 0.5 * tt))
+    drone[-int(1.5 * SR):] *= np.linspace(1, 0, int(1.5 * SR))
+    S.add('fx', 0.0, drone, -10)
+    for k in range(1, 60):
+        if k < T['white']:
+            S.add('perc', float(k), drum_tick(0.9 if k % 10 == 0 else 0.55), -8)
+    S.add('pad', 6.0, inst_tremolo(C(['D4', 'D#4', 'A4']), T['door'] - 6.0, rate=9, bright=2600), -21)
+    motif = ['D5', 'F5', 'A5', 'G5', 'F5', 'E5', 'F5', 'D5']
+    t, k = T['door'] + 0.4, 0
+    while t < T['rumble'] - 0.3:
+        S.add('lead', t, inst_epiano(M(motif[k % 8]), 1.2), -12)
+        t += 0.5 if k % 8 != 7 else 1.0
+        k += 1
+    home = [['D3', 'F3', 'A3'], ['A#2', 'D3', 'F3'], ['F3', 'A3', 'C4'], ['C3', 'E3', 'G3']]
+    for i, t0 in enumerate(np.arange(T['door'], T['rumble'], 2.0)):
+        S.add('pad', float(t0), inst_pad(C(home[i % 4]), 2.3, attack=0.6), -14)
+    S.add('pad', T['rip'], inst_strings(C(['D3', 'D#3', 'A3']), T['lock'] - T['rip'], attack=1.5, bright=1800), -15)
+    seq = [['D3', 'F3', 'A3', 'D4'], ['A#2', 'D3', 'F3', 'A#3'], ['F2', 'A3', 'C4', 'F4'], ['C3', 'E3', 'G3', 'C4']]
+    span = (T['choice'] - T['lock']) / 4
+    for i in range(4):
+        S.add('pad', T['lock'] + i * span, inst_strings(C(seq[i]), span + 0.6, attack=0.8, bright=2600), -12 + i * 1.0)
+        S.add('bass', T['lock'] + i * span, inst_bass(M(seq[i][0]), span, cutoff=300), -15)
+    t, k = T['lock'] + 0.6, 0
+    while t < T['choice'] - 0.2:
+        S.add('lead', t, inst_bell(M(motif[k % 8]), 1.4), -15)
+        t += 0.5 if k % 8 != 7 else 1.0
+        k += 1
+    S.add('pad', T['choice'], inst_strings(C(['A4', 'D5']), T['white'] - T['choice'], attack=0.3, bright=3000), -13)
+    S.gate('pad', T['rumble'], T['rip'], -40, 0.1)
+    S.gate('lead', T['rumble'], T['rip'], -40, 0.1)
+    for b in S.buses:
+        S.gate(b, T['white'], END + 2.0, -60, 0.03)
+    return S
+
+
+CUES['video025'] = cue_video025
+LOOPS['video025'] = None
+
 if __name__ == '__main__':
     cue, out = sys.argv[1], sys.argv[2]
     S = CUES[cue]()

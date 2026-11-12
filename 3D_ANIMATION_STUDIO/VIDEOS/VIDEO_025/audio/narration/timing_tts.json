@@ -1,0 +1,924 @@
+{
+ "voice": "qwen3-tts",
+ "sample_rate": 24000,
+ "lines": [
+  {
+   "id": "N01",
+   "who": "N",
+   "text": "At eleven fifty-nine, every phone on Earth screamed.",
+   "start": 0.0,
+   "end": 4.045,
+   "delivery": "",
+   "speed": 1.05
+  },
+  {
+   "id": "A01",
+   "who": "A",
+   "text": "The world ends in sixty seconds. This is not a test.",
+   "start": 4.245,
+   "end": 7.444,
+   "delivery": "",
+   "speed": 1.05
+  },
+  {
+   "id": "N02",
+   "who": "N",
+   "text": "My little sister was home alone. Three blocks away.",
+   "start": 7.644,
+   "end": 11.671,
+   "delivery": "",
+   "speed": 1.05
+  },
+  {
+   "id": "N03",
+   "who": "N",
+   "text": "Fifty seconds. I ran.",
+   "start": 11.871,
+   "end": 14.308,
+   "delivery": "",
+   "speed": 1.05
+  },
+  {
+   "id": "N04",
+   "who": "N",
+   "text": "Then gravity... blinked.",
+   "start": 14.508,
+   "end": 16.947,
+   "delivery": "",
+   "speed": 1.05
+  },
+  {
+   "id": "P01",
+   "who": "P",
+   "text": "Are you with Mia?",
+   "start": 17.147,
+   "end": 18.19,
+   "delivery": "",
+   "speed": 1.05
+  },
+  {
+   "id": "M01",
+   "who": "M",
+   "text": "Almost!",
+   "start": 18.39,
+   "end": 19.675,
+   "delivery": "",
+   "speed": 1.05
+  },
+  {
+   "id": "P02",
+   "who": "P",
+   "text": "Don't let go of her hand. Promise me.",
+   "start": 19.875,
+   "end": 22.153,
+   "delivery": "",
+   "speed": 1.05
+  },
+  {
+   "id": "M02",
+   "who": "M",
+   "text": "I promise.",
+   "start": 22.353,
+   "end": 23.221,
+   "delivery": "",
+   "speed": 1.05
+  },
+  {
+   "id": "N05",
+   "who": "N",
+   "text": "Then the lights came down. They were looking for someone.",
+   "start": 23.421,
+   "end": 27.669,
+   "delivery": "",
+   "speed": 1.05
+  },
+  {
+   "id": "S01",
+   "who": "S",
+   "text": "I knew you'd come.",
+   "start": 27.869,
+   "end": 29.558,
+   "delivery": "",
+   "speed": 1.0
+  },
+  {
+   "id": "N06",
+   "who": "N",
+   "text": "I held her hand. I didn't let go.",
+   "start": 29.758,
+   "end": 33.341,
+   "delivery": "",
+   "speed": 1.05
+  },
+  {
+   "id": "A02",
+   "who": "A",
+   "text": "Selection complete. One human will be kept.",
+   "start": 33.541,
+   "end": 36.706,
+   "delivery": "",
+   "speed": 1.05
+  },
+  {
+   "id": "N07",
+   "who": "N",
+   "text": "It picked me.",
+   "start": 36.906,
+   "end": 38.278,
+   "delivery": "",
+   "speed": 1.05
+  },
+  {
+   "id": "S02",
+   "who": "S",
+   "text": "It picked you...",
+   "start": 38.478,
+   "end": 39.822,
+   "delivery": "",
+   "speed": 1.0
+  },
+  {
+   "id": "S03",
+   "who": "S",
+   "text": "It's okay. Go.",
+   "start": 40.022,
+   "end": 41.712,
+   "delivery": "",
+   "speed": 1.0
+  },
+  {
+   "id": "M03",
+   "who": "M",
+   "text": "Not without you!",
+   "start": 41.912,
+   "end": 43.434,
+   "delivery": "",
+   "speed": 1.05
+  },
+  {
+   "id": "S04",
+   "who": "S",
+   "text": "Does it hurt... when the world ends?",
+   "start": 43.634,
+   "end": 46.392,
+   "delivery": "",
+   "speed": 1.0
+  },
+  {
+   "id": "N08",
+   "who": "N",
+   "text": "The light only takes one.",
+   "start": 46.592,
+   "end": 48.959,
+   "delivery": "",
+   "speed": 1.05
+  },
+  {
+   "id": "N09",
+   "who": "N",
+   "text": "I could go. I could give it to her. Or I could stay.",
+   "start": 49.159,
+   "end": 53.499,
+   "delivery": "",
+   "speed": 1.05
+  },
+  {
+   "id": "N10",
+   "who": "N",
+   "text": "One, two, or three. Choose.",
+   "start": 53.699,
+   "end": 56.826,
+   "delivery": "",
+   "speed": 1.05
+  }
+ ],
+ "words": [
+  {
+   "line": "N01",
+   "text": "At",
+   "start": 0.0,
+   "end": 0.96
+  },
+  {
+   "line": "N01",
+   "text": "eleven",
+   "start": 0.96,
+   "end": 1.22
+  },
+  {
+   "line": "N01",
+   "text": "fifty-nine,",
+   "start": 1.22,
+   "end": 1.76
+  },
+  {
+   "line": "N01",
+   "text": "every",
+   "start": 2.5,
+   "end": 2.7
+  },
+  {
+   "line": "N01",
+   "text": "phone",
+   "start": 2.7,
+   "end": 2.98
+  },
+  {
+   "line": "N01",
+   "text": "on",
+   "start": 2.98,
+   "end": 3.16
+  },
+  {
+   "line": "N01",
+   "text": "Earth",
+   "start": 3.16,
+   "end": 3.32
+  },
+  {
+   "line": "N01",
+   "text": "screamed.",
+   "start": 3.32,
+   "end": 3.72
+  },
+  {
+   "line": "A01",
+   "text": "The",
+   "start": 4.245,
+   "end": 4.445
+  },
+  {
+   "line": "A01",
+   "text": "world",
+   "start": 4.445,
+   "end": 4.625
+  },
+  {
+   "line": "A01",
+   "text": "ends",
+   "start": 4.625,
+   "end": 4.905
+  },
+  {
+   "line": "A01",
+   "text": "in",
+   "start": 4.905,
+   "end": 5.085
+  },
+  {
+   "line": "A01",
+   "text": "sixty",
+   "start": 5.085,
+   "end": 5.385
+  },
+  {
+   "line": "A01",
+   "text": "seconds.",
+   "start": 5.385,
+   "end": 5.865
+  },
+  {
+   "line": "A01",
+   "text": "This",
+   "start": 6.445,
+   "end": 6.585
+  },
+  {
+   "line": "A01",
+   "text": "is",
+   "start": 6.585,
+   "end": 6.725
+  },
+  {
+   "line": "A01",
+   "text": "not",
+   "start": 6.725,
+   "end": 6.905
+  },
+  {
+   "line": "A01",
+   "text": "a",
+   "start": 6.905,
+   "end": 7.045
+  },
+  {
+   "line": "A01",
+   "text": "test.",
+   "start": 7.045,
+   "end": 7.285
+  },
+  {
+   "line": "N02",
+   "text": "My",
+   "start": 7.644,
+   "end": 8.524
+  },
+  {
+   "line": "N02",
+   "text": "little",
+   "start": 8.524,
+   "end": 8.724
+  },
+  {
+   "line": "N02",
+   "text": "sister",
+   "start": 8.724,
+   "end": 9.024
+  },
+  {
+   "line": "N02",
+   "text": "was",
+   "start": 9.024,
+   "end": 9.264
+  },
+  {
+   "line": "N02",
+   "text": "home",
+   "start": 9.264,
+   "end": 9.484
+  },
+  {
+   "line": "N02",
+   "text": "alone.",
+   "start": 9.484,
+   "end": 9.804
+  },
+  {
+   "line": "N02",
+   "text": "Three",
+   "start": 10.444,
+   "end": 10.624
+  },
+  {
+   "line": "N02",
+   "text": "blocks",
+   "start": 10.624,
+   "end": 10.884
+  },
+  {
+   "line": "N02",
+   "text": "away.",
+   "start": 10.884,
+   "end": 11.244
+  },
+  {
+   "line": "N03",
+   "text": "Fifty",
+   "start": 11.871,
+   "end": 12.991
+  },
+  {
+   "line": "N03",
+   "text": "seconds.",
+   "start": 12.991,
+   "end": 13.431
+  },
+  {
+   "line": "N03",
+   "text": "I",
+   "start": 13.731,
+   "end": 13.771
+  },
+  {
+   "line": "N03",
+   "text": "ran.",
+   "start": 13.771,
+   "end": 14.051
+  },
+  {
+   "line": "N04",
+   "text": "Then",
+   "start": 14.508,
+   "end": 15.448
+  },
+  {
+   "line": "N04",
+   "text": "gravity...",
+   "start": 15.448,
+   "end": 15.948
+  },
+  {
+   "line": "N04",
+   "text": "blinked.",
+   "start": 15.948,
+   "end": 16.588
+  },
+  {
+   "line": "P01",
+   "text": "Are",
+   "start": 17.147,
+   "end": 17.367
+  },
+  {
+   "line": "P01",
+   "text": "you",
+   "start": 17.367,
+   "end": 17.527
+  },
+  {
+   "line": "P01",
+   "text": "with",
+   "start": 17.527,
+   "end": 17.667
+  },
+  {
+   "line": "P01",
+   "text": "Mia?",
+   "start": 17.667,
+   "end": 17.867
+  },
+  {
+   "line": "M01",
+   "text": "Almost!",
+   "start": 18.39,
+   "end": 19.43
+  },
+  {
+   "line": "P02",
+   "text": "Don't",
+   "start": 19.875,
+   "end": 20.235
+  },
+  {
+   "line": "P02",
+   "text": "let",
+   "start": 20.235,
+   "end": 20.355
+  },
+  {
+   "line": "P02",
+   "text": "go",
+   "start": 20.355,
+   "end": 20.635
+  },
+  {
+   "line": "P02",
+   "text": "of",
+   "start": 20.635,
+   "end": 20.815
+  },
+  {
+   "line": "P02",
+   "text": "her",
+   "start": 20.815,
+   "end": 20.935
+  },
+  {
+   "line": "P02",
+   "text": "hand.",
+   "start": 20.935,
+   "end": 21.295
+  },
+  {
+   "line": "P02",
+   "text": "Promise",
+   "start": 21.575,
+   "end": 21.715
+  },
+  {
+   "line": "P02",
+   "text": "me.",
+   "start": 21.715,
+   "end": 22.055
+  },
+  {
+   "line": "M02",
+   "text": "I",
+   "start": 22.353,
+   "end": 22.573
+  },
+  {
+   "line": "M02",
+   "text": "promise.",
+   "start": 22.573,
+   "end": 22.853
+  },
+  {
+   "line": "N05",
+   "text": "Then",
+   "start": 23.921,
+   "end": 24.401
+  },
+  {
+   "line": "N05",
+   "text": "the",
+   "start": 24.401,
+   "end": 24.561
+  },
+  {
+   "line": "N05",
+   "text": "lights",
+   "start": 24.561,
+   "end": 24.761
+  },
+  {
+   "line": "N05",
+   "text": "came",
+   "start": 24.761,
+   "end": 25.041
+  },
+  {
+   "line": "N05",
+   "text": "down.",
+   "start": 25.041,
+   "end": 25.421
+  },
+  {
+   "line": "N05",
+   "text": "They",
+   "start": 25.421,
+   "end": 26.541
+  },
+  {
+   "line": "N05",
+   "text": "were",
+   "start": 26.541,
+   "end": 26.641
+  },
+  {
+   "line": "N05",
+   "text": "looking",
+   "start": 26.641,
+   "end": 26.861
+  },
+  {
+   "line": "N05",
+   "text": "for",
+   "start": 26.861,
+   "end": 27.081
+  },
+  {
+   "line": "N05",
+   "text": "someone.",
+   "start": 27.081,
+   "end": 27.341
+  },
+  {
+   "line": "S01",
+   "text": "I",
+   "start": 27.869,
+   "end": 28.229
+  },
+  {
+   "line": "S01",
+   "text": "knew",
+   "start": 28.229,
+   "end": 28.489
+  },
+  {
+   "line": "S01",
+   "text": "you'd",
+   "start": 28.489,
+   "end": 28.809
+  },
+  {
+   "line": "S01",
+   "text": "come.",
+   "start": 28.809,
+   "end": 29.149
+  },
+  {
+   "line": "N06",
+   "text": "I",
+   "start": 29.758,
+   "end": 30.518
+  },
+  {
+   "line": "N06",
+   "text": "held",
+   "start": 30.518,
+   "end": 30.678
+  },
+  {
+   "line": "N06",
+   "text": "her",
+   "start": 30.678,
+   "end": 30.838
+  },
+  {
+   "line": "N06",
+   "text": "hand.",
+   "start": 30.838,
+   "end": 31.178
+  },
+  {
+   "line": "N06",
+   "text": "I",
+   "start": 32.078,
+   "end": 32.338
+  },
+  {
+   "line": "N06",
+   "text": "didn't",
+   "start": 32.338,
+   "end": 32.598
+  },
+  {
+   "line": "N06",
+   "text": "let",
+   "start": 32.598,
+   "end": 32.698
+  },
+  {
+   "line": "N06",
+   "text": "go.",
+   "start": 32.698,
+   "end": 32.998
+  },
+  {
+   "line": "A02",
+   "text": "Selection",
+   "start": 33.541,
+   "end": 34.101
+  },
+  {
+   "line": "A02",
+   "text": "complete.",
+   "start": 34.101,
+   "end": 34.521
+  },
+  {
+   "line": "A02",
+   "text": "One",
+   "start": 35.281,
+   "end": 35.481
+  },
+  {
+   "line": "A02",
+   "text": "human",
+   "start": 35.481,
+   "end": 35.841
+  },
+  {
+   "line": "A02",
+   "text": "will",
+   "start": 35.841,
+   "end": 36.061
+  },
+  {
+   "line": "A02",
+   "text": "be",
+   "start": 36.061,
+   "end": 36.181
+  },
+  {
+   "line": "A02",
+   "text": "kept.",
+   "start": 36.181,
+   "end": 36.441
+  },
+  {
+   "line": "N07",
+   "text": "It",
+   "start": 36.906,
+   "end": 37.666
+  },
+  {
+   "line": "N07",
+   "text": "picked",
+   "start": 37.666,
+   "end": 37.866
+  },
+  {
+   "line": "N07",
+   "text": "me.",
+   "start": 37.866,
+   "end": 38.106
+  },
+  {
+   "line": "S02",
+   "text": "It",
+   "start": 38.478,
+   "end": 38.738
+  },
+  {
+   "line": "S02",
+   "text": "picked",
+   "start": 38.738,
+   "end": 39.078
+  },
+  {
+   "line": "S02",
+   "text": "you...",
+   "start": 39.078,
+   "end": 39.458
+  },
+  {
+   "line": "S03",
+   "text": "It's",
+   "start": 40.022,
+   "end": 40.362
+  },
+  {
+   "line": "S03",
+   "text": "okay.",
+   "start": 40.362,
+   "end": 40.682
+  },
+  {
+   "line": "S03",
+   "text": "Go.",
+   "start": 41.122,
+   "end": 41.442
+  },
+  {
+   "line": "M03",
+   "text": "Not",
+   "start": 41.912,
+   "end": 42.712
+  },
+  {
+   "line": "M03",
+   "text": "without",
+   "start": 42.712,
+   "end": 42.972
+  },
+  {
+   "line": "M03",
+   "text": "you!",
+   "start": 42.972,
+   "end": 43.272
+  },
+  {
+   "line": "S04",
+   "text": "Does",
+   "start": 43.634,
+   "end": 43.874
+  },
+  {
+   "line": "S04",
+   "text": "it",
+   "start": 43.874,
+   "end": 44.074
+  },
+  {
+   "line": "S04",
+   "text": "hurt...",
+   "start": 44.074,
+   "end": 44.394
+  },
+  {
+   "line": "S04",
+   "text": "when",
+   "start": 44.394,
+   "end": 45.134
+  },
+  {
+   "line": "S04",
+   "text": "the",
+   "start": 45.134,
+   "end": 45.274
+  },
+  {
+   "line": "S04",
+   "text": "world",
+   "start": 45.274,
+   "end": 45.474
+  },
+  {
+   "line": "S04",
+   "text": "ends?",
+   "start": 45.474,
+   "end": 45.894
+  },
+  {
+   "line": "N08",
+   "text": "The",
+   "start": 46.592,
+   "end": 47.372
+  },
+  {
+   "line": "N08",
+   "text": "light",
+   "start": 47.372,
+   "end": 47.612
+  },
+  {
+   "line": "N08",
+   "text": "only",
+   "start": 47.612,
+   "end": 47.932
+  },
+  {
+   "line": "N08",
+   "text": "takes",
+   "start": 47.932,
+   "end": 48.232
+  },
+  {
+   "line": "N08",
+   "text": "one.",
+   "start": 48.232,
+   "end": 48.532
+  },
+  {
+   "line": "N09",
+   "text": "I",
+   "start": 49.159,
+   "end": 49.899
+  },
+  {
+   "line": "N09",
+   "text": "could",
+   "start": 49.899,
+   "end": 49.999
+  },
+  {
+   "line": "N09",
+   "text": "go.",
+   "start": 49.999,
+   "end": 50.319
+  },
+  {
+   "line": "N09",
+   "text": "I",
+   "start": 50.999,
+   "end": 51.079
+  },
+  {
+   "line": "N09",
+   "text": "could",
+   "start": 51.079,
+   "end": 51.219
+  },
+  {
+   "line": "N09",
+   "text": "give",
+   "start": 51.219,
+   "end": 51.399
+  },
+  {
+   "line": "N09",
+   "text": "it",
+   "start": 51.399,
+   "end": 51.539
+  },
+  {
+   "line": "N09",
+   "text": "to",
+   "start": 51.539,
+   "end": 51.699
+  },
+  {
+   "line": "N09",
+   "text": "her.",
+   "start": 51.699,
+   "end": 51.959
+  },
+  {
+   "line": "N09",
+   "text": "Or",
+   "start": 52.459,
+   "end": 52.659
+  },
+  {
+   "line": "N09",
+   "text": "I",
+   "start": 52.659,
+   "end": 52.799
+  },
+  {
+   "line": "N09",
+   "text": "could",
+   "start": 52.799,
+   "end": 52.939
+  },
+  {
+   "line": "N09",
+   "text": "stay.",
+   "start": 52.939,
+   "end": 53.259
+  },
+  {
+   "line": "N10",
+   "text": "One,",
+   "start": 53.699,
+   "end": 54.619
+  },
+  {
+   "line": "N10",
+   "text": "two,",
+   "start": 54.759,
+   "end": 55.019
+  },
+  {
+   "line": "N10",
+   "text": "or",
+   "start": 55.259,
+   "end": 55.319
+  },
+  {
+   "line": "N10",
+   "text": "three.",
+   "start": 55.319,
+   "end": 55.659
+  },
+  {
+   "line": "N10",
+   "text": "Choose.",
+   "start": 56.159,
+   "end": 56.479
+  }
+ ],
+ "duration": 57.026
+}

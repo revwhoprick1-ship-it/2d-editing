@@ -1,0 +1,60 @@
+
+********
+Warning: flash-attn is not installed. Will only run the manual PyTorch version. Please install flash-attn for faster inference.
+********
+ 
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files:  25%|██▌       | 1/4 [00:00<00:00,  4.18it/s]Fetching 4 files:  75%|███████▌  | 3/4 [00:00<00:00,  7.75it/s]Fetching 4 files: 100%|██████████| 4/4 [00:04<00:00,  1.11s/it]
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+REF S
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 2359.33it/s]
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+N01 take 0 miss 3 at 11 59 every phone on earth screamed
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+N01 take 1 miss 3 at 11 59 every phone on earth screamed
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+N01 take 2 miss 3 at 11 59 every phone on earth screamed
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+A01 take 0 miss 0 the world ends in sixty seconds this is not a test
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+N02 take 0 miss 0 my little sister was home alone three blocks away
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+N03 take 0 miss 1 50 seconds i ran
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+N03 take 1 miss 1 50 seconds i ran
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+N03 take 2 miss 1 50 seconds i ran
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+N04 take 0 miss 0 then gravity blinked
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+P01 take 0 miss 0 are you with mia
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+M01 take 0 miss 0 almost
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+P02 take 0 miss 0 don't let go of her hand promise me
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+M02 take 0 miss 0 i promise
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+N05 take 0 miss 0 then the lights came down they were looking for someone
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+S01 take 0 miss 0 i knew you'd come
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+N06 take 0 miss 0 i held her hand i didn't let go
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+A02 take 0 miss 0 selection complete one human will be kept
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+N07 take 0 miss 0 it picked me
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+S02 take 0 miss 0 it picked you
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+S03 take 0 miss 0 it's okay go
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+M03 take 0 miss 0 not without you
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+S04 take 0 miss 0 does it hurt when the world ends
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+N08 take 0 miss 0 the light only takes one
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+N09 take 0 miss 0 i could go i could give it to her or i could stay
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+N10 take 0 miss 0 one two or three choose
+NARRATION_OK 57.03 s
