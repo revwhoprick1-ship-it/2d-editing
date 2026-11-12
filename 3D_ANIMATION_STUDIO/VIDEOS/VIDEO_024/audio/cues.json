@@ -6,17 +6,24 @@
  "music": "music_score.wav",
  "music_gain_db": 2,
  "music_cue": "cue_video024",
+ "music_gates": [
+  [
+   46.35,
+   47.672,
+   0.15
+  ]
+ ],
  "targets": {
   "narration_lufs": -16,
   "master_lufs": -14,
-  "true_peak": -3.2,
+  "true_peak": -4.5,
   "duck_db": 6
  },
  "cues": [
   {
    "t": 0.0,
    "file": "AUDIO/sound_effects/taxi/taxi_slam.flac",
-   "gain": -2,
+   "gain": -5,
    "bus": "sfx",
    "note": "JUMPSCARE_SLAM (frame 0)"
   },
@@ -216,7 +223,8 @@
    "bus": "amb",
    "note": "concrete tunnel",
    "loop": true,
-   "dur": 26.0
+   "dur": 17.35,
+   "fade_out": 0.15
   },
   {
    "t": 29.05,
@@ -242,14 +250,14 @@
   {
    "t": 42.5,
    "file": "AUDIO/sound_effects/taxi/bone_snap.flac",
-   "gain": -2,
+   "gain": -5,
    "bus": "sfx",
    "note": "BONE_SNAP (42.5)"
   },
   {
    "t": 42.5,
    "file": "AUDIO/sound_effects/comedy/glitch_stab.flac",
-   "gain": -5,
+   "gain": -9,
    "bus": "sfx",
    "note": "SCREEN_GLITCH"
   },
@@ -261,12 +269,21 @@
    "note": "shriek"
   },
   {
-   "t": 46.3,
+   "t": 47.672,
+   "file": "AUDIO/sound_effects/taxi/tunnel_roar.flac",
+   "gain": -4,
+   "bus": "amb",
+   "note": "tunnel back after \"We're home.\"",
+   "loop": true,
+   "dur": 7.328
+  },
+  {
+   "t": 47.722,
    "file": "AUDIO/sound_effects/comedy/whispers.flac",
-   "gain": -17,
+   "gain": -19,
    "bus": "sfx",
-   "note": "\"We're home.\"",
-   "dur": 1.6,
+   "note": "whispers after \"We're home.\"",
+   "dur": 1.4,
    "fade_out": 0.4
   },
   {

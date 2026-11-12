@@ -17,7 +17,7 @@ def c(t, name, gain, note, **kw):
     cues.append(d)
 
 
-c(0.0, 'taxi_slam', 3, 'JUMPSCARE_SLAM (frame 0)')
+c(0.0, 'taxi_slam', 0, 'JUMPSCARE_SLAM (frame 0)')
 c(0.0, 'taxi_road', -4, 'taxi at 90', bus='amb', loop=True, dur=B['tunnel'] + 0.1, fade_out=0.05)
 c(0.45, 'lock_click', 0, 'the doors lock')
 t = 0.0
@@ -29,13 +29,14 @@ c(11.0, 'electronic_beep', -6, 'COUNTDOWN label')
 c(B['flash'] - 0.1, 'whoosh_long', -8, 'a car passes (white flash)')
 c(B['flash'] + 0.1, 'subliminal_hit', -4, 'the name is yours')
 c(26.0, 'heartbeat_lubdub', -8, 'heartbeat', loop=True, dur=B['snap'] - 26.0)
-c(B['tunnel'], 'tunnel_roar', -4, 'concrete tunnel', bus='amb', loop=True, dur=END - B['tunnel'])
+c(B['tunnel'], 'tunnel_roar', -4, 'concrete tunnel', bus='amb', loop=True, dur=s('D01') - 0.15 - B['tunnel'], fade_out=0.15)
+c(e('D01') + 0.05, 'tunnel_roar', -4, 'tunnel back after "We\'re home."', bus='amb', loop=True, dur=END - e('D01') - 0.05)
 c(29.8, 'positive_chime', -10, 'GPS chime')
 c(B['snap'] - 2.4, 'creak_long', -6, 'his neck turning')
-c(B['snap'], 'bone_snap', 3, 'BONE_SNAP (42.5)')
-c(B['snap'], 'glitch_stab', 0, 'SCREEN_GLITCH')
+c(B['snap'], 'bone_snap', 0, 'BONE_SNAP (42.5)')
+c(B['snap'], 'glitch_stab', -4, 'SCREEN_GLITCH')
 c(B['snap'] + 0.03, 'scare_shriek', -6, 'shriek')
-c(s('D01') - 0.2, 'whispers', -12, "\"We're home.\"", dur=1.6, fade_out=0.4)
+c(e('D01') + 0.1, 'whispers', -14, 'whispers after "We\'re home."', dur=1.4, fade_out=0.4)
 c(B['cta'], 'stamp_thud', -2, 'the choice card slams in')
 c(B['cta'], 'heartbeat_lubdub', -6, 'heartbeat under the CTA', loop=True, dur=END - B['cta'])
 for k, tw in enumerate((B['one'], B['two'], B['three'])):
@@ -43,7 +44,8 @@ for k, tw in enumerate((B['one'], B['two'], B['three'])):
 
 C = {'duration': END, 'loop': True, 'narration': 'narration/narration_raw.wav', 'narration_offset': 0.0,
      'music': 'music_score.wav', 'music_gain_db': 2, 'music_cue': 'cue_video024',
-     'targets': {'narration_lufs': -16, 'master_lufs': -14, 'true_peak': -3.2, 'duck_db': 6},
+     'music_gates': [[s('D01') - 0.15, e('D01') + 0.05, 0.15]],                     # a pocket of silence for "We're home."
+     'targets': {'narration_lufs': -16, 'master_lufs': -14, 'true_peak': -4.5, 'duck_db': 6},
      'cues': sorted(cues, key=lambda d: d['t'])}
 json.dump(C, open(os.path.join(HERE, 'cues.json'), 'w'), indent=1, ensure_ascii=False)
 print('CUES_OK', len(cues))

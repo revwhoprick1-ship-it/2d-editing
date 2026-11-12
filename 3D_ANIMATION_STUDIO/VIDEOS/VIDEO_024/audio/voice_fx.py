@@ -20,7 +20,7 @@ def dur(p):
 
 tmp = tempfile.mkdtemp()
 FX = {'G01': ['highpass', '300', 'lowpass', '4000', 'flanger', '0', '2', '0', '71', '0.5', 'sine', '25', 'lin', 'overdrive', '3'],
-      'D01': ['pitch', '-400', 'chorus', '0.6', '0.9', '55', '0.4', '0.25', '2', '-t', 'overdrive', '6', 'reverb', '30']}
+      'D01': ['pitch', '-400', 'chorus', '0.6', '0.9', '55', '0.4', '0.25', '2', '-t', 'reverb', '25']}   # blueprint: -400 + chorus (no extra overdrive: keeps 'home' clear)
 for k, fx in FX.items():
     a = os.path.join(tmp, k + '.wav')
     sox(os.path.join(O, k + '.wav'), a, *fx, 'pad', '0', '0.25')

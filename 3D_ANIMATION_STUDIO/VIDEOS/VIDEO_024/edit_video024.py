@@ -58,3 +58,4 @@ SPK = {'M01': 'YOU', 'G01': 'GPS', 'D01': 'DRIVER'}
 CAPTIONS = dict(timing=TIMING, offset=0.0, style='2dedit', y=1240, size=68, max_words=3, speakers=SPK, hide=[(B['cta'], END)],
                 emphasis={'lock', 'ninety', 'realize', 'money', 'down', 'house', 'answer', 'id', 'yours', 'you', 'cemetery', 'tunnel',
                           'exit', 'head', 'backwards', 'home'})
+CAPTIONS['y_over'] = [(B['idcard'], B['tunnel'], 1480)]                    # keep the ID card visible during the reveal
