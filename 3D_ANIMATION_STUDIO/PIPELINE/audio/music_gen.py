@@ -1561,6 +1561,30 @@ def cue_video023():
 CUES['video023'] = cue_video023
 LOOPS['video023'] = None
 
+def cue_video024():
+    """Blueprint: a continuous 55 Hz sine for all 55 s, soft-clipped, slowly modulating in volume (ducked by the mixer under voice);
+    plus sub hits on the slam (0.0) and the snap (42.5), and a rising cluster from the tunnel to the snap."""
+    sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'VIDEOS', 'VIDEO_024'))
+    import edit_video024 as E24
+    B, END = E24.B, E24.END
+    S = Score(END + 2.0, bpm=60)
+    n = int(END * SR); tt = np.arange(n) / SR
+    drone = np.tanh(1.8 * np.sin(2 * np.pi * 55 * tt)) * (0.75 + 0.25 * np.sin(2 * np.pi * 0.21 * tt))
+    S.add('fx', 0.0, drone * 0.8, -8)
+    S.add('perc', 0.0, drum_taiko(1.6, 34), -2)
+    S.add('pad', B['tunnel'], inst_strings(C(['D3', 'D#3', 'A3']), B['snap'] - B['tunnel'], attack=3.0, bright=2000), -15)
+    S.add('pad', B['flash'], inst_tremolo(C(['E5', 'F5']), B['tunnel'] - B['flash'], rate=11, bright=3000), -17)
+    S.add('perc', B['snap'], drum_taiko(1.7, 32), -1)
+    t = B['cta']
+    while t < END - 0.1:
+        S.add('perc', t, drum_tick(0.7), -10)
+        t += 0.25
+    return S
+
+
+CUES['video024'] = cue_video024
+LOOPS['video024'] = None
+
 if __name__ == '__main__':
     cue, out = sys.argv[1], sys.argv[2]
     S = CUES[cue]()

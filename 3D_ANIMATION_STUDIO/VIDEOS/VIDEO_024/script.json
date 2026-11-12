@@ -1,0 +1,127 @@
+{
+ "title": "The Taxi",
+ "engine": "qwen3-tts",
+ "tempo": 1.05,
+ "qwen_voices": {
+  "N": "x",
+  "M": "x",
+  "A": "x",
+  "P": "x"
+ },
+ "lines": [
+  {
+   "id": "N01",
+   "who": "N",
+   "text": "The doors lock. The driver accelerates to ninety.",
+   "delivery": "",
+   "pause_after": 0.0
+  },
+  {
+   "id": "N02",
+   "who": "N",
+   "text": "Then you realize...",
+   "delivery": "",
+   "pause_after": 0.0
+  },
+  {
+   "id": "N03",
+   "who": "N",
+   "text": "The taxi meter isn't tracking money.",
+   "delivery": "",
+   "pause_after": 0.0
+  },
+  {
+   "id": "N04",
+   "who": "N",
+   "text": "It's counting down.",
+   "delivery": "",
+   "pause_after": 0.0
+  },
+  {
+   "id": "M01",
+   "who": "M",
+   "text": "Hey... my house was two exits back.",
+   "delivery": "",
+   "pause_after": 0.0
+  },
+  {
+   "id": "N05",
+   "who": "N",
+   "text": "He doesn't answer. You check the dashboard.",
+   "delivery": "",
+   "pause_after": 0.0
+  },
+  {
+   "id": "N06",
+   "who": "N",
+   "text": "The driver's ID is clipped to the vent.",
+   "delivery": "",
+   "pause_after": 0.0
+  },
+  {
+   "id": "N07",
+   "who": "N",
+   "text": "The name printed on it... is yours.",
+   "delivery": "",
+   "pause_after": 0.0
+  },
+  {
+   "id": "N08",
+   "who": "N",
+   "text": "The picture... is you.",
+   "delivery": "",
+   "pause_after": 0.0
+  },
+  {
+   "id": "G01",
+   "who": "G",
+   "text": "Destination reached. The cemetery.",
+   "delivery": "",
+   "pause_after": 0.0,
+   "as": "A"
+  },
+  {
+   "id": "N09",
+   "who": "N",
+   "text": "But outside, there's only a concrete tunnel. No exit.",
+   "delivery": "",
+   "pause_after": 0.0
+  },
+  {
+   "id": "N10",
+   "who": "N",
+   "text": "The driver slowly turns his head...",
+   "delivery": "",
+   "pause_after": 0.0
+  },
+  {
+   "id": "N11",
+   "who": "N",
+   "text": "...completely backwards.",
+   "delivery": "",
+   "pause_after": 0.0
+  },
+  {
+   "id": "D01",
+   "who": "D",
+   "text": "We're home.",
+   "delivery": "",
+   "pause_after": 0.0,
+   "as": "P"
+  },
+  {
+   "id": "N12",
+   "who": "N",
+   "text": "One: Jump out. Two: Grab the wheel. Three: Close your eyes.",
+   "delivery": "",
+   "pause_after": 0.0
+  },
+  {
+   "id": "N13",
+   "who": "N",
+   "text": "Comment now.",
+   "delivery": "",
+   "pause_after": 0.0
+  }
+ ]
+}

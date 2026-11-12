@@ -1606,5 +1606,50 @@
   "duration_s": 8.0,
   "sample_rate": 48000,
   "licence": "Original procedural synthesis (PIPELINE/audio/sfx_comedy.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/taxi/taxi_slam.flac",
+  "category": "taxi",
+  "name": "taxi_slam",
+  "description": "JUMPSCARE_SLAM: 140->30 Hz exp drop + HP noise burst, zero attack (1.5 s).",
+  "duration_s": 1.5,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (VIDEOS/VIDEO_024/audio_synth.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/taxi/bone_snap.flac",
+  "category": "taxi",
+  "name": "bone_snap",
+  "description": "BONE_SNAP: wood-block transient + 8 kHz downsampled noise crunch (0.7 s).",
+  "duration_s": 0.7,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (VIDEOS/VIDEO_024/audio_synth.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/taxi/taxi_road.flac",
+  "category": "taxi",
+  "name": "taxi_road",
+  "description": "Taxi at speed: engine + road rumble, loopable (10 s).",
+  "duration_s": 10.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (VIDEOS/VIDEO_024/audio_synth.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/taxi/tunnel_roar.flac",
+  "category": "taxi",
+  "name": "tunnel_roar",
+  "description": "Concrete tunnel at speed, roaring + reflective, loopable (10 s).",
+  "duration_s": 10.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (VIDEOS/VIDEO_024/audio_synth.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/taxi/light_whoosh.flac",
+  "category": "taxi",
+  "name": "light_whoosh",
+  "description": "A streetlight passing the window (0.7 s).",
+  "duration_s": 0.7,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (VIDEOS/VIDEO_024/audio_synth.py). Free for monetised use."
  }
 ]
