@@ -18,8 +18,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 STUDIO = os.path.abspath(os.path.join(HERE, '..', '..'))
 sys.path.insert(0, os.path.join(STUDIO, 'PIPELINE', 'hybrid'))
 sys.path.insert(0, HERE)
-from comp import (C, H, W, View, actor, actor_head, blink, ease, grain, keys, load_plates, mascot, occlude, paint,  # noqa: E402
-                  shade, sky_dir, talk, view_on, with_ink)
+from comp import (C, H, W, View, actor, actor_head, blink, ease, glow, grain, keys, load_plates, mascot, occlude,  # noqa: E402
+                  paint, shade, sky_dir, talk, view_on, with_ink)
 import timeline as TL  # noqa: E402
 
 T, WORDS, FPS = TL.T, TL.WORDS, TL.FPS
@@ -27,7 +27,7 @@ OUT = os.path.join(HERE, 'frames2d', 'ALL')
 PL = load_plates(os.path.join(HERE, 'plates'))
 X0 = 100.0
 HS = (X0 - 0.6, -0.25)            # beam / YOU
-MS = (X0 - 0.95, -0.35)           # Mia next to him
+MS = (X0 - 1.1, -0.4)             # Mia next to him (half a step away: their arms bridge the gap)
 TB = (X0 - 0.8, 0.72)             # under the table
 TF = skia.Typeface.MakeFromFile(os.path.join(STUDIO, 'ASSETS', 'fonts', 'RobotoCondensed-Bold.ttf'))
 MIA_H = 1.0                       # Mia is 7: a full head shorter than you
@@ -81,7 +81,8 @@ def sky(cv, v, t, glow=1.0):
     yh = hz[1] if hz else H * 0.75
     g = skia.GradientShader.MakeLinear([(0, yh - 2.2 * fp), (0, yh)], [C('#0A0716'), C('#26123A'), C('#5A2030')], [0.0, 1.3 / 2.2, 1.0])
     cv.drawRect(skia.Rect(0, 0, W, H), skia.Paint(Shader=g))
-    cv.drawRect(skia.Rect(0, yh - 0.25 * fp, W, yh + 0.1 * fp), paint(C('#8A3030', 0.35 * glow), blur=0.12 * fp))
+    hg = skia.GradientShader.MakeLinear([(0, yh - 0.3 * fp), (0, yh + 0.12 * fp)], [C('#8A3030', 0.0), C('#8A3030', 0.35 * glow), C('#8A3030', 0.0)], [0.0, 0.72, 1.0])
+    cv.drawRect(skia.Rect(0, yh - 0.3 * fp, W, yh + 0.12 * fp), skia.Paint(Shader=hg))
     op = opening(t)
     fl = 0.85 + 0.15 * math.sin(t * 7.3) * math.sin(t * 2.1 + 1)
     rad = math.radians(1) * fp
@@ -102,7 +103,7 @@ def sky(cv, v, t, glow=1.0):
                 path.moveTo(*q); pen = True
         k = c['w'] * op * glow
         for col, a, wd, bl in (('#FF3A22', 0.5 * fl, 1.5, 0.9), ('#FF8A3A', 0.85, 0.42, 0.25), ('#FFF2D8', 1.0, 0.12, 0.0)):
-            pt = paint(C(col, min(1.0, a)), style='stroke', width=max(1.5, wd * k * rad), blur=bl * k * rad if bl else 0)
+            pt = paint(C(col, min(1.0, a)), style='stroke', width=max(1.5, wd * k * rad), blur=min(26.0, bl * k * rad) if bl else 0)
             pt.setStrokeJoin(skia.Paint.kRound_Join); pt.setStrokeCap(skia.Paint.kRound_Cap)
             cv.drawPath(path, pt)
     for sh in SHARDS:
@@ -152,12 +153,10 @@ def beam(cv, v, x, y, t, r0=1.6, a=1.0, z0=0.0):
         yb, yt = mids[0][1], mids[-1][1]
         g = skia.GradientShader.MakeLinear([(0, yb), (0, yt)], [C('#F6FBFF', al * a * fl), C('#CFE6FF', al * a * 0.15)])
         cv.drawPath(path, skia.Paint(Shader=g, BlendMode=skia.BlendMode.kScreen,
-                                     MaskFilter=skia.MaskFilter.MakeBlur(skia.kNormal_BlurStyle, max(2.0, mids[0][2] * wk * bk))))
+                                     MaskFilter=skia.MaskFilter.MakeBlur(skia.kNormal_BlurStyle, max(2.0, min(22.0, mids[0][2] * wk * bk)))))
     q = v.P((x, y, z0))
     if q:
-        rx = r0 * 1.4 * q[2]
-        cv.drawOval(skia.Rect(q[0] - rx, q[1] - rx * 0.3, q[0] + rx, q[1] + rx * 0.3),
-                    paint(C('#EAF6FF', 0.5 * a), blur=rx * 0.3, blend=skia.BlendMode.kScreen))
+        glow(cv, q[0], q[1], r0 * 1.6 * q[2], '#EAF6FF', 0.5 * a, sy=0.3)
 
 
 def grade(cv, t, vign=0.55, g=0.06):
@@ -175,7 +174,8 @@ def stage(cv, v, t, sky_on=True, blur=0.0):
 def car(cv, x, y, L, col, ang=0.0, burn=0.0, t=0.0, flip=1):
     """Flat side-view car centred on its wheels' ground line at (x, y), length L px."""
     def body():
-        cv.save(); cv.translate(x, y); cv.rotate(ang); cv.scale(flip, 1)
+        k = (1 - math.cos(math.radians(ang))) / 2                              # upside down: pivot on the body centre, roof on the ground
+        cv.save(); cv.translate(x, y - 0.27 * L * k); cv.rotate(ang); cv.translate(0, 0.27 * L * k); cv.scale(flip, 1)
         h = 0.3 * L
         cv.drawRRect(skia.RRect.MakeRectXY(skia.Rect(-L / 2, -h - 0.08 * L, L / 2, -0.08 * L), 0.06 * L, 0.06 * L), paint(col))
         cab = skia.Path(); cab.moveTo(-0.28 * L, -h - 0.07 * L); cab.lineTo(-0.16 * L, -h - 0.26 * L); cab.lineTo(0.16 * L, -h - 0.26 * L)
@@ -192,13 +192,13 @@ def car(cv, x, y, L, col, ang=0.0, burn=0.0, t=0.0, flip=1):
             cv.drawCircle(wx * L, -0.08 * L, 0.11 * L, paint('#141218'))
             cv.drawCircle(wx * L, -0.08 * L, 0.05 * L, paint('#8A8A96'))
         cv.restore()
-    with_ink(cv, max(2.5, L * 0.012), body)
+    with_ink(cv, max(2.5, L * 0.012), body, bounds=skia.Rect(x - L, y - L, x + L, y + L * 0.6))
     if burn > 0:
         fire(cv, x, y - 0.42 * L, 0.55 * L * burn, t)
 
 
 def fire(cv, x, y, s, t):
-    cv.drawCircle(x, y, s * 0.9, paint(C('#FF7A2A', 0.35), blur=s * 0.6, blend=skia.BlendMode.kScreen))
+    glow(cv, x, y, s * 1.4, '#FF7A2A', 0.4)
     for k in range(6):
         ph = t * (5 + k) + k * 1.7
         fx = x + (k - 2.5) * s * 0.22 + math.sin(ph) * s * 0.05
@@ -212,7 +212,7 @@ def fire(cv, x, y, s, t):
     for k in range(5):                                                         # smoke
         u = ((t * 0.35 + k / 5) % 1.0)
         cv.drawCircle(x + math.sin(k * 2 + t) * s * 0.3 + u * s * 0.4, y - s * (0.6 + 2.2 * u), s * (0.25 + 0.4 * u),
-                      paint(C('#1A1420', 0.45 * (1 - u)), blur=s * 0.15))
+                      paint(C('#1A1420', 0.4 * (1 - u)), blur=min(10.0, s * 0.15)))
 
 
 def sparks(cv, x, y, s, dt, n=26, seed=3):
@@ -258,8 +258,8 @@ def phone_small(cv, hx, hy, s, ang=-15, col='#FF4A3A'):
         cv.drawRRect(skia.RRect.MakeRectXY(skia.Rect(-34 * s, -70 * s, 34 * s, 62 * s), 10 * s, 10 * s), paint('#16141C'))
         cv.drawRRect(skia.RRect.MakeRectXY(skia.Rect(-28 * s, -62 * s, 28 * s, 54 * s), 6 * s, 6 * s), paint(col))
         cv.restore()
-    with_ink(cv, max(2, 3 * s), body)
-    cv.drawCircle(hx, hy, 120 * s, paint(C(col, 0.25), blur=60 * s, blend=skia.BlendMode.kScreen))
+    with_ink(cv, max(2, 3 * s), body, bounds=skia.Rect(hx - 110 * s, hy - 110 * s, hx + 110 * s, hy + 110 * s))
+    glow(cv, hx, hy, 170 * s, col, 0.3)
 
 
 def teddy(cv, x, y, s, ang=0):
@@ -276,7 +276,7 @@ def teddy(cv, x, y, s, ang=0):
         for sx in (-1, 1):
             cv.drawCircle(sx * 26 * s, -175 * s, 8 * s, paint('#1A1010'))
         cv.restore()
-    with_ink(cv, max(2, 4 * s), body)
+    with_ink(cv, max(2, 4 * s), body, bounds=skia.Rect(x - 140 * s, y - 280 * s, x + 140 * s, y + 140 * s))
 
 
 def tears(cv, head, s, t, turn=0.0, a=1.0, flow=1.0):
@@ -406,7 +406,7 @@ def phone_insert(cv, t, kind, bg_plate, bg_center3=None, a0=0.0):
     rise = ease((t - a0) / 0.25, 'out')
     ox, oy = 540 + buzz, 1000 + (1 - rise) * 300
     scr = {'alert1': '#FF3A2A', 'alert2': '#DDEEFF', 'mom': '#6A6AFF', 'fail': '#FF3A2A'}[kind]
-    cv.drawCircle(ox, oy - 100, 620, paint(C(scr, 0.25), blur=200, blend=skia.BlendMode.kScreen))
+    glow(cv, ox, oy - 100, 900, scr, 0.3)
 
     def palm():                                                                  # behind the phone: sleeve + palm
         cv.save(); cv.translate(ox + 330, oy + 900); cv.rotate(-24)
@@ -497,7 +497,7 @@ def sh04(cv, t):
         q2 = v.P((-4.6, 21.0 + 1.5 * e, z))
         if q2:
             rr = 0.6 * q2[2]
-            cv.drawCircle(q2[0], q2[1], rr * 1.6, paint(C('#FF6A2A', 0.6), blur=rr, blend=skia.BlendMode.kScreen))
+            glow(cv, q2[0], q2[1], rr * 2.6, '#FF6A2A', 0.6)
             cv.drawPath(skia.Path().addPoly([(q2[0] - rr, q2[1]), (q2[0], q2[1] - rr * 1.3), (q2[0] + rr * 0.8, q2[1] + rr * 0.3)], True),
                         paint('#2A1830'))
             sparks(cv, q2[0], q2[1], 3 * q2[2], t - sh)
@@ -532,7 +532,7 @@ def sh05(cv, t):
     run_u = min(1.0, (t - T['grav']) / (T['lift'] - T['grav']))
     pos_y = 23.5 + 1.2 * run_u + (0.8 * ease((t - T['lift']) / 1.5) if t > T['lift'] else 0)
     zy = gravity_z(t, 1.25)
-    pos = (0.1, pos_y, zy)
+    pos = (0.9, pos_y, zy)
     v = view_on(p, t, T['grav'], T['front'], 1.05, 1.18, None, p.project((0.1, 25.0, 1.4))[:2])
     stage(cv, v, t)
     items = []
@@ -551,9 +551,10 @@ def sh05(cv, t):
                 cv.drawRoundRect(skia.Rect(-0.3 * q[2], -0.85 * q[2], 0.3 * q[2], 0), 8, 8, paint('#4A5A6A'))
                 cv.drawRect(skia.Rect(-0.34 * q[2], -0.92 * q[2], 0.34 * q[2], -0.8 * q[2]), paint('#3A4A5A'))
                 cv.restore()
-            with_ink(cv, 3, bn)
+            with_ink(cv, 3, bn, bounds=skia.Rect(q[0] - q[2], q[1] - 1.3 * q[2], q[0] + q[2], q[1] + 0.5 * q[2]))
         elif f['kind'] == 'ball':
-            with_ink(cv, 3, lambda q=q: cv.drawCircle(q[0], q[1] - 0.12 * q[2], 0.12 * q[2], paint('#D8702A')))
+            with_ink(cv, 3, lambda q=q: cv.drawCircle(q[0], q[1] - 0.12 * q[2], 0.12 * q[2], paint('#D8702A')),
+                     bounds=skia.Rect(q[0] - 0.3 * q[2], q[1] - 0.4 * q[2], q[0] + 0.3 * q[2], q[1] + 0.2 * q[2]))
         else:
             cv.save(); cv.translate(q[0], q[1] - 0.2 * q[2]); cv.rotate(rot + t * 40)
             cv.drawRect(skia.Rect(-0.1 * q[2], -0.07 * q[2], 0.1 * q[2], 0.07 * q[2]), paint(C('#EDE6DA', 0.9)))
@@ -578,8 +579,8 @@ def sh05(cv, t):
         for k in range(14):
             a = k / 14 * math.pi
             r = (200 + 700 * dt) * (0.7 + 0.3 * math.sin(k * 7))
-            cv.drawCircle(540 + math.cos(a) * r * 1.4, 1500 - math.sin(a) * r * 0.25, 60 + 160 * dt,
-                          paint(C('#8A7A8A', 0.35 * (1 - dt / 0.8)), blur=30))
+            glow(cv, 540 + math.cos(a) * r * 1.4, 1500 - math.sin(a) * r * 0.25, 90 + 220 * dt, '#8A7A8A', 0.4 * (1 - dt / 0.8),
+                 blend=skia.BlendMode.kSrcOver)
     embers(cv, t)
     grade(cv, t)
 
@@ -592,11 +593,11 @@ def sh06_08(cv, t, close=False):
     if t < T['call']:                                                            # 14.6-16.3 run, the car drops, dive
         u = (t - T['front']) / (T['call'] - T['front'])
         dive = keys(t, [(T['scare'] + 0.05, 0.0), (T['scare'] + 0.2, 1.0), (T['scare'] + 0.7, 0.4), (T['call'], 0.0)])
-        pos = (-0.4 - 0.9 * ease((t - T['scare']) / 0.3), 26.0 + 2.6 * u, 0.0)
+        pos = (-0.4 - 0.5 * ease((t - T['scare']) / 0.3), 28.0 + 2.5 * u, 0.0)
         pose = dict(view='front', walk=(t * 2.7) % 1.0 if dive < 0.3 else None, run=True, crouch=0.35 * dive, body_lean=-14 * dive,
                     brow=1.0, mouth='open', mouth_open=0.4 + 0.5 * dive, look=(0.7 * dive, -0.2), **run_arms(t))
         hc = p.project((pos[0], pos[1], 1.3))
-        v = View(p, 1.05 + 0.1 * u, hc[0] + 120, hc[1] - 80)
+        v = View(p, 1.3 + 0.12 * u, hc[0] + 160, hc[1] + 60)
     elif not close:                                                              # 16.9-20.0 running at camera, phone at the ear
         u = (t - T['run2']) / (T['close'] - T['run2'])
         pos = (-0.9, 30.6 + 3.0 * u, 0.0)
@@ -747,60 +748,83 @@ def debris(cv, v, t, t0):
     dt = t - t0
     if dt < 0:
         return
+    items = []
     for c in CHUNKS:
         z = c['p'][2] + c['v'] * dt + 2 * dt * dt
         q = v.P((c['p'][0] + c['dx'] * dt, c['p'][1], z))
         if q is None:
             continue
         r = c['sz'] * q[2] * 0.5
-        if r < 1 or not (-300 < q[0] < W + 300 and -300 < q[1] < H + 300):
-            continue
-        def ch(q=q, r=r, c=c):
+        if r >= 1 and -300 < q[0] < W + 300 and -300 < q[1] < H + 300:
+            items.append((q, r, c))
+
+    def all_chunks():
+        for q, r, c in items:
             cv.save(); cv.translate(q[0], q[1]); cv.rotate(c['rot'] * dt)
             cv.drawPath(skia.Path().addPoly([(-r, -r * 0.4), (r * 0.8, -r * 0.6), (r, r * 0.5), (-r * 0.6, r * 0.6)], True), paint(c['col']))
             cv.restore()
-        with_ink(cv, 3, ch)
+    if items:
+        with_ink(cv, 3, all_chunks)
 
 
 def floating_you(t):
+    """Lifted by the light, but Mia never lets go: he hangs ~0.3 m up, pulled a little higher (straining) during the choice."""
     if t < T['lock']:
         return 0.0
-    z = 0.45 * ease((t - T['lock']) / 1.8, 'out')
-    if t > T['wide']:
-        z = 0.45 + 0.12 * ease((t - T['wide']) / 4)
+    z = 0.28 * ease((t - T['lock']) / 1.6, 'out')
     if t > T['choice']:
-        z = 0.57 + 0.38 * ease((t - T['choice']) / 3.0, 'in')
-    return z + 0.03 * math.sin(t * 2.4)
+        z += 0.08 * ease((t - T['choice']) / 2.5)
+    return z + 0.025 * math.sin(t * 2.4)
 
 
 def pair(cv, v, t, tint, light=None, reach=1.0, mia_view='front'):
-    """YOU (mirrored: his reaching hand is screen-left) in the beam + Mia holding that hand."""
+    """YOU (mirrored: his reaching hand is screen-left) in the beam + Mia holding that hand. Both arms aim at one grip point."""
     z = floating_you(t)
-    yp = v.P((HS[0], HS[1], z))
+    yq = v.P((HS[0], HS[1], z))
     mp_ = v.P((MS[0], MS[1], 0.0))
-    if yp is None or mp_ is None:
+    if yq is None or mp_ is None:
         return None, None
+    ms = mp_[2] * MIA_H / 1150
+    ys = yq[2] * 1.6 / 1150
+    grip = (mp_[0] + 262 * ms, mp_[1] - 1000 * ms)                              # beside her head, toward him (her arm raised)
+    best = None
+    for ang in range(5, 125, 5):
+        for elb in range(-60, 61, 10):
+            hx, hy = mascot(_SCR, yq[0], yq[1], ys, view='front', arm_r=(ang, elb))['hand_r']
+            d = ((2 * yq[0] - hx) - grip[0]) ** 2 + (hy - grip[1]) ** 2
+            if best is None or d < best[0]:
+                best = (d, ang, elb)
     look_up = T['go'] <= t < T['her']
-    you = actor(cv, v, (HS[0], HS[1], z), tint=tint, top_light=light, mirror=True, view='front', arm_r=(28 + 10 * reach, 10),
+    you = actor(cv, v, (HS[0], HS[1], z), tint=tint, top_light=light, mirror=True, view='front', arm_r=(best[1], best[2]),
                 arm_l=(35 + 6 * math.sin(t * 2), 20), brow=1.0, look=(0.6, 0.5) if not look_up else (0.0, -1.0),
                 mouth='o' if t > T['lock'] else 'open', mouth_open=talk(t, WORDS, {'M03'}) or 0.2, lids=blink(t, 3.3, 1.1),
                 **RIM_WHITE)
     if you is None:
         return None, None
     hx, hy = you['hand_r']
-    ms = mp_[2] * MIA_H / 1150
-    best = None
+    bm = None
     for ang in range(100, 181, 5):                                               # Mia's arm aims at his hand
-        for elb in (0, 10, 20, 30):
+        for elb in (-30, -20, -10, 0, 10, 20, 30):
             px, py = mascot(_SCR, mp_[0], mp_[1], ms, view='front', arm_r=(ang, elb))['hand_r']
             d = (px - hx) ** 2 + (py - hy) ** 2
-            if best is None or d < best[0]:
-                best = (d, ang, elb)
+            if bm is None or d < bm[0]:
+                bm = (d, ang, elb)
     tip = 1.0 if t > T['wide'] else 0.0
-    mia = actor(cv, v, (MS[0], MS[1], 0.04 * tip), MIA_H, tint=tint, top_light=light, view=mia_view, arm_r=(best[1], best[2]),
+    mia = actor(cv, v, (MS[0], MS[1], 0.04 * tip), MIA_H, tint=tint, top_light=light, view=mia_view, arm_r=(bm[1], bm[2]),
                 arm_l=(25, 30), look=(0.5, -0.9), brow=1.0, head_tilt=-6, mouth='o', mouth_open=talk(t, WORDS, {'S01', 'S02', 'S03', 'S04'}),
                 lids=blink(t, 2.9, 0.3), rim='#FFFFFF', rim_a=0.8, light_side=1, **MIA)
-    with_ink(cv, 4, lambda: cv.drawCircle(hx, hy, 40 * you['s'], paint('#F2C29B')))
+    a1 = math.radians(bm[1]); a2 = a1 + math.radians(bm[2])                    # her forearm again ON TOP (her big head hides the arm)
+    sx, sy = mp_[0] + 98 * ms, mp_[1] - 720 * ms - 0.04 * tip * mp_[2]
+    ex, ey = sx + math.sin(a1) * 175 * ms, sy + math.cos(a1) * 175 * ms
+    fx, fy = ex + math.sin(a2) * 160 * ms, ey + math.cos(a2) * 160 * ms
+
+    def arm():
+        cv.drawLine(ex, ey, fx, fy, paint('#E8BC9C', style='stroke', width=50 * ms))
+        cv.drawCircle(fx, fy, 32 * ms, paint('#E8BC9C'))
+        cv.drawCircle(hx, hy, 40 * you['s'], paint('#F2C29B'))
+    bx0, bx1 = min(ex, hx) - 80 * you['s'], max(ex, hx) + 80 * you['s']
+    by0, by1 = min(ey, hy) - 80 * you['s'], max(ey, hy) + 80 * you['s']
+    with_ink(cv, 4, arm, bounds=skia.Rect(bx0, by0, bx1, by1))
     return you, mia
 
 
@@ -810,7 +834,7 @@ _SCR = skia.Surface(16, 16).getCanvas()
 def sh14_16(cv, t):
     p = PL['LR_OPEN_UP']
     locked = t >= T['lock']
-    v = view_on(p, t, T['open'], T['cmia'], 1.05, 1.2, p.project((X0 - 0.75, -0.3, 1.5))[:2], p.project((X0 - 0.7, -0.3, 1.3))[:2])
+    v = view_on(p, t, T['open'], T['cmia'], 1.05, 1.2, p.project((X0 - 0.92, -0.33, 1.45))[:2], p.project((X0 - 0.88, -0.33, 1.25))[:2])
     stage(cv, v, t)
     for k, (bx, by) in enumerate(((X0 - 40, 60), (X0 + 35, 80), (X0 - 70, 20))):
         beam(cv, v, bx + 6 * math.sin(t * 0.7 + k), by, t, r0=3.0, a=0.6)
@@ -854,7 +878,7 @@ def close_mia(cv, t, t0, t1, z0, z1, lines):
 def close_you(cv, t, t0, t1, z0, z1, look_up=False):
     p = PL['LR_CLOSE_YOU']
     z = floating_you(t)
-    head = (HS[0], HS[1], z + 0.15 + 1.6 * (900 / 1150))
+    head = (HS[0], HS[1], 1.95 + 0.3 * z)                                       # framed for the close-up (the BG is out of focus)
     hc = p.project(head)
     v = view_on(p, t, t0, t1, z0, z1, (hc[0], hc[1] - 80), (hc[0], hc[1] - 40))
     stage(cv, v, t)
@@ -891,11 +915,17 @@ def hands(cv, t):
     v = View(p, 1.3)
     stage(cv, v, t, sky_on=False, blur=22)
     cv.drawRect(skia.Rect(0, 0, W, H), paint(C('#000000', 0.3)))
-    cv.drawCircle(820, 260, 760, paint(C('#EAF6FF', 0.38), blur=260, blend=skia.BlendMode.kScreen))
+    glow(cv, 820, 260, 1100, '#EAF6FF', 0.4)
     slip = 46 * ease((t - (T['choice'] - 1.0)) / 0.8)
     tr = math.sin(t * 31) * 3
     SK, SK2, SKH, SKH2 = '#F2C8A8', '#E2B090', '#F2C29B', '#E0A880'
-    cv.save(); cv.translate(540 + tr, 1000); cv.rotate(-38); cv.scale(1.45, 1.45)
+
+    def frame_(draw):                                                            # each group: screen-aligned ink layer, rotated inside
+        def fn():
+            cv.save(); cv.translate(540 + tr, 1000); cv.rotate(-38); cv.scale(1.45, 1.45)
+            draw()
+            cv.restore()
+        with_ink(cv, 7, fn)
 
     def her_arm():
         cv.drawRoundRect(skia.Rect(-1150, -52, -140, 52), 52, 52, paint(SK))
@@ -915,9 +945,8 @@ def hands(cv, t):
         cv.drawRoundRect(skia.Rect(540 + slip, -90, 1350, 90), 80, 80, paint('#E87A20'))
         cv.drawRoundRect(skia.Rect(-40 + slip, -100, 210 + slip, 100), 80, 80, paint(SKH))
         cv.drawRoundRect(skia.Rect(-120 + slip, -130, 60 + slip, -72), 30, 30, paint(SKH2))
-    for fn in (her_arm, his_fingers, her_hand, his_arm):
-        with_ink(cv, 7, fn)
-    cv.restore()
+    for fn_ in (her_arm, his_fingers, her_hand, his_arm):
+        frame_(fn_)
     rising(cv, 150, 930, t, 50, a=0.8)
     grade(cv, t, 0.5)
 

@@ -1,0 +1,40 @@
+{
+ "file": "EXPORTS/VIDEO_025_The_World_Ends_In_60_Seconds.mp4",
+ "duration_s": 60.0,
+ "size_mb": 32.61,
+ "video": {
+  "codec": "h264",
+  "profile": "High",
+  "width": 1080,
+  "height": 1920,
+  "fps": "30/1",
+  "pix_fmt": "yuv420p",
+  "color_primaries": "bt709",
+  "bitrate_kbps": 4348
+ },
+ "audio": {
+  "codec": "aac",
+  "sample_rate": "48000",
+  "channels": 2,
+  "bitrate_kbps": 325
+ },
+ "loudness": {
+  "integrated_lufs": -14.6,
+  "lra_lu": 2.6,
+  "true_peak_dbfs": -4.0
+ },
+ "detect": {
+  "black_segments": [],
+  "freeze_starts": []
+ },
+ "checks": {
+  "is_1080x1920": true,
+  "fps_30": true,
+  "h264": true,
+  "yuv420p": true,
+  "aac": true,
+  "loudness_-14_to_-16": true,
+  "true_peak_le_-1": true,
+  "no_black_segments": true
+ }
+}

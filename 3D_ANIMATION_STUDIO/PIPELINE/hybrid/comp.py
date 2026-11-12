@@ -59,6 +59,15 @@ class Plate:
             self._img = skia.Image.MakeFromEncoded(skia.Data.MakeFromFileName(self.path)).withDefaultMipmaps()
         return self._img
 
+    def low(self, k):
+        if not hasattr(self, '_low'):
+            self._low = {}
+        if k not in self._low:
+            srf = skia.Surface(max(2, self.W // k), max(2, self.H // k))
+            srf.getCanvas().drawImageRect(self.img, skia.Rect(0, 0, self.W // k, self.H // k), LIN)
+            self._low[k] = srf.makeImageSnapshot()
+        return self._low[k]
+
     def project(self, p):
         pc = self.R.T @ (np.asarray(p, dtype=float) - self.T)
         d = -pc[2]
@@ -118,6 +127,12 @@ class View:
         return self.p.fpx * self.sc
 
     def draw(self, cv, blur=0.0, alpha=1.0):
+        if blur >= 6:                                                          # heavy blur: draw a cached low-res copy (fast + soft)
+            k = max(2, int(blur / 3))
+            low = self.p.low(k)
+            cv.drawImageRect(low, skia.Rect.MakeXYWH(self.x0 / k, self.y0 / k, self.cw / k, self.ch / k), skia.Rect(0, 0, W, H), LIN,
+                             skia.Paint(Alphaf=alpha))
+            return
         if self.z > self.p.K + 0.05:                                           # beyond 1:1: soften instead of showing pixels
             blur = max(blur, 1.5 * (self.z / self.p.K - 1) + 0.8)
         pnt = skia.Paint(Alphaf=alpha)
@@ -134,10 +149,23 @@ def view_on(plate, t, t0, t1, z0, z1, c0=None, c1=None, mode='io'):
     return View(plate, z0 + (z1 - z0) * u, c0[0] + (c1[0] - c0[0]) * u, c0[1] + (c1[1] - c0[1]) * u)
 
 
-def with_ink(cv, w, fn, ink=(14, 12, 26)):
-    f = skia.ImageFilters.Merge([skia.ImageFilters.ColorFilter(skia.ColorFilters.Blend(skia.Color(*ink), skia.BlendMode.kSrcIn),
-                                                               skia.ImageFilters.Dilate(w, w)), None])
-    cv.saveLayer(None, skia.Paint(ImageFilter=f))
+_INKF = {}
+
+
+def _ink_filter(w, ink):
+    """Outline = the layer's silhouette in ink colour stamped in 12 directions under it (fast; Skia's Dilate is ~20x slower)."""
+    key = (round(w * 2) / 2, ink)
+    if key not in _INKF:
+        r = key[0]
+        black = skia.ImageFilters.ColorFilter(skia.ColorFilters.Blend(skia.Color(*ink), skia.BlendMode.kSrcIn), None)
+        offs = [skia.ImageFilters.Offset(r * math.cos(a), r * math.sin(a), black) for a in [k * math.pi / 6 for k in range(12)]]
+        _INKF[key] = skia.ImageFilters.Merge(offs + [None])
+    return _INKF[key]
+
+
+def with_ink(cv, w, fn, ink=(14, 12, 26), bounds=None):
+    """Everything fn() draws gets a black ink outline. bounds (skia.Rect, canvas space) keeps the layer small = fast."""
+    cv.saveLayer(bounds, skia.Paint(ImageFilter=_ink_filter(w, ink)))
     r = fn()
     cv.restore()
     return r
@@ -158,7 +186,7 @@ def _puppet(cv, x, y, s, tint, top_light, mirror, ink_w, pose):
         cv.saveLayer(None, None)
         if mirror:
             cv.save(); cv.translate(x, 0); cv.scale(-1, 1); cv.translate(-x, 0)
-        r = {k: tuple(v_) for k, v_ in (mascot(cv, x, y, s, **pose) or {}).items()}
+        r = {k: tuple(v_) for k, v_ in (mascot(cv, x, y, s, **pose) or {}).items()}  # noqa
         if mirror:
             cv.restore()
         if tint:
@@ -170,7 +198,9 @@ def _puppet(cv, x, y, s, tint, top_light, mirror, ink_w, pose):
             cv.drawPaint(skia.Paint(Shader=g, BlendMode=skia.BlendMode.kSrcATop))
         cv.restore()
         return r
-    return with_ink(cv, ink_w if ink_w is not None else max(3, min(12, 3.2 * s)), body)
+    w = ink_w if ink_w is not None else max(3, min(12, 3.2 * s))
+    pad = w + 6
+    return with_ink(cv, w, body, bounds=skia.Rect(x - 780 * s - pad, y - 1330 * s - pad, x + 780 * s + pad, y + 160 * s + pad))
 
 
 def actor(cv, v, feet3, height_m=1.6, tint=None, top_light=None, mirror=False, ink_w=None, **pose):
@@ -232,3 +262,13 @@ def occlude(cv, v, quads):
         cv.clipPath(path, skia.ClipOp.kIntersect, True)
         v.draw(cv)
         cv.restore()
+
+
+def glow(cv, x, y, r, col, a=0.5, blend=skia.BlendMode.kScreen, sy=1.0):
+    """Soft light blob WITHOUT a blur filter (radial gradient): cheap at any size."""
+    if r <= 1:
+        return
+    g = skia.GradientShader.MakeRadial((0, 0), r, [C(col, a), C(col, a * 0.35), C(col, 0.0)], [0.0, 0.45, 1.0])
+    cv.save(); cv.translate(x, y); cv.scale(1.0, sy)
+    cv.drawCircle(0, 0, r, skia.Paint(Shader=g, BlendMode=blend, AntiAlias=True))
+    cv.restore()

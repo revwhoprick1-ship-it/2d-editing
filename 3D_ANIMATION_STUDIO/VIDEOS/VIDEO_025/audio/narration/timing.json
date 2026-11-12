@@ -136,8 +136,8 @@
    "id": "N07",
    "who": "N",
    "text": "It picked me.",
-   "start": 40.5,
-   "end": 41.873,
+   "start": 41.1,
+   "end": 42.473,
    "delivery": "",
    "speed": 1.05,
    "tempo": 1.0
@@ -146,8 +146,8 @@
    "id": "S02",
    "who": "S",
    "text": "It picked you...",
-   "start": 42.2,
-   "end": 43.543,
+   "start": 42.55,
+   "end": 43.893,
    "delivery": "",
    "speed": 1.0,
    "tempo": 1.0
@@ -156,8 +156,8 @@
    "id": "S03",
    "who": "S",
    "text": "It's okay. Go.",
-   "start": 43.75,
-   "end": 45.44,
+   "start": 44.0,
+   "end": 45.69,
    "delivery": "",
    "speed": 1.0,
    "tempo": 1.0
@@ -166,8 +166,8 @@
    "id": "M03",
    "who": "M",
    "text": "Not without you!",
-   "start": 45.6,
-   "end": 47.122,
+   "start": 45.8,
+   "end": 47.322,
    "delivery": "",
    "speed": 1.05,
    "tempo": 1.0
@@ -691,74 +691,74 @@
   {
    "line": "N07",
    "text": "It",
-   "start": 40.5,
-   "end": 41.26
+   "start": 41.1,
+   "end": 41.86
   },
   {
    "line": "N07",
    "text": "picked",
-   "start": 41.26,
-   "end": 41.46
+   "start": 41.86,
+   "end": 42.06
   },
   {
    "line": "N07",
    "text": "me.",
-   "start": 41.46,
-   "end": 41.7
+   "start": 42.06,
+   "end": 42.3
   },
   {
    "line": "S02",
    "text": "It",
-   "start": 42.2,
-   "end": 42.46
+   "start": 42.55,
+   "end": 42.81
   },
   {
    "line": "S02",
    "text": "picked",
-   "start": 42.46,
-   "end": 42.8
+   "start": 42.81,
+   "end": 43.15
   },
   {
    "line": "S02",
    "text": "you...",
-   "start": 42.8,
-   "end": 43.179
+   "start": 43.15,
+   "end": 43.529
   },
   {
    "line": "S03",
    "text": "It's",
-   "start": 43.75,
-   "end": 44.09
+   "start": 44.0,
+   "end": 44.34
   },
   {
    "line": "S03",
    "text": "okay.",
-   "start": 44.09,
-   "end": 44.41
+   "start": 44.34,
+   "end": 44.66
   },
   {
    "line": "S03",
    "text": "Go.",
-   "start": 44.85,
-   "end": 45.17
+   "start": 45.1,
+   "end": 45.42
   },
   {
    "line": "M03",
    "text": "Not",
-   "start": 45.6,
-   "end": 46.4
+   "start": 45.8,
+   "end": 46.6
   },
   {
    "line": "M03",
    "text": "without",
-   "start": 46.4,
-   "end": 46.66
+   "start": 46.6,
+   "end": 46.86
   },
   {
    "line": "M03",
    "text": "you!",
-   "start": 46.66,
-   "end": 46.96
+   "start": 46.86,
+   "end": 47.16
   },
   {
    "line": "S04",

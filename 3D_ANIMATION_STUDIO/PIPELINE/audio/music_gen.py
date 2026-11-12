@@ -1617,7 +1617,7 @@ def cue_video025():
     for i in range(4):
         S.add('pad', T['lock'] + i * span, inst_strings(C(seq[i]), span + 0.6, attack=0.8, bright=2600), -12 + i * 1.0)
         S.add('bass', T['lock'] + i * span, inst_bass(M(seq[i][0]), span, cutoff=300), -15)
-    t, k = T['lock'] + 0.6, 0
+    t, k = T['lock'] + 2.4, 0                                                    # after "It picked me." (keep that line clear)
     while t < T['choice'] - 0.2:
         S.add('lead', t, inst_bell(M(motif[k % 8]), 1.4), -15)
         t += 0.5 if k % 8 != 7 else 1.0

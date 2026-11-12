@@ -6,6 +6,13 @@
  "music": "music_score.wav",
  "music_gain_db": 1,
  "music_cue": "cue_video025",
+ "music_gates": [
+  [
+   41.02,
+   42.522999999999996,
+   0.3
+  ]
+ ],
  "targets": {
   "narration_lufs": -16,
   "master_lufs": -14,
@@ -339,7 +346,7 @@
   {
    "t": 34.75,
    "file": "AUDIO/sound_effects/world/wind_roar.flac",
-   "gain": -5,
+   "gain": -8,
    "bus": "amb",
    "note": "open sky wind",
    "loop": true,
@@ -370,14 +377,16 @@
   {
    "t": 40.364,
    "file": "AUDIO/sound_effects/world/beam_slam.flac",
-   "gain": -5,
+   "gain": -10,
    "bus": "sfx",
-   "note": "THE BEAM LOCKS ON YOU"
+   "note": "THE BEAM LOCKS ON YOU",
+   "dur": 0.75,
+   "fade_out": 0.3
   },
   {
    "t": 40.364,
    "file": "AUDIO/sound_effects/world/beam_hum.flac",
-   "gain": -7,
+   "gain": -11,
    "bus": "amb",
    "note": "inside the light",
    "loop": true,

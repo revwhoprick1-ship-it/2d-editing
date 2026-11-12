@@ -56,18 +56,19 @@ c(T['rumble'] + 0.05, 'house_creak', -4, 'the house groans')
 c(T['rumble'] + 0.3, 'flicker_buzz', -8, 'lights die')
 c(T['rip'], 'roof_rip', 0, 'THE ROOF IS TORN OFF')
 c(T['rip'], 'sky_crack', -3, 'the sky right above')
-c(T['rip'], 'wind_roar', -5, 'open sky wind', bus='amb', loop=True, dur=T['white'] - T['rip'], fade_out=0.05)
+c(T['rip'], 'wind_roar', -8, 'open sky wind', bus='amb', loop=True, dur=T['white'] - T['rip'], fade_out=0.05)
 c(T['phone2'], 'phone_buzz', -8, 'phones on the floor light up')
 c(T['phone2'] + 0.05, 'alert_tone', -6, 'second alert')
 c(T['kept'], 'glitch_stab', -7, 'KEPT: YOU')
-c(T['lock'], 'beam_slam', 0, 'THE BEAM LOCKS ON YOU')
-c(T['lock'], 'beam_hum', -7, 'inside the light', bus='amb', loop=True, dur=T['white'] - T['lock'], fade_out=0.05)
+c(T['lock'], 'beam_slam', -5, 'THE BEAM LOCKS ON YOU', dur=0.75, fade_out=0.3)
+c(T['lock'], 'beam_hum', -11, 'inside the light', bus='amb', loop=True, dur=T['white'] - T['lock'], fade_out=0.05)
 c(T['choice'], 'stamp_thud', -4, 'choice card')
 c(T['choice'], 'heartbeat_lubdub', -6, 'heartbeat under the choice', loop=True, dur=T['white'] - T['choice'], fade_out=0.05)
 c(T['white'], 'end_boom', 0, '0:00: the world ends (white) -> loop')
 
 C = {'duration': END, 'loop': True, 'narration': 'narration/narration_raw.wav', 'narration_offset': 0.0,
      'music': 'music_score.wav', 'music_gain_db': 1, 'music_cue': 'cue_video025',
+     'music_gates': [[TL.LINES['N07'][0] - 0.08, TL.LINES['N07'][1] + 0.05, 0.3]] if 'N07' in TL.LINES else [],
      'targets': {'narration_lufs': -16, 'master_lufs': -14, 'true_peak': -4.5, 'duck_db': 7},
      'cues': sorted(cues, key=lambda d: d['t'])}
 json.dump(C, open(os.path.join(HERE, 'cues.json'), 'w'), indent=1, ensure_ascii=False)
