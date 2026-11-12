@@ -1,6 +1,9 @@
 """TEST_3D — real 3D render in the "2.5D ink" look (toon-shaded 3D + black ink outlines), 10 s, 1080x1920, 30 fps.
 
-    blender -b --factory-startup --python VIDEOS/TEST_3D/scene3d.py -- [--frames 0,300] [--still 60] [--res 1080x1920] [--samples 8]
+    blender -b --factory-startup --python VIDEOS/TEST_3D/scene3d.py -- [--frames 0,300] [--still 60] [--res 1080x1920] [--samples 8] [--bg 1]
+
+  --bg 1 = HYBRID (the look of the reference reels): Blender renders only the 3D set + camera moves + depth of field,
+  writes track.json (where the character stands on screen each frame), and comp2d.py draws the FLAT 2D mascot on top.
 
 Everything is built here from primitives (no assets):
   * toon material: Diffuse -> Shader-to-RGB -> 3-step colour ramp (shadow / mid / lit) x base colour -> Emission  (+ rim light term)
@@ -341,8 +344,12 @@ SHOTS = [  # cam, lens, f0, f1, loc0, loc1, tgt0, tgt1, ease
     ('camB', 24, F_B, F_C - 1, (1.2, 3.42, 1.4), (1.08, 3.48, 1.36), (0.45, 3.66, 1.3), (0.45, 3.66, 1.31), 'io'),
     ('camC', 30, F_C, F_END, (-0.7, 2.5, 1.15), (0.3, 2.7, 1.12), (1.25, 3.55, 1.1), (1.25, 3.62, 1.18), 'io'),
 ]
+FOCUS = {'camA': ('head', 2.4), 'camB': ('head', 1.2), 'camC': ('knobPivot', 2.0)}   # depth of field like the reel
 for name, lens, f0, f1, l0, l1, t0, t1, md in SHOTS:
     cam, tgt = camera(name, lens)
+    cam.data.dof.use_dof = True
+    cam.data.dof.focus_object = bpy.data.objects[FOCUS[name][0]]
+    cam.data.dof.aperture_fstop = FOCUS[name][1]
     for f in range(f0, f1 + 1):
         u = ease((f - f0) / max(1, f1 - f0), md)
         wob = Vector((0.006 * math.sin(f * 0.37) + 0.003 * math.sin(f * 0.91), 0.0, 0.005 * math.sin(f * 0.53 + 1)))
@@ -352,8 +359,28 @@ for name, lens, f0, f1, l0, l1, t0, t1, md in SHOTS:
     if f0 == F_A:
         sc.camera = cam
 
+# ----------------------------------------------------------------------------------------------- hybrid mode: 3D set only + 2D character track
+BG = '--bg' in opt
+if BG:                                    # the character is drawn flat in 2D on top (comp2d.py), so hide the 3D one
+    for ob in [root] + list(root.children_recursive):
+        ob.hide_render = True
+    import json
+    from bpy_extras.object_utils import world_to_camera_view
+    track = []
+    for f in range(F_A, F_END):
+        sc.frame_set(f)
+        cam = bpy.data.objects['camA' if f < F_B else ('camB' if f < F_C else 'camC')]
+        fpx = cam.data.lens / cam.data.sensor_width * 1920
+        row = {'f': f, 'cam': cam.name}
+        for key, ob in (('feet', root), ('head', bpy.data.objects['head']), ('knob', bpy.data.objects['knobPivot'])):
+            v = world_to_camera_view(sc, cam, ob.matrix_world.translation)
+            row[key] = [round(v.x * 1080, 1), round((1 - v.y) * 1920, 1), round(v.z, 4), round(fpx / max(v.z, 1e-3), 2)]
+        track.append(row)
+    json.dump(track, open(os.path.join(HERE, 'track.json'), 'w'))
+    print('TRACK_OK', len(track))
+
 # ----------------------------------------------------------------------------------------------- render
-out = os.path.join(HERE, 'frames3d', 'ALL')
+out = os.path.join(HERE, 'frames3d', 'BG' if BG else 'ALL')
 os.makedirs(out, exist_ok=True)
 if '--still' in opt:
     f = int(opt['--still']); sc.frame_set(f)
@@ -365,4 +392,4 @@ else:
     sc.render.filepath = os.path.join(out, '####')
     bpy.ops.render.render(animation=True)
     print('RENDER_OK', a, b)
-bpy.ops.wm.save_as_mainfile(filepath=os.path.join(HERE, 'scene3d.blend'))
+bpy.ops.wm.save_as_mainfile(filepath=os.path.join(HERE, 'scene3d_bg.blend' if BG else 'scene3d.blend'))

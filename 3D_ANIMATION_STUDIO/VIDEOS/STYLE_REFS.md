@@ -12,3 +12,12 @@ BUILD UP: rules on cards ("RULE 1: the house must look dead"), x-ray/cross-secti
 (1 person = 1 gallon/day, well 20/day = 20 people), pop-up labels on objects (LOOKS EMPTY, OURS, SOLAR ON), CCTV night cams,
 color per phase (warm day -> green night-vision -> red danger). PAYOFF: three soft knocks, red door, "she isn't knocking",
 choice card (OPEN / HIDE) + "Part 2 tomorrow". Lesson: logic + rules make viewers think along; labels explain without talk.
+
+## Ref 3 (IG reel DflfItCxFd5, "World Games" gooning final) = HYBRID: 3D world + flat 2D characters
+- Sets are real 3D renders (stadium, podiums, commentary booth): perspective, parallax camera moves, strong depth of field,
+  vignette, soft grain. Props have thin black outlines.
+- Characters are NOT 3D: flat 2D cut-outs (white round heads, black outline, flat clothes) standing in the 3D set.
+- Flat graphic inserts full-screen (scoreboard, training calendar "DAY 1,461"), a sepia "1904" archive look for history.
+- One-word captions mid-screen, white bold with black outline, the key word red/yellow.
+- Our pipeline: `VIDEOS/TEST_3D/scene3d.py --bg 1` (Blender EEVEE: set + camera + DOF, writes track.json) ->
+  `comp2d.py` (Skia: flat mascot glued to the 3D camera via track.json, contact shadow, tint, ink, grain) -> edl_engine.
