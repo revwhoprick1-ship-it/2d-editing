@@ -1,0 +1,29 @@
+FORMAT h264+aac 1080x1920 30/1 fps, 56.000000 s, 1680 frames -> PASS
+LOUDNESS integrated -14.3 LUFS (target -14)  true peak -3.9 dBTP (limit -2) -> PASS
+BLACK [] FROZEN [] -> PASS
+CONTACT SHEET /home/user/2d-editing/3D_ANIMATION_STUDIO/VIDEOS/VIDEO_026/qc/contact_sheet_1fps.jpg
+LOOP picture: mean abs difference last frame vs frame 0 = 15.1 / 255 -> PASS
+LOOP audio: last 0.15 s -17.6 dBFS | first 0.15 s -12.9 dBFS (the slam)
+N01   0.10s  OK   | Bob texted, don't open the door while sitting next to you.
+N03   3.15s  OK   | for the last 20 minutes.
+N04   4.95s  OK   | Then he sends a photo of your living room
+N05   8.10s  OK   | In the photo, it isn't watching the TV.
+N06  10.05s  OK   | It's staring at your throat.
+M01  11.90s  OK   | Bob, did you just text me?
+N07  13.90s  OK   | His lips don't move. His throat does.
+B01  15.86s  OK   | Let me in, I'm freezing!
+N08  18.50s  OK   | Then someone pounds on the front door.
+N09  22.70s  OK   | The real Bob, he holds up his phone.
+N10  24.85s  OK   | Hold your breath. It hunts by sound.
+N11  27.20s  OK   | The TV switches to your security feed.
+N12  29.20s  OK   | On screen it climbs over the couch.
+N13  31.70s  OK   | Then you see the corner, 5 second delay.
+N14  34.50s  OK   | It's already behind you.
+N15  36.75s  OK   | You hold your breath.
+N16  38.50s  OK   | So it calls your phone.
+N17  40.58s  OK   | It rises behind you. Bob's face splits.
+N18  44.15s  OK   | straight down the middle.
+D01  46.30s  OK   | He told you not to open the door, so now you're locked in here with me.
+N19  50.80s  OK   | The real Bob just kicked the door open.
+N20  52.98s  OK   | Smash, hide, or run.  Comment now.
+TRANSCRIPT 22/22 lines exact -> PASS

@@ -4,6 +4,7 @@
     python3 studio/voice_engine.py tts     Qwen3-TTS Base clones every line from one reference per character
                                            (N narrator, M you, B Bob; refs kept from earlier videos so the cast sounds the same).
                                            Up to 3 takes per line, faster-whisper check, token cap (PIPELINE/tts/narrate_qwen.py).
+    python3 studio/voice_engine.py squeeze shorten the narrator's long inner pauses (words untouched), re-time words with faster-whisper
     python3 studio/voice_engine.py fx      SoX FX with explicit lengths + faded tails (never '-0', never trimmed after FX):
                                            B01 = Bob's voice as a tape recording from a throat (band-pass 300-3400, pitch glitch, crackle)
                                            D01 = the Mimic: Bob clone + the SAME take pitched -380 cents with chorus (always in sync)
@@ -85,6 +86,41 @@ def fx():
         'reverb', '35', 'fade', 't', '0.02', f'{n / sr:.3f}', '0.3')
     shutil.rmtree(tmp)
     print('VOICE_FX_OK')
+
+
+def squeeze():
+    """The narrator leaves long pauses at commas/periods. Shorten every inner pause to <= PAUSE s (sox silence -l), keep the words
+    untouched, then re-time every line with faster-whisper word timestamps -> timing_tts.json. Originals stay in raw_lines/."""
+    raw_d = os.path.join(N, 'raw_lines')
+    os.makedirs(raw_d, exist_ok=True)
+    S = json.load(open(os.path.join(VIDEO, 'script.json')))
+    pause = {'M': 0.34, 'B': 0.30}
+    for ln in S['lines']:
+        f = ln['id'] + '.wav'
+        if not os.path.exists(os.path.join(raw_d, f)):
+            shutil.copy(os.path.join(LINES_D, f), os.path.join(raw_d, f))
+        keep = ln.get('pause', pause.get(ln['who'], 0.13))
+        sox(os.path.join(raw_d, f), os.path.join(LINES_D, f), 'silence', '-l', '1', '0.0', '0.6%', '-1', f'{keep:.2f}', '0.6%', 'pad', '0', '0.06')
+    code = r"""
+import json, re, sys, numpy as np, soundfile as sf
+from scipy.signal import resample_poly
+from faster_whisper import WhisperModel
+S = json.load(open(sys.argv[1])); N = sys.argv[2]
+wm = WhisperModel('small.en', device='cpu', compute_type='int8')
+lines, words, t = [], [], 0.0
+for ln in S['lines']:
+    y, sr = sf.read(N + '/lines/' + ln['id'] + '.wav'); y = y.mean(1) if y.ndim > 1 else y
+    segs, _ = wm.transcribe(resample_poly(y, 16000, sr).astype(np.float32), word_timestamps=True)
+    hw = [w for s in segs for w in s.words]; tw = ln['text'].split(); d = len(y) / sr
+    spans = [(w.start, w.end) for w in hw] if len(hw) == len(tw) else [(d * i / len(tw), d * (i + 1) / len(tw)) for i in range(len(tw))]
+    for word, (a, b) in zip(tw, spans):
+        words.append({'line': ln['id'], 'text': word, 'start': round(t + a, 3), 'end': round(t + b, 3)})
+    lines.append({'id': ln['id'], 'who': ln.get('who', 'N'), 'text': ln['text'], 'start': round(t, 3), 'end': round(t + d, 3), 'exact': len(hw) == len(tw)})
+    t += d + 0.2
+json.dump({'voice': 'qwen3-tts', 'sample_rate': sr, 'lines': lines, 'words': words, 'duration': round(t, 3)}, open(N + '/timing_tts.json', 'w'), indent=1)
+print('RETIMED', [(l['id'], round(l['end'] - l['start'], 2), l['exact']) for l in lines]); print('TOTAL', round(sum(l['end'] - l['start'] for l in lines), 2))
+"""
+    subprocess.run(['/opt/tools/tts312/bin/python', '-c', code, os.path.join(VIDEO, 'script.json'), N], check=True)
 
 
 def place():
@@ -171,4 +207,4 @@ if __name__ == '__main__':
             import soundfile  # noqa: F401
         except ImportError:                                                    # numpy/soundfile/scipy live in the cbx env
             os.execv(NP_PY, [NP_PY, os.path.abspath(__file__)] + sys.argv[1:])
-    {'tts': tts, 'fx': fx, 'place': place}[cmd]()
+    {'tts': tts, 'squeeze': squeeze, 'fx': fx, 'place': place}[cmd]()

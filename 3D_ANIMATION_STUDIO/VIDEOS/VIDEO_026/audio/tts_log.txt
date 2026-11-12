@@ -1,0 +1,105 @@
+
+********
+Warning: flash-attn is not installed. Will only run the manual PyTorch version. Please install flash-attn for faster inference.
+********
+ 
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 1689.55it/s]
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+N01 take 0 miss 0 bob just texted you don't open the door
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+N02 take 0 miss 0 but bob is sitting right next to you
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+N03 take 0 miss 1 for the last 20 minutes
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+N03 take 1 miss 1 for the last 20 minutes
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+N03 take 2 miss 1 for the last 20 minutes
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+N04 take 0 miss 0 then he sends a photo of your living room
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+N05 take 0 miss 0 in the photo it isn't watching the tv
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+N06 take 0 miss 0 it's staring at your throat
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+M01 take 0 miss 0 bob did you just text me
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+N07 take 0 miss 0 his lips don't move his throat does
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+B01 take 0 miss 0 let me in i'm freezing
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+N08 take 0 miss 0 then someone pounds on the front door
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+N09 take 0 miss 0 the real bob he holds up his phone
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+N10 take 0 miss 0 hold your breath it hunts by sound
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+N11 take 0 miss 0 the tv switches to your security feed
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+N12 take 0 miss 0 on screen it climbs over the couch and drops behind you
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+N13 take 0 miss 1 then you see the corner 5 second delay
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+N13 take 1 miss 1 then you see the corner 5 second delay
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+N13 take 2 miss 1 then you see the corner 5 second delay
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+N14 take 0 miss 0 it's been behind you for five seconds
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+N15 take 0 miss 0 you hold your breath
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+
+********
+Warning: flash-attn is not installed. Will only run the manual PyTorch version. Please install flash-attn for faster inference.
+********
+ 
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 1859.80it/s]
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+N16 take 0 miss 0 so it calls your phone
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+N17 take 0 miss 0 it rises behind you and bob's face splits
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+N18 take 0 miss 0 straight down the middle
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+D01 take 0 miss 0 he told you not to open the door so now you're locked in here with me
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+N19 take 0 miss 0 the real bob just kicked the door open
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+N20 take 0 miss 3 1 smash the phone 2 hide 3 run comment now
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+N20 take 1 miss 0 one smash the phone two hide three run comment now
+NARRATION_OK 74.58 s
+TTS_OK
+
+********
+Warning: flash-attn is not installed. Will only run the manual PyTorch version. Please install flash-attn for faster inference.
+********
+ 
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 894.93it/s]
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+N01 take 0 miss 0 bob texted don't open the door while sitting next to you
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+B01 take 0 miss 0 let me in i'm freezing
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+N12 take 0 miss 0 on screen it climbs over the couch
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+N14 take 0 miss 0 it's already behind you
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+N17 take 0 miss 0 it rises behind you bob's face splits
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+D01 take 0 miss 0 he told you not to open the door so now you're locked in here with me
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+N20 take 0 miss 5 1 smash 2 hide 3 run
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+N20 take 1 miss 0 one smash two hide three run comment now
+NARRATION_OK 64.91 s
+TTS_OK
+
+********
+Warning: flash-attn is not installed. Will only run the manual PyTorch version. Please install flash-attn for faster inference.
+********
+ 
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 2314.10it/s]
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+N20 take 0 miss 0 smash hide or run comment now
+NARRATION_OK 61.61 s
+TTS_OK

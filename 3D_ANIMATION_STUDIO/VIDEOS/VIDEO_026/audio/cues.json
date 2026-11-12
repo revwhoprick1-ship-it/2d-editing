@@ -1,0 +1,568 @@
+{
+ "duration": 56.0,
+ "loop": true,
+ "narration": "narration/narration_raw.wav",
+ "narration_offset": 0.0,
+ "music": "music_score.wav",
+ "music_gain_db": 0,
+ "music_cue": "cue_video026",
+ "targets": {
+  "narration_lufs": -16,
+  "master_lufs": -14,
+  "true_peak": -4.5,
+  "duck_db": 6
+ },
+ "cues": [
+  {
+   "t": 0.0,
+   "file": "AUDIO/sound_effects/comedy/house_night.flac",
+   "gain": -6,
+   "bus": "amb",
+   "note": "the house at night",
+   "loop": true,
+   "dur": 56.0,
+   "fade_in": 0.5
+  },
+  {
+   "t": 0.0,
+   "file": "AUDIO/sound_effects/comedy/rain_window.flac",
+   "gain": -9,
+   "bus": "amb",
+   "note": "rain on the window",
+   "loop": true,
+   "dur": 18.0,
+   "fade_in": 0.6
+  },
+  {
+   "t": 0.0,
+   "file": "AUDIO/sound_effects/comedy/tv_static_bed.flac",
+   "gain": -20,
+   "bus": "amb",
+   "note": "the TV murmuring",
+   "loop": true,
+   "dur": 27.0,
+   "fade_in": 0.6,
+   "fade_out": 0.05
+  },
+  {
+   "t": 0.0,
+   "file": "AUDIO/sound_effects/mimic/mimic_slam.flac",
+   "gain": -8,
+   "bus": "sfx",
+   "note": "FRAME 0: JUMPSCARE_SLAM"
+  },
+  {
+   "t": 0.02,
+   "file": "AUDIO/sound_effects/mimic/phone_buzz160.flac",
+   "gain": -8,
+   "bus": "sfx",
+   "note": "phone vibrating in your hand (160 Hz)"
+  },
+  {
+   "t": 0.6,
+   "file": "AUDIO/sound_effects/movement/whoosh_short.flac",
+   "gain": -10,
+   "bus": "sfx",
+   "note": "whip-pan to Bob"
+  },
+  {
+   "t": 0.9,
+   "file": "AUDIO/sound_effects/comedy/subliminal_hit.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "Bob is right there"
+  },
+  {
+   "t": 2.167,
+   "file": "AUDIO/sound_effects/environment/electronic_beep.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "label: PULSE 0 BPM"
+  },
+  {
+   "t": 4.6,
+   "file": "AUDIO/sound_effects/mimic/msg_chime.flac",
+   "gain": -7,
+   "bus": "sfx",
+   "note": "second message (double chime, bent down)"
+  },
+  {
+   "t": 4.65,
+   "file": "AUDIO/sound_effects/mimic/phone_buzz160.flac",
+   "gain": -14,
+   "bus": "sfx",
+   "note": "buzz",
+   "dur": 0.45,
+   "fade_out": 0.05
+  },
+  {
+   "t": 5.9,
+   "file": "AUDIO/sound_effects/comedy/subliminal_hit.flac",
+   "gain": -14,
+   "bus": "sfx",
+   "note": "the photo sharpens"
+  },
+  {
+   "t": 8.17,
+   "file": "AUDIO/sound_effects/mimic/sub_heart50.flac",
+   "gain": -8,
+   "bus": "sfx",
+   "note": "50 Hz heartbeat thud"
+  },
+  {
+   "t": 8.833,
+   "file": "AUDIO/sound_effects/environment/electronic_beep.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "label: NECK ROTATION 94"
+  },
+  {
+   "t": 8.95,
+   "file": "AUDIO/sound_effects/bio/heartbeat_lubdub.flac",
+   "gain": -14,
+   "bus": "sfx",
+   "note": "heartbeat",
+   "loop": true,
+   "dur": 6.666666666666666,
+   "fade_out": 0.05
+  },
+  {
+   "t": 10.9,
+   "file": "AUDIO/sound_effects/comedy/glitch_stab.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "the live photo moves"
+  },
+  {
+   "t": 10.9,
+   "file": "AUDIO/sound_effects/comedy/bone_clicks.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "its neck"
+  },
+  {
+   "t": 12.7,
+   "file": "AUDIO/sound_effects/movement/cloth_rustle.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "its hand creeps over the cushion"
+  },
+  {
+   "t": 15.667,
+   "file": "AUDIO/sound_effects/comedy/glitch_stab.flac",
+   "gain": -8,
+   "bus": "sfx",
+   "note": "GLITCH_STAB (mid-word)"
+  },
+  {
+   "t": 15.667,
+   "file": "AUDIO/sound_effects/taxi/bone_snap.flac",
+   "gain": -5,
+   "bus": "sfx",
+   "note": "BONE_SNAP: the head turns in one frame"
+  },
+  {
+   "t": 16.067,
+   "file": "AUDIO/sound_effects/environment/electronic_beep.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "label: LIPS CLOSED"
+  },
+  {
+   "t": 18.0,
+   "file": "AUDIO/sound_effects/comedy/rain_window.flac",
+   "gain": -3,
+   "bus": "amb",
+   "note": "rain, closer: the front door",
+   "loop": true,
+   "dur": 9.0,
+   "fade_out": 0.3
+  },
+  {
+   "t": 18.0,
+   "file": "AUDIO/sound_effects/mimic/door_thud.flac",
+   "gain": -5,
+   "bus": "sfx",
+   "note": "door thud 1 (110 Hz body + slap)"
+  },
+  {
+   "t": 18.0,
+   "file": "AUDIO/sound_effects/movement/whoosh_long.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "whip-pan to the hallway"
+  },
+  {
+   "t": 18.467,
+   "file": "AUDIO/sound_effects/mimic/door_thud.flac",
+   "gain": -6,
+   "bus": "sfx",
+   "note": "door thud 2 (110 Hz body + slap)"
+  },
+  {
+   "t": 18.517,
+   "file": "AUDIO/sound_effects/movement/impact_soft.flac",
+   "gain": -12,
+   "bus": "sfx",
+   "note": "a hand slaps the glass"
+  },
+  {
+   "t": 18.933,
+   "file": "AUDIO/sound_effects/mimic/door_thud.flac",
+   "gain": -6,
+   "bus": "sfx",
+   "note": "door thud 3 (110 Hz body + slap)"
+  },
+  {
+   "t": 18.983,
+   "file": "AUDIO/sound_effects/movement/impact_soft.flac",
+   "gain": -12,
+   "bus": "sfx",
+   "note": "the other hand"
+  },
+  {
+   "t": 20.2,
+   "file": "AUDIO/sound_effects/comedy/thunder.flac",
+   "gain": -10,
+   "bus": "sfx",
+   "note": "lightning: a silhouette",
+   "dur": 3.0,
+   "fade_out": 1.2
+  },
+  {
+   "t": 21.333,
+   "file": "AUDIO/sound_effects/comedy/lock_jiggle.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "the handle rattles"
+  },
+  {
+   "t": 22.67,
+   "file": "AUDIO/sound_effects/mimic/door_thud_muffled.flac",
+   "gain": -5,
+   "bus": "sfx",
+   "note": "Bob pounding outside (low-pass 400 Hz)"
+  },
+  {
+   "t": 23.13,
+   "file": "AUDIO/sound_effects/mimic/door_thud_muffled.flac",
+   "gain": -6,
+   "bus": "sfx",
+   "note": "pounding"
+  },
+  {
+   "t": 23.5,
+   "file": "AUDIO/sound_effects/environment/electronic_beep.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "label: OUTSIDE = REAL BOB"
+  },
+  {
+   "t": 24.567,
+   "file": "AUDIO/sound_effects/comedy/glass_tap.flac",
+   "gain": -7,
+   "bus": "sfx",
+   "note": "his phone slaps the glass"
+  },
+  {
+   "t": 24.567,
+   "file": "AUDIO/sound_effects/comedy/subliminal_hit.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "the note"
+  },
+  {
+   "t": 27.0,
+   "file": "AUDIO/sound_effects/comedy/rain_window.flac",
+   "gain": -9,
+   "bus": "amb",
+   "note": "rain",
+   "loop": true,
+   "dur": 29.0
+  },
+  {
+   "t": 27.0,
+   "file": "AUDIO/sound_effects/mimic/crt_on.flac",
+   "gain": -6,
+   "bus": "sfx",
+   "note": "the TV switches itself: CRT static + sub hum"
+  },
+  {
+   "t": 27.0,
+   "file": "AUDIO/sound_effects/comedy/tv_static_click.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "click"
+  },
+  {
+   "t": 27.333,
+   "file": "AUDIO/sound_effects/comedy/cable_hum.flac",
+   "gain": -16,
+   "bus": "amb",
+   "note": "security feed hum",
+   "loop": true,
+   "dur": 9.166666666666668,
+   "fade_out": 0.2
+  },
+  {
+   "t": 29.067,
+   "file": "AUDIO/sound_effects/comedy/whispers.flac",
+   "gain": -20,
+   "bus": "sfx",
+   "note": "it moves on the screen",
+   "dur": 2.6,
+   "fade_out": 0.6
+  },
+  {
+   "t": 31.2,
+   "file": "AUDIO/sound_effects/movement/impact_soft.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "it drops behind the couch (on the feed)"
+  },
+  {
+   "t": 31.67,
+   "file": "AUDIO/sound_effects/mimic/alert_beep2.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "digital alert double-beep: FEED DELAY"
+  },
+  {
+   "t": 33.833,
+   "file": "AUDIO/sound_effects/comedy/subliminal_hit.flac",
+   "gain": -10,
+   "bus": "sfx",
+   "note": "label: 5 SECONDS AGO"
+  },
+  {
+   "t": 34.333,
+   "file": "AUDIO/sound_effects/transitions/bass_impact.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "the real couch: the seat is empty"
+  },
+  {
+   "t": 34.333,
+   "file": "AUDIO/sound_effects/bio/heartbeat_lubdub.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "heartbeat, fast",
+   "loop": true,
+   "dur": 3.866666666666667,
+   "fade_out": 0.05
+  },
+  {
+   "t": 35.267,
+   "file": "AUDIO/sound_effects/bio/creature_presence.flac",
+   "gain": -12,
+   "bus": "sfx",
+   "note": "it rises behind your shoulder"
+  },
+  {
+   "t": 38.2,
+   "file": "AUDIO/sound_effects/mimic/ringtone_blast.flac",
+   "gain": -6,
+   "bus": "sfx",
+   "note": "RINGTONE at full volume",
+   "dur": 2.1,
+   "fade_out": 0.25
+  },
+  {
+   "t": 38.2,
+   "file": "AUDIO/sound_effects/mimic/cloth_rip.flac",
+   "gain": -7,
+   "bus": "sfx",
+   "note": "cloth rip"
+  },
+  {
+   "t": 38.2,
+   "file": "AUDIO/sound_effects/mimic/sub_thud.flac",
+   "gain": -5,
+   "bus": "sfx",
+   "note": "the hand clamps your ankle"
+  },
+  {
+   "t": 38.22,
+   "file": "AUDIO/sound_effects/mimic/phone_buzz160.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "buzz"
+  },
+  {
+   "t": 39.7,
+   "file": "AUDIO/sound_effects/movement/impact_heavy.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "it yanks"
+  },
+  {
+   "t": 39.7,
+   "file": "AUDIO/sound_effects/movement/object_slide.flac",
+   "gain": -10,
+   "bus": "sfx",
+   "note": "your shoe scrapes the floor"
+  },
+  {
+   "t": 40.5,
+   "file": "AUDIO/sound_effects/mimic/tendril_writhe.flac",
+   "gain": -4,
+   "bus": "amb",
+   "note": "ink tendrils",
+   "loop": true,
+   "dur": 15.5
+  },
+  {
+   "t": 40.6,
+   "file": "AUDIO/sound_effects/comedy/creak_long.flac",
+   "gain": -12,
+   "bus": "sfx",
+   "note": "it rises behind the couch"
+  },
+  {
+   "t": 40.9,
+   "file": "AUDIO/sound_effects/movement/impact_soft.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "tug on your ankle"
+  },
+  {
+   "t": 41.83,
+   "file": "AUDIO/sound_effects/movement/impact_soft.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "tug"
+  },
+  {
+   "t": 43.0,
+   "file": "AUDIO/sound_effects/mimic/mimic_slam.flac",
+   "gain": -5,
+   "bus": "sfx",
+   "note": "JUMPSCARE_SLAM (mid-word, 0 ms attack)"
+  },
+  {
+   "t": 43.0,
+   "file": "AUDIO/sound_effects/mimic/flesh_zip_rip.flac",
+   "gain": -5,
+   "bus": "sfx",
+   "note": "FLESH_ZIP_RIP"
+  },
+  {
+   "t": 43.0,
+   "file": "AUDIO/sound_effects/mimic/metal_screech.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "METAL_SCREECH"
+  },
+  {
+   "t": 43.0,
+   "file": "AUDIO/sound_effects/comedy/glitch_stab.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "VHS tear"
+  },
+  {
+   "t": 46.0,
+   "file": "AUDIO/sound_effects/transitions/bass_impact.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "inches from the lens"
+  },
+  {
+   "t": 46.3,
+   "file": "/home/user/2d-editing/3D_ANIMATION_STUDIO/VIDEOS/VIDEO_026/audio/narration/fx/D01_wide.wav",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "the Mimic: whisper layer with stereo chorus"
+  },
+  {
+   "t": 50.5,
+   "file": "AUDIO/sound_effects/movement/whoosh_short.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "whip to the hallway"
+  },
+  {
+   "t": 50.52,
+   "file": "AUDIO/sound_effects/mimic/door_thud.flac",
+   "gain": -4,
+   "bus": "sfx",
+   "note": "the real Bob kicks the door in"
+  },
+  {
+   "t": 50.54,
+   "file": "AUDIO/sound_effects/environment/door_creak_slam.flac",
+   "gain": -12,
+   "bus": "sfx",
+   "note": "door flies open",
+   "dur": 0.9,
+   "fade_out": 0.4
+  },
+  {
+   "t": 50.6,
+   "file": "AUDIO/sound_effects/comedy/thunder.flac",
+   "gain": -18,
+   "bus": "sfx",
+   "note": "storm outside",
+   "dur": 2.2,
+   "fade_out": 1.0
+  },
+  {
+   "t": 52.1,
+   "file": "AUDIO/sound_effects/movement/whoosh_short.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "whip back"
+  },
+  {
+   "t": 53.0,
+   "file": "AUDIO/sound_effects/comedy/stamp_thud.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "the choice card slams in"
+  },
+  {
+   "t": 53.0,
+   "file": "AUDIO/sound_effects/environment/button_click.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "box 1 flashes"
+  },
+  {
+   "t": 53.0,
+   "file": "AUDIO/sound_effects/bio/heartbeat_lubdub.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "heartbeat under the CTA",
+   "loop": true,
+   "dur": 2.95
+  },
+  {
+   "t": 53.867,
+   "file": "AUDIO/sound_effects/environment/button_click.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "box 2 flashes"
+  },
+  {
+   "t": 54.433,
+   "file": "AUDIO/sound_effects/environment/button_click.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "box 3 flashes"
+  },
+  {
+   "t": 54.6,
+   "file": "AUDIO/sound_effects/comedy/glitch_stab.flac",
+   "gain": -12,
+   "bus": "sfx",
+   "note": "mid-card micro-scare: the four eyes flare"
+  },
+  {
+   "t": 55.1,
+   "file": "AUDIO/sound_effects/mimic/loop_swell.flac",
+   "gain": -8,
+   "bus": "sfx",
+   "note": "swell into the loop point (frame 0 slam)"
+  }
+ ]
+}

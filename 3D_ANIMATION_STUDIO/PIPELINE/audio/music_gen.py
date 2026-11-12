@@ -1633,6 +1633,36 @@ def cue_video025():
 CUES['video025'] = cue_video025
 LOOPS['video025'] = None
 
+
+def cue_video026():
+    """Two Bobs (56.0 s, loops): a 55 Hz sub-bass tension drone for the whole video (55 Hz x 56 s = 3080 whole cycles and a
+    0.25 Hz swell = 14 whole cycles, so the loop is phase-continuous), a high tremolo cluster that creeps in from the TV twist to
+    the unzip, a low cluster under the Mimic, ticks under the CTA. The mixer ducks it 6 dB under dialogue. No risers before scares."""
+    sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'VIDEOS', 'VIDEO_026', 'studio'))
+    import timeline as TL26
+    T, END = TL26.T, TL26.END
+    S = Score(END + 2.0, bpm=60)
+    n = int(END * SR); tt = np.arange(n) / SR
+    drone = np.tanh(1.7 * np.sin(2 * np.pi * 55 * tt)) * (0.72 + 0.28 * np.sin(2 * np.pi * 0.25 * tt - np.pi / 2))
+    S.add('bass', 0.0, drone * 0.85, -9)
+    S.add('pad', T['s2b'], inst_tremolo(C(['E5', 'F5']), T['snap'] - T['s2b'], rate=10, bright=2800), -22)
+    S.add('pad', T['s5a'], inst_tremolo(C(['D5', 'D#5', 'A5']), T['unzip'] - T['s5a'], rate=11, bright=3000), -19)
+    S.add('pad', T['s5c'], inst_strings(C(['D2', 'A2', 'D#3']), T['unzip'] - T['s5c'], attack=2.5, bright=1500), -16)
+    S.add('pad', T['unzip'] + 0.6, inst_strings(C(['D3', 'D#3', 'A3', 'A#3']), T['s7b'] - T['unzip'] - 0.6, attack=1.2, bright=2200), -13)
+    S.add('perc', T['snap'], drum_taiko(1.3, 44), -6)
+    S.add('perc', T['unzip'], drum_taiko(1.7, 34), -3)
+    t = T['s7b']
+    while t < END - 0.1:
+        S.add('perc', t, drum_tick(0.7), -9)
+        t += 0.25
+    for b in ('pad', 'perc'):
+        S.gate(b, T['s6a'], T['ring'], -30, 0.15)                              # you hold your breath: the room goes quiet
+    return S
+
+
+CUES['video026'] = cue_video026
+LOOPS['video026'] = 56.0
+
 if __name__ == '__main__':
     cue, out = sys.argv[1], sys.argv[2]
     S = CUES[cue]()

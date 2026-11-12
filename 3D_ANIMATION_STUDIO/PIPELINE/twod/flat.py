@@ -245,7 +245,8 @@ def mascot(cv, x, y, s=1.0, **pose):
     if P.get('stretch'):
         cv.scale(1 - 0.25 * P['stretch'], 1 + P['stretch'])
     out['head'] = _hand_pos(cv, 0, 0)
-    _head_front(cv, P, back)
+    if not P.get('no_head'):                                  # no_head: the caller draws its own head (e.g. the Bob mimic)
+        _head_front(cv, P, back)
     cv.restore()
     cv.restore()
     return out
@@ -490,6 +491,13 @@ def _side(cv, x, y, s, P):
     cv.drawOval(skia.Rect(ex - 30, ey - 52, ex + 34, ey + 52), paint(LINE, style='stroke', width=5))
     b = P['brow']
     cv.drawPath(poly([(ex - 30, ey - 70 + b * 8), (ex + 40, ey - 80 - b * 20)], closed=False), paint(HRS, style='stroke', width=16))
+    if P.get('glasses'):                                      # profile: one round lens, the temple runs back to the ear
+        gp = paint(P['glasses'], style='stroke', width=11)
+        if P.get('lens'):
+            cv.drawOval(skia.Rect(ex - 46, ey - 68, ex + 52, ey + 64), paint(P['lens']))
+        cv.drawOval(skia.Rect(ex - 46, ey - 68, ex + 52, ey + 64), gp)
+        cv.drawLine(ex - 46, ey - 12, -44, -4, gp)
+        cv.drawLine(ex + 52, ey - 10, ex + 74, ey - 4, gp)
     if P['mustache']:
         cv.drawPath(blob([(110, 84), (176, 70), (196, 90), (140, 104)]), paint(P['mustache']))
     m, o = P['mouth'], P['mouth_open']

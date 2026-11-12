@@ -1768,5 +1768,140 @@
   "duration_s": 5.0,
   "sample_rate": 48000,
   "licence": "Original procedural synthesis (VIDEOS/VIDEO_025/audio_synth.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/mimic/mimic_slam.flac",
+  "category": "mimic",
+  "name": "mimic_slam",
+  "description": "JUMPSCARE_SLAM: 150 -> 28 Hz sub drop + noise burst + a struck-metal ring. Sample 0 is the peak (0 ms attack).",
+  "duration_s": 1.8,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (VIDEOS/VIDEO_026/studio/audio_synth.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/mimic/flesh_zip_rip.flac",
+  "category": "mimic",
+  "name": "flesh_zip_rip",
+  "description": "FLESH_ZIP_RIP: a zipper tearing open (accelerating ticks) inside wet ripping tissue, then a low flap.",
+  "duration_s": 1.3,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (VIDEOS/VIDEO_026/studio/audio_synth.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/mimic/metal_screech.flac",
+  "category": "mimic",
+  "name": "metal_screech",
+  "description": "METAL_SCREECH: inharmonic FM shriek that bends down (1.4 s), low-passed at 8 kHz.",
+  "duration_s": 1.4,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (VIDEOS/VIDEO_026/studio/audio_synth.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/mimic/door_thud.flac",
+  "category": "mimic",
+  "name": "door_thud",
+  "description": "One heavy thud on a wooden door: 110 Hz resonant body + a high slap.",
+  "duration_s": 0.7,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (VIDEOS/VIDEO_026/studio/audio_synth.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/mimic/phone_buzz160.flac",
+  "category": "mimic",
+  "name": "phone_buzz160",
+  "description": "Phone vibrating against a hand: 160 Hz square, amplitude-modulated, every burst with a smoothed 5 ms attack.",
+  "duration_s": 1.1,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (VIDEOS/VIDEO_026/studio/audio_synth.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/mimic/msg_chime.flac",
+  "category": "mimic",
+  "name": "msg_chime",
+  "description": "Our own incoming-message double chime (two glassy notes). (SoX: bend 0.06,-180,0.5)",
+  "duration_s": 0.9,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (VIDEOS/VIDEO_026/studio/audio_synth.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/mimic/sub_heart50.flac",
+  "category": "mimic",
+  "name": "sub_heart50",
+  "description": "A 50 Hz heartbeat: two soft sub thumps (lub-dub).",
+  "duration_s": 0.75,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (VIDEOS/VIDEO_026/studio/audio_synth.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/mimic/crt_on.flac",
+  "category": "mimic",
+  "name": "crt_on",
+  "description": "A TV switching itself: high-voltage static crackle + a low sub hum settling (1.6 s).",
+  "duration_s": 1.6,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (VIDEOS/VIDEO_026/studio/audio_synth.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/mimic/alert_beep2.flac",
+  "category": "mimic",
+  "name": "alert_beep2",
+  "description": "Digital alert double-beep.",
+  "duration_s": 0.5,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (VIDEOS/VIDEO_026/studio/audio_synth.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/mimic/ringtone_blast.flac",
+  "category": "mimic",
+  "name": "ringtone_blast",
+  "description": "A ringtone at full volume in a silent room: a fast two-note trill (2.2 s), low-passed at 6.5 kHz.",
+  "duration_s": 2.2,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (VIDEOS/VIDEO_026/studio/audio_synth.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/mimic/cloth_rip.flac",
+  "category": "mimic",
+  "name": "cloth_rip",
+  "description": "cloth_rip",
+  "duration_s": 0.5,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (VIDEOS/VIDEO_026/studio/audio_synth.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/mimic/sub_thud.flac",
+  "category": "mimic",
+  "name": "sub_thud",
+  "description": "sub_thud",
+  "duration_s": 0.8,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (VIDEOS/VIDEO_026/studio/audio_synth.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/mimic/tendril_writhe.flac",
+  "category": "mimic",
+  "name": "tendril_writhe",
+  "description": "Ink tendrils: slow wet slither + tiny clicks (8 s, loopable).",
+  "duration_s": 8.0,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (VIDEOS/VIDEO_026/studio/audio_synth.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/mimic/loop_swell.flac",
+  "category": "mimic",
+  "name": "loop_swell",
+  "description": "A reverse swell (0.9 s) that ends exactly on the loop point, so the last frame falls into the frame-0 slam.",
+  "duration_s": 0.9,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (VIDEOS/VIDEO_026/studio/audio_synth.py). Free for monetised use."
+ },
+ {
+  "file": "sound_effects/mimic/door_thud_muffled.flac",
+  "category": "mimic",
+  "name": "door_thud_muffled",
+  "description": "One heavy thud on a wooden door: 110 Hz resonant body + a high slap. (SoX: lowpass 400 gain 4)",
+  "duration_s": 0.7,
+  "sample_rate": 48000,
+  "licence": "Original procedural synthesis (VIDEOS/VIDEO_026/studio/audio_synth.py). Free for monetised use."
  }
 ]
