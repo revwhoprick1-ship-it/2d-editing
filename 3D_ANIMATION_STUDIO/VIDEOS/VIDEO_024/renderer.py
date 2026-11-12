@@ -176,9 +176,11 @@ def shot_TUNNEL(cv, t):
 
 
 # ===================================================================== setup B: looking forward
-DRV_HEAD = (330, 700)
-METER_XY = (720, 1170)
-VENT_XY = (440, 1215)
+DRV_HEAD = (250, 820)          # driver's head (seated, left); his seat back covers him below the shoulders
+DRV_S = 0.9
+METER_XY = (580, 1060)         # taxi meter on the dash, in the gap between the front seats
+VENT_XY = (580, 1222)          # centre air vent with the ID card clipped to it
+CLOCK_XY = (880, 1045)         # dash clock 11:47 (hidden detail), above the passenger seat
 
 
 def windshield(cv, t, r):
@@ -208,77 +210,78 @@ def cab_front(cv, t, monster=0.0, flash_white=0.0):
     ws = skia.Rect(60, 230, 1020, 1000)
     windshield(cv, t, ws)
     with inked(cv, 5):
-        pth = skia.Path(); pth.addRect(skia.Rect(0, 0, W, 1060)); pth.addRoundRect(ws, 40, 40)
+        pth = skia.Path(); pth.addRect(skia.Rect(0, 0, W, 1000)); pth.addRoundRect(ws, 40, 40)
         pth.setFillType(skia.PathFillType.kEvenOdd)
         cv.drawPath(pth, paint('#141018'))
         cv.drawRoundRect(skia.Rect(440, 270, 640, 360), 14, 14, paint('#2A2A30'))                # rear-view mirror
         cv.drawRoundRect(skia.Rect(452, 280, 628, 350), 10, 10, paint('#1A1622'))
-        cv.drawRect(skia.Rect(0, 1040, W, 1400), paint('#000000', shader=lin((0, 1040), (0, 1400), [C('#24202A'), C('#141018')])))   # dashboard
-        cv.drawRoundRect(skia.Rect(METER_XY[0] - 130, METER_XY[1] - 60, METER_XY[0] + 130, METER_XY[1] + 60), 12, 12, paint('#0A0A0C'))  # meter
-        cv.drawRoundRect(skia.Rect(VENT_XY[0] - 90, VENT_XY[1] - 50, VENT_XY[0] + 90, VENT_XY[1] + 50), 10, 10, paint('#1A1A20'))    # vent
+        cv.drawRect(skia.Rect(0, 980, W, 1400), paint('#000000', shader=lin((0, 980), (0, 1400), [C('#24202A'), C('#141018')])))   # dashboard
+        cv.drawRoundRect(skia.Rect(METER_XY[0] - 130, METER_XY[1] - 55, METER_XY[0] + 130, METER_XY[1] + 55), 12, 12, paint('#0A0A0C'))
+        cv.drawRoundRect(skia.Rect(VENT_XY[0] - 100, VENT_XY[1] - 55, VENT_XY[0] + 100, VENT_XY[1] + 55), 10, 10, paint('#1A1A20'))
         for k in range(5):
-            cv.drawLine(VENT_XY[0] - 80, VENT_XY[1] - 36 + k * 18, VENT_XY[0] + 80, VENT_XY[1] - 36 + k * 18, paint('#3A3A44', style='stroke', width=5))
-        cv.drawRoundRect(skia.Rect(830, 1090, 990, 1150), 8, 8, paint('#0A100A'))                   # dash clock
-        cv.drawRoundRect(skia.Rect(700, 1250, 1080, 1920), 60, 60, paint('#2A2226'))               # passenger seat back
-        cv.drawRoundRect(skia.Rect(760, 1180, 980, 1320), 40, 40, paint('#342A2E'))
-    # the mirror: your eyes (until he turns)
-    if monster < 0.5:
+            cv.drawLine(VENT_XY[0] - 90, VENT_XY[1] - 40 + k * 20, VENT_XY[0] + 90, VENT_XY[1] - 40 + k * 20, paint('#3A3A44', style='stroke', width=5))
+        cv.drawRoundRect(skia.Rect(CLOCK_XY[0] - 80, CLOCK_XY[1] - 32, CLOCK_XY[0] + 80, CLOCK_XY[1] + 32), 8, 8, paint('#0A100A'))
+    if monster < 0.5:                                                                             # the mirror: your eyes (until he turns)
         for side in (-1, 1):
             cv.drawCircle(540 + side * 30, 315, 12, paint('#F4F0E6')); cv.drawCircle(540 + side * 30, 317, 6, paint('#1A1410'))
     remaining = max(0, int(56 - t))                                                               # meter: counting DOWN
-    text(cv, f'00:00:{remaining:02d}', METER_XY[0], METER_XY[1] + 22, 64, METER_RED)
-    glow(cv, METER_XY, 260, METER_RED, 100 / 255)
-    text(cv, '11:47', 910, 1135, 40, '#7AF07A')                                                     # hidden detail
+    text(cv, f'00:00:{remaining:02d}', METER_XY[0], METER_XY[1] + 22, 62, METER_RED)
+    glow(cv, METER_XY, 240, METER_RED, 100 / 255)
+    text(cv, '11:47', CLOCK_XY[0], CLOCK_XY[1] + 14, 40, '#7AF07A')                               # hidden detail
     id_card(cv, t)
     driver(cv, t, monster)
+    with inked(cv, 5):                                                                            # the front seats (in front of his body)
+        cv.drawRoundRect(skia.Rect(20, 1010, 450, 2100), 70, 70, paint('#2A2226'))                # driver seat back
+        cv.drawRoundRect(skia.Rect(720, 1080, 1100, 2100), 70, 70, paint('#2A2226'))              # passenger seat back
+        cv.drawRoundRect(skia.Rect(790, 990, 1010, 1130), 40, 40, paint('#342A2E'))               # passenger headrest (empty)
+    if monster < 0.5:
+        glow(cv, (DRV_HEAD[0] + 120, DRV_HEAD[1] + 160), 380, METER_RED, 0.22)                     # red under-light from the meter
     if flash_white > 0:
         cv.drawRect(skia.Rect(0, 0, W, H), paint(C('#F0F4FF', 0.65 * flash_white)))
 
 
 def id_card(cv, t):
     """Laminated ID clipped to the vent: TAXI LICENSE, NAME: YOU, and a small, corrupted picture of you."""
-    x, y = VENT_XY[0] - 20, VENT_XY[1] - 10
+    x, y = VENT_XY[0], VENT_XY[1] + 10
     cv.save(); cv.translate(x, y); cv.rotate(-4)
     with inked(cv, 3):
-        cv.drawRoundRect(skia.Rect(-80, -50, 80, 60), 8, 8, paint('#E8ECF0'))
-    cv.drawRect(skia.Rect(-80, -50, 80, -30), paint('#E8B020'))
-    text(cv, 'TAXI LICENSE', 0, -35, 15, '#1A1A1A')
-    cv.save(); cv.clipRect(skia.Rect(-72, -26, -22, 40))
-    mascot(cv, -47, 100, 0.12, brow=1.0, mouth='o', pupil=0.6)                                   # your face...
+        cv.drawRoundRect(skia.Rect(-85, -52, 85, 62), 8, 8, paint('#E8ECF0'))
+    cv.drawRect(skia.Rect(-85, -52, 85, -32), paint('#E8B020'))
+    text(cv, 'TAXI LICENSE', 0, -37, 15, '#1A1A1A')
+    cv.save(); cv.clipRect(skia.Rect(-77, -28, -25, 42))
+    mascot(cv, -51, 100, 0.12, brow=1.0, mouth='o', pupil=0.6)                                   # your face...
     for k in range(4):                                                                             # ...corrupted (glitch slices)
-        yy = -20 + k * 16
-        cv.drawRect(skia.Rect(-72 + (k % 2) * 6, yy, -22 + (k % 2) * 6, yy + 5), paint(C(['#E0342C', '#2A7AE0'][k % 2], 0.6)))
+        yy = -22 + k * 16
+        cv.drawRect(skia.Rect(-77 + (k % 2) * 6, yy, -25 + (k % 2) * 6, yy + 5), paint(C(['#E0342C', '#2A7AE0'][k % 2], 0.6)))
     cv.restore()
-    text(cv, 'NAME:', 22, -8, 14, '#5A5A5A'); text(cv, 'YOU', 26, 16, 26, '#C8302A')
-    text(cv, '#1147', 26, 40, 14, '#5A5A5A')
-    cv.drawRect(skia.Rect(-14, -60, 14, -46), paint('#8A8A94'))                                   # the clip
+    text(cv, 'NAME:', 24, -8, 14, '#5A5A5A'); text(cv, 'YOU', 28, 16, 26, '#C8302A')
+    text(cv, '#1147', 28, 42, 14, '#5A5A5A')
+    cv.drawRect(skia.Rect(-14, -62, 14, -48), paint('#8A8A94'))                                   # the clip
     cv.restore()
-    glow(cv, (x, y), 120, '#FFFFFF', 0.12)
 
 
 def driver(cv, t, monster):
-    """Driver from behind (back of head, cap, shoulders). monster=1: the head is turned COMPLETELY backwards and upside down."""
+    """Driver, SEATED, seen from behind: back of head + cap + shoulders (his seat back is drawn over the rest).
+    monster=1: the head is turned COMPLETELY backwards and upside down (the back-of-head is not drawn at all)."""
     hx, hy = DRV_HEAD
     under = METER_RED if monster < 0.5 else SICK
-    with inked(cv, 6):
-        o = mascot(cv, hx, hy + 1.25 * 900, 1.25, view='back', light_side=1, rim=under, rim_a=0.7, **DRIVER)
+    cv.save()
     if monster > 0.5:
-        hp = o['head']
-        cx_, cy_ = hp
-        cv.save()
-        cv.clipPath(skia.Path.Circle(cx_, cy_ - 20, 290), skia.ClipOp.kIntersect, True)
-        cv.drawCircle(cx_, cy_ - 20, 290, paint(BASE))
-        cv.rotate(180, cx_, cy_)
+        cv.clipRect(skia.Rect(0, hy + 190 * DRV_S, W, H))                                         # body only: no back-of-head
+    with inked(cv, 6):
+        mascot(cv, hx, hy + DRV_S * 900, DRV_S, view='back', legs=False, light_side=1, rim=under, rim_a=0.7, **DRIVER)
+    cv.restore()
+    if monster > 0.5:
+        cv.save(); cv.clipPath(skia.Path.Circle(hx, hy - 10 * DRV_S, 245 * DRV_S), skia.ClipOp.kIntersect, True)   # head only
+        cv.rotate(180, hx, hy)
         with inked(cv, 6):
-            mascot(cv, cx_, cy_ + 1.25 * 900, 1.25, void_eyes=True, mouth='wide', brow=-0.9, light_side=1, rim=SICK, rim_a=0.9,
-                   **dict(DRIVER, skin='#9AA48E', skin_sh='#76806A'))
+            mascot(cv, hx, hy + DRV_S * 900, DRV_S, void_eyes=True, mouth='wide', brow=-0.9, legs=False, light_side=1, rim=SICK, rim_a=0.9,
+                   **dict(DRIVER, cap=None, skin='#9AA48E', skin_sh='#76806A'))
         cv.restore()
-        for k in range(5):                                                                          # twisted, broken neck
-            yy = cy_ + 250 + k * 22
-            cv.drawLine(cx_ - 90, yy, cx_ + 90, yy - 30, paint(C('#3A1414', 0.8), style='stroke', width=6))
-        glow(cv, (cx_, cy_ + 300), 600, SICK, 0.35)                                                  # sickly green under-light
-    else:
-        glow(cv, (hx + 200, hy + 450), 500, METER_RED, 0.25)                                         # red under-light from the meter
+        for k in range(4):                                                                          # twisted, broken neck
+            yy = hy + 210 * DRV_S + k * 16
+            cv.drawLine(hx - 70, yy, hx + 70, yy - 24, paint(C('#3A1414', 0.85), style='stroke', width=6))
+        glow(cv, (hx, hy + 260), 520, SICK, 0.35)                                                    # sickly green under-light
 
 
 def popup(cv, t, t0, x, y, txt, tip=None):
@@ -299,7 +302,7 @@ def shot_METER(cv, t):
     u = ease((t - B['meter']) / (B['idcard'] - B['meter']))
     sc = 1.0 + 0.4 * u
     cv.save(); car_shake(cv, t, 3)
-    zoom(cv, sc, (DRV_HEAD[0] + METER_XY[0]) / 2, (DRV_HEAD[1] + METER_XY[1]) / 2)
+    zoom(cv, sc, (DRV_HEAD[0] + METER_XY[0]) / 2, (DRV_HEAD[1] + METER_XY[1]) / 2 + 40)
     cab_front(cv, t)
     remaining = max(0, int(56 - t))
     popup(cv, t, 11.0, METER_XY[0] - 60, METER_XY[1] - 230, f'COUNTDOWN: 00:00:{remaining:02d}', tip=(METER_XY[0], METER_XY[1] - 60))

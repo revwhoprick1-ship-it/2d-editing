@@ -29,9 +29,9 @@ def load(lid, tempo=1.0):
 
 
 # the ending: N13 ends at 54.9, N12 right before it (tempo up to 1.2 if needed to stay after D01)
-y13 = load('N13'); START['N13'] = 54.9 - len(y13) / sr
-t12 = 1.0
-y12 = load('N12')
+y13 = load('N13', 1.3); START['N13'] = 54.9 - len(y13) / sr                              # 'Comment now.' brisk
+t12 = 1.35                                                                     # fastest clear read of the 3 options
+y12 = load('N12', t12)
 d01_end = START['D01'] + len(load('D01')) / sr
 while START['N13'] - 0.12 - len(y12) / sr < d01_end + 0.3 and t12 < 1.35:
     t12 += 0.05; y12 = load('N12', t12)
@@ -40,12 +40,16 @@ lines, words, clips = [], [], []
 for i, l in enumerate(src['lines']):
     lid = l['id']
     slot = (START[order[i + 1]] if i + 1 < len(order) else END) - START[lid] - 0.08
+    if lid == 'N10':
+        slot = 42.4 - START[lid]                                                       # must finish BEFORE the 42.5 s bone snap
     y = load(lid) if lid not in ('N12', 'N13') else (y12 if lid == 'N12' else y13)
     tempo = 1.0
     if lid not in ('N12', 'N13') and len(y) / sr > slot:
         tempo = min(1.35, (len(y) / sr) / slot); y = load(lid, tempo)
     if lid == 'N12':
         tempo = t12
+    if lid == 'N13':
+        tempo = 1.3
     t = START[lid]
     clips.append((t, y))
     k_ = (len(y) / sr) / max(0.05, l['end'] - l['start'])

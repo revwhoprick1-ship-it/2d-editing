@@ -1,0 +1,310 @@
+{
+ "duration": 55.0,
+ "loop": true,
+ "narration": "narration/narration_raw.wav",
+ "narration_offset": 0.0,
+ "music": "music_score.wav",
+ "music_gain_db": 2,
+ "music_cue": "cue_video024",
+ "targets": {
+  "narration_lufs": -16,
+  "master_lufs": -14,
+  "true_peak": -3.2,
+  "duck_db": 6
+ },
+ "cues": [
+  {
+   "t": 0.0,
+   "file": "AUDIO/sound_effects/taxi/taxi_slam.flac",
+   "gain": -2,
+   "bus": "sfx",
+   "note": "JUMPSCARE_SLAM (frame 0)"
+  },
+  {
+   "t": 0.0,
+   "file": "AUDIO/sound_effects/taxi/taxi_road.flac",
+   "gain": -4,
+   "bus": "amb",
+   "note": "taxi at 90",
+   "loop": true,
+   "dur": 29.1,
+   "fade_out": 0.05
+  },
+  {
+   "t": 0.45,
+   "file": "AUDIO/sound_effects/comedy/lock_click.flac",
+   "gain": -5,
+   "bus": "sfx",
+   "note": "the doors lock"
+  },
+  {
+   "t": 0.55,
+   "file": "AUDIO/sound_effects/taxi/light_whoosh.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "streetlight passes"
+  },
+  {
+   "t": 2.05,
+   "file": "AUDIO/sound_effects/taxi/light_whoosh.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "streetlight passes"
+  },
+  {
+   "t": 3.55,
+   "file": "AUDIO/sound_effects/taxi/light_whoosh.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "streetlight passes"
+  },
+  {
+   "t": 5.05,
+   "file": "AUDIO/sound_effects/taxi/light_whoosh.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "streetlight passes"
+  },
+  {
+   "t": 6.55,
+   "file": "AUDIO/sound_effects/taxi/light_whoosh.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "streetlight passes"
+  },
+  {
+   "t": 8.05,
+   "file": "AUDIO/sound_effects/taxi/light_whoosh.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "streetlight passes"
+  },
+  {
+   "t": 9.55,
+   "file": "AUDIO/sound_effects/taxi/light_whoosh.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "streetlight passes"
+  },
+  {
+   "t": 10.0,
+   "file": "AUDIO/sound_effects/comedy/counter_ticks.flac",
+   "gain": -19,
+   "bus": "sfx",
+   "note": "the meter ticking",
+   "loop": true,
+   "dur": 19.0
+  },
+  {
+   "t": 11.0,
+   "file": "AUDIO/sound_effects/environment/electronic_beep.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "COUNTDOWN label"
+  },
+  {
+   "t": 11.05,
+   "file": "AUDIO/sound_effects/taxi/light_whoosh.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "streetlight passes"
+  },
+  {
+   "t": 12.55,
+   "file": "AUDIO/sound_effects/taxi/light_whoosh.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "streetlight passes"
+  },
+  {
+   "t": 14.05,
+   "file": "AUDIO/sound_effects/taxi/light_whoosh.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "streetlight passes"
+  },
+  {
+   "t": 15.55,
+   "file": "AUDIO/sound_effects/taxi/light_whoosh.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "streetlight passes"
+  },
+  {
+   "t": 17.05,
+   "file": "AUDIO/sound_effects/taxi/light_whoosh.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "streetlight passes"
+  },
+  {
+   "t": 18.55,
+   "file": "AUDIO/sound_effects/taxi/light_whoosh.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "streetlight passes"
+  },
+  {
+   "t": 20.05,
+   "file": "AUDIO/sound_effects/taxi/light_whoosh.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "streetlight passes"
+  },
+  {
+   "t": 21.55,
+   "file": "AUDIO/sound_effects/taxi/light_whoosh.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "streetlight passes"
+  },
+  {
+   "t": 22.4,
+   "file": "AUDIO/sound_effects/movement/whoosh_long.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "a car passes (white flash)"
+  },
+  {
+   "t": 22.6,
+   "file": "AUDIO/sound_effects/comedy/subliminal_hit.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "the name is yours"
+  },
+  {
+   "t": 23.05,
+   "file": "AUDIO/sound_effects/taxi/light_whoosh.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "streetlight passes"
+  },
+  {
+   "t": 24.55,
+   "file": "AUDIO/sound_effects/taxi/light_whoosh.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "streetlight passes"
+  },
+  {
+   "t": 26.0,
+   "file": "AUDIO/sound_effects/bio/heartbeat_lubdub.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "heartbeat",
+   "loop": true,
+   "dur": 16.5
+  },
+  {
+   "t": 26.05,
+   "file": "AUDIO/sound_effects/taxi/light_whoosh.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "streetlight passes"
+  },
+  {
+   "t": 27.55,
+   "file": "AUDIO/sound_effects/taxi/light_whoosh.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "streetlight passes"
+  },
+  {
+   "t": 29.0,
+   "file": "AUDIO/sound_effects/taxi/tunnel_roar.flac",
+   "gain": -4,
+   "bus": "amb",
+   "note": "concrete tunnel",
+   "loop": true,
+   "dur": 26.0
+  },
+  {
+   "t": 29.05,
+   "file": "AUDIO/sound_effects/taxi/light_whoosh.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "streetlight passes"
+  },
+  {
+   "t": 29.8,
+   "file": "AUDIO/sound_effects/comedy/positive_chime.flac",
+   "gain": -15,
+   "bus": "sfx",
+   "note": "GPS chime"
+  },
+  {
+   "t": 40.1,
+   "file": "AUDIO/sound_effects/comedy/creak_long.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "his neck turning"
+  },
+  {
+   "t": 42.5,
+   "file": "AUDIO/sound_effects/taxi/bone_snap.flac",
+   "gain": -2,
+   "bus": "sfx",
+   "note": "BONE_SNAP (42.5)"
+  },
+  {
+   "t": 42.5,
+   "file": "AUDIO/sound_effects/comedy/glitch_stab.flac",
+   "gain": -5,
+   "bus": "sfx",
+   "note": "SCREEN_GLITCH"
+  },
+  {
+   "t": 42.53,
+   "file": "AUDIO/sound_effects/comedy/scare_shriek.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "shriek"
+  },
+  {
+   "t": 46.3,
+   "file": "AUDIO/sound_effects/comedy/whispers.flac",
+   "gain": -17,
+   "bus": "sfx",
+   "note": "\"We're home.\"",
+   "dur": 1.6,
+   "fade_out": 0.4
+  },
+  {
+   "t": 48.811,
+   "file": "AUDIO/sound_effects/comedy/stamp_thud.flac",
+   "gain": -7,
+   "bus": "sfx",
+   "note": "the choice card slams in"
+  },
+  {
+   "t": 48.811,
+   "file": "AUDIO/sound_effects/bio/heartbeat_lubdub.flac",
+   "gain": -11,
+   "bus": "sfx",
+   "note": "heartbeat under the CTA",
+   "loop": true,
+   "dur": 6.189
+  },
+  {
+   "t": 48.811,
+   "file": "AUDIO/sound_effects/environment/button_click.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "box 1 lights"
+  },
+  {
+   "t": 50.559,
+   "file": "AUDIO/sound_effects/environment/button_click.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "box 2 lights"
+  },
+  {
+   "t": 52.056,
+   "file": "AUDIO/sound_effects/environment/button_click.flac",
+   "gain": -13,
+   "bus": "sfx",
+   "note": "box 3 lights"
+  }
+ ]
+}

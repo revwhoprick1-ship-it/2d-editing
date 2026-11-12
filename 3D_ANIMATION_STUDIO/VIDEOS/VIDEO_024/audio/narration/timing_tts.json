@@ -1,0 +1,687 @@
+{
+ "voice": "qwen3-tts",
+ "sample_rate": 24000,
+ "lines": [
+  {
+   "id": "N01",
+   "who": "N",
+   "text": "The doors lock. The driver accelerates to ninety.",
+   "start": 0.0,
+   "end": 4.66,
+   "delivery": "",
+   "speed": 1.05
+  },
+  {
+   "id": "N02",
+   "who": "N",
+   "text": "Then you realize...",
+   "start": 4.66,
+   "end": 6.417,
+   "delivery": "",
+   "speed": 1.05
+  },
+  {
+   "id": "N03",
+   "who": "N",
+   "text": "The taxi meter isn't tracking money.",
+   "start": 6.417,
+   "end": 9.238,
+   "delivery": "",
+   "speed": 1.05
+  },
+  {
+   "id": "N04",
+   "who": "N",
+   "text": "It's counting down.",
+   "start": 9.238,
+   "end": 10.969,
+   "delivery": "",
+   "speed": 1.05
+  },
+  {
+   "id": "M01",
+   "who": "M",
+   "text": "Hey... my house was two exits back.",
+   "start": 10.969,
+   "end": 13.887,
+   "delivery": "",
+   "speed": 1.05
+  },
+  {
+   "id": "N05",
+   "who": "N",
+   "text": "He doesn't answer. You check the dashboard.",
+   "start": 13.887,
+   "end": 16.782,
+   "delivery": "",
+   "speed": 1.05
+  },
+  {
+   "id": "N06",
+   "who": "N",
+   "text": "The driver's ID is clipped to the vent.",
+   "start": 16.782,
+   "end": 19.982,
+   "delivery": "",
+   "speed": 1.05
+  },
+  {
+   "id": "N07",
+   "who": "N",
+   "text": "The name printed on it... is yours.",
+   "start": 19.982,
+   "end": 23.26,
+   "delivery": "",
+   "speed": 1.05
+  },
+  {
+   "id": "N08",
+   "who": "N",
+   "text": "The picture... is you.",
+   "start": 23.26,
+   "end": 25.992,
+   "delivery": "",
+   "speed": 1.05
+  },
+  {
+   "id": "G01",
+   "who": "G",
+   "text": "Destination reached. The cemetery.",
+   "start": 25.992,
+   "end": 28.267,
+   "delivery": "",
+   "speed": 1.05
+  },
+  {
+   "id": "N09",
+   "who": "N",
+   "text": "But outside, there's only a concrete tunnel. No exit.",
+   "start": 28.267,
+   "end": 33.683,
+   "delivery": "",
+   "speed": 1.05
+  },
+  {
+   "id": "N10",
+   "who": "N",
+   "text": "The driver slowly turns his head...",
+   "start": 33.683,
+   "end": 36.737,
+   "delivery": "",
+   "speed": 1.05
+  },
+  {
+   "id": "N11",
+   "who": "N",
+   "text": "...completely backwards.",
+   "start": 36.737,
+   "end": 38.795,
+   "delivery": "",
+   "speed": 1.05
+  },
+  {
+   "id": "D01",
+   "who": "D",
+   "text": "We're home.",
+   "start": 38.795,
+   "end": 39.611,
+   "delivery": "",
+   "speed": 1.05
+  },
+  {
+   "id": "N12",
+   "who": "N",
+   "text": "One: Jump out. Two: Grab the wheel. Three: Close your eyes.",
+   "start": 39.611,
+   "end": 45.935,
+   "delivery": "",
+   "speed": 1.05
+  },
+  {
+   "id": "N13",
+   "who": "N",
+   "text": "Comment now.",
+   "start": 45.935,
+   "end": 47.605,
+   "delivery": "",
+   "speed": 1.05
+  }
+ ],
+ "words": [
+  {
+   "line": "N01",
+   "text": "The",
+   "start": 0.72,
+   "end": 1.34
+  },
+  {
+   "line": "N01",
+   "text": "doors",
+   "start": 1.34,
+   "end": 1.58
+  },
+  {
+   "line": "N01",
+   "text": "lock.",
+   "start": 1.58,
+   "end": 1.96
+  },
+  {
+   "line": "N01",
+   "text": "The",
+   "start": 2.74,
+   "end": 2.82
+  },
+  {
+   "line": "N01",
+   "text": "driver",
+   "start": 2.82,
+   "end": 3.1
+  },
+  {
+   "line": "N01",
+   "text": "accelerates",
+   "start": 3.1,
+   "end": 3.82
+  },
+  {
+   "line": "N01",
+   "text": "to",
+   "start": 3.82,
+   "end": 3.98
+  },
+  {
+   "line": "N01",
+   "text": "ninety.",
+   "start": 3.98,
+   "end": 4.28
+  },
+  {
+   "line": "N02",
+   "text": "Then",
+   "start": 4.66,
+   "end": 5.4
+  },
+  {
+   "line": "N02",
+   "text": "you",
+   "start": 5.4,
+   "end": 5.56
+  },
+  {
+   "line": "N02",
+   "text": "realize...",
+   "start": 5.56,
+   "end": 5.96
+  },
+  {
+   "line": "N03",
+   "text": "The",
+   "start": 6.417,
+   "end": 7.377
+  },
+  {
+   "line": "N03",
+   "text": "taxi",
+   "start": 7.377,
+   "end": 7.697
+  },
+  {
+   "line": "N03",
+   "text": "meter",
+   "start": 7.697,
+   "end": 8.017
+  },
+  {
+   "line": "N03",
+   "text": "isn't",
+   "start": 8.017,
+   "end": 8.357
+  },
+  {
+   "line": "N03",
+   "text": "tracking",
+   "start": 8.357,
+   "end": 8.657
+  },
+  {
+   "line": "N03",
+   "text": "money.",
+   "start": 8.657,
+   "end": 8.957
+  },
+  {
+   "line": "N04",
+   "text": "It's",
+   "start": 9.238,
+   "end": 10.058
+  },
+  {
+   "line": "N04",
+   "text": "counting",
+   "start": 10.058,
+   "end": 10.338
+  },
+  {
+   "line": "N04",
+   "text": "down.",
+   "start": 10.338,
+   "end": 10.738
+  },
+  {
+   "line": "M01",
+   "text": "Hey...",
+   "start": 10.969,
+   "end": 11.249
+  },
+  {
+   "line": "M01",
+   "text": "my",
+   "start": 11.889,
+   "end": 12.149
+  },
+  {
+   "line": "M01",
+   "text": "house",
+   "start": 12.149,
+   "end": 12.369
+  },
+  {
+   "line": "M01",
+   "text": "was",
+   "start": 12.369,
+   "end": 12.569
+  },
+  {
+   "line": "M01",
+   "text": "two",
+   "start": 12.569,
+   "end": 12.809
+  },
+  {
+   "line": "M01",
+   "text": "exits",
+   "start": 12.809,
+   "end": 13.029
+  },
+  {
+   "line": "M01",
+   "text": "back.",
+   "start": 13.029,
+   "end": 13.409
+  },
+  {
+   "line": "N05",
+   "text": "He",
+   "start": 13.887,
+   "end": 14.427
+  },
+  {
+   "line": "N05",
+   "text": "doesn't",
+   "start": 14.427,
+   "end": 14.727
+  },
+  {
+   "line": "N05",
+   "text": "answer.",
+   "start": 14.727,
+   "end": 15.027
+  },
+  {
+   "line": "N05",
+   "text": "You",
+   "start": 15.627,
+   "end": 15.727
+  },
+  {
+   "line": "N05",
+   "text": "check",
+   "start": 15.727,
+   "end": 15.907
+  },
+  {
+   "line": "N05",
+   "text": "the",
+   "start": 15.907,
+   "end": 16.107
+  },
+  {
+   "line": "N05",
+   "text": "dashboard.",
+   "start": 16.107,
+   "end": 16.527
+  },
+  {
+   "line": "N06",
+   "text": "The",
+   "start": 16.782,
+   "end": 17.582
+  },
+  {
+   "line": "N06",
+   "text": "driver's",
+   "start": 17.582,
+   "end": 18.162
+  },
+  {
+   "line": "N06",
+   "text": "ID",
+   "start": 18.162,
+   "end": 18.302
+  },
+  {
+   "line": "N06",
+   "text": "is",
+   "start": 18.302,
+   "end": 18.702
+  },
+  {
+   "line": "N06",
+   "text": "clipped",
+   "start": 18.702,
+   "end": 18.982
+  },
+  {
+   "line": "N06",
+   "text": "to",
+   "start": 18.982,
+   "end": 19.402
+  },
+  {
+   "line": "N06",
+   "text": "the",
+   "start": 19.402,
+   "end": 19.502
+  },
+  {
+   "line": "N06",
+   "text": "vent.",
+   "start": 19.502,
+   "end": 19.742
+  },
+  {
+   "line": "N07",
+   "text": "The",
+   "start": 19.982,
+   "end": 20.742
+  },
+  {
+   "line": "N07",
+   "text": "name",
+   "start": 20.742,
+   "end": 21.002
+  },
+  {
+   "line": "N07",
+   "text": "printed",
+   "start": 21.002,
+   "end": 21.302
+  },
+  {
+   "line": "N07",
+   "text": "on",
+   "start": 21.302,
+   "end": 21.542
+  },
+  {
+   "line": "N07",
+   "text": "it...",
+   "start": 21.542,
+   "end": 21.822
+  },
+  {
+   "line": "N07",
+   "text": "is",
+   "start": 21.822,
+   "end": 22.302
+  },
+  {
+   "line": "N07",
+   "text": "yours.",
+   "start": 22.302,
+   "end": 22.602
+  },
+  {
+   "line": "N08",
+   "text": "The",
+   "start": 23.26,
+   "end": 24.26
+  },
+  {
+   "line": "N08",
+   "text": "picture...",
+   "start": 24.26,
+   "end": 24.6
+  },
+  {
+   "line": "N08",
+   "text": "is",
+   "start": 24.6,
+   "end": 25.52
+  },
+  {
+   "line": "N08",
+   "text": "you.",
+   "start": 25.52,
+   "end": 25.8
+  },
+  {
+   "line": "G01",
+   "text": "Destination",
+   "start": 25.992,
+   "end": 26.512
+  },
+  {
+   "line": "G01",
+   "text": "reached.",
+   "start": 26.512,
+   "end": 26.972
+  },
+  {
+   "line": "G01",
+   "text": "The",
+   "start": 27.412,
+   "end": 27.532
+  },
+  {
+   "line": "G01",
+   "text": "cemetery.",
+   "start": 27.532,
+   "end": 27.852
+  },
+  {
+   "line": "N09",
+   "text": "But",
+   "start": 28.267,
+   "end": 29.147
+  },
+  {
+   "line": "N09",
+   "text": "outside,",
+   "start": 29.147,
+   "end": 29.607
+  },
+  {
+   "line": "N09",
+   "text": "there's",
+   "start": 30.567,
+   "end": 30.727
+  },
+  {
+   "line": "N09",
+   "text": "only",
+   "start": 30.727,
+   "end": 30.907
+  },
+  {
+   "line": "N09",
+   "text": "a",
+   "start": 30.907,
+   "end": 31.087
+  },
+  {
+   "line": "N09",
+   "text": "concrete",
+   "start": 31.087,
+   "end": 31.447
+  },
+  {
+   "line": "N09",
+   "text": "tunnel.",
+   "start": 31.447,
+   "end": 31.807
+  },
+  {
+   "line": "N09",
+   "text": "No",
+   "start": 32.907,
+   "end": 33.107
+  },
+  {
+   "line": "N09",
+   "text": "exit.",
+   "start": 33.107,
+   "end": 33.387
+  },
+  {
+   "line": "N10",
+   "text": "The",
+   "start": 33.683,
+   "end": 34.383
+  },
+  {
+   "line": "N10",
+   "text": "driver",
+   "start": 34.383,
+   "end": 34.723
+  },
+  {
+   "line": "N10",
+   "text": "slowly",
+   "start": 34.723,
+   "end": 35.143
+  },
+  {
+   "line": "N10",
+   "text": "turns",
+   "start": 35.143,
+   "end": 35.543
+  },
+  {
+   "line": "N10",
+   "text": "his",
+   "start": 35.543,
+   "end": 35.803
+  },
+  {
+   "line": "N10",
+   "text": "head...",
+   "start": 35.803,
+   "end": 36.063
+  },
+  {
+   "line": "N11",
+   "text": "...completely",
+   "start": 36.737,
+   "end": 37.837
+  },
+  {
+   "line": "N11",
+   "text": "backwards.",
+   "start": 37.837,
+   "end": 38.437
+  },
+  {
+   "line": "D01",
+   "text": "We're",
+   "start": 38.796,
+   "end": 39.156
+  },
+  {
+   "line": "D01",
+   "text": "home.",
+   "start": 39.156,
+   "end": 39.356
+  },
+  {
+   "line": "N12",
+   "text": "One:",
+   "start": 39.611,
+   "end": 40.411
+  },
+  {
+   "line": "N12",
+   "text": "Jump",
+   "start": 41.131,
+   "end": 41.251
+  },
+  {
+   "line": "N12",
+   "text": "out.",
+   "start": 41.251,
+   "end": 41.611
+  },
+  {
+   "line": "N12",
+   "text": "Two:",
+   "start": 41.971,
+   "end": 42.311
+  },
+  {
+   "line": "N12",
+   "text": "Grab",
+   "start": 43.051,
+   "end": 43.131
+  },
+  {
+   "line": "N12",
+   "text": "the",
+   "start": 43.131,
+   "end": 43.291
+  },
+  {
+   "line": "N12",
+   "text": "wheel.",
+   "start": 43.291,
+   "end": 43.591
+  },
+  {
+   "line": "N12",
+   "text": "Three:",
+   "start": 43.991,
+   "end": 44.391
+  },
+  {
+   "line": "N12",
+   "text": "Close",
+   "start": 45.011,
+   "end": 45.131
+  },
+  {
+   "line": "N12",
+   "text": "your",
+   "start": 45.131,
+   "end": 45.331
+  },
+  {
+   "line": "N12",
+   "text": "eyes.",
+   "start": 45.331,
+   "end": 45.651
+  },
+  {
+   "line": "N13",
+   "text": "Comment",
+   "start": 45.935,
+   "end": 46.955
+  },
+  {
+   "line": "N13",
+   "text": "now.",
+   "start": 46.955,
+   "end": 47.355
+  }
+ ],
+ "duration": 47.605
+}
