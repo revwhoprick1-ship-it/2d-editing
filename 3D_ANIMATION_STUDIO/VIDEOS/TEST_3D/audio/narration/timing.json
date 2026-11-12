@@ -1,0 +1,102 @@
+{
+ "voice": "qwen3-tts",
+ "sample_rate": 24000,
+ "lines": [
+  {
+   "id": "N01",
+   "who": "N",
+   "text": "Mom says the basement door stays locked. So why do I have the key?",
+   "start": 0.0,
+   "end": 6.4,
+   "delivery": "",
+   "speed": 1.0
+  }
+ ],
+ "words": [
+  {
+   "line": "N01",
+   "text": "Mom",
+   "start": 0.98,
+   "end": 1.6
+  },
+  {
+   "line": "N01",
+   "text": "says",
+   "start": 1.6,
+   "end": 1.92
+  },
+  {
+   "line": "N01",
+   "text": "the",
+   "start": 1.92,
+   "end": 2.16
+  },
+  {
+   "line": "N01",
+   "text": "basement",
+   "start": 2.16,
+   "end": 2.48
+  },
+  {
+   "line": "N01",
+   "text": "door",
+   "start": 2.48,
+   "end": 2.82
+  },
+  {
+   "line": "N01",
+   "text": "stays",
+   "start": 2.82,
+   "end": 3.12
+  },
+  {
+   "line": "N01",
+   "text": "locked.",
+   "start": 3.12,
+   "end": 3.52
+  },
+  {
+   "line": "N01",
+   "text": "So",
+   "start": 4.02,
+   "end": 4.74
+  },
+  {
+   "line": "N01",
+   "text": "why",
+   "start": 4.74,
+   "end": 5.0
+  },
+  {
+   "line": "N01",
+   "text": "do",
+   "start": 5.0,
+   "end": 5.16
+  },
+  {
+   "line": "N01",
+   "text": "I",
+   "start": 5.16,
+   "end": 5.3
+  },
+  {
+   "line": "N01",
+   "text": "have",
+   "start": 5.3,
+   "end": 5.48
+  },
+  {
+   "line": "N01",
+   "text": "the",
+   "start": 5.48,
+   "end": 5.62
+  },
+  {
+   "line": "N01",
+   "text": "key?",
+   "start": 5.62,
+   "end": 5.88
+  }
+ ],
+ "duration": 6.6
+}

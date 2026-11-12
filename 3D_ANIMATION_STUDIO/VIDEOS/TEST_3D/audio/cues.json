@@ -1,0 +1,67 @@
+{
+ "duration": 10.0,
+ "loop": false,
+ "narration": "narration/narration_raw.wav",
+ "narration_offset": 0.5,
+ "targets": {
+  "narration_lufs": -16,
+  "master_lufs": -14,
+  "true_peak": -3.0,
+  "duck_db": 5
+ },
+ "cues": [
+  {
+   "t": 0.0,
+   "file": "AUDIO/sound_effects/comedy/house_night.flac",
+   "gain": -2,
+   "bus": "amb",
+   "loop": true,
+   "dur": 10.0,
+   "note": "night house"
+  },
+  {
+   "t": 0.0,
+   "file": "AUDIO/sound_effects/comedy/dread_drone.flac",
+   "gain": -14,
+   "bus": "amb",
+   "loop": true,
+   "dur": 10.0,
+   "note": "drone"
+  },
+  {
+   "t": 4.2,
+   "file": "AUDIO/sound_effects/bio/heartbeat_muffled.flac",
+   "gain": -10,
+   "bus": "sfx",
+   "note": "close-up"
+  },
+  {
+   "t": 7.6,
+   "file": "AUDIO/sound_effects/comedy/keys_jingle.flac",
+   "gain": -8,
+   "bus": "sfx",
+   "note": "the key"
+  },
+  {
+   "t": 5.95,
+   "file": "AUDIO/sound_effects/comedy/subliminal_hit.flac",
+   "gain": -10,
+   "bus": "sfx",
+   "note": "head snaps"
+  },
+  {
+   "t": 8.62,
+   "file": "AUDIO/sound_effects/comedy/knob_turn.flac",
+   "gain": -4,
+   "bus": "sfx",
+   "note": "handle turns by itself"
+  },
+  {
+   "t": 8.62,
+   "file": "AUDIO/sound_effects/comedy/subliminal_hit.flac",
+   "gain": -9,
+   "bus": "sfx",
+   "note": "handle sting"
+  }
+ ]
+}
