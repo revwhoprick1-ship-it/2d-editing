@@ -1,0 +1,31 @@
+{
+ "title": "My Best Friend Just Texted Me 'Don't Open The Door'... While Sitting Next To Me",
+ "engine": "qwen3-tts",
+ "tempo": 1.05,
+ "qwen_voices": {"N": "x", "M": "x", "B": "x"},
+ "lines": [
+  {"id": "N01", "who": "N", "text": "Bob just texted you: Don't open the door.", "pause_after": 0.2},
+  {"id": "N02", "who": "N", "text": "But Bob is sitting right next to you.", "pause_after": 0.2},
+  {"id": "N03", "who": "N", "text": "For the last twenty minutes.", "pause_after": 0.2},
+  {"id": "N04", "who": "N", "text": "Then he sends a photo... of your living room.", "pause_after": 0.2},
+  {"id": "N05", "who": "N", "text": "In the photo, it isn't watching the TV.", "pause_after": 0.2},
+  {"id": "N06", "who": "N", "text": "It's staring at your throat.", "pause_after": 0.2},
+  {"id": "M01", "who": "M", "text": "Bob... did you just text me?", "tempo": 1.0, "pause_after": 0.2},
+  {"id": "N07", "who": "N", "text": "His lips don't move. His throat does.", "pause_after": 0.2},
+  {"id": "B01", "who": "B", "text": "Let me in, I'm freezing!", "tempo": 1.0, "pause_after": 0.2},
+  {"id": "N08", "who": "N", "text": "Then someone pounds on the front door.", "pause_after": 0.2},
+  {"id": "N09", "who": "N", "text": "The real Bob. He holds up his phone.", "pause_after": 0.2},
+  {"id": "N10", "who": "N", "text": "Hold your breath. It hunts by sound.", "pause_after": 0.2},
+  {"id": "N11", "who": "N", "text": "The TV switches to your security feed.", "pause_after": 0.2},
+  {"id": "N12", "who": "N", "text": "On screen, it climbs over the couch and drops behind you.", "pause_after": 0.2},
+  {"id": "N13", "who": "N", "text": "Then you see the corner: five-second delay.", "pause_after": 0.2},
+  {"id": "N14", "who": "N", "text": "It's been behind you for five seconds.", "pause_after": 0.2},
+  {"id": "N15", "who": "N", "text": "You hold your breath.", "pause_after": 0.2},
+  {"id": "N16", "who": "N", "text": "So it calls your phone.", "pause_after": 0.2},
+  {"id": "N17", "who": "N", "text": "It rises behind you, and Bob's face splits.", "pause_after": 0.2},
+  {"id": "N18", "who": "N", "text": "Straight down the middle.", "pause_after": 0.2},
+  {"id": "D01", "who": "B", "text": "He told you not to open the door... so now you're locked in here with me.", "tempo": 1.0, "pause_after": 0.2},
+  {"id": "N19", "who": "N", "text": "The real Bob just kicked the door open.", "pause_after": 0.2},
+  {"id": "N20", "who": "N", "text": "One: smash the phone. Two: hide. Three: run. Comment now.", "pause_after": 0.2}
+ ]
+}
