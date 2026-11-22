@@ -48,12 +48,8 @@ class YouTubeAuthManager(context: Context, private val clientIdProvider: () -> S
                 "https://www.googleapis.com/auth/youtube.readonly",
                 "https://www.googleapis.com/auth/yt-analytics.readonly"
             )
-            .setAdditionalParameters(
-                mapOf(
-                    "access_type" to "offline",
-                    "prompt" to "consent select_account"
-                )
-            )
+            .setPromptValues("consent", "select_account")
+            .setAdditionalParameters(mapOf("access_type" to "offline"))
             .build()
 
         return authService.getAuthorizationRequestIntent(request)
