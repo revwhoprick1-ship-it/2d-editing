@@ -23,6 +23,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.sp
 import com.campaignproof.app.automation.CampaignProofAccessibilityService
 import com.campaignproof.app.data.local.EligibilityStatus
 import com.campaignproof.app.ui.screens.AccountsScreen
@@ -31,6 +32,7 @@ import com.campaignproof.app.ui.screens.DashboardScreen
 import com.campaignproof.app.ui.screens.EligibleVideosScreen
 import com.campaignproof.app.ui.screens.RecordingWorkflowScreen
 import com.campaignproof.app.ui.screens.RecordingsLibraryScreen
+import com.campaignproof.app.ui.screens.SetupScreen
 import com.campaignproof.app.ui.theme.CampaignProofTheme
 import com.campaignproof.app.ui.viewmodel.MainViewModel
 
@@ -66,6 +68,8 @@ class MainActivity : ComponentActivity() {
                 val isScanning by viewModel.isScanning.collectAsState()
                 val banner by viewModel.statusBanner.collectAsState()
                 val accStatus by CampaignProofAccessibilityService.status.collectAsState()
+                val settings by viewModel.settings.collectAsState()
+                val whopImport by viewModel.whopImport.collectAsState()
 
                 var activeTab by remember { mutableStateOf("dashboard") }
                 val snackbarHostState = remember { SnackbarHostState() }
@@ -87,13 +91,14 @@ class MainActivity : ComponentActivity() {
                                 "campaigns" to "Rules",
                                 "videos" to "Videos",
                                 "record" to "Record",
-                                "library" to "Library"
+                                "library" to "Library",
+                                "setup" to "Setup"
                             ).forEach { (key, label) ->
                                 NavigationBarItem(
                                     selected = activeTab == key,
                                     onClick = { activeTab = key },
                                     icon = { Text(label.take(1)) },
-                                    label = { Text(label) }
+                                    label = { Text(label, maxLines = 1, fontSize = 10.sp) }
                                 )
                             }
                         }
@@ -122,6 +127,9 @@ class MainActivity : ComponentActivity() {
                                 onConnectYouTube = {
                                     if (app.youtubeAuthManager.isConfigured()) {
                                         googleOAuthLauncher.launch(app.youtubeAuthManager.createAuthorizationIntent())
+                                    } else {
+                                        viewModel.showBanner("Enter your Google OAuth Client ID in Setup first.")
+                                        activeTab = "setup"
                                     }
                                 },
                                 onAddManualInstagram = viewModel::addManualInstagramAccount,
@@ -131,7 +139,10 @@ class MainActivity : ComponentActivity() {
                             "campaigns" -> CampaignsScreen(
                                 campaigns = campaigns,
                                 onSaveCampaign = viewModel::saveCampaign,
-                                onActivateCampaign = viewModel::activateCampaign
+                                onActivateCampaign = viewModel::activateCampaign,
+                                whopImport = whopImport,
+                                onLookupWhop = viewModel::lookupWhop,
+                                onClearWhop = viewModel::clearWhopImport
                             )
                             "videos" -> EligibleVideosScreen(
                                 videos = videos,
@@ -158,6 +169,10 @@ class MainActivity : ComponentActivity() {
                             "library" -> RecordingsLibraryScreen(
                                 recordings = recordings,
                                 onDeleteRecording = viewModel::deleteRecording
+                            )
+                            "setup" -> SetupScreen(
+                                current = settings,
+                                onSave = viewModel::saveSettings
                             )
                         }
                     }

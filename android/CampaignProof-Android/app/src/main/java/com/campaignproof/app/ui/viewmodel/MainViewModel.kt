@@ -6,6 +6,7 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.campaignproof.app.CampaignProofApplication
 import com.campaignproof.app.data.local.AccountEntity
+import com.campaignproof.app.data.local.AppSettingsState
 import com.campaignproof.app.data.local.AuthMode
 import com.campaignproof.app.data.local.CampaignEntity
 import com.campaignproof.app.data.local.CampaignPlatform
@@ -14,6 +15,9 @@ import com.campaignproof.app.data.local.RecordingEntity
 import com.campaignproof.app.data.local.ScannedVideoEntity
 import com.campaignproof.app.data.local.TokenStatus
 import com.campaignproof.app.data.remote.ApiClientFactory
+import com.campaignproof.app.data.remote.WhopCampaignInfo
+import com.campaignproof.app.domain.ParsedWhopRules
+import com.campaignproof.app.domain.WhopRuleParser
 import com.campaignproof.app.recording.ScreenRecorderService
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
@@ -45,6 +49,11 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     private val _isScanning = MutableStateFlow(false)
     val isScanning: StateFlow<Boolean> = _isScanning.asStateFlow()
+
+    val settings: StateFlow<AppSettingsState> = app.settings.state
+
+    private val _whopImport = MutableStateFlow<WhopImportState>(WhopImportState.Idle)
+    val whopImport: StateFlow<WhopImportState> = _whopImport.asStateFlow()
 
     private val _statusBanner = MutableStateFlow<String?>(null)
     val statusBanner: StateFlow<String?> = _statusBanner.asStateFlow()
@@ -225,7 +234,39 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
 
+    fun saveSettings(newState: AppSettingsState) {
+        app.settings.save(newState)
+        _statusBanner.value = "Setup saved on this device."
+    }
+
+    fun showBanner(msg: String) {
+        _statusBanner.value = msg
+    }
+
+    fun lookupWhop(input: String) {
+        if (_whopImport.value is WhopImportState.Loading) return
+        viewModelScope.launch {
+            _whopImport.value = WhopImportState.Loading
+            _whopImport.value = runCatching {
+                val info = app.whopApi.lookup(input)
+                val parsed = WhopRuleParser.parse(info.title + "\n" + info.description, info.extraFields)
+                WhopImportState.Found(info, parsed)
+            }.getOrElse { WhopImportState.Error(it.message ?: "Whop lookup failed") }
+        }
+    }
+
+    fun clearWhopImport() {
+        _whopImport.value = WhopImportState.Idle
+    }
+
     fun clearBanner() {
         _statusBanner.value = null
     }
+}
+
+sealed interface WhopImportState {
+    data object Idle : WhopImportState
+    data object Loading : WhopImportState
+    data class Found(val info: WhopCampaignInfo, val parsed: ParsedWhopRules) : WhopImportState
+    data class Error(val message: String) : WhopImportState
 }

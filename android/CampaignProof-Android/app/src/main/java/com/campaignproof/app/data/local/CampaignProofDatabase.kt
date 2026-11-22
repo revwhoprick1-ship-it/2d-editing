@@ -6,6 +6,8 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverter
 import androidx.room.TypeConverters
+import androidx.room.migration.Migration
+import androidx.sqlite.db.SupportSQLiteDatabase
 
 class CampaignProofConverters {
     @TypeConverter fun fromPlatform(v: Platform): String = v.name
@@ -34,7 +36,7 @@ class CampaignProofConverters {
         ScannedVideoEntity::class,
         RecordingEntity::class
     ],
-    version = 1,
+    version = 2,
     exportSchema = false
 )
 @TypeConverters(CampaignProofConverters::class)
@@ -45,6 +47,14 @@ abstract class CampaignProofDatabase : RoomDatabase() {
     abstract fun recordingDao(): RecordingDao
 
     companion object {
+        private val MIGRATION_1_2 = object : Migration(1, 2) {
+            override fun migrate(db: SupportSQLiteDatabase) {
+                db.execSQL("ALTER TABLE campaigns ADD COLUMN whopBountyId TEXT")
+                db.execSQL("ALTER TABLE campaigns ADD COLUMN whopSubmissionId TEXT")
+                db.execSQL("ALTER TABLE campaigns ADD COLUMN whopRulesText TEXT")
+            }
+        }
+
         @Volatile private var INSTANCE: CampaignProofDatabase? = null
 
         fun getInstance(context: Context): CampaignProofDatabase {
@@ -53,7 +63,7 @@ abstract class CampaignProofDatabase : RoomDatabase() {
                     context.applicationContext,
                     CampaignProofDatabase::class.java,
                     "campaignproof.db"
-                ).build().also { INSTANCE = it }
+                ).addMigrations(MIGRATION_1_2).build().also { INSTANCE = it }
             }
         }
     }

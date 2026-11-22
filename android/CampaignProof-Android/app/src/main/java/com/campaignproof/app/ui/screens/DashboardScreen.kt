@@ -96,10 +96,15 @@ fun DashboardScreen(
                     if (activeCampaign != null) {
                         Text(activeCampaign.name, color = Color(0xFFCBD5E1))
                         Text(
-                            "Platform: ${activeCampaign.platform} · Min Views: ${activeCampaign.minViews} · ${activeCampaign.targetCountryName} >= ${activeCampaign.minCountryPercentage}%",
+                            "Platform: ${activeCampaign.platform} · Min Views: ${activeCampaign.minViews}" +
+                                if (activeCampaign.minCountryPercentage > 0) " · ${activeCampaign.targetCountryName} >= ${activeCampaign.minCountryPercentage}%" else "",
                             style = MaterialTheme.typography.bodySmall,
                             color = Color(0xFF94A3B8)
                         )
+                        activeCampaign.whopRulesText?.let { rules ->
+                            Text("Whop rules:", style = MaterialTheme.typography.bodySmall, fontWeight = FontWeight.Medium)
+                            Text(rules.take(400) + if (rules.length > 400) "…" else "", style = MaterialTheme.typography.bodySmall, color = Color(0xFFCBD5E1))
+                        }
                     } else {
                         Text("No active campaign configured.", color = Color(0xFF94A3B8))
                     }

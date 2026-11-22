@@ -45,7 +45,11 @@ data class CampaignEntity(
     val publishedAfterIso: String?,
     val requiredKeyword: String?,
     val isActive: Boolean,
-    val updatedAtEpochMs: Long
+    val updatedAtEpochMs: Long,
+    // Whop Content Rewards source (null for hand-made campaigns)
+    val whopBountyId: String? = null,
+    val whopSubmissionId: String? = null,
+    val whopRulesText: String? = null
 )
 
 @Entity(tableName = "scanned_videos")

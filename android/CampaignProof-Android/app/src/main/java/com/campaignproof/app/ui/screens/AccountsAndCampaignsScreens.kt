@@ -31,6 +31,7 @@ import com.campaignproof.app.data.local.CampaignEntity
 import com.campaignproof.app.data.local.CampaignPlatform
 import com.campaignproof.app.ui.theme.BorderHairline
 import com.campaignproof.app.ui.theme.SurfaceDark
+import com.campaignproof.app.ui.viewmodel.WhopImportState
 import java.util.UUID
 
 @Composable
@@ -121,7 +122,10 @@ fun AccountsScreen(
 fun CampaignsScreen(
     campaigns: List<CampaignEntity>,
     onSaveCampaign: (CampaignEntity) -> Unit,
-    onActivateCampaign: (String) -> Unit
+    onActivateCampaign: (String) -> Unit,
+    whopImport: WhopImportState = WhopImportState.Idle,
+    onLookupWhop: (String) -> Unit = {},
+    onClearWhop: () -> Unit = {}
 ) {
     var name by remember { mutableStateOf("") }
     var minViews by remember { mutableStateOf("10000") }
@@ -138,9 +142,18 @@ fun CampaignsScreen(
         }
 
         item {
+            WhopImportCard(
+                state = whopImport,
+                onLookup = onLookupWhop,
+                onClear = onClearWhop,
+                onSaveCampaign = onSaveCampaign
+            )
+        }
+
+        item {
             Surface(color = SurfaceDark, border = BorderStroke(1.dp, BorderHairline), shape = MaterialTheme.shapes.medium) {
                 Column(modifier = Modifier.padding(14.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                    Text("Create New Whop Campaign Rule", fontWeight = FontWeight.SemiBold)
+                    Text("Or create a rule by hand", fontWeight = FontWeight.SemiBold)
                     OutlinedTextField(value = name, onValueChange = { name = it }, label = { Text("Campaign Name") }, singleLine = true, modifier = Modifier.fillMaxWidth())
                     Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                         CampaignPlatform.entries.forEach { p ->
@@ -198,7 +211,9 @@ fun CampaignsScreen(
                     Column(modifier = Modifier.weight(1f)) {
                         Text(camp.name, fontWeight = FontWeight.SemiBold)
                         Text(
-                            "${camp.platform} · >= ${camp.minViews} views · ${camp.targetCountryCode} >= ${camp.minCountryPercentage}%",
+                            (if (camp.whopBountyId != null) "Whop · " else "") +
+                                "${camp.platform} · >= ${camp.minViews} views" +
+                                if (camp.minCountryPercentage > 0) " · ${camp.targetCountryCode} >= ${camp.minCountryPercentage}%" else "",
                             style = MaterialTheme.typography.bodySmall,
                             color = Color(0xFF94A3B8)
                         )

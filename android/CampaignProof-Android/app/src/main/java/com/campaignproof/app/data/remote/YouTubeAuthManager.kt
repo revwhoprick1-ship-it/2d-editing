@@ -21,7 +21,7 @@ import kotlin.coroutines.resumeWithException
  * Implements Google OAuth 2.0 PKCE via AppAuth for connecting multiple YouTube channels
  * without ever collecting Google account passwords inside CampaignProof.
  */
-class YouTubeAuthManager(context: Context) {
+class YouTubeAuthManager(context: Context, private val clientIdProvider: () -> String) {
     private val authService = AuthorizationService(context.applicationContext)
 
     private val serviceConfig = AuthorizationServiceConfiguration(
@@ -29,16 +29,18 @@ class YouTubeAuthManager(context: Context) {
         Uri.parse("https://oauth2.googleapis.com/token")
     )
 
-    fun isConfigured(): Boolean = BuildConfig.GOOGLE_OAUTH_CLIENT_ID.isNotBlank()
+    private val clientId: String get() = clientIdProvider().trim()
+
+    fun isConfigured(): Boolean = clientId.isNotBlank()
 
     fun createAuthorizationIntent(): Intent {
         require(isConfigured()) {
-            "GOOGLE_OAUTH_CLIENT_ID is empty. Configure it in local.properties per README_BUILD_APK.md."
+            "Google OAuth Client ID is empty. Enter it in the Setup tab."
         }
         val redirectUri = Uri.parse("${BuildConfig.GOOGLE_OAUTH_REDIRECT_SCHEME}:/oauth2redirect")
         val request = AuthorizationRequest.Builder(
             serviceConfig,
-            BuildConfig.GOOGLE_OAUTH_CLIENT_ID,
+            clientId,
             ResponseTypeValues.CODE,
             redirectUri
         )
@@ -90,7 +92,7 @@ class YouTubeAuthManager(context: Context) {
     }
 
     suspend fun refreshAccessToken(refreshToken: String): OAuthTokenBundle {
-        val request = TokenRequest.Builder(serviceConfig, BuildConfig.GOOGLE_OAUTH_CLIENT_ID)
+        val request = TokenRequest.Builder(serviceConfig, clientId)
             .setGrantType(GrantTypeValues.REFRESH_TOKEN)
             .setRefreshToken(refreshToken)
             .build()
