@@ -65,6 +65,7 @@ class MainActivity : ComponentActivity() {
         } else {
             mgr.createScreenCaptureIntent()
         }
+        CampaignProofAccessibilityService.armAutoAcceptCapture()
         mediaProjectionLauncher.launch(intent)
     }
 
@@ -96,12 +97,10 @@ class MainActivity : ComponentActivity() {
                     if (session.pendingAutoStart) {
                         viewModel.consumeAutoStart()
                         activeTab = "record"
-                        if (!CampaignProofAccessibilityService.isRunning) {
-                            viewModel.showBanner("Turn ON CampaignProof in Accessibility, then press Start again.")
-                            runCatching {
-                                startActivity(android.content.Intent(android.provider.Settings.ACTION_ACCESSIBILITY_SETTINGS))
+                        if (recorderState == com.campaignproof.app.recording.RecorderState.IDLE) {
+                            if (!CampaignProofAccessibilityService.isRunning) {
+                                viewModel.showBanner("Accessibility is OFF: recording only, no auto taps. Turn it on in Settings > Accessibility.")
                             }
-                        } else if (recorderState == com.campaignproof.app.recording.RecorderState.IDLE) {
                             requestScreenCapture()
                         }
                     }
@@ -196,10 +195,7 @@ class MainActivity : ComponentActivity() {
                                 recorderState = recorderState,
                                 accessibilityStatus = accStatus,
                                 onRequestMediaProjectionAndStart = {
-                                    if (!CampaignProofAccessibilityService.isRunning) {
-                                        viewModel.showBanner("Turn ON CampaignProof in Accessibility first.")
-                                        runCatching { startActivity(android.content.Intent(android.provider.Settings.ACTION_ACCESSIBILITY_SETTINGS)) }
-                                    } else requestScreenCapture()
+                                    requestScreenCapture()
                                 },
                                 onPause = viewModel::pauseRecording,
                                 onResume = viewModel::resumeRecording,

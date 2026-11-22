@@ -60,7 +60,35 @@ class CampaignProofAccessibilityService : AccessibilityService() {
         _status.value = AccessibilityNavigationStatus(serviceEnabled = true, detail = "Automation ready")
     }
 
-    override fun onAccessibilityEvent(event: AccessibilityEvent?) = Unit
+    override fun onAccessibilityEvent(event: AccessibilityEvent?) {
+        if (!autoAcceptCapture || event == null) return
+        if (System.currentTimeMillis() > autoAcceptUntil) { autoAcceptCapture = false; return }
+        val pkg = event.packageName?.toString() ?: return
+        if (pkg != "com.android.systemui" && !pkg.contains("permissioncontroller") && pkg != "android") return
+        scope.launch {
+            // App requests the whole display, so only the Start button needs pressing
+            val btn = findAnyNode { n ->
+                val s = nodeText(n)
+                (s.equals("Start now", true) || s.equals("Start", true) || s.equals("Start recording", true) ||
+                    s.equals("Share screen", true)) && n.isEnabled
+            }
+            if (btn != null && tap(btn)) autoAcceptCapture = false
+        }
+    }
+
+    /** Search every window (used for the system screen-record dialog). */
+    private fun findAnyNode(predicate: (AccessibilityNodeInfo) -> Boolean): AccessibilityNodeInfo? {
+        for (root in roots()) {
+            val q = ArrayDeque<AccessibilityNodeInfo>(); q.add(root)
+            var seen = 0
+            while (q.isNotEmpty() && seen < 3000) {
+                val x = q.removeFirst(); seen++
+                if (x.isVisibleToUser && runCatching { predicate(x) }.getOrDefault(false)) return x
+                for (i in 0 until x.childCount) x.getChild(i)?.let { q.add(it) }
+            }
+        }
+        return null
+    }
 
     override fun onInterrupt() = Unit
 
@@ -96,52 +124,70 @@ class CampaignProofAccessibilityService : AccessibilityService() {
     private suspend fun runYouTube(t: NavigationTarget): Pair<Boolean, String> {
         openAppFromHomeViaPlayStore("YouTube Studio", STUDIO_PKG)
         if (!waitForPackage(STUDIO_PKG, 12_000)) return false to "YouTube Studio did not open (is it installed?)"
-        delay(3500)
+        delay(4000)
 
-        // Content tab -> find the video
-        step("Opening Content tab")
-        tapText(listOf("Content"), timeoutMs = 6000)
-        delay(2500)
+        // Content -> Shorts -> tap the video (opens its analytics)
+        step("Opening Content")
+        tapText(listOf("Content"), timeoutMs = 8000, exact = true)
+        delay(3000)
+        step("Opening Shorts tab")
+        if (tapText(listOf("Shorts"), timeoutMs = 4000, exact = true)) delay(3000)
 
-        val titleKey = t.expectedVideoTitle.take(30).trim()
-        step("Looking for video: $titleKey")
+        val titleKey = t.expectedVideoTitle.take(25).trim()
+        step("Looking for: $titleKey")
         var videoNode = findNode { nodeText(it).contains(titleKey, ignoreCase = true) }
         var scrolls = 0
-        while (videoNode == null && scrolls < 10) {
+        while (videoNode == null && scrolls < 12) {
             scrollForward()
-            delay(1300)
+            delay(1500)
             videoNode = findNode { nodeText(it).contains(titleKey, ignoreCase = true) }
             scrolls++
         }
         if (videoNode != null) {
             tap(videoNode)
-            step("Opened video")
-            delay(3000)
-            step("Opening Analytics")
-            val analytics = tapText(listOf("Analytics", "View analytics", "See more", "SEE MORE"), timeoutMs = 7000)
-            if (!analytics) step("Analytics button not found, using direct link")
-            delay(3000)
+            step("Opened video analytics")
+            delay(4000)
+            if (!onAnalyticsScreen()) {
+                tapText(listOf("Analytics", "View analytics"), timeoutMs = 4000)
+                delay(3000)
+            }
         } else {
-            step("Video not found in list after $scrolls scrolls, using direct link")
+            step("Video not in list, opening it by direct link")
         }
-
         if (!onAnalyticsScreen() && t.deepLinkUrl.isNotBlank()) {
             openUrl(t.deepLinkUrl, STUDIO_PKG)
-            delay(4500)
+            delay(5000)
         }
 
-        step("Opening Audience tab")
-        val audience = tapText(listOf("Audience", "AUDIENCE"), timeoutMs = 8000)
-        delay(3000)
-        if (!audience) step("Audience tab not found — check the recording")
+        // Same order as the proof video: Overview -> Reach -> Engagement -> Audience
+        delay(2500)
+        for (tab in listOf("Reach", "Engagement")) {
+            step("Tab: $tab")
+            if (tapText(listOf(tab), timeoutMs = 4000, exact = true)) {
+                delay(2500)
+                scrollForward(); delay(2000)
+            }
+        }
+        step("Tab: Audience")
+        val audience = tapText(listOf("Audience"), timeoutMs = 6000, exact = true)
+        delay(3500)
 
-        // Show the geography / demographics cards
-        repeat(4) {
+        // Scroll to "Top geographies" and open it
+        step("Finding Top geographies")
+        var geo = findNode { nodeText(it).startsWith("Top geographies", true) }
+        var n = 0
+        while (geo == null && n < 8) {
             scrollForward()
-            delay(2500)
+            delay(2000)
+            geo = findNode { nodeText(it).startsWith("Top geographies", true) }
+            n++
         }
+        val geoOpened = if (geo != null) tap(geo) else false
+        delay(5000)
+        step(if (geoOpened) "Showing Top geographies" else "Top geographies not found")
         delay(2000)
-        return audience to if (audience) "Done: Audience analytics recorded" else "Finished, but Audience tab was not found"
+        val ok = audience && geoOpened
+        return ok to if (ok) "Done: Audience + Top geographies recorded" else "Finished with missing steps — check the recording"
     }
 
     private suspend fun runInstagram(t: NavigationTarget): Pair<Boolean, String> {
@@ -345,6 +391,14 @@ class CampaignProofAccessibilityService : AccessibilityService() {
         const val PLAY_PKG = "com.android.vending"
 
         @Volatile private var instance: CampaignProofAccessibilityService? = null
+        @Volatile private var autoAcceptCapture = false
+        @Volatile private var autoAcceptUntil = 0L
+
+        /** Call right before asking Android for screen capture: the service presses "Start now". */
+        fun armAutoAcceptCapture() {
+            autoAcceptCapture = true
+            autoAcceptUntil = System.currentTimeMillis() + 15_000
+        }
 
         private val _status = MutableStateFlow(AccessibilityNavigationStatus())
         val status: StateFlow<AccessibilityNavigationStatus> = _status.asStateFlow()
