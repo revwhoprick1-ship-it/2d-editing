@@ -243,6 +243,8 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         app.workflowController.startRecording(resultCode, data)
     }
 
+    fun consumeAutoStart() = app.workflowController.consumeAutoStart()
+
     fun pauseRecording() = app.workflowController.pauseRecording()
     fun resumeRecording() = app.workflowController.resumeRecording()
     fun stopRecording() = app.workflowController.stopRecording()

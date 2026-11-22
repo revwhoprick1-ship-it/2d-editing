@@ -52,7 +52,20 @@ class MainActivity : ComponentActivity() {
     ) { result ->
         if (result.resultCode == Activity.RESULT_OK && result.data != null) {
             viewModel.confirmEvidenceAndStartCapture(result.resultCode, result.data!!)
+        } else {
+            viewModel.showBanner("Screen recording not allowed — tap Start again.")
         }
+    }
+
+    private fun requestScreenCapture() {
+        val mgr = getSystemService(Context.MEDIA_PROJECTION_SERVICE) as MediaProjectionManager
+        val intent = if (android.os.Build.VERSION.SDK_INT >= 34) {
+            // Force "entire screen" so Home / Play Store / Studio are all captured
+            mgr.createScreenCaptureIntent(android.media.projection.MediaProjectionConfig.createConfigForDefaultDisplay())
+        } else {
+            mgr.createScreenCaptureIntent()
+        }
+        mediaProjectionLauncher.launch(intent)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -77,6 +90,22 @@ class MainActivity : ComponentActivity() {
 
                 var activeTab by remember { mutableStateOf("dashboard") }
                 val snackbarHostState = remember { SnackbarHostState() }
+
+                // As soon as a session is queued: check automation is on, then ask Android to record.
+                LaunchedEffect(session.pendingAutoStart) {
+                    if (session.pendingAutoStart) {
+                        viewModel.consumeAutoStart()
+                        activeTab = "record"
+                        if (!CampaignProofAccessibilityService.isRunning) {
+                            viewModel.showBanner("Turn ON CampaignProof in Accessibility, then press Start again.")
+                            runCatching {
+                                startActivity(android.content.Intent(android.provider.Settings.ACTION_ACCESSIBILITY_SETTINGS))
+                            }
+                        } else if (recorderState == com.campaignproof.app.recording.RecorderState.IDLE) {
+                            requestScreenCapture()
+                        }
+                    }
+                }
 
                 LaunchedEffect(banner) {
                     if (!banner.isNullOrBlank()) {
@@ -167,8 +196,10 @@ class MainActivity : ComponentActivity() {
                                 recorderState = recorderState,
                                 accessibilityStatus = accStatus,
                                 onRequestMediaProjectionAndStart = {
-                                    val mgr = getSystemService(Context.MEDIA_PROJECTION_SERVICE) as MediaProjectionManager
-                                    mediaProjectionLauncher.launch(mgr.createScreenCaptureIntent())
+                                    if (!CampaignProofAccessibilityService.isRunning) {
+                                        viewModel.showBanner("Turn ON CampaignProof in Accessibility first.")
+                                        runCatching { startActivity(android.content.Intent(android.provider.Settings.ACTION_ACCESSIBILITY_SETTINGS)) }
+                                    } else requestScreenCapture()
                                 },
                                 onPause = viewModel::pauseRecording,
                                 onResume = viewModel::resumeRecording,

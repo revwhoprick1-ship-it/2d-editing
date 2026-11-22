@@ -78,22 +78,29 @@ fun RecordingWorkflowScreen(
             }
         }
 
-        // Mandatory safety confirmation gate: never silently record the wrong video
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            Checkbox(checked = confirmedVisible, onCheckedChange = { confirmedVisible = it })
+        if (!accessibilityStatus.serviceEnabled) {
             Text(
-                "I confirm the correct account, video title, and Audience Demographics are visible on screen.",
+                "Automation is OFF. Settings > Accessibility > CampaignProof Studio Navigation Assistant > ON.",
+                color = StatusRed,
                 style = MaterialTheme.typography.bodySmall
             )
+        }
+        if (accessibilityStatus.log.isNotEmpty()) {
+            Surface(color = SurfaceDark, border = BorderStroke(1.dp, BorderHairline), shape = MaterialTheme.shapes.small) {
+                Text(
+                    accessibilityStatus.log.joinToString("\n") { "• $it" },
+                    style = MaterialTheme.typography.bodySmall,
+                    modifier = Modifier.padding(10.dp)
+                )
+            }
         }
 
         when (recorderState) {
             RecorderState.IDLE -> {
                 Button(
                     onClick = onRequestMediaProjectionAndStart,
-                    enabled = confirmedVisible,
                     modifier = Modifier.fillMaxWidth()
-                ) { Text("Start Recording (MediaProjection)") }
+                ) { Text("Start auto recording") }
             }
             RecorderState.RECORDING -> {
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.fillMaxWidth()) {
@@ -118,7 +125,7 @@ fun RecordingWorkflowScreen(
         }
 
         Row(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.fillMaxWidth()) {
-            OutlinedButton(onClick = onRetryNavigation, modifier = Modifier.weight(1f)) { Text("Retry Navigation") }
+            OutlinedButton(onClick = onRetryNavigation, modifier = Modifier.weight(1f)) { Text("Retry automation") }
             OutlinedButton(onClick = onSkip, modifier = Modifier.weight(1f)) { Text("Skip Video") }
         }
         OutlinedButton(onClick = onCancel, modifier = Modifier.fillMaxWidth()) { Text("Cancel Session") }

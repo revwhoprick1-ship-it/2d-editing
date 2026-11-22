@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">CampaignProof</string>
     <string name="accessibility_service_label">CampaignProof Studio Navigation Assistant</string>
-    <string name="accessibility_service_description">Assists with deterministic, user-confirmed navigation inside YouTube Studio and Instagram Insights to verify audience demographics before screen recording. Never collects passwords or performs hidden actions.</string>
+    <string name="accessibility_service_description">Lets CampaignProof drive your phone while it records proof: goes to the home screen, opens Play Store, opens YouTube Studio or Instagram, finds your video and opens its Audience analytics. Only runs when you start a recording. Never types passwords.</string>
 </resources>

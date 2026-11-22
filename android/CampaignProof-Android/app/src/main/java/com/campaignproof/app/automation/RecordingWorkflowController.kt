@@ -21,7 +21,9 @@ data class WorkflowSessionState(
     val currentIndex: Int = 0,
     val userConfirmedEvidenceVisible: Boolean = false,
     val lastNavigationMessage: String = "",
-    val completedCount: Int = 0
+    val completedCount: Int = 0,
+    /** True = UI should immediately ask Android for screen-record permission and start. */
+    val pendingAutoStart: Boolean = false
 ) {
     val currentVideo: ScannedVideoEntity? get() = queue.getOrNull(currentIndex)
     val progressLabel: String
@@ -47,12 +49,46 @@ class RecordingWorkflowController(
             queue = videos,
             currentIndex = 0,
             userConfirmedEvidenceVisible = false,
-            lastNavigationMessage = "Ready to open analytics for video 1 of ${videos.size}"
+            lastNavigationMessage = "Starting screen recording…",
+            pendingAutoStart = true
         )
-        launchNavigationForCurrent()
+    }
+
+    fun consumeAutoStart() {
+        _session.value = _session.value.copy(pendingAutoStart = false)
+    }
+
+    /** Called once recording has started: phone is driven Home -> Play Store -> app -> video -> Audience. */
+    private fun runAutomationForCurrent() {
+        val current = _session.value.currentVideo ?: return
+        val target = NavigationTarget(
+            platform = current.platform.name,
+            expectedAccountName = current.accountName,
+            expectedVideoTitle = current.title,
+            deepLinkUrl = if (current.platform.name == "YOUTUBE") current.studioAnalyticsUrl else current.videoUrl
+        )
+        val started = CampaignProofAccessibilityService.runAutomation(target) { ok, msg ->
+            _session.value = _session.value.copy(lastNavigationMessage = msg)
+            // Stop + save the recording, then come back to the app
+            stopRecording()
+            CampaignProofAccessibilityService.bringAppToFront()
+        }
+        _session.value = _session.value.copy(
+            lastNavigationMessage = if (started) "Recording… automation running"
+            else "Automation is OFF: enable CampaignProof in Settings > Accessibility. Recording continues — navigate manually, then Stop & Save."
+        )
     }
 
     fun launchNavigationForCurrent() {
+        if (ScreenRecorderService.recorderState.value != com.campaignproof.app.recording.RecorderState.IDLE) {
+            runAutomationForCurrent()
+            return
+        }
+        _session.value = _session.value.copy(pendingAutoStart = true)
+    }
+
+    @Suppress("unused")
+    private fun legacyOpenDirect() {
         val current = _session.value.currentVideo ?: return
         CampaignProofAccessibilityService.setNavigationTarget(
             NavigationTarget(
@@ -76,9 +112,6 @@ class RecordingWorkflowController(
         val state = _session.value
         val video = state.currentVideo ?: return
         val campaign = activeCampaign ?: return
-        require(state.userConfirmedEvidenceVisible) {
-            "User must confirm the correct video and Audience Demographics are visible before recording."
-        }
 
         val loc = storageManager.createTargetRecordingFile(
             platform = video.platform,
@@ -97,6 +130,8 @@ class RecordingWorkflowController(
             putExtra(ScreenRecorderService.EXTRA_LABEL, "${state.progressLabel}: ${video.title}")
         }
         context.startForegroundService(intent)
+        // Give the recorder a moment to start, then drive the phone
+        android.os.Handler(android.os.Looper.getMainLooper()).postDelayed({ runAutomationForCurrent() }, 1500)
     }
 
     fun pauseRecording() {
@@ -170,9 +205,10 @@ class RecordingWorkflowController(
             _session.value = state.copy(
                 currentIndex = nextIndex,
                 completedCount = completed,
-                userConfirmedEvidenceVisible = false
+                userConfirmedEvidenceVisible = false,
+                lastNavigationMessage = "Next video: asking to record…",
+                pendingAutoStart = true
             )
-            launchNavigationForCurrent()
         }
     }
 }
