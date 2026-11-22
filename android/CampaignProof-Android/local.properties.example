@@ -1,0 +1,14 @@
+# Copy this file to local.properties (never commit local.properties to Git)
+# Set your Android SDK path (Android Studio configures sdk.dir automatically):
+# sdk.dir=/Users/yourname/Library/Android/sdk
+
+# Google OAuth 2.0 Android Client ID (YouTube Data API v3 + YouTube Analytics API)
+# From Google Cloud Console -> Credentials -> OAuth 2.0 Client ID (Android)
+GOOGLE_OAUTH_CLIENT_ID=
+
+# Reversed client ID redirect scheme (e.g. com.googleusercontent.apps.1234567890-abcdef)
+GOOGLE_OAUTH_REDIRECT_SCHEME=com.campaignproof.app
+
+# Optional: Meta App ID for Instagram Professional accounts via Meta Graph API
+META_APP_ID=
+META_OAUTH_REDIRECT_URI=com.campaignproof.app://meta-oauth
