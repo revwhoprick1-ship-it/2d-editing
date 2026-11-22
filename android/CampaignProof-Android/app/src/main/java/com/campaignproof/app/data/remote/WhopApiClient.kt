@@ -58,6 +58,19 @@ class WhopApiClient(private val apiKeyProvider: () -> String) {
         toInfo(bounty, bountyId, null, emptyList())
     }
 
+    /** Cheap call to check the API key. Returns HTTP code + short body. */
+    suspend fun testKey(): Pair<Int, String> = withContext(Dispatchers.IO) {
+        val key = apiKeyProvider()
+        val req = Request.Builder()
+            .url("${BASE_URL}bounties?first=1")
+            .header("Accept", "application/json")
+            .apply { if (key.isNotBlank()) header("Authorization", "Bearer $key") }
+            .build()
+        http.newCall(req).execute().use { resp ->
+            resp.code to resp.body?.string().orEmpty().take(300)
+        }
+    }
+
     private fun getJson(path: String): JSONObject {
         val key = apiKeyProvider()
         val builder = Request.Builder()

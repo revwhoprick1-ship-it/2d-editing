@@ -3,6 +3,7 @@ package com.campaignproof.app.ui.screens
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -10,6 +11,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -21,6 +23,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalClipboardManager
+import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.PasswordVisualTransformation
@@ -34,11 +38,17 @@ import com.campaignproof.app.ui.theme.SurfaceDark
 @Composable
 fun SetupScreen(
     current: AppSettingsState,
-    onSave: (AppSettingsState) -> Unit
+    onSave: (AppSettingsState) -> Unit,
+    testLog: String = "",
+    isTesting: Boolean = false,
+    onTestGoogle: () -> Unit = {},
+    onTestWhop: () -> Unit = {},
+    onClearLog: () -> Unit = {}
 ) {
     var clientId by remember(current) { mutableStateOf(current.googleClientId) }
     var whopKey by remember(current) { mutableStateOf(current.whopApiKey) }
     var showKey by remember { mutableStateOf(false) }
+    val clipboard = LocalClipboardManager.current
 
     LazyColumn(
         modifier = Modifier.fillMaxSize().padding(16.dp),
@@ -108,6 +118,27 @@ fun SetupScreen(
                 onClick = { onSave(AppSettingsState(googleClientId = clientId, whopApiKey = whopKey)) },
                 modifier = Modifier.fillMaxWidth()
             ) { Text("Save Setup") }
+        }
+
+        item {
+            Card {
+                Text("Test connection", fontWeight = FontWeight.SemiBold)
+                Text("Tap Save Setup first, then test.", style = MaterialTheme.typography.bodySmall, color = Color(0xFF94A3B8))
+                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    OutlinedButton(onClick = onTestGoogle, enabled = !isTesting, modifier = Modifier.weight(1f)) { Text("Test Google") }
+                    OutlinedButton(onClick = onTestWhop, enabled = !isTesting, modifier = Modifier.weight(1f)) { Text("Test Whop") }
+                }
+                if (isTesting) Text("Testing…")
+                if (testLog.isNotBlank()) {
+                    SelectionContainer {
+                        Text(testLog, fontFamily = FontFamily.Monospace, style = MaterialTheme.typography.bodySmall)
+                    }
+                    Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                        TextButton(onClick = { clipboard.setText(AnnotatedString(testLog)) }) { Text("Copy log") }
+                        TextButton(onClick = onClearLog) { Text("Clear") }
+                    }
+                }
+            }
         }
 
         item {

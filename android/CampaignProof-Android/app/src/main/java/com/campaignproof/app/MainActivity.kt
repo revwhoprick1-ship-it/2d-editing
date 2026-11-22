@@ -42,7 +42,9 @@ class MainActivity : ComponentActivity() {
     private val googleOAuthLauncher = registerForActivityResult(
         ActivityResultContracts.StartActivityForResult()
     ) { result ->
-        result.data?.let { viewModel.handleGoogleOAuthIntentResult(it) }
+        val data = result.data
+        if (data != null) viewModel.handleGoogleOAuthIntentResult(data)
+        else viewModel.showBanner("Google login cancelled or closed.")
     }
 
     private val mediaProjectionLauncher = registerForActivityResult(
@@ -70,6 +72,8 @@ class MainActivity : ComponentActivity() {
                 val accStatus by CampaignProofAccessibilityService.status.collectAsState()
                 val settings by viewModel.settings.collectAsState()
                 val whopImport by viewModel.whopImport.collectAsState()
+                val testLog by viewModel.testLog.collectAsState()
+                val isTesting by viewModel.isTesting.collectAsState()
 
                 var activeTab by remember { mutableStateOf("dashboard") }
                 val snackbarHostState = remember { SnackbarHostState() }
@@ -126,7 +130,12 @@ class MainActivity : ComponentActivity() {
                                 accounts = accounts,
                                 onConnectYouTube = {
                                     if (app.youtubeAuthManager.isConfigured()) {
-                                        googleOAuthLauncher.launch(app.youtubeAuthManager.createAuthorizationIntent())
+                                        try {
+                                            googleOAuthLauncher.launch(app.youtubeAuthManager.createAuthorizationIntent())
+                                        } catch (t: Throwable) {
+                                            viewModel.reportError("Connect YouTube", t)
+                                            activeTab = "setup"
+                                        }
                                     } else {
                                         viewModel.showBanner("Enter your Google OAuth Client ID in Setup first.")
                                         activeTab = "setup"
@@ -172,7 +181,12 @@ class MainActivity : ComponentActivity() {
                             )
                             "setup" -> SetupScreen(
                                 current = settings,
-                                onSave = viewModel::saveSettings
+                                onSave = viewModel::saveSettings,
+                                testLog = testLog,
+                                isTesting = isTesting,
+                                onTestGoogle = viewModel::testGoogle,
+                                onTestWhop = viewModel::testWhop,
+                                onClearLog = viewModel::clearTestLog
                             )
                         }
                     }

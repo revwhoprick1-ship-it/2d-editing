@@ -19,8 +19,20 @@ class CampaignProofApplication : Application() {
     lateinit var scannerRepository: VideoScannerRepository
     lateinit var workflowController: RecordingWorkflowController
 
+    val crashFile get() = java.io.File(filesDir, "last_crash.txt")
+
     override fun onCreate() {
         super.onCreate()
+        // Save any crash so the Setup tab can show it on next launch.
+        val previous = Thread.getDefaultUncaughtExceptionHandler()
+        Thread.setDefaultUncaughtExceptionHandler { thread, err ->
+            runCatching {
+                crashFile.writeText(
+                    "${java.util.Date()}  thread=${thread.name}\n" + android.util.Log.getStackTraceString(err)
+                )
+            }
+            previous?.uncaughtException(thread, err)
+        }
         database = CampaignProofDatabase.getInstance(this)
         tokenStore = SecureTokenStore(this)
         settings = AppSettings(this)

@@ -239,6 +239,115 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         _statusBanner.value = "Setup saved on this device."
     }
 
+    private val _testLog = MutableStateFlow(readCrash())
+    val testLog: StateFlow<String> = _testLog.asStateFlow()
+    private val _isTesting = MutableStateFlow(false)
+    val isTesting: StateFlow<Boolean> = _isTesting.asStateFlow()
+
+    private fun readCrash(): String = runCatching {
+        val f = app.crashFile
+        if (f.exists()) "LAST CRASH (send this to support):\n" + f.readText().take(4000) else ""
+    }.getOrDefault("")
+
+    private fun log(line: String) {
+        _testLog.value = (_testLog.value + "\n" + line).trim()
+    }
+
+    fun clearTestLog() {
+        runCatching { app.crashFile.delete() }
+        _testLog.value = ""
+    }
+
+    fun reportError(where: String, t: Throwable) {
+        log("ERROR in $where: ${t.javaClass.simpleName}: ${t.message}\n" + android.util.Log.getStackTraceString(t).take(1500))
+        _statusBanner.value = "$where failed: ${t.message ?: t.javaClass.simpleName} (details in Setup)"
+    }
+
+    fun testGoogle() {
+        if (_isTesting.value) return
+        viewModelScope.launch {
+            _isTesting.value = true
+            try {
+                log("--- Google test ---")
+                val id = app.settings.googleClientId
+                if (id.isBlank()) { log("FAIL: no Client ID saved. Enter it and tap Save Setup."); return@launch }
+                val ok = Regex("^\\d+-[a-z0-9]+\\.apps\\.googleusercontent\\.com$").matches(id)
+                log(if (ok) "OK: Client ID format" else "FAIL: Client ID format looks wrong: '$id'")
+
+                runCatching { app.youtubeAuthManager.createAuthorizationIntent() }
+                    .onSuccess { log("OK: login request built") }
+                    .onFailure { log("FAIL: building login request: ${it.javaClass.simpleName}: ${it.message}") }
+
+                val pm = app.packageManager
+                val browsers = pm.queryIntentActivities(
+                    Intent(Intent.ACTION_VIEW, android.net.Uri.parse("https://accounts.google.com")), 0
+                )
+                log(if (browsers.isNotEmpty()) "OK: browser found (${browsers.first().activityInfo.packageName})" else "FAIL: no web browser installed (install Chrome)")
+
+                val redirect = "${com.campaignproof.app.BuildConfig.GOOGLE_OAUTH_REDIRECT_SCHEME}:/oauth2redirect"
+                val verdict = kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) {
+                    runCatching {
+                        val url = okhttp3.HttpUrl.Builder().scheme("https").host("accounts.google.com")
+                            .addPathSegments("o/oauth2/v2/auth")
+                            .addQueryParameter("client_id", id)
+                            .addQueryParameter("redirect_uri", redirect)
+                            .addQueryParameter("response_type", "code")
+                            .addQueryParameter("scope", "https://www.googleapis.com/auth/youtube.readonly")
+                            .addQueryParameter("code_challenge", "E9Melhoa2OwvFrEMTJguCHaoeK1t8URWbuGJSstw-cM")
+                            .addQueryParameter("code_challenge_method", "S256")
+                            .build()
+                        val client = okhttp3.OkHttpClient.Builder().followRedirects(true).build()
+                        client.newCall(okhttp3.Request.Builder().url(url)
+                            .header("User-Agent", "Mozilla/5.0 (Linux; Android 14) Mobile").build()).execute().use { r ->
+                            val body = r.body?.string().orEmpty()
+                            val finalUrl = r.request.url.toString()
+                            val all = (finalUrl + " " + body).lowercase()
+                            when {
+                                "invalid_client" in all || "oauth client was not found" in all -> "FAIL: Google says client not found (invalid_client). Check the ID or that it isn't deleted."
+                                "custom uri scheme is not enabled" in all || "custom scheme" in all -> "FAIL: turn ON 'Custom URI scheme' in the Android client's Advanced settings."
+                                "redirect_uri_mismatch" in all -> "FAIL: redirect mismatch. Client must be type Android with package com.campaignproof.app."
+                                "unauthorized_client" in all || "disabled_client" in all || "deleted_client" in all -> "FAIL: client disabled/unauthorized in Google Cloud."
+                                "invalid_request" in all -> "FAIL: Google rejected request (invalid_request) — usually wrong client type (use Android) or custom scheme off."
+                                "access_denied" in all || "access_blocked" in all -> "WARN: access blocked — add your Google account as a Test User on the consent screen."
+                                r.code in 200..399 -> "OK: Google accepted the Client ID (HTTP ${r.code}). Real login may still need Test Users + SHA-1."
+                                else -> "WARN: Google returned HTTP ${r.code}"
+                            }
+                        }
+                    }.getOrElse { "WARN: could not reach Google: ${it.message}" }
+                }
+                log(verdict)
+            } catch (t: Throwable) {
+                log("ERROR during test: ${t.javaClass.simpleName}: ${t.message}")
+            } finally {
+                _isTesting.value = false
+            }
+        }
+    }
+
+    fun testWhop() {
+        if (_isTesting.value) return
+        viewModelScope.launch {
+            _isTesting.value = true
+            try {
+                log("--- Whop test ---")
+                if (app.settings.whopApiKey.isBlank()) { log("FAIL: no Whop API key saved."); return@launch }
+                val (code, body) = app.whopApi.testKey()
+                log(
+                    when (code) {
+                        in 200..299 -> "OK: Whop key works (HTTP $code)"
+                        401 -> "FAIL: Whop says key invalid (401)"
+                        403 -> "FAIL: key valid but missing permission to read bounties (403): $body"
+                        else -> "WARN: Whop HTTP $code: $body"
+                    }
+                )
+            } catch (t: Throwable) {
+                log("FAIL: could not reach Whop: ${t.message}")
+            } finally {
+                _isTesting.value = false
+            }
+        }
+    }
+
     fun showBanner(msg: String) {
         _statusBanner.value = msg
     }
