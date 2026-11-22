@@ -41,7 +41,8 @@ fun DashboardScreen(
     isScanning: Boolean,
     onScanAccounts: () -> Unit,
     onStartRecording: () -> Unit,
-    onNavigateToAccounts: () -> Unit
+    onNavigateToAccounts: () -> Unit,
+    onTestRecording: () -> Unit = {}
 ) {
     val eligibleCount = videos.count { it.eligibilityStatus == EligibilityStatus.ELIGIBLE }
 
@@ -74,6 +75,9 @@ fun DashboardScreen(
                 ) {
                     Text("START RECORDING")
                 }
+            }
+            OutlinedButton(onClick = onTestRecording, modifier = Modifier.fillMaxWidth().padding(top = 8.dp)) {
+                Text("TEST RECORDING (random video)")
             }
         }
 

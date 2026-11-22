@@ -124,7 +124,8 @@ class MainActivity : ComponentActivity() {
                                         activeTab = "record"
                                     }
                                 },
-                                onNavigateToAccounts = { activeTab = "accounts" }
+                                onNavigateToAccounts = { activeTab = "accounts" },
+                                onTestRecording = { if (viewModel.startTestRecording()) activeTab = "record" }
                             )
                             "accounts" -> AccountsScreen(
                                 accounts = accounts,
@@ -158,7 +159,8 @@ class MainActivity : ComponentActivity() {
                                 onStartRecordingQueue = { queue ->
                                     viewModel.startRecordingSession(queue)
                                     activeTab = "record"
-                                }
+                                },
+                                onTestRecording = { if (viewModel.startTestRecording()) activeTab = "record" }
                             )
                             "record" -> RecordingWorkflowScreen(
                                 session = session,

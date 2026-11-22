@@ -36,7 +36,8 @@ import com.campaignproof.app.ui.theme.SurfaceDark
 @Composable
 fun EligibleVideosScreen(
     videos: List<ScannedVideoEntity>,
-    onStartRecordingQueue: (List<ScannedVideoEntity>) -> Unit
+    onStartRecordingQueue: (List<ScannedVideoEntity>) -> Unit,
+    onTestRecording: () -> Unit = {}
 ) {
     var statusFilter by remember { mutableStateOf<EligibilityStatus?>(null) }
     var selectedIds by remember { mutableStateOf(setOf<String>()) }
@@ -68,6 +69,10 @@ fun EligibleVideosScreen(
                 enabled = selectedIds.isNotEmpty(),
                 modifier = Modifier.weight(1f)
             ) { Text("Record (${selectedIds.size})") }
+        }
+
+        OutlinedButton(onClick = onTestRecording, modifier = Modifier.fillMaxWidth()) {
+            Text("TEST RECORDING (random video with audience data)")
         }
 
         LazyColumn(verticalArrangement = Arrangement.spacedBy(10.dp), modifier = Modifier.weight(1f)) {

@@ -215,6 +215,29 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
 
+    /** Test run: pick one random scanned video that has audience data and open the recording flow. */
+    fun startTestRecording(): Boolean {
+        val all = videos.value
+        if (all.isEmpty()) {
+            _statusBanner.value = "No videos yet. Connect an account and tap SCAN ACCOUNTS first."
+            return false
+        }
+        val withData = all.filter {
+            it.demographicsAvailable || it.targetCountryPercentage != null ||
+                (it.countryBreakdownJson.isNotBlank() && it.countryBreakdownJson != "[]" && it.countryBreakdownJson != "{}")
+        }
+        val pick = (withData.ifEmpty { all }).random()
+        _statusBanner.value = if (withData.isEmpty())
+            "TEST: no video has audience data yet, using random video \"${pick.title}\""
+        else
+            "TEST recording: \"${pick.title}\""
+        viewModelScope.launch {
+            val campaign = db.campaignDao().getActive() ?: return@launch
+            app.workflowController.startSession(listOf(pick), campaign)
+        }
+        return true
+    }
+
     fun confirmEvidenceAndStartCapture(resultCode: Int, data: Intent) {
         app.workflowController.setUserConfirmedEvidence(true)
         app.workflowController.startRecording(resultCode, data)
